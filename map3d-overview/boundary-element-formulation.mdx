@@ -6,7 +6,7 @@ Numerical modelling is an attempt to mathematically simulate the way the rock ma
 
 - Loading conditions - Prior to mining the rock mass is loaded by overburden and tectonic forces.
 
-- Structural support elements - There may also be loads do to mechanical ground support, backfill, heating, etc.
+- Structural support elements - There may also be loads due to mechanical ground support, backfill, heating, etc.
 
 - Geometry - When you make excavations, these pre-existing loads are redistributed around the excavations, concentrating in abutments and pillars. Stiff dykes and soft ore zones will also influence the response.
 
@@ -64,15 +64,13 @@ Map3D is based on a very efficient Indirect Boundary Element Method (Banerjee an
 
 This Boundary Element formulation offers many advantages over other stress analysis techniques. Direct Boundary Element formulations require approximately twice the computational effort to assemble and solve the boundary element matrix, compared to the indirect method used in Map3D.
 
-Matrix lumping techniques are used to reduce the matrix size, and as a result, very large problems (more than 333333 elements - 1000000 degrees of freedom) can be accommodated on PC platforms. Without lumping, a 64000 element problem would take 147 GB of disk space. With lumping, this can be reduced to less than 1 GB. This permits users to specify existing mining geometry in detail, and add
-
-new mining as required. This greatly reduces the effort required to set up and run analyzes and permits the whole mine to be considered when necessary.
+Matrix lumping techniques are used to reduce the matrix size, and as a result, very large problems (more than 333333 elements - 1000000 degrees of freedom) can be accommodated on PC platforms. Without lumping, a 64000 element problem would take 147 GB of disk space. With lumping, this can be reduced to less than 1 GB. This permits users to specify existing mining geometry in detail, and add new mining as required. This greatly reduces the effort required to set up and run analyzes and permits the whole mine to be considered when necessary.
 
 With the Boundary Element formulation, one starts with an infinite homogeneous elastic medium (rock mass). The process of model building consists of making excavations and superimposing nonhomogeneous zones (dykes, ore zones or yielding zones) and any faults or joints upon which slip may occur. Since one starts with an infinite medium, far field boundaries are automatically accommodated.
 
 This is unlike domain formulations such as the Finite Element or Finite Difference methods, where one starts with empty space. For these latter methods, model building consists of assembling the entire rock mass and all its components. Elements must be assembled out to some far field boundary many diameters away from the excavations.
 
-While Finite Element and Finite Difference formulations are very well developed for non-linear problems such as plasticity, transient heat and fluid flow, and dynamic simulations, there are also very difficult to use and require very long run times. The difficulty in use comes from the large amount of information required to discretize the host rock mass. While this can be minimized by use of mesh generators and powerful front-end graphics, the cost and effort to learn the interface outweighs the simplicity with which the Map3D Boundary Element analyzes can be conducted.
+While Finite Element and Finite Difference formulations are very well developed for non-linear problems such as plasticity, transient heat and fluid flow, and dynamic simulations, they are also very difficult to use and require very long run times. The difficulty in use comes from the large amount of information required to discretize the host rock mass. While this can be minimized by use of mesh generators and powerful front-end graphics, the cost and effort to learn the interface outweighs the simplicity with which the Map3D Boundary Element analyzes can be conducted.
 
 These fundamental differences make the boundary element method much more suitable and economic (in terms of analysis time) for rock mass problems.
 
