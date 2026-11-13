@@ -1,0 +1,31 @@
+---
+title: "Model Building Overview"
+---
+
+Map3D is based on the Boundary Element formulation. With this method, one starts with an infinite homogeneous elastic medium (rock mass). The process of model building consists of making excavations and superimposing non-homogeneous zones (dykes, ore zones or yielding zones) and any faults or joints upon which slip may occur. Since one starts with an infinite medium, far field boundaries are automatically accommodated.
+
+This is unlike domain formulations such as the Finite Element or Finite Difference methods, where one starts with empty space. For these latter methods, model building consists of assembling the entire rock mass and all its components. Elements must be assembled out to some far field boundary many diameters away from the excavations.
+
+These fundamental differences make the boundary element method much more suitable and economic (in terms of analysis time) for rock mass problems.
+
+There are several types of boundary elements available in Map3D:
+
+Fictitious force (FF) elements are used to specify the location of excavation surfaces and boundaries between regions with differing material properties.
+
+Displacement discontinuity (DD) elements are used to specify the location of joints, faults, fractures, pit walls and ground surface. These elements can intersect excavations at any location, since Map3D builds edge intersections internally.
+
+Inactive elements are used to construct excavation surfaces that can be displayed, but are not used in the stress analysis.
+
+Special proprietary boundary elements are incorporated for the thermal and non-linear analysis versions.
+
+#### Boundary Element Formulation
+
+The objective of model building is to create a series of surface patches that when taken together, form a seamless, non-overlapping, continuous skin which describes the location of excavations, boundaries of regions with different moduli, faults etc. These surfaces must be further subdivided into smaller boundary elements where the actual influence functions are evaluated and solved. This approach is called surface modelling.
+
+The user is free to construct surface models and supply this basic input data to Map3D. While this approach is ideal for describing ore outlines or as-built models, it has been found to be tedious and error prone when constructing mine layouts. In order to simplify model building, the program has a powerful pre-processor built into it that can accept and manipulate higher order three-dimensional entities. This approach is called solid modelling.
+
+Solid modelling permits users to build models using a series of three-dimensional building blocks. These blocks, which can be any desired shape or size, are used to construct excavations and accesses, as well as to define non-homogeneous zones (ore zones, dykes and yielding zones).
+
+The program automatically builds intersections between excavations, faults and multiple material zones. By coupling this capability with the built-in Boolean operations, complex multi-step mining sequences can be constructed with ease. Map3D creates the required surface description and automatically discretizes these surfaces into elements for the boundary element stress analysis.
+
+#### Rock mass Response Predictions Using Numerical Modelling

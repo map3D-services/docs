@@ -1,0 +1,17 @@
+---
+title: "Analysis > Options > Collinearity Search Radius"
+---
+
+Specifies the search radius that is used in collinearity checking during file load (see Analysis > Options > Collinearity).
+
+Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+
+If desired, the user can use this option to define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks.
+
+#### Notes
+
+This function must be checked before loading the model file
+
+#### Analysis > Load Model.
+
+Caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.

@@ -1,0 +1,69 @@
+---
+title: "Analysis > Options > Drive #"
+---
+
+Specify scratch drives for coefficient matrix – during Map3D BEM analysis.
+
+If you have multiple disk drives installed, this option can be used to direct Map3D where to store the coefficient matrix. When the first drive fills up, Map3D will write the remainder of the matrix to next scratch drive.
+
+When the solution matrix is too big to fit into RAM (refer to Analysis > Options > VRAM and Analysis > Options > PRAM) , Matrix solution becomes an I/O intensive operation that depends only on the I/O rate of your computer. In this case, a large part of the analysis time can be spent in the solution stage due to slow disk performance.
+
+To overcome this problem it is imperative that the user install multiple, high speed disks.
+
+Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+
+If you are licensed to use the multi-processor/multi-drive option, Map3D set up these drives into a RAID array such that I/O is done in an overlapped manner to all of the drives, in parallel with the computations.
+
+Set up in this way you can increases the I/O performance in proportion to the number of drives in the array.
+
+In the following benchmark, the same model is run with 1, 2 and 4 disks.
+
+||1 disk|2 disks|4 disks|8GB PRAM|
+|---|---|---|---|---|
+|Measured Disk Throughput (MB/sec)|55|112|206|3000 equivalent|
+|Matrix Solution (hours)|0.546|0.282|0.163|0.033|
+|Solution Speed Increase|1x|1.9x|3.3x|16x|
+|Total Analysis Time (4 cores)|0.640|0.376|0.257|0.107|
+|Total Speed Increase|1x|1.7x|2.5x|6x|
+
+The disks used in this benchmark are older 50-60 MB/sec drives (Seagate Barracuda 7200.7). More recent mechanical drives perform at 100 MB/sec (Seagate Momentus 7200.4). SATA2 SSDs can provide over 250 MB/sec per drive. SATA3 SSDs can provide over 500 MB/sec per drive. Multiple SSDs and/or NVMe drives can be expected to perform nearly as fast as PRAM. Note that some motherboards have limitations on the total combined throughput and may require addin controller adaptors.
+
+To determine if you are licensed to use the multi-processor/multi-drive option check on Analysis > Options > #Threads.
+
+If you are licensed to use the multi-processor/multi-drive option, faster disk rates can be achieved if you set SE_MANAGE_VOLUME_NAME privilege.
+
+This capability is available in the following versions of Windows:
+
+- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+
+- Windows 2000 Advanced Server (maximum of 8 GB).
+
+- Windows 2000 Datacenter Server (maximum of 32 GB).
+
+- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+
+- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+
+- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+
+- Windows 10 & 11 Pro (the home version does not support this).
+
+To set "SE_MANAGE_VOLUME_NAME" privilege, follow these steps:
+
+Control Panel > Administrative Tools > Local Security Policies
+
+Then set
+
+Local Policies > User Rights Assignment > Perform Volume Maintenance Tasks > Add User or Group > Everyone
+
+You must reboot for this setting to take effect.
+
+Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+#### Analysis > BEM Analysis
+
+You should specify the fastest drive in your system. You can test your drive performance using
+
+Tools > Disk Performance Test

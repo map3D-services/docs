@@ -1,0 +1,59 @@
+---
+title: "Open Model (CAD)"
+---
+
+Loads a model from a file.
+
+Once loaded the user can execute any desired Map3D Analysis Stage.
+
+To add or edit mining blocks and set up the Map3D analysis use
+
+#### Analysis > Go to CAD.
+
+While loading the model Map3D checks for basic consistency of the modelling parameters (e.g. if a material is used, its properties must be specified in the material list).
+
+You will be prompted to search for a model file name, location and file format. Models can be loaded from several file types:
+
+- Map3D-INP format is an editable ASCII data file with the extension ".INP". This is the recommended Map3D model format. All Map3D functionality is supported with this format.
+
+- AutoCAD-DXF format is a popular drawing exchange file with the extension ".DXF". This format is useful for exchanging model data with other CAD software.
+
+- Point file format is a universal ASCII data file with the extension ".PNT". This format is useful for exchanging raw model data with other CAD software.
+
+The model geometric and material data being loaded can either overwrite or be merged with existing model data. The overwrite/merge options:
+
+- File > Open > Merge Geometries
+
+- File > Open > Merge Materials
+
+appears at the bottom of the open file dialogue box.
+
+#### Merging multiple files into one model
+
+You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+
+These files will be merging into one model/database.
+
+This allows you to keep separate parts of model data in different files then easily merge them together into one model/database.
+
+Another way of merging multiple files is to select the "Merge Geometries" option prior to selecting the additional file you want to add to the existing model/database.
+
+This is useful if you already have a model open and want to add additional model data to this.
+
+#### Notes:
+
+For quick access at a later session, each time you open a file its name is saved under
+
+#### File > Recent Files
+
+and the working directory is saved under
+
+File > Open > Recent Directories.
+
+To load analysis results use
+
+File > Open Analysis Results.
+
+To restart an analysis that was aborted or interrupted by a power failure or operating system crash use
+
+File > Restart an Analysis.

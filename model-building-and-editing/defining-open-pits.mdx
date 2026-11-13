@@ -1,0 +1,7 @@
+---
+title: "Defining Open Pits"
+---
+
+Although open pits can be built using Displacement Discontinuity elements, this is not recommended. Open pits are best handled when constructed as excavations (using block definitions with Fictitious Force elements) adjacent to ground surface. This is because the intersection logic built into Map3D can detect the interior of excavation blocks and cut off any intersecting features (such as faults, ore zones or drifts). Also, displacement discontinuity elements, which lie along the edge of an excavation (for example ground surface), will also be detected and treated properly.
+
+This same logic does not exist for zones defined by displacement discontinuity elements. The user could easily construct a model with multiple overlapping displacement discontinuity elements, which will not converge.

@@ -1,0 +1,103 @@
+---
+title: "Materials > Drucker-Prager in 3D FF Blocks"
+---
+
+Hoek-Brown material can only be used as a failure criterion for elastic analyzes in Map3D Fault-Slip.
+
+![Figure from page 549](/images/page-549-img-15.png)
+
+Material Name - specifies a descriptive name for the material.
+
+Material # - specifies the material number.
+
+- Material #1 is reserved for the host material.
+
+- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+
+Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+
+- Drucker-Prager - defines the failure envelope as a straight line.
+
+- For 3D FF blocks the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+
+**Drucker-Prager in 3D FF blocks**
+
+![Figure from page 550](/images/page-550-img-6.png)
+
+where
+
+toct  = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]½
+
+sm = ¹/3 ( s1 + s2 + s3 )
+
+_q_ = tan²(45+½ j)
+
+- Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+
+- Tension cutoff and _UCS_ - are specified in units of stress (MPa or psi).
+
+- Friction angle and dilation angle are specified in degrees.
+
+- Cohesion is not used for 3D FF blocks.
+
+- Only the peak values are used.
+
+Young's Modulus and Poisson's Ratio - specify Young's (rock mass scale - deformation) Modulus in units of stress (MPa or psi).
+
+- Only the peak values are used.
+
+Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+
+- This parameter describes the uncertainty you have in the strength parameters.
+
+- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > Rockmass Probability N-distribution.
+
+Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are not used for the Drucker-Prager material.
+
+Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow. Map3D Thermal- Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+
+Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+
+- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+
+Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+
+- This can be used to define zones with both different elastic properties and strength parameters.
+
+- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+
+- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+
+- Yielding of Drucker-Prager materials is not supported at this time.
+
+Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+
+- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+
+User Defined - allows specification of user defined parameters to be used in contouring.
+
+- Different parameters are defined for each material number.
+
+      - Plot > Stress > User
+
+   - These parameters are used with
+
+- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+
+Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+
+Copy from material - allows you to copy the material properties from one material number to another.
+
+- All properties including the stress state are copied.
+
+Stress State - specifies the initial (far field) stress state for the material.
+
+- Most materials are inserted into blocks with the same (far field) stress state.
+
+- Materials such as props or backfill are placed at near zero initial stresses.
+
+Related Topics:
+
+Mohr_Coulomb in 3D FF blocks
+
+Hoek-Brown in 3D FF blocks

@@ -1,0 +1,201 @@
+---
+title: "Materials > Quadratic-Backfill in DD Planes"
+---
+
+Quadratic-Backfill material can be used to describe non-linear response in DD planes in both Map3D Fault-Slip, Map3D Non-Linear and Map3D Visco-Plastic.
+
+![Figure from page 578](/images/page-578-img-6.png)
+
+Material Name - specifies a descriptive name for the material.
+
+Material # - specifies the material number.
+
+- Material #1 is reserved for the host material.
+
+- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+
+Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+
+- Quadratic-Backfill - defines the failure envelope as a straight line in the same as Mohr-Coulomb in DD planes but without _UCS_ .
+
+- Strength is defined in terms of in-plane shear and normal stresses as follows:
+
+![Figure from page 579](/images/page-579-img-1.png)
+
+- Tension Cutoff and Cohesion are specified in units of stress (MPa or psi).
+
+- Friction angle and dilation angle are specified in degrees.
+
+- Cohesion and friction angle define the shear response.
+
+- The tension cutoff defines the response in the direction normal to the shear plane.
+
+- Peak values of these parameters are used up until failure.
+
+- After yielding, the residual values are used to provide a strain softening response.
+
+- Residual values are ignored in elastic analyzes.
+
+- If fluid pressure is specified as part of the Stress State, the effective normal stress (sn-p) is used (here p is the fluid pressure).
+
+B, et - for DD planes the Backfill-Hyperbolic criterion defines the hyperbolic normal response as follows:
+
+**Quadratic-Backfill in DD planes**
+
+![Figure from page 579](/images/page-579-img-12.png)
+
+- The normal stress varies according to the hyperbolic relation.
+
+- As the strain approaches the value _B_ the normal stress rapidly become infinite thus limited the amount of normal displacement (closure) that can take place.
+
+Normal and Shear Modulus - specify moduli in units of stress (MPa or psi).
+
+- The normal response is defined above. _N_ represents the value of the normal stress (for s<sup>f</sup> =0) at en=(e<sup>t</sup> -½)+v( _B-_ e<sup>t</sup> +¼).
+
+- The shear stresses acting on the surfaces of the elements are related to the elastic portion of the shear displacement (ride) through the shear modulus as in the Fault-Gouge model.
+
+Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+
+- This parameter describes the uncertainty you have in the strength parameters.
+
+- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > InPlane Probability N-distribution.
+
+Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip).
+
+- The viscous modulus describes the creep response. where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ .
+
+- _Gn_ is not used in the hyperbolic model.
+
+- Specify the viscous modulus in units of stress (MPa or psi).
+
+Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow.
+
+- Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+
+Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+
+- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+
+Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+
+- This can be used to define zones with both different elastic properties and strength parameters.
+
+- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+
+- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+
+Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+
+- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+
+User Defined - allows specification of user defined parameters to be used in contouring.
+
+- Different parameters are defined for each material number.
+
+Plot > Stress > User
+
+   - These parameters are used with
+
+- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+
+Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+
+Copy from material - allows you to copy the material properties from one material number to another. All properties including the stress state are copied.
+
+Stress State - specifies the initial (far field) stress state for the material.
+
+- Most materials are inserted into blocks with the same (far field) stress state.
+
+- Materials such as props or backfill are placed at near zero initial stresses.
+
+Over-stressing can be presented in several ways including:
+
+Plot > Strength Factors > dTip In-Plane excess shear stress
+
+Plot > Strength Factors > dTub Ubiquitous-plane excess shear stress
+
+Plot > Strength Factors > SF-ip Strength/Stress
+
+Plot > Strength Factors > SF-ub Strength/Stress
+
+By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used (in this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium). Hence for non-linear analysis one normally directly considers the plastic strain or the plastic strain rate predicted by the model as an indicator of damage.
+
+In DD planes, the elastic strains are determined from the stresses by
+
+ts = t<sup>f</sup> + _Shear Modulus_ eselastic
+
+sn = s<sup>f</sup> + _Normal Modulus_ (enelastic- et )2/( _B_ - enelastic)
+
+where _Shear Modulus_ and _Normal Modulus_ represent respectively the elastic moduli of the gouge material in the shear and normal directions, and tf and sf represent the initial stress state in the shear and normal directions, and
+
+> elastic / _Thickness_ eselastic =  ds
+
+> elastic / _Thickness_ enelastic =  dn
+
+where dselastic and dnelastic represent respectively the elastic component of the shear displacement (ride) and normal displacement (closure) and _Thickness_ represents the DD plane thickness (i.e. fault gouge, seam width, mining width or pillar height). The DD plane thickness is set using
+
+CAD > Build > DDLoop
+
+and can be modified using
+
+CAD > Edit > Entity Properties
+
+In DD elements, if the shear stress goes above the strength, the plastic strain can be determined by limiting the stress
+
+ts - ts° - _C_ Desplastic /D _t_ = _Cohesion_ + tan(j) ( sn - sn° - _C_ Denplastic /D _t_ )
+
+where
+
+ts° = _Shear Modulus_ esplastic sn° = _Normal Modulus_ enplastic
+
+The accumulated plastic strain e<sup>plastic</sup> , is determined as the sum of the plastic creep increments De<sup>plastic</sup> , for all creep steps.
+
+If the normal stress goes below the tension cutoff, the plastic strain can be determined by limiting the stress
+
+sn - sn° - _C_ Denplastic /D _t_ = _To_
+
+In the case of shear failure, the plastic normal strain can also have a dilation component
+
+plastic enplastic = tan( _dilation angle_ ) es
+
+The total strain is equal to the sum of the elastic and plastic parts.
+
+The creep response is simulated using a linear (Bingham) creep model.
+
+![Figure from page 556](/images/page-556-img-3.png)
+
+At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance
+
+_Strength_ + _C_ Denplastic /D _t_
+
+_C_ = _G_ D _t_
+
+where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The creep resistance can be used simply as a technique for damping the non-linear deformations or for real time dependent creep simulation
+
+Analysis > Options > Creep
+
+The strains, shear displacement (ride) and normal displacement (closure) can be presented in several ways including:
+
+Plot > Surface > Value > Elastic Plot > Surface > Value > Plastic Plot > Surface > Value > Total
+
+Plot > Strain > E1 - Major principal strain
+
+Plot > Surface > Es Shear Strain
+
+Plot > Surface > En Normal Strain Plot > Surface > ds Shear Displacement (Ride)
+
+Plot > Surface > dn Normal Displacement (Closure)
+
+Also of interest is the plastic creep increment Deplastic, the contribution to the shear resistance from the viscous element
+
+Dts   = _C_ Desplastic /D _t_
+
+Plot > Surface > dEs Incremental Shear Strain
+
+Plot > Surface > dTs Excess Shear Stress
+
+Related Topics:
+
+Mohr-Coulomb in DD planes
+
+Fault-Gouge in DD planes

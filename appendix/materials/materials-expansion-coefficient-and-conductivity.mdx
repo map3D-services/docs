@@ -1,0 +1,35 @@
+---
+title: "Materials > Expansion Coefficient and Conductivity"
+---
+
+Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
+
+The steady state thermal/fluid flow problem is solved according to Laplace's equation in threedimensions. This is directly coupled to the stress analysis through an expansion coefficient A, where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+
+s° = _A_ D _T_
+
+The stresses can be presented either without or with the initial stresses s°.
+
+Plot > Stress > Value > Seff Effective Stress
+
+Plot > Stress > Value > Stotal Total Stress
+
+For fluid flow problems the expansion coefficient should be set to unity (positive one) for saturated media
+
+_A_ = 1
+
+For thermal problems the expansion coefficient should be specified as a negative quantity given by
+
+_A_ = -a _E_ /(1-2n)
+
+where a, _E_ and n represent the coefficient of thermal expansion (i.e. the linear expansivity), Young's (rock mass scale - deformation) modulus and Poisson's ratio.
+
+It is also necessary to specify the conductivity _C_ . This parameter relates the gradient to the flux _q_ x such that
+
+_q_ x = - _C_ ¶ _T_ /¶ _x_
+
+The recommended units for _C_ are J/(m s 8C).
+
+The various flow parameters can be plotted using
+
+Plot > Flow

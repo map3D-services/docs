@@ -1,0 +1,65 @@
+---
+title: "OpenGL"
+---
+
+## 5.6.4.1 OpenGL &lt;On/Off>
+
+Enables OpenGL support.
+
+OpenGL is an industry standard high-quality 3D graphics rendering interface. The main advantages in using OpenGL are hardware acceleration of the graphics display and support for z-buffering. Of course you must have a graphics adaptor that supports OpenGL and have the OpenGL display driver installed to get hardware acceleration.
+
+See Tools > OpenGL Parameters to view OpenGL setup.
+
+See Tools > OpenGL Anti-aliasing to smooth lines.
+
+## 5.6.4.2 OpenGL Parameters
+
+Reports on OpenGL setup:
+
+Support OpenGL – indicates whether an OpenGL driver is installed and enabled.
+
+Driver or Hardware Support - indicates whether an OpenGL is supported by your graphics adaptor.
+
+Double Buffered – indicates that there is sufficient memory to support double buffering.
+
+Color Buffer Bits – indicates the number of bits used for the colour buffer.
+
+Depth Buffer Bits – indicates the number of bits used for the z-buffer.
+
+## 5.6.4.3 OpenGL Antialiasing
+
+Enables smoothing of points, lines and edges of polygons.
+
+This OpenGL feature provides improved appearance but slows rendering.
+
+View > Render > Line Width can be used to enable drawing of wider lines. This would also help smooth line drawing with as much impact on performance.
+
+## 5.6.4.4 OpenGL Redraw
+
+Enables OpenGL redrawing of the screen when the window needs to be refreshed.
+
+The Map3D display window must be refreshed every time a dialogue box is moved or removed. This refresh can either be done by saving the display window to a back buffer (this option is not checked), or by simply redrawing the screen (this option is checked).
+
+This option should normally be checked, but can be disabled for problem graphics adaptors.
+
+## 5.6.4.5 OpenGL Pick
+
+Enables OpenGL to locate graphics entities on the screen.
+
+When you left click on an entity Map3D must determine which entity you have selected. This can be determined either by OpenGL or internally by Map3D.
+
+This option should normally be checked, but can be disabled for problem graphics adaptors.
+
+## 5.6.4.6 OpenGL Crosshairs
+
+Toggles between OpenGL and Windows API drawing of cursor crosshairs.
+
+This option should normally be checked, but can be disabled for problem graphics adaptors.
+
+To completely disable drawing of the cursor crosshairs select Tools > Crosshairs.
+
+## 5.6.4.7 OpenGL Interactive Edit
+
+Enables interactive OpenGL drawing of modified shapes during editing operations.
+
+This option should normally be checked, but can be disabled for problem graphics adaptors.

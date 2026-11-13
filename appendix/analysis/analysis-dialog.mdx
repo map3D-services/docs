@@ -1,0 +1,71 @@
+---
+title: "Analysis Dialog"
+---
+
+Displays a scrollable dialogue of analysis activity including:
+
+INFO: messages describing current operations. WARNING: messages describing possible inconsistencies that may cause problems.
+
+ERROR: messages describing errors that will cause program execution to terminate.
+
+During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error
+
+Plot > Surface Components > Serr Stress Error
+
+and the maximum failure criterion error
+
+Plot > Surface Components > Ferr Failure Error
+
+are reduced below the user specified stress tolerance _STOL_
+
+Analysis > CParams > STOL
+
+As the solution progresses, summary information regarding the solution is displayed:
+
+is=1   it=3   ser=-1.29E+01   fer= 0.00E+00   rms=5.85E+00   ratio=0.414   converging
+
+is - current time step number.
+
+- This counter is only used for non-linear creep analyzes (including fault-slip and 3D material nonlinearity).
+
+- Map3D uses an implicit solution method to solve the visco-plastic part of creep problems.
+
+- Each time Map3D reaches an equilibrium creep solution, the creep strain increments are added to the total plastic strains and then a new time step is begun (i.e. the is counter is incremented).
+
+it - current iteration count.
+
+- Map3D uses an iterative solution method to solve the simultaneous equations saved in the coefficient matrix.
+
+- This counter refers to the cumulative number of iterations executed.
+
+ser - maximum surface stress error.
+
+- Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations.
+
+- This parameter indicates the maximum error for all of the equations.
+
+fer - maximum failure criterion error.
+
+- This parameter is only used for non-linear creep analyzes (including fault-slip and 3D material non-linearity).
+
+- This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear.
+
+- In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium.
+
+- This parameter indicates the maximum viscous stress for all of the equations.
+
+rms - root mean square of all surface stress errors.
+
+ratio - ratio of the current value of rms divided by the value of rms at the previous iteration.
+
+- This provides an indications of how quickly the solution is progressing.
+
+converging - indicator that the problem is converging.
+
+- This indicator may also read diverging if the ratio is greater than one.
+
+Notes:
+
+Since smooth scrolling limits the rate at which information can be written to the information area, it can considerably slow down the Map3D analysis. It is recommended that smooth scrolling not be used
+
+Tools > Smooth Scroll

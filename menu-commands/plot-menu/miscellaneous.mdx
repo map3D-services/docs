@@ -1,0 +1,129 @@
+---
+title: "Miscellaneous"
+---
+
+## 5.3.8.1 Delem Distance to nearest element on surfaces
+
+Contours the distance to the nearest element from each surface.
+
+_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
+
+During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+
+_Delem /DON_
+
+During matrix assembly, all elements that fit within the dimension
+
+_Delem/DOC_
+
+will be lumped together.
+
+For more details refer to
+
+CAD > Properties > Control Parameters.
+
+#### Related topics:
+
+Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
+
+## 5.3.8.2 Dgrid Distance to nearest grid on surfaces
+
+Contours the distance to the nearest grid from each surface.
+
+_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+
+During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+
+_Dgrid/DOL_
+
+During grid assembly, all elements that fit within the dimension
+
+_Dgrid/DOE_
+
+will be lumped together.
+
+During grid assembly, all grid points that fit within the dimension
+
+_Dgrid/DOG_
+
+will be lumped together.
+
+For more details refer to
+
+CAD > Properties > Control Parameters
+
+#### Related topics:
+
+Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
+
+## 5.3.8.3 Delem/Lelem DON ratio on surfaces
+
+Contours the distance to the nearest element _Delem_ divided by the element width _Lelem_ .
+
+_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
+
+Small values of _DON_ can be related to convergence problems.
+
+For more details refer to
+
+CAD > Properties > Control Parameters.
+
+## 5.3.8.4 Dgrid/Lelem DOL ratio on surfaces
+
+Contours the distance to the nearest grid _Dgrid_ divided by the element width _Lelem_ .
+
+_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+
+Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+
+For more details refer to
+
+CAD > Properties > Control Parameters.
+
+## 5.3.8.5 Dratio on surfaces
+
+Contours the coefficient ratio on surfaces.
+
+This ratio identifies locations where surfaces are very close to one-another, indicating possible construction errors.
+
+## 5.3.8.6 Dgrid Distance to nearest element on grids
+
+Contours the distance to the nearest surface from each grid point.
+
+_Dgrid_ is determined by Map3D as the smallest distance between grid planes and model surfaces.
+
+During the discretization process all grid planes are subdivided into elements with side length _Dgrid/DOL_
+
+During grid assembly, all elements that fit within the dimension _Dgrid/DOE_
+
+will be lumped together.
+
+During grid assembly, all grid points that fit within the dimension
+
+_Dgrid/DOG_
+
+will be lumped together.
+
+For more details refer to
+
+CAD > Properties > Control Parameters
+
+#### Related topics:
+
+Plot > Miscellaneous > Dgrid/Lgrid DOL ratio on grids
+
+## 5.3.8.7 Dgrid/Lgrid DOL ratio on grids
+
+Contours the distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+
+_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+
+Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+
+For more details refer to
+
+CAD > Properties > Control Parameters
+
+## 5.3.8.8 Matl# - Material Number on Grids
+
+Plots material number as coloured contour.

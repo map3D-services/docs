@@ -1,0 +1,45 @@
+---
+title: "Analysis > Options > P-ram"
+---
+
+Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+
+If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+
+- Windows 10 Professional and Server (maximum of 4 GB).
+
+- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+
+- Windows 2000 Advanced Server (maximum of 8 GB).
+
+- Windows 2000 Datacenter Server (maximum of 32 GB).
+
+- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+
+- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+
+- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+
+- Windows 7 & 8.
+
+- Windows 10 & 11 Pro (the home version does not support this).
+
+AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+
+Control Panel > Administrative Tools > Local Security Policies
+
+Then set
+
+Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
+
+You must reboot for this setting to take effect.
+
+Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+#### Analysis > BEM Analysis.
+
+You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+
+You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.

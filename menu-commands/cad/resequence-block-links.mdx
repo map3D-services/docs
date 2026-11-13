@@ -1,0 +1,15 @@
+---
+title: "Resequence Block Links"
+---
+
+When importing models from other CAD programs, it is important to provide Map3D with some way of identifying how blocks are formed.
+
+The best way is simply to adjacent blocks different colour numbers, then Map3D can easily determine which surfaces belong to each block. Alternatively you can specify a unique block name for each surface.
+
+In cases where this is not possible, a new routine is now available that attempts to determine which surface belong to adjacent blocks.
+
+This is done by searching for surface connections at common corners with the assumption that surfaces are provided in some sort of consistent sequence.
+
+For example, surfaces 1-12 all form a block, surface 13-24 form another blocks etc. The new "CAD > Resequence Block Links" routine executes this processing.
+
+Note that this routine should only be used as a last resort to unscramble improperly constructed models.

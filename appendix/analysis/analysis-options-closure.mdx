@@ -1,0 +1,21 @@
+---
+title: "Analysis > Options > Closure"
+---
+
+Conducts closure and overlap checking, and resolves Boolean intersections – during intersection analysis.
+
+Complex excavation shapes are checked to ensure that their bounding surfaces form a continuous envelope with no gaps or missing surfaces. Locations where a gap is detected are identified by coordinate numbers in that vicinity.
+
+Interference between intersecting features such a fault and an ore zone are automatically resolved by Map3D. Surfaces are subdivided to create edges where these features meet. A solid modelling Boolean operation is then performed to determine which feature persists through the other. Since it is not clear whether the fault should persist through the ore, or the ore should persist through the fault, a convention has been adopted in Map3D such that the feature with the higher material number takes priority over a feature with a lower material number. For example if the ore were assigned material number 2 and the fault were assigned material number 3, the fault would be assumed to be continuous through the ore. Note that excavations are assumed to cut through all other features.
+
+For additional discussion, refer to
+
+#### Constructing Alternate Material Zones.
+
+#### Notes
+
+This function must be checked before conducting the intersection analysis
+
+#### Analysis > Intersections.
+
+It is recommended that you check this option.
