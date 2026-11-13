@@ -1,0 +1,39 @@
+---
+title: "Analysis > Disable"
+---
+
+Disables boundary elements that have a surface stress error ( _Serr_ ) greater than ten times the root mean square value ( _Rms_ ) for all elements.
+
+During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance _STOL_
+
+Analysis > CParams > STOL
+
+In some problems, certain elements will not converge to a solution due to excessively poor numerical conditioning. If the user is satisfied the current level of accuracy, a solution can for forced by checking this option.
+
+This function instructs Map3D to disable any elements with values of _Serr_ > 10 _Rm_ s. A few iterations after executing this function, additional elements may appear with the same problem requiring this function to executed again. After a few times all elements will be disabled and the solution can proceed to convergence.
+
+Extreme caution should be exercised when using this function as the results will contain numerical errors which could be significant.
+
+Notes:
+
+The distribution of surface stress error can be displayed by selecting
+
+Plot > Surface Components > Serr Stress Error
+
+from the solve toolbar.
+
+The distribution of failure criterion error can be displayed by selecting
+
+Plot > Surface Components > Ferr Failure Error
+
+from the solve toolbar.
+
+During analysis, the solve toolbar will be displayed when you suspend the analysis
+
+Analysis > Suspend
+
+only if the
+
+#### Tools > Solve Toolbar
+
+has been checked.

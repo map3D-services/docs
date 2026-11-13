@@ -1,0 +1,53 @@
+---
+title: "File > PNT Model File Format"
+---
+
+PNT format is a universal ASCII data file with the extension ".PNT".
+
+This format is useful for exchanging raw model data with other CAD software.
+
+Comment lines must start with an asterisk "*" in column 1.
+
+Map3D FF blocks and DD planes are stored as a series of polylines as follows:
+
+**x1 y1 z1 3 colour mtype x2 y1 z1 2 x3 y3 z3 2 x4 y4 z4 2 x5 y5 z5 1 x6 y6 z6 1 x7 y7 z7 1 x8 y8 z8 1**
+
+where **xi yi zi** represent the coordinates of each point,
+
+- **3** indicates that this point is the beginning of a new polyline,
+
+**2** indicates that this point forms part of the base of the block,
+
+- **1** indicates that this point forms part of the top of the block. This item is only used for definition of 3D block shapes.
+
+**colour** specifies the colour number that will be used to display the block.
+
+A total of 10 colours are available for display.
+
+- These are numbered respectively 1 through 10, 11 through 20, 21 through 30, etc., such that the same colour is displayed for number 1, 11, 21, 31..., 2, 22, 32..., etc.
+
+**mtype** specifies the type of boundary element that will be used for the block.
+
+For three-dimensional features such as excavations, alternate material zones, back-filled stopes etc., Fictitious Force type 1 elements should be used
+
+CAD > Build > Block and CAD > Build > Block for details.
+
+- Displacement Discontinuity type 2 elements should be used for tabular mining excavations, fractures and fault planes
+
+CAD > Build > DDLoop for details.
+
+Inactive elements (98 for inactive 3D blocks and 99 for inactive DD planes) can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+
+Additional polylines are specified by repeating the sequence (i.e. starting a new line with the number **3** ).
+
+#### Notes
+
+Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable using
+
+#### Tools > Custom Colours
+
+Map3D will automatically combine any blocks with the same colour number into single complex shapes.
+
+Since it is easy to toggle on and off the display of specific block colour numbers, this provides an efficient method to work with complex model data
+
+#### View > Hide Block Colours

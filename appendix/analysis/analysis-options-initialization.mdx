@@ -1,0 +1,25 @@
+---
+title: "Analysis > Options > Initialization"
+---
+
+Initialize the model so that the analysis continues from where a previous analysis completed.
+
+This option enables you to start a new analysis from where a previous model completed. All non-linear, zero strain and seismic loading (seismic loading only in Map3Di) components are passed on to the new model from the previous analysis.
+
+In order for this function to work properly the new model must have all of the model data (geometry) that the initialization model has plus any new data, mining steps or grids. There is no requirement to use the same discretization or grid planes.
+
+In order to initialize the following files must be intact:
+
+file.00n where n represents the mining step number where the previous analysis finished. file.dms this file is only used with the zero strain option (Analysis > Options > Zero Strain Support Placement).
+
+file.hms this file is only used by Map3Di and are used to accumulate the field loading as the analysis progresses.
+
+Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+#### Analysis > BEM Analysis
+
+This option requires additional calculations and hence increases analysis time.
+
+Refer to Analysis > Options > Restart to restart an analysis that was aborted or interrupted by a power failure or operating system crash.

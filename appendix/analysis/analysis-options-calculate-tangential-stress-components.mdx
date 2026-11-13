@@ -1,0 +1,19 @@
+---
+title: "Analysis > Options > Calculate Tangential Stress Components"
+---
+
+Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+
+When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+
+When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+
+The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+
+#### Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+Analysis > BEM Analysis
+
+This option requires additional calculations and hence increases analysis time.

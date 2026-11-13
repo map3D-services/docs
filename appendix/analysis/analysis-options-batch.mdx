@@ -1,0 +1,53 @@
+---
+title: "Analysis > Options > Batch"
+---
+
+Set up analysis batch queue.
+
+If the user has multiple models that need to be run, these can be specified in this batch queue. By selecting
+
+Analysis > Options > Batch > Execute Batch Queue
+
+all checked models will be run without any request for interactive response from the user.
+
+When you check a batch file for execution you will be prompted to search for a model file name, location, and file format. If the search is successful, the model will be checked.
+
+The second column in the Batch File Setup dialogue box allows you to set analysis options if desired. These setting override any options set in the Analysis > Options dialogue box.
+
+#### Console Mode:
+
+Map3D can be started from the Windows command prompt or from a *.bat file if desired. Command line options can be used in a text file script or entered from a Command Prompt. The procedure is simply to create a *.bat file as follows:
+
+**Map3D filename.inp -option1 - option2 ...** (where "filename.inp" is the name of the model file you want to analyze).
+
+The options are as follows:
+
+- **-analysis** (tells Map3D to run an analysis - you must also supply "filename.inp").
+
+- **-console** (displays only the "Analysis Dialog" while Map3D is running).
+
+   - (displays nothing at all while Map3D is running and stops upon completion of analysis).
+
+- **-stop** (stops Map3D upon completion of analysis).
+
+You can also open results files as follows:
+
+**Map3D filename.001** (where "filename.001" is the name of the results file you want to display).
+
+For example if you want to run a Map3D analysis with only a logging window shown, you would start this as follows:
+
+#### Map3D filename.inp -console -analysis
+
+For example if you want to run a Map3D analysis with no logging window shown, you would start this as follows:
+
+#### Map3D filename.inp -silent -analysis
+
+#### Notes:
+
+Batch model files names are saved and restored each time Map3D is executed.
+
+Model files that are not checked will not be executed in batch mode.
+
+The batch queue can be interrupted at any time simply by aborting the current analysis
+
+Analysis > Abort

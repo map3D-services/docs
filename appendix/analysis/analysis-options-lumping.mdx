@@ -1,0 +1,19 @@
+---
+title: "Analysis > Options > Lumping"
+---
+
+Pre-calculate coefficient matrix size – during discretization analysis.
+
+To accurately determine the amount of scratch disk space required to store the coefficient matrix during a Map3D BEM analysis, it is necessary to conduct a lumping procedure.  This option executes the lumping procedure during the discretization analysis (i.e. prior to the Map3D BEM analysis).
+
+The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+
+Notes
+
+This function must be checked before conducting the discretization analysis
+
+#### Analysis > Discretization.
+
+The matrix lumping procedure is conducted during the Map3D BEM analysis whether this option is selected or not.
+
+This is a time consuming procedure that should only be conducted if you need to accurately determine disk space requirements prior to Map3D BEM analysis.

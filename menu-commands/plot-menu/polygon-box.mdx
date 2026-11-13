@@ -1,0 +1,25 @@
+---
+title: "Polygon Box"
+---
+
+Calculates the weighted average value for all selected contour points. This function can also be activated using View > Length.
+
+You will be prompted to select a series of corners to define a closed polygon by picking each with a single mouse click:
+
+- You must hold down the Shift-key so that multiple line segments can be selected.
+
+- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+
+- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included in the averaging.
+
+- The average routine will not function if you define an open polyline shape (by not selecting the starting point).
+
+- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+
+The averaging is done by multiplying each selected value by the area of its associated surface or grid patch, then summing these. This result is presented as the "Weighted Sum". The "Average" is determined by dividing the weighted sum by the total area.
+
+All values are accumulated as vector components. Principal stresses are determined from the weighted mean of the Cartesian components. Displacement, flow and surface shear components are determined from the weighted mean of the vector components.
+
+Note that for stresses, the "Weighted Sum" is actually the total force acting on the surface.
+
+If you multiply by the shear modulus, the "Weighted Sum" of the plastic shear displacement (ride) is actually the Seismic Moment.

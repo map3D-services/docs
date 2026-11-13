@@ -1,0 +1,21 @@
+---
+title: "Analysis > Options > Auto Repair"
+---
+
+Attempts to repair you model by filling gaps, deleting duplicates etc.- during file load.
+
+Model pre-processing to detect common model building errors including:
+
+- detection and automatic filling of simple gaps such as missing surfaces - highlighted in **black** .
+
+- detection and automatic deletion of duplicate blocks - highlighted in **green** .
+
+- detection of narrow gaps between adjacent blocks - highlighted in **blue** . The warning is generated when ever the gap is less than 1/1000 of the element width.
+
+- detection of edges that link the wrong way to other edges - highlighted in **white** .
+
+- detection of edges that do not link to any other edges - highlighted in red .
+
+- detection of edges that link to too many other edges - highlighted in yellow .
+
+The above model problems will not necessarily stop Map3D from running properly, but close scrutiny of these locations will help user's debug problems and find unintended construction errors.

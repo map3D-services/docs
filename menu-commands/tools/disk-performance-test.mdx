@@ -1,0 +1,27 @@
+---
+title: "Disk Performance Test"
+---
+
+Tests the performance of the hard disk system.
+
+This test simulates the behaviour of Map3D during the solution stage of the BEM analysis.
+
+Buffer Size - Size of the buffer used for reads and write to disk. Map3D uses a 256K buffer for its file read and writes.
+
+Write Through - Instructs the system to write through any intermediate cache and go directly to disk. Map3D uses "Write Through" for its file writes.
+
+No Buffering - Instructs the system to write to the file with no intermediate buffering or caching. Map3D uses "No Buffering" for its file writes.
+
+Asynchronous I/O - Instructs the system to enable more than one read and/or write operation to be performed simultaneously. This option is only supported under Window NT/2000. Map3D can be instructed to use this feature with
+
+#### Analysis > Options > Async I/O
+
+Size MB - File size used for the test. It is recommended that this test be done with a large file size (considerably larger than the amount of RAM). Drive - Disk drive used for the test.
+
+The important results are:
+
+Write rate - the number of MBytes written to the disk per second. You should expect more than 5-10 MB/second.
+
+Read rate - the number of MBytes read from the disk per second. You should expect more than 5-10 MB/second.
+
+Multiply/sec - the number of floating point multiplies done per second. You should expect more than 50 MFLOPS.

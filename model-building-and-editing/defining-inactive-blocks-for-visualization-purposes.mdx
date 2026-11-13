@@ -1,0 +1,7 @@
+---
+title: "Defining Inactive Blocks for Visualization Purposes"
+---
+
+Often when building a model it is desirable to include details of the development headings for visualization purposes. This assists model interpretation since users can more easily identify familiar locations in the mine. While such detailed geometries can be included in the Map3D stress analysis, their presence increases the analysis time owing to the larger number of boundary elements required. Since small drifts normally only influence nearby excavations, the majority of these can be left out of the analysis without significantly influencing the results.
+
+It is however, desirable to superimpose detailed drift locations on the analysis results to aid in visualization. Blocks can be included into the Map3D database but not included in the analysis, simply by assigning an inactive block type. These blocks will be excluded from the intersection, discretization and analysis portions of the code, and hence do not increase the computational effort.

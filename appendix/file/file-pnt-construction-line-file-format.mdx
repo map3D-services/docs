@@ -1,0 +1,33 @@
+---
+title: "File > PNT Construction Line File Format"
+---
+
+PNT format is a universal ASCII data file with the extension ".PNT".
+
+This format is useful for exchanging raw model data with other CAD software.
+
+Comment lines must start with an asterisk "*" in column 1.
+
+Construction lines are stored as a series of polylines as follows:
+
+**x1 y1 z1 3 colour x2 y1 z1 2 x3 y3 z3 2 x4 y4 z4 2**
+
+xi yi zi represent the coordinates of each point. 3 indicates that this point is the beginning of a new line. 2 indicates that this point is a continuation of the same line. colour specifies the colour number that will be used to display the construction line.
+
+A total of 10 colours are available for display.
+
+These are numbered respectively 1 through 10, 11 through 20, 21 through 30, etc., such that the same colour is displayed for number 1, 11, 21, 31..., 2, 22, 32..., etc.
+
+Any number of points can be specified for each polyline.
+
+Additional polylines are specified by repeating the sequence (i.e. starting a new line with the number 3).
+
+Notes
+
+Different colour numbers should be used to represent logical groupings of construction lines (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable using
+
+#### Tools > Custom Colours.
+
+Since it is easy to toggle on and off the display of specific construction line colour numbers, this provides an efficient method to work with complex construction line data
+
+#### View > Hide Cline Colours.

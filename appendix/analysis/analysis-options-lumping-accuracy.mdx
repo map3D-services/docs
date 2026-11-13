@@ -1,0 +1,17 @@
+---
+title: "Analysis > Options > Lumping Accuracy"
+---
+
+When this option is checked, lumping will only be allowed between adjacent elements that share the same local coordinate system (i.e. parallel normals and parallel sides). This ensures relatively good accuracy of lumped zones.
+
+When this option is not checked, lumping will be allowed between all adjacent elements regardless of the orientation. This procedure will result in increased lumping and hence smaller coefficient matrix size, but at the expense of reduced accuracy of the results.
+
+The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+
+Notes
+
+This function must be checked before conducting the discretization analysis
+
+#### Analysis > Discretization
+
+Refer to Analysis > Options > Lumping for information on lumping.

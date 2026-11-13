@@ -1,0 +1,21 @@
+---
+title: "Restart an Analysis"
+---
+
+Restarts an analysis that was aborted or interrupted by a power failure or operating system crash.
+
+This function will scan all mining steps associated with the selected restart file to determine at which mining step the analysis was interrupted. It will then verify that all required scratch files required to restart the analysis are available. Finally it will display this information and offer the option of restarting the analysis from where it left off if this is possible.
+
+In order to restart the following scratch files must be intact:
+
+- file.00n where n is the mining step number where the analysis left off.
+
+- file.1 and file.2 these files are used to restart the solver.
+
+- file.dms this file is only used with the zero strain option (Analysis > Options > Zero Strain Support Placement).
+
+- file.hms this file is only used by Map3Di and are used to accumulate the field loading as the analysis progresses.
+
+Notes:
+
+Refer to Analysis > Options > Initialize to start a new analysis from where a previous model completed.

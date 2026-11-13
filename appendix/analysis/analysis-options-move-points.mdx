@@ -1,0 +1,17 @@
+---
+title: "Analysis > Options > Move Points"
+---
+
+Move field points that are very close to boundary surfaces – during Map3D BEM analysis.
+
+Field points (results on grid planes or at user defined points) that are located within a fraction of an element width from an element corner or edge will have very poor accuracy often indicating unrealistically large stress concentrations. By moving such points to the nearest boundary node, more realistic stress predictions can be obtained. This option only moves points that are within ¼ of _AG_ ( _AG_ is the minimum allowable grid spacing, see Analysis > CParams > AG) from the surface.
+
+This feature also causes field points that are just inside excavations (within ½  of _AG_ ) to be moved onto the excavation surface, and thus provides smooth contouring of results right up to the excavation surface.
+
+#### Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+#### Analysis > BEM Analysis.
+
+It is recommended that you check this option unless you specifically do not want field points moved.

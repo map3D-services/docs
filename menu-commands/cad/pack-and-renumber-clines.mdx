@@ -1,0 +1,35 @@
+---
+title: "Pack and Renumber Clines"
+---
+
+Packs and renumbers all construction lines.
+
+Coordinate points that are very close to one another are merged together. Corners of construction lines that share the same location will use the same coordinate point number and hence will move together in any coordinate editing operation (Cad > Edit). This feature is useful for eliminating small gaps and overlaps between adjacent construction lines.
+
+All possible construction line segments of the same colour will be linked together to form contiguous lines between intersection points.
+
+**6**
+
+![Figure from page 445](/images/page-445-img-2.png)
+
+In this example, 3 line segments will be formed consisting of the following groupings of points
+
+- Line segment 1:  10, 1, 2, 3, 4.
+
+- Line segment 2:  4, 5, 6, 7, 8, 9, 10.
+
+- Line segment 3:  4, 10.
+
+When you initiate this function you will be prompted to specify a pack search radius
+
+![Figure from page 443](/images/page-443-img-14.png)
+
+Radius this value is used to merge points that are close to one another. A zero value for this parameter indicates that it will not be used, and instead Map3D will merge points if they are within a search radius of 1000th of the edge length from the line. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+
+Any unused coordinate numbers are removed from the list of coordinates.
+
+This function should be used before using the CAD > Edit > Smooth Construction lines function.
+
+This function should be used before using the CAD > Snap > Trace Cline Snap function.
+
+Construction lines can be unpacked using the CAD > Unpack Clines function.

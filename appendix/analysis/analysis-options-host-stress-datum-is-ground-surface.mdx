@@ -1,0 +1,17 @@
+---
+title: "Analysis > Options > Host Stress Datum is Ground Surface"
+---
+
+Specifies that the host material #1 stress datum will be treated as ground surface - during Map3D BEM analysis.
+
+When not checked, all excavation surfaces are assigned zero stresses.
+
+When checked, all element surfaces with **_z_** -coordinates above the host material #1 stress datum (it is assumed that **_z_** is positive upwards), will be assigned stresses equal to the specified pre-mining Stress State values. This minimizes the influence of these elements and thus improves accuracy. Note that this is only effective when the ground surface is planar.
+
+#### Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+Analysis > BEM Analysis
+
+This option does not require any additional calculations and hence will not increase analysis time.

@@ -1,0 +1,17 @@
+---
+title: "Analysis > Options > V-ram"
+---
+
+Store part of the coefficient matrix in virtual RAM – during Map3D BEM analysis.
+
+If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Unfortunately Windows 32 bit only allows each process to address 2GB. After you remove overheads this leaves only about 1GB for auxiliary storage, even if you have plenty of RAM. For users with large amounts of RAM in their computer, an alternative is to use physical RAM (Analysis > Options > P-ram) instead of virtual RAM.
+
+Notes:
+
+This function must be checked before conducting the Map3D BEM analysis
+
+#### Analysis > BEM Analysis.
+
+You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+
+You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
