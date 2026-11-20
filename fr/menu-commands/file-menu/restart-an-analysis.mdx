@@ -1,0 +1,21 @@
+---
+title: "Reprendre une analyse"
+---
+
+Reprend une analyse abandonnée ou interrompue par une panne de courant ou un plantage du système d'exploitation.
+
+Cette fonction parcourt toutes les étapes d'exploitation associées au fichier de reprise sélectionné pour déterminer à quelle étape l'analyse a été interrompue. Elle vérifie ensuite que tous les fichiers temporaires nécessaires à la reprise sont disponibles. Enfin, elle affiche ces informations et propose, si possible, de reprendre l'analyse là où elle s'est arrêtée.
+
+Pour reprendre l'analyse, les fichiers temporaires suivants doivent être intacts :
+
+- file.00n, où n est le numéro de l'étape d'exploitation où l'analyse s'est arrêtée.
+
+- file.1 et file.2 : ces fichiers servent à relancer le solveur.
+
+- file.dms : ce fichier n'est utilisé qu'avec l'option de déformation nulle (Analysis > Options > Zero Strain Support Placement).
+
+- file.hms : ce fichier n'est utilisé que par Map3Di, pour cumuler le chargement de champ au fil de l'analyse.
+
+Remarques :
+
+Voir Analysis > Options > Initialize pour lancer une nouvelle analyse à partir de l'état final d'un modèle précédent.

@@ -1,0 +1,17 @@
+---
+title: "Compactar y renumerar bloques"
+---
+
+Compacta y renumera todas las entidades del modelo.
+
+Los puntos de coordenadas muy cercanos entre sí se fusionan. Las esquinas de bloques que comparten la misma ubicación usarán el mismo número de punto de coordenadas y, por lo tanto, se moverán juntas en cualquier operación de edición de coordenadas (Cad > Edit). Esta función es útil para eliminar pequeños huecos y superposiciones entre superficies y bloques adyacentes.
+
+Al iniciar esta función, se le pedirá que especifique un radio de búsqueda de compactación
+
+![Figura de la página 443](/images/page-443-img-14.png)
+
+Radius: este valor se usa para fusionar puntos cercanos entre sí. Un valor cero para este parámetro indica que no se usará; en su lugar, Map3D fusionará los puntos que estén dentro de un radio de búsqueda de una milésima de la longitud de la arista respecto de la línea. Debe tenerse extrema precaución al especificar un valor distinto de cero, ya que los valores grandes pueden causar más problemas de los que resuelven, al fusionar demasiados puntos.
+
+Los números de coordenadas no utilizados se eliminan de la lista de coordenadas.
+
+Los bloques pueden descompactarse con la función CAD > Unpack Blocks.

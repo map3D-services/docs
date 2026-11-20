@@ -1,0 +1,17 @@
+---
+title: "Blöcke packen und neu nummerieren"
+---
+
+Packt alle Modellobjekte und nummeriert sie neu.
+
+Sehr nahe beieinanderliegende Koordinatenpunkte werden zusammengeführt. Blockeckpunkte an derselben Position verwenden dieselbe Koordinatenpunktnummer und bewegen sich daher bei jeder Koordinatenbearbeitung (Cad > Edit) gemeinsam. Diese Funktion ist nützlich, um kleine Lücken und Überlappungen zwischen benachbarten Flächen und Blöcken zu beseitigen.
+
+Beim Start dieser Funktion werden Sie aufgefordert, einen Suchradius für das Packen anzugeben
+
+![Abbildung von Seite 443](/images/page-443-img-14.png)
+
+Radius – dieser Wert dient zum Zusammenführen nahe beieinanderliegender Punkte. Der Wert null bedeutet, dass der Parameter nicht verwendet wird; Map3D führt dann Punkte zusammen, die innerhalb eines Suchradius von einem Tausendstel der Kantenlänge von der Linie liegen. Bei einem Wert ungleich null ist äußerste Vorsicht geboten, da große Werte durch das Zusammenführen zu vieler Punkte mehr Probleme verursachen können, als sie beheben.
+
+Nicht verwendete Koordinatennummern werden aus der Koordinatenliste entfernt.
+
+Blöcke können mit der Funktion CAD > Unpack Blocks entpackt werden.

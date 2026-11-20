@@ -1,0 +1,31 @@
+---
+title: "Modellerstellung im Überblick"
+---
+
+Map3D basiert auf der Randelementformulierung. Bei dieser Methode geht man von einem unendlichen, homogenen, elastischen Medium (dem Gebirge) aus. Die Modellerstellung besteht darin, Hohlräume auszubrechen und inhomogene Zonen (Gänge, Erzzonen oder nachgiebige Zonen) sowie alle Störungen oder Klüfte, auf denen Gleiten auftreten kann, zu überlagern. Da man von einem unendlichen Medium ausgeht, werden Fernfeldränder automatisch berücksichtigt.
+
+Dies unterscheidet sich von Gebietsformulierungen wie der Finite-Elemente- oder der Finite-Differenzen-Methode, bei denen man von einem leeren Raum ausgeht. Bei diesen Methoden besteht die Modellerstellung darin, das gesamte Gebirge mit all seinen Bestandteilen zusammenzusetzen. Die Elemente müssen bis zu einem Fernfeldrand aufgebaut werden, der viele Durchmesser von den Hohlräumen entfernt liegt.
+
+Diese grundlegenden Unterschiede machen die Randelementmethode für Gebirgsprobleme wesentlich geeigneter und wirtschaftlicher (hinsichtlich der Rechenzeit).
+
+In Map3D stehen mehrere Arten von Randelementen zur Verfügung:
+
+Elemente mit fiktiven Kräften (FF) dienen zur Festlegung der Lage von Hohlraumoberflächen und von Grenzen zwischen Bereichen mit unterschiedlichen Materialeigenschaften.
+
+Verschiebungsdiskontinuitäts-Elemente (DD) dienen zur Festlegung der Lage von Klüften, Störungen, Rissen, Tagebauböschungen und der Geländeoberfläche. Diese Elemente können Hohlräume an jeder beliebigen Stelle schneiden, da Map3D die Kantenschnitte intern erzeugt.
+
+Inaktive Elemente dienen zur Erstellung von Hohlraumoberflächen, die angezeigt, aber nicht in der Spannungsanalyse verwendet werden.
+
+Für die Versionen mit thermischer und nichtlinearer Analyse sind spezielle, proprietäre Randelemente integriert.
+
+#### Randelementformulierung
+
+Ziel der Modellerstellung ist es, eine Reihe von Flächenstücken zu erzeugen, die zusammen eine nahtlose, überlappungsfreie, durchgehende Hülle bilden. Diese beschreibt die Lage der Hohlräume, die Grenzen von Bereichen mit unterschiedlichen Moduln, Störungen usw. Diese Flächen müssen weiter in kleinere Randelemente unterteilt werden, auf denen die eigentlichen Einflussfunktionen ausgewertet und gelöst werden. Dieser Ansatz wird als Flächenmodellierung bezeichnet.
+
+Sie können Flächenmodelle frei erstellen und diese grundlegenden Eingabedaten an Map3D übergeben. Dieser Ansatz eignet sich ideal zur Beschreibung von Erzumrissen oder Bestandsmodellen, hat sich jedoch bei der Erstellung von Grubenlayouts als mühsam und fehleranfällig erwiesen. Um die Modellerstellung zu vereinfachen, verfügt das Programm über einen leistungsfähigen integrierten Präprozessor, der dreidimensionale Objekte höherer Ordnung verarbeiten kann. Dieser Ansatz wird als Volumenmodellierung bezeichnet.
+
+Mit der Volumenmodellierung können Sie Modelle aus einer Reihe dreidimensionaler Bausteine zusammensetzen. Diese Blöcke, die jede gewünschte Form und Größe haben können, dienen zur Erstellung von Hohlräumen und Zugängen sowie zur Definition inhomogener Zonen (Erzzonen, Gänge und nachgiebige Zonen).
+
+Das Programm erzeugt Schnittlinien zwischen Hohlräumen, Störungen und mehreren Materialzonen automatisch. In Verbindung mit den integrierten booleschen Operationen lassen sich so komplexe mehrstufige Abbaufolgen mühelos erstellen. Map3D erzeugt die erforderliche Flächenbeschreibung und diskretisiert diese Flächen automatisch in Elemente für die Spannungsanalyse mit der Randelementmethode.
+
+#### Prognose des Gebirgsverhaltens mit numerischer Modellierung

@@ -1,0 +1,27 @@
+---
+title: "Visão geral do Map3D"
+---
+
+O Map3D pode simular desde geometrias tabulares simples até formas detalhadas de escavações 3D e problemas de grande escala abrangendo toda a mina. A dificuldade que os usuários encontrarão na construção e na interpretação dos modelos depende do grau de complexidade exigido pela simulação. Embora modelos tabulares simples ou túneis isolados sejam rápidos e fáceis de construir no Map3D, problemas tridimensionais complexos são inerentemente difíceis de trabalhar e interpretar.
+
+O Map3D possui um ambiente CAD totalmente independente. Uma das chaves para sua facilidade de uso é a construção de modelos usando elementos de superfície convencionais ou a tecnologia de modelagem sólida integrada. Isso permite construir modelos a partir de uma série de blocos tridimensionais. Esses blocos, que podem ter qualquer forma ou tamanho, são usados para construir escavações e acessos, bem como para definir zonas não homogêneas grandes ou de forma irregular (zonas de minério, diques e zonas de plastificação). Todo o material fora do contorno do modelo é considerado material sólido da rocha encaixante. A interface direta com o Deswik permite criar geometrias do Map3D, incluindo a especificação de nomes de blocos, cores e sequência de lavra do Map3D.
+
+O programa constrói automaticamente as interseções entre escavações, falhas e múltiplas zonas de material. Combinando esse recurso com as operações booleanas integradas, é possível construir com facilidade sequências de lavra complexas em várias etapas.
+
+Recursos especiais foram implementados para permitir a construção rápida de geometrias de lavra tabular. O usuário só precisa especificar o perímetro de cada etapa de lavra e o Map3D constrói automaticamente os elementos necessários. O perímetro não precisa ser plano. Na verdade, qualquer poliedro envolvente de pontos tridimensionais é aceito. Lavra complexa, com múltiplos recifes e não tabular (ondulada ou deslocada) é facilmente simulada. Falhas ou diques tridimensionais que interceptam a geometria também podem ser simulados.
+
+A lavra tabular pode ser extrudada em blocos 3D e, se desejado, convertida de volta em lavra tabular. Isso permite construir desenvolvimentos detalhados muito rapidamente. Além disso, diferentes partes do modelo podem ser simuladas usando a aproximação tabular, enquanto nas áreas de interesse o detalhe é obtido com formas 3D reais.
+
+Contornos em wireframe de plantas de mina e geometrias de escavação podem ser digitalizados no próprio Map3D ou importados de diversas fontes, incluindo AutoCAD-DXF e um formato ASCII universal PNT. O usuário pode construir interativamente um modelo composto por blocos e planos 3D usando os recursos CAD integrados do Map3D. Com base nos contornos geométricos ou em desenho à mão livre, o usuário seleciona os vértices dos blocos e planos para concluir a construção do modelo. Tudo isso é feito graficamente com o conjunto completo de ferramentas disponíveis na interface CAD.
+
+Um modelo é composto por um ou mais blocos e/ou planos, conectados ou não, que podem ser lavrados e preenchidos em uma sequência especificada. Em seguida, o programa discretiza as superfícies dos blocos e planos em um número de elementos de contorno. Uma verificação abrangente de erros ajuda o usuário a identificar se a geometria é topologicamente válida.
+
+Os mesmos dados de entrada podem ser usados para análises elásticas, de fluxo térmico/de fluidos ou não lineares
+
+Versões do Map3D
+
+Os resultados da análise podem ser representados por contornos nas superfícies dos elementos ou em uma série de planos de grade de pontos de campo definidos pelo usuário. Esses planos podem ser posicionados em qualquer local e permitem representar tensões, deformações, deslocamentos, fatores de resistência ou qualquer combinação desses componentes. É possível gerar contornos de linhas e/ou contornos preenchidos com cor, com opções de rótulos, trajetórias, transparência, linhas de grade e muito mais.
+
+Os resultados podem ser exportados em vários formatos, incluindo capturas de tela raster, capturas de tela vetoriais ou locais selecionados de grades ou superfícies em formato configurável pelo usuário.
+
+#### Aplicações

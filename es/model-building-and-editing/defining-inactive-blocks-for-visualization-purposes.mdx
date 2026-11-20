@@ -1,0 +1,7 @@
+---
+title: "Definición de bloques inactivos para visualización"
+---
+
+A menudo, al construir un modelo, conviene incluir los detalles de las labores de desarrollo con fines de visualización. Esto facilita la interpretación del modelo, ya que los usuarios pueden identificar más fácilmente lugares conocidos de la mina. Aunque estas geometrías detalladas pueden incluirse en el análisis de esfuerzos de Map3D, su presencia aumenta el tiempo de análisis debido al mayor número de elementos de contorno necesarios. Como las galerías pequeñas normalmente solo influyen en las excavaciones cercanas, la mayoría pueden omitirse del análisis sin afectar significativamente los resultados.
+
+Sin embargo, es conveniente superponer la ubicación detallada de las galerías sobre los resultados del análisis para facilitar la visualización. Los bloques pueden incluirse en la base de datos de Map3D sin incluirse en el análisis, simplemente asignándoles un tipo de bloque inactivo. Estos bloques quedarán excluidos de las etapas de intersección, discretización y análisis del programa y, por lo tanto, no aumentan el esfuerzo computacional.

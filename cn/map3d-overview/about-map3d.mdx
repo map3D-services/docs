@@ -1,0 +1,147 @@
+---
+title: "关于 Map3D"
+---
+
+Map3D 由 Map3D International Ltd 的 Terry Wiles 博士 (support@map3d.com) 开发并提供支持。Map3D 的开发始于 20 世纪 70 年代末，此后经历了多次重大修订，自 1990 年起正式商业发售。该程序持续开发，并由在岩石力学和数值模拟领域从业 50 多年的专业人员提供支持。
+
+全球数百家采矿、土木和岩土工程公司、咨询机构、研究中心和大学都在使用该程序（包括阿根廷、亚美尼亚、澳大利亚、奥地利、比利时、玻利维亚、博茨瓦纳、巴西、保加利亚、布基纳法索、加拿大、中国、哥伦比亚、刚果民主共和国、多米尼加共和国、厄瓜多尔、埃及、萨尔瓦多、厄立特里亚、芬兰、加纳、希腊、危地马拉、洪都拉斯、印度、印度尼西亚、爱尔兰、意大利、日本、哈萨克斯坦、韩国、马里、墨西哥、摩洛哥、蒙古、纳米比亚、尼加拉瓜、巴布亚新几内亚、秘鲁、菲律宾、葡萄牙、俄罗斯、沙特阿拉伯、南非、西班牙、瑞典、瑞士、坦桑尼亚、土耳其、英国、美国、赞比亚和津巴布韦）。招聘广告中常将掌握 Map3D 列为任职条件。演示版 (demo_version) 在全球范围内被用于向学生讲授数值模拟和三维 CAD 的基础知识。
+
+该程序已应用于众多项目，包括地下矿和露天矿设计、矿山稳定性评估、核废料处置库设计、裂隙扩展模拟、断层滑移问题、原岩应力反分析、采石场设计、露天坑边坡稳定性、水力压裂扩展、土质边坡破坏等。当前的研发重点包括定量设计方法、三维塑性模拟、支护模拟、岩爆倾向性评估能力、岩芯饼化模拟，以及数值模拟与地震监测的结合。
+
+**边界元法**：Map3D 采用非常高效的间接边界元法构建，同时使用虚拟力 (FF) 单元、位移不连续 (DD) 单元，以及为热分析、非线性分析和黏塑性分析版本（Map3D 版本）集成的专有特殊边界单元。
+
+过去 50 年的研发使边界元法的许多所谓局限得以克服。程序可以处理多步开采顺序、具有不同材料属性和应力状态的多个材料区，以及含有有限数量离散构造的不连续岩体响应。三维区域和 DD 区域均可表现出非线性和/或塑性行为。多个相交的断层面可以根据用户指定的抗剪强度发生滑移和张开。程序可以模拟耦合的稳态热/流体应力分析，并可通过显式时间步进处理实时蠕变和松弛问题。
+
+**弹性模拟与塑性模拟**：塑性模拟的支持者常声称塑性模拟具有弹性模拟所不具备的独特能力，例如：
+
+- 能够预测损伤的程度、位置、时间和方向。
+
+- 能够模拟屈服引起的应力重分布。
+
+- 能够跟踪随开采推进而累积的损伤。
+
+虽然 Map3D 可以分析完整的三维岩体塑性，但它也能通过弹性模拟实现上述所有所谓塑性模拟独有的能力。
+
+这得益于程序中新增的分析工具：
+
+- Map3D 弹性模型完全能够通过计算超额应力来预测损伤的程度、位置、时间和方向。
+
+- 可以评估三种主要破坏模式：
+
+   - 岩体破坏。
+
+   - 面内断层型破坏。
+
+UB 面（遍布）结构定向软弱面（最多 3 组节理）。
+
+- 可以通过引入软化区来模拟应力重分布。
+
+- 新增了在弹性模型中跟踪累积损伤（超额应力）的功能：损伤随开采推进而被跟踪。
+
+   - 程序会记录开采推进过程中达到的超额应力最大值，并可随开采步骤的推进绘制出来。
+
+首次屈服步骤和最大屈服步骤均会被保存，并可作为迹线编号显示。
+
+MAP3D 的新功能使许多以前只能通过非线性和塑性模拟实现的行为得以处理。
+
+同时还保持了弹性模拟易于使用和计算性能高的优势。
+
+这些功能在很大程度上抵消了塑性模拟所具有的优势。
+
+如果需要进行塑性模拟：
+
+- Map3D Visco-Plastic 能够使用相同的模型输入文件完整模拟岩体屈服。
+
+- Map3D Fault-Slip 能够使用相同的模型输入文件完整模拟断层滑移屈服。
+
+**程序精度**：求解精度由自动离散化程序控制。可以根据用户控制的参数，将单元自动集中在关注区域。这使用户免于手动离散模型的繁琐过程，同时提高精度并尽量减小问题规模。
+
+**问题规模**：Map3D 可以在仅有几 GB 磁盘空间的个人计算机上处理超过 2400 万个自由度。小问题可在几分钟内求解，最大的问题可能需要一夜或几天。这种极高的效率是通过矩阵集总实现的。这使用户能够详细定义现有全矿范围的开采几何形状，并根据需要添加新的开采。这大大减少了建立和运行分析所需的工作量，并能在必要时考虑整个矿山。
+
+**多处理器/多磁盘**：Map3D 完全支持并行处理，计算时间随处理器数量线性缩短（6 核处理器的求解速度是单核处理器的 6 倍）。此外，程序内置重叠磁盘功能，读写速率随磁盘数量线性提高（4 块磁盘的读写速率是单块磁盘的 4 倍）。
+
+**前处理**：Map3D 集成了一套完整的 CAD 软件包，提供多种与其他 CAD 软件交换数据的功能。自动追踪和拉伸等众多功能使复杂模型的构建变得轻松。全面的错误检查和自动修正程序几乎可以使用任何模型几何形状。布尔求交程序无需用户干预即可修正重叠和不匹配的块体连接。全面支持以 DXF 或 PNT (ASCII) 格式导入和导出几何文件。
+
+**后处理**：程序包含完整的显示软件包，提供数百种绘图和数据导出功能。用户自定义绘图和可视化选取的数据导出减轻了结果解释和报告编写的工作量。数据可以直接导出到 Excel 并自动绘制图表。
+
+#### 为什么选择 Map3D
+
+Map3D 从一开始就是专门为采矿应用而开发的。程序旨在帮助您快速获得高精度结果，从而将精力放在工程问题上而非建模本身。大型复杂问题既可以使用 Map3D 自带的 CAD 界面轻松构建，也可以在程序外部构建后以多种格式导入。没有其他任何程序能在同等时间（运行、前处理和后处理时间）、同等成本（便宜许多倍）和同等便捷程度（Map3D 可在现场用于常规分析）下完成 Map3D 所能完成的分析。Map3D 的部分优势如下：
+
+- 使用同一界面，可方便地从弹性分析升级到断层滑移、热/流体流动、非线性和黏塑性分析（Map3D 版本）
+
+- 完善的培训计划，涵盖程序功能和工程结果的详细解释（参见 Map3D 培训）
+
+- 强大的集成 CAD 界面——无需第三方软件
+
+- 轻松构建简单或复杂的三维形体。
+
+- 在台式计算机上即可轻松求解超大规模问题（24,000,000 个自由度）
+
+- 可根据等值线数据自动生成 Excel 图表
+
+- 破坏概率图
+
+- 自动块体求交功能使用户免于手动构建
+
+- 支持充填体放置
+
+- 多步开采顺序
+
+- 高精度单元（达到相同精度所需的单元数量仅为大多数程序的一半）
+
+- 得益于先进的集总程序，运行时间远短于其他程序
+
+- 最多 100 个不同的材料区
+
+- 黏塑性断层滑移模拟
+
+- 含屈服矿柱的板状开采
+
+- 自动离散化可确保精度易于控制且保持一致
+
+- 强大的集成结果查看器
+
+- 可轻松处理结果，用于解释岩体破坏、断层面滑移、定向钻孔上的结果以及层理面或节理组上的遍布滑移。
+
+- 集成的交互式可视化数据库可用于显示地震数据并绘制等值线
+
+- 用户自定义函数的等值线绘图
+
+- 包含程序技术支持
+
+- 26 年多来持续开发和改进
+
+- 同时采用虚拟力单元和位移不连续单元（以及用于热/流体流动和三维塑性的特殊单元）。
+
+- 用于弯曲问题的高阶单元
+
+- 用于查看结果的平面网格、线网格和点网格
+
+- 各向同性和各向异性破坏准则
+
+- RCF（岩壁状态系数）图
+
+- 集成的加速求解器、预处理求解器和共轭梯度求解器协同工作，可快速、可靠、准确地求解
+
+- 可将输入数据导入/导出至其他 CAD 程序
+
+- 可将分析结果导入/导出至其他程序
+
+- 无需昂贵的购买费用——Map3D 按年授权
+
+- 与 Deswik 的直接接口允许用户创建 Map3D 几何体，包括指定 Map3D 块体名称、颜色和开采顺序。
+
+- 可直接导出到 Excel、3D-PDF、VRML 等多种格式。
+
+**部分用户**：Map3D 的部分现有和既往用户包括：University of Toronto (Canada), Vale (formerly CRVD INCO Ontario) (Creighton Mine, Stobie Mine, Frood Mine, South Mine, Garson Mine, Levack Mine, Mines Research, Mines Technology - Methods & Design), INCO Manitoba (Canada), Noranda (Canada), CNG Softeck Co. (Korea), Anglo Gold (South Africa), Golder Associates (Canada and Australia), Placer Dome Western Area Joint Venture (South Africa), Mount Isa Mines (Australia), Brunswick Mining and Smelting (Canada), Goldcorp (Canada), Mincad Systems (Australia), Kanowna Belle Gold Mines (Australia), U. of British Columbia (Canada), U. of Western Australia, U. of New South Wales (Australia), Laval U. (Canada), McGill U. (Canada), Rock Mechanics Technology (England), Endeavor Mine (Australia), Australian Mining Consultants, Aur Resources (Canada), CSIR Division of Mining Technology (South Africa), Snowden Mining Industry Consultants (South Africa and Australia), Tara Mines (Ireland), Georock Inc. (Canada), Romec n.v. (Belgium), Agnico Eagle - Division Laronde (Canada), Queensland University (Australia), Geomechanics Research Centre Laurentian U. (Canada), Agnew Gold (Australia), Western Mining Corp. (Australia), Tao Lekoa Mine (South Africa), AngloGold Ashanti (South Africa and Australia), Kalgoorlie Consolidated Gold Mines (Australia), INWE Rock Engineering, Lourence Geotechnical (Australia), Western Deep Levels (South Mine, West Mine, Regional Office), Zinkgruvan Mining AB (Sweden), Elandsrand Gold Mine (South Africa), TWP Consulting (South Africa), Tshepong Mine (South Africa), CAMBIOR Inc. (Canada), Natural Resources Canada, Avmin Target Mine (South Africa), SRK Consulting (South Africa, Australia, Sweden), U. of Waterloo (Canada), St Ives Gold (Australia), Mine Geant Dormant (Canada), Normandy Jundee Operation (Australia), KULeuven - Unit Mining (Belgium), Leinster Nickel Operation (Australia), Doyon Mine (Canada), ISS International (South Africa), ISS Pacific (Australia), Musselwhite Mine (Canada), Finsch Diamond Mine (South Africa), Queen's University (Canada), Plutonic Gold Mine (Australia), Campbell Mine (Canada), JCI Travistock Colliery (South Africa), Strata Control Technology (Australia), Cayeli Bakir Isletmeleri A. S. (Turkey), Asker - Thabazimbi ISCOR (South Africa), Douglas Partners (Australia), U. of Queensland (Australia), Bambanani Mine (South Africa), Palabora Mining Company Ltd. (South Africa), Newcrest Mining Ltd. (Australia), Delft U. of Technology (The Netherlands), ANGLOVAAL (South Africa), Impala Platinum (South Africa), Battle Mountain Canada, Black Mountain (South Africa), Tsumeb - Otjihase Mine (Namibia), Kloof, Division of Kloof G.M. Co. Ltd. (South Africa), Rustenburg Platinum Mines Ltd. (South Africa), Savuka Mine (South Africa), BCL Botswana (Botswana), Terra Sancta (Australia), Mines Aurizon - Casa Berardi (Canada), Rockland Ltd. (Canada), Darlot Gold Mine (Australia), Forrestania Gold NL (Australia), WA Department of Minerals and Energy (Australia), Great Central Mines - Wiluna Gold (Australia), Central Mines Engineering Group - Inco Ltd (Canada), Kundana Gold (Australia), Henty Gold Mine - Goldfields Ltd. (Australia), Elura Mine (Australia), Western Australia School of Mines, Cannington - BHP World Minerals (Australia), WMC Olympic Dam Operations (Australia), BFP Consultants Pty Ltd (Australia), Julius Kruttschnitt Mineral Research Centre (Australia), Mountan U. of Leoben (Austria), CNR-C.S. Problemi Minerari (Italy), Japan Nuclear Development Institute (Japan), Lassonde Mineral Engineering (Canada), Coffey Geosciences Pty Ltd (Australia), Pajingo Joint Venture (Australia), TauTona Mine (South Africa), Bronzewing - McClure Gold Operations (Australia), Normandy Golden Grove Operation (Australia), McArther River Mining Pty Ltd (Australia), Boulby Mine - Cleveland Potash Limited (United Kingdom), AngloGold Ashanti Mineracao: Cuiaba (Brasil), Harmony Gold Mining Company Limited (Australia), Mirarco Mining Innovation (Canada), Northam Platinum Limited Zondereinde Division (South Africa), Open House Management Solutions (South Africa), Great Noligwa Mine (South Africa), Konkola Copper Mines (Zambia), Osborne Mines (Australia), Politecnico di Torino (Italy), Atomic Energy Canada, Ekati Diamond Mine (Canada), Musslewhite Mine (Canada), Cadia Holdings Ltd. (Australia), INGWE Rock Engineering (South Africa), Mountan University of Technology (Austria), Australian Centre for Geomechanics, Granites Gold Mine (Australia), Northparkes Mines (Australia), Basis Soft Inc. (Korea), Ritsumeikan University (Japan), Science & Technology Central South University (Changsha, Hunan China), Groundwork Consulting (Australia), LionOre Australia, MPI Mines (Australia), Lisheen Mine (Ireland), Northeastern University (Shengyang, Liaoning, P.R.China), Beck Arndt Engineering (Australia), La Mine Niobec (Canada), Second Avenue Subway (New York USA), Anglo Platinum (South Africa), Ressources MSV Inc. (Canada), Selwyn Operations (Australia), Newmont Australia Technical Services (Australia), Kigam - Geotechnical Engineering Division (Korea), Dempers and Seymour P/L (Australia), Cobar Management Pty Ltd (Australia), Big Bell Mining Operations (Australia), Auriongold Kalgoorlie Operations (Australia), Peak Gold Mines (Australia), Driefontein Consolidated (Pty) Ltd (South Africa), Newmont - Pajingo Joint Venture (Australia), AurionGold - Paddington Gold Pty Limited (Australia), Mincor Operations (Australia), Falconbridge Ltd. (Canada), Sons of Gwalia - Southern Cross Operations (Australia), E-Mining Technology S.A. (Chile), Beaconsfield Gold (Australia), MMG Rosebery Mine (Australia), Instituto Innovacion en Mineria y Metalurgia (Chile), IRSM of Chinese Academy of Sciences (China), Brently, Lucas & Associates (South Africa), Kirkland Lake Gold Inc.(Canada), Chelopech Mining AD (Bulgaria), Northwind Enterprises (Australia), Cameco Corporation (Canada), Barrick Goldstrike Mines (USA), Barrick Gold -Lawlers Gold Mine (Australia), RMIT - Faculty of Engineering (Australia), Perilya Broken Hill Ltd (Australia), Placer (PNG) - Porgera Joint Venture (Papua New Guinea), Codelco Chile - Division Andina (Chile), Codelco Chile - Division El Teniente (Chile), Codelco Chile - Division Norte (Chile), IM2 S.A. - Filial Codelco (Chile), Codelco Chile - Division Salvador, Geo-Engineering Technology Limitada (Chile), Xstrata Copper (Australia), Xstrata Nickel (Australia), Mining Geotechnical Solutions (Australia), Freeport McMoRan Copper & Gold (USA), Kopanang Gold Mine (South Africa), Seoul National University (Korea), Lawlers Gold Mine (Australia), Bendigo Mining Limited (Australia), Codelco, Gerencia Corporativa (Chile), Stawell Gold Mines (Australia), Samancor - Western Chrome Mines (South Africa), Mponeng Mine (South Africa), KMCL - Bulyanhulu Site (Tanzania), Ballarat Goldfields (Australia), Goldfields Mine Management (Australia), Dynatec Corporation (Canada), P.T. Freeport Indonesia, EKJV Management (Australia), BHPB Nickel West - Leinster Nickel Operation (Australia), Birla - Mt. Gordon (Australia), Ridgeway Project - Cadia Holdings (Australia), U. of South Australia, Sunrise Dam Gold Mine (Australia), Oxiana Golden Grove (Australia), Moab Khotsong Mine (South Africa), MIDD & MIDDindi Consulting (South Africa), Redco Ltda (Chile), Mining One Pty Ltd (Australia), Birla Nifty - Nifty Copper (Australia), Cracow Gold Mine (Australia), Beta-Hunt Mine (Australia), Universidad de Chile - Facultad de Ciencias Fisicas y Mathematicas, Geotechnical Consulting Pty Ltd (Australia), NVI Mining Ltd. Myra Falls (Australia), East Bolder Mine - Stillwater Mining (USA), Cambior - La Mine Geant-Dormant (Canada), University of Quebec Chicoutimia (Canada), New Gold Afton Project (Australia), A Karzulovic & Associates (Chile), Strata Engineering (Australia), Peter O'Bryan & Associates (Australia), Barrick Granny Smith (Australia), Xstrata Nickel - Raglan Mine (Canada), Genivar (Canada), President Steyn Gold Mine (South Africa), GFL Mining Services Limited (South Africa), Mopani Copper Mine (Zambia), Tau Lekoa Mine (South Africa), Stanford University Department of Geophysics (USA), Simon Fraser University - Department of Earth Sciences (Canada), Resolution Copper Company (Canada), North American Tungsten Corporation (Canada), Gold Fields Technical Services (South Africa), Maggie Hays - Lake Johnston Operations (Australia), Nickel West Cliffs Project - BHP Billiton (Australia), Ditton Geotechnical Services (Australia), GeoMech Services (Australia), Outokumpu Torino Works (Finland), Wardell Armstrong International Ltd (UK), Cosmos Nickel Project - Jubilee Mines NL (Australia), Long Nickel Project - Lighting Nickel Pty (Australia), RESPEC (USA), Xstrata Nickel - Craig Mine (Canada), Northern 3500 Orebody - Xstrata Copper (Australia), Xstrata Zinc - Mount Isa Mines (Australia), Goldfields - Beatrix 4 Shaft (South Africa), Omya Central Europe (Austria), Pyhasalmi Mine Oy (Finland), Outokumpu Torino Works (Finland), Mining One Pty Ltd (Australia), P.T. Newmont Tenggara (Indonesia), Peak Gold Mines (Australia), Argyle Diamond Mine (Australia), Bullant Gold Mine (Australia), Geosinergia Ingenieria y Medio Ambiente Ltd (Chile), Lonmin Platinum (South Africa), DERK Ingenieria y Geologia Ltda (Chile), Montana Exploradora de Guatemala S.A.(Guatemala), St. Barbara Limited (Australia), Boliden Mineral AB (Sweden), Vattenfall Power Consultant (Sweden), Lulea University of Technology (Sweden), LKAB Mining Technology (Sweden), Associacao Instituto Technologio Vale - ITV (Brasil), Mina San Rafael, S.A. - Mina El Escobal (Guatemala), Hecla - Lucky Friday Mine (USA), Kittila Mine - Agnico-Eagle Finland Oy (Finland), Central Institute of Mining and Fuel Research (India), Sibanye Gold (South Africa), Global Mine Design (UK), Eagle Mine LLC (USA), Newmont USA Limited - Leeville Operation (USA), Agnico Eagle Mines Limited (Mexico), NIOSH OMSHR Pittsburg Mining Research Division (USA), ARANZ Geo Limited (New Zealand), Thiess Pty Ltd (Australia), Glencore - Ernest Henry - Copper (Australia), Syama Mine, Society des Mines de Syama (Mali), Glencore Mount Isa Mines Ltd (Australia), La Mancha Resources - Frogs Leg Mine (Australia), Northern Star Resources Limited (Australia), Dundee Precious Metals - Kapan (Armenia), Minera Cuzcatlan (Mexico), Minera Candelaria (Chile), SVS Ingenieros (Chile), ENAMI CHILE (Chile), Kibali Gold Mine - Randgold Resources Ltd. (Democratic Republic of Congo), Unki Mines (Pvt) Ltd (Zimbabwe), Lady Loretta - Zinc Assets Australia (Australia), Salt Lake Mining Pty Ltd (Australia), Mt Carlton and Pajingo - Evolution Mining (Australia), NIOSH OMSHR Spokane Research Lab (USA), Rubicon Minerals Corporation (Canada), Les Mines Opinaca Ltee, Projet Eleonore (Canada), Lac des Iles Mine - North American Palladium (Canada), Pakalnis and Associates (Canada), Nyrstar - Langlois Mine (Canada), Mufulira Mine - Mopani Copper Mines Plc (Zambia), Black Mountain (South Africa), Bindura Nickel Corporation, Trojan Nickel Mine (Zimbabwe), Fosterville Gold Mine Pty Ltd (Australia), Ranger 3 Deeps - E.R.A. (Australia), Kazzinc Ltd (Kazakhstan), Independence Group - Jabiru - Jaguar Limited (Australia), MMG - Dugald River Mine (Australia), AuRico Gold Inc (Canada), Nyrstar Myra Falls Ltd (Canada), Universidad de Chile (Chile), GMT Ltda (Chile), MINSUR S.A. (Peru), AMEC Chile (Chile), Compania Minera El Toqui (Chile), Devourge Industries Ltd (Zambia), Assmang Manganese - Black Rock Mine Operation (South Africa), School of Engineering and ICT, U. of Tasmania (Australia), Primero Gold Canada Inc (Canada), AMEC Earth and Environmental (Canada), Mine Westwood - IAMGOLD (Canada), Stantec Inc (Canada), Knight Piesold Ltd (Canada), Osisko Mining Corporation (Canada), Kinross Gold Corporation - Technical Services (Canada), Silver Lake Resources, Daisy Milano Mine Site (Australia), Minerals and Metals Group, Golden Grove (Australia), South32 Cannington Pty Ltd (Australia), Morobe Mining, Nine Mile, Awilunga Estate (Papua New Guinea), Copper Mines of Tasmania (Australia), AngloGold Ashanti Mineracao: Cuiaba (Brasil), Mineracao Serra Grande (Brasil), Xstrata Zinc, Mine Matagami (Canada), St. Andrew Goldfields Ltd., Holt-Holloway Mine (Canada), Hecla Quebec - Casa Berardi (Canada), Barrick Cortez (USA), Barrick Gold Corp. - Hemlo Operations (Canada), ASDR Industries (Canada), Centre for Excellence in Mining Innovation (Canada), Two Rivers Platinum (Pty) Ltd (South Africa), Chibuluma Copper South Mine PLC (Zambia), Loulo Mine, Randgold Resources Limited (Zambia), Santiago University (Chile), Tomas Fernando Villegas Barba (Mexico), ACE [Arab Consulting Engineers] (Egypt), Growth & Intl Projects, GoldFields Australasia (Australia), Tritton Resources Pty Limited (Australia), Compania Minera San Geronimo (Chile), Jacobina Mineracao - Yamana Gold Inc (Brasil), FF GeoMechanics (Chile), Minera Florida Ltda (Chile), Minera Triton S.A. (Nicaragua), Minera Sierra Gorda SCM (Chile), Sociedad Minera El Brocal S.A.A. (Peru), GFI Mining SA (Pty) Ltd, Kloof Division (South Africa), Anglogold Ashanti - Obuasi Mine (Ghana), ARMgold/Harmony Freegold JV (South Africa), BCG Engineering Inc (Canada), University of New South Wales (Australia), Agnico-Eagle - Division Goldex (Canada), McArthur River Mine - Cameco Corporation (Canada), Thinkrox Inc (Canada), New Gold Inc., New Afton (Canada), Snap Lake Mine, De Beers Canada Inc (Canada), Mine Design Engineering (Canada), DB Operating Corporation (Canada), BCD Resources (Operations) NL - Tasmania Mine (Australia), Minera El Toqui (Chile), Capstone Gold S.A. (Mexico), Universidad De La Serena (Chile), Segala Mining Co SA (SEMICO SA) (Mali), Bariq Mining Limited (Saudi Arabia), TREM Rock Engineering (South Africa), U. of Saskatchewan, Civil & Geological Eng. (Canada), Call & Nicholas Inc (USA), LVI Geotechnical (Australia), Camborne School of Mines, U. of Exeter (UK), PUCOBRE (Chile), Compania Minera Dona Ines de Collahuasi (Chile), Compania Minera Nevada SpA (Chile), Mining Plus Pty Ltd (Australia), Flying Fox Mine - Forrestania Nickel Project (Australia), Oceana Gold Didipio Operations (Philippines), Sandfire Resources NL (Australia), MineGeoTech Pty Ltd (Australia), 2M Engineering (Indonesia), MINERA MILPO S.A.A  (Peru), Siga Ingenieria Y Consultores S.A. (Chile), Bluestone Mines Tasmania Joint Venture (Australia), Barrick (Australia Pacific) Yilgarn (Australia), Apex Gold Pty Ltd (Australia), Jennmar Australia Pty Ltd (Australia), Tecnologia Y Geociencias Limitada (Chile), Kazakhmys Services Limited (Kazakhstan), Cairo University - Faculty of Engineering (Egypt), Isa Ashari Qudraturrahman (CV PRJ) (Australia), Ezulwini Mine - First Uranium Corporation (South Africa), University of Pretoria (South Africa), Eldorado Gold Corporation (China), Carpentaria Gold - Ravenswood Operations (Australia), Anglo Coal Australia Pty Ltd (Australia), Eastplats Ltd - Crocodile River Mine (South Africa), Great Noligwa Mine (South Africa), Randfontein Estates - Harmony Gold Mining Co (South Africa), PipeFlo (South Africa), Haldeman Mining Company S.A. (Chile), ARCADIS CHILE S.A (Chile), Geomechanicos Consultores Ltda (Chile), Otter Juan Mine - Goldfields Mine Management (Australia), Straits Resources Limited (Australia), Halcrow Group Limited (Australia), Mine-concept Engineering Services (Canada), Diavik Diamond Mines Inc (Canada), Green Geotechnical Pty Ltd (Australia), Custom GeoEng Solutions Inc (Canada), Ingenieria de Rocas Limitada (Chile), BHP Billiton Energy Coal South Africa Ltd (South Africa), Luanshya Copper Mines Plc (Zambia), Brentley, Lucas & Associates Pty Ltd (South Africa), Oz Minerals (Australia), Rio Tinto - Technology and Innovation (USA), InnovExplo Inc (Canada), AMEC Foster Wheeler Americas (Canada), Geohart Consultants Pty Ltd (Australia), ROCKLAND LTD (Canada), Sudbury Integrated Nickel Operations, Glencore (Canada), East Boulder Mine - Stillwater Mining (USA), Breakwater Resources Ltd (Canada), School of Resources & Safety Eng - Central SU (China), Manxmin Pty. Ltd (Australia).
+
+Map3D 的开发和支持者：
+
+![第 25 页插图](/images/page-25-img-3.png)
+
+Terry D. Wiles 博士 Map3D International Ltd. 电子邮件：support@map3d.com 网站：[www.map3d.com](https://www.map3d.com)
+
+Map3D 采用授权许可方式，而非出售。Map3D 的使用通过许可协议进行，并由限时保护密钥控制。程序通常按年授权，但也可以提前协商多年期许可。
+
+销售和技术支持由 Map3D International Ltd 及其遍布全球的代理商网络提供，代理商分布于澳大利亚、巴西、加拿大、智利、中国、印度、印度尼西亚、哈萨克斯坦和南非 (www.map3d.com/how_to_buy)。

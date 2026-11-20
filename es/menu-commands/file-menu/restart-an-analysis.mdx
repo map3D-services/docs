@@ -1,0 +1,21 @@
+---
+title: "Reiniciar un análisis"
+---
+
+Reinicia un análisis que se abortó o se interrumpió por un corte de energía o una falla del sistema operativo.
+
+Esta función revisa todas las etapas de minado asociadas al archivo de reinicio seleccionado para determinar en qué etapa se interrumpió el análisis. Luego verifica que estén disponibles todos los archivos temporales necesarios para reiniciarlo. Por último, muestra esta información y ofrece la opción de reiniciar el análisis desde donde quedó, si es posible.
+
+Para reiniciar, los siguientes archivos temporales deben estar intactos:
+
+- file.00n, donde n es el número de la etapa de minado en que quedó el análisis.
+
+- file.1 y file.2: estos archivos se usan para reiniciar el solucionador.
+
+- file.dms: este archivo solo se usa con la opción de deformación cero (Analysis > Options > Zero Strain Support Placement).
+
+- file.hms: este archivo solo lo usa Map3Di para acumular la carga de campo a medida que avanza el análisis.
+
+Notas:
+
+Consulte Analysis > Options > Initialize para iniciar un nuevo análisis desde donde terminó un modelo anterior.

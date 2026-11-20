@@ -1,0 +1,15 @@
+---
+title: "Blockverknüpfungen neu ordnen"
+---
+
+Beim Import von Modellen aus anderen CAD-Programmen ist es wichtig, Map3D eine Möglichkeit zu geben, die Zusammensetzung der Blöcke zu erkennen.
+
+Am besten weist man benachbarten Blöcken einfach unterschiedliche Farbnummern zu; dann kann Map3D leicht feststellen, welche Flächen zu welchem Block gehören. Alternativ können Sie jeder Fläche einen eindeutigen Blocknamen geben.
+
+Ist dies nicht möglich, steht eine neue Routine zur Verfügung, die versucht zu ermitteln, welche Flächen zu benachbarten Blöcken gehören.
+
+Dazu sucht sie nach Flächenverbindungen an gemeinsamen Eckpunkten, unter der Annahme, dass die Flächen in einer einheitlichen Reihenfolge vorliegen.
+
+Beispielsweise bilden die Flächen 1-12 einen Block, die Flächen 13-24 einen weiteren Block usw. Die neue Routine „CAD > Resequence Block Links“ führt diese Verarbeitung aus.
+
+Beachten Sie, dass diese Routine nur als letztes Mittel verwendet werden sollte, um falsch aufgebaute Modelle zu entwirren.

@@ -1,0 +1,27 @@
+---
+title: "Descripción general de Map3D"
+---
+
+Map3D puede simular desde geometrías tabulares simples hasta formas detalladas de excavaciones 3D y problemas de gran escala a nivel de toda la mina. La dificultad que encontrarán los usuarios al construir e interpretar modelos depende del grado de complejidad que requiera cada simulación. Si bien los modelos tabulares simples o los túneles individuales se construyen de forma rápida y sencilla en Map3D, los problemas tridimensionales complejos son por naturaleza difíciles de trabajar e interpretar.
+
+Map3D cuenta con un sistema CAD completamente autónomo. Una de las claves de su facilidad de uso es la construcción de modelos mediante elementos de superficie convencionales o mediante la tecnología de modelamiento sólido integrada. Esto permite construir modelos a partir de una serie de bloques tridimensionales. Estos bloques, que pueden tener cualquier forma o tamaño, se utilizan para construir excavaciones y accesos, así como para definir zonas no homogéneas grandes o de forma irregular (zonas de mineral, diques y zonas cedentes). Se supone que todo el material fuera del contorno del modelo es un material sólido de la roca encajante. La interfaz directa con Deswik permite crear geometrías de Map3D, incluida la especificación de nombres de bloques, colores y secuencia de minado de Map3D.
+
+El programa construye automáticamente las intersecciones entre excavaciones, fallas y múltiples zonas de material. Al combinar esta capacidad con las operaciones booleanas integradas, es posible construir con facilidad secuencias de minado complejas de múltiples etapas.
+
+Se han implementado funciones especiales para construir rápidamente geometrías de minería tabular. El usuario solo necesita especificar el perímetro de cada etapa de minado y Map3D construye automáticamente los elementos necesarios. El perímetro no tiene por qué ser plano. De hecho, se acepta cualquier poliedro envolvente de puntos tridimensionales. Es fácil simular minería compleja, de múltiples vetas y no tabular (ondulada o desplazada). También pueden simularse fallas o diques tridimensionales que intersectan la geometría.
+
+La minería tabular puede extruirse en bloques 3D y, si se desea, volver a convertirse en minería tabular. Esto permite construir desarrollos detallados con gran rapidez. Además, distintas partes del modelo pueden simularse con la aproximación tabular, mientras que en las zonas de interés se obtiene detalle utilizando formas 3D reales.
+
+Los contornos alámbricos de los planos de mina y las geometrías de excavación pueden digitalizarse dentro de Map3D o importarse desde diversas fuentes, como AutoCAD-DXF y un formato ASCII universal PNT. El usuario puede construir interactivamente un modelo compuesto por bloques y planos 3D usando las capacidades CAD integradas de Map3D. A partir de los contornos geométricos o de un dibujo a mano alzada, el usuario selecciona las esquinas de los bloques y planos para completar la construcción del modelo. Todo esto se realiza gráficamente con el completo conjunto de herramientas disponibles en la interfaz CAD.
+
+Un modelo consta de uno o más bloques y/o planos, conectados o no, que pueden minarse y rellenarse según una secuencia especificada. Posteriormente, el programa discretiza las superficies de los bloques y planos en un número de elementos de contorno. Una verificación exhaustiva de errores ayuda al usuario a identificar si la geometría es topológicamente válida o no.
+
+Los mismos datos de entrada pueden utilizarse para análisis elásticos, de flujo térmico/de fluidos o no lineales
+
+Versiones de Map3D
+
+Los resultados del análisis pueden representarse mediante contornos sobre las superficies de los elementos o sobre una serie de planos de grilla de puntos de campo definidos por el usuario. Estos planos pueden ubicarse en cualquier posición y permiten representar mediante contornos esfuerzos, deformaciones, desplazamientos, factores de resistencia o cualquier combinación de estos componentes. Pueden generarse contornos de líneas y/o contornos rellenos de color con opciones de etiquetas, trayectorias, transparencia, líneas de grilla y más.
+
+Los resultados pueden exportarse en muchos formatos, incluidas capturas de pantalla ráster, capturas de pantalla vectoriales o ubicaciones seleccionadas de grillas o superficies con un formato configurable por el usuario.
+
+#### Aplicaciones

@@ -1,0 +1,17 @@
+---
+title: "Mittelungsbox"
+---
+
+Berechnet den gewichteten Mittelwert aller ausgewählten Konturpunkte.
+
+Sie werden aufgefordert, die beiden Ecken des Fensters jeweils mit einem Mausklick auszuwählen. Es werden nur die Konturpunkte innerhalb des Fensters berücksichtigt. Um die tatsächliche Lage der Konturpunkte zu sehen, aktivieren Sie die Anzeige der Trajektorien (Plot > Options > Trajectories). Die Konturpunkte liegen dort, wo die Trajektorien gezeichnet werden.
+
+Zur Mittelung wird jeder ausgewählte Wert mit der Fläche seines zugehörigen Flächen- oder Rasterstücks multipliziert, und diese Produkte werden summiert. Das Ergebnis wird als „Weighted Sum“ angezeigt. Der „Average“ ergibt sich aus der Division der gewichteten Summe durch die Gesamtfläche.
+
+Alle Werte werden als Vektorkomponenten aufsummiert. Hauptspannungen werden aus dem gewichteten Mittel der kartesischen Komponenten bestimmt. Verschiebungs-, Fluss- und Oberflächenscherkomponenten werden aus dem gewichteten Mittel der Vektorkomponenten bestimmt.
+
+Beachten Sie, dass die „Weighted Sum“ bei Spannungen der auf die Fläche wirkenden Gesamtkraft entspricht.
+
+Multipliziert man mit dem Schubmodul, entspricht die „Weighted Sum“ der plastischen Scherverschiebung (Ride) dem seismischen Moment.
+
+Komplexe Polygone lassen sich mit Plot > Polygon Box definieren.

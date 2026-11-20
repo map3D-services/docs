@@ -1,0 +1,31 @@
+---
+title: "Descripción general de la construcción de modelos"
+---
+
+Map3D se basa en la formulación de elementos de contorno. Con este método, se parte de un medio elástico homogéneo infinito (macizo rocoso). El proceso de construcción del modelo consiste en realizar excavaciones y superponer zonas no homogéneas (diques, zonas de mineral o zonas cedentes) y cualquier falla o diaclasa en la que pueda producirse deslizamiento. Como se parte de un medio infinito, los contornos de campo lejano se consideran automáticamente.
+
+Esto es distinto de las formulaciones de dominio, como los métodos de elementos finitos o de diferencias finitas, en las que se parte de un espacio vacío. En estos últimos métodos, la construcción del modelo consiste en ensamblar todo el macizo rocoso y todos sus componentes. Los elementos deben ensamblarse hasta algún contorno de campo lejano situado a muchos diámetros de distancia de las excavaciones.
+
+Estas diferencias fundamentales hacen que el método de elementos de contorno sea mucho más adecuado y económico (en términos de tiempo de análisis) para los problemas de macizos rocosos.
+
+Map3D dispone de varios tipos de elementos de contorno:
+
+Los elementos de fuerza ficticia (FF) se utilizan para especificar la ubicación de las superficies de excavación y de los contornos entre regiones con propiedades de material diferentes.
+
+Los elementos de discontinuidad de desplazamiento (DD) se utilizan para especificar la ubicación de diaclasas, fallas, fracturas, paredes de rajo y la superficie del terreno. Estos elementos pueden intersectar excavaciones en cualquier ubicación, ya que Map3D construye internamente las intersecciones de aristas.
+
+Los elementos inactivos se utilizan para construir superficies de excavación que pueden visualizarse, pero que no se usan en el análisis de esfuerzos.
+
+Se incorporan elementos de contorno especiales propios para las versiones de análisis térmico y no lineal.
+
+#### Formulación de elementos de contorno
+
+El objetivo de la construcción del modelo es crear una serie de parches de superficie que, en conjunto, formen una piel continua, sin costuras ni superposiciones, que describa la ubicación de las excavaciones, los contornos de regiones con módulos diferentes, las fallas, etc. Estas superficies deben subdividirse a su vez en elementos de contorno más pequeños, donde se evalúan y resuelven las funciones de influencia. Este enfoque se denomina modelamiento de superficies.
+
+El usuario puede construir libremente modelos de superficie y proporcionar estos datos básicos de entrada a Map3D. Si bien este enfoque es ideal para describir contornos de mineral o modelos as-built, resulta tedioso y propenso a errores al construir diseños mineros. Para simplificar la construcción de modelos, el programa incluye un potente preprocesador capaz de aceptar y manipular entidades tridimensionales de orden superior. Este enfoque se denomina modelamiento sólido.
+
+El modelamiento sólido permite construir modelos a partir de una serie de bloques tridimensionales. Estos bloques, que pueden tener cualquier forma o tamaño, se utilizan para construir excavaciones y accesos, así como para definir zonas no homogéneas (zonas de mineral, diques y zonas cedentes).
+
+El programa construye automáticamente las intersecciones entre excavaciones, fallas y múltiples zonas de material. Al combinar esta capacidad con las operaciones booleanas integradas, es posible construir con facilidad secuencias de minado complejas de múltiples etapas. Map3D crea la descripción de superficie necesaria y discretiza automáticamente estas superficies en elementos para el análisis de esfuerzos por elementos de contorno.
+
+#### Predicción de la respuesta del macizo rocoso mediante modelamiento numérico

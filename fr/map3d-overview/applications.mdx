@@ -1,0 +1,21 @@
+---
+title: "Applications"
+---
+
+Map3D convient à la modélisation de problèmes de conception en génie des roches comportant à la fois de grands corps minéralisés tabulaires et des excavations massives irrégulières.
+
+Le programme est conçu pour être très polyvalent. Il peut tout simuler, des formes tabulaires simples aux formes d'excavation 3D détaillées, en passant par les problèmes à grande échelle couvrant toute la mine. Les modèles peuvent inclure des tunnels, de grandes excavations de forme irrégulière, des zones minéralisées, des excavations massives et tabulaires, des fosses à ciel ouvert, des failles, des fractures, etc. Les excavations peuvent être recoupées par plusieurs failles ou discontinuités autorisées à glisser ou à s'ouvrir. La taille et la complexité du problème ne sont limitées que par le niveau de détail que vous souhaitez intégrer.
+
+Map3D peut simuler des éléments de soutènement tels que des cintres, des cadres en acier, des étais, des revêtements épais, des piles de bois, du remblai résistant, etc. Pour simuler des systèmes de soutènement rigides de ce type, il faut modéliser le mouvement du terrain jusqu'au moment de la mise en place du soutènement, puis insérer les éléments de soutènement soit dans un état libre de contrainte et de déformation, soit avec une précontrainte prescrite. Cette fonction est particulièrement utile pour simuler des éléments de soutènement structurels et permet leur mise en place, la modification de leurs propriétés et leur retrait ultérieur si nécessaire. Cette option est disponible pour les blocs FF 3D et/ou les plans DD.
+
+Pour activer cette fonction, vous devez d'abord excaver l'élément de soutènement souhaité (bloc FF 3D ou plan DD) jusqu'à l'état précontraint voulu (utilisez un code de matériau nul pour des contraintes nulles, ou un numéro de matériau négatif pour un état de contrainte prescrit), puis, lors d'une étape d'exploitation ultérieure, insérer le matériau de soutènement (utilisez pour cela un numéro de matériau positif). Lorsque l'option Analysis > Options > Zero Strain Support Placement est cochée, Map3D effectue les calculs nécessaires pour mettre en place les éléments de soutènement dans un état libre de contrainte et de déformation, ou avec une précontrainte prescrite, à l'étape d'exploitation en cours. L'excavation jusqu'à un état de contrainte nul ou prescrit, suivie de l'insertion d'un autre matériau, indique à Map3D qu'il doit effectuer ces calculs.
+
+Map3D peut servir à l'analyse de problèmes d'agencement souterrain et de séquence d'exploitation, ainsi qu'à l'évaluation de la conception des piliers, de la stabilité des portées de chantier et de la stabilité des failles. Selon la version utilisée, un comportement non linéaire des matériaux peut être pris en compte pour modéliser les piliers, les couches et les appuis.
+
+Une fonction permet de superposer des effets de chargement de champ externes au modèle Map3D : Map3Di.
+
+Une autre fonction permet de visualiser des données ponctuelles : Seismic. Les points peuvent être affichés sous forme de sphères ombrées par une source lumineuse, dont le diamètre et/ou la couleur varient selon la magnitude. Chaque point peut être associé à une série de valeurs numériques (par exemple couleur, magnitude, orientation, etc.) et à un message texte. Lorsque vous cliquez sur un point, sa position, sa magnitude et son message texte s'affichent dans la barre d'état. Cette fonction permet d'afficher une base de données d'informations géologiques utiles, comme la teneur ou la qualité du massif rocheux.
+
+Le chargement de champ peut provenir d'un échauffement thermique, de la pression des fluides, d'un comportement non linéaire et des déformations révélées par la sismicité. Ces effets peuvent servir à caractériser des structures géologiques, à tenir compte des changements de lithologie et à intégrer les effets du chargement sismique dans le modèle Map3D.
+
+Présentation de la construction de modèles

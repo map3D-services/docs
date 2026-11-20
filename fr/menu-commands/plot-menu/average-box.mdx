@@ -1,0 +1,17 @@
+---
+title: "Boîte de moyenne"
+---
+
+Calcule la moyenne pondérée de tous les points de contour sélectionnés.
+
+Vous êtes invité à sélectionner les deux sommets de la fenêtre, chacun d'un clic. Seuls les points de contour situés dans la fenêtre sont pris en compte. Pour voir l'emplacement réel des points de contour, activez l'affichage des trajectoires (Plot > Options > Trajectories). Les points de contour se trouvent là où les trajectoires sont tracées.
+
+La moyenne est calculée en multipliant chaque valeur sélectionnée par l'aire de la surface ou de la facette de grille associée, puis en additionnant ces produits. Ce résultat est présenté comme « Weighted Sum ». L'« Average » est obtenue en divisant la somme pondérée par l'aire totale.
+
+Toutes les valeurs sont cumulées sous forme de composantes vectorielles. Les contraintes principales sont déterminées à partir de la moyenne pondérée des composantes cartésiennes. Les composantes de déplacement, de flux et de cisaillement de surface sont déterminées à partir de la moyenne pondérée des composantes vectorielles.
+
+Notez que, pour les contraintes, la « Weighted Sum » correspond en fait à la force totale s'exerçant sur la surface.
+
+Multipliée par le module de cisaillement, la « Weighted Sum » du déplacement de cisaillement plastique (ride) correspond en fait au moment sismique.
+
+Des polygones complexes peuvent être définis avec Plot > Polygon Box.

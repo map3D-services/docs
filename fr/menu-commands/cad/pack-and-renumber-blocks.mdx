@@ -1,0 +1,17 @@
+---
+title: "Compacter et renuméroter les blocs"
+---
+
+Compacte et renumérote toutes les entités du modèle.
+
+Les points de coordonnées très proches les uns des autres sont fusionnés. Les sommets de blocs situés au même endroit utilisent le même numéro de point de coordonnées et se déplacent donc ensemble lors de toute opération de modification des coordonnées (Cad > Edit). Cette fonction permet d'éliminer les petits espaces et chevauchements entre surfaces et blocs adjacents.
+
+Au lancement de cette fonction, un rayon de recherche pour le compactage vous est demandé
+
+![Figure de la page 443](/images/page-443-img-14.png)
+
+Radius : cette valeur sert à fusionner les points proches les uns des autres. Une valeur nulle indique que ce paramètre n'est pas utilisé ; Map3D fusionne alors les points situés à moins d'un millième de la longueur de l'arête de la ligne. Soyez extrêmement prudent avec une valeur non nulle, car une valeur élevée peut créer plus de problèmes qu'elle n'en résout en fusionnant trop de points.
+
+Les numéros de coordonnées inutilisés sont supprimés de la liste des coordonnées.
+
+Les blocs peuvent être décompactés avec la fonction CAD > Unpack Blocks.

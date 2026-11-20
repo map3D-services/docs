@@ -1,0 +1,7 @@
+---
+title: "Tagebaue definieren"
+---
+
+Tagebaue können zwar mit Verschiebungsdiskontinuitäts-Elementen erstellt werden, dies wird jedoch nicht empfohlen. Am besten werden Tagebaue als Hohlräume (über Blockdefinitionen mit Elementen fiktiver Kräfte) angrenzend an die Geländeoberfläche erstellt. Der Grund dafür ist, dass die in Map3D integrierte Verschneidungslogik das Innere von Hohlraumblöcken erkennen und alle schneidenden Strukturen (wie Störungen, Erzzonen oder Strecken) abschneiden kann. Außerdem werden Verschiebungsdiskontinuitäts-Elemente, die entlang des Rands eines Hohlraums liegen (zum Beispiel die Geländeoberfläche), ebenfalls erkannt und korrekt behandelt.
+
+Für Zonen, die durch Verschiebungsdiskontinuitäts-Elemente definiert sind, gibt es diese Logik nicht. Man könnte leicht ein Modell mit mehreren sich überlappenden Verschiebungsdiskontinuitäts-Elementen erstellen, das nicht konvergiert.
