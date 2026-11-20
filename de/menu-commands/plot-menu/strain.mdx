@@ -2,366 +2,345 @@
 title: "Dehnung"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+## 5.3.2.1 Größte Hauptdehnung
 
-## 5.3.2.1 Major Principal Strain
-
-Contours the major , intermediate and minor principal strains. These components can be accessed via the Strain Components toolbar as follows:
+Stellt die größte, mittlere und kleinste Hauptdehnung als Konturen dar. Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Strain Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Strain Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration
-
-button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+In der elastischen Analyse wird die größte Hauptspannung üblicherweise zusammen mit der kleinsten Hauptspannung und dem Festigkeitskriterium nach Mohr-Coulomb oder Hoek-Brown verwendet, um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen. Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks
 
 #### Accumulated Damage:
 
-In the case of plastic analysis, the accumulated damage function can be activated, When Acc is not activated, the current value of plastic strain is used. When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case (maximum) plastic strain is plotted.
+Bei der plastischen Analyse kann die Funktion für kumulierte Schädigung aktiviert werden. Ist Acc nicht aktiviert, wird der aktuelle Wert der plastischen Dehnung verwendet. Ist Acc aktiviert, wird die Schädigung von Schritt 1 bis zum aktuellen Schritt über die gesamte Belastungsgeschichte des Modells verfolgt; dargestellt wird daher der ungünstigste (maximale) Wert der plastischen Dehnung.
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum plastic strain occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+Beachten Sie, dass sowohl der Schritt, in dem erstmals Fließen auftritt (MStep 1st Yield), als auch der Schritt, in dem die maximale plastische Dehnung auftritt (MStep Max Yield), verfolgt werden und als Trajektorienbeschriftungen angezeigt werden können.
 
 #### Strain Components:
 
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic
-
-Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
-
-#### Plot > Range
-
-Any of these components can be added to the contouring toolbar if desired.
-
-Tools > Configure Contouring Toolbar > Strain
-
-The user may find it handy to add the
-
-#### More Strain Components
-
-button to the contouring toolbar for quick access to all strain components.
-
-## 5.3.2.4 Maximum Shear Strain
-
-Contours the maximum shear strain ½( e1 - e3 )
-
-This component can be accessed via the Strain Components toolbar as follows:
-
-![Figure from page 228](/images/page-228-img-4.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-You can add this button to the Contours toolbar using the configuration button.
-
-![Figure from page 228](/images/page-228-img-9.png)
-
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
-
-Mohr-Coulomb in 3D FF blocks
-
-Note that there are three components of strain that can be contoured:
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
 Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-## 5.3.2.5 In-Plane Shear Strain
+## 5.3.2.4 Maximale Scherdehnung
 
-Contours the maximum shear strain acting on the grid plane, and the strain component normal to the grid plane or parallel to a line grid.
+Stellt die maximale Scherdehnung ½( e1 - e3 ) als Konturen dar
 
-These components can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponente kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
-![Figure from page 226](/images/page-226-img-12.png)
+![Figure from page 228](/images/page-228-img-4.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
-![Figure from page 227](/images/page-227-img-4.png)
+![Figure from page 228](/images/page-228-img-9.png)
 
-#### Plot > Grid Selection
-
-To calculate the in-plane strains, the strain state at each point on the grid plane is reoriented to determine the maximum shear strain parallel to the grid plane and the strain normal to the plane. Note that eip is oriented normal to the grid plane and parallel to the direction of a line grid.
-
-![Figure from page 229](/images/page-229-img-14.png)
-
-- dip direction is measured positive clockwise from the y-axis.
-
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
-
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
-
-In elastic analysis the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion
+In der elastischen Analyse wird die größte Hauptspannung üblicherweise zusammen mit der kleinsten Hauptspannung und dem Festigkeitskriterium nach Mohr-Coulomb oder Hoek-Brown verwendet, um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen. Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks
 
-to estimate the amount of damage due to over-stressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
-Mohr-Coulomb in DD planes
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
-
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic
-
-Plot > Strain > Value > Plastic Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-Related topics:
+## 5.3.2.5 Scherdehnung in der Ebene
 
-Plot > Strain > e1i In-plane Maximum Plot > Strain > e3i In-plane Minimum Plot > Strain > esu Ubiquitous-plane Shear Plot > Strain > enu Ubiquitous-plane Normal
+Stellt die maximale Scherdehnung, die auf die Rasterebene wirkt, sowie die Dehnungskomponente normal zur Rasterebene oder parallel zu einem Linienraster als Konturen dar.
 
-## 5.3.2.7 In-Plane Maximum Strain
-
-Contours the maximum and minimum strains tangential to the currently selected grid plane or perpendicular to a line grid.
-
-These components can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
 #### Plot > Grid Selection
 
-To calculate the maximum and minimum in-plane strains, the strains tangential to the grid plane are determined, then resolved to give the maximum and minimum values. Note that eni is oriented normal to the grid plane and parallel to the direction of a line grid. Also note that eni, e1i and e3i are perpendicular to one another.
+Zur Berechnung der Dehnungen in der Ebene wird der Dehnungszustand an jedem Punkt der Rasterebene umorientiert, um die maximale Scherdehnung parallel zur Rasterebene und die Dehnung normal zur Ebene zu bestimmen. Beachten Sie, dass eip normal zur Rasterebene und parallel zur Richtung eines Linienrasters orientiert ist.
+
+![Figure from page 229](/images/page-229-img-14.png)
+
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
+
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
+
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
+
+In der elastischen Analyse wird die maximale Schubspannung in der Ebene üblicherweise zusammen mit der Normalspannung in der Ebene und dem Festigkeitskriterium nach Mohr-Coulomb verwendet
+
+Mohr-Coulomb in 3D FF blocks
+
+um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen. Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
+
+Mohr-Coulomb in DD planes
+
+um das Ausmaß des Gleitens durch Überbeanspruchung auf einer Störung, Kluftschar oder Schichtfläche abzuschätzen, die genauso orientiert ist wie die Rasterebene. Da diese Parameter richtungsabhängig sind, ist dieses Kriterium repräsentativ für die Standsicherheit eines anisotropen Gebirges.
+
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
+
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
+
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
+
+Der Konturbereich wird festgelegt mit
+
+#### Plot > Range
+
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
+
+Tools > Configure Contouring Toolbar > Strain
+
+Es kann praktisch sein, die Schaltfläche
+
+#### More Strain Components
+
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
+
+Verwandte Themen:
+
+Plot > Strain > e1i In-plane Maximum Plot > Strain > e3i In-plane Minimum Plot > Strain > esu Ubiquitous-plane Shear Plot > Strain > enu Ubiquitous-plane Normal
+
+## 5.3.2.7 Maximale Dehnung in der Ebene
+
+Stellt die maximalen und minimalen Dehnungen tangential zur aktuell ausgewählten Rasterebene oder senkrecht zu einem Linienraster als Konturen dar.
+
+Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
+
+![Figure from page 226](/images/page-226-img-12.png)
+
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
+
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
+
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
+
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
+
+![Figure from page 227](/images/page-227-img-4.png)
+
+#### Plot > Grid Selection
+
+Zur Berechnung der maximalen und minimalen Dehnungen in der Ebene werden die Dehnungen tangential zur Rasterebene bestimmt und anschließend aufgelöst, um den Maximal- und Minimalwert zu erhalten. Beachten Sie, dass eni normal zur Rasterebene und parallel zur Richtung eines Linienrasters orientiert ist. Beachten Sie außerdem, dass eni, e1i und e3i senkrecht aufeinander stehen.
 
 ![Figure from page 231](/images/page-231-img-13.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-Note that there are three components of strain that can be contoured:
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
 #### Plot > Strain > Value > Elastic
 
 Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Strain > esi In-plane Shear Plot > Strain > eni In-plane Normal Plot > Strain > e1u Ubiquitous-plane Maximum. Plot > Strain > e3u Ubiquitous-plane Minimum.
 
-## 5.3.2.9 Ubiquitous-Plane Shear Strain
+## 5.3.2.9 Scherdehnung in der ubiquitären Ebene
 
-Contours the maximum shear strain acting on ubiquitous plane #1, and the strain component normal to this plane.
+Stellt die maximale Scherdehnung, die auf die ubiquitäre Ebene Nr. 1 wirkt, sowie die Dehnungskomponente normal zu dieser Ebene als Konturen dar.
 
-These components can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 228](/images/page-228-img-4.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-To calculate the ubiquitous strains, the strain state at each point on the grid plane is reoriented to determine the maximum shear strain parallel to the ubiquitous plane and the strain normal to the ubiquitous plane. Note that enu is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+Zur Berechnung der ubiquitären Dehnungen wird der Dehnungszustand an jedem Punkt der Rasterebene umorientiert, um die maximale Scherdehnung parallel zur ubiquitären Ebene und die Dehnung normal zur ubiquitären Ebene zu bestimmen. Beachten Sie, dass enu normal zur ubiquitären Ebene orientiert und nicht parallel zur Richtung eines Linienrasters ist.
 
 ![Figure from page 233](/images/page-233-img-3.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-The orientation of the ubiquitous shear plane is set using
+Die Orientierung der ubiquitären Scherebene wird festgelegt mit
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-Note that there are three components of strain that can be contoured:
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
-Plot > Strain > Value > Elastic
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
-There are also two different ways of presenting the strain:
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
-#### Tools > Configure Contouring Toolbar > Strain
+Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Strain > e1u Ubiquitous-plane Maximum. Plot > Strain > e3u Ubiquitous-plane Minimum. Plot > Strain > esi In-plane Shear Plot > Strain > eni In-plane Normal
 
-## 5.3.2.11 Ubiquitous-Plane Maximum Strain
+## 5.3.2.11 Maximale Dehnung in der ubiquitären Ebene
 
-Contours the maximum and minimum strains tangential to the ubiquitous plane #1. These components can be accessed via the Strain Components toolbar as follows:
+Stellt die maximalen und minimalen Dehnungen tangential zur ubiquitären Ebene Nr. 1 als Konturen dar. Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-To calculate the ubiquitous strains, the strain state at each point on the grid plane is reoriented to determine the maximum and minimum strain parallel to the ubiquitous plane. Note that enu is not oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+Zur Berechnung der ubiquitären Dehnungen wird der Dehnungszustand an jedem Punkt der Rasterebene umorientiert, um die maximale und minimale Dehnung parallel zur ubiquitären Ebene zu bestimmen. Beachten Sie, dass enu nicht normal zur ubiquitären Ebene orientiert und nicht parallel zur Richtung eines Linienrasters ist.
 
 ![Figure from page 235](/images/page-235-img-1.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-The orientation of the ubiquitous shear plane is set using
+Die Orientierung der ubiquitären Scherebene wird festgelegt mit
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-Note that there are three components of strain that can be contoured:
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
-Plot > Strain > Value > Elastic
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-Plot > Strain > Value > Plastic
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
-Plot > Strain > Value > Total
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
-#### Tools > Configure Contouring Toolbar > Strain
+Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Strain > esi Ubiquitous-plane Shear
 
@@ -371,168 +350,166 @@ Plot > Strain > e1u In-plane Maximum.
 
 Plot > Strain > e3u In-plane Minimum.
 
-## 5.3.2.13 Octahedral Shear Strain
+## 5.3.2.13 Oktaedrische Scherdehnung
 
-Contours the octahedral shear strain
+Stellt die oktaedrische Scherdehnung als Konturen dar
 
 eoct = ¹/3 [ (e1 - e2)² + (e2 - e3)² +(e3 - e1)² ]<sup>½</sup>
 
-and the volumetric strain
+und die Volumendehnung
 
 evvol = (e1 + e2 + e3)
 
-These components can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 228](/images/page-228-img-9.png)
 
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing.
+In der elastischen Analyse wird die größte Hauptspannung üblicherweise zusammen mit der kleinsten Hauptspannung und dem Festigkeitskriterium nach Mohr-Coulomb oder Hoek-Brown verwendet, um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks
 
-Note that there are three components of strain that can be contoured:
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
 
 Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
-
-#### Plot > Range
-
-This component can be added to the contour toolbar if desired
-
-#### Tools > Configure Contouring Toolbar > Strain
-
-The user may find it handy to add the
-
-#### More Strain Components
-
-button to the contouring toolbar for quick access to all strain components.
-
-## 5.3.2.15 Exx Strain Component
-
-Contours the Cartesian strrain components. These components can be accessed via the Strain Components toolbar as follows:
-
-![Figure from page 228](/images/page-228-img-4.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-You can add this button to the Contours toolbar using the configuration button.
-
-![Figure from page 228](/images/page-228-img-9.png)
-
-Plot > Strain >  exx Cartesian Strain Component   normal strain in the direction of the x-axis Plot > Strain >  eyy Cartesian Strain Component   normal strain in the direction of the y-axis Plot > Strain >  ezz Cartesian Strain Component   normal strain in the direction of the z-axis Plot > Strain >  exy Cartesian Strain Component   normal strain in the direction of the x-y plane Plot > Strain >  eyz Cartesian Strain Component   normal strain in the direction of the y-z plane Plot > Strain >  exz Cartesian Strain Component   normal strain in the direction of the x-z plane
-
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
+
+#### More Strain Components
+
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
+
+## 5.3.2.15 Dehnungskomponente Exx
+
+Stellt die kartesischen Dehnungskomponenten als Konturen dar. Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
+
+![Figure from page 228](/images/page-228-img-4.png)
+
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
+
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
+
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
+
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
+
+![Figure from page 228](/images/page-228-img-9.png)
+
+Plot > Strain >  exx Cartesian Strain Component   Normaldehnung in Richtung der x-Achse Plot > Strain >  eyy Cartesian Strain Component   Normaldehnung in Richtung der y-Achse Plot > Strain >  ezz Cartesian Strain Component   Normaldehnung in Richtung der z-Achse Plot > Strain >  exy Cartesian Strain Component   Normaldehnung in Richtung der x-y-Ebene Plot > Strain >  eyz Cartesian Strain Component   Normaldehnung in Richtung der y-z-Ebene Plot > Strain >  exz Cartesian Strain Component   Normaldehnung in Richtung der x-z-Ebene
+
+Beachten Sie, dass drei Dehnungskomponenten als Konturen dargestellt werden können:
+
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+
+Außerdem gibt es zwei verschiedene Arten, die Dehnung darzustellen:
+
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
+
+Der Konturbereich wird festgelegt mit
+
+#### Plot > Range
+
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
+
+Tools > Configure Contouring Toolbar > Strain
+
+Es kann praktisch sein, die Schaltfläche
 
 More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Dehnungskomponenten zuzugreifen.
 
-## 5.3.2.21 Value
+## 5.3.2.21 Wert
 
-5.3.2.21.1  Elastic strain
+5.3.2.21.1  Elastische Dehnung
 
-Selects the elastic, plastic or total strain component. These components can be accessed via the Strain Components toolbar as follows:
+Wählt die elastische, plastische oder gesamte Dehnungskomponente aus. Auf diese Komponenten kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-For details, refer to
+Einzelheiten finden Sie unter
 
 Mohr-Coulomb in 3D FF blocks.
 
-### 5.3.2.21.4 Induced Strain
+### 5.3.2.21.4 Induzierte Dehnung
 
-Plot the induced or absolute strain component.
+Stellt die induzierte oder absolute Dehnungskomponente dar.
 
-This component can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponente kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-Induced strain is the strain without the pre-mining strain contribution. This represents the strain change since the pre-mining condition.
+Die induzierte Dehnung ist die Dehnung ohne den Beitrag der Dehnung vor dem Abbau. Sie stellt die Dehnungsänderung gegenüber dem Zustand vor dem Abbau dar.
 
-Absolute strain is the strain including the pre-mining strain contribution.
+Die absolute Dehnung ist die Dehnung einschließlich des Beitrags der Dehnung vor dem Abbau.
 
-Also see:
+Siehe auch:
 
 Plot > Stress > Value > Induced Strain Plot > Stress > Value > Absolute Strain
 
-### 5.3.2.21.6 Strain
+### 5.3.2.21.6 Dehnung
 
-Plot strain:
+Stellt die Dehnung dar:
 
-- in unscaled units (strain/1),
+- in nicht skalierten Einheiten (Dehnung/1),
 
-- in milli-strain (strain/1000),
+- in Milli-Dehnung (Dehnung/1000),
 
-- in micro-strain (strain/1000000).
+- in Mikro-Dehnung (Dehnung/1000000).
 
-This component can be accessed via the Strain Components toolbar as follows:
+Auf diese Komponente kann über die Symbolleiste Strain Components wie folgt zugegriffen werden:
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
-You can add this button to the Contours toolbar using the configuration button.
+Sie können diese Schaltfläche über die Konfigurationsschaltfläche zur Symbolleiste Contours hinzufügen.
 
 ![Figure from page 228](/images/page-228-img-9.png)
