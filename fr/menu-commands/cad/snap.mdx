@@ -1,163 +1,160 @@
 ---
-title: "Accrochage"
+title: "Accrochage (Snap)"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.5.2.1 Aucun
 
-## 5.5.2.1 None
+Désactive l'accrochage. Aucune boîte de sélection n'est affichée à l'intersection du réticule du curseur.
 
-Disable snapping. No pick-box is displayed at the intersection of the cursor cross-hairs.
-
-Points will be selected at the location indicated by the cross-hairs. This mode is useful for freehand sketching or digitizing. When digitizing, all three coordinate values are scaled off of the drawing. However when freehand sketching, only two of the coordinates can be located and the third must be supplied from the snap base
+Les points seront sélectionnés à l'emplacement indiqué par le réticule. Ce mode est utile pour le dessin à main levée ou la numérisation. En numérisation, les trois valeurs de coordonnées sont relevées à l'échelle du dessin. En revanche, en dessin à main levée, seules deux des coordonnées peuvent être localisées et la troisième doit provenir de la base d'accrochage
 
 CAD > Snap > Cursor/Grid Base
 
-This is the recommended setting while digitizing.
+C'est le réglage recommandé pendant la numérisation.
 
-## 5.5.2.2 Nearest Edge
+## 5.5.2.2 Arête la plus proche
 
-Snap to the nearest edge.
+S'accroche à l'arête la plus proche.
 
 ![Figure from page 386](/images/page-386-img-3.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-Otherwise the nearest point on the nearest edge will be selected.
+Sinon, le point le plus proche de l'arête la plus proche sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-## 5.5.2.3 Nearest Corner
+## 5.5.2.3 Coin le plus proche
 
-Snap to the nearest corner.
+S'accroche au coin le plus proche.
 
 ![Figure from page 386](/images/page-386-img-9.png)
 
-The corner nearest the pick-box will be selected.
+Le coin le plus proche de la boîte de sélection sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-## 5.5.2.4 Nearest Surface
+## 5.5.2.4 Surface la plus proche
 
-Snap onto the surface.
+S'accroche sur la surface.
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-If the pick-box is located over an edge, the nearest point on that edge will be selected.
+Si la boîte de sélection est située sur une arête, le point le plus proche de cette arête sera sélectionné.
 
-Otherwise the nearest point on the surface will be selected.
+Sinon, le point le plus proche de la surface sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-## 5.5.2.5 Midpoint of Line
+## 5.5.2.5 Milieu de ligne
 
-Snap to the midpoint of the selected edge.
+S'accroche au milieu de l'arête sélectionnée.
 
 ![Figure from page 387](/images/page-387-img-3.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-Otherwise the midpoint on the nearest edge will be selected.
+Sinon, le milieu de l'arête la plus proche sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-## 5.5.2.6 Tangent Snap
+## 5.5.2.6 Accrochage tangent
 
-Force cursor tangent to the selected edge.
+Force le curseur à rester tangent à l'arête sélectionnée.
 
 ![Figure from page 387](/images/page-387-img-9.png)
 
-The edge nearest the pickbox will be selected. The pick-box must be located over an entity or construction line.
+L'arête la plus proche de la boîte de sélection sera sélectionnée. La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-Once selected, all cursor movement will be constrained to the tangent defined by the selected edge. Points can now be selected anywhere along this tangent.
+Une fois l'arête sélectionnée, tout déplacement du curseur sera contraint à la tangente définie par l'arête sélectionnée. Des points peuvent alors être sélectionnés n'importe où le long de cette tangente.
 
-Once a point is selected, tangent snap is automatically cancelled. Tangent snap can be cancelled at any time by pressing the escape key (Esc) or right click the mouse.
+Une fois un point sélectionné, l'accrochage tangent est automatiquement annulé. Il peut être annulé à tout moment en appuyant sur la touche Échap (Esc) ou en faisant un clic droit.
 
-To select points at even spacing along the tangent line, tangent snap can be used in conjunction with any of:
+Pour sélectionner des points à intervalles réguliers le long de la ligne tangente, l'accrochage tangent peut être utilisé avec l'un des modes suivants :
 
-CAD > Snap > Grid Snap Snap to a rectangular grid.
+CAD > Snap > Grid Snap S'accroche à une grille rectangulaire.
 
-CAD > Snap > X-Gird Snap Snap to the selected edge at an even X grid spacing.
+CAD > Snap > X-Gird Snap S'accroche à l'arête sélectionnée selon un espacement de grille régulier en X.
 
-CAD > Snap > Y-Grid Snap Snap to the selected edge at an even Y grid spacing.
+CAD > Snap > Y-Grid Snap S'accroche à l'arête sélectionnée selon un espacement de grille régulier en Y.
 
-CAD > Snap > Z-Grid Snap Snap to the selected edge at an even Z grid spacing.
+CAD > Snap > Z-Grid Snap S'accroche à l'arête sélectionnée selon un espacement de grille régulier en Z.
 
-## 5.5.2.7 Intersection Snap
+## 5.5.2.7 Accrochage à l'intersection
 
-Snap to the intersection of the selected edge and a tangent.
+S'accroche à l'intersection de l'arête sélectionnée et d'une tangente.
 
 ![Figure from page 388](/images/page-388-img-3.png)
 
-Since this function operates in full 3D, the tangent may pass above or below the selected edge and not actually intersect. In this case the closest point to the tangent line on the selected edge will be picked.
+Cette fonction travaillant en 3D complète, la tangente peut passer au-dessus ou au-dessous de l'arête sélectionnée sans réellement la couper. Dans ce cas, le point de l'arête sélectionnée le plus proche de la ligne tangente sera choisi.
 
-This convention must be emphasized. The intersection point will not be selected on the tangent line: it will be selected on the intersection line.
+Cette convention doit être soulignée. Le point d'intersection ne sera pas sélectionné sur la ligne tangente : il sera sélectionné sur la ligne d'intersection.
 
-Using this feature is a two step process. When you click on the Intersect Snap button you will be prompted as follows:
+L'utilisation de cette fonction se fait en deux étapes. Lorsque vous cliquez sur le bouton Intersect Snap, il vous est demandé :
 
-1. First select a tangent line.
+1. De sélectionner d'abord une ligne tangente.
 
-2. Then select the edge you want to intersect the tangent with. The point will be selected on this line.
+2. Puis de sélectionner l'arête avec laquelle vous voulez croiser la tangente. Le point sera sélectionné sur cette ligne.
 
-The edge nearest the pickbox will be selected.
+L'arête la plus proche de la boîte de sélection sera sélectionnée.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-This function can be used to locate points at the intersection of the tangent and the projection of the selected edge.
+Cette fonction peut servir à repérer des points à l'intersection de la tangente et du prolongement de l'arête sélectionnée.
 
 ![Figure from page 388](/images/page-388-img-12.png)
 
-Once a point is selected, intersection snap is automatically cancelled. Intersection snap can be cancelled at any time by pressing the escape key (Esc) or right click the mouse.
+Une fois un point sélectionné, l'accrochage à l'intersection est automatiquement annulé. Il peut être annulé à tout moment en appuyant sur la touche Échap (Esc) ou en faisant un clic droit.
 
-For an example on the use of intersection snap in model building refer to
+Pour un exemple d'utilisation de l'accrochage à l'intersection dans la construction de modèles, voir
 
 Tabular Mining
 
-## 5.5.2.8 Trace Cline Snap
+## 5.5.2.8 Accrochage par suivi de ligne de construction
 
-Snap to selected corners along a construction line segment. This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build >
+S'accroche à des coins sélectionnés le long d'un segment de ligne de construction. Ce mode d'accrochage peut servir de méthode rapide pour construire des DDLoops ( CAD > Build > DDLoop), des FFLoops ( CAD > Build >
 
-FFLoop),Tunnels ( CAD > Build > Tunnel and CAD > Build > GPlanes).
+FFLoop), des tunnels ( CAD > Build > Tunnel et CAD > Build > GPlanes).
 
-To use this snap mode you simply pick the start and end points along the desired construction line segment and all point between these will be automatically selected. For example if you select points 4 and 9, points 5, 6, 7 and 8 will automatically be selected. Note that if you select the same point twice, the entire loop will be selected.
+Pour utiliser ce mode d'accrochage, il suffit de sélectionner les points de départ et d'arrivée le long du segment de ligne de construction voulu ; tous les points intermédiaires seront sélectionnés automatiquement. Par exemple, si vous sélectionnez les points 4 et 9, les points 5, 6, 7 et 8 seront sélectionnés automatiquement. Notez que si vous sélectionnez deux fois le même point, toute la boucle sera sélectionnée.
 
 **6**
 
 ![Figure from page 389](/images/page-389-img-9.png)
 
-Notes:
+Remarques :
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+Avant d'utiliser ce mode d'accrochage par suivi, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+La fonction CAD > Edit > Smooth Construction Lines peut aussi aider à nettoyer les lignes de construction.
 
-## 5.5.2.9 Trace Cloop Snap
+## 5.5.2.9 Accrochage par suivi de boucle de construction
 
-Snap to all corners along a construction line segment. This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build > FFLoop), Tunnels ( CAD > Build > Tunnel and CAD > Build > GPlanes).
+S'accroche à tous les coins le long d'un segment de ligne de construction. Ce mode d'accrochage peut servir de méthode rapide pour construire des DDLoops ( CAD > Build > DDLoop), des FFLoops ( CAD > Build > FFLoop), des tunnels ( CAD > Build > Tunnel et CAD > Build > GPlanes).
 
-To use this snap mode you simply pick a single points on the desired construction line segment and all points on this line will be automatically selected. For example if you select point 4, points 5, 6, 7, 8, 1, 2 and 3 will automatically be selected.
+Pour utiliser ce mode d'accrochage, il suffit de sélectionner un seul point du segment de ligne de construction voulu ; tous les points de cette ligne seront sélectionnés automatiquement. Par exemple, si vous sélectionnez le point 4, les points 5, 6, 7, 8, 1, 2 et 3 seront sélectionnés automatiquement.
 
 ![Figure from page 390](/images/page-390-img-1.png)
 
-Notes:
+Remarques :
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+Avant d'utiliser ce mode d'accrochage par suivi, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+La fonction CAD > Edit > Smooth Construction Lines peut aussi aider à nettoyer les lignes de construction.
 
-## 5.5.2.10 Points Window
+## 5.5.2.10 Fenêtre de points
 
-Select corners using a window.
+Sélectionne des coins à l'aide d'une fenêtre.
 
-This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build > FFLoop), Tunnels ( CAD > Build > Tunnel), CLines ( CAD >
+Ce mode d'accrochage peut servir de méthode rapide pour construire des DDLoops ( CAD > Build > DDLoop), des FFLoops ( CAD > Build > FFLoop), des tunnels ( CAD > Build > Tunnel), des CLines ( CAD >
 
-Build > CLines) and GLines ( CAD > Build > GLines).
+Build > CLines) et des GLines ( CAD > Build > GLines).
 
-Although this snap mode is most often used to select multiple points along CLines, corners are permitted to be located on all element types including: FF elements, DD elements, GPlanes, GLines and CLines.
+Bien que ce mode d'accrochage soit le plus souvent utilisé pour sélectionner plusieurs points le long de CLines, les coins peuvent se situer sur tous les types d'éléments, y compris : éléments FF, éléments DD, GPlanes, GLines et CLines.
 
 - Video Demo of FFLoop Model Building
 
@@ -167,178 +164,178 @@ Although this snap mode is most often used to select multiple points along CLine
 
 ![Figure from page 390](/images/page-390-img-1.png)
 
-In the figure above, if you pick one or more points prior to selecting a window, the windowed points will be added to those existing points, starting with the nearest previously selected point. For example if you were to pick point 3 prior to selecting a window, then use a window including points 4, 5, and 6 would add those points in that order.
+Dans la figure ci-dessus, si vous sélectionnez un ou plusieurs points avant de sélectionner une fenêtre, les points de la fenêtre seront ajoutés aux points existants, en commençant par le point précédemment sélectionné le plus proche. Par exemple, si vous sélectionniez le point 3 avant de sélectionner une fenêtre, puis utilisiez une fenêtre incluant les points 4, 5 et 6, ces points seraient ajoutés dans cet ordre.
 
-Alternatively if you were to pick point 3 prior to selecting a window, then use a window including points 1, 2, and 10 would add those points in the order 2, 1 then 10.
+Par ailleurs, si vous sélectionniez le point 3 avant de sélectionner une fenêtre, puis utilisiez une fenêtre incluant les points 1, 2 et 10, ces points seraient ajoutés dans l'ordre 2, 1 puis 10.
 
-In the figure above, if you do not pick one or more points prior to selecting a window, the windowed points will selected starting at locations as far as possible apart.
+Dans la figure ci-dessus, si vous ne sélectionnez aucun point avant de sélectionner une fenêtre, les points de la fenêtre seront sélectionnés en partant d'emplacements aussi éloignés que possible.
 
-For example if you were select a window over all of the points, since points 2 and 6 are furthest apart, then points would be selected as 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2.
+Par exemple, si vous sélectionniez une fenêtre englobant tous les points, comme les points 2 et 6 sont les plus éloignés, les points seraient sélectionnés dans l'ordre 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2.
 
-As this example forms a closed loop, the points are selected as such.
+Comme cet exemple forme une boucle fermée, les points sont sélectionnés en conséquence.
 
 CAD > Build > DDLoop).
 
-This forms a loop suitable for DDLoop construction (
+Cela forme une boucle adaptée à la construction d'un DDLoop (
 
 ![Figure from page 352](/images/page-352-img-2.png)
 
-In the figure above, if you pick point 1 prior to selecting a window, then use a window including all points, then all of the points will be selected as shown: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 12.
+Dans la figure ci-dessus, si vous sélectionnez le point 1 avant de sélectionner une fenêtre, puis utilisez une fenêtre incluant tous les points, tous les points seront sélectionnés comme indiqué : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 12.
 
-This forms two loops suitable for FFLoop construction ( CAD > Build > FFLoop). Alternatively if you were to pick point 3 prior to selecting a window, then use a window including points 1, 2, and 10 would add those points in the order 2, 1 then 10.
+Cela forme deux boucles adaptées à la construction d'un FFLoop ( CAD > Build > FFLoop). Par ailleurs, si vous sélectionniez le point 3 avant de sélectionner une fenêtre, puis utilisiez une fenêtre incluant les points 1, 2 et 10, ces points seraient ajoutés dans l'ordre 2, 1 puis 10.
 
-Notes:
+Remarques :
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+Avant d'utiliser ce mode d'accrochage par suivi, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+La fonction CAD > Edit > Smooth Construction Lines peut aussi aider à nettoyer les lignes de construction.
 
-## 5.5.2.11 Rectangular Grid Snap
+## 5.5.2.11 Accrochage à la grille rectangulaire
 
-Snap to a rectangular grid. No pick-box is displayed at the intersection of the cursor cross-hairs.
+S'accroche à une grille rectangulaire. Aucune boîte de sélection n'est affichée à l'intersection du réticule du curseur.
 
-All cursor movement will be constrained to the grid points.
+Tout déplacement du curseur sera contraint aux points de la grille.
 
-The grid can be oriented in either the X-Y, Y-Z or X-Z planes at any desired spacing and location. To set up these parameters use
+La grille peut être orientée dans les plans X-Y, Y-Z ou X-Z, avec l'espacement et l'emplacement souhaités. Pour régler ces paramètres, utilisez
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup règle l'espacement et l'orientation du curseur/de la grille.
 
-For an example on the use of grid snap mode in model building refer to
+Pour un exemple d'utilisation du mode d'accrochage à la grille dans la construction de modèles, voir
 
 Freehand Sketching - Room and Pillar.
 
-## 5.5.2.12 Circular Grid Snap
+## 5.5.2.12 Accrochage à la grille circulaire
 
-Snap to a cylindrical grid. No pick-box is displayed at the intersection of the cursor cross-hairs.
+S'accroche à une grille cylindrique. Aucune boîte de sélection n'est affichée à l'intersection du réticule du curseur.
 
-All cursor movement will be constrained to the grid points.
+Tout déplacement du curseur sera contraint aux points de la grille.
 
-The grid can be oriented in either the X-Y, Y-Z or X-Z planes at any desired spacing and location. To set up these parameters use
+La grille peut être orientée dans les plans X-Y, Y-Z ou X-Z, avec l'espacement et l'emplacement souhaités. Pour régler ces paramètres, utilisez
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup règle l'espacement et l'orientation du curseur/de la grille.
 
-## 5.5.2.13 X-Grid Snap
+## 5.5.2.13 Accrochage à la grille X
 
-Snap to an x-grid spacing.
+S'accroche à un espacement de grille en x.
 
 ![Figure from page 392](/images/page-392-img-20.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-Otherwise the nearest point at the x-grid spacing on the nearest edge will be selected.
+Sinon, le point le plus proche, à l'espacement de grille en x, de l'arête la plus proche sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-Since the x coordinate values are constrained to the prescribed X-grid spacing, the y and z coordinate values are calculated from the equation of the selected line.
+Les valeurs de la coordonnée x étant contraintes à l'espacement de grille X prescrit, les valeurs des coordonnées y et z sont calculées à partir de l'équation de la ligne sélectionnée.
 
-The grid spacing and location are defined either by picking the X-Grid Snap button a second time or use
+L'espacement et l'emplacement de la grille se définissent en cliquant une seconde fois sur le bouton X-Grid Snap ou en utilisant
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup règle l'espacement et l'orientation du curseur/de la grille.
 
-X-grid snap can be used in conjunction with any of:
+L'accrochage à la grille X peut être utilisé avec l'un des modes suivants :
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None Désactive l'accrochage.
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge S'accroche à l'arête la plus proche.
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap Force le curseur à rester tangent à l'arête sélectionnée.
 
-## 5.5.2.14 Y-Grid Snap
+## 5.5.2.14 Accrochage à la grille Y
 
-Snap to a y-grid spacing.
+S'accroche à un espacement de grille en y.
 
 ![Figure from page 393](/images/page-393-img-17.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-Otherwise the nearest point at the y-grid spacing on the nearest edge will be selected.
+Sinon, le point le plus proche, à l'espacement de grille en y, de l'arête la plus proche sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-Since the y coordinate values are constrained to the prescribed y-grid spacing, the x and z coordinate values are calculated from the equation of the selected line.
+Les valeurs de la coordonnée y étant contraintes à l'espacement de grille en y prescrit, les valeurs des coordonnées x et z sont calculées à partir de l'équation de la ligne sélectionnée.
 
-The grid spacing and location are defined either by picking the Y-Grid Snap button a second time or use
+L'espacement et l'emplacement de la grille se définissent en cliquant une seconde fois sur le bouton Y-Grid Snap ou en utilisant
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup règle l'espacement et l'orientation du curseur/de la grille.
 
-Y-grid snap can be used in conjunction with any of:
+L'accrochage à la grille Y peut être utilisé avec l'un des modes suivants :
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None Désactive l'accrochage.
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge S'accroche à l'arête la plus proche.
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap Force le curseur à rester tangent à l'arête sélectionnée.
 
-## 5.5.2.15 Z-Grid Snap
+## 5.5.2.15 Accrochage à la grille Z
 
-Snap to a z-grid spacing.
+S'accroche à un espacement de grille en z.
 
 ![Figure from page 394](/images/page-394-img-7.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+Si la boîte de sélection est située sur le coin d'une entité, ce coin sera sélectionné.
 
-Otherwise the nearest point at the y-grid spacing on the nearest edge will be selected.
+Sinon, le point le plus proche, à l'espacement de grille en y, de l'arête la plus proche sera sélectionné.
 
-The pick-box must be located over an entity or construction line.
+La boîte de sélection doit être située sur une entité ou une ligne de construction.
 
-Since the z coordinate values are constrained to the prescribed Z-grid spacing, the x and y coordinate values are calculated from the equation of the selected line.
+Les valeurs de la coordonnée z étant contraintes à l'espacement de grille Z prescrit, les valeurs des coordonnées x et y sont calculées à partir de l'équation de la ligne sélectionnée.
 
-The grid spacing and location are defined either by picking the Z-Grid Snap button a second time or use
+L'espacement et l'emplacement de la grille se définissent en cliquant une seconde fois sur le bouton Z-Grid Snap ou en utilisant
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup règle l'espacement et l'orientation du curseur/de la grille.
 
-Z-grid snap can be used in conjunction with any of:
+L'accrochage à la grille Z peut être utilisé avec l'un des modes suivants :
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None Désactive l'accrochage.
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge S'accroche à l'arête la plus proche.
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap Force le curseur à rester tangent à l'arête sélectionnée.
 
-## 5.5.2.16 Cursor/Grid Setup
+## 5.5.2.16 Configuration du curseur/de la grille
 
-Setup the cursor/grid location, spacing and orientation.
+Règle l'emplacement, l'espacement et l'orientation du curseur/de la grille.
 
 ![Figure from page 395](/images/page-395-img-3.png)
 
-X, Y and Z Origin - specifies the coordinates of the centre of the grid.
+X, Y and Z Origin - spécifie les coordonnées du centre de la grille.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the cursor/grid base from the
+Pick - active le réticule du curseur pour sélectionner de façon interactive la base du curseur/de la grille à partir du
 
-model.
+modèle.
 
-Spacing - specifies the distance between grid points.
+Spacing - spécifie la distance entre les points de la grille.
 
-Angle - specifies the angle (in degrees) between the radii of the cylindrical grid.
+Angle - spécifie l'angle (en degrés) entre les rayons de la grille cylindrique.
 
-#### Intervals - specifies the number of grid points that will be displayed.
+#### Intervals - spécifie le nombre de points de grille qui seront affichés.
 
-CAD > Snap > XY Cursor - constrains the cursor cross-hairs and snap grid to the X-Y plane.
+CAD > Snap > XY Cursor - contraint le réticule du curseur et la grille d'accrochage au plan X-Y.
 
-CAD > Snap > YZ Cursor - constrains the cursor cross-hairs and snap grid to the Y-Z plane.
+CAD > Snap > YZ Cursor - contraint le réticule du curseur et la grille d'accrochage au plan Y-Z.
 
-CAD > Snap > XZ Cursor - constrains the cursor cross-hairs and snap grid to the X-Z plane.
+CAD > Snap > XZ Cursor - contraint le réticule du curseur et la grille d'accrochage au plan X-Z.
 
-CAD > Snap > User defined Cursor - constrains the cursor cross-hairs and snap grid to the user defined plane.
+CAD > Snap > User defined Cursor - contraint le réticule du curseur et la grille d'accrochage au plan défini par l'utilisateur.
 
-The user defined coordinate system is only active with rectangular and circular grid snapping ( CAD > Snap > Grid Snap and CAD > Snap > Cylinder Snap).
+Le système de coordonnées défini par l'utilisateur n'est actif qu'avec l'accrochage à la grille rectangulaire et circulaire ( CAD > Snap > Grid Snap et CAD > Snap > Cylinder Snap).
 
-The user defined plane is specified by its dip (j), dip direction (J) and rake (a) such that:
+Le plan défini par l'utilisateur est spécifié par son pendage (j), sa direction de pendage (J) et son pitch (a), de sorte que :
 
-- Pnt on X - The local x-axis ( _x'_ ) is defined along the strike of the plane. A point on this axis can be selected using this function.
+- Pnt on X - L'axe x local ( _x'_ ) est défini le long de la direction du plan. Un point de cet axe peut être sélectionné avec cette fonction.
 
-- Pnt on Y - The local y-axis ( _y'_ ) is defined as down dip. A point on this axis can be selected using using this function.
+- Pnt on Y - L'axe y local ( _y'_ ) est défini selon la ligne de plus grande pente. Un point de cet axe peut être sélectionné avec cette fonction.
 
-- The local z-axis is perpendicular to the plane.
+- L'axe z local est perpendiculaire au plan.
 
-- Norm - activates the cursor allowing interactive selection of a surface to make the local UCS plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+- Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre parallèle le plan UCS local. Le pendage et la direction de pendage du plan seront réglés normalement à la surface sélectionnée.
 
-- Rake - allows for rotation of X' around the local z-axis.
+- Rake - permet la rotation de X' autour de l'axe z local.
 
 ![Figure from page 396](/images/page-396-img-2.png)
 
 ![Figure from page 396](/images/page-396-img-4.png)
 
-For an example on the use of grid snap mode in model building refer to Freehand Sketching - Room and Pillar.
+Pour un exemple d'utilisation du mode d'accrochage à la grille dans la construction de modèles, voir Freehand Sketching - Room and Pillar.
