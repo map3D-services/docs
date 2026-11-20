@@ -2,30 +2,27 @@
 title: "Factores de resistencia"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+## 5.3.6.1 Parámetros del macizo rocoso
 
-## 5.3.6.1 Rock Mass Parameters
+### 5.3.6.1.1 Parámetros de resistencia del macizo rocoso
 
-### 5.3.6.1.1 Rockmass Strength Parameters
+Configura los parámetros de resistencia para generar gráficos de contornos de factores de resistencia en términos de las componentes del esfuerzo principal.
 
-Sets up the strength parameters for generating strength factor contour plots in terms of principal stress components.
-
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb, HoekBrown or Drucker-Prager strength criteria to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb, Hoek-Brown o Drucker-Prager para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
@@ -33,75 +30,75 @@ Mohr-Coulomb in 3D FF blocks.
 
 ![Figure from page 249](/images/page-249-img-1.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+Material # especifica el número de material. El material n.º 1 representa el material de la roca de caja (host). Los demás números de material se usan para definir zonas de material alterno, como mineral, arcilla de falla (gouge), relleno, etc.
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the s1 direction.
+Standard Deviation especifica la incertidumbre del criterio de falla medido en la dirección s1.
 
-Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material Type especifica el tipo de material: Mohr-Coulomb, Hoek-Brown, Drucker-Prager o None.
 
-Tension Cutoff, UCS, Friction Angle the Mohr-Coulomb criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, UCS, Friction Angle el criterio de Mohr-Coulomb define la resistencia en términos de esfuerzos principales de la siguiente forma:
 
 #### Mohr-Coulomb
 
 ![Figure from page 249](/images/page-249-img-7.png)
 
-Tension cutoff and UCS are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+El límite de tracción (tension cutoff) y el UCS se especifican en unidades de esfuerzo (MPa o psi). El ángulo de fricción se especifica en grados.
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – grafica el daño acumulado. Vea Accumulated Damage
 
 #### Hoek-Brown
 
 ![Figure from page 250](/images/page-250-img-6.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+Material # especifica el número de material. El material n.º 1 representa el material de la roca de caja (host). Los demás números de material se usan para definir zonas de material alterno, como mineral, arcilla de falla (gouge), relleno, etc.
 
-Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material Type especifica el tipo de material: Mohr-Coulomb, Hoek-Brown, Drucker-Prager o None.
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the s1 direction (specified in units of stress, MPa or psi).
+Standard Deviation especifica la incertidumbre del criterio de falla medido en la dirección s1 (especificada en unidades de esfuerzo, MPa o psi).
 
-Tension Cutoff, Sigma:C, m and s the Hoek-Brown criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, Sigma:C, m and s el criterio de Hoek-Brown define la resistencia en términos de esfuerzos principales de la siguiente forma:
 
 #### Hoek-Brown
 
 ![Figure from page 251](/images/page-251-img-2.png)
 
-Tension cutoff and Sigma:C are specified in units of stress (MPa or psi).
+El límite de tracción (tension cutoff) y Sigma:C se especifican en unidades de esfuerzo (MPa o psi).
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – grafica el daño acumulado. Vea Accumulated Damage
 
 #### Drucker-Prager
 
 ![Figure from page 251](/images/page-251-img-7.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc. Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material # especifica el número de material. El material n.º 1 representa el material de la roca de caja (host). Los demás números de material se usan para definir zonas de material alterno, como mineral, arcilla de falla (gouge), relleno, etc. Material Type especifica el tipo de material: Mohr-Coulomb, Hoek-Brown, Drucker-Prager o None.
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the toct direction.
+Standard Deviation especifica la incertidumbre del criterio de falla medido en la dirección toct.
 
-Tension Cutoff, UCS, Friction Angle the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, UCS, Friction Angle el criterio de Drucker-Prager define la resistencia en términos de esfuerzos principales de la siguiente forma:
 
 #### Drucker-Prager
 
 ![Figure from page 252](/images/page-252-img-4.png)
 
-where
+donde
 
 toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
 
 smean = ¹/3 (s1 + s2 + s3)
 
-Tension cutoff and UCS are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+El límite de tracción (tension cutoff) y el UCS se especifican en unidades de esfuerzo (MPa o psi). El ángulo de fricción se especifica en grados.
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+Tenga en cuenta que los parámetros de resistencia se han elegido de modo que el criterio se simplifique al criterio de Mohr-Coulomb cuando s2 es igual a s3.
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – grafica el daño acumulado. Vea Accumulated Damage
 
-#### Related topics:
+#### Temas relacionados:
 
 Plot > Strength Factor > Probability N-distribution
 
@@ -113,133 +110,133 @@ Plot > Strength Factors > In-plane Parameters
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.2 Accumulated Damage
+### 5.3.6.1.2 Daño acumulado
 
-Plot Accumulated Damage.
+Grafica el daño acumulado.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a esta componente mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+Cuando Acc no está activada, se grafican el esfuerzo en exceso, la probabilidad de falla, el factor de resistencia y el RCF para los valores de esfuerzo actuales.
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+Cuando Acc está activada, el daño se registra desde la etapa 1 hasta la etapa actual a lo largo de toda la historia de carga del modelo, por lo que se grafica el peor caso del esfuerzo en exceso, la probabilidad de falla, el factor de resistencia o el RCF.
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+Esto permite usar los resultados del análisis elástico de esfuerzos de forma similar a la deformación acumulada en un modelo de plasticidad.
 
-Damage tracking is done separately for the 5 following cases:
+El registro del daño se realiza por separado para los 5 casos siguientes:
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. Falla del macizo rocoso (esfuerzo S1 en exceso, probabilidad, factor de resistencia) 2. Falla por corte en el plano (esfuerzo de corte en exceso, probabilidad, factor de resistencia) 3. Falla por corte en el plano ub (esfuerzo de corte en exceso, probabilidad, factor de resistencia)
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. Esfuerzo en la pared en el plano, en exceso (esfuerzo en exceso, RCF)
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. Esfuerzo en la pared en el plano ub, en exceso (esfuerzo en exceso, RCF)
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+Tenga en cuenta que se registran tanto la etapa en que ocurre la primera fluencia, MStep 1st Yield, como la etapa en que ocurre el máximo esfuerzo en exceso, MStep Max Yield, y ambas se pueden mostrar como etiquetas de trayectoria.
 
-### 5.3.6.1.3 S1 Excess Stress
+### 5.3.6.1.3 Esfuerzo S1 en exceso
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo principal mayor en exceso y del factor de resistencia usando el método "A". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+El método "A" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 sin pérdida de confinamiento. Esto es representativo de la falla de un pilar, donde s1 se considera la fuerza motriz.
 
 #### Mohr-Coulomb
 
 ![Figure from page 255](/images/page-255-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
 #### Hoek-Brown
 
 ![Figure from page 255](/images/page-255-img-11.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager solo se define con el método "C".
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.4 Tmax Excess Stress
+### 5.3.6.1.4 Esfuerzo Tmax en exceso
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo de corte en exceso o del factor de resistencia usando el método "C". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 256](/images/page-256-img-24.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+El método "C" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 con pérdida de confinamiento. Esto es representativo de la falla de un estribo (abutment), donde s1 - s3 se considera la fuerza motriz.
 
 ![Figure from page 257](/images/page-257-img-6.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -249,11 +246,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -261,177 +258,177 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   se puede determinar como [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   se puede determinar como toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   se puede determinar como toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+donde
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+Tenga en cuenta que los parámetros de resistencia se han elegido de modo que el criterio se simplifique al criterio de Mohr-Coulomb cuando s2 es igual a s3.
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-5.3.6.1.6  NS1 Normal Probability
+5.3.6.1.6  NS1 Probabilidad normal
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo principal mayor en exceso y del factor de resistencia usando el método "A". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+El método "A" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 sin pérdida de confinamiento. Esto es representativo de la falla de un pilar, donde s1 se considera la fuerza motriz.
 
 ![Figure from page 260](/images/page-260-img-5.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
 #### Hoek-Brown
 
 ![Figure from page 261](/images/page-261-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager solo se define con el método "C".
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.8 SF-B Strength/Stress
+### 5.3.6.1.8 SF-B Resistencia/Esfuerzo
 
-Contours the excess major principal stress and strength factor using method  "B". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo principal mayor en exceso y del factor de resistencia usando el método "B". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "B" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 - s3 is considered to be the driving force.
+El método "B" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 sin pérdida de confinamiento. Esto es representativo de la falla de un pilar, donde s1 - s3 se considera la fuerza motriz.
 
 #### Mohr-Coulomb
 
 ![Figure from page 263](/images/page-263-img-2.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+Plot > Strength Factors > SF-B   Strength/Stress se puede determinar como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
+Plot > Strength Factors > SF/B   Stress/Strength se puede determinar como (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "A".
+igual que en el método "A".
 
 #### Hoek-Brown
 
 ![Figure from page 263](/images/page-263-img-11.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF-B   Strength/Stress se puede determinar como Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength se puede determinar como (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "A".
+igual que en el método "A".
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager solo se define con el método "C".
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-A - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.9 SF-C Strength/Stress
+### 5.3.6.1.9 SF-C Resistencia/Esfuerzo
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo de corte en exceso o del factor de resistencia usando el método "C". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+El método "C" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 con pérdida de confinamiento. Esto es representativo de la falla de un estribo (abutment), donde s1 - s3 se considera la fuerza motriz.
 
 ![Figure from page 265](/images/page-265-img-7.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -441,11 +438,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -453,177 +450,177 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   se puede determinar como [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   se puede determinar como toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   se puede determinar como toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+donde
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+Tenga en cuenta que los parámetros de resistencia se han elegido de modo que el criterio se simplifique al criterio de Mohr-Coulomb cuando s2 es igual a s3.
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.10 SF/A Stress/Strength
+### 5.3.6.1.10 SF/A Esfuerzo/Resistencia
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo principal mayor en exceso y del factor de resistencia usando el método "A". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+El método "A" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 sin pérdida de confinamiento. Esto es representativo de la falla de un pilar, donde s1 se considera la fuerza motriz.
 
 ![Figure from page 260](/images/page-260-img-5.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
 #### Hoek-Brown
 
 ![Figure from page 261](/images/page-261-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress se puede determinar como [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength se puede determinar como s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "B".
+igual que en el método "B".
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager solo se define con el método "C".
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.11 SF/B Stress/Strength
+### 5.3.6.1.11 SF/B Esfuerzo/Resistencia
 
-Contours the excess major principal stress and strength factor using method  "B". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo principal mayor en exceso y del factor de resistencia usando el método "B". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "B" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 - s3 is considered to be the driving force.
+El método "B" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 sin pérdida de confinamiento. Esto es representativo de la falla de un pilar, donde s1 - s3 se considera la fuerza motriz.
 
 #### Mohr-Coulomb
 
 ![Figure from page 263](/images/page-263-img-2.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+Plot > Strength Factors > SF-B   Strength/Stress se puede determinar como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
+Plot > Strength Factors > SF/B   Stress/Strength se puede determinar como (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "A".
+igual que en el método "A".
 
 #### Hoek-Brown
 
 ![Figure from page 263](/images/page-263-img-11.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF-B   Strength/Stress se puede determinar como Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength se puede determinar como (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   el esfuerzo en exceso se puede determinar como Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   Probabilidad usando la distribución normal.
 
-the same as in method "A".
+igual que en el método "A".
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager solo se define con el método "C".
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-A - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.12 SF/C Stress/Strength
+### 5.3.6.1.12 SF/C Esfuerzo/Resistencia
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos del esfuerzo de corte en exceso o del factor de resistencia usando el método "C". Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+En el análisis elástico, los esfuerzos principales mayor y menor se pueden usar con los criterios de resistencia de Mohr-Coulomb o de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+para estimar el grado de daño por sobreesfuerzo. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+El método "C" supone que la trayectoria de esfuerzos hasta la falla se produce aumentando s1 con pérdida de confinamiento. Esto es representativo de la falla de un estribo (abutment), donde s1 - s3 se considera la fuerza motriz.
 
 ![Figure from page 265](/images/page-265-img-7.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -633,11 +630,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress se puede determinar como &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength se puede determinar como (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   el esfuerzo en exceso se puede determinar como
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -645,135 +642,135 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   se puede determinar como [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   se puede determinar como toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   se puede determinar como toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+donde
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+Tenga en cuenta que los parámetros de resistencia se han elegido de modo que el criterio se simplifique al criterio de Mohr-Coulomb cuando s2 es igual a s3.
 
-Strength parameters are setup using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-## 5.3.6.2 In-Plane Parameters
+## 5.3.6.2 Parámetros en el plano
 
-5.3.6.2.1  In-plane parameters
+5.3.6.2.1  Parámetros en el plano
 
-Sets up the strength parameters for generating strength factor contour plots in terms of in-plane stress components.
+Configura los parámetros de resistencia para generar gráficos de contornos de factores de resistencia en términos de las componentes del esfuerzo en el plano.
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 275](/images/page-275-img-26.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+Para calcular los esfuerzos de corte y normal en el plano, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de la grilla y el esfuerzo normal al plano de la grilla.
 
 ![Figure from page 276](/images/page-276-img-2.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano se pueden usar con el criterio de resistencia de Mohr-Coulomb para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación orientado de la misma forma que el plano de la grilla. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes
 
 ![Figure from page 277](/images/page-277-img-1.png)
 
-The Mohr-Coulomb criterion defines the shear strength in terms of shear stress and normal stress as follows:
+El criterio de Mohr-Coulomb define la resistencia al corte en términos del esfuerzo de corte y el esfuerzo normal de la siguiente forma:
 
 #### Mohr-Coulomb
 
 ![Figure from page 277](/images/page-277-img-4.png)
 
-Tension cutoff, UCS and Cohesion are specified in units of stress (MPa or psi).
+El límite de tracción (tension cutoff), el UCS y la cohesión se especifican en unidades de esfuerzo (MPa o psi).
 
-Friction angle is specified in degrees.
+El ángulo de fricción se especifica en grados.
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the tip direction (specified in units of stress, MPa or psi).
+Standard Deviation especifica la incertidumbre del criterio de falla medido en la dirección tip (especificada en unidades de esfuerzo, MPa o psi).
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – grafica el daño acumulado. Vea Accumulated Damage
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > Probability N-distribution Plot > Strength Factor > SF-ip - Stress/Strength Plot > Strength Factors > SF-ub - Stress/Strength Plot > Strength Factors > dTip - Excess Stress Plot > Strength Factors > dTub - Excess Stress Plot > Strength Factors > Rockmass Strength Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.2.2 Accumulated Damage
+### 5.3.6.2.2 Daño acumulado
 
-Plot Accumulated Damage.
+Grafica el daño acumulado.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a esta componente mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+Cuando Acc no está activada, se grafican el esfuerzo en exceso, la probabilidad de falla, el factor de resistencia y el RCF para los valores de esfuerzo actuales.
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+Cuando Acc está activada, el daño se registra desde la etapa 1 hasta la etapa actual a lo largo de toda la historia de carga del modelo, por lo que se grafica el peor caso del esfuerzo en exceso, la probabilidad de falla, el factor de resistencia o el RCF.
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+Esto permite usar los resultados del análisis elástico de esfuerzos de forma similar a la deformación acumulada en un modelo de plasticidad.
 
-Damage tracking is done separately for the 5 following cases:
+El registro del daño se realiza por separado para los 5 casos siguientes:
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. Falla del macizo rocoso (esfuerzo S1 en exceso, probabilidad, factor de resistencia) 2. Falla por corte en el plano (esfuerzo de corte en exceso, probabilidad, factor de resistencia) 3. Falla por corte en el plano ub (esfuerzo de corte en exceso, probabilidad, factor de resistencia)
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. Esfuerzo en la pared en el plano, en exceso (esfuerzo en exceso, RCF)
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. Esfuerzo en la pared en el plano ub, en exceso (esfuerzo en exceso, RCF)
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+Tenga en cuenta que se registran tanto la etapa en que ocurre la primera fluencia, MStep 1st Yield, como la etapa en que ocurre el máximo esfuerzo en exceso, MStep Max Yield, y ambas se pueden mostrar como etiquetas de trayectoria.
 
-### 5.3.6.2.3 In-plane Excess Shear Stress
+### 5.3.6.2.3 Esfuerzo de corte en el plano, en exceso
 
-Contours the strength for in-plane shear.
+Genera contornos de la resistencia al corte en el plano.
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+Para calcular los esfuerzos de corte y normal en el plano, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de la grilla y el esfuerzo normal al plano de la grilla.
 
 ![Figure from page 229](/images/page-229-img-14.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano se pueden usar con el criterio de resistencia de Mohr-Coulomb
 
 #### Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación orientado de la misma forma que el plano de la grilla. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes
 
@@ -781,93 +778,93 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tip without loosing confinement.
+Aquí se supone que la trayectoria de esfuerzos hasta la falla se produce aumentando tip sin pérdida de confinamiento.
 
 #### Mohr-Coulomb
 
 ![Figure from page 280](/images/page-280-img-6.png)
 
-SF-ip Strength/Stress   can be determined as [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   can be determined as tip / [ Cohesion + sip tan(j) ] dTip Excess   can be determined as Dtip = tip - [ Cohesion + sip tan(j) ]
+SF-ip Strength/Stress   se puede determinar como [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   se puede determinar como tip / [ Cohesion + sip tan(j) ] dTip Excess   se puede determinar como Dtip = tip - [ Cohesion + sip tan(j) ]
 
-NTip Probability   can be determined as N(Dtip /std)
+NTip Probability   se puede determinar como N(Dtip /std)
 
-Strength parameters are set up using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess
 
 Plot > Strength Factors > NSub Probability
 
-### 5.3.6.2.4 In-plane Excess Wall Stress
+### 5.3.6.2.4 Esfuerzo en la pared en el plano, en exceso
 
-Contours the strength for in-plane wall stress. These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos de la resistencia al esfuerzo en la pared en el plano. Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane wall stress, the stress state at each point on the grid plane is reoriented to determine the maximum and minimum tangential stress parallel to the grid plane.
+Para calcular el esfuerzo en la pared en el plano, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar los esfuerzos tangenciales máximo y mínimo paralelos al plano de la grilla.
 
-The maximum wall stress for a virtual circular excavation oriented perpendicular to the grid plane can then be determined as [ 3 s1i - s3i ].
+El esfuerzo máximo en la pared para una excavación circular virtual orientada perpendicular al plano de la grilla se puede determinar entonces como [ 3 s1i - s3i ].
 
-Note that sip is oriented normal to the grid plane and parallel to the direction of a line grid. Also note that sip, s1i and s3i are perpendicular to one another.
+Tenga en cuenta que sip está orientado normal al plano de la grilla y paralelo a la dirección de una grilla lineal. Tenga en cuenta también que sip, s1i y s3i son perpendiculares entre sí.
 
 ![Figure from page 219](/images/page-219-img-2.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la dirección de manteo se mide positiva en sentido horario desde el eje y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- el manteo del plano se mide positivo hacia abajo desde la horizontal (es decir, la dirección de manteo).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- la inclinación de la normal se mide positiva hacia abajo (es decir, negativa hacia arriba) desde la horizontal.
 
-dSip Excess   can be determined as Dsip = [ 3 s1i - s3i ] - UCS
+dSip Excess   se puede determinar como Dsip = [ 3 s1i - s3i ] - UCS
 
-RCFip   can be determined as RCFip = [ 3 s1i - s3i ]/UCS
+RCFip   se puede determinar como RCFip = [ 3 s1i - s3i ]/UCS
 
-Strength parameters are set up using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Stress > S1i - In-plane Maximum Plot > Stress > S3i - In-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess Plot > Strength Factors > dSub Excess Plot > Strength Factors > NSub Probability
 
-### 5.3.6.2.6 NTip Normal Probability
+### 5.3.6.2.6 NTip Probabilidad normal
 
-Contours the strength for in-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos de la resistencia al corte en el plano. Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+Para calcular los esfuerzos de corte y normal en el plano, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de la grilla y el esfuerzo normal al plano de la grilla.
 
 ![Figure from page 283](/images/page-283-img-2.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano se pueden usar con el criterio de resistencia de Mohr-Coulomb
 
 #### Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación orientado de la misma forma que el plano de la grilla. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes
 
@@ -875,53 +872,53 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tip without loosing confinement.
+Aquí se supone que la trayectoria de esfuerzos hasta la falla se produce aumentando tip sin pérdida de confinamiento.
 
 #### Mohr-Coulomb
 
 ![Figure from page 280](/images/page-280-img-6.png)
 
-SF-ip Strength/Stress   can be determined as [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   can be determined as tip / [ Cohesion + sip tan(j) ] dTip Excess   can be determined as Dtip = tip - [ Cohesion + sip tan(j) ]
+SF-ip Strength/Stress   se puede determinar como [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   se puede determinar como tip / [ Cohesion + sip tan(j) ] dTip Excess   se puede determinar como Dtip = tip - [ Cohesion + sip tan(j) ]
 
-NTip Probability   can be determined as N(Dtip /std)
+NTip Probability   se puede determinar como N(Dtip /std)
 
-Strength parameters are set up using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess
 
 Plot > Strength Factors > NSub Probability
 
-## 5.3.6.3 UB-Plane Parameters
+## 5.3.6.3 Parámetros del plano UB
 
-5.3.6.3.1  Ubiquitous parameters
+5.3.6.3.1  Parámetros ubicuos
 
-Sets up the strength parameters for generating strength factor contour plots in terms of ubiquitousplane stress components.
+Configura los parámetros de resistencia para generar gráficos de contornos de factores de resistencia en términos de las componentes del esfuerzo en el plano ubicuo.
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the
+Al seleccionar el
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+Para calcular los esfuerzos de corte y normal ubicuos, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de corte ubicuo y el esfuerzo normal al plano de corte ubicuo.
 
 ![Figure from page 285](/images/page-285-img-10.png)
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stresses can be used with the Mohr-Coulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano ubicuo se pueden usar con el criterio de resistencia de Mohr-Coulomb para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación con la orientación especificada. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes
 
@@ -931,99 +928,99 @@ Backfill-Hyperbolic in DD planes
 
 ![Figure from page 286](/images/page-286-img-1.png)
 
-Cohesion and Friction Angle the Mohr-Coulomb criterion defines strength in terms of principal stresses as follows:
+Cohesion y Friction Angle el criterio de Mohr-Coulomb define la resistencia en términos de esfuerzos principales de la siguiente forma:
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-Tension cutoff, UCS and Cohesion are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+El límite de tracción (tension cutoff), el UCS y la cohesión se especifican en unidades de esfuerzo (MPa o psi). El ángulo de fricción se especifica en grados.
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the tip direction (specified in units of stress, MPa or psi).
+Standard Deviation especifica la incertidumbre del criterio de falla medido en la dirección tip (especificada en unidades de esfuerzo, MPa o psi).
 
-Dip of plane – specifies the dip of the ubiquitous plane (in degrees). The dip of the normal is automatically adjusted to reflect changes in this value.
+Dip of plane – especifica el manteo del plano ubicuo (en grados). El manteo de la normal se ajusta automáticamente para reflejar los cambios en este valor.
 
-Dip Direction – specifies the dip direction of the ubiquitous plane (in degrees).
+Dip Direction – especifica la dirección de manteo del plano ubicuo (en grados).
 
-Dip of Normal – specifies the dip of the normal to the ubiquitous plane (in degrees). The dip of plane is automatically adjusted to reflect changes in this value.
+Dip of Normal – especifica el manteo de la normal al plano ubicuo (en grados). El manteo del plano se ajusta automáticamente para reflejar los cambios en este valor.
 
-Grid Normal – sets the ubiquitous plane parallel to the currently selected grid plane. In this case all inplane results will be identical to the ubiquitous plane results.
+Grid Normal – fija el plano ubicuo paralelo al plano de grilla seleccionado actualmente. En este caso, todos los resultados en el plano serán idénticos a los del plano ubicuo.
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – grafica el daño acumulado. Vea Accumulated Damage
 
-Plot UB DIsks – toggles display of planar contour plot or disks representing the orientation of the UB plane.
+Plot UB DIsks – alterna la visualización del gráfico de contornos plano o de discos que representan la orientación del plano UB.
 
-Scaled Size – scales the size of the UB disk to the magnitude.
+Scaled Size – escala el tamaño del disco UB según la magnitud.
 
-UB DIsk Radius – specifies the radius of the UB disks.
+UB DIsk Radius – especifica el radio de los discos UB.
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the
+UB#2 & UB#3 – activa los parámetros de resistencia para el plano ubicuo n.º 2 y/o n.º 3. Cuando está marcada, el
 
-minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
+mínimo de todos los planos ubicuos activos se presenta para todos los parámetros de resistencia ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength y Plot > Strength Factors > dTub - Excess Stress). Para determinar qué plano ubicuo tiene la resistencia mínima, puede graficar Plot > Strength Factors > UB# with minimum strength) o hacer clic izquierdo sobre un gráfico de parámetro de resistencia.
 
-Related topics:
+Temas relacionados:
 
 Plot > Strength Factor > Probability N-distribution Plot > Strength Factors > SF-ub - Stress/Strength Plot > Strength Factor > SF-ip - Stress/Strength Plot > Strength Factors > dTub - Excess Stress Plot > Strength Factors > dTip - Excess Stress Plot > Strength Factors > UB# with minimum strength Plot > Strength Factors > Rockmass Strength Parameters
 
 Plot > Strength Factors > In-plane Parameters
 
-### 5.3.6.3.2 Accumulated Damage
+### 5.3.6.3.2 Daño acumulado
 
-Plot Accumulated Damage. This component can be accessed via the Strength Factor Components toolbar as follows:
+Grafica el daño acumulado. Se puede acceder a esta componente mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+Cuando Acc no está activada, se grafican el esfuerzo en exceso, la probabilidad de falla, el factor de resistencia y el RCF para los valores de esfuerzo actuales.
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+Cuando Acc está activada, el daño se registra desde la etapa 1 hasta la etapa actual a lo largo de toda la historia de carga del modelo, por lo que se grafica el peor caso del esfuerzo en exceso, la probabilidad de falla, el factor de resistencia o el RCF.
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+Esto permite usar los resultados del análisis elástico de esfuerzos de forma similar a la deformación acumulada en un modelo de plasticidad.
 
-Damage tracking is done separately for the 5 following cases:
+El registro del daño se realiza por separado para los 5 casos siguientes:
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. Falla del macizo rocoso (esfuerzo S1 en exceso, probabilidad, factor de resistencia) 2. Falla por corte en el plano (esfuerzo de corte en exceso, probabilidad, factor de resistencia) 3. Falla por corte en el plano ub (esfuerzo de corte en exceso, probabilidad, factor de resistencia)
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. Esfuerzo en la pared en el plano, en exceso (esfuerzo en exceso, RCF)
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. Esfuerzo en la pared en el plano ub, en exceso (esfuerzo en exceso, RCF)
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+Tenga en cuenta que se registran tanto la etapa en que ocurre la primera fluencia, MStep 1st Yield, como la etapa en que ocurre el máximo esfuerzo en exceso, MStep Max Yield, y ambas se pueden mostrar como etiquetas de trayectoria.
 
-- 5.3.6.3.3  Ubiquitous Excess Shear Stress
+- 5.3.6.3.3  Esfuerzo de corte ubicuo, en exceso
 
-Contours the strength for ubiquitous-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos de la resistencia al corte en el plano ubicuo. Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+Para calcular los esfuerzos de corte y normal ubicuos, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de corte ubicuo y el esfuerzo normal al plano de corte ubicuo.
 
 ![Figure from page 289](/images/page-289-img-2.png)
 
-The orientation of the ubiquitous shear plane is set using
+La orientación del plano de corte ubicuo se define con
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stress can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano ubicuo se pueden usar con el criterio de resistencia de Mohr-Coulomb para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación con la orientación especificada. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes
 
@@ -1031,93 +1028,93 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tub without loosing confinement.
+Aquí se supone que la trayectoria de esfuerzos hasta la falla se produce aumentando tub sin pérdida de confinamiento.
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-SF-ub Strength/Stress   can be determined as [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   can be determined as tub / [ Cohesion + sub tan(j) ] dTub Excess   can be determined as Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   can be determined as N(Dtub /std)
+SF-ub Strength/Stress   se puede determinar como [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   se puede determinar como tub / [ Cohesion + sub tan(j) ] dTub Excess   se puede determinar como Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   se puede determinar como N(Dtub /std)
 
-Strength parameters are set up using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and
+UB#2 & UB#3 – activa los parámetros de resistencia para el plano ubicuo n.º 2 y/o n.º 3. Cuando está marcada, el mínimo de todos los planos ubicuos activos se presenta para todos los parámetros de resistencia ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength y
 
 Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
 
-### 5.3.6.3.4 Ubiquitous Plane Excess Wall Stress
+### 5.3.6.3.4 Esfuerzo en la pared del plano ubicuo, en exceso
 
-Contours the strength for ub-plane wall stress.
+Genera contornos de la resistencia al esfuerzo en la pared del plano ub.
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ub-plane wall stress, the stress state at each point on the grid plane is reoriented to determine the maximum and minimum tangential stress parallel to the ub plane.
+Para calcular el esfuerzo en la pared del plano ub, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar los esfuerzos tangenciales máximo y mínimo paralelos al plano ub.
 
-The maximum wall stress for a virtual circular excavation oriented perpendicular to the ub-plane can then be determined as [ 3 s1u - s3u ].
+El esfuerzo máximo en la pared para una excavación circular virtual orientada perpendicular al plano ub se puede determinar entonces como [ 3 s1u - s3u ].
 
-Note that sub is oriented normal to the ub-plane. Also note that sub, s1 and s3u are perpendicular to one another.
+Tenga en cuenta que sub está orientado normal al plano ub. Tenga en cuenta también que sub, s1 y s3u son perpendiculares entre sí.
 
 ![Figure from page 291](/images/page-291-img-13.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la dirección de manteo se mide positiva en sentido horario desde el eje y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- el manteo del plano se mide positivo hacia abajo desde la horizontal (es decir, la dirección de manteo).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- la inclinación de la normal se mide positiva hacia abajo (es decir, negativa hacia arriba) desde la horizontal.
 
-dSub Excess   can be determined as Dsub = [ 3 s1u - s3u ] - UCS
+dSub Excess   se puede determinar como Dsub = [ 3 s1u - s3u ] - UCS
 
-RCFub   can be determined as RCFub = [ 3 s1u - s3u ]/UCS
+RCFub   se puede determinar como RCFub = [ 3 s1u - s3u ]/UCS
 
-The orientation of the ubiquitous shear plane is set using
+La orientación del plano de corte ubicuo se define con
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-### 5.3.6.3.6 NTub Normal Probability
+### 5.3.6.3.6 NTub Probabilidad normal
 
-Contours the strength for ubiquitous-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+Genera contornos de la resistencia al corte en el plano ubicuo. Se puede acceder a estas componentes mediante la barra de herramientas Strength Factor Components, como se indica a continuación:
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Strength Factor Components.
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+Para calcular los esfuerzos de corte y normal ubicuos, el estado de esfuerzos en cada punto del plano de la grilla se reorienta para determinar el esfuerzo de corte máximo paralelo al plano de corte ubicuo y el esfuerzo normal al plano de corte ubicuo.
 
 ![Figure from page 289](/images/page-289-img-2.png)
 
-The orientation of the ubiquitous shear plane is set using
+La orientación del plano de corte ubicuo se define con
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stress can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En el análisis elástico, los esfuerzos máximos de corte y normal en el plano ubicuo se pueden usar con el criterio de resistencia de Mohr-Coulomb para estimar la magnitud del deslizamiento por sobreesfuerzo en una falla, un sistema de diaclasas o un plano de estratificación con la orientación especificada. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Por lo tanto, en el análisis no lineal normalmente se considera directamente la cantidad de deformación no lineal o la tasa de deformación predicha por el modelo
 
 Mohr-Coulomb in DD planes
 
@@ -1125,22 +1122,22 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tub without loosing confinement.
+Aquí se supone que la trayectoria de esfuerzos hasta la falla se produce aumentando tub sin pérdida de confinamiento.
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-SF-ub Strength/Stress   can be determined as [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   can be determined as tub / [ Cohesion + sub tan(j) ] dTub Excess   can be determined as Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   can be determined as N(Dtub /std)
+SF-ub Strength/Stress   se puede determinar como [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   se puede determinar como tub / [ Cohesion + sub tan(j) ] dTub Excess   se puede determinar como Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   se puede determinar como N(Dtub /std)
 
-Strength parameters are set up using
+Los parámetros de resistencia se configuran con
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+Temas relacionados:
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and
+UB#2 & UB#3 – activa los parámetros de resistencia para el plano ubicuo n.º 2 y/o n.º 3. Cuando está marcada, el mínimo de todos los planos ubicuos activos se presenta para todos los parámetros de resistencia ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength y
 
 Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
