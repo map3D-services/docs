@@ -2,133 +2,130 @@
 title: "Visualização (de arquivos EVP)"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Esta opção permite visualizar dados de pontos em formato de arquivo EVP (dos sistemas sísmicos IMS). Os pontos podem ser exibidos como esferas com sombreamento de fonte de luz, cujo diâmetro e/ou cor variam conforme a magnitude, e podem ser contornados em um plano para mostrar densidade etc.
 
-This option enables visualization of point data in EVP file format (from IMS seismic systems). Points can be displayed as light source shaded spheres with diameter and/or colour varying as magnitude, and contoured on a plane to display density etc.
+O Map3D também suporta a visualização de arquivos em formato de texto.
 
-Map3D also supports visualization of text formatted files.
+Cada ponto pode ser marcado com uma série de:
 
-Each point can be tagged with a series of:
+- valores numéricos (p. ex., cor, magnitude, orientação etc.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- mensagens de texto
 
-- text messages
+- nomes de arquivos (p. ex., arquivos gráficos, documentos, planilhas etc.)
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+Ao clicar com o botão esquerdo em um ponto, a localização, a magnitude e a mensagem de texto são exibidas na barra de status.
 
-Upon left clicking on a point, the location, magnitude and text message are displayed on the status bar.
+Clicar com o botão direito em um ponto ativa o banco de dados visual (Visual Database). Este recurso pode ser usado para exibir um banco de dados com informações geológicas úteis, como teor, qualidade do maciço rochoso etc. Cada ponto pode ser marcado com uma série de:
 
-Right clicking on a point activates the Visual Database. This feature can be used to display a database of useful geologic information such as grade, rockmass quality etc. Each point can be tagged with a series of:
+- valores numéricos (p. ex., cor, magnitude, orientação etc.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- mensagens de texto
 
-- text messages
-
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+- nomes de arquivos (p. ex., arquivos gráficos, documentos, planilhas etc.)
 
 ![Figure from page 464](/images/page-464-img-1.png)
 
 #### Event File:
 
-The event file is in *.EVP file format.
+O arquivo de eventos está no formato de arquivo *.EVP.
 
-EVP event files are produced by IMS seismic systems.
+Os arquivos de eventos EVP são produzidos por sistemas sísmicos IMS.
 
-Seismic data are stored as a series of points as follows:
+Os dados sísmicos são armazenados como uma série de pontos, da seguinte forma:
 
 **date time le x1 y1 z1 M  E Mp Ep Ms Es trigs... "text message" "file name"... date time le x2 y2 z2 M  E Mp Ep Ms Es trigs... "text message" "file name"... date time le x3 y3 z3 M  E Mp Ep Ms Es trigs... "text message" "file name"...**
 
-where **xi yi zi** represent the coordinates of each point,
+onde **xi yi zi** representam as coordenadas de cada ponto,
 
-**M** represents the seismic moment, **E** represents the energy radiated, **trigs** represents the number of triggers,
+**M** representa o momento sísmico, **E** representa a energia irradiada, **trigs** representa o número de disparos (triggers),
 
-**text message** indicates an optional series of text strings that must be enclosed in double quotes. **file name** indicates an optional series of file names that must be enclosed in double quotes.
+**text message** indica uma série opcional de cadeias de texto que devem estar entre aspas duplas. **file name** indica uma série opcional de nomes de arquivos que devem estar entre aspas duplas.
 
-- The text message and file name are displayed in the status bar across the bottom of the screen by picking an event with the left mouse button.
+- A mensagem de texto e o nome do arquivo são exibidos na barra de status, na parte inferior da tela, ao selecionar um evento com o botão esquerdo do mouse.
 
-- They can also be edited by picking an event with the right mouse button.
+- Eles também podem ser editados ao selecionar um evento com o botão direito do mouse.
 
-- Picking with the right mouse button also allows for display of the file if the file name has been associated with an application (refer to Windows documentation on how to "Associate a file with a program").
+- Selecionar com o botão direito do mouse também permite exibir o arquivo, se o nome do arquivo estiver associado a um aplicativo (consulte a documentação do Windows sobre como "Associar um arquivo a um programa").
 
-#### Merging multiple files into one database
+#### Mesclar vários arquivos em um único banco de dados
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+Você pode selecionar vários arquivos ao mesmo tempo mantendo pressionadas as teclas padrão do Windows "shift" ou "ctrl" para seleções múltiplas.
 
-These files will be merging into one database.
+Esses arquivos serão mesclados em um único banco de dados.
 
-This allows you to keep separate parts of your visualization data in different files then easily merge them together into one database.
+Isso permite manter partes separadas dos dados de visualização em arquivos diferentes e depois mesclá-las facilmente em um único banco de dados.
 
 #### Magnitude Equation:
 
-Defines the parameter that will be plotted, e.g. **(0.516*log10(M) + 0.344*log10(E) - 6.572**
+Define o parâmetro que será plotado, p. ex., **(0.516*log10(M) + 0.344*log10(E) - 6.572**
 
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+A janela suspensa permite armazenar até 20 equações diferentes. Elas são mantidas entre sessões do Map3D no arquivo map3d.ini.
 
 #### Plot Variables:
 
-**E M** data fields in the event file.
+**E M** campos de dados do arquivo de eventos.
 
 #### Functions:
 
-**sin() cos() tan()** sine, cosine and tangent trigonometric functions **asin() acos() atan()** Inverse trigonometric functions **sqrt()** square root function
+**sin() cos() tan()** funções trigonométricas seno, cosseno e tangente **asin() acos() atan()** funções trigonométricas inversas **sqrt()** função raiz quadrada
 
-**log()** natural logarithmic function **log10()** base 10 logarithmic function **abs()** absolute value **exp()** exponential function (antilogarithm) **n() t(,)** normal and t-distribution **an() at(,)** inverse normal and t-distribution
+**log()** função logaritmo natural **log10()** função logaritmo na base 10 **abs()** valor absoluto **exp()** função exponencial (antilogaritmo) **n() t(,)** distribuição normal e distribuição t **an() at(,)** distribuição normal inversa e distribuição t inversa
 
 #### Location:
 
-**x y z** coordinate of grid point.
+**x y z** coordenada do ponto de grade.
 
 #### Operators:
 
-- **+ - * /** ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
+- **+ - * /** ^   operadores de adição, subtração, multiplicação, divisão e exponenciação. Observe que as exponenciais são calculadas primeiro, seguidas de multiplicação e divisão e, por fim, adição e subtração.
 
-- **() [] &#123;&#125;** styles of brackets. Pairs of brackets must match.
+- **() [] &#123;&#125;** tipos de parênteses. Os pares de parênteses devem corresponder.
 
-- maximum value. For example if the plot equation is specified as f1 > 10, the larger of f1 or 10 will be plotted.
+- valor máximo. Por exemplo, se a equação de plotagem for especificada como f1 > 10, será plotado o maior entre f1 e 10.
 
-- **&lt;** minimum value. For example if the plot equation is specified as f1 &lt; 10, the smaller of f1 or 10 will be plotted.
+- **&lt;** valor mínimo. Por exemplo, se a equação de plotagem for especificada como f1 &lt; 10, será plotado o menor entre f1 e 10.
 
 #### Filters:
 
-**Start/End Time** – the lower and upper limits of the date/time filter. **Mag Min/Max** – the lower and upper limits of the magnitude filter. **Trig Min/Max** – the lower and upper limits of the # triggers filter.
+**Start/End Time** – os limites inferior e superior do filtro de data/hora. **Mag Min/Max** – os limites inferior e superior do filtro de magnitude. **Trig Min/Max** – os limites inferior e superior do filtro de nº de disparos.
 
-**Polygon File** – the name of the file containing the polygon filter. This file must be in *.pnt file format. To assist in creating this file the **Plane** function allows you to set the UDCS (user defined coordinate system) to the best fit plane.
+**Polygon File** – o nome do arquivo que contém o filtro poligonal. Este arquivo deve estar no formato de arquivo *.pnt. Para ajudar na criação desse arquivo, a função **Plane** permite definir o UDCS (sistema de coordenadas definido pelo usuário) como o plano de melhor ajuste.
 
-**Offset Z-/Z+** – the lower and upper limits of the Z-offset from the Polygon filter.
+**Offset Z-/Z+** – os limites inferior e superior do deslocamento em Z em relação ao filtro poligonal.
 
 #### Point Plotting Options:
 
-**Filled** – points are filled with the specified colour, contoured colour and/or shaded. **Contoured Colours** –fill colour is adjusted according to the magnitude determined from the **Plot Equation** .
+**Filled** – os pontos são preenchidos com a cor especificada, com cor de contorno e/ou sombreados. **Contoured Colours** – a cor de preenchimento é ajustada conforme a magnitude determinada a partir de **Plot Equation** .
 
-- **Dark** – fill colour is shaded to appear as light source shaded spheres using a dark rich colour scheme.
+- **Dark** – a cor de preenchimento é sombreada para parecer esferas com sombreamento de fonte de luz, usando um esquema de cores escuras e intensas.
 
-- **Light** – fill colour is shaded to appear as light source shaded spheres using a bright shinny colour scheme.
+- **Light** – a cor de preenchimento é sombreada para parecer esferas com sombreamento de fonte de luz, usando um esquema de cores claras e brilhantes.
 
-**Outlined** – points are outlined with the specified colour or contoured colour.
+**Outlined** – os pontos são delineados com a cor especificada ou com a cor de contorno.
 
-**Contoured Outline** – points are drawn with contour colours adjusted according to the magnitude determined from the **Plot Equation** .
+**Contoured Outline** – os pontos são desenhados com cores de contorno ajustadas conforme a magnitude determinada a partir de **Plot Equation** .
 
-**Contour Plane** – enables or disables display of a contour plane (refer to **Plane** ).
+**Contour Plane** – habilita ou desabilita a exibição de um plano de contornos (veja **Plane** ).
 
-**Fixed Radius** – points will be plotted as spheres with a the specified **Radius:** parameter.
+**Fixed Radius** – os pontos serão plotados como esferas com o parâmetro **Radius:** especificado.
 
-**Magnitude Scaled Radius** – points will be plotted as spheres with radius scaled to the magnitude (determined from the **Magnitude Equation** ) such that if the magnitude is less than the minimum of the contour range, the sphere is drawn with Min radius specified by the **Radius:** parameter.. If the magnitude exceeds the maximum of the contour range, the vector is drawn with the Max radius specified by the **Radius:** parameter.
+**Magnitude Scaled Radius** – os pontos serão plotados como esferas com raio escalonado pela magnitude (determinada a partir de **Magnitude Equation** ), de modo que, se a magnitude for menor que o mínimo da faixa de contornos, a esfera é desenhada com o raio mínimo especificado pelo parâmetro **Radius:**. Se a magnitude exceder o máximo da faixa de contornos, o vetor é desenhado com o raio máximo especificado pelo parâmetro **Radius:**.
 
 #### Other:
 
-- **Persist** – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired.
+- **Persist** – quando marcada, os pontos são replotados cada vez que o modelo é reorientado, transladado ou ampliado/reduzido com zoom. Como isso pode demorar em modelos grandes, nem sempre essa opção é desejável.
 
-**Translucent** - draws the points as translucent spheres.
+**Translucent** - desenha os pontos como esferas translúcidas.
 
-**Min Contour** - when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important.
+**Min Contour** - quando desmarcada, os contornos abaixo do mínimo da faixa de contornos não são desenhados. Isso é útil para exibir contornos em que apenas a parte superior da faixa é importante.
 
-**Max Contour** - when unchecked, contours above the maximum contour range are not drawn. This
+**Max Contour** - quando desmarcada, os contornos acima do máximo da faixa de contornos não são desenhados. Isso
 
-is useful for displaying contours where only the lowerer part of the contour range is important. **Make Point** - adds of a new point.
+é útil para exibir contornos em que apenas a parte inferior da faixa é importante. **Make Point** - adiciona um novo ponto.
 
-**Plane** – enables setup of the contour plane.
+**Plane** – permite configurar o plano de contornos.
 
-**Range** – specify the minimum, maximum and interval for radius scaling and contouring.
+**Range** – especifica o mínimo, o máximo e o intervalo para o escalonamento do raio e para os contornos.
 
-Plot regenerates the plot. This button can be placed on either the View Toolbar (Tools > View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+Plot regenera a plotagem. Este botão pode ser colocado na barra de ferramentas de visualização (Tools > View Toolbar Configure) ou na barra de ferramentas de contornos (Tools > Contour Toolbar Configure).

@@ -2,33 +2,30 @@
 title: "Konstruktionslinien öffnen"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Lädt Konstruktionslinien aus einer Datei.
 
-Loads construction lines from a file.
+Konstruktionslinien dienen dazu, die genaue Lage untertägiger Elemente wie Hohlräume, Kontakte, Strukturen usw. festzulegen. Ein Map3D-Modell wird normalerweise auf diesen Konstruktionsliniendaten aufgebaut.
 
-Construction lines are used to define detailed locations of underground features such as excavations, contacts structure etc. A Map3D model is normally built on top of this construction line data.
+Sie werden aufgefordert, Name, Speicherort und Format der Konstruktionsliniendatei auszuwählen. Konstruktionslinien können aus mehreren Dateitypen geladen werden:
 
-You will be prompted to search for a construction line file name, location and file format. Construction lines can be loaded from several file types:
+- Das Punktdateiformat ist eine universelle ASCII-Datendatei mit der Erweiterung „.PNT“. Dieses Format eignet sich zum Austausch roher Konstruktionsliniendaten mit anderer CAD-Software.
 
-- Point file format is a universal ASCII data file with the extension ".PNT". This format is useful for exchanging raw construction line data with other CAD software.
+- Das AutoCAD-DXF-Format ist ein verbreitetes Zeichnungsaustauschformat mit der Erweiterung „.DXF“. Dieses Format eignet sich zum Austausch von Konstruktionsliniendaten mit anderer CAD-Software.
 
-- AutoCAD-DXF format is a popular drawing exchange file with the extension ".DXF". This format is useful for exchanging construction line data with other CAD software.
-
-The construction line data being loaded can either overwrite or be merged with existing data. The overwrite/merge option
+Die geladenen Konstruktionsliniendaten können die vorhandenen Daten entweder überschreiben oder mit ihnen zusammengeführt werden. Die Option Überschreiben/Zusammenführen
 
 #### File > Open > Merge Geometires
 
-appears at the bottom of the open file dialogue box.
+erscheint unten im Dialogfeld zum Öffnen von Dateien.
 
-#### Merging multiple files into one database
+#### Mehrere Dateien in einer Datenbank zusammenführen
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+Sie können mehrere Dateien gleichzeitig auswählen, indem Sie für die Mehrfachauswahl die üblichen Windows-Tasten „Umschalt“ oder „Strg“ gedrückt halten.
 
-These files will be merging into one database.
+Diese Dateien werden in einer Datenbank zusammengeführt.
 
-This allows you to keep separate parts of construction line data in different files then easily merge them together into one database.
+So können Sie einzelne Teile der Konstruktionsliniendaten in verschiedenen Dateien aufbewahren und sie dann einfach in einer Datenbank zusammenführen.
 
-Another way of merging multiple files is to select the "Merge Geometries" option prior to selecting the additional file you want to add to the existing database.
+Eine weitere Möglichkeit, mehrere Dateien zusammenzuführen, besteht darin, die Option „Merge Geometries“ auszuwählen, bevor Sie die zusätzliche Datei auswählen, die Sie der vorhandenen Datenbank hinzufügen möchten.
 
-This is useful if you already have construction line data open and want to add additional construction line data to this.
+Dies ist nützlich, wenn Sie bereits Konstruktionsliniendaten geöffnet haben und weitere Konstruktionsliniendaten hinzufügen möchten.

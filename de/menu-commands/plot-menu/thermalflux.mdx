@@ -2,69 +2,66 @@
 title: "Thermik/Fluss"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
 ## 5.3.5.1 Plot > Thermal/Flux
 
-Activate the Thermal/Flux toolbar – after Map3D Thermal-Fluid Flow BEM analysis.
+Aktiviert die Symbolleiste Thermal/Flux – nach einer Map3D-BEM-Analyse der thermisch-hydraulischen Strömung.
 
-Parameters for Thermal/Flux Analysis are described in Expansion Coefficient and Conductivity.
+Die Parameter für die Thermik-/Flussanalyse sind unter Expansion Coefficient und Conductivity beschrieben.
 
-This toolbar is meant to provide quick access to thermal/flux components.
+Diese Symbolleiste bietet schnellen Zugriff auf die Thermik- und Flusskomponenten.
 
-Plot > Flux > t/h   Temperature/Head
+Plot > Flux > t/h   Temperatur/Druckhöhe
 
-Plot > Flux > qtotal = ( qx² + qy² + qz² )<sup>½</sup> Total Flux   contours the total displacement
+Plot > Flux > qtotal = ( qx² + qy² + qz² )<sup>½</sup> Gesamtfluss   stellt den Gesamtfluss als Konturen dar
 
-Plot > Flux > qx X-Flux   contours the x-flux component
+Plot > Flux > qx X-Fluss   stellt die x-Komponente des Flusses als Konturen dar
 
-Plot > Flux > qy Y-Flux   contours the y-flux component
+Plot > Flux > qy Y-Fluss   stellt die y-Komponente des Flusses als Konturen dar
 
-Plot > Flux > qz Z-Flux   contours the z-flux component
+Plot > Flux > qz Z-Fluss   stellt die z-Komponente des Flusses als Konturen dar
 
-To calculate the in-plane flux, the flux state at each point on the grid plane is reoriented to determine the maximum flux parallel to the grid plane and the flux normal to the plane. Note that qni is oriented normal to the grid plane and parallel to the direction of a line grid.
+Zur Berechnung des Flusses in der Ebene wird der Flusszustand an jedem Punkt der Rasterebene umorientiert, um den maximalen Fluss parallel zur Rasterebene und den Fluss normal zur Ebene zu bestimmen. Beachten Sie, dass qni normal zur Rasterebene und parallel zur Richtung eines Linienrasters orientiert ist.
 
-Plot > Flux > qni In-plane normal   contours the flux component normal to the grid plane.
+Plot > Flux > qni Normal in der Ebene   stellt die Flusskomponente normal zur Rasterebene als Konturen dar.
 
-Plot > Flux > qmi In-plane maximum   contours the maximum flux tangential to the grid plane.
+Plot > Flux > qmi Maximum in der Ebene   stellt den maximalen Fluss tangential zur Rasterebene als Konturen dar.
 
 ![Figure from page 247](/images/page-247-img-2.png)
 
-To calculate the ubiquitous-plane #1 flux, the flux state at each point on the grid plane is reoriented to determine the maximum flux parallel to the ubiquitous plane #1 and the flux normal to the plane. Note that dmi is not oriented normal to the grid plane.
+Zur Berechnung des Flusses der ubiquitären Ebene Nr. 1 wird der Flusszustand an jedem Punkt der Rasterebene umorientiert, um den maximalen Fluss parallel zur ubiquitären Ebene Nr. 1 und den Fluss normal zur Ebene zu bestimmen. Beachten Sie, dass dmi nicht normal zur Rasterebene orientiert ist.
 
-Plot > Flux > qnu Ubiquitous-plane normal   contours the flux component normal to the ubiquitous plane.
+Plot > Flux > qnu Normal zur ubiquitären Ebene   stellt die Flusskomponente normal zur ubiquitären Ebene als Konturen dar.
 
-Plot > Flux > qmu Ubiquitous-plane maximum   contours the maximum flux tangential to the ubiquitous plane.
+Plot > Flux > qmu Maximum in der ubiquitären Ebene   stellt den maximalen Fluss tangential zur ubiquitären Ebene als Konturen dar.
 
 ![Figure from page 247](/images/page-247-img-6.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-#### Notes:
+#### Hinweise:
 
-The flux toolbar can only be activated after the model building - CAD Stage
+Die Symbolleiste für den Fluss kann erst nach der Modellaufbauphase (CAD) aktiviert werden
 
-#### Map3D Analysis Stages.
+#### Map3D-Analysephasen.
 
-The orientation of the ubiquitous shear plane is set using
+Die Orientierung der ubiquitären Scherebene wird festgelegt mit
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Displacement
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Flow Components
 
-button to the contouring toolbar for quick access to all flow components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Strömungskomponenten zuzugreifen.

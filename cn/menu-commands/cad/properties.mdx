@@ -2,242 +2,233 @@
 title: "属性"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.5.3.1 控制参数
 
-## 5.5.3.1 Control Parameters
-
-Specification of analysis control parameters.
+指定分析控制参数。
 
 ![Figure from page 324](/images/page-324-img-7.png)
 
-**Job Title** - specifies a descriptive project title.
+**Job Title** - 指定描述性的项目标题。
 
-**Maximum # of Time Steps (** **_NLD_ )** - specifies the maximum number of steps that will be used during analysis. This parameter is only relevant if you are conducting a non-linear creep analysis
+**Maximum # of Time Steps (** **_NLD_ )** - 指定分析期间使用的最大步数。仅当进行非线性蠕变分析时，此参数才有意义
 
 #### Analysis > Options > Creep
 
-where this limits the actual number of time steps.
+此时它限制实际的时间步数。
 
-If this parameter is exceeded, the program stops and the user is prompted for instructions on how to proceed. This parameter can be modified during solution.
+如果超过此参数，程序将停止，并提示用户说明如何继续。此参数可以在求解期间修改。
 
-Unless the user has some special reason for limiting the number of time steps this parameter should be set to an arbitrarily large number.
+除非用户有特殊理由限制时间步数，否则应将此参数设为任意大的数值。
 
-- **Maximum # of Iterations (** **_NIT_ )** - specifies the maximum number of iterations that will used during matrix solution.
+**Maximum # of Iterations (** **_NIT_ )** - 指定矩阵求解期间使用的最大迭代次数。
 
-If this parameter is exceeded, the program stops and the user is prompted for instructions on how to proceed. This parameter can be modified during solution.
+如果超过此参数，程序将停止，并提示用户说明如何继续。此参数可以在求解期间修改。
 
-Unless the user has some special reason for limiting the number of time steps this parameter should be set to an arbitrarily large number.
+除非用户有特殊理由限制时间步数，否则应将此参数设为任意大的数值。
 
-**Stress Tolerance (** **_STOL_ )** - specifies the required accuracy of the matrix solution.
+**Stress Tolerance (** **_STOL_ )** - 指定矩阵解所需的精度。
 
-During matrix solution the accuracy is successively improved with each iteration. When the maximum stress error falls below this value the matrix can be considered to be solved.
+在矩阵求解期间，精度会随每次迭代逐步提高。当最大应力误差低于此值时，即可认为矩阵已求解。
 
-The suggested value for the parameter is 0.1% of the far field stress state at the depth of interest. _STOL_ should be specified in the same units as the far field stress state (e.g. MPa or psi).
+该参数的建议值为目标深度处远场应力状态的 0.1%。_STOL_ 应使用与远场应力状态相同的单位指定（例如 MPa 或 psi）。
 
-**Relaxation Parameter (** **_RPAR_ )** - specifies the maximum relaxation value that will be used during matrix solution.
+**Relaxation Parameter (** **_RPAR_ )** - 指定矩阵求解期间使用的最大松弛值。
 
-During matrix solution the program continuously modifies the relaxation parameter in an attempt to obtain convergence with as few as possible iterations. This parameter limits the maximum value that will be used.
+在矩阵求解期间，程序会不断调整松弛参数，力求以尽可能少的迭代次数达到收敛。此参数限制所用的最大值。
 
-The value of 1.2 is recommended for well-conditioned problems. For poorly conditioned problems a value of 0.8 should be used.
+对于条件良好的问题，建议使用 1.2。对于条件不佳的问题，应使用 0.8。
 
-**Element Length (** **_AL_ )** - specifies the minimum element length.
+**Element Length (** **_AL_ )** - 指定最小单元长度。
 
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+在离散化过程中，所有模型表面（FF 块体的表面和 DD 平面）都被细分为边长为
 
 _Lelem = Delem/DON_
 
-where _Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces. Since at some locations the distance _Delem_ may be zero, the minimum element side length _AL_ must be specified.
+的边界单元，其中 _Delem_ 由 Map3D 确定，为相邻模型表面之间的最小距离。由于在某些位置距离 _Delem_ 可能为零，因此必须指定最小单元边长 _AL_。
 
-_AL_ should be set equal to twice the smallest pillar or stope width. The same units used to specify the coordinates should be used (e.g. metres or feet).
+_AL_ 应设为最小矿柱或采场宽度的两倍。应使用与指定坐标相同的单位（例如米或英尺）。
 
-Once discretization is complete, the distance _Delem_ can be plotted using
+离散化完成后，可使用以下功能绘制距离 _Delem_
 
-Plot > Miscellaneous > Delem distance to nearest element on surfaces.
+Plot > Miscellaneous > Delem distance to nearest element on surfaces。
 
-Note that if desired, this behaviour can be overridden on an element by element basis by specifying the maximum width for each element
+请注意，如有需要，可以通过为每个单元指定最大宽度，逐个单元地覆盖此行为
 
 #### CAD > Edit > Entity Properties > Maximum Width
 
-This allows users to force fine uniform discretization on surfaces in areas where there are no grid planes.
+这使用户能够在没有网格平面的区域，对表面强制采用精细而均匀的离散化。
 
-**Grid Spacing (** **_AG_ )** - specifies the minimum grid spacing.
+**Grid Spacing (** **_AG_ )** - 指定最小网格间距。
 
-During the discretization process all field point grids and model surfaces are subdivided into elements with side length
+在离散化过程中，所有场点网格和模型表面都被细分为边长为
 
 _Lgrid = Dgrid/DOL_
 
-where _Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes. Since at some locations the distance _Dgrid_ may be zero, the minimum grid spacing _AG_ must be specified. This same process is used to discretize model surfaces (surfaces of FF blocks and DD planes) that are near field point grids.
+的单元，其中 _Dgrid_ 由 Map3D 确定，为模型表面与网格平面之间的最小距离。由于在某些位置距离 _Dgrid_ 可能为零，因此必须指定最小网格间距 _AG_。同样的过程也用于离散化靠近场点网格的模型表面（FF 块体的表面和 DD 平面）。
 
-_AG_ should be set equal to the smallest dimension of interest. For example if the user needs to see the stress distribution across a 2m wide pillar, a value for _AG_ of 0.5 would give sufficient number of
+_AG_ 应设为所关注的最小尺寸。例如，如果用户需要查看穿过 2m 宽矿柱的应力分布，则 _AG_ 取 0.5 即可提供足够数量的场点以精确绘制等值线。应使用与指定坐标相同的单位（例如米或英尺）。
 
-field points for accurate contouring. The same units used to specify the coordinates should be used (e.g. metres or feet).
-
-Once discretization is complete, the distance _Dgrid_ can be plotted on model surfaces using
+离散化完成后，可使用以下功能在模型表面上绘制距离 _Dgrid_
 
 Plot > Surface Components > Dgird distance to nearest grid
 
-or on grids using
+或在网格上绘制
 
-Plot > Miscellaneous > Delem distance to nearest element on grids.
+Plot > Miscellaneous > Delem distance to nearest element on grids。
 
-Note that if desired, this behaviour can be overridden on a grid by grid basis by specifying the maximum spacing for each grid
+请注意，如有需要，可以通过为每个网格指定最大间距，逐个网格地覆盖此行为
 
-CAD > Edit > Entity Properties > Maximum Width
+#### CAD > Edit > Entity Properties > Maximum Width
 
-This allows users to force fine uniform discretization on grids.
+这使用户能够对网格强制采用精细而均匀的离散化。
 
-**Grid Discretize (** **_DOL_ ) -** specifies the desired distance to element length ratio used to determine the grid spacing from
+**Grid Discretize (** **_DOL_ ) -** 指定所需的距离与单元长度之比，用于按下式确定网格间距
 
 _Lgrid = Dgrid/DOL_
 
-where _Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+其中 _Dgrid_ 由 Map3D 确定，为模型表面与网格平面之间的最小距离。
 
-A value for _DOL_ of 1.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOL_ of 2.0 should give 5-10% error. Use a value of 4.0 for less than 5% error. Although higher values of _DOL_ results in generation of more boundary elements and hence longer run times, this is necessary to obtain increased accuracy.
+_DOL_ 取 1.0 通常已足够，预期可得到误差为 10-20% 的解。如需更高精度，_DOL_ 取 2.0 应可得到 5-10% 的误差。取 4.0 则误差小于 5%。虽然较大的 _DOL_ 值会生成更多边界单元，从而延长运行时间，但这对于获得更高精度是必要的。
 
-Once discretization is complete, the ratio of _Dgrid/Lelem_ can be plotted on model surfaces using
+离散化完成后，可使用以下功能在模型表面上绘制比值 _Dgrid/Lelem_
 
 Plot > Miscellaneous > Dgrid/Lelem _DOL_ ratio on surfaces
 
-or the ratio of _Dgrid/Lgrid_ on grids using
+或在网格上绘制比值 _Dgrid/Lgrid_
 
-Plot > Miscellaneous > Dgrid/Lgrid _DOL_ ratio on grids.
+Plot > Miscellaneous > Dgrid/Lgrid _DOL_ ratio on grids。
 
-**Element Discretize (** **_DON_ ) -** specifies the desired distance to element length ratio used to determine the element side length
+**Element Discretize (** **_DON_ ) -** 指定所需的距离与单元长度之比，用于确定单元边长
 
 _Lelem = Delem/DON_
 
-where _Delem_ represents the distance to the nearest model surface.
+其中 _Delem_ 表示到最近模型表面的距离。
 
-A value for _DON_ of 0.5 is generally adequate for all problems except those with very narrow excavations or pillars. In this latter case a value for _DON_ of 1.0 is recommended. Although higher values of _DON_ results in generation of more boundary elements and hence longer run times, this is necessary to obtain a well conditioned solvable problem for very narrow excavations or pillars.
+_DON_ 取 0.5 通常适用于所有问题，但具有非常狭窄的采空区或矿柱的问题除外。在后一种情况下，建议 _DON_ 取 1.0。虽然较大的 _DON_ 值会生成更多边界单元，从而延长运行时间，但这对于在存在非常狭窄的采空区或矿柱时获得条件良好、可求解的问题是必要的。
 
-Once discretization is complete, the ratio of _Delem/Lelem_ can be plotted using
+离散化完成后，可使用以下功能绘制比值 _Delem/Lelem_
 
-Plot > Miscellaneous > Delem/Lelem _DON_ ratio on surfaces.
+Plot > Miscellaneous > Delem/Lelem _DON_ ratio on surfaces。
 
-**Matrix Lumping (** **_DOC_ ) -** specifies the desired distance to element length ratio. During matrix assembly, all elements that fit within the dimension
+**Matrix Lumping (** **_DOC_ ) -** 指定所需的距离与单元长度之比。在矩阵组装期间，所有落在尺寸
 
 #### _Delem/DOC_
 
-will be lumped together. _Delem_ represents the distance to the nearest model surface.
+范围内的单元将被合并（lumping）。_Delem_ 表示到最近模型表面的距离。
 
-Just as for _DOL_ , a value for _DOC_ of 1.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOC_ of 2.0 should give 5-10% error. Use a value of 4.0 for less than 5% error. Although higher values of _DOC_ result in larger coefficient matricies and hence longer run times, this is necessary to obtain increased accuracy.
+与 _DOL_ 一样，_DOC_ 取 1.0 通常已足够，预期可得到误差为 10-20% 的解。如需更高精度，_DOC_ 取 2.0 应可得到 5-10% 的误差。取 4.0 则误差小于 5%。虽然较大的 _DOC_ 值会产生更大的系数矩阵，从而延长运行时间，但这对于获得更高精度是必要的。
 
-Once discretization is complete, the distance _Delem_ can be plotted using
+离散化完成后，可使用以下功能绘制距离 _Delem_
 
-Plot > Miscellaneous > Delem distance to nearest element on surfaces.
+Plot > Miscellaneous > Delem distance to nearest element on surfaces。
 
-**Element Lumping (** **_DOE_ ) -** specifies the desired distance to element length ratio. During grid assembly, all elements that fit within the dimension
+**Element Lumping (** **_DOE_ ) -** 指定所需的距离与单元长度之比。在网格组装期间，所有落在尺寸
 
-_Dgrid/DOE_
+#### _Dgrid/DOE_
 
-will be lumped together. _Dgrid_ represents the distance to the nearest field point grid surface.
+范围内的单元将被合并（lumping）。_Dgrid_ 表示到最近场点网格表面的距离。
 
-A value for _DOE_ of 2.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOE_ of 4.0 should give 5-10% error. Use a value of 8.0 for less than 5% error. Although higher values of _DOE_ result in longer run times, this is necessary to obtain increased accuracy.
+_DOE_ 取 2.0 通常已足够，预期可得到误差为 10-20% 的解。如需更高精度，_DOE_ 取 4.0 应可得到 5-10% 的误差。取 8.0 则误差小于 5%。虽然较大的 _DOE_ 值会延长运行时间，但这对于获得更高精度是必要的。
 
-Once discretization is complete, the distance _Dgrid_ can be plotted on grids using
+离散化完成后，可使用以下功能在网格上绘制距离 _Dgrid_
 
-Plot > Miscellaneous > Delem distance to nearest element on grids.
+Plot > Miscellaneous > Delem distance to nearest element on grids。
 
-**Grid Lumping (** **_DOG_ ) -** specifies the desired distance to element length ratio. During grid assembly, all grid points that fit within the dimension
+**Grid Lumping (** **_DOG_ ) -** 指定所需的距离与单元长度之比。在网格组装期间，所有落在尺寸
 
-_Dgrid/DOG_
+#### _Dgrid/DOG_
 
-will be lumped together. _Dgrid_ represents the distance to the nearest field point grid surface.
+范围内的网格点将被合并（lumping）。_Dgrid_ 表示到最近场点网格表面的距离。
 
-A value for _DOG_ of 2.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOG_ of 4.0 should give 5-10% error. Use a value of 8.0 for less than 5% error. Although higher values of _DOG_ result in longer run times, this is necessary to obtain increased accuracy.
+_DOG_ 取 2.0 通常已足够，预期可得到误差为 10-20% 的解。如需更高精度，_DOG_ 取 4.0 应可得到 5-10% 的误差。取 8.0 则误差小于 5%。虽然较大的 _DOG_ 值会延长运行时间，但这对于获得更高精度是必要的。
 
-Once discretization is complete, the distance _Dgrid_ can be plotted on grids using
+离散化完成后，可使用以下功能在网格上绘制距离 _Dgrid_
 
-Plot > Miscellaneous > Delem distance to nearest element on grids.
+Plot > Miscellaneous > Delem distance to nearest element on grids。
 
-**Aspect Ratio (** **_DOR_ ) -** specifies the desired element aspect ratio. A value for _DOR_ of 5.0 is recommended for all problems except where the user wants narrow elements subdivided into more uniform shapes.
+**Aspect Ratio (** **_DOR_ ) -** 指定所需的单元长宽比。除非用户希望将狭窄的单元细分为更均匀的形状，否则所有问题均建议 _DOR_ 取 5.0。
 
-Sets _DON_ =0.5, _DOL=DOC_ =1, _DOE=DOG_ =2 for 10-20% error.
+设置 _DON_ =0.5、_DOL=DOC_ =1、_DOE=DOG_ =2，误差为 10-20%。设置 _DON_ =0.5、_DOL=DOC_ =2、_DOE=DOG_ =4，误差为 5-10%。设置 _DON_ =1、_DOL=DOC_ =4、_DOE=DOG_ =8，误差 &lt; 5%。
 
-Sets _DON_ =0.5, _DOL=DOC_ =2, _DOE=DOG_ =4 for 5-10% error.
-
-Sets _DON_ =1, _DOL=DOC_ =4, _DOE=DOG_ =8 for &lt; 5% error.
-
-**Comments -** allows you to specify comments to be saved with the run.
+**Comments -** 允许您指定与本次运行一起保存的注释。
 
 #### Summary:
 
-- _STOL_ should be set equal to 0.1% of the far field stress state at the depth of interest. Use the same units as the far field stress state (e.g. MPa or psi).
+- _STOL_ 应设为目标深度处远场应力状态的 0.1%。使用与远场应力状态相同的单位（例如 MPa 或 psi）。
 
-- _AL_ should be set equal to twice the smallest pillar or stope width. Use the same units used to specify the coordinates (e.g. metres or feet).
+- _AL_ 应设为最小矿柱或采场宽度的两倍。使用与指定坐标相同的单位（例如米或英尺）。
 
-- _AG_ should be set equal to the smallest dimension of interest. Use the same units used to specify the coordinates (e.g. metres or feet).
+- _AG_ 应设为所关注的最小尺寸。使用与指定坐标相同的单位（例如米或英尺）。
 
-- Elements are discretized to a side length that is the smaller of _Delem/DON_ and _Dgrid/DOL_ , such that it cannot be less than _AL_ and cannot be larger than the maximum width.
+- 单元按边长离散化，边长取 _Delem/DON_ 和 _Dgrid/DOL_ 中较小者，且不能小于 _AL_，也不能大于最大宽度。
 
-- Grid are discretized to a spacing is determined from _Dgrid/DOL_ such that is cannot be less than _AG_ and cannot be larger than the maximum spacing.
+- 网格按由 _Dgrid/DOL_ 确定的间距离散化，该间距不能小于 _AG_，也不能大于最大间距。
 
-- During matrix assembly, all elements that fit within the dimension _Delem/DOC_ will be lumped together.
+- 在矩阵组装期间，所有落在尺寸 _Delem/DOC_ 范围内的单元将被合并（lumping）。
 
-- During grid assembly, all elements that fit within the dimension _Dgrid/DOE_ will be lumped together.
+- 在网格组装期间，所有落在尺寸 _Dgrid/DOE_ 范围内的单元将被合并（lumping）。
 
-- During grid assembly, all grid points that fit within the dimension _Dgrid/DOG_ will be lumped together.
+- 在网格组装期间，所有落在尺寸 _Dgrid/DOG_ 范围内的网格点将被合并（lumping）。
 
 #### Notes:
 
-For a more detailed discussion on discretization and lumping refer to
+有关离散化与合并（lumping）的更详细讨论，请参阅
 
-- Discretization and Lumping.
+- Discretization and Lumping。
 
-## 5.5.3.2 Mining Step Titles
+## 5.5.3.2 开采步骤标题
 
-Specification of a specifies a descriptive title for each mining step.
+为每个开采步骤指定描述性标题。
 
 ![Figure from page 329](/images/page-329-img-3.png)
 
-## 5.5.3.3 Material Properties
+## 5.5.3.3 材料属性
 
-Specification of material properties.
+指定材料属性。
 
-Several different dialogue boxes will appear depending on the material type selected: Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Backfill Hyperbolic and None.
+根据所选的材料类型，会出现几种不同的对话框：Mohr-Coulomb、Hoek-Brown、Drucker-Prager、Backfill Hyperbolic 和 None。
 
-Mohr-Coulomb in 3D FF blocks can be used as a flow rule for non-linear material behaviour in Map3D Non-Linear and Map3D Visco-Plastic. Can also be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+3D FF 块体中的 Mohr-Coulomb 可在 Map3D Non-Linear 和 Map3D Visco-Plastic 中用作非线性材料行为的流动法则。也可在 Map3D Fault-Slip 中用作 3D FF 块体或围岩（host）材料的破坏准则。
 
-Hoek-Brown in 3D FF blocks can be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+3D FF 块体中的 Hoek-Brown 可在 Map3D Fault-Slip 中用作 3D FF 块体或围岩材料的破坏准则。
 
-Drucker-Prager in 3D FF blocks can be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+3D FF 块体中的 Drucker-Prager 可在 Map3D Fault-Slip 中用作 3D FF 块体或围岩材料的破坏准则。
 
-Fault-Gouge in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D NonLinear or Map3D Visco-Plastic.
+DD 平面中的 Fault-Gouge 可在 Map3D Fault-Slip、Map3D Non-Linear 或 Map3D Visco-Plastic 中用作 DD 平面的流动法则。
 
-Equilibrated-Gouge in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+DD 平面中的 Equilibrated-Gouge 可在 Map3D Fault-Slip、Map3D Non-Linear 或 Map3D Visco-Plastic 中用作 DD 平面的流动法则。
 
-Yielding-Pillar in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D NonLinear or Map3D Visco-Plastic.
+DD 平面中的 Yielding-Pillar 可在 Map3D Fault-Slip、Map3D Non-Linear 或 Map3D Visco-Plastic 中用作 DD 平面的流动法则。
 
-Hyperbolic-Backfill in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+DD 平面中的 Hyperbolic-Backfill 可在 Map3D Fault-Slip、Map3D Non-Linear 或 Map3D Visco-Plastic 中用作 DD 平面的流动法则。
 
-Quadratic-Backfill in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+DD 平面中的 Quadratic-Backfill 可在 Map3D Fault-Slip、Map3D Non-Linear 或 Map3D Visco-Plastic 中用作 DD 平面的流动法则。
 
-Softened Material in 3D FF blocks or DD planes can be used to soften an elastic material to simulate ground yielding and the resulting stress redistribution effects.
+3D FF 块体或 DD 平面中的 Softened Material 可用于软化弹性材料，以模拟地层屈服及由此产生的应力重分布效应。
 
-Stress State specify the pre-mining stress state.
+Stress State 指定开采前的应力状态。
 
-In elastic analyses the failure criterion is used only for strength factor calculations and contour plotting and does not affect the analysis results.
+在弹性分析中，破坏准则仅用于强度系数计算和等值线绘图，不影响分析结果。
 
-In non-linear analyses (3D FF blocks in Map3D Non-Linear, 3D FF blocks in Map3D Visco-Plastic, and DD planes in Map3D Fault-Slip) the failure criterion is used as a flow rule to control yielding and nonlinear deformations.
+在非线性分析中（Map3D Non-Linear 中的 3D FF 块体、Map3D Visco-Plastic 中的 3D FF 块体以及 Map3D Fault-Slip 中的 DD 平面），破坏准则用作流动法则，以控制屈服和非线性变形。
 
-## 5.5.3.4 Map3Di Setup
+## 5.5.3.4 Map3Di 设置
 
-Sets up the Map3Di analysis.
+设置 Map3Di 分析。
 
-Map3Di allows one to superimpose external field loading effects into the Map3D model. For details on this feature refer to Map3Di.
+Map3Di 允许将外部场荷载效应叠加到 Map3D 模型中。有关此功能的详情，请参阅 Map3Di。
 
-When you check a Map3Di loading file for use you will be prompted to search for a file name, location. If the search is successful, the file will be checked.
+检查要使用的 Map3Di 荷载文件时，系统会提示您查找文件名和位置。如果查找成功，该文件将被检查。
 
-The Map3Di loading file is specified in polyline file format. Refer to Contour Plane Options for details on generating a Map3Di loading file.
+Map3Di 荷载文件采用多段线文件格式指定。有关生成 Map3Di 荷载文件的详情，请参阅 Contour Plane Options。
 
-Comment lines must start with an asterisk "*" in column 1.
+注释行必须以第 1 列的星号 "*" 开头。
 
-2D planes are stored as a series of triangle or quadrilateral polylines as follows:
+2D 平面按如下方式存储为一系列三角形或四边形多段线：
 
 x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4 ...
 
-3D blocks are stored as a series of tetrahedral or hexahedral polylines as follows:
+3D 块体按如下方式存储为一系列四面体或六面体多段线：
 
 x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4 x5 y5 z5 1 values5 x6 y6 z6 1 values6
 
@@ -245,102 +236,102 @@ x7 y7 z7 1 values7
 
 x8 y8 z8 1 values8
 
-where **xi yi zi** represent the coordinates of each point.
+其中 **xi yi zi** 表示每个点的坐标。
 
-- 3 indicates that this point is the beginning of a new polyline.
+- 3 表示该点是新多段线的起点。
 
-- 2 indicates that this point forms part of the base of the block.
+- 2 表示该点属于块体底面的一部分。
 
-- 1 indicates that this point forms part of the top of the block. This item is only used for definition of 3D block shapes.
+- 1 表示该点属于块体顶面的一部分。此项仅用于定义 3D 块体形状。
 
-Additional polylines are specified by repeating the sequence (i.e. starting a new polyline with the number **3** ).
+通过重复该序列（即以数字 **3** 开始一条新的多段线）来指定更多的多段线。
 
-Any of the points can be repeated or skipped to specify triangular shaped sides or tetrahedrons.
+任何点都可以重复或省略，以指定三角形的侧面或四面体。
 
-- valuesi specifies the magnitude of the field loading at the centre, or at each corner. If only values1 is specified (i.e. values2 … are left blank) that value is applied uniformly across the entity.
+- valuesi 指定中心或每个角点处的场荷载大小。如果只指定 values1（即 values2 … 留空），则该值均匀施加于整个实体。
 
-- If valuesi are specified for all corners, the field loading is applied according to a higher order polynomial distribution.
+- 如果为所有角点指定了 valuesi，则场荷载按更高阶的多项式分布施加。
 
-For 2D surface triangles a linear distribution is used
+对于 2D 表面三角形，使用线性分布
 
 _a_ + _b x_ + _c y_
 
-For 2D quadrilaterals, the following distribution is used
+对于 2D 四边形，使用下列分布
 
 _a_ + _b x_ + _c y_ + _d x y_
 
-For 3D block shapes, as many terms as possible of the distribution are used
+对于 3D 块体形状，尽可能多地使用分布的各项
 
 _a_ + _b x_ + _c y_ + _d z_ + _e x y_ + _f y z_ + _g z x_ + _h x y z_
 
-The actual field loading effects can be specified in several ways.
+实际的场荷载效应可以通过几种方式指定。
 
 #### 2D Planes
 
-2D planes define a Displacement Discontinuity with specified normal displacement (closure) dn, and shear displacement (ride) ds, such that valuesi can be specified either as
+2D 平面定义一个位移不连续体，其法向位移（闭合量）dn 和剪切位移（ride）ds 已指定，因此 valuesi 可以指定为
 
-dn ds or dn ds1 ds2
+dn ds 或 dn ds1 ds2
 
-If only dn ds are specified, the shear displacement (ride) is applied parallel to the maximum in-plane shear stress for the 2D plane.
+如果只指定 dn ds，则剪切位移（ride）平行于该 2D 平面的最大面内剪应力施加。
 
-If all of dn ds1 ds2 are specified, the shear displacement (ride) component ds1 is applied parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is applied perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 - x3 y3 z3).
+如果指定了 dn ds1 ds2 的全部，则剪切位移（ride）分量 ds1 平行于第一条边施加（即由 x1 y1 z1 – x2 y2 z2 定义的边）。ds2 垂直于 ds1，沿第二条边的方向施加（即由 x2 y2 z2 - x3 y3 z3 定义的边）。
 
-Shear displacement (ride) and normal displacement (closure) are specified in displacement units (i.e. the same units as the geometry is specified in (metres).
+剪切位移（ride）和法向位移（闭合量）以位移单位指定（即与几何尺寸相同的单位（米））。
 
-The shear displacement (ride) and normal displacement (closure) may be determined from in situ or laboratory measurements of shear, closure and/or crack opening, or from another numerical modelling program such as a reservoir or hydraulic fracture simulator. These can also be estimated from seismic monitoring data.
+剪切位移（ride）和法向位移（闭合量）可通过现场或实验室对剪切、闭合和/或裂缝张开的测量确定，也可通过其他数值模拟程序（如储层或水力压裂模拟器）确定。它们也可以根据微震监测数据估算。
 
 #### 3D Blocks
 
-3D blocks define a zone with specified strain e, either as
+3D 块体定义一个具有指定应变 e 的区域，可以指定为
 
-e1 e2 e3 or exx eyy ezz exy eyz ezx
+e1 e2 e3 或 exx eyy ezz exy eyz ezx
 
-If only e1 e2 e3 are specified, these principal strains are applied parallel to the principal stresses. The strains are used to determine the initial stress s° using
+如果只指定 e1 e2 e3，则这些主应变平行于主应力施加。这些应变用于按下式确定初始应力 s°
 
 s1° = [ ( _1-_ n) e1 + n ( e2 + e3 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] s2° = [ ( _1-_ n) e2 + n ( e3 + e1 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] s3° = [ ( _1-_ n) e3 + n ( e1 + e2 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ]
 
-If all of exx eyy ezz exy eyz ezx are specified, these strains are applied as Cartesian components. The strains are used to determine the initial stress s° using
+如果指定了 exx eyy ezz exy eyz ezx 的全部，则这些应变作为笛卡尔分量施加。这些应变用于按下式确定初始应力 s°
 
 sxx°  = [ ( _1-_ n) exx + n ( eyy + ezz ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] syy° = [ ( _1-_ n) eyy + n ( ezz + exx ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] szz°  = [ ( _1-_ n) ezz + n ( exx + eyy ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] txy° = exy _E_ / ( _1+_ n) tyz° = eyz _E_ / ( _1+_ n) tzx° = ezx _E_ / ( _1+_ n)
 
-Strains are specified in dimensionless strain units (i.e. 0.001 would specify 1000 micro strain).
+应变以无量纲应变单位指定（即 0.001 表示 1000 微应变）。
 
-_E_ and n represent respectively Young's (rock mass scale - deformation) modulus and Poisson's ratio. Map3D automatically determines which material the corner of the 3D block is located within and uses the corresponding material properties.
+_E_ 和 n 分别表示杨氏模量（岩体尺度——变形模量）和泊松比。Map3D 会自动确定 3D 块体角点所处的材料，并使用相应的材料属性。
 
-The strains may be determined from in situ or laboratory measurements of temperature or fluid pressure, or from another numerical modelling program such as a thermal analysis code. These can also be estimated from seismic monitoring data.
+这些应变可通过现场或实验室对温度或流体压力的测量确定，也可通过其他数值模拟程序（如热分析程序）确定。它们也可以根据微震监测数据估算。
 
-The strains that should be applied can be determined from the temperature through an expansion coefficient _A_ , where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+应施加的应变可通过膨胀系数 _A_ 由温度确定，其中温度变化或流体压力变化（相对于背景值）会引起初始应力
 
 s1° **=** s2° **=** s3° = _A_ D _T_
 
-For fluid flow problems the expansion coefficient _A_ , should be set to unity (positive one) for saturated media. For thermal problems the expansion coefficient should be specified as a negative quantity given by
+对于流体流动问题，饱和介质的膨胀系数 _A_ 应设为 1（正一）。对于热问题，膨胀系数应指定为负值，由下式给出
 
 _A_ = a _E /(1-2_ n _)_
 
-where a represents the coefficient of thermal expansion (i.e. the linear expansivity).
+其中 a 表示热膨胀系数（即线膨胀系数）。
 
 #### Notes
 
-This function must be set up before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前设置此功能
 
-Analysis > BEM Analysis.
+Analysis > BEM Analysis。
 
-CAD > Properties > Map3Di Setup > View enables viewing of the Map3Di data.
+CAD > Properties > Map3Di Setup > View 可用于查看 Map3Di 数据。
 
-## 5.5.3.5 Model Information
+## 5.5.3.5 模型信息
 
-Displays the current tally for the following model parameters:
+显示以下模型参数的当前统计：
 
-- number of surfaces used to define the geometry,
+- 用于定义几何体的表面数，
 
-- number of coordinates used to define the surfaces,
+- 用于定义表面的坐标数，
 
-- number of mining steps.
+- 开采步骤数。
 
-The following parameters are only displayed after the discretization analysis (Analysis > Discretization) is complete:
+以下参数仅在离散化分析（Analysis > Discretization）完成后才显示：
 
-- number of boundary elements,
+- 边界单元数，
 
-- number of boundary nodes (only used for higher order elements (Analysis > Options > Linear),
+- 边界节点数（仅用于高阶单元（Analysis > Options > Linear），
 
-- number of field points on user defined grids.
+- 用户定义网格上的场点数。

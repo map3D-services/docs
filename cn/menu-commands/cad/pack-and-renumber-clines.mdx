@@ -2,37 +2,34 @@
 title: "压缩并重新编号构造线"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+压缩所有构造线并重新编号。
 
-Packs and renumbers all construction lines.
+彼此非常接近的坐标点会被合并。位置相同的构造线角点将使用同一个坐标点编号，因此在任何坐标编辑操作（Cad > Edit）中都会一起移动。此功能可用于消除相邻构造线之间的微小间隙和重叠。
 
-Coordinate points that are very close to one another are merged together. Corners of construction lines that share the same location will use the same coordinate point number and hence will move together in any coordinate editing operation (Cad > Edit). This feature is useful for eliminating small gaps and overlaps between adjacent construction lines.
-
-All possible construction line segments of the same colour will be linked together to form contiguous lines between intersection points.
+所有同色的构造线段将尽可能连接起来，在交点之间形成连续的线。
 
 **6**
 
 ![Figure from page 445](/images/page-445-img-2.png)
 
-In this example, 3 line segments will be formed consisting of the following groupings of points
+在此示例中，将形成 3 条线段，由以下点组构成
 
-- Line segment 1:  10, 1, 2, 3, 4.
+- 线段 1： 10, 1, 2, 3, 4。
 
-- Line segment 2:  4, 5, 6, 7, 8, 9, 10.
+- 线段 2： 4, 5, 6, 7, 8, 9, 10。
 
-- Line segment 3:  4, 10.
+- 线段 3： 4, 10。
 
-When you initiate this function you will be prompted to specify a pack search radius
+启动此功能时，系统会提示您指定压缩的搜索半径
 
 ![Figure from page 443](/images/page-443-img-14.png)
 
-Radius this value is used to merge points that are close to one another. A zero value for this parameter indicates that it will not be used, and instead Map3D will merge points if they are within a search radius of 1000th of the edge length from the line. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Radius：该值用于合并彼此接近的点。此参数为零表示不使用该参数，此时 Map3D 将合并与线的距离在边长 1/1000 搜索半径内的点。指定非零值时务必格外小心，因为过大的值会合并过多的点，造成的问题可能比解决的还多。
 
-Any unused coordinate numbers are removed from the list of coordinates.
+所有未使用的坐标编号都会从坐标列表中删除。
 
-This function should be used before using the CAD > Edit > Smooth Construction lines function.
+应在使用 CAD > Edit > Smooth Construction lines 功能之前使用此功能。
 
-This function should be used before using the CAD > Snap > Trace Cline Snap function.
+应在使用 CAD > Snap > Trace Cline Snap 功能之前使用此功能。
 
-Construction lines can be unpacked using the CAD > Unpack Clines function.
+可以使用 CAD > Unpack Clines 功能解压构造线。

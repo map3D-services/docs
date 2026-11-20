@@ -2,162 +2,159 @@
 title: "捕捉"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.5.2.1 无
 
-## 5.5.2.1 None
+禁用捕捉。光标十字线交点处不显示拾取框。
 
-Disable snapping. No pick-box is displayed at the intersection of the cursor cross-hairs.
-
-Points will be selected at the location indicated by the cross-hairs. This mode is useful for freehand sketching or digitizing. When digitizing, all three coordinate values are scaled off of the drawing. However when freehand sketching, only two of the coordinates can be located and the third must be supplied from the snap base
+点将在十字线指示的位置被选取。此模式适用于徒手草图绘制或数字化。数字化时，所有三个坐标值均从图纸上按比例读取。但徒手绘制草图时，只能确定其中两个坐标，第三个坐标必须由捕捉基准提供
 
 CAD > Snap > Cursor/Grid Base
 
-This is the recommended setting while digitizing.
+这是数字化时的推荐设置。
 
-## 5.5.2.2 Nearest Edge
+## 5.5.2.2 最近边
 
-Snap to the nearest edge.
+捕捉到最近的边。
 
 ![Figure from page 386](/images/page-386-img-3.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-Otherwise the nearest point on the nearest edge will be selected.
+否则将选取最近边上的最近点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-## 5.5.2.3 Nearest Corner
+## 5.5.2.3 最近角点
 
-Snap to the nearest corner.
+捕捉到最近的角点。
 
 ![Figure from page 386](/images/page-386-img-9.png)
 
-The corner nearest the pick-box will be selected.
+将选取最靠近拾取框的角点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-## 5.5.2.4 Nearest Surface
+## 5.5.2.4 最近表面
 
-Snap onto the surface.
+捕捉到表面上。
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-If the pick-box is located over an edge, the nearest point on that edge will be selected.
+如果拾取框位于某条边上，将选取该边上的最近点。
 
-Otherwise the nearest point on the surface will be selected.
+否则将选取表面上的最近点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-## 5.5.2.5 Midpoint of Line
+## 5.5.2.5 线的中点
 
-Snap to the midpoint of the selected edge.
+捕捉到所选边的中点。
 
 ![Figure from page 387](/images/page-387-img-3.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-Otherwise the midpoint on the nearest edge will be selected.
+否则将选取最近边的中点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-## 5.5.2.6 Tangent Snap
+## 5.5.2.6 切线捕捉
 
-Force cursor tangent to the selected edge.
+强制光标与所选边相切。
 
 ![Figure from page 387](/images/page-387-img-9.png)
 
-The edge nearest the pickbox will be selected. The pick-box must be located over an entity or construction line.
+将选取最靠近拾取框的边。拾取框必须位于实体或构造线上。
 
-Once selected, all cursor movement will be constrained to the tangent defined by the selected edge. Points can now be selected anywhere along this tangent.
+选取后，光标的所有移动都将被约束在所选边定义的切线上。现在可以在这条切线上的任意位置选取点。
 
-Once a point is selected, tangent snap is automatically cancelled. Tangent snap can be cancelled at any time by pressing the escape key (Esc) or right click the mouse.
+选取一个点后，切线捕捉会自动取消。也可以随时按 Esc 键或单击鼠标右键取消切线捕捉。
 
-To select points at even spacing along the tangent line, tangent snap can be used in conjunction with any of:
+若要沿切线等间距选取点，可将切线捕捉与以下任一功能结合使用：
 
-CAD > Snap > Grid Snap Snap to a rectangular grid.
+CAD > Snap > Grid Snap 捕捉到矩形网格。
 
-CAD > Snap > X-Gird Snap Snap to the selected edge at an even X grid spacing.
+CAD > Snap > X-Gird Snap 以等间距的 X 网格间隔捕捉到所选边。
 
-CAD > Snap > Y-Grid Snap Snap to the selected edge at an even Y grid spacing.
+CAD > Snap > Y-Grid Snap 以等间距的 Y 网格间隔捕捉到所选边。
 
-CAD > Snap > Z-Grid Snap Snap to the selected edge at an even Z grid spacing.
+CAD > Snap > Z-Grid Snap 以等间距的 Z 网格间隔捕捉到所选边。
 
-## 5.5.2.7 Intersection Snap
+## 5.5.2.7 交点捕捉
 
-Snap to the intersection of the selected edge and a tangent.
+捕捉到所选边与某条切线的交点。
 
 ![Figure from page 388](/images/page-388-img-3.png)
 
-Since this function operates in full 3D, the tangent may pass above or below the selected edge and not actually intersect. In this case the closest point to the tangent line on the selected edge will be picked.
+由于此功能在完整的 3D 空间中运行，切线可能从所选边的上方或下方经过而并不真正相交。在这种情况下，将选取所选边上距离切线最近的点。
 
-This convention must be emphasized. The intersection point will not be selected on the tangent line: it will be selected on the intersection line.
+必须强调这一约定：交点不会选在切线上，而是选在相交线上。
 
-Using this feature is a two step process. When you click on the Intersect Snap button you will be prompted as follows:
+使用此功能分两个步骤。单击 Intersect Snap 按钮时，系统会提示您：
 
-1. First select a tangent line.
+1. 首先选择一条切线。
 
-2. Then select the edge you want to intersect the tangent with. The point will be selected on this line.
+2. 然后选择要与切线相交的边。点将选在这条线上。
 
-The edge nearest the pickbox will be selected.
+将选取最靠近拾取框的边。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-This function can be used to locate points at the intersection of the tangent and the projection of the selected edge.
+此功能可用于定位切线与所选边的延长线的交点。
 
 ![Figure from page 388](/images/page-388-img-12.png)
 
-Once a point is selected, intersection snap is automatically cancelled. Intersection snap can be cancelled at any time by pressing the escape key (Esc) or right click the mouse.
+选取一个点后，交点捕捉会自动取消。也可以随时按 Esc 键或单击鼠标右键取消交点捕捉。
 
-For an example on the use of intersection snap in model building refer to
+有关在模型构建中使用交点捕捉的示例，请参阅
 
 Tabular Mining
 
-## 5.5.2.8 Trace Cline Snap
+## 5.5.2.8 构造线追踪捕捉
 
-Snap to selected corners along a construction line segment. This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build >
+捕捉到沿构造线段的选定角点。此捕捉模式可作为快速构建 DDLoop（CAD > Build > DDLoop）、FFLoop（CAD > Build >
 
-FFLoop),Tunnels ( CAD > Build > Tunnel and CAD > Build > GPlanes).
+FFLoop）、巷道（CAD > Build > Tunnel 和 CAD > Build > GPlanes）的方法。
 
-To use this snap mode you simply pick the start and end points along the desired construction line segment and all point between these will be automatically selected. For example if you select points 4 and 9, points 5, 6, 7 and 8 will automatically be selected. Note that if you select the same point twice, the entire loop will be selected.
+使用此捕捉模式时，只需选取所需构造线段上的起点和终点，两者之间的所有点将被自动选取。例如，如果选取点 4 和点 9，点 5、6、7 和 8 将被自动选取。请注意，如果两次选取同一个点，将选取整个回路。
 
 **6**
 
 ![Figure from page 389](/images/page-389-img-9.png)
 
-Notes:
+注意：
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+使用此追踪捕捉模式之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+CAD > Edit > Smooth Construction Lines 功能也可用于帮助整理构造线。
 
-## 5.5.2.9 Trace Cloop Snap
+## 5.5.2.9 构造线回路追踪捕捉
 
-Snap to all corners along a construction line segment. This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build > FFLoop), Tunnels ( CAD > Build > Tunnel and CAD > Build > GPlanes).
+捕捉到沿构造线段的所有角点。此捕捉模式可作为快速构建 DDLoop（CAD > Build > DDLoop）、FFLoop（CAD > Build > FFLoop）、巷道（CAD > Build > Tunnel 和 CAD > Build > GPlanes）的方法。
 
-To use this snap mode you simply pick a single points on the desired construction line segment and all points on this line will be automatically selected. For example if you select point 4, points 5, 6, 7, 8, 1, 2 and 3 will automatically be selected.
+使用此捕捉模式时，只需选取所需构造线段上的一个点，该线上的所有点将被自动选取。例如，如果选取点 4，点 5、6、7、8、1、2 和 3 将被自动选取。
 
 ![Figure from page 390](/images/page-390-img-1.png)
 
-Notes:
+注意：
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+使用此追踪捕捉模式之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+CAD > Edit > Smooth Construction Lines 功能也可用于帮助整理构造线。
 
-## 5.5.2.10 Points Window
+## 5.5.2.10 点窗口
 
-Select corners using a window.
+使用窗口选取角点。
 
-This snap mode can be used as a quick method for building DDLoops ( CAD > Build > DDLoop), FFLoops ( CAD > Build > FFLoop), Tunnels ( CAD > Build > Tunnel), CLines ( CAD >
+此捕捉模式可作为快速构建 DDLoop（CAD > Build > DDLoop）、FFLoop（CAD > Build > FFLoop）、巷道（CAD > Build > Tunnel）、CLines（CAD >
 
-Build > CLines) and GLines ( CAD > Build > GLines).
+Build > CLines）和 GLines（CAD > Build > GLines）的方法。
 
-Although this snap mode is most often used to select multiple points along CLines, corners are permitted to be located on all element types including: FF elements, DD elements, GPlanes, GLines and CLines.
+虽然此捕捉模式最常用于沿 CLines 选取多个点，但角点可以位于所有单元类型上，包括：FF 单元、DD 单元、GPlanes、GLines 和 CLines。
 
 - Video Demo of FFLoop Model Building
 
@@ -167,178 +164,178 @@ Although this snap mode is most often used to select multiple points along CLine
 
 ![Figure from page 390](/images/page-390-img-1.png)
 
-In the figure above, if you pick one or more points prior to selecting a window, the windowed points will be added to those existing points, starting with the nearest previously selected point. For example if you were to pick point 3 prior to selecting a window, then use a window including points 4, 5, and 6 would add those points in that order.
+在上图中，如果在选取窗口之前先选取了一个或多个点，则窗口中的点将添加到这些已有点之后，从距离最近的先前选取的点开始。例如，如果在选取窗口之前先选取点 3，然后使用包含点 4、5 和 6 的窗口，则会按此顺序添加这些点。
 
-Alternatively if you were to pick point 3 prior to selecting a window, then use a window including points 1, 2, and 10 would add those points in the order 2, 1 then 10.
+或者，如果在选取窗口之前先选取点 3，然后使用包含点 1、2 和 10 的窗口，则会按 2、1、10 的顺序添加这些点。
 
-In the figure above, if you do not pick one or more points prior to selecting a window, the windowed points will selected starting at locations as far as possible apart.
+在上图中，如果在选取窗口之前没有选取任何点，则窗口中的点将从尽可能相距最远的位置开始选取。
 
-For example if you were select a window over all of the points, since points 2 and 6 are furthest apart, then points would be selected as 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2.
+例如，如果在所有点上选取一个窗口，由于点 2 和点 6 相距最远，各点将按 2、3、4、5、6、7、8、9、10、1、2 的顺序选取。
 
-As this example forms a closed loop, the points are selected as such.
+由于此示例构成闭合回路，各点即按此方式选取。
 
-CAD > Build > DDLoop).
+CAD > Build > DDLoop）。
 
-This forms a loop suitable for DDLoop construction (
+这样就形成了适合构建 DDLoop 的回路（
 
 ![Figure from page 352](/images/page-352-img-2.png)
 
-In the figure above, if you pick point 1 prior to selecting a window, then use a window including all points, then all of the points will be selected as shown: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 12.
+在上图中，如果在选取窗口之前先选取点 1，然后使用包含所有点的窗口，则所有点将按如下所示选取：1、2、3、4、5、6、7、8、9、10、11、1、12、13、14、15、16、17、18、19、20、21、22、12。
 
-This forms two loops suitable for FFLoop construction ( CAD > Build > FFLoop). Alternatively if you were to pick point 3 prior to selecting a window, then use a window including points 1, 2, and 10 would add those points in the order 2, 1 then 10.
+这样就形成了适合构建 FFLoop 的两个回路（CAD > Build > FFLoop）。或者，如果在选取窗口之前先选取点 3，然后使用包含点 1、2 和 10 的窗口，则会按 2、1、10 的顺序添加这些点。
 
-Notes:
+注意：
 
-The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-Before using this trace snap mode, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+使用此追踪捕捉模式之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-The CAD > Edit > Smooth Construction Lines function can also be used to aid in cleaning up construction lines.
+CAD > Edit > Smooth Construction Lines 功能也可用于帮助整理构造线。
 
-## 5.5.2.11 Rectangular Grid Snap
+## 5.5.2.11 矩形网格捕捉
 
-Snap to a rectangular grid. No pick-box is displayed at the intersection of the cursor cross-hairs.
+捕捉到矩形网格。光标十字线交点处不显示拾取框。
 
-All cursor movement will be constrained to the grid points.
+光标的所有移动都将被约束在网格点上。
 
-The grid can be oriented in either the X-Y, Y-Z or X-Z planes at any desired spacing and location. To set up these parameters use
+网格可以按任意所需的间距和位置，定向在 X-Y、Y-Z 或 X-Z 平面内。要设置这些参数，请使用
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup 设置光标/网格的间距和方向。
 
-For an example on the use of grid snap mode in model building refer to
+有关在模型构建中使用网格捕捉模式的示例，请参阅
 
-Freehand Sketching - Room and Pillar.
+Freehand Sketching - Room and Pillar。
 
-## 5.5.2.12 Circular Grid Snap
+## 5.5.2.12 圆形网格捕捉
 
-Snap to a cylindrical grid. No pick-box is displayed at the intersection of the cursor cross-hairs.
+捕捉到圆柱网格。光标十字线交点处不显示拾取框。
 
-All cursor movement will be constrained to the grid points.
+光标的所有移动都将被约束在网格点上。
 
-The grid can be oriented in either the X-Y, Y-Z or X-Z planes at any desired spacing and location. To set up these parameters use
+网格可以按任意所需的间距和位置，定向在 X-Y、Y-Z 或 X-Z 平面内。要设置这些参数，请使用
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup 设置光标/网格的间距和方向。
 
-## 5.5.2.13 X-Grid Snap
+## 5.5.2.13 X 网格捕捉
 
-Snap to an x-grid spacing.
+捕捉到 x 网格间距。
 
 ![Figure from page 392](/images/page-392-img-20.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-Otherwise the nearest point at the x-grid spacing on the nearest edge will be selected.
+否则将选取最近边上符合 x 网格间距的最近点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-Since the x coordinate values are constrained to the prescribed X-grid spacing, the y and z coordinate values are calculated from the equation of the selected line.
+由于 x 坐标值被约束在规定的 X 网格间距上，y 和 z 坐标值由所选线的方程计算得出。
 
-The grid spacing and location are defined either by picking the X-Grid Snap button a second time or use
+网格间距和位置可以通过再次单击 X-Grid Snap 按钮来定义，或使用
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup 设置光标/网格的间距和方向。
 
-X-grid snap can be used in conjunction with any of:
+X 网格捕捉可与以下任一功能结合使用：
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None 禁用捕捉。
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge 捕捉到最近的边。
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap 强制光标与所选边相切。
 
-## 5.5.2.14 Y-Grid Snap
+## 5.5.2.14 Y 网格捕捉
 
-Snap to a y-grid spacing.
+捕捉到 y 网格间距。
 
 ![Figure from page 393](/images/page-393-img-17.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-Otherwise the nearest point at the y-grid spacing on the nearest edge will be selected.
+否则将选取最近边上符合 y 网格间距的最近点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-Since the y coordinate values are constrained to the prescribed y-grid spacing, the x and z coordinate values are calculated from the equation of the selected line.
+由于 y 坐标值被约束在规定的 y 网格间距上，x 和 z 坐标值由所选线的方程计算得出。
 
-The grid spacing and location are defined either by picking the Y-Grid Snap button a second time or use
+网格间距和位置可以通过再次单击 Y-Grid Snap 按钮来定义，或使用
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup 设置光标/网格的间距和方向。
 
-Y-grid snap can be used in conjunction with any of:
+Y 网格捕捉可与以下任一功能结合使用：
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None 禁用捕捉。
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge 捕捉到最近的边。
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap 强制光标与所选边相切。
 
-## 5.5.2.15 Z-Grid Snap
+## 5.5.2.15 Z 网格捕捉
 
-Snap to a z-grid spacing.
+捕捉到 z 网格间距。
 
 ![Figure from page 394](/images/page-394-img-7.png)
 
-If the pick-box is located over the corner of an entity, that corner will be selected.
+如果拾取框位于某个实体的角点上，将选取该角点。
 
-Otherwise the nearest point at the y-grid spacing on the nearest edge will be selected.
+否则将选取最近边上符合 y 网格间距的最近点。
 
-The pick-box must be located over an entity or construction line.
+拾取框必须位于实体或构造线上。
 
-Since the z coordinate values are constrained to the prescribed Z-grid spacing, the x and y coordinate values are calculated from the equation of the selected line.
+由于 z 坐标值被约束在规定的 Z 网格间距上，x 和 y 坐标值由所选线的方程计算得出。
 
-The grid spacing and location are defined either by picking the Z-Grid Snap button a second time or use
+网格间距和位置可以通过再次单击 Z-Grid Snap 按钮来定义，或使用
 
-CAD > Snap > Cursor/Grid Setup setup the cursor/grid spacing and orientation.
+CAD > Snap > Cursor/Grid Setup 设置光标/网格的间距和方向。
 
-Z-grid snap can be used in conjunction with any of:
+Z 网格捕捉可与以下任一功能结合使用：
 
-CAD > Snap > None Disable snapping.
+CAD > Snap > None 禁用捕捉。
 
-CAD > Snap > Edge Snap to the nearest edge.
+CAD > Snap > Edge 捕捉到最近的边。
 
-CAD > Snap > Tangent Snap Force cursor tangent to the selected edge.
+CAD > Snap > Tangent Snap 强制光标与所选边相切。
 
-## 5.5.2.16 Cursor/Grid Setup
+## 5.5.2.16 光标/网格设置
 
-Setup the cursor/grid location, spacing and orientation.
+设置光标/网格的位置、间距和方向。
 
 ![Figure from page 395](/images/page-395-img-3.png)
 
-X, Y and Z Origin - specifies the coordinates of the centre of the grid.
+X, Y and Z Origin - 指定网格中心的坐标。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the cursor/grid base from the
+Pick - 激活光标十字线，以便从
 
-model.
+模型中交互式选择光标/网格基准。
 
-Spacing - specifies the distance between grid points.
+Spacing - 指定网格点之间的距离。
 
-Angle - specifies the angle (in degrees) between the radii of the cylindrical grid.
+Angle - 指定圆柱网格各半径之间的夹角（度）。
 
-#### Intervals - specifies the number of grid points that will be displayed.
+#### Intervals - 指定将显示的网格点数。
 
-CAD > Snap > XY Cursor - constrains the cursor cross-hairs and snap grid to the X-Y plane.
+CAD > Snap > XY Cursor - 将光标十字线和捕捉网格约束在 X-Y 平面内。
 
-CAD > Snap > YZ Cursor - constrains the cursor cross-hairs and snap grid to the Y-Z plane.
+CAD > Snap > YZ Cursor - 将光标十字线和捕捉网格约束在 Y-Z 平面内。
 
-CAD > Snap > XZ Cursor - constrains the cursor cross-hairs and snap grid to the X-Z plane.
+CAD > Snap > XZ Cursor - 将光标十字线和捕捉网格约束在 X-Z 平面内。
 
-CAD > Snap > User defined Cursor - constrains the cursor cross-hairs and snap grid to the user defined plane.
+CAD > Snap > User defined Cursor - 将光标十字线和捕捉网格约束在用户定义的平面内。
 
-The user defined coordinate system is only active with rectangular and circular grid snapping ( CAD > Snap > Grid Snap and CAD > Snap > Cylinder Snap).
+用户定义的坐标系仅在矩形和圆形网格捕捉时有效（CAD > Snap > Grid Snap 和 CAD > Snap > Cylinder Snap）。
 
-The user defined plane is specified by its dip (j), dip direction (J) and rake (a) such that:
+用户定义的平面由其倾角（j）、倾向（J）和侧伏角（a）指定，其中：
 
-- Pnt on X - The local x-axis ( _x'_ ) is defined along the strike of the plane. A point on this axis can be selected using this function.
+- Pnt on X - 局部 x 轴（ _x'_ ）沿平面走向定义。可以使用此功能在该轴上选取一个点。
 
-- Pnt on Y - The local y-axis ( _y'_ ) is defined as down dip. A point on this axis can be selected using using this function.
+- Pnt on Y - 局部 y 轴（ _y'_ ）沿倾向定义。可以使用此功能在该轴上选取一个点。
 
-- The local z-axis is perpendicular to the plane.
+- 局部 z 轴垂直于该平面。
 
-- Norm - activates the cursor allowing interactive selection of a surface to make the local UCS plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+- Norm - 激活光标，以便交互式选择一个表面，使局部 UCS 平面与之平行。平面的倾角和倾向将被设置为垂直于所选表面。
 
-- Rake - allows for rotation of X' around the local z-axis.
+- Rake - 允许 X' 绕局部 z 轴旋转。
 
 ![Figure from page 396](/images/page-396-img-2.png)
 
 ![Figure from page 396](/images/page-396-img-4.png)
 
-For an example on the use of grid snap mode in model building refer to Freehand Sketching - Room and Pillar.
+有关在模型构建中使用网格捕捉模式的示例，请参阅 Freehand Sketching - Room and Pillar。

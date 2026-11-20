@@ -2,438 +2,427 @@
 title: "Spannung"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+## 5.3.1.1 Größte Hauptspannung
 
-## 5.3.1.1 Major Principal Stress
-
-This allows you to principal stress components s1 s2 s3. These components can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Darstellung der Hauptspannungskomponenten s1 s2 s3. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-In elastic analysis, the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion
+In der elastischen Analyse wird die größte Hauptspannung üblicherweise zusammen mit der kleinsten Hauptspannung und dem Festigkeitskriterium nach Mohr-Coulomb oder Hoek-Brown verwendet
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage in the rockmass due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+um das Ausmaß der Schädigung des Gebirges durch Überbeanspruchung abzuschätzen. Da keiner der Parameter richtungsabhängig ist, ist dieses Kriterium repräsentativ für die Standsicherheit eines homogenen Gebirges.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+Die Überbeanspruchung kann in mehreren Formen dargestellt werden, darunter:
 
 Plot > Strength Factor > SF-A Strength/Stress Plot > Strength Factor > SF-B Strength/Stress Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-The intermediate principal stress is normally used in the calculation of the octahedral shear stress
+Die mittlere Hauptspannung wird üblicherweise bei der Berechnung der oktaedrischen Schubspannung verwendet
 
 Plot > Stress > Toct Octahedral shear Stress
 
-or the mean stress
+oder der mittleren Spannung
 
 Plot > Stress > Smean Mean Stress.
 
-## 5.3.1.4 Maximum Shear Stress
+## 5.3.1.4 Maximale Schubspannung
 
-This allows you to principal stress components tmax=½(s1 - s3). This component can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Darstellung der Spannungskomponente tmax=½(s1 - s3). Auf diese Komponente kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-In elastic analysis, the maximum shear stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion
+In der elastischen Analyse wird die maximale Schubspannung üblicherweise zusammen mit der kleinsten Hauptspannung und dem Festigkeitskriterium nach Mohr-Coulomb oder Hoek-Brown verwendet
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen. Da keiner der Parameter richtungsabhängig ist, ist dieses Kriterium repräsentativ für die Standsicherheit eines homogenen Gebirges.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+Die Überbeanspruchung kann in mehreren Formen dargestellt werden, darunter:
 
 Plot > Strength Factor > SF-A Strength/Stress Plot > Strength Factor > SF-B Strength/Stress Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
-Plot > Range
+#### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-## 5.3.1.5 In-Plane Shear Stress
+## 5.3.1.5 Schubspannung in der Ebene
 
-This allows you to contour the maximum shear stress acting on the grid plane, and the stress
-
-component normal to the grid plane or parallel to a line grid. These components can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Konturdarstellung der maximalen Schubspannung, die auf die Rasterebene wirkt, sowie der Spannungskomponente normal zur Rasterebene oder parallel zu einem Linienraster. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-To calculate the in-plane stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the plane. Note that sip is oriented normal to the grid plane and parallel to the direction of a line grid.
+Zur Berechnung der Spannungen in der Ebene wird der Spannungszustand an jedem Punkt der Rasterebene umorientiert, um die maximale Schubspannung parallel zur Rasterebene und die Spannung normal zur Ebene zu bestimmen. Beachten Sie, dass sip normal zur Rasterebene und parallel zur Richtung eines Linienrasters orientiert ist.
 
 ![Figure from page 217](/images/page-217-img-6.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-In elastic analysis, the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion
+In der elastischen Analyse wird die maximale Schubspannung in der Ebene üblicherweise zusammen mit der Normalspannung in der Ebene und dem Festigkeitskriterium nach Mohr-Coulomb verwendet
 
 Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+um das Ausmaß des Gleitens durch Überbeanspruchung auf einer Störung, Kluftschar oder Schichtfläche abzuschätzen, die genauso orientiert ist wie die Rasterebene. Da diese Parameter richtungsabhängig sind, ist dieses Kriterium repräsentativ für die Standsicherheit eines anisotropen Gebirges.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes.
 
-Over-stressing can be presented in several forms including:
+Die Überbeanspruchung kann in mehreren Formen dargestellt werden, darunter:
 
 Plot > Strength Factors > SF-ip Strength/Stress Plot > Strength Factors > dTip Excess Shear Stress
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
-Plot > Range
+#### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Stress > S1i In-plane Maximum Plot > Stress > S3i In-plane Minimum Plot > Stress > Tub Ubiquitous-plane Shear Plot > Stress > Sub Ubiquitous-plane Normal
 
-## 5.3.1.7 In-Plane Maximum Stress
+## 5.3.1.7 Maximale Spannung in der Ebene
 
-This allows you to contour the maximum and minimum stresses tangential to the currently selected grid plane or perpendicular to a line grid. These components can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Konturdarstellung der maximalen und minimalen Spannungen tangential zur aktuell ausgewählten Rasterebene oder senkrecht zu einem Linienraster. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-To calculate the maximum and minimum in-plane stresses, the stresses tangential to the grid plane are determined, then resolved to give the maximum and minimum values. Note that sip is oriented normal to
-
-the grid plane and parallel to the direction of a line grid. Also note that sip, s1i and s3i are perpendicular to one another.
+Zur Berechnung der maximalen und minimalen Spannungen in der Ebene werden die Spannungen tangential zur Rasterebene bestimmt und anschließend aufgelöst, um den Maximal- und Minimalwert zu erhalten. Beachten Sie, dass sip normal zur Rasterebene und parallel zur Richtung eines Linienrasters orientiert ist. Beachten Sie außerdem, dass sip, s1i und s3i senkrecht aufeinander stehen.
 
 ![Figure from page 219](/images/page-219-img-2.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 #### Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Stress > Tip In-plane Shear Plot > Stress > Sip In-plane Normal Plot > Stress > S1u Ubiquitous-plane Maximum. Plot > Stress > S3u Ubiquitous-plane Minimum.
 
-## 5.3.1.9 Ubiquitous-Plane Shear Stress
+## 5.3.1.9 Schubspannung in der ubiquitären Ebene
 
-This allows you to contour the maximum shear stress acting on ubiquitous plane #1, and the stress component normal to this plane. These components can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Konturdarstellung der maximalen Schubspannung, die auf die ubiquitäre Ebene Nr. 1 wirkt, sowie der Spannungskomponente normal zu dieser Ebene. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-To calculate the ubiquitous stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous plane and the stress normal to the ubiquitous plane. Note that sub is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+Zur Berechnung der ubiquitären Spannungen wird der Spannungszustand an jedem Punkt der Rasterebene umorientiert, um die maximale Schubspannung parallel zur ubiquitären Ebene und die Spannung normal zur ubiquitären Ebene zu bestimmen. Beachten Sie, dass sub normal zur ubiquitären Ebene orientiert und nicht parallel zur Richtung eines Linienrasters ist.
 
 ![Figure from page 220](/images/page-220-img-6.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-The orientation of the ubiquitous shear plane is set using
-
-#### Plot > Strength Factors > Ubiquitous Parameters
-
-In elastic analysis the maximum ubiquitous-plane shear stress is normally used with the ubiquitousplane normal stress and the Mohr-Coulomb strength criterion
+Die Orientierung der ubiquitären Scherebene wird festgelegt mit
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+In der elastischen Analyse wird die maximale Schubspannung in der ubiquitären Ebene üblicherweise zusammen mit der Normalspannung auf die ubiquitäre Ebene und dem Festigkeitskriterium nach Mohr-Coulomb verwendet
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating
+#### Plot > Strength Factors > Ubiquitous Parameters
 
-a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+um das Ausmaß des Gleitens durch Überbeanspruchung auf einer Störung, Kluftschar oder Schichtfläche mit der angegebenen Orientierung abzuschätzen. Da diese Parameter richtungsabhängig sind, ist dieses Kriterium repräsentativ für die Standsicherheit eines anisotropen Gebirges.
+
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes.
 
-Over-stressing can be presented in several forms including:
+Die Überbeanspruchung kann in mehreren Formen dargestellt werden, darunter:
 
 Plot > Strength Factors > SF-ub Strength/Stress. Plot > Strength Factors > dTub Excess Shear Stress.
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Stress > S1u Ubiquitous-plane Maximum Plot > Stress > S3u Ubiquitous-plane Minimum Plot > Stress > Tip In-plane Shear Plot > Stress > Sip In-plane Normal
 
-The orientation of the ubiquitous-plane is specified in
+Die Orientierung der ubiquitären Ebene wird angegeben in
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-## 5.3.1.11 Ubiquitous-Plane Maximum Stress
+## 5.3.1.11 Maximale Spannung in der ubiquitären Ebene
 
-This allows you to contour the the maximum and minimum stresses tangential to the ubiquitous plane #1.
-
-These components can be accessed via the Stress Components toolbar as follows:
+Ermöglicht die Konturdarstellung der maximalen und minimalen Spannungen tangential zur ubiquitären Ebene Nr. 1. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-To calculate the maximum and minimum ubiquitous-plane stresses, the stresses tangential to the plane are determined, then resolved to give the maximum and minimum values. Note that sub is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid. Also note that sub, s1u and s3u are perpendicular to one another.
+Zur Berechnung der maximalen und minimalen Spannungen in der ubiquitären Ebene werden die Spannungen tangential zur Ebene bestimmt und anschließend aufgelöst, um den Maximal- und Minimalwert zu erhalten. Beachten Sie, dass sub normal zur ubiquitären Ebene orientiert und nicht parallel zur Richtung eines Linienrasters ist. Beachten Sie außerdem, dass sub, s1u und s3u senkrecht aufeinander stehen.
 
 ![Figure from page 222](/images/page-222-img-3.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- Die Einfallsrichtung wird im Uhrzeigersinn von der y-Achse aus positiv gemessen.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- Das Einfallen der Ebene wird von der Horizontalen aus nach unten positiv gemessen (d. h. in Einfallsrichtung).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- Das Abtauchen der Normalen wird von der Horizontalen aus nach unten positiv (d. h. nach oben negativ) gemessen.
 
-The orientation of the ubiquitous shear plane is set using
+Die Orientierung der ubiquitären Scherebene wird festgelegt mit
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Diese Komponente kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 #### Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-Related topics:
+Verwandte Themen:
 
 Plot > Stress > Tub In-plane Shear Plot > Stress > Sub In-plane Normal Plot > Stress > S1i In-plane Maximum. Plot > Stress > S3i In-plane Minimum.
 
-## 5.3.1.13 Octahedral Shear Stress
+## 5.3.1.13 Oktaedrische Schubspannung
 
-Contours the octahedral shear stress
+Stellt die oktaedrische Schubspannung als Konturen dar
 
 toct = ¹/3 [ (s1 - s2)² + (s2 - s3)² +(s3 - s1)² ]<sup>½</sup>
 
-and mean stress
+und die mittlere Spannung
 
 smean = ¹/3 (s1 + s2 + s3)
 
-These components can be accessed via the Stress Components toolbar as follows:
+Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-In elastic analysis the octahedral shear stress is normally used with the mean stress and the DruckerPrager strength criterion
+In der elastischen Analyse wird die oktaedrische Schubspannung üblicherweise zusammen mit der mittleren Spannung und dem Festigkeitskriterium nach Drucker-Prager verwendet
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+um das Ausmaß der Schädigung durch Überbeanspruchung abzuschätzen. Da keiner der Parameter richtungsabhängig ist, ist dieses Kriterium repräsentativ für die Standsicherheit eines homogenen Gebirges.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+Dagegen können Spannungen in der nichtlinearen Analyse die Festigkeit nie überschreiten, es sei denn, es wird Kriechen verwendet. In diesem Fall kann viskoses Kriechen Spannungszustände oberhalb des Bruchkriteriums zulassen, was auf fehlendes statisches Gleichgewicht hinweist. Daher betrachtet man bei der nichtlinearen Analyse üblicherweise direkt das Ausmaß der nichtlinearen Dehnung oder die vom Modell vorhergesagte Dehnungsrate
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+Die Überbeanspruchung kann in mehreren Formen dargestellt werden, darunter:
 
 Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dToct Excess Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+Der Konturbereich wird festgelegt mit
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
-
-#### Tools > Configure Contouring Toolbar > Stress
-
-The user may find it handy to add the
-
-#### More Stress Components
-
-button to the contouring toolbar for quick access to all stress components.
-
-## 5.3.1.15 Sxx Cartesian Stress
-
-Contours the Cartesian stress components. These components can be accessed via the Stress Components toolbar as follows:
-
-![Figure from page 214](/images/page-214-img-14.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-![Figure from page 214](/images/page-214-img-18.png)
-
-Plot > Stress > sxx Cartesian Stress Component   normal stress in the direction of the x-axis. Plot > Stress > syy Cartesian Stress Component   normal stress in the direction of the y-axis. Plot > Stress > szz Cartesian Stress Component   normal stress in the direction of the z-axis. Plot > Stress > txy Cartesian Stress Component   shear stress in the x-y plane. Plot > Stress > tyz Cartesian Stress Component   shear stress in the y-z plane. Plot > Stress > tzx Cartesian Stress Component   shear stress in the x-z plane.
-
-The contour range is set using
-
-#### Plot > Range
-
-Any of these components can be added to the contouring toolbar if desired
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Es kann praktisch sein, die Schaltfläche
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
 
-## 5.3.1.21 Value
+## 5.3.1.15 Kartesische Spannung Sxx
 
-### 5.3.1.21.1 Effective stress
-
-Selects the effective or total stress component. These components can be accessed via the Stress Components toolbar as follows:
+Stellt die kartesischen Spannungskomponenten als Konturen dar. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-Effective stress is the skeletal stress (i.e. without the pore pressure component). Total stress is the skeletal stress plus the pore pressure (or thermal component).
+Plot > Stress > sxx Cartesian Stress Component   Normalspannung in Richtung der x-Achse. Plot > Stress > syy Cartesian Stress Component   Normalspannung in Richtung der y-Achse. Plot > Stress > szz Cartesian Stress Component   Normalspannung in Richtung der z-Achse. Plot > Stress > txy Cartesian Stress Component   Schubspannung in der x-y-Ebene. Plot > Stress > tyz Cartesian Stress Component   Schubspannung in der y-z-Ebene. Plot > Stress > tzx Cartesian Stress Component   Schubspannung in der x-z-Ebene.
 
-This option is only used with Map3D Thermal-Fluid Flow the Thermal stress/Fluid flow analysis version of Map3D.
+Der Konturbereich wird festgelegt mit
 
-Refer to Expansion Coefficient and Conductivity for details.
+#### Plot > Range
 
-### 5.3.1.21.3 Induced Stress
+Jede dieser Komponenten kann bei Bedarf der Konturen-Symbolleiste hinzugefügt werden
 
-Plot the induced or absolute stress component. These components can be accessed via the Stress Components toolbar as follows:
+Tools > Configure Contouring Toolbar > Stress
+
+Es kann praktisch sein, die Schaltfläche
+
+#### More Stress Components
+
+der Konturen-Symbolleiste hinzuzufügen, um schnell auf alle Spannungskomponenten zuzugreifen.
+
+## 5.3.1.21 Wert
+
+### 5.3.1.21.1 Effektive Spannung
+
+Wählt die effektive Spannung oder die Gesamtspannungskomponente aus. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition.
+Die effektive Spannung ist die Korngerüstspannung (d. h. ohne den Porendruckanteil). Die Gesamtspannung ist die Korngerüstspannung plus der Porendruck (bzw. der thermische Anteil).
 
-Absolute stress is the stress including the pre-mining stress contribution.
+Diese Option wird nur mit Map3D Thermal-Fluid Flow verwendet, der Version von Map3D für thermische Spannungs-/Strömungsanalysen.
 
-Also see:
+Einzelheiten finden Sie unter Expansion Coefficient und Conductivity.
+
+### 5.3.1.21.3 Induzierte Spannung
+
+Stellt die induzierte oder absolute Spannungskomponente dar. Auf diese Komponenten kann über die Symbolleiste Stress Components wie folgt zugegriffen werden:
+
+![Figure from page 214](/images/page-214-img-14.png)
+
+Diese Symbolleiste kann auf vertikale Ausrichtung umgestellt werden, indem sie an den rechten oder linken Rand des Hauptfensters gezogen wird.
+
+Durch Ziehen an den oberen oder unteren Rand des Hauptfensters kann sie wieder horizontal ausgerichtet werden.
+
+Mit der Schaltfläche in der Symbolleiste Contours wird die Symbolleiste Stress Components aktiviert.
+
+![Figure from page 214](/images/page-214-img-18.png)
+
+Die induzierte Spannung ist die Spannung ohne den Beitrag der Spannung vor dem Abbau. Sie stellt die Spannungsänderung gegenüber dem Zustand vor dem Abbau dar.
+
+Die absolute Spannung ist die Spannung einschließlich des Beitrags der Spannung vor dem Abbau.
+
+Siehe auch:
 
 Plot > Strain > Value > Induced Strain
 

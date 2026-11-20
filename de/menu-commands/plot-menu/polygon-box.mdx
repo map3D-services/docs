@@ -1,28 +1,25 @@
 ---
-title: "Polygonbox"
+title: "Polygonfeld"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Berechnet den gewichteten Mittelwert aller ausgewählten Konturpunkte. Diese Funktion kann auch über View > Length aktiviert werden.
 
-Calculates the weighted average value for all selected contour points. This function can also be activated using View > Length.
+Sie werden aufgefordert, eine Reihe von Eckpunkten auszuwählen, um ein geschlossenes Polygon zu definieren, indem Sie jeden mit einem einfachen Mausklick anklicken:
 
-You will be prompted to select a series of corners to define a closed polygon by picking each with a single mouse click:
+- Sie müssen die Umschalttaste gedrückt halten, damit mehrere Liniensegmente ausgewählt werden können.
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- Eine geschlossene Polygonform wird definiert, indem Sie die Polylinie durch Auswahl des Startpunkts schließen.
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- Wenn Sie eine geschlossene Polygonform definieren, werden die im Polygon eingeschlossenen Konturpunkte in die Mittelung einbezogen.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included in the averaging.
+- Die Mittelungsroutine funktioniert nicht, wenn Sie eine offene Polylinie definieren (indem Sie den Startpunkt nicht auswählen).
 
-- The average routine will not function if you define an open polyline shape (by not selecting the starting point).
+- Um die Lage der tatsächlichen Konturpunkte anzuzeigen, aktivieren Sie die Anzeige der Trajektorien (Plot > Options > Trajectories). Die Konturpunkte liegen dort, wo die Trajektorien gezeichnet werden.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+Die Mittelung erfolgt, indem jeder ausgewählte Wert mit der Fläche der zugehörigen Oberfläche bzw. Rasterzelle multipliziert und die Produkte anschließend aufsummiert werden. Dieses Ergebnis wird als „Weighted Sum“ ausgegeben. Der „Average“ ergibt sich aus der gewichteten Summe geteilt durch die Gesamtfläche.
 
-The averaging is done by multiplying each selected value by the area of its associated surface or grid patch, then summing these. This result is presented as the "Weighted Sum". The "Average" is determined by dividing the weighted sum by the total area.
+Alle Werte werden als Vektorkomponenten aufsummiert. Hauptspannungen werden aus dem gewichteten Mittel der kartesischen Komponenten bestimmt. Verschiebungs-, Fluss- und Oberflächenscherkomponenten werden aus dem gewichteten Mittel der Vektorkomponenten bestimmt.
 
-All values are accumulated as vector components. Principal stresses are determined from the weighted mean of the Cartesian components. Displacement, flow and surface shear components are determined from the weighted mean of the vector components.
+Beachten Sie, dass bei Spannungen die „Weighted Sum“ tatsächlich der Gesamtkraft entspricht, die auf die Fläche wirkt.
 
-Note that for stresses, the "Weighted Sum" is actually the total force acting on the surface.
-
-If you multiply by the shear modulus, the "Weighted Sum" of the plastic shear displacement (ride) is actually the Seismic Moment.
+Wenn Sie mit dem Schubmodul multiplizieren, entspricht die „Weighted Sum“ der plastischen Scherverschiebung (ride) tatsächlich dem seismischen Moment.

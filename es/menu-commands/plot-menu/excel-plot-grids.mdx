@@ -2,209 +2,206 @@
 title: "Gráfico en Excel (grillas)"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Grafica en Excel las componentes de grilla especificadas.
 
-Plots specified grid components in Excel.
+Debe contornear los resultados de grilla para poder seleccionarlos en el gráfico de Excel (p. ej., Plot > Stress > s1 Major Principal Stress).
 
-You must contour grid results in order to be able to select these for Excel plotting (e.g. Plot > Stress > s1 Major Principal Stress).
+El primer parámetro se usará como eje x del gráfico (es decir, la abscisa). Los parámetros adicionales definirán los ejes y del gráfico (es decir, las series u ordenadas). Se pueden especificar varios parámetros para los ejes y.
 
-The first parameter will be used as the x plot axis (i..e abscissa). Additional parameters will define the y plot axes (i.e. series or ordinates). Multiple y plot axes parameters can be specified.
+Se pueden crear dos tipos de gráficos en Excel:
 
-Two types of Excel plots can be created:
+- puntos de contorno seleccionados.
 
-- selected contour points.
+- una serie de puntos a lo largo de una polilínea.
 
-- a series of points along the length of a polyline.
+Si grafica "s3 s1", "si ti" o "su tu", Map3D entregará información sobre la recta de mejor ajuste (mediante regresión lineal), incluyendo:
 
-If you plot "s3 s1", "si ti" or "su tu", then Map3D will provide the information about the best fit line (using linear regression) including:
+- Intercepto
 
-- Intercept
+- Pendiente
 
-- Slope
+- ángulo de fricción
 
-- friction angle
+- desviación estándar
 
-- standard deviation
-
-- coefficient of variation
+- coeficiente de variación
 
 ![Figure from page 335](/images/page-335-img-1.png)
 
-Fully populated   Specifies that all missing contour points will be generated via interpolation.
+Fully populated   Especifica que todos los puntos de contorno faltantes se generarán por interpolación.
 
-- This option applies only to plotting of selected contour points (Points, Window and closed Polyline).
+- Esta opción se aplica solo a la graficación de puntos de contorno seleccionados (Points, Window y Polyline cerrada).
 
-- This option does not apply to plotting on an open polyline.
+- Esta opción no se aplica a la graficación sobre una polilínea abierta.
 
-- Map3D calculates results on a sparsely populated grid in order to save on analysis time.
+- Map3D calcula los resultados en una grilla de baja densidad para ahorrar tiempo de análisis.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories).
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories).
 
-- With this option unchecked, only the actual contour points will be included in the plot.
+- Con esta opción desmarcada, solo se incluirán en el gráfico los puntos de contorno reales.
 
-- With this option checked, all missing contour points will be included in the plot.
+- Con esta opción marcada, se incluirán en el gráfico todos los puntos de contorno faltantes.
 
-Line interpolation width   Specifies the desired spacing at which contour points will be generated via interpolation.
+Line interpolation width   Especifica el espaciamiento deseado con el que se generarán puntos de contorno por interpolación.
 
-- This option applies only to plotting on an open polyline.
+- Esta opción se aplica solo a la graficación sobre una polilínea abierta.
 
-- This option does not apply to plotting of selected contour points.
+- Esta opción no se aplica a la graficación de puntos de contorno seleccionados.
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- Si Line interpolation width se fija en cero, solo se graficarán los extremos de la polilínea abierta.
 
-- Otherwise points will be generated along the polyline via interpolation at the specified Line interpolation width.
+- En caso contrario, se generarán puntos a lo largo de la polilínea por interpolación con el Line interpolation width especificado.
 
-Step # only   Specifies that the results for step # only will be dumped (# is the currently displayed loaded mining step).
+Step # only   Especifica que solo se volcarán los resultados de la etapa # (# es la etapa de explotación cargada que se muestra actualmente).
 
-Steps 1-5   Specifies that the results for all steps will be dumped.
+Steps 1-5   Especifica que se volcarán los resultados de todas las etapas.
 
-   - Note that this can take a considerable amount of time for large data sets so you must be patient and wait for Map3D  to cycle through all of the steps.
+   - Tenga en cuenta que esto puede tardar bastante en conjuntos de datos grandes, por lo que debe tener paciencia y esperar a que Map3D recorra todas las etapas.
 
-- 1st/Last   Specifies that the results for all steps including and between 1st and Last will be dumped.
+- 1st/Last   Especifica que se volcarán los resultados de todas las etapas desde la primera (1st) hasta la última (Last), inclusive.
 
-   - Note that this can take a considerable amount of time for large data sets so you must be patient and wait for Map3D  to cycle through all of the steps.
+   - Tenga en cuenta que esto puede tardar bastante en conjuntos de datos grandes, por lo que debe tener paciencia y esperar a que Map3D recorra todas las etapas.
 
-Use Commas   Specifies that the results dumped to Excel will have commas in place of decimal points for the number format.
+Use Commas   Especifica que los resultados volcados a Excel usarán comas en lugar de puntos decimales en el formato de los números.
 
-Use Rows   When dumping multiple mining steps (refer to Steps 1-5 above), results will appear in accumulating rows.
+Use Rows   Al volcar varias etapas de explotación (vea Steps 1-5 arriba), los resultados aparecerán en filas acumulativas.
 
-Use Columns   When dumping multiple mining steps (refer to Steps 1-5 above), results will appear in accumulating columns.
+Use Columns   Al volcar varias etapas de explotación (vea Steps 1-5 arriba), los resultados aparecerán en columnas acumulativas.
 
-- Note that you may want to specify All Points to ensure that no points are missing between corresponding rows.
+- Tenga en cuenta que conviene especificar All Points para asegurarse de que no falten puntos entre las filas correspondientes.
 
-All Points   Specifies that the all points are dumped to Excel - including points inside excavations.
+All Points   Especifica que se volcarán todos los puntos a Excel, incluidos los puntos dentro de excavaciones.
 
-Restart Excel   If Map3D looses communication with Excel, you must Restart Excel to re-establish communications.
+Restart Excel   Si Map3D pierde la comunicación con Excel, debe reiniciar Excel (Restart Excel) para restablecer la comunicación.
 
-Points   activates graphical picking of individual points.
+Points   activa la selección gráfica de puntos individuales.
 
-- The nearest point to the pick point will be plotted.
+- Se graficará el punto más cercano al punto seleccionado.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-Window   activates a rectangular pick window.
+Window   activa una ventana de selección rectangular.
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- Se le pedirá que seleccione las dos esquinas de la ventana haciendo un solo clic con el mouse en cada una.
 
-- Only grid points enclosed within the window will be included in the plot.
+- Solo se incluirán en el gráfico los puntos de grilla contenidos dentro de la ventana.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-Pline (open)   activates a graphical pick polygon.
+Pline (open)   activa un polígono de selección gráfico.
 
-- You can select two points to define a single line segment.
+- Puede seleccionar dos puntos para definir un solo segmento de línea.
 
-- If you hold down the Shift-key multiple line segments can be selected.
+- Si mantiene presionada la tecla Shift, se pueden seleccionar varios segmentos de línea.
 
-- You can specify the desired spacing at which contour points will be generated via interpolation with using the Line interpolation width parameter.
+- Puede especificar el espaciamiento deseado con el que se generarán puntos de contorno por interpolación mediante el parámetro Line interpolation width.
 
-- The user may find it useful to superimpose a regular grid on top of the contours (Plot > Options > Grid Lines) to assist in selecting the polyline location.
+- Puede resultar útil superponer una grilla regular sobre los contornos (Plot > Options > Grid Lines) para ayudar a seleccionar la ubicación de la polilínea.
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- Si Line interpolation width se fija en cero, solo se graficarán los extremos de la polilínea abierta.
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- Si define una polilínea abierta, se graficará una serie de puntos a lo largo de la polilínea.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- Si define una forma poligonal cerrada, se graficarán los puntos de contorno encerrados en el polígono.
 
-Pline (closed)   activates a graphical pick polygon.
+Pline (closed)   activa un polígono de selección gráfico.
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- Debe mantener presionada la tecla Shift para poder seleccionar varios segmentos de línea.
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- Una forma poligonal cerrada se define cerrando la polilínea al seleccionar el punto inicial.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- Si define una forma poligonal cerrada, se graficarán los puntos de contorno encerrados en el polígono.
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- Si define una polilínea abierta, se graficará una serie de puntos a lo largo de la polilínea.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-Ploop (closed)   this is the same as Pline (closed) except the polyline will automatically be closed to form a closed loop.
+Ploop (closed)   es igual que Pline (closed), salvo que la polilínea se cerrará automáticamente para formar un lazo cerrado.
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- Debe mantener presionada la tecla Shift para poder seleccionar varios segmentos de línea.
 
 #### Excel Chart Control:
 
-New chart - creates a new Excel chart.
+New chart - crea un nuevo gráfico de Excel.
 
-Extend existing chart - adds data to the existing Excel chart. All plot parameters must be the same as those used previously.
+Extend existing chart - agrega datos al gráfico de Excel existente. Todos los parámetros de graficación deben ser los mismos que se usaron anteriormente.
 
-Change series - changes or adds new series to an existing Excel chart. Only the first plot parameter must be the same. Additional plot parameters can be specified as desired.
+Change series - cambia o agrega nuevas series a un gráfico de Excel existente. Solo el primer parámetro de graficación debe ser el mismo. Se pueden especificar parámetros de graficación adicionales según se desee.
 
 #### Stresses:
 
-s1 ts1 ps1 major principal stress s1 its trend and plunge.
+s1 ts1 ps1 esfuerzo principal mayor s1, su rumbo y su inclinación (plunge).
 
-s2 ts2 ps2 intermediate principal stress s2 its trend and plunge. s3 ts3 ps3 minor principal stress s3 its trend and plunge. sxx syy szz sxy syz sxz Cartesian stress components. tmax maximum shear stress tmax = ½ ( s1 - s3 ) toct octahedral shear stress toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean mean stress smean = ¹/3 ( s1 + s2 + s3 ) ti tti pti maximum shear stress in the grid plane, its trend and plunge. si tsi psi normal stress in the grid plane, its trend and plunge. s1i ts1i ps1i maximum stress tangential to the grid plane, its trend and plunge. s3i ts3i ps3i minimum stress tangential to the grid plane, its trend and plunge. tu ttu ptu maximum shear stress in the ubiquitous-plane, its trend and plunge. su tsu psu stress normal to the ubiquitous plane, its trend and plunge. s1u ts1u ps1u maximum stress tangential to the ubiquitous plane, its trend and plunge. s3u ts3u ps3u minimum stress tangential to the ubiquitous plane, its trend and plunge. The orientation of the ubiquitous-plane is specified in
+s2 ts2 ps2 esfuerzo principal intermedio s2, su rumbo y su inclinación. s3 ts3 ps3 esfuerzo principal menor s3, su rumbo y su inclinación. sxx syy szz sxy syz sxz componentes cartesianas del esfuerzo. tmax esfuerzo de corte máximo tmax = ½ ( s1 - s3 ) toct esfuerzo de corte octaédrico toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean esfuerzo medio smean = ¹/3 ( s1 + s2 + s3 ) ti tti pti esfuerzo de corte máximo en el plano de la grilla, su rumbo y su inclinación. si tsi psi esfuerzo normal en el plano de la grilla, su rumbo y su inclinación. s1i ts1i ps1i esfuerzo máximo tangencial al plano de la grilla, su rumbo y su inclinación. s3i ts3i ps3i esfuerzo mínimo tangencial al plano de la grilla, su rumbo y su inclinación. tu ttu ptu esfuerzo de corte máximo en el plano ubicuo, su rumbo y su inclinación. su tsu psu esfuerzo normal al plano ubicuo, su rumbo y su inclinación. s1u ts1u ps1u esfuerzo máximo tangencial al plano ubicuo, su rumbo y su inclinación. s3u ts3u ps3u esfuerzo mínimo tangencial al plano ubicuo, su rumbo y su inclinación. La orientación del plano ubicuo se especifica en
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute induced stress or absolute stress components (i.e. the stress without the premining stress contribution).
+Effective/Total componentes del esfuerzo efectivo o del esfuerzo total. Estas opciones solo se usan en Map3D Thermal-Fluid Flow, ya que este código permite calcular distribuciones de presión de poros en régimen permanente. Induced/Absolute componentes del esfuerzo inducido o del esfuerzo absoluto (es decir, el esfuerzo sin la contribución del esfuerzo previo a la explotación).
 
 #### Strains:
 
-e1 te1 pe1 major principal strain e1 its trend and plunge. e2 te2 pe2 intermediate principal strain e2 its trend and plunge. e3 te3 pe3 minor principal strain e3 its trend and plunge. exx eyy ezz exy eyz exz Cartesian strain components. emax maximum shear strain emax = ½ ( e1 - e3 ) eoct octahedral shear strain eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol volumetric strain evol = ( e1 + e2 + e3 ) esi tesi pesi maximum shear strain in the grid plane, its trend and plunge. eni teni peni normal strain in the grid plane, its trend and plunge. e1i te1i pe1i maximum strain tangential to the grid plane, its trend and plunge. e3i te3i pe3i minimum strain tangential to the grid plane, its trend and plunge. esu tesu pesu maximum shear strain in the ubiquitous-plane, its trend and plunge. enu tenu penu strain normal to the ubiquitous plane, its trend and plunge. e1u te1u pe1u maximum strain tangential to the ubiquitous plane, its trend and plunge. e3u te3u pe3u minimum strain tangential to the ubiquitous plane, its trend and plunge. Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains. Induced/Absolute induced strain or absolute strain components (i.e. the stress without the premining stress contribution).
+e1 te1 pe1 deformación principal mayor e1, su rumbo y su inclinación. e2 te2 pe2 deformación principal intermedia e2, su rumbo y su inclinación. e3 te3 pe3 deformación principal menor e3, su rumbo y su inclinación. exx eyy ezz exy eyz exz componentes cartesianas de la deformación. emax deformación de corte máxima emax = ½ ( e1 - e3 ) eoct deformación de corte octaédrica eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol deformación volumétrica evol = ( e1 + e2 + e3 ) esi tesi pesi deformación de corte máxima en el plano de la grilla, su rumbo y su inclinación. eni teni peni deformación normal en el plano de la grilla, su rumbo y su inclinación. e1i te1i pe1i deformación máxima tangencial al plano de la grilla, su rumbo y su inclinación. e3i te3i pe3i deformación mínima tangencial al plano de la grilla, su rumbo y su inclinación. esu tesu pesu deformación de corte máxima en el plano ubicuo, su rumbo y su inclinación. enu tenu penu deformación normal al plano ubicuo, su rumbo y su inclinación. e1u te1u pe1u deformación máxima tangencial al plano ubicuo, su rumbo y su inclinación. e3u te3u pe3u deformación mínima tangencial al plano ubicuo, su rumbo y su inclinación. Elastic/Plastic/Total componentes de la deformación elástica, plástica o total. Estas opciones solo se usan en Map3D Non-Linear, ya que este código permite calcular deformaciones no lineales. Induced/Absolute componentes de la deformación inducida o de la deformación absoluta (es decir, sin la contribución del esfuerzo previo a la explotación).
 
 #### Displacements:
 
-ut tut put total displacement, its trend and plunge. ux uy uz Cartesian displacement components. uni tuni puni displacement normal to the grid plane, its trend and plunge. umi tumi pumi maximum displacement tangential to the grid plane, its trend and plunge. unu tunu punu displacement normal to the ubiquitous plane, its trend and plunge. umu tumu pumu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+ut tut put desplazamiento total, su rumbo y su inclinación. ux uy uz componentes cartesianas del desplazamiento. uni tuni puni desplazamiento normal al plano de la grilla, su rumbo y su inclinación. umi tumi pumi desplazamiento máximo tangencial al plano de la grilla, su rumbo y su inclinación. unu tunu punu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. umu tumu pumu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
 #### Flow:
 
-t temperature/head.
+t temperatura/carga hidráulica.
 
-qt tqt pqt total flow, its trend and plunge. qx qy qz Cartesian flow components. qni tqni pqni displacement normal to the grid plane, its trend and plunge. qmi tqmi pqmi maximum displacement tangential to the grid plane, its trend and plunge. qnu tqnu pqnu displacement normal to the ubiquitous plane, its trend and plunge. qmu tqmu pqmu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+qt tqt pqt flujo total, su rumbo y su inclinación. qx qy qz componentes cartesianas del flujo. qni tqni pqni desplazamiento normal al plano de la grilla, su rumbo y su inclinación. qmi tqmi pqmi desplazamiento máximo tangencial al plano de la grilla, su rumbo y su inclinación. qnu tqnu pqnu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. qmu tqmu pqmu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
 #### Strength:
 
-· ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+· ds1 esfuerzo principal mayor en exceso Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax esfuerzo de corte máximo en exceso Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct esfuerzo de corte octaédrico en exceso Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 probabilidad usando la distribución normal N(Ds1 /std)
 
-- SF-A Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1
+- SF-A Resistencia/Esfuerzo se puede determinar como ( _UCS_ + _q_ s3 )/ s1
 
-- SF-B Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+- SF-B Resistencia/Esfuerzo se puede determinar como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-- SF-C Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SF-C Resistencia/Esfuerzo se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip esfuerzo de corte en el plano, en exceso Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip probabilidad usando la distribución normal N(Dtip /std)
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip Resistencia/Esfuerzo se puede determinar como [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip esfuerzo en la pared en el plano, en exceso Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip factor de condición de la roca (Rock Condition Factor) para el esfuerzo en la pared en el plano RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub esfuerzo de corte en el plano ubicuo, en exceso Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub probabilidad usando la distribución normal N(Dtub /std)
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub Resistencia/Esfuerzo se puede determinar como [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub esfuerzo en la pared en el plano ub, en exceso Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub factor de condición de la roca para el esfuerzo en la pared en el plano ub RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# Grafica el número del sistema UB (1, 2 o 3) que tiene el mayor valor de Dtub
 
 #### Miscellaneous:
 
-L  Length along a line. Use the Polyline command to select the desired line.
+L  longitud a lo largo de una línea. Use el comando Polyline para seleccionar la línea deseada.
 
-X  coordinate value. Y  coordinate value. Z  coordinate value. user User defined value.
+X  valor de la coordenada. Y  valor de la coordenada. Z  valor de la coordenada. user valor definido por el usuario.
 
-grid# the number of the grid where the point is located. col# the colour number assigned to the grid where the point is located.
+grid# el número de la grilla en la que se ubica el punto. col# el número de color asignado a la grilla en la que se ubica el punto.
 
-matl# the number of the material within which the point is located. The host material is material number 1. In problems where multiple materials are used, results may be calculated in an alternate material zone.
+matl# el número del material dentro del cual se ubica el punto. El material de la roca de caja (host) es el material número 1. En problemas donde se usan varios materiales, los resultados pueden calcularse en una zona de material alterno.
 
-step# the mining step number. name the name assigned to the grid where the point is located.
+step# el número de la etapa de explotación. name el nombre asignado a la grilla en la que se ubica el punto.
 
-dof#   a unique number specifying the storage location of the point in the Map3D database. area the area of the segment associated with the selected point on the GPlane. dgrid distance to the nearest surface from each grid point. dol distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+dof#   un número único que especifica la ubicación de almacenamiento del punto en la base de datos de Map3D. area el área del segmento asociado al punto seleccionado en el GPlane. dgrid distancia a la superficie más cercana desde cada punto de la grilla. dol distancia a la grilla más cercana _Dgrid_ dividida por el espaciamiento de la grilla _Lgrid_ .
 
-f1 f2... user defined material parameters. These can be defined using Plot > Properties > Material Properties > User defined Parameters.
+f1 f2... parámetros de material definidos por el usuario. Se pueden definir con Plot > Properties > Material Properties > User defined Parameters.

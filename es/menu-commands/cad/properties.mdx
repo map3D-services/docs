@@ -2,242 +2,233 @@
 title: "Propiedades"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+## 5.5.3.1 Parámetros de control
 
-## 5.5.3.1 Control Parameters
-
-Specification of analysis control parameters.
+Especificación de los parámetros de control del análisis.
 
 ![Figure from page 324](/images/page-324-img-7.png)
 
-**Job Title** - specifies a descriptive project title.
+**Job Title** - especifica un título descriptivo del proyecto.
 
-**Maximum # of Time Steps (** **_NLD_ )** - specifies the maximum number of steps that will be used during analysis. This parameter is only relevant if you are conducting a non-linear creep analysis
+**Maximum # of Time Steps (** **_NLD_ )** - especifica el número máximo de pasos que se usarán durante el análisis. Este parámetro solo es relevante si se realiza un análisis de fluencia no lineal
 
 #### Analysis > Options > Creep
 
-where this limits the actual number of time steps.
+en el que limita el número real de pasos de tiempo.
 
-If this parameter is exceeded, the program stops and the user is prompted for instructions on how to proceed. This parameter can be modified during solution.
+Si se supera este parámetro, el programa se detiene y se le pide al usuario instrucciones sobre cómo proceder. Este parámetro se puede modificar durante la solución.
 
-Unless the user has some special reason for limiting the number of time steps this parameter should be set to an arbitrarily large number.
+A menos que el usuario tenga algún motivo especial para limitar el número de pasos de tiempo, este parámetro debe fijarse en un número arbitrariamente grande.
 
-- **Maximum # of Iterations (** **_NIT_ )** - specifies the maximum number of iterations that will used during matrix solution.
+**Maximum # of Iterations (** **_NIT_ )** - especifica el número máximo de iteraciones que se usarán durante la solución de la matriz.
 
-If this parameter is exceeded, the program stops and the user is prompted for instructions on how to proceed. This parameter can be modified during solution.
+Si se supera este parámetro, el programa se detiene y se le pide al usuario instrucciones sobre cómo proceder. Este parámetro se puede modificar durante la solución.
 
-Unless the user has some special reason for limiting the number of time steps this parameter should be set to an arbitrarily large number.
+A menos que el usuario tenga algún motivo especial para limitar el número de pasos de tiempo, este parámetro debe fijarse en un número arbitrariamente grande.
 
-**Stress Tolerance (** **_STOL_ )** - specifies the required accuracy of the matrix solution.
+**Stress Tolerance (** **_STOL_ )** - especifica la precisión requerida de la solución de la matriz.
 
-During matrix solution the accuracy is successively improved with each iteration. When the maximum stress error falls below this value the matrix can be considered to be solved.
+Durante la solución de la matriz, la precisión mejora sucesivamente con cada iteración. Cuando el error máximo de esfuerzo cae por debajo de este valor, se puede considerar que la matriz está resuelta.
 
-The suggested value for the parameter is 0.1% of the far field stress state at the depth of interest. _STOL_ should be specified in the same units as the far field stress state (e.g. MPa or psi).
+El valor sugerido para este parámetro es 0.1% del estado de esfuerzos de campo lejano a la profundidad de interés. _STOL_ debe especificarse en las mismas unidades que el estado de esfuerzos de campo lejano (p. ej., MPa o psi).
 
-**Relaxation Parameter (** **_RPAR_ )** - specifies the maximum relaxation value that will be used during matrix solution.
+**Relaxation Parameter (** **_RPAR_ )** - especifica el valor máximo de relajación que se usará durante la solución de la matriz.
 
-During matrix solution the program continuously modifies the relaxation parameter in an attempt to obtain convergence with as few as possible iterations. This parameter limits the maximum value that will be used.
+Durante la solución de la matriz, el programa modifica continuamente el parámetro de relajación para intentar lograr la convergencia con el menor número posible de iteraciones. Este parámetro limita el valor máximo que se usará.
 
-The value of 1.2 is recommended for well-conditioned problems. For poorly conditioned problems a value of 0.8 should be used.
+Se recomienda el valor 1.2 para problemas bien condicionados. Para problemas mal condicionados se debe usar un valor de 0.8.
 
-**Element Length (** **_AL_ )** - specifies the minimum element length.
+**Element Length (** **_AL_ )** - especifica el largo mínimo de elemento.
 
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+Durante el proceso de discretización, todas las superficies del modelo (superficies de bloques FF y planos DD) se subdividen en elementos de borde con longitud de lado
 
 _Lelem = Delem/DON_
 
-where _Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces. Since at some locations the distance _Delem_ may be zero, the minimum element side length _AL_ must be specified.
+donde Map3D determina _Delem_ como la menor distancia entre superficies adyacentes del modelo. Como en algunos lugares la distancia _Delem_ puede ser cero, se debe especificar la longitud mínima de lado de elemento _AL_.
 
-_AL_ should be set equal to twice the smallest pillar or stope width. The same units used to specify the coordinates should be used (e.g. metres or feet).
+_AL_ debe fijarse igual al doble del ancho del pilar o caserón más pequeño. Se deben usar las mismas unidades empleadas para especificar las coordenadas (p. ej., metros o pies).
 
-Once discretization is complete, the distance _Delem_ can be plotted using
+Una vez completada la discretización, la distancia _Delem_ se puede graficar con
 
 Plot > Miscellaneous > Delem distance to nearest element on surfaces.
 
-Note that if desired, this behaviour can be overridden on an element by element basis by specifying the maximum width for each element
+Tenga en cuenta que, si se desea, este comportamiento se puede anular elemento por elemento especificando el ancho máximo de cada elemento
 
 #### CAD > Edit > Entity Properties > Maximum Width
 
-This allows users to force fine uniform discretization on surfaces in areas where there are no grid planes.
+Esto permite a los usuarios forzar una discretización fina y uniforme en las superficies de zonas donde no hay planos de grilla.
 
-**Grid Spacing (** **_AG_ )** - specifies the minimum grid spacing.
+**Grid Spacing (** **_AG_ )** - especifica el espaciamiento mínimo de grilla.
 
-During the discretization process all field point grids and model surfaces are subdivided into elements with side length
+Durante el proceso de discretización, todas las grillas de puntos de campo y las superficies del modelo se subdividen en elementos con longitud de lado
 
 _Lgrid = Dgrid/DOL_
 
-where _Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes. Since at some locations the distance _Dgrid_ may be zero, the minimum grid spacing _AG_ must be specified. This same process is used to discretize model surfaces (surfaces of FF blocks and DD planes) that are near field point grids.
+donde Map3D determina _Dgrid_ como la menor distancia entre las superficies del modelo y los planos de grilla. Como en algunos lugares la distancia _Dgrid_ puede ser cero, se debe especificar el espaciamiento mínimo de grilla _AG_. Este mismo proceso se usa para discretizar las superficies del modelo (superficies de bloques FF y planos DD) que están cerca de grillas de puntos de campo.
 
-_AG_ should be set equal to the smallest dimension of interest. For example if the user needs to see the stress distribution across a 2m wide pillar, a value for _AG_ of 0.5 would give sufficient number of
+_AG_ debe fijarse igual a la dimensión más pequeña de interés. Por ejemplo, si el usuario necesita ver la distribución de esfuerzos a través de un pilar de 2 m de ancho, un valor de _AG_ de 0.5 daría una cantidad suficiente de puntos de campo para un contorneo preciso. Se deben usar las mismas unidades empleadas para especificar las coordenadas (p. ej., metros o pies).
 
-field points for accurate contouring. The same units used to specify the coordinates should be used (e.g. metres or feet).
-
-Once discretization is complete, the distance _Dgrid_ can be plotted on model surfaces using
+Una vez completada la discretización, la distancia _Dgrid_ se puede graficar sobre las superficies del modelo con
 
 Plot > Surface Components > Dgird distance to nearest grid
 
-or on grids using
+o sobre las grillas con
 
 Plot > Miscellaneous > Delem distance to nearest element on grids.
 
-Note that if desired, this behaviour can be overridden on a grid by grid basis by specifying the maximum spacing for each grid
+Tenga en cuenta que, si se desea, este comportamiento se puede anular grilla por grilla especificando el espaciamiento máximo de cada grilla
 
-CAD > Edit > Entity Properties > Maximum Width
+#### CAD > Edit > Entity Properties > Maximum Width
 
-This allows users to force fine uniform discretization on grids.
+Esto permite a los usuarios forzar una discretización fina y uniforme en las grillas.
 
-**Grid Discretize (** **_DOL_ ) -** specifies the desired distance to element length ratio used to determine the grid spacing from
+**Grid Discretize (** **_DOL_ ) -** especifica la razón deseada entre distancia y largo de elemento, usada para determinar el espaciamiento de grilla a partir de
 
 _Lgrid = Dgrid/DOL_
 
-where _Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+donde Map3D determina _Dgrid_ como la menor distancia entre las superficies del modelo y los planos de grilla.
 
-A value for _DOL_ of 1.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOL_ of 2.0 should give 5-10% error. Use a value of 4.0 for less than 5% error. Although higher values of _DOL_ results in generation of more boundary elements and hence longer run times, this is necessary to obtain increased accuracy.
+Un valor de _DOL_ de 1.0 es generalmente adecuado y se puede esperar que entregue soluciones con 10-20% de error. Si se requiere mayor precisión, un valor de _DOL_ de 2.0 debería dar 5-10% de error. Use un valor de 4.0 para menos de 5% de error. Aunque valores mayores de _DOL_ generan más elementos de borde y, por lo tanto, tiempos de ejecución más largos, esto es necesario para obtener mayor precisión.
 
-Once discretization is complete, the ratio of _Dgrid/Lelem_ can be plotted on model surfaces using
+Una vez completada la discretización, la razón _Dgrid/Lelem_ se puede graficar sobre las superficies del modelo con
 
 Plot > Miscellaneous > Dgrid/Lelem _DOL_ ratio on surfaces
 
-or the ratio of _Dgrid/Lgrid_ on grids using
+o la razón _Dgrid/Lgrid_ sobre las grillas con
 
 Plot > Miscellaneous > Dgrid/Lgrid _DOL_ ratio on grids.
 
-**Element Discretize (** **_DON_ ) -** specifies the desired distance to element length ratio used to determine the element side length
+**Element Discretize (** **_DON_ ) -** especifica la razón deseada entre distancia y largo de elemento, usada para determinar la longitud de lado del elemento
 
 _Lelem = Delem/DON_
 
-where _Delem_ represents the distance to the nearest model surface.
+donde _Delem_ representa la distancia a la superficie más cercana del modelo.
 
-A value for _DON_ of 0.5 is generally adequate for all problems except those with very narrow excavations or pillars. In this latter case a value for _DON_ of 1.0 is recommended. Although higher values of _DON_ results in generation of more boundary elements and hence longer run times, this is necessary to obtain a well conditioned solvable problem for very narrow excavations or pillars.
+Un valor de _DON_ de 0.5 es generalmente adecuado para todos los problemas, excepto aquellos con excavaciones o pilares muy angostos. En este último caso se recomienda un valor de _DON_ de 1.0. Aunque valores mayores de _DON_ generan más elementos de borde y, por lo tanto, tiempos de ejecución más largos, esto es necesario para obtener un problema bien condicionado y resoluble en el caso de excavaciones o pilares muy angostos.
 
-Once discretization is complete, the ratio of _Delem/Lelem_ can be plotted using
+Una vez completada la discretización, la razón _Delem/Lelem_ se puede graficar con
 
 Plot > Miscellaneous > Delem/Lelem _DON_ ratio on surfaces.
 
-**Matrix Lumping (** **_DOC_ ) -** specifies the desired distance to element length ratio. During matrix assembly, all elements that fit within the dimension
+**Matrix Lumping (** **_DOC_ ) -** especifica la razón deseada entre distancia y largo de elemento. Durante el ensamblaje de la matriz, todos los elementos que caben dentro de la dimensión
 
 #### _Delem/DOC_
 
-will be lumped together. _Delem_ represents the distance to the nearest model surface.
+se agruparán (lumping). _Delem_ representa la distancia a la superficie más cercana del modelo.
 
-Just as for _DOL_ , a value for _DOC_ of 1.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOC_ of 2.0 should give 5-10% error. Use a value of 4.0 for less than 5% error. Although higher values of _DOC_ result in larger coefficient matricies and hence longer run times, this is necessary to obtain increased accuracy.
+Al igual que para _DOL_ , un valor de _DOC_ de 1.0 es generalmente adecuado y se puede esperar que entregue soluciones con 10-20% de error. Si se requiere mayor precisión, un valor de _DOC_ de 2.0 debería dar 5-10% de error. Use un valor de 4.0 para menos de 5% de error. Aunque valores mayores de _DOC_ generan matrices de coeficientes más grandes y, por lo tanto, tiempos de ejecución más largos, esto es necesario para obtener mayor precisión.
 
-Once discretization is complete, the distance _Delem_ can be plotted using
+Una vez completada la discretización, la distancia _Delem_ se puede graficar con
 
 Plot > Miscellaneous > Delem distance to nearest element on surfaces.
 
-**Element Lumping (** **_DOE_ ) -** specifies the desired distance to element length ratio. During grid assembly, all elements that fit within the dimension
+**Element Lumping (** **_DOE_ ) -** especifica la razón deseada entre distancia y largo de elemento. Durante el ensamblaje de la grilla, todos los elementos que caben dentro de la dimensión
 
-_Dgrid/DOE_
+#### _Dgrid/DOE_
 
-will be lumped together. _Dgrid_ represents the distance to the nearest field point grid surface.
+se agruparán (lumping). _Dgrid_ representa la distancia a la superficie de grilla de puntos de campo más cercana.
 
-A value for _DOE_ of 2.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOE_ of 4.0 should give 5-10% error. Use a value of 8.0 for less than 5% error. Although higher values of _DOE_ result in longer run times, this is necessary to obtain increased accuracy.
+Un valor de _DOE_ de 2.0 es generalmente adecuado y se puede esperar que entregue soluciones con 10-20% de error. Si se requiere mayor precisión, un valor de _DOE_ de 4.0 debería dar 5-10% de error. Use un valor de 8.0 para menos de 5% de error. Aunque valores mayores de _DOE_ alargan los tiempos de ejecución, esto es necesario para obtener mayor precisión.
 
-Once discretization is complete, the distance _Dgrid_ can be plotted on grids using
-
-Plot > Miscellaneous > Delem distance to nearest element on grids.
-
-**Grid Lumping (** **_DOG_ ) -** specifies the desired distance to element length ratio. During grid assembly, all grid points that fit within the dimension
-
-_Dgrid/DOG_
-
-will be lumped together. _Dgrid_ represents the distance to the nearest field point grid surface.
-
-A value for _DOG_ of 2.0 is generally adequate and can be expected to provide solutions with 10-20% error. If higher accuracy is required a value for _DOG_ of 4.0 should give 5-10% error. Use a value of 8.0 for less than 5% error. Although higher values of _DOG_ result in longer run times, this is necessary to obtain increased accuracy.
-
-Once discretization is complete, the distance _Dgrid_ can be plotted on grids using
+Una vez completada la discretización, la distancia _Dgrid_ se puede graficar sobre las grillas con
 
 Plot > Miscellaneous > Delem distance to nearest element on grids.
 
-**Aspect Ratio (** **_DOR_ ) -** specifies the desired element aspect ratio. A value for _DOR_ of 5.0 is recommended for all problems except where the user wants narrow elements subdivided into more uniform shapes.
+**Grid Lumping (** **_DOG_ ) -** especifica la razón deseada entre distancia y largo de elemento. Durante el ensamblaje de la grilla, todos los puntos de grilla que caben dentro de la dimensión
 
-Sets _DON_ =0.5, _DOL=DOC_ =1, _DOE=DOG_ =2 for 10-20% error.
+#### _Dgrid/DOG_
 
-Sets _DON_ =0.5, _DOL=DOC_ =2, _DOE=DOG_ =4 for 5-10% error.
+se agruparán (lumping). _Dgrid_ representa la distancia a la superficie de grilla de puntos de campo más cercana.
 
-Sets _DON_ =1, _DOL=DOC_ =4, _DOE=DOG_ =8 for &lt; 5% error.
+Un valor de _DOG_ de 2.0 es generalmente adecuado y se puede esperar que entregue soluciones con 10-20% de error. Si se requiere mayor precisión, un valor de _DOG_ de 4.0 debería dar 5-10% de error. Use un valor de 8.0 para menos de 5% de error. Aunque valores mayores de _DOG_ alargan los tiempos de ejecución, esto es necesario para obtener mayor precisión.
 
-**Comments -** allows you to specify comments to be saved with the run.
+Una vez completada la discretización, la distancia _Dgrid_ se puede graficar sobre las grillas con
+
+Plot > Miscellaneous > Delem distance to nearest element on grids.
+
+**Aspect Ratio (** **_DOR_ ) -** especifica la razón de aspecto deseada de los elementos. Se recomienda un valor de _DOR_ de 5.0 para todos los problemas, excepto cuando el usuario desea subdividir elementos angostos en formas más uniformes.
+
+Fija _DON_ =0.5, _DOL=DOC_ =1, _DOE=DOG_ =2 para 10-20% de error. Fija _DON_ =0.5, _DOL=DOC_ =2, _DOE=DOG_ =4 para 5-10% de error. Fija _DON_ =1, _DOL=DOC_ =4, _DOE=DOG_ =8 para &lt; 5% de error.
+
+**Comments -** permite especificar comentarios que se guardarán con la corrida.
 
 #### Summary:
 
-- _STOL_ should be set equal to 0.1% of the far field stress state at the depth of interest. Use the same units as the far field stress state (e.g. MPa or psi).
+- _STOL_ debe fijarse igual a 0.1% del estado de esfuerzos de campo lejano a la profundidad de interés. Use las mismas unidades que el estado de esfuerzos de campo lejano (p. ej., MPa o psi).
 
-- _AL_ should be set equal to twice the smallest pillar or stope width. Use the same units used to specify the coordinates (e.g. metres or feet).
+- _AL_ debe fijarse igual al doble del ancho del pilar o caserón más pequeño. Use las mismas unidades empleadas para especificar las coordenadas (p. ej., metros o pies).
 
-- _AG_ should be set equal to the smallest dimension of interest. Use the same units used to specify the coordinates (e.g. metres or feet).
+- _AG_ debe fijarse igual a la dimensión más pequeña de interés. Use las mismas unidades empleadas para especificar las coordenadas (p. ej., metros o pies).
 
-- Elements are discretized to a side length that is the smaller of _Delem/DON_ and _Dgrid/DOL_ , such that it cannot be less than _AL_ and cannot be larger than the maximum width.
+- Los elementos se discretizan con una longitud de lado igual al menor valor entre _Delem/DON_ y _Dgrid/DOL_ , de modo que no puede ser menor que _AL_ ni mayor que el ancho máximo.
 
-- Grid are discretized to a spacing is determined from _Dgrid/DOL_ such that is cannot be less than _AG_ and cannot be larger than the maximum spacing.
+- Las grillas se discretizan con un espaciamiento determinado a partir de _Dgrid/DOL_ , de modo que no puede ser menor que _AG_ ni mayor que el espaciamiento máximo.
 
-- During matrix assembly, all elements that fit within the dimension _Delem/DOC_ will be lumped together.
+- Durante el ensamblaje de la matriz, todos los elementos que caben dentro de la dimensión _Delem/DOC_ se agruparán (lumping).
 
-- During grid assembly, all elements that fit within the dimension _Dgrid/DOE_ will be lumped together.
+- Durante el ensamblaje de la grilla, todos los elementos que caben dentro de la dimensión _Dgrid/DOE_ se agruparán (lumping).
 
-- During grid assembly, all grid points that fit within the dimension _Dgrid/DOG_ will be lumped together.
+- Durante el ensamblaje de la grilla, todos los puntos de grilla que caben dentro de la dimensión _Dgrid/DOG_ se agruparán (lumping).
 
 #### Notes:
 
-For a more detailed discussion on discretization and lumping refer to
+Para una discusión más detallada sobre la discretización y el agrupamiento (lumping), vea
 
 - Discretization and Lumping.
 
-## 5.5.3.2 Mining Step Titles
+## 5.5.3.2 Títulos de etapas de explotación
 
-Specification of a specifies a descriptive title for each mining step.
+Especificación de un título descriptivo para cada etapa de explotación.
 
 ![Figure from page 329](/images/page-329-img-3.png)
 
-## 5.5.3.3 Material Properties
+## 5.5.3.3 Propiedades de materiales
 
-Specification of material properties.
+Especificación de las propiedades de los materiales.
 
-Several different dialogue boxes will appear depending on the material type selected: Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Backfill Hyperbolic and None.
+Aparecerán varios cuadros de diálogo distintos según el tipo de material seleccionado: Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Backfill Hyperbolic y None.
 
-Mohr-Coulomb in 3D FF blocks can be used as a flow rule for non-linear material behaviour in Map3D Non-Linear and Map3D Visco-Plastic. Can also be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+Mohr-Coulomb en bloques FF 3D se puede usar como regla de flujo para el comportamiento no lineal de materiales en Map3D Non-Linear y Map3D Visco-Plastic. También se puede usar como criterio de falla en bloques FF 3D o en el material de la roca de caja (host) en Map3D Fault-Slip.
 
-Hoek-Brown in 3D FF blocks can be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+Hoek-Brown en bloques FF 3D se puede usar como criterio de falla en bloques FF 3D o en el material de la roca de caja en Map3D Fault-Slip.
 
-Drucker-Prager in 3D FF blocks can be used as failure criterion in 3D FF blocks or in the host material in Map3D Fault-Slip.
+Drucker-Prager en bloques FF 3D se puede usar como criterio de falla en bloques FF 3D o en el material de la roca de caja en Map3D Fault-Slip.
 
-Fault-Gouge in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D NonLinear or Map3D Visco-Plastic.
+Fault-Gouge en planos DD se puede usar como regla de flujo en planos DD en Map3D Fault-Slip, Map3D Non-Linear o Map3D Visco-Plastic.
 
-Equilibrated-Gouge in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+Equilibrated-Gouge en planos DD se puede usar como regla de flujo en planos DD en Map3D Fault-Slip, Map3D Non-Linear o Map3D Visco-Plastic.
 
-Yielding-Pillar in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D NonLinear or Map3D Visco-Plastic.
+Yielding-Pillar en planos DD se puede usar como regla de flujo en planos DD en Map3D Fault-Slip, Map3D Non-Linear o Map3D Visco-Plastic.
 
-Hyperbolic-Backfill in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+Hyperbolic-Backfill en planos DD se puede usar como regla de flujo en planos DD en Map3D Fault-Slip, Map3D Non-Linear o Map3D Visco-Plastic.
 
-Quadratic-Backfill in DD planes can be used as a flow rule in DD planes in Map3D Fault-Slip, Map3D Non-Linear or Map3D Visco-Plastic.
+Quadratic-Backfill en planos DD se puede usar como regla de flujo en planos DD en Map3D Fault-Slip, Map3D Non-Linear o Map3D Visco-Plastic.
 
-Softened Material in 3D FF blocks or DD planes can be used to soften an elastic material to simulate ground yielding and the resulting stress redistribution effects.
+Softened Material en bloques FF 3D o planos DD se puede usar para ablandar un material elástico y simular la fluencia del terreno y los efectos de redistribución de esfuerzos resultantes.
 
-Stress State specify the pre-mining stress state.
+Stress State especifica el estado de esfuerzos previo a la explotación.
 
-In elastic analyses the failure criterion is used only for strength factor calculations and contour plotting and does not affect the analysis results.
+En los análisis elásticos, el criterio de falla se usa solo para el cálculo de factores de resistencia y para los gráficos de contornos, y no afecta los resultados del análisis.
 
-In non-linear analyses (3D FF blocks in Map3D Non-Linear, 3D FF blocks in Map3D Visco-Plastic, and DD planes in Map3D Fault-Slip) the failure criterion is used as a flow rule to control yielding and nonlinear deformations.
+En los análisis no lineales (bloques FF 3D en Map3D Non-Linear, bloques FF 3D en Map3D Visco-Plastic y planos DD en Map3D Fault-Slip), el criterio de falla se usa como regla de flujo para controlar la fluencia y las deformaciones no lineales.
 
-## 5.5.3.4 Map3Di Setup
+## 5.5.3.4 Configuración de Map3Di
 
-Sets up the Map3Di analysis.
+Configura el análisis Map3Di.
 
-Map3Di allows one to superimpose external field loading effects into the Map3D model. For details on this feature refer to Map3Di.
+Map3Di permite superponer efectos de carga de campo externos al modelo de Map3D. Para detalles sobre esta función, vea Map3Di.
 
-When you check a Map3Di loading file for use you will be prompted to search for a file name, location. If the search is successful, the file will be checked.
+Al verificar un archivo de carga Map3Di para su uso, se le pedirá que busque un nombre de archivo y una ubicación. Si la búsqueda tiene éxito, se verificará el archivo.
 
-The Map3Di loading file is specified in polyline file format. Refer to Contour Plane Options for details on generating a Map3Di loading file.
+El archivo de carga Map3Di se especifica en formato de archivo de polilíneas. Para detalles sobre cómo generar un archivo de carga Map3Di, vea Contour Plane Options.
 
-Comment lines must start with an asterisk "*" in column 1.
+Las líneas de comentario deben comenzar con un asterisco "*" en la columna 1.
 
-2D planes are stored as a series of triangle or quadrilateral polylines as follows:
+Los planos 2D se almacenan como una serie de polilíneas triangulares o cuadrangulares, de la siguiente forma:
 
 x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4 ...
 
-3D blocks are stored as a series of tetrahedral or hexahedral polylines as follows:
+Los bloques 3D se almacenan como una serie de polilíneas tetraédricas o hexaédricas, de la siguiente forma:
 
 x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4 x5 y5 z5 1 values5 x6 y6 z6 1 values6
 
@@ -245,102 +236,102 @@ x7 y7 z7 1 values7
 
 x8 y8 z8 1 values8
 
-where **xi yi zi** represent the coordinates of each point.
+donde **xi yi zi** representan las coordenadas de cada punto.
 
-- 3 indicates that this point is the beginning of a new polyline.
+- 3 indica que este punto es el comienzo de una nueva polilínea.
 
-- 2 indicates that this point forms part of the base of the block.
+- 2 indica que este punto forma parte de la base del bloque.
 
-- 1 indicates that this point forms part of the top of the block. This item is only used for definition of 3D block shapes.
+- 1 indica que este punto forma parte del techo del bloque. Este elemento solo se usa para la definición de formas de bloques 3D.
 
-Additional polylines are specified by repeating the sequence (i.e. starting a new polyline with the number **3** ).
+Se especifican polilíneas adicionales repitiendo la secuencia (es decir, iniciando una nueva polilínea con el número **3** ).
 
-Any of the points can be repeated or skipped to specify triangular shaped sides or tetrahedrons.
+Cualquiera de los puntos se puede repetir u omitir para especificar lados triangulares o tetraedros.
 
-- valuesi specifies the magnitude of the field loading at the centre, or at each corner. If only values1 is specified (i.e. values2 … are left blank) that value is applied uniformly across the entity.
+- valuesi especifica la magnitud de la carga de campo en el centro o en cada vértice. Si solo se especifica values1 (es decir, values2 … se dejan en blanco), ese valor se aplica de manera uniforme sobre toda la entidad.
 
-- If valuesi are specified for all corners, the field loading is applied according to a higher order polynomial distribution.
+- Si se especifican valuesi para todos los vértices, la carga de campo se aplica según una distribución polinómica de orden superior.
 
-For 2D surface triangles a linear distribution is used
+Para triángulos de superficie 2D se usa una distribución lineal
 
 _a_ + _b x_ + _c y_
 
-For 2D quadrilaterals, the following distribution is used
+Para cuadriláteros 2D se usa la siguiente distribución
 
 _a_ + _b x_ + _c y_ + _d x y_
 
-For 3D block shapes, as many terms as possible of the distribution are used
+Para formas de bloques 3D se usan tantos términos de la distribución como sea posible
 
 _a_ + _b x_ + _c y_ + _d z_ + _e x y_ + _f y z_ + _g z x_ + _h x y z_
 
-The actual field loading effects can be specified in several ways.
+Los efectos reales de la carga de campo se pueden especificar de varias formas.
 
 #### 2D Planes
 
-2D planes define a Displacement Discontinuity with specified normal displacement (closure) dn, and shear displacement (ride) ds, such that valuesi can be specified either as
+Los planos 2D definen una discontinuidad de desplazamiento con un desplazamiento normal (cierre) dn y un desplazamiento de corte (ride) ds especificados, de modo que valuesi se puede especificar como
 
-dn ds or dn ds1 ds2
+dn ds o dn ds1 ds2
 
-If only dn ds are specified, the shear displacement (ride) is applied parallel to the maximum in-plane shear stress for the 2D plane.
+Si solo se especifican dn ds, el desplazamiento de corte (ride) se aplica paralelo al esfuerzo de corte máximo en el plano del plano 2D.
 
-If all of dn ds1 ds2 are specified, the shear displacement (ride) component ds1 is applied parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is applied perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 - x3 y3 z3).
+Si se especifican todos dn ds1 ds2, la componente del desplazamiento de corte (ride) ds1 se aplica paralela al primer lado (es decir, el lado definido por x1 y1 z1 – x2 y2 z2). ds2 se aplica perpendicular a ds1 en la dirección del segundo lado (es decir, el lado definido por x2 y2 z2 - x3 y3 z3).
 
-Shear displacement (ride) and normal displacement (closure) are specified in displacement units (i.e. the same units as the geometry is specified in (metres).
+El desplazamiento de corte (ride) y el desplazamiento normal (cierre) se especifican en unidades de desplazamiento (es decir, las mismas unidades en que se especifica la geometría (metros)).
 
-The shear displacement (ride) and normal displacement (closure) may be determined from in situ or laboratory measurements of shear, closure and/or crack opening, or from another numerical modelling program such as a reservoir or hydraulic fracture simulator. These can also be estimated from seismic monitoring data.
+El desplazamiento de corte (ride) y el desplazamiento normal (cierre) se pueden determinar a partir de mediciones in situ o de laboratorio de corte, cierre y/o apertura de grietas, o a partir de otro programa de modelamiento numérico, como un simulador de reservorios o de fracturamiento hidráulico. También se pueden estimar a partir de datos de monitoreo sísmico.
 
 #### 3D Blocks
 
-3D blocks define a zone with specified strain e, either as
+Los bloques 3D definen una zona con una deformación e especificada, ya sea como
 
-e1 e2 e3 or exx eyy ezz exy eyz ezx
+e1 e2 e3 o exx eyy ezz exy eyz ezx
 
-If only e1 e2 e3 are specified, these principal strains are applied parallel to the principal stresses. The strains are used to determine the initial stress s° using
+Si solo se especifican e1 e2 e3, estas deformaciones principales se aplican paralelas a los esfuerzos principales. Las deformaciones se usan para determinar el esfuerzo inicial s° mediante
 
 s1° = [ ( _1-_ n) e1 + n ( e2 + e3 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] s2° = [ ( _1-_ n) e2 + n ( e3 + e1 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] s3° = [ ( _1-_ n) e3 + n ( e1 + e2 ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ]
 
-If all of exx eyy ezz exy eyz ezx are specified, these strains are applied as Cartesian components. The strains are used to determine the initial stress s° using
+Si se especifican todos exx eyy ezz exy eyz ezx, estas deformaciones se aplican como componentes cartesianas. Las deformaciones se usan para determinar el esfuerzo inicial s° mediante
 
 sxx°  = [ ( _1-_ n) exx + n ( eyy + ezz ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] syy° = [ ( _1-_ n) eyy + n ( ezz + exx ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] szz°  = [ ( _1-_ n) ezz + n ( exx + eyy ) ] _E_ / [ ( _1+_ n) ( _1-2_ n) ] txy° = exy _E_ / ( _1+_ n) tyz° = eyz _E_ / ( _1+_ n) tzx° = ezx _E_ / ( _1+_ n)
 
-Strains are specified in dimensionless strain units (i.e. 0.001 would specify 1000 micro strain).
+Las deformaciones se especifican en unidades de deformación adimensionales (es decir, 0.001 equivale a 1000 microdeformaciones).
 
-_E_ and n represent respectively Young's (rock mass scale - deformation) modulus and Poisson's ratio. Map3D automatically determines which material the corner of the 3D block is located within and uses the corresponding material properties.
+_E_ y n representan, respectivamente, el módulo de Young (a escala de macizo rocoso, de deformación) y el coeficiente de Poisson. Map3D determina automáticamente en qué material se ubica el vértice del bloque 3D y usa las propiedades del material correspondiente.
 
-The strains may be determined from in situ or laboratory measurements of temperature or fluid pressure, or from another numerical modelling program such as a thermal analysis code. These can also be estimated from seismic monitoring data.
+Las deformaciones se pueden determinar a partir de mediciones in situ o de laboratorio de temperatura o presión de fluidos, o a partir de otro programa de modelamiento numérico, como un código de análisis térmico. También se pueden estimar a partir de datos de monitoreo sísmico.
 
-The strains that should be applied can be determined from the temperature through an expansion coefficient _A_ , where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+Las deformaciones que se deben aplicar se pueden determinar a partir de la temperatura mediante un coeficiente de expansión _A_ , donde el cambio de temperatura o el cambio de presión de fluidos (respecto del valor de fondo) induce los esfuerzos iniciales
 
 s1° **=** s2° **=** s3° = _A_ D _T_
 
-For fluid flow problems the expansion coefficient _A_ , should be set to unity (positive one) for saturated media. For thermal problems the expansion coefficient should be specified as a negative quantity given by
+En problemas de flujo de fluidos, el coeficiente de expansión _A_ debe fijarse en la unidad (uno positivo) para medios saturados. En problemas térmicos, el coeficiente de expansión debe especificarse como una cantidad negativa dada por
 
 _A_ = a _E /(1-2_ n _)_
 
-where a represents the coefficient of thermal expansion (i.e. the linear expansivity).
+donde a representa el coeficiente de expansión térmica (es decir, la expansividad lineal).
 
 #### Notes
 
-This function must be set up before conducting the Map3D BEM analysis
+Esta función debe configurarse antes de realizar el análisis BEM de Map3D
 
 Analysis > BEM Analysis.
 
-CAD > Properties > Map3Di Setup > View enables viewing of the Map3Di data.
+CAD > Properties > Map3Di Setup > View permite ver los datos de Map3Di.
 
-## 5.5.3.5 Model Information
+## 5.5.3.5 Información del modelo
 
-Displays the current tally for the following model parameters:
+Muestra el recuento actual de los siguientes parámetros del modelo:
 
-- number of surfaces used to define the geometry,
+- número de superficies usadas para definir la geometría,
 
-- number of coordinates used to define the surfaces,
+- número de coordenadas usadas para definir las superficies,
 
-- number of mining steps.
+- número de etapas de explotación.
 
-The following parameters are only displayed after the discretization analysis (Analysis > Discretization) is complete:
+Los siguientes parámetros solo se muestran una vez completado el análisis de discretización (Analysis > Discretization):
 
-- number of boundary elements,
+- número de elementos de borde,
 
-- number of boundary nodes (only used for higher order elements (Analysis > Options > Linear),
+- número de nodos de borde (solo se usa para elementos de orden superior (Analysis > Options > Linear),
 
-- number of field points on user defined grids.
+- número de puntos de campo en las grillas definidas por el usuario.

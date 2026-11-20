@@ -2,133 +2,130 @@
 title: "绘图选项"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+设置等值线绘图选项。
 
-Sets up contour plot options.
-
-This routine can be initiated either by picking the button or simple right clicking on any contour.
+可以点击按钮，或直接在任意等值线上单击右键来启动此功能。
 
 ![Figure from page 318](/images/page-318-img-25.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
 ![Figure from page 321](/images/page-321-img-1.png)
 
 #### Trajectory-Label Options:
 
-- 3D Fixed Length – display fixed length 3D orientation indicators.
+- 3D Fixed Length – 显示固定长度的 3D 方向指示符。
 
-The indicator is constructed as a 3D vector with an arrow head placed on the end that points away from you (i.e. into the display). This permits you to determine whether the vector is dipping away from you or towards you. Vectors that appear as dots point directly into or away from the display.
+该指示符构造为一个 3D 矢量，末端的箭头指向远离您的方向（即指向显示屏内部）。这样可以判断矢量是倾向远离您还是朝向您。显示为点的矢量则直接指向显示屏内部或外部。
 
-If you orient the view such that you are looking along the edge of a grid, you will see the vectors protruding in and out of the contour plane.
+如果将视图调整为沿网格边缘观察，您会看到矢量从等值线平面穿入穿出。
 
-The length of the vectors is set with the TLength: parameter.
+矢量的长度通过 TLength: 参数设置。
 
-The density of the vectors is set with the TSpacing: parameter.
+矢量的密度通过 TSpacing: 参数设置。
 
-- 3D Scaled Length – display scaled length 3D orientation indicators.
+- 3D Scaled Length – 显示按比例缩放长度的 3D 方向指示符。
 
-The indicator is constructed as described above.
+指示符的构造方式同上。
 
-The length of the vectors are scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the vector is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the TLength: parameter.
+矢量长度按应力大小缩放：如果大小等于等值线范围的最小值，则矢量以零长度绘制；如果大小等于等值线范围的最大值，则矢量以 TLength: 参数指定的长度绘制。
 
-- 2D Fixed Length – display fixed length 2D orientation indicators.
+- 2D Fixed Length – 显示固定长度的 2D 方向指示符。
 
-The indicator is constructed as a 2D projection of the true 3D vector, in the plane of the grid.
+该指示符构造为真实 3D 矢量在网格平面内的 2D 投影。
 
-The length of the vectors is set with the TLength: parameter.
+矢量的长度通过 TLength: 参数设置。
 
-The density of the vectors is set with the TSpacing: parameter.
+矢量的密度通过 TSpacing: 参数设置。
 
-- 2D Scaled Length – display scaled length 2D orientation indicators.
+- 2D Scaled Length – 显示按比例缩放长度的 2D 方向指示符。
 
-The indicator is constructed as described above.
+指示符的构造方式同上。
 
-The indicator is constructed as a 2D projection of the true 3D vector, in the plane of the grid.
+该指示符构造为真实 3D 矢量在网格平面内的 2D 投影。
 
-The length of the vectors are scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the vector is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the TLength: parameter.
+矢量长度按应力大小缩放：如果大小等于等值线范围的最小值，则矢量以零长度绘制；如果大小等于等值线范围的最大值，则矢量以 TLength: 参数指定的长度绘制。
 
-- Contour Numbers – display contour numbers on the contours. The number corresponds to the magnitude of the contour at each point.
+- Contour Numbers – 在等值线上显示等值线数值。该数字对应各点处等值线的大小。
 
-- Point Numbers – display point numbers on the contours. The number corresponds to the record number of each point.
+- Point Numbers – 在等值线上显示点编号。该编号对应各点的记录号。
 
-- Coordinate Numbers – display coordinate numbers on the contours. The number corresponds to the x,y,z coordinates of each point.
+- Coordinate Numbers – 在等值线上显示坐标数值。该数字对应各点的 x,y,z 坐标。
 
-- UB Number – display the number of the ubiquitous joint set (1, 2 or 3) with the maximum excess shear stress on the contours. Refer to Ubiquitous Parameters
+- UB Number – 在等值线上显示具有最大剩余剪应力的遍布节理组编号（1、2 或 3）。参见 Ubiquitous Parameters
 
-- MStep Max Yield – display the step at which the maximum excess stress occurs. Refer to Accumulated Damage
+- MStep Max Yield – 显示出现最大剩余应力的步骤。参见 Accumulated Damage
 
-- MStep 1st Yield – display the step at which the first yield occurs. Refer to Accumulated Damage
+- MStep 1st Yield – 显示首次发生屈服的步骤。参见 Accumulated Damage
 
-- Large Numbers – display numbers with large size or small size.
+- Large Numbers – 以大号或小号显示数字。
 
-- Length – set the length that the orientation indicators will be drawn. If you set this parameter too small, the trajectory vectors will be too small to see. If you set this parameter too large, the trajectory vectors will overlap and create a confusing display.
+- Length – 设置方向指示符的绘制长度。如果此参数设置得太小，轨迹矢量会小到看不见；如果设置得太大，轨迹矢量会相互重叠，使显示变得混乱。
 
-- Spacing – set the spacing between adjacent orientation indicators or numbers. If set this parameter to zero, trajectories will be drawn at all grid points. For finely discretized grids, the trajectory vectors may be too concentrated and difficult to distinguish. Larger values for this parameter will result in fewer trajectory symbols being drawn.
+- Spacing – 设置相邻方向指示符或数字之间的间距。如果将此参数设为零，则会在所有网格点处绘制轨迹。对于离散得很细的网格，轨迹矢量可能过于密集而难以分辨。此参数取值越大，绘制的轨迹符号越少。
 
-- Colour – set the colour with which the trajectories are drawn.
+- Colour – 设置绘制轨迹所用的颜色。
 
 #### Contour Options:
 
-- Contour Lines – draws lines between the contour colours. These lines help highlight the boundary between different contour intervals and are particularly useful for black and white presentation.
+- Contour Lines – 在等值线颜色之间绘制线条。这些线条有助于突出不同等值线间隔之间的边界，对黑白展示尤其有用。
 
-- Opaque – draws the contours as opaque colours. If both this option and the translucent option are unchecked, only contour lines (i.e. no coloured contour) will be drawn.
+- Opaque – 以不透明颜色绘制等值线。如果此选项与半透明选项均未选中，则只绘制等值线（即不绘制彩色等值线图）。
 
-- Translucent - draws the contours as translucent colours. If both this option and the opaque option are unchecked, only contour lines (i.e. no coloured contour) will be drawn.
+- Translucent - 以半透明颜色绘制等值线。如果此选项与不透明选项均未选中，则只绘制等值线（即不绘制彩色等值线图）。
 
 #### Display Options:
 
-- Blank – when checked, contours are blanked out where the grid plane passes through excavation blocks. This is useful to identify the extent of excavations when portions of the model have been hidden. It is also useful for generation of 2D sections since the location of the excavations are clearly visible.
+- Blank – 选中后，在网格平面穿过采空区块体的位置会遮蔽等值线。当模型的部分内容被隐藏时，这有助于识别采空区的范围；它也有助于生成 2D 剖面，因为采空区的位置清晰可见。
 
-Blank Colour: - sets colour used for Blanking.
+Blank Colour: - 设置遮蔽所用的颜色。
 
-Grid Lines – contours are drawn with lines at regular grid intervals. The desired interval is set using the Spacing: parameter.
+Grid Lines – 等值线以规则的网格间隔绘制线条。所需间隔通过 Spacing: 参数设置。
 
-Outlines – outlines are drawn around the grid edges. When using multiple grids you may not want to see these outlines.
+Outlines – 在网格边缘周围绘制轮廓。使用多个网格时，您可能不希望看到这些轮廓。
 
-Discretization – the grid discretization is superimposed on the contours.
+Discretization – 将网格离散化叠加显示在等值线上。
 
-Min Contour – when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important.
+Min Contour – 取消选中时，不绘制低于等值线范围最小值的等值线。当仅关注等值线范围的上部时，这对显示等值线很有用。
 
-For example when displaying non-linear strain components or excess stresses, it is often useful to only have non-zero portions of the contours visible.
+例如，在显示非线性应变分量或剩余应力时，通常只让等值线的非零部分可见会很有用。
 
-If the desired parameter has a negative value simply swap the maximum and minimum contour range or plot the absolute value of the parameter.
+如果所需参数为负值，只需交换等值线范围的最大值和最小值，或绘制该参数的绝对值即可。
 
-Max Contour – when unchecked, contours above the maximum contour range are not drawn.
+Max Contour – 取消选中时，不绘制高于等值线范围最大值的等值线。
 
-- Tension Cutoff Symbol – when checked a special tension symbol will be plotted anywhere the stress state is below the specified tension cutoff. This option is only used for strength factor plots.
+- Tension Cutoff Symbol – 选中后，在应力状态低于指定拉伸截断值的任何位置都会绘制特殊的拉伸符号。此选项仅用于强度系数绘图。
 
-- Smooth Contours – if you have not checked the linear analysis option, results are only calculated at the centre of each boundary element and contour plots of surface values will appear very checkered. This option smoothes these contours to assist in interpretation.
+- Smooth Contours – 如果未选中线性分析选项，结果仅在每个边界单元的中心计算，表面值的等值线图会显得非常呈方格状。此选项可平滑这些等值线，便于解读。
 
-If you have checked the linear analysis option results are calculated at element corners. Since no smoothing is required this option is ignored.
+如果已选中线性分析选项，结果将在单元角点计算。由于无需平滑，此选项会被忽略。
 
-This option has no effect on grid plots.
+此选项对网格绘图没有影响。
 
-Fault contours – Contours are drawn on fault surfaces. These are DD surfaces with fault-gouge material type.
+Fault contours – 在断层面上绘制等值线。这些是材料类型为断层泥（fault-gouge）的 DD 表面。
 
-Excavation contours – Contours are drawn on excavation surfaces. These are FF or DD surfaces with 0 material type.
+Excavation contours – 在采空区表面上绘制等值线。这些是材料类型为 0 的 FF 或 DD 表面。
 
-Scalled Contours – display contours as a topographical surface.
+Scalled Contours – 将等值线显示为地形曲面。
 
-The height normal to the plane is scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the height is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the CRadius: parameter.
+垂直于平面的高度按应力大小缩放：如果大小等于等值线范围的最小值，则高度以零长度绘制；如果大小等于等值线范围的最大值，则矢量以 CRadius: 参数指定的长度绘制。
 
-For line grids, the radius of the tube is scaled.
+对于线网格，将缩放管的半径。
 
-UB disks – toggles display of planar contour plot or disks representing the orientation of the UB plane. Refer to UB-Plane Parameters for more information.
+UB disks – 切换平面等值线图与表示 UB 平面方向的圆盘的显示。更多信息请参见 UB-Plane Parameters。
 
-Hex contours – in the Visco-Plastic version of Map3D this will enable display of values calculated at internal node points.
+Hex contours – 在 Map3D 的黏塑性（Visco-Plastic）版本中，启用此选项可显示在内部节点处计算的数值。
 
-Horizontal Legend - orients the contour interval legend horizontally.
+Horizontal Legend - 将等值线间隔图例水平放置。
 
-Vertical Banner - orients the contour interval legend vertically.
+Vertical Banner - 将等值线间隔图例垂直放置。
 
-GSpacing: - sets the grid interval.
+GSpacing: - 设置网格间隔。
 
-CRadius - sets the radius for contouring of line grids.
+CRadius - 设置线网格等值线绘制的半径。
 
 #### Miscellaneous:
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。

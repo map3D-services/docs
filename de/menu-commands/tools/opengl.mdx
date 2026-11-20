@@ -2,67 +2,64 @@
 title: "OpenGL"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
 ## 5.6.4.1 OpenGL &lt;On/Off>
 
-Enables OpenGL support.
+Aktiviert die OpenGL-Unterstützung.
 
-OpenGL is an industry standard high-quality 3D graphics rendering interface. The main advantages in using OpenGL are hardware acceleration of the graphics display and support for z-buffering. Of course you must have a graphics adaptor that supports OpenGL and have the OpenGL display driver installed to get hardware acceleration.
+OpenGL ist eine Industriestandard-Schnittstelle für hochwertiges 3D-Grafik-Rendering. Die Hauptvorteile von OpenGL sind die Hardwarebeschleunigung der Grafikanzeige und die Unterstützung des Z-Buffers. Für die Hardwarebeschleunigung benötigen Sie natürlich einen Grafikadapter, der OpenGL unterstützt, und einen installierten OpenGL-Anzeigetreiber.
 
-See Tools > OpenGL Parameters to view OpenGL setup.
+Siehe Tools > OpenGL Parameters, um die OpenGL-Einrichtung anzuzeigen.
 
-See Tools > OpenGL Anti-aliasing to smooth lines.
+Siehe Tools > OpenGL Anti-aliasing, um Linien zu glätten.
 
-## 5.6.4.2 OpenGL Parameters
+## 5.6.4.2 OpenGL-Parameter
 
-Reports on OpenGL setup:
+Gibt Auskunft über die OpenGL-Einrichtung:
 
-Support OpenGL – indicates whether an OpenGL driver is installed and enabled.
+Support OpenGL – zeigt an, ob ein OpenGL-Treiber installiert und aktiviert ist.
 
-Driver or Hardware Support - indicates whether an OpenGL is supported by your graphics adaptor.
+Driver or Hardware Support - zeigt an, ob OpenGL von Ihrem Grafikadapter unterstützt wird.
 
-Double Buffered – indicates that there is sufficient memory to support double buffering.
+Double Buffered – zeigt an, dass genügend Speicher für Doppelpufferung vorhanden ist.
 
-Color Buffer Bits – indicates the number of bits used for the colour buffer.
+Color Buffer Bits – zeigt die Anzahl der Bits an, die für den Farbpuffer verwendet werden.
 
-Depth Buffer Bits – indicates the number of bits used for the z-buffer.
+Depth Buffer Bits – zeigt die Anzahl der Bits an, die für den Z-Buffer verwendet werden.
 
-## 5.6.4.3 OpenGL Antialiasing
+## 5.6.4.3 OpenGL-Kantenglättung
 
-Enables smoothing of points, lines and edges of polygons.
+Aktiviert die Glättung von Punkten, Linien und Polygonkanten.
 
-This OpenGL feature provides improved appearance but slows rendering.
+Diese OpenGL-Funktion verbessert das Erscheinungsbild, verlangsamt aber das Rendering.
 
-View > Render > Line Width can be used to enable drawing of wider lines. This would also help smooth line drawing with as much impact on performance.
+Mit View > Render > Line Width lässt sich das Zeichnen breiterer Linien aktivieren. Dies trägt ebenfalls zur Glättung der Liniendarstellung bei, mit ähnlichen Auswirkungen auf die Leistung.
 
-## 5.6.4.4 OpenGL Redraw
+## 5.6.4.4 OpenGL-Neuzeichnen
 
-Enables OpenGL redrawing of the screen when the window needs to be refreshed.
+Aktiviert das Neuzeichnen des Bildschirms per OpenGL, wenn das Fenster aktualisiert werden muss.
 
-The Map3D display window must be refreshed every time a dialogue box is moved or removed. This refresh can either be done by saving the display window to a back buffer (this option is not checked), or by simply redrawing the screen (this option is checked).
+Das Map3D-Anzeigefenster muss jedes Mal aktualisiert werden, wenn ein Dialogfeld verschoben oder entfernt wird. Diese Aktualisierung kann entweder erfolgen, indem das Anzeigefenster in einem Hintergrundpuffer gespeichert wird (diese Option ist nicht aktiviert), oder indem der Bildschirm einfach neu gezeichnet wird (diese Option ist aktiviert).
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+Diese Option sollte normalerweise aktiviert sein, kann aber bei problematischen Grafikadaptern deaktiviert werden.
 
-## 5.6.4.5 OpenGL Pick
+## 5.6.4.5 OpenGL-Auswahl
 
-Enables OpenGL to locate graphics entities on the screen.
+Ermöglicht es OpenGL, Grafikobjekte auf dem Bildschirm zu lokalisieren.
 
-When you left click on an entity Map3D must determine which entity you have selected. This can be determined either by OpenGL or internally by Map3D.
+Wenn Sie mit der linken Maustaste auf ein Objekt klicken, muss Map3D ermitteln, welches Objekt Sie ausgewählt haben. Dies kann entweder durch OpenGL oder intern durch Map3D erfolgen.
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+Diese Option sollte normalerweise aktiviert sein, kann aber bei problematischen Grafikadaptern deaktiviert werden.
 
-## 5.6.4.6 OpenGL Crosshairs
+## 5.6.4.6 OpenGL-Fadenkreuz
 
-Toggles between OpenGL and Windows API drawing of cursor crosshairs.
+Schaltet zwischen dem Zeichnen des Cursor-Fadenkreuzes über OpenGL und über die Windows-API um.
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+Diese Option sollte normalerweise aktiviert sein, kann aber bei problematischen Grafikadaptern deaktiviert werden.
 
-To completely disable drawing of the cursor crosshairs select Tools > Crosshairs.
+Um das Zeichnen des Cursor-Fadenkreuzes vollständig zu deaktivieren, wählen Sie Tools > Crosshairs.
 
-## 5.6.4.7 OpenGL Interactive Edit
+## 5.6.4.7 Interaktive OpenGL-Bearbeitung
 
-Enables interactive OpenGL drawing of modified shapes during editing operations.
+Aktiviert das interaktive Zeichnen geänderter Formen per OpenGL während Bearbeitungsvorgängen.
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+Diese Option sollte normalerweise aktiviert sein, kann aber bei problematischen Grafikadaptern deaktiviert werden.

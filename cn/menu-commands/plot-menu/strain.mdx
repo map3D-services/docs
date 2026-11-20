@@ -2,366 +2,345 @@
 title: "应变"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.3.2.1 最大主应变
 
-## 5.3.2.1 Major Principal Strain
-
-Contours the major , intermediate and minor principal strains. These components can be accessed via the Strain Components toolbar as follows:
+绘制最大、中间和最小主应变的等值线。可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strain Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strain Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration
-
-button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+在弹性分析中，最大主应力通常与最小主应力以及 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用，以估算因应力过大造成的损伤程度。 相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks
 
 #### Accumulated Damage:
 
-In the case of plastic analysis, the accumulated damage function can be activated, When Acc is not activated, the current value of plastic strain is used. When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case (maximum) plastic strain is plotted.
+对于塑性分析，可以启用累积损伤功能。未启用 Acc 时，使用塑性应变的当前值。启用 Acc 时，将在整个模型加载历史中跟踪从第 1 步到当前步骤的损伤，因此绘制的是最不利情况（最大值）的塑性应变。
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum plastic strain occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+请注意，首次屈服发生的步骤（MStep 1st Yield）和最大塑性应变发生的步骤（MStep Max Yield）都会被跟踪，并可显示为轨迹标签。
 
 #### Strain Components:
 
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic
-
-Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
-
-#### Plot > Range
-
-Any of these components can be added to the contouring toolbar if desired.
-
-Tools > Configure Contouring Toolbar > Strain
-
-The user may find it handy to add the
-
-#### More Strain Components
-
-button to the contouring toolbar for quick access to all strain components.
-
-## 5.3.2.4 Maximum Shear Strain
-
-Contours the maximum shear strain ½( e1 - e3 )
-
-This component can be accessed via the Strain Components toolbar as follows:
-
-![Figure from page 228](/images/page-228-img-4.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-You can add this button to the Contours toolbar using the configuration button.
-
-![Figure from page 228](/images/page-228-img-9.png)
-
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
-
-Mohr-Coulomb in 3D FF blocks
-
-Note that there are three components of strain that can be contoured:
+请注意，有三种应变分量可以绘制等值线：
 
 Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
+应变也有两种不同的表示方式：
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+如有需要，这些分量中的任何一个都可以添加到等值线工具栏
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-## 5.3.2.5 In-Plane Shear Strain
+## 5.3.2.4 最大剪应变
 
-Contours the maximum shear strain acting on the grid plane, and the strain component normal to the grid plane or parallel to a line grid.
+绘制最大剪应变 ½( e1 - e3 ) 的等值线
 
-These components can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问该分量，方法如下：
 
-![Figure from page 226](/images/page-226-img-12.png)
+![Figure from page 228](/images/page-228-img-4.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
-![Figure from page 227](/images/page-227-img-4.png)
+![Figure from page 228](/images/page-228-img-9.png)
 
-#### Plot > Grid Selection
-
-To calculate the in-plane strains, the strain state at each point on the grid plane is reoriented to determine the maximum shear strain parallel to the grid plane and the strain normal to the plane. Note that eip is oriented normal to the grid plane and parallel to the direction of a line grid.
-
-![Figure from page 229](/images/page-229-img-14.png)
-
-- dip direction is measured positive clockwise from the y-axis.
-
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
-
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
-
-In elastic analysis the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion
+在弹性分析中，最大主应力通常与最小主应力以及 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用，以估算因应力过大造成的损伤程度。 相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks
 
-to estimate the amount of damage due to over-stressing. By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+请注意，有三种应变分量可以绘制等值线：
 
-Mohr-Coulomb in DD planes
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
-
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic
-
-Plot > Strain > Value > Plastic Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
+应变也有两种不同的表示方式：
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+如有需要，这些分量中的任何一个都可以添加到等值线工具栏
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-Related topics:
+## 5.3.2.5 面内剪应变
 
-Plot > Strain > e1i In-plane Maximum Plot > Strain > e3i In-plane Minimum Plot > Strain > esu Ubiquitous-plane Shear Plot > Strain > enu Ubiquitous-plane Normal
+绘制作用在网格平面上的最大剪应变以及垂直于网格平面或平行于线网格的应变分量的等值线。
 
-## 5.3.2.7 In-Plane Maximum Strain
-
-Contours the maximum and minimum strains tangential to the currently selected grid plane or perpendicular to a line grid.
-
-These components can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
 #### Plot > Grid Selection
 
-To calculate the maximum and minimum in-plane strains, the strains tangential to the grid plane are determined, then resolved to give the maximum and minimum values. Note that eni is oriented normal to the grid plane and parallel to the direction of a line grid. Also note that eni, e1i and e3i are perpendicular to one another.
+为计算面内应变，网格平面上每个点的应变状态都会被重新定向，以确定平行于网格平面的最大剪应变和垂直于该平面的应变。请注意，eip 垂直于网格平面，并平行于线网格的方向。
+
+![Figure from page 229](/images/page-229-img-14.png)
+
+- 倾向自 y 轴起顺时针方向为正。
+
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
+
+- 法线的俯角自水平面起向下为正（即向上为负）。
+
+在弹性分析中，最大面内剪应力通常与面内法向应力以及 Mohr-Coulomb 强度准则一起使用
+
+Mohr-Coulomb in 3D FF blocks
+
+以估算因应力过大造成的损伤程度。 相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
+
+Mohr-Coulomb in DD planes
+
+以估算在与网格平面方向相同的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
+
+请注意，有三种应变分量可以绘制等值线：
+
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+
+应变也有两种不同的表示方式：
+
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
+
+等值线范围通过以下功能设置
+
+#### Plot > Range
+
+如有需要，这些分量中的任何一个都可以添加到等值线工具栏
+
+Tools > Configure Contouring Toolbar > Strain
+
+您可以将
+
+#### More Strain Components
+
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
+
+相关主题：
+
+Plot > Strain > e1i In-plane Maximum Plot > Strain > e3i In-plane Minimum Plot > Strain > esu Ubiquitous-plane Shear Plot > Strain > enu Ubiquitous-plane Normal
+
+## 5.3.2.7 面内最大应变
+
+绘制与当前选定网格平面相切或垂直于线网格的最大和最小应变的等值线。
+
+可通过 Strain Components 工具栏访问这些分量，方法如下：
+
+![Figure from page 226](/images/page-226-img-12.png)
+
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
+
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
+
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
+
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
+
+![Figure from page 227](/images/page-227-img-4.png)
+
+#### Plot > Grid Selection
+
+为计算面内最大和最小应变，首先确定与网格平面相切的应变，再将其分解以得出最大值和最小值。请注意，eni 垂直于网格平面，并平行于线网格的方向。还请注意，eni、e1i 和 e3i 彼此垂直。
 
 ![Figure from page 231](/images/page-231-img-13.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-Note that there are three components of strain that can be contoured:
+请注意，有三种应变分量可以绘制等值线：
 
 #### Plot > Strain > Value > Elastic
 
 Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
+应变也有两种不同的表示方式：
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+等值线范围通过以下功能设置
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+如有需要，可以将该分量添加到等值线工具栏
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
 
 More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-Related topics:
+相关主题：
 
 Plot > Strain > esi In-plane Shear Plot > Strain > eni In-plane Normal Plot > Strain > e1u Ubiquitous-plane Maximum. Plot > Strain > e3u Ubiquitous-plane Minimum.
 
-## 5.3.2.9 Ubiquitous-Plane Shear Strain
+## 5.3.2.9 遍布平面剪应变
 
-Contours the maximum shear strain acting on ubiquitous plane #1, and the strain component normal to this plane.
+绘制作用在遍布平面 #1 上的最大剪应变以及垂直于该平面的应变分量的等值线。
 
-These components can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 228](/images/page-228-img-4.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-To calculate the ubiquitous strains, the strain state at each point on the grid plane is reoriented to determine the maximum shear strain parallel to the ubiquitous plane and the strain normal to the ubiquitous plane. Note that enu is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+为计算遍布应变，网格平面上每个点的应变状态都会被重新定向，以确定平行于遍布平面的最大剪应变和垂直于遍布平面的应变。请注意，enu 垂直于遍布平面，并不平行于线网格的方向。
 
 ![Figure from page 233](/images/page-233-img-3.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-Note that there are three components of strain that can be contoured:
+请注意，有三种应变分量可以绘制等值线：
 
-Plot > Strain > Value > Elastic
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+应变也有两种不同的表示方式：
 
-There are also two different ways of presenting the strain:
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+如有需要，可以将该分量添加到等值线工具栏
 
-#### Tools > Configure Contouring Toolbar > Strain
+Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-Related topics:
+相关主题：
 
 Plot > Strain > e1u Ubiquitous-plane Maximum. Plot > Strain > e3u Ubiquitous-plane Minimum. Plot > Strain > esi In-plane Shear Plot > Strain > eni In-plane Normal
 
-## 5.3.2.11 Ubiquitous-Plane Maximum Strain
+## 5.3.2.11 遍布平面最大应变
 
-Contours the maximum and minimum strains tangential to the ubiquitous plane #1. These components can be accessed via the Strain Components toolbar as follows:
+绘制与遍布平面 #1 相切的最大和最小应变的等值线。可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-To calculate the ubiquitous strains, the strain state at each point on the grid plane is reoriented to determine the maximum and minimum strain parallel to the ubiquitous plane. Note that enu is not oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+为计算遍布应变，网格平面上每个点的应变状态都会被重新定向，以确定平行于遍布平面的最大和最小应变。请注意，enu 并不垂直于遍布平面，也不平行于线网格的方向。
 
 ![Figure from page 235](/images/page-235-img-1.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-Note that there are three components of strain that can be contoured:
+请注意，有三种应变分量可以绘制等值线：
 
-Plot > Strain > Value > Elastic
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-Plot > Strain > Value > Plastic
+应变也有两种不同的表示方式：
 
-Plot > Strain > Value > Total
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+如有需要，可以将该分量添加到等值线工具栏
 
-#### Tools > Configure Contouring Toolbar > Strain
+Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
 
 #### More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-Related topics:
+相关主题：
 
 Plot > Strain > esi Ubiquitous-plane Shear
 
@@ -371,168 +350,166 @@ Plot > Strain > e1u In-plane Maximum.
 
 Plot > Strain > e3u In-plane Minimum.
 
-## 5.3.2.13 Octahedral Shear Strain
+## 5.3.2.13 八面体剪应变
 
-Contours the octahedral shear strain
+绘制八面体剪应变的等值线
 
 eoct = ¹/3 [ (e1 - e2)² + (e2 - e3)² +(e3 - e1)² ]<sup>½</sup>
 
-and the volumetric strain
+和体积应变
 
 evvol = (e1 + e2 + e3)
 
-These components can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 228](/images/page-228-img-9.png)
 
-In elastic analysis the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to overstressing.
+在弹性分析中，最大主应力通常与最小主应力以及 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用，以估算因应力过大造成的损伤程度。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks
 
-Note that there are three components of strain that can be contoured:
+请注意，有三种应变分量可以绘制等值线：
 
 Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
 
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain
-
-Plot > Strain > Value > Absolute Strain
-
-The contour range is set using
-
-#### Plot > Range
-
-This component can be added to the contour toolbar if desired
-
-#### Tools > Configure Contouring Toolbar > Strain
-
-The user may find it handy to add the
-
-#### More Strain Components
-
-button to the contouring toolbar for quick access to all strain components.
-
-## 5.3.2.15 Exx Strain Component
-
-Contours the Cartesian strrain components. These components can be accessed via the Strain Components toolbar as follows:
-
-![Figure from page 228](/images/page-228-img-4.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-You can add this button to the Contours toolbar using the configuration button.
-
-![Figure from page 228](/images/page-228-img-9.png)
-
-Plot > Strain >  exx Cartesian Strain Component   normal strain in the direction of the x-axis Plot > Strain >  eyy Cartesian Strain Component   normal strain in the direction of the y-axis Plot > Strain >  ezz Cartesian Strain Component   normal strain in the direction of the z-axis Plot > Strain >  exy Cartesian Strain Component   normal strain in the direction of the x-y plane Plot > Strain >  eyz Cartesian Strain Component   normal strain in the direction of the y-z plane Plot > Strain >  exz Cartesian Strain Component   normal strain in the direction of the x-z plane
-
-Note that there are three components of strain that can be contoured:
-
-Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
-
-There are also two different ways of presenting the strain:
+应变也有两种不同的表示方式：
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+如有需要，可以将该分量添加到等值线工具栏
 
 Tools > Configure Contouring Toolbar > Strain
 
-The user may find it handy to add the
+您可以将
+
+#### More Strain Components
+
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
+
+## 5.3.2.15 Exx 应变分量
+
+绘制笛卡尔应变分量的等值线。可通过 Strain Components 工具栏访问这些分量，方法如下：
+
+![Figure from page 228](/images/page-228-img-4.png)
+
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
+
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
+
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
+
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
+
+![Figure from page 228](/images/page-228-img-9.png)
+
+Plot > Strain >  exx Cartesian Strain Component   沿 x 轴方向的正应变 Plot > Strain >  eyy Cartesian Strain Component   沿 y 轴方向的正应变 Plot > Strain >  ezz Cartesian Strain Component   沿 z 轴方向的正应变 Plot > Strain >  exy Cartesian Strain Component   沿 x-y 平面方向的正应变 Plot > Strain >  eyz Cartesian Strain Component   沿 y-z 平面方向的正应变 Plot > Strain >  exz Cartesian Strain Component   沿 x-z 平面方向的正应变
+
+请注意，有三种应变分量可以绘制等值线：
+
+Plot > Strain > Value > Elastic Plot > Strain > Value > Plastic Plot > Strain > Value > Total
+
+应变也有两种不同的表示方式：
+
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
+
+等值线范围通过以下功能设置
+
+#### Plot > Range
+
+如有需要，可以将该分量添加到等值线工具栏
+
+Tools > Configure Contouring Toolbar > Strain
+
+您可以将
 
 More Strain Components
 
-button to the contouring toolbar for quick access to all strain components.
+按钮添加到等值线工具栏，以便快速访问所有应变分量。
 
-## 5.3.2.21 Value
+## 5.3.2.21 数值
 
-5.3.2.21.1  Elastic strain
+5.3.2.21.1  弹性应变
 
-Selects the elastic, plastic or total strain component. These components can be accessed via the Strain Components toolbar as follows:
+选择弹性、塑性或总应变分量。可通过 Strain Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-For details, refer to
+详情请参阅
 
 Mohr-Coulomb in 3D FF blocks.
 
-### 5.3.2.21.4 Induced Strain
+### 5.3.2.21.4 诱发应变
 
-Plot the induced or absolute strain component.
+绘制诱发应变或绝对应变分量。
 
-This component can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问该分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-Induced strain is the strain without the pre-mining strain contribution. This represents the strain change since the pre-mining condition.
+诱发应变是不含开采前应变贡献的应变，表示相对于开采前状态的应变变化。
 
-Absolute strain is the strain including the pre-mining strain contribution.
+绝对应变是包含开采前应变贡献的应变。
 
-Also see:
+另请参阅：
 
 Plot > Stress > Value > Induced Strain Plot > Stress > Value > Absolute Strain
 
-### 5.3.2.21.6 Strain
+### 5.3.2.21.6 应变
 
-Plot strain:
+绘制应变：
 
-- in unscaled units (strain/1),
+- 以未缩放单位表示（应变/1），
 
-- in milli-strain (strain/1000),
+- 以毫应变表示（应变/1000），
 
-- in micro-strain (strain/1000000).
+- 以微应变表示（应变/1000000）。
 
-This component can be accessed via the Strain Components toolbar as follows:
+可通过 Strain Components 工具栏访问该分量，方法如下：
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Stress Components 工具栏。
 
-You can add this button to the Contours toolbar using the configuration button.
+您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 228](/images/page-228-img-9.png)

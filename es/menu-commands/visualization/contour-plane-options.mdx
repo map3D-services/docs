@@ -1,128 +1,125 @@
 ---
-title: "Opciones del plano de contorno"
+title: "Opciones del plano de contornos"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
-
-Enables setup of the plane used for contouring of visualization point data (see Visualization).
+Permite configurar el plano usado para contornear los datos de puntos de visualización (vea Visualization).
 
 ![Figure from page 469](/images/page-469-img-3.png)
 
-**X-centre** – the x-coordinate value of the centre of the contour plane.
+**X-centre** – el valor de la coordenada x del centro del plano de contornos.
 
-**Y-centre** – the y-coordinate value of the centre of the contour plane. **Z-centre** – the z-coordinate value of the centre of the contour plane. **Dip of plane** – the dip of the contour plane.
+**Y-centre** – el valor de la coordenada y del centro del plano de contornos. **Z-centre** – el valor de la coordenada z del centro del plano de contornos. **Dip of plane** – el manteo del plano de contornos.
 
-**Dip direction** – the dip direction of the contour plane.
+**Dip direction** – la dirección de manteo del plano de contornos.
 
-**Dip of normal** – the dip of the normal to the contour plane (this value is 90° from the dip of the plane).
+**Dip of normal** – el manteo de la normal al plano de contornos (este valor está a 90° del manteo del plano).
 
-**Pick Normal** - activates the cursor allowing interactive selection of a surface. The centre, dip and dip direction of the contour plane will be set parallel to the selected surface.
+**Pick Normal** - activa el cursor para seleccionar una superficie de forma interactiva. El centro, el manteo y la dirección de manteo del plano de contornos se fijarán paralelos a la superficie seleccionada.
 
-**Copy from Grid#** – copies the location and orientation parameters from a model grid plane. **Linear regression** – finds a best fit plane through the seismic data by minimizing the normal
+**Copy from Grid#** – copia los parámetros de ubicación y orientación desde un plano de grilla del modelo. **Linear regression** – encuentra el plano de mejor ajuste a través de los datos sísmicos minimizando la distancia normal
 
-distance from all points to the plane.
+de todos los puntos al plano.
 
-**Make Grid** – creates a model grid plane from the contour plane.
+**Make Grid** – crea un plano de grilla del modelo a partir del plano de contornos.
 
-**Make Map3Di file** – generates a data file from the contoured data to be used for seismic loading in a **Map3Di** analysis (more on this below).
+**Make Map3Di file** – genera, a partir de los datos contorneados, un archivo de datos que se usará para la carga sísmica en un análisis **Map3Di** (más detalles abajo).
 
 #### Contour Plane Options:
 
-**Num in voxel** – the count of the number of points within each voxel is contoured. **Sum in voxel** – the sum of the plot equation values for all points located in the voxel is contoured.
+**Num in voxel** – se contornea el número de puntos dentro de cada vóxel. **Sum in voxel** – se contornea la suma de los valores de la ecuación de graficación de todos los puntos ubicados en el vóxel.
 
-**Sum/Num in voxel** – the quotient of the two values is contoured.
+**Sum/Num in voxel** – se contornea el cociente de los dos valores.
 
 ![Figure from page 470](/images/page-470-img-3.png)
 
 ![Figure from page 470](/images/page-470-img-4.png)
 
-- **Grid spacing** – the grid spacing used to contour the seismic data. Since the voxel is centred at each grid corner, this parameter controls the density of the voxels. Note that if the grid spacing is smaller than the voxel width, adjacent voxels will overlap.
+- **Grid spacing** – el espaciamiento de grilla usado para contornear los datos sísmicos. Como el vóxel está centrado en cada esquina de la grilla, este parámetro controla la densidad de los vóxeles. Tenga en cuenta que si el espaciamiento de la grilla es menor que el ancho del vóxel, los vóxeles adyacentes se traslaparán.
 
-**Voxel width** – the voxel width is measured parallel to the edges of the grid plane.
+**Voxel width** – el ancho del vóxel se mide paralelo a los bordes del plano de la grilla.
 
-**Voxel height** – the voxel height is measured perpendicular to the grid plane. This allows the user to
+**Voxel height** – la altura del vóxel se mide perpendicular al plano de la grilla. Esto permite al usuario
 
-limit the distance from the grid plane within which data will be included in the contouring.
+limitar la distancia al plano de la grilla dentro de la cual se incluirán datos en el contorneo.
 
-**Outlines** – draws the actual voxel outlines.
+**Outlines** – dibuja los contornos reales de los vóxeles.
 
-- **Persist** – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired.
+- **Persist** – cuando está marcada, los puntos se vuelven a graficar cada vez que el modelo se reorienta, se traslada o se le aplica zoom. Como esto puede tardar bastante en modelos grandes, no siempre es deseable esta opción.
 
-**Translucent** - draws the points as translucent spheres.
+**Translucent** - dibuja los puntos como esferas translúcidas.
 
-**Zero Contour** - when unchecked, contours below the minimum contour range are not drawn. This
+**Zero Contour** - cuando no está marcada, no se dibujan los contornos por debajo del mínimo del rango de contornos. Esto
 
-is useful for displaying contours where only the upper part of the contour range is important. **Range** – specifies the minimum, maximum and interval for radius scaling and contouring.
+es útil para mostrar contornos en los que solo importa la parte superior del rango. **Range** – especifica el mínimo, el máximo y el intervalo para el escalado del radio y los contornos.
 
-- Plot regenerates the plot. This button can be placed on either the View Toolbar (Tools >
+- Plot regenera el gráfico. Este botón se puede colocar en la barra de herramientas de vista (Tools >
 
-- View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+- View Toolbar Configure) o en la barra de herramientas de contornos (Tools > Contour Toolbar Configure).
 
 #### Linear Regression:
 
-The linear regression is conducted by finding the plane that has the minimum **_rms_** value (the root mean square, or mean distance of all points to the fitted plane).
+La regresión lineal se realiza encontrando el plano que tiene el valor **_rms_** mínimo (la raíz cuadrática media, o distancia media de todos los puntos al plano ajustado).
 
-Standard theory on correlation coefficient is not suitable as a measure of goodness of fit in this case. This is because we are not interested in the "measure of the degree of association between variables" but rather we want a measure of how well the fitted plane represents out data. Note that if all data lies in a single horizontal plane, we have a perfect plane fit. By definition however there is zero correlation
+La teoría estándar del coeficiente de correlación no es adecuada como medida de la bondad de ajuste en este caso. Esto se debe a que no nos interesa la "medida del grado de asociación entre variables", sino una medida de qué tan bien el plano ajustado representa nuestros datos. Tenga en cuenta que, si todos los datos están en un único plano horizontal, el ajuste del plano es perfecto. Sin embargo, por definición la correlación es cero
 
-(and hence the correlation coefficient equals zero) because the z value does not depend on the x or y values. This is not what we want.
+(y por lo tanto el coeficiente de correlación es igual a cero), porque el valor de z no depende de los valores de x ni de y. Esto no es lo que queremos.
 
-Here a parameter similar to a coefficient of variation (a measure of the variability divided by the magnitude) is defined. **_Cv_** is simply defined as the **_rms_** value (the mean distance of all points to the fitted plane) divided by the mean distance of all points to the centroid. This measures how well the plane represents the data. This ratio is usually expressed as a percentage. Defined like this, random data gives a **Cv** =100% (100% variability). A perfect fit gives a **_Cv_** =0 (0% variability). Note that it is possible for **_Cv_** to exceed 100%. You can think of this parameter as the ratio of the variability around the plane divided by the physical width of the data set.
+Aquí se define un parámetro similar a un coeficiente de variación (una medida de la variabilidad dividida por la magnitud). **_Cv_** se define simplemente como el valor **_rms_** (la distancia media de todos los puntos al plano ajustado) dividido por la distancia media de todos los puntos al centroide. Esto mide qué tan bien el plano representa los datos. Esta razón suele expresarse como porcentaje. Definido así, los datos aleatorios dan un **Cv** =100% (100% de variabilidad). Un ajuste perfecto da un **_Cv_** =0 (0% de variabilidad). Tenga en cuenta que es posible que **_Cv_** supere el 100%. Puede pensar en este parámetro como la razón entre la variabilidad en torno al plano y el ancho físico del conjunto de datos.
 
-This is very similar to the formal definition of coefficient of variation which is standard deviation divided by the mean. Most geologic materials have properties with **_Cv_** on the order of 20 to 30%. **_Cv_** could be turned into an equivalent correlation coefficient using
+Esto es muy similar a la definición formal del coeficiente de variación, que es la desviación estándar dividida por la media. La mayoría de los materiales geológicos tienen propiedades con un **_Cv_** del orden de 20 a 30%. **_Cv_** podría convertirse en un coeficiente de correlación equivalente usando
 
 **_r_ = (1-** **_Cv_ ²)**<sup>**½**</sup>
 
-but this is not really the correct parameter to use and there are problems in definition for cases where **_Cv_** exceeds 1.
+pero este no es realmente el parámetro correcto y existen problemas de definición en los casos en que **_Cv_** supera 1.
 
-Both the **rms** and **_Cv_** are displayed for the current plane whenever data is plotted.
+Tanto **rms** como **_Cv_** se muestran para el plano actual cada vez que se grafican datos.
 
 #### Make Map3Di file:
 
-In order to make a Map3Di loading file one must determine the shear displacement distribution (ride) indicated by the seismicity. This requires several assumptions (refer to A. McGarr, "Some Applications of Seismic Source Mechanism Studies to Assessing Underground Hazard", Proc. 1st International Symposium on Rockbursts and Seismicity in Mines, SAIMM, Johannesburg, 1984, pp. 199-208, and Hoffman, G, R. Sewjee and G. van Aswegan, "First steps in the integration of numerical modelling and seismic monitoring", 5th International Symposium on Rockburst and Seismicity in Mines, SAIMM, Johannesburg, 2000, pp. 397-404.) which are outlined here:
+Para crear un archivo de carga Map3Di se debe determinar la distribución del desplazamiento de corte (ride) indicada por la sismicidad. Esto requiere varios supuestos (consulte A. McGarr, "Some Applications of Seismic Source Mechanism Studies to Assessing Underground Hazard", Proc. 1st International Symposium on Rockbursts and Seismicity in Mines, SAIMM, Johannesburg, 1984, pp. 199-208, y Hoffman, G, R. Sewjee and G. van Aswegan, "First steps in the integration of numerical modelling and seismic monitoring", 5th International Symposium on Rockburst and Seismicity in Mines, SAIMM, Johannesburg, 2000, pp. 397-404.) que se describen aquí:
 
-1) Assuming a slip model. Here we can consider either an elliptic crack model (Brune) or an asperity model with soft edges due to creep (Walsh, J.J. and J. Waterson, "Distribution of cumulative displacements and seismic slip on a single normal fault surface", J. Struct. Geol., V. 9, 1987, pp. 1039-1046). Generally a circular (penny) shape will be used unless the user has some way to define an alternate shape.
+1) Suponer un modelo de deslizamiento. Aquí se puede considerar un modelo de fisura elíptica (Brune) o un modelo de asperidad con bordes blandos debido a la fluencia (Walsh, J.J. and J. Waterson, "Distribution of cumulative displacements and seismic slip on a single normal fault surface", J. Struct. Geol., V. 9, 1987, pp. 1039-1046). En general se usará una forma circular (tipo moneda) a menos que el usuario tenga alguna forma de definir una forma alternativa.
 
-2) The average value of slip can be determined from the seismic moment **_Mo_ =** m **_AD_** where m is the modulus of rigidity, **_A_** is the source area (determined from the source radius), and **_D_** is the average slip across the fault. This can also be determined from the determined from the "Seismic Strain Drop".
+2) El valor promedio del deslizamiento se puede determinar a partir del momento sísmico **_Mo_ =** m **_AD_**, donde m es el módulo de rigidez, **_A_** es el área de la fuente (determinada a partir del radio de la fuente) y **_D_** es el deslizamiento promedio a través de la falla. Esto también se puede determinar a partir de la "caída de deformación sísmica" (Seismic Strain Drop).
 
-3) The slip surface radius can be estimated from the Brune radius as the shear wave velocity and **_fo_** is the corner frequency. For an asperity model, the radius **_a_ = 2.34** b **/(2** p **_fo_ )** , where b is determined from the radius of the "Apparent Volume" is probably more appropriate.
+3) El radio de la superficie de deslizamiento se puede estimar a partir del radio de Brune, siendo b la velocidad de la onda de corte y **_fo_** la frecuencia de esquina. Para un modelo de asperidad, el radio **_a_ = 2.34** b **/(2** p **_fo_ )**, donde b se determina a partir del radio del "volumen aparente" (Apparent Volume), es probablemente más apropiado.
 
-4) The orientation of slip can be determined from the seismic moment tensor if available, or from the stress state from modelling.
+4) La orientación del deslizamiento se puede determinar a partir del tensor de momento sísmico, si está disponible, o a partir del estado de esfuerzos obtenido del modelamiento.
 
-From these 4 items you can determine the slip profile indicated by the seismic event.
+A partir de estos 4 elementos se puede determinar el perfil de deslizamiento indicado por el evento sísmico.
 
-For an elliptic profile, the shear displacement (ride) distribution is given by
+Para un perfil elíptico, la distribución del desplazamiento de corte (ride) está dada por
 
 **1.50** **_D_ (1-** **_r_ ²/** **_a_ ²)**<sup>**½**</sup>
 
-For an asperity profile, the shear displacement (ride) distribution is given by
+Para un perfil de asperidad, la distribución del desplazamiento de corte (ride) está dada por
 
 #### 2.89 _D_ (1- _r_ / _a_ )(1+2 _r_ / _a_ -3 _r_ ²/ _a_ ²)<sup>½</sup>
 
-A seismic loading file can be generated for Map3Di as follows:
+Se puede generar un archivo de carga sísmica para Map3Di de la siguiente forma:
 
-- 1) Construct a seismic data file with as a series of points:
+- 1) Construya un archivo de datos sísmicos como una serie de puntos:
 
 **x1 y1 z1 f1 f2 … x2 y2 z2 f1 f2 … x3 y3 z3 f1 f2 … ...**
 
-where **xi yi zi** represent the coordinates of each point,
+donde **xi yi zi** representan las coordenadas de cada punto,
 
-**f1** indicates the average slip **_D_** , and **f2** indicates the source radius **_a_** .
+**f1** indica el deslizamiento promedio **_D_** y **f2** indica el radio de la fuente **_a_** .
 
-- 2) Using the Visualization routine, for an elliptic profile specify the plot equation as
+- 2) Con la rutina Visualization, para un perfil elíptico especifique la ecuación de graficación como
 
    - **1.50*f1*sqrt(1-rip^2/f2^2)**
 
-For an asperity profile use
+Para un perfil de asperidad use
 
 #### 2.89*f1*(1-rip/f2)*sqrt(1+2*rip/f2-3*rip^2/f2^2)
 
-3) Choose your desired plane, grid spacing, set the desired voxel height and width. The voxel height can be used to clip out of plane events. It is important to choose the voxel width equal to the largest desired event radius in order to distribute the shear displacement (ride) over all affected voxels.
+3) Elija el plano deseado y el espaciamiento de grilla, y fije la altura y el ancho de vóxel deseados. La altura del vóxel se puede usar para recortar los eventos fuera del plano. Es importante elegir un ancho de vóxel igual al mayor radio de evento deseado, para distribuir el desplazamiento de corte (ride) sobre todos los vóxeles afectados.
 
-- 4) Set Plotting Options to "Sum in Voxel" and Plot.
+- 4) Fije las opciones de graficación en "Sum in Voxel" y grafique (Plot).
 
 - 5) Make Map3Di file.
 
-- 6) View Map3Di file using CAD > Properties > Map3Di Setup and view the f2 parameter.
+- 6) Vea el archivo Map3Di con CAD > Properties > Map3Di Setup y revise el parámetro f2.
 
-Refer to **CAD > Properties > Map3Di** for details concerning the data format.
+Para detalles sobre el formato de los datos, vea **CAD > Properties > Map3Di**.

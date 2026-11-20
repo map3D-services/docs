@@ -2,79 +2,76 @@
 title: "分析选项"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
-Sets up options that control various program operations.
+设置控制程序各项操作的选项。
 
 ![Figure from page 345](/images/page-345-img-8.png)
 
 #### File Load Options:
 
-Analysis > Options > Renumber Renumber surfaces so the volume is positive (during file load). Analysis > Options > Auto Repair Attempts to repair you model by filling gaps, deleting duplicates etc.(during file load).
+Analysis > Options > Renumber 重新编号表面，使体积为正（在文件加载期间）。Analysis > Options > Auto Repair 尝试通过填补间隙、删除重复项等方式修复模型（在文件加载期间）。
 
 #### Intersection Options:
 
-Analysis > Options > Collapse Merge adjacent surfaces (during intersection analysis).
+Analysis > Options > Collapse 合并相邻表面（在相交分析期间）。
 
-Analysis > Options > Planarity Subdivide non-planar quadrilaterals into triangles (during intersection analysis).
+Analysis > Options > Planarity 将非平面四边形细分为三角形（在相交分析期间）。
 
-Analysis > Options > Closure Conducts closure and overlap checking, and resolves Boolean intersections (during intersection analysis).
+Analysis > Options > Closure 进行闭合与重叠检查，并解决布尔相交（在相交分析期间）。
 
 #### Discretization Options:
 
-Analysis > Options > MSCALC Calculate results at user defined points (during Map3D BEM analysis).
+Analysis > Options > MSCALC 在用户定义的点上计算结果（在 Map3D BEM 分析期间）。
 
-Analysis > Options > LERD Calculate energy release rate and loading system stiffness (during Map3D BEM analysis).
+Analysis > Options > LERD 计算能量释放率和加载系统刚度（在 Map3D BEM 分析期间）。
 
-Analysis > Options > ERR Calculate energy release rate and loading system stiffness (during Map3D BEM analysis).
+Analysis > Options > ERR 计算能量释放率和加载系统刚度（在 Map3D BEM 分析期间）。
 
 Analysis > Options > Lumping Accuracy
 
-Analysis > Options > Lumping Pre-calculate coefficient matrix size (during discretization analysis).
+Analysis > Options > Lumping 预先计算系数矩阵的大小（在离散化分析期间）。
 
 #### Map3D BEM Analysis Options:
 
-Analysis > Options > V-ram Store part of the coefficient matrix in virtual RAM (during Map3D BEM analysis).
+Analysis > Options > V-ram 将部分系数矩阵存储在虚拟内存中（在 Map3D BEM 分析期间）。
 
-Analysis > Options > P-ram Store part of the coefficient matrix in physical RAM (during Map3D BEM analysis). Analysis > Options > Drive 1 Specify primary scratch drives for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > P-ram 将部分系数矩阵存储在物理内存中（在 Map3D BEM 分析期间）。Analysis > Options > Drive 1 指定系数矩阵的主暂存驱动器（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Drive 2 Specify secondary scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 2 指定系数矩阵的第二暂存驱动器（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Drive 3 Specify third scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 3 指定系数矩阵的第三暂存驱动器（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Drive 4 Specify fourth scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 4 指定系数矩阵的第四暂存驱动器（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Creep Conduct elasto-visco-plastic creep analysis.
+Analysis > Options > Creep 进行弹-粘-塑性蠕变分析。
 
-Analysis > Options > Move Points Move field points that are very close to boundary surfaces (during Map3D BEM analysis).
+Analysis > Options > Move Points 移动非常靠近边界表面的场点（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Verbose Write all solution vectors and field point results to the log file (during Map3D BEM analysis).
+Analysis > Options > Verbose 将所有解向量和场点结果写入日志文件（在 Map3D BEM 分析期间）。
 
-Analysis > Options > CGM Use the conjugate gradient solver (during Map3D BEM analysis).
+Analysis > Options > CGM 使用共轭梯度求解器（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Precondition Precondition the matrix (during Map3D BEM analysis). Analysis > Options > Accelerate Use the matrix accelerator (during Map3D BEM analysis). Analysis > Options > Linear Use higher order boundary elements (during Map3D BEM analysis).
+Analysis > Options > Precondition 对矩阵进行预处理（在 Map3D BEM 分析期间）。Analysis > Options > Accelerate 使用矩阵加速器（在 Map3D BEM 分析期间）。Analysis > Options > Linear 使用高阶边界单元（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Quad Use higher order boundary elements (during Map3D BEM analysis).
+Analysis > Options > Quad 使用高阶边界单元（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Threads = 8  indicates the number of threads currently active.
+Analysis > Options > Threads = 8  表示当前活动的线程数。
 
-Analysis > Options > Nosleep in analysis Use Windows asynchronous I/O routines (during Map3D BEM analysis).
+Analysis > Options > Nosleep in analysis 使用 Windows 异步 I/O 例程（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Async I/O Use Windows asynchronous I/O routines (during Map3D BEM analysis).
+Analysis > Options > Async I/O 使用 Windows 异步 I/O 例程（在 Map3D BEM 分析期间）。
 
-Analysis > Options > Zero Strain Placement When a new material is assigned to a block CAD > Edit > Entity Properties, these materials are initialized to the specified stress state CAD > Properties > Material Properties.
+Analysis > Options > Zero Strain Placement 使用 CAD > Edit > Entity Properties 为块体指定新材料时，这些材料将按 CAD > Properties > Material Properties 中指定的应力状态进行初始化。
 
-Analysis > Options > Initialization Initialize the model so that the analysis continues from where a previous analysis completed.
+Analysis > Options > Initialization 初始化模型，使分析从上一次分析结束的位置继续。
 
-Analysis > Options > Halt on Errors Initialize the model so that the analysis continues from where a previous analysis completed.
+Analysis > Options > Halt on Errors 初始化模型，使分析从上一次分析结束的位置继续。
 
-Analysis > Options > Host Stress Datum is Ground Surface Treat the datum as ground surface such that any surfaces above the datum are assigned a zero stress state.
+Analysis > Options > Host Stress Datum is Ground Surface 将基准面视为地表，使基准面以上的任何表面都被赋予零应力状态。
 
-Analysis > Options > Calculate Tangential Stress Components In elastic analyses, tangential stresses are not calculated unless requested. This is because they are not required for the solution process and do require additional analysis time. These values are calculated by default during plastic analysis.
+Analysis > Options > Calculate Tangential Stress Components 在弹性分析中，除非有要求，否则不计算切向应力。这是因为求解过程不需要它们，且会增加分析时间。在塑性分析中，默认会计算这些值。
 
 #### Miscellaneous Options:
 
-Analysis > Options > Batch Set up analysis batch queue.
+Analysis > Options > Batch 设置分析批处理队列。
 
 Analysis > Options > Reset

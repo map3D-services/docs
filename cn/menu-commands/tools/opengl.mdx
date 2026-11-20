@@ -2,67 +2,64 @@
 title: "OpenGL"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
 ## 5.6.4.1 OpenGL &lt;On/Off>
 
-Enables OpenGL support.
+启用 OpenGL 支持。
 
-OpenGL is an industry standard high-quality 3D graphics rendering interface. The main advantages in using OpenGL are hardware acceleration of the graphics display and support for z-buffering. Of course you must have a graphics adaptor that supports OpenGL and have the OpenGL display driver installed to get hardware acceleration.
+OpenGL 是业界标准的高质量 3D 图形渲染接口。使用 OpenGL 的主要优点是图形显示的硬件加速以及对 z 缓冲的支持。当然，要获得硬件加速，您必须拥有支持 OpenGL 的显卡，并安装 OpenGL 显示驱动程序。
 
-See Tools > OpenGL Parameters to view OpenGL setup.
+参见 Tools > OpenGL Parameters 查看 OpenGL 设置。
 
-See Tools > OpenGL Anti-aliasing to smooth lines.
+参见 Tools > OpenGL Anti-aliasing 使线条平滑。
 
-## 5.6.4.2 OpenGL Parameters
+## 5.6.4.2 OpenGL 参数
 
-Reports on OpenGL setup:
+报告 OpenGL 设置：
 
-Support OpenGL – indicates whether an OpenGL driver is installed and enabled.
+Support OpenGL – 指示是否已安装并启用 OpenGL 驱动程序。
 
-Driver or Hardware Support - indicates whether an OpenGL is supported by your graphics adaptor.
+Driver or Hardware Support - 指示您的显卡是否支持 OpenGL。
 
-Double Buffered – indicates that there is sufficient memory to support double buffering.
+Double Buffered – 指示是否有足够的内存支持双缓冲。
 
-Color Buffer Bits – indicates the number of bits used for the colour buffer.
+Color Buffer Bits – 指示颜色缓冲区使用的位数。
 
-Depth Buffer Bits – indicates the number of bits used for the z-buffer.
+Depth Buffer Bits – 指示 z 缓冲区使用的位数。
 
-## 5.6.4.3 OpenGL Antialiasing
+## 5.6.4.3 OpenGL 抗锯齿
 
-Enables smoothing of points, lines and edges of polygons.
+启用点、线和多边形边缘的平滑。
 
-This OpenGL feature provides improved appearance but slows rendering.
+此 OpenGL 功能可改善外观，但会降低渲染速度。
 
-View > Render > Line Width can be used to enable drawing of wider lines. This would also help smooth line drawing with as much impact on performance.
+View > Render > Line Width 可用于启用更宽线条的绘制。这同样有助于使线条绘制更平滑，对性能的影响与之相当。
 
-## 5.6.4.4 OpenGL Redraw
+## 5.6.4.4 OpenGL 重绘
 
-Enables OpenGL redrawing of the screen when the window needs to be refreshed.
+在窗口需要刷新时，启用 OpenGL 重绘屏幕。
 
-The Map3D display window must be refreshed every time a dialogue box is moved or removed. This refresh can either be done by saving the display window to a back buffer (this option is not checked), or by simply redrawing the screen (this option is checked).
+每当移动或关闭对话框时，都必须刷新 Map3D 显示窗口。刷新方式可以是将显示窗口保存到后台缓冲区（不勾选此选项），也可以是直接重绘屏幕（勾选此选项）。
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+通常应勾选此选项，但对于有问题的显卡可以禁用。
 
-## 5.6.4.5 OpenGL Pick
+## 5.6.4.5 OpenGL 拾取
 
-Enables OpenGL to locate graphics entities on the screen.
+启用 OpenGL 来定位屏幕上的图形实体。
 
-When you left click on an entity Map3D must determine which entity you have selected. This can be determined either by OpenGL or internally by Map3D.
+当您左键单击某个实体时，Map3D 必须确定您选中了哪个实体。这可以由 OpenGL 确定，也可以由 Map3D 内部确定。
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+通常应勾选此选项，但对于有问题的显卡可以禁用。
 
-## 5.6.4.6 OpenGL Crosshairs
+## 5.6.4.6 OpenGL 十字光标
 
-Toggles between OpenGL and Windows API drawing of cursor crosshairs.
+在使用 OpenGL 和 Windows API 绘制光标十字线之间切换。
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+通常应勾选此选项，但对于有问题的显卡可以禁用。
 
-To completely disable drawing of the cursor crosshairs select Tools > Crosshairs.
+要完全禁用光标十字线的绘制，请选择 Tools > Crosshairs。
 
-## 5.6.4.7 OpenGL Interactive Edit
+## 5.6.4.7 OpenGL 交互式编辑
 
-Enables interactive OpenGL drawing of modified shapes during editing operations.
+在编辑操作期间，启用 OpenGL 对修改后的形状进行交互式绘制。
 
-This option should normally be checked, but can be disabled for problem graphics adaptors.
+通常应勾选此选项，但对于有问题的显卡可以禁用。

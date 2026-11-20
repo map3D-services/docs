@@ -2,59 +2,56 @@
 title: "Importar modelo desde DXF o PNT"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Carga un modelo desde un archivo DXF (AutoCAD-DXF) o PNT (formato de archivo de puntos).
 
-Loads a model from a DXF (AutoCAD-DXF) or PNT (Point file format) file.
+Una vez cargado, se puede ejecutar cualquier etapa de análisis de Map3D que se desee.
 
-Once loaded the user can execute any desired Map3D Analysis Stage.
-
-To add or edit mining blocks and set up the Map3D analysis use
+Para agregar o editar bloques de explotación y configurar el análisis de Map3D, use
 
 #### Analysis > Go to CAD.
 
-While loading the model Map3D checks for basic consistency of the modelling parameters (e.g. if a material is used, its properties must be specified in the material list).
+Al cargar el modelo, Map3D verifica la consistencia básica de los parámetros de modelamiento (p. ej., si se usa un material, sus propiedades deben estar especificadas en la lista de materiales).
 
-You will be prompted to search for a model file name, location and file format. Models can be loaded from several file types:
+Se le pedirá que busque el nombre, la ubicación y el formato del archivo del modelo. Los modelos se pueden cargar desde varios tipos de archivo:
 
-- AutoCAD-DXF format is a popular drawing exchange file with the extension ".DXF". This format is useful for exchanging model data with other CAD software.
+- El formato AutoCAD-DXF es un archivo de intercambio de dibujos muy difundido, con la extensión ".DXF". Este formato es útil para intercambiar datos de modelos con otro software CAD.
 
-- Point file format is a universal ASCII data file with the extension ".PNT". This format is useful for exchanging raw model data with other CAD software.
+- El formato de archivo de puntos es un archivo de datos ASCII universal con la extensión ".PNT". Este formato es útil para intercambiar datos brutos de modelos con otro software CAD.
 
-The model geometric and material data being loaded can either overwrite or be merged with existing model data. The overwrite/merge options:
+Los datos geométricos y de materiales del modelo que se cargan pueden sobrescribir los datos existentes del modelo o fusionarse con ellos. Las opciones de sobrescribir/fusionar:
 
-Note that geometric information is imported as Fictitious Force - FF type elements (used for threedimensional features such as excavations, alternate material zones, back-filled stopes etc.). If you want to use these as Displacement Discontinuity - DD type elements (used for tabular mining excavations, fractures and fault planes) you will need to edit these using CAD > Edit > Entity Properties and change the element type.
+Tenga en cuenta que la información geométrica se importa como elementos de tipo Fictitious Force - FF (usados para elementos tridimensionales como excavaciones, zonas de material alterno, caserones rellenados, etc.). Si desea usarlos como elementos de tipo Displacement Discontinuity - DD (usados para excavaciones tabulares, fracturas y planos de falla), deberá editarlos con CAD > Edit > Entity Properties y cambiar el tipo de elemento.
 
 - File > Open > Merge Geometries
 
 - · File > Open > Merge Materials
 
-appears at the bottom of the open file dialogue box.
+aparecen en la parte inferior del cuadro de diálogo para abrir archivos.
 
-#### Merging multiple files into one model
+#### Fusionar varios archivos en un solo modelo
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+Puede seleccionar varios archivos a la vez manteniendo presionadas las teclas estándar de Windows "shift" o "ctrl" para hacer selecciones múltiples.
 
-These files will be merging into one model/database.
+Estos archivos se fusionarán en un solo modelo/base de datos.
 
-This allows you to keep separate parts of model data in different files then easily merge them together into one model/database.
+Esto le permite mantener partes separadas de los datos del modelo en distintos archivos y luego fusionarlas fácilmente en un solo modelo/base de datos.
 
-Another way of merging multiple files is to select the "Merge Geometries" option prior to selecting the additional file you want to add to the existing model/database. This is useful if you already have a model open and want to add additional model data to this.
+Otra forma de fusionar varios archivos es seleccionar la opción "Merge Geometries" antes de seleccionar el archivo adicional que desea agregar al modelo/base de datos existente. Esto es útil si ya tiene un modelo abierto y desea agregarle más datos de modelo.
 
-#### Notes:
+#### Notas:
 
-For quick access at a later session, each time you open a file its name is saved under
+Para un acceso rápido en una sesión posterior, cada vez que abre un archivo su nombre se guarda en
 
 #### File > Recent Files
 
-and the working directory is saved under
+y el directorio de trabajo se guarda en
 
 File > Open > Recent Directories.
 
-To load analysis results use
+Para cargar resultados de análisis use
 
 File > Open Analysis Results.
 
-To restart an analysis that was aborted or interrupted by a power failure or operating system crash use
+Para reiniciar un análisis que fue abortado o interrumpido por un corte de energía o una falla del sistema operativo use
 
 File > Restart an Analysis.

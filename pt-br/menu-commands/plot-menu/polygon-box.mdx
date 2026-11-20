@@ -2,27 +2,24 @@
 title: "Caixa poligonal"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Calcula o valor médio ponderado de todos os pontos de contorno selecionados. Esta função também pode ser ativada com View > Length.
 
-Calculates the weighted average value for all selected contour points. This function can also be activated using View > Length.
+Você será solicitado a selecionar uma série de vértices para definir um polígono fechado, clicando uma vez com o mouse em cada um:
 
-You will be prompted to select a series of corners to define a closed polygon by picking each with a single mouse click:
+- Você deve manter pressionada a tecla Shift para que vários segmentos de linha possam ser selecionados.
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- Uma forma poligonal fechada é definida fechando a polilinha ao selecionar o ponto inicial.
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- Se você definir uma forma poligonal fechada, os pontos de contorno contidos no polígono serão incluídos na média.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included in the averaging.
+- A rotina de média não funcionará se você definir uma polilinha aberta (ao não selecionar o ponto inicial).
 
-- The average routine will not function if you define an open polyline shape (by not selecting the starting point).
+- Para ver a localização dos pontos de contorno reais, ative a exibição de trajetórias (Plot > Options > Trajectories). Os pontos de contorno ficam onde as trajetórias são desenhadas.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+A média é calculada multiplicando cada valor selecionado pela área da superfície ou célula de grade associada e somando esses produtos. Este resultado é apresentado como "Weighted Sum". O "Average" é determinado dividindo a soma ponderada pela área total.
 
-The averaging is done by multiplying each selected value by the area of its associated surface or grid patch, then summing these. This result is presented as the "Weighted Sum". The "Average" is determined by dividing the weighted sum by the total area.
+Todos os valores são acumulados como componentes vetoriais. As tensões principais são determinadas a partir da média ponderada das componentes cartesianas. As componentes de deslocamento, de fluxo e de cisalhamento superficial são determinadas a partir da média ponderada das componentes vetoriais.
 
-All values are accumulated as vector components. Principal stresses are determined from the weighted mean of the Cartesian components. Displacement, flow and surface shear components are determined from the weighted mean of the vector components.
+Observe que, para tensões, a "Weighted Sum" é na verdade a força total atuando sobre a superfície.
 
-Note that for stresses, the "Weighted Sum" is actually the total force acting on the surface.
-
-If you multiply by the shear modulus, the "Weighted Sum" of the plastic shear displacement (ride) is actually the Seismic Moment.
+Se você multiplicar pelo módulo de cisalhamento, a "Weighted Sum" do deslocamento plástico de cisalhamento (ride) é na verdade o momento sísmico.

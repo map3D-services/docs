@@ -2,113 +2,108 @@
 title: "Ausblenden"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
 - **5.2.1.1** **Off**
 
-These tools are used to make it easy to hide various portions of the geometry.
+Mit diesen Werkzeugen lassen sich verschiedene Teile der Geometrie leicht ausblenden.
 
 ![Figure from page 202](/images/page-202-img-11.png)
 
-Selecting the button on the View toolbar activates the Hide toolbar
+Mit der Schaltfläche in der Symbolleiste View wird die Symbolleiste Hide aktiviert
 
 ![Figure from page 202](/images/page-202-img-13.png)
 
-Note that if the button is not on the View toolbar it can be added by using the button then selecting Hide > Hide More.
+Beachten Sie: Wenn sich die Schaltfläche nicht in der Symbolleiste View befindet, kann sie hinzugefügt werden, indem Sie die Schaltfläche verwenden und dann Hide > Hide More auswählen.
 
-View > Hide > Off   Turns off the hide function.
+View > Hide > Off   Schaltet die Ausblendfunktion aus.
 
-View > Hide > Surfaces   Hides surfaces by picking one at a time.
+View > Hide > Surfaces   Blendet Oberflächen aus, indem sie einzeln ausgewählt werden.
 
-View > Hide > Blocks   Hides all surfaces that make up the selected block.
+View > Hide > Blocks   Blendet alle Oberflächen aus, die den ausgewählten Block bilden.
 
-View > Hide > Numbers   Hide all surfaces with the selected block colour number.
+View > Hide > Numbers   Blendet alle Oberflächen mit der ausgewählten Blockfarbnummer aus.
 
-View > Hide > Colour   Hide all surfaces with the selected colour.
+View > Hide > Colour   Blendet alle Oberflächen mit der ausgewählten Farbe aus.
 
-View > Hide > Materials   Hides all surfaces with the selected material number. The same block may have different materials in it depending on the currently active mining step.
+View > Hide > Materials   Blendet alle Oberflächen mit der ausgewählten Materialnummer aus. Derselbe Block kann je nach aktuell aktivem Abbauschritt unterschiedliche Materialien enthalten.
 
-When using this later function, make sure to select the appropriate mining step
+Achten Sie bei Verwendung dieser Funktion darauf, den passenden Abbauschritt auszuwählen
 
 File > Mining Step
 
-View > Hide > Names   Hide all surfaces with the selected block name.
+View > Hide > Names   Blendet alle Oberflächen mit dem ausgewählten Blocknamen aus.
 
-View > Hide > Steps   Hide all surfaces that are mined in the selected step.
+View > Hide > Steps   Blendet alle Oberflächen aus, die im ausgewählten Schritt abgebaut werden.
 
-View > Hide > Window   Hides all surfaces within the selected window. Entities will only be selected if the entire entity is contained within the window.
+View > Hide > Window   Blendet alle Oberflächen innerhalb des ausgewählten Fensters aus. Objekte werden nur ausgewählt, wenn sie vollständig im Fenster liegen.
 
-View > Hide > Crossing   Hides all surfaces within the crossing window. Entities will be selected if even a part of the entity is within the window.
+View > Hide > Crossing   Blendet alle Oberflächen innerhalb des Kreuzungsfensters aus. Objekte werden bereits ausgewählt, wenn nur ein Teil des Objekts im Fenster liegt.
 
-View > Hide > Undo last Hide   Undo the last hide operation (maximum of 10 are currently saved).
+View > Hide > Undo last Hide   Macht den letzten Ausblendvorgang rückgängig (derzeit werden maximal 10 gespeichert).
 
-View > Hide > Redo last Hide   Redo the previous hide operation (maximum of 10 are currently saved).
+View > Hide > Redo last Hide   Wiederholt den vorherigen Ausblendvorgang (derzeit werden maximal 10 gespeichert).
 
-View > Hide > Unhide All   Unhide all currently hidden surfaces.
+View > Hide > Unhide All   Blendet alle aktuell ausgeblendeten Oberflächen wieder ein.
 
-View > Hide > Inactive   When activated, inactive elements are displayed. Inactive surfaces are used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis
+View > Hide > Inactive   Wenn aktiviert, werden inaktive Elemente angezeigt. Inaktive Oberflächen dienen zur Anzeige von Elementen, die nur zu Visualisierungszwecken enthalten sind und nicht für die eigentliche Spannungsanalyse verwendet werden sollen
 
 #### CAD > Edit > Entity Properties
 
-View > Hide > Solids   When activated, solids are hidden. Solids are 3D blocks or DD planes that are not excavated.
+View > Hide > Solids   Wenn aktiviert, werden Festkörper ausgeblendet. Festkörper sind 3D-Blöcke oder DD-Ebenen, die nicht abgebaut werden.
 
-As the mining sequence progresses
-
-#### File > Mining Step
-
-different blocks will be excavated. To display only excavations, turn this option on.
-
-View > Hide > Excavations   When activated, excavations are hidden.
-
-View > Hide > Unused   When activated, unused elements are hidden. Unused elements are 3D block surfaces or DD planes that are not used in the analysis. Such elements exist where a fault cuts through an excavation, or where a material with a lower material number resides within a zone with a higher material number (e.g. a dyke cutting through an ore zone).
-
-As the mining sequence progresses
+Im Verlauf der Abbaufolge
 
 #### File > Mining Step
 
-this may change. To hide unused surfaces, turn this option on. Refer to
+werden unterschiedliche Blöcke abgebaut. Um nur die Hohlräume anzuzeigen, aktivieren Sie diese Option.
+
+View > Hide > Excavations   Wenn aktiviert, werden Hohlräume ausgeblendet.
+
+View > Hide > Unused   Wenn aktiviert, werden ungenutzte Elemente ausgeblendet. Ungenutzte Elemente sind Oberflächen von 3D-Blöcken oder DD-Ebenen, die in der Analyse nicht verwendet werden. Solche Elemente gibt es dort, wo eine Störung einen Hohlraum durchschneidet oder wo ein Material mit niedrigerer Materialnummer in einer Zone mit höherer Materialnummer liegt (z. B. ein Gang, der eine Erzzone durchschneidet).
+
+Im Verlauf der Abbaufolge
+
+#### File > Mining Step
+
+kann sich dies ändern. Um ungenutzte Oberflächen auszublenden, aktivieren Sie diese Option. Weitere Erläuterungen finden Sie unter
 
 Analysis > Options > Closure
 
 #### Constructing Alternate Material Zones
 
-for additional discussion.
+View > Hide > Translucent   Wenn aktiviert, werden ausgeblendete Oberflächen durchscheinend dargestellt.
 
-View > Hide > Translucent   When activated, hidden surfaces as displayed translucent.
+View > Hide > Show Errors   Blendet Fehler aus/ein (wenn aktiviert, werden nur Elementfehler angezeigt). Beachten Sie, dass diese Option zusammen mit der Option View > Hide > Translucent verwendet werden kann.
 
-View > Hide > Show Errors   Hide/display errors (when activated, show only element errors). Note that this option can be used with the View > Hide > Translucent option.
+View > Hide > Hide Errors   Blendet Fehler aus/ein (wenn aktiviert, werden keine
 
-View > Hide > Hide Errors   Hide/display errors (when activated, do not show element
+#### Elementfehler angezeigt).
 
-#### errors).
+In der CAD-Phase kennzeichnen die verschiedenen Farben folgende Probleme:
 
-At the CAD stage the various colours indicate the following problems:
+- Violett – Lücken wurden gefunden und gefüllt, das Problem ist damit behoben. Diese Meldung weist nicht auf einen Fehler hin und dient nur zur Information.
 
-- Purple - gaps have been found and filled, thus fixing this problem. This message does not indicate an error and is given as user information.
+- Grün – doppelte Blöcke wurden gefunden und gelöscht, das Problem ist damit behoben. Diese Meldung weist nicht auf einen Fehler hin und dient nur zur Information.
 
-- Green - duplicate blocks have been found and deleted, thus fixing this problem. This message does not indicate an error and is given as user information.
+- Blau – schmale Lücken wurden erkannt. Diese Lücken weisen nicht auf einen Fehler hin und sind nicht zwingend ein Problem. Treten jedoch bei der Schnittanalyse oder der BEM-Analyse Probleme auf, sind diese Stellen die wahrscheinlichste Ursache. Diese Meldung weist nicht auf einen Fehler hin und dient als Warnung.
 
-- Blue - narrow gaps have been detected. These gaps do not indicate an error and are not necessarily a problem, however if problems arise during the intersection analysis or BEM analysis, these locations are the most likely causes. This message does not indicate an error and is given as user warning.
+- Weiß – in falscher Richtung verknüpfte Kanten wurden erkannt. Bei geschlossenen Blöcken müssen alle Kanten einheitlich verknüpft sein, damit Innen- und Außenseite eines Blocks eindeutig bestimmt werden können. Weiße Kanten erfüllen diese Anforderung nicht. Diese Meldung weist auf einen Fehler hin, der vor dem Fortsetzen der Analyse behoben werden sollte.
 
-- White - edges that link the wrong way have been detected. Closed blocks must have all edges linking in a consistent manner so that the inside and outside of a block can be consistently determined. White edges do not satisfy this requirement. This message does indicate an error which should be fixed before proceeding with the analysis.
+- Orange – Kanten, die nicht mit anderen Kanten verknüpft sind, wurden erkannt. Bei geschlossenen Blöcken muss jede Kante mit einer anderen Kante verknüpft sein, damit ein geschlossener Block entsteht. Orange Kanten erfüllen diese Anforderung nicht. Diese Meldung weist auf einen Fehler hin, der vor dem Fortsetzen der Analyse behoben werden sollte.
 
-- Orange - edges that do not link to other edges have been detected. Closed blocks must have all edges linking to one other edge to form a closed block. Orange edges do not satisfy this requirement. This message does indicate an error which should be fixed before proceeding with the analysis.
+- Gelb – Kanten, die mit mehr als einer anderen Kante verknüpft sind, wurden erkannt. Bei geschlossenen Blöcken muss jede Kante mit genau einer anderen Kante verknüpft sein, damit ein geschlossener Block entsteht. Gelbe Kanten erfüllen diese Anforderung nicht. Diese Meldung weist auf einen Fehler hin, der vor dem Fortsetzen der Analyse behoben werden sollte.
 
-- Yellow - edges that link to more than one other edge have been detected. Closed blocks must have all edges linking to only one other edge to form a closed block. Yellow edges do not satisfy this requirement. This message does indicate an error which should be fixed before proceeding with the analysis.
+- Rot – hebt viskoplastische Zonen mit ungültigen Hexaederformen hervor. In Map3D Visco-Plastic sind für plastische Zonen nur Hexaederformen (4 Ecken oben und 4 Ecken unten) oder entartete Formen davon, etwa Tetraeder, zulässig.
 
-- Red - highlights Visco-Plastic zones with invalid hex shapes. In Map3D Visco-Plastic, plastic zones are only permitted to have hexahedron shapes (4 corners at the top and 4 corners at the bottom) or some degeneration of this shape such as tetrahedron.
+In der INTERSECTION-Phase kennzeichnen die verschiedenen Farben folgende Probleme:
 
-At the INTERSECTION stage the various colours indicate the following problems:
+- Violett – eine Oberfläche wurde wegen eines nicht auflösbaren Kontakts deaktiviert. Bei der Analyse der Kontakte zwischen den verschiedenen Blockoberflächen konnte nicht aufgelöst werden, wie diese Oberfläche an eine andere angrenzt; die Oberfläche wurde daher deaktiviert und wird in der BEM-Spannungsanalyse nicht verwendet. Die wahrscheinlichste Ursache ist eine sehr ungewöhnliche Form, etwa ein extrem schmales Dreieck. Obwohl dies ein Fehler ist, kann er normalerweise ignoriert werden, da extrem schmale Formen kaum zu den Analyseergebnissen beitragen.
 
-- Purple - a surface has been disabled due to an unresolvable contact. When the contacts been various block surfaces was analyzed, the way that this surface interfaced with another surface could not be resolved so the surface was disabled and hence will not be used in the BEM stress analysis. The most likely cause of this problem is a very odd shape such as an extremely narrow triangle. Although this is an error, such errors can normally be ignored since extremely narrow shapes contribute little to the analysis results.
+- Grün – eine Oberfläche wurde wegen einer nicht auflösbaren Schließung deaktiviert. Bei der Analyse der Schließung eines Blocks konnte nicht aufgelöst werden, wie diese Oberfläche an den Block angrenzt; die Oberfläche wurde daher deaktiviert und wird in der BEM-Spannungsanalyse nicht verwendet. Die wahrscheinlichste Ursache ist eine sehr ungewöhnliche Form, etwa ein extrem schmales Dreieck. Obwohl dies ein Fehler ist, kann er normalerweise ignoriert werden, da extrem schmale Formen kaum zu den Analyseergebnissen beitragen.
 
-- Green - a surface has been disabled due to an unresolvable closure. When the closure of a block was analyzed, the way that this surface interfaced with the block could not be resolved so the surface was disabled and hence will not be used in the BEM stress analysis. The most likely cause of this problem is a very odd shape such as an extremely narrow triangle. Although this is an error, such errors can normally be ignored since extremely narrow shapes contribute little to the analysis results.
+- Blau – schmale Lücken wurden erkannt. Diese Lücken weisen nicht auf einen Fehler hin und sind nicht zwingend ein Problem. Treten jedoch bei der Schnittanalyse oder der BEM-Analyse Probleme auf, sind diese Stellen die wahrscheinlichste Ursache. Diese Meldung weist nicht auf einen Fehler hin und dient als Warnung.
 
-- Blue - narrow gaps have been detected. These gaps do not indicate an error and are not necessarily a problem, however if problems arise during the intersection analysis or BEM analysis, these locations are the most likely causes. This message does not indicate an error and is given as user warning.
+- Weiß – nicht geschlossene Oberflächen wurden erkannt. Bei der Analyse der Schließung eines Blocks stellte sich heraus, dass Innen- und Außenseite des Blocks nicht eindeutig bestimmt werden konnten. Diese Meldung weist auf einen Fehler hin, der vor dem Fortsetzen der Analyse behoben werden sollte.
 
-- White - unclosed surfaces have been detected. When the closure of a block was analyzed it was found that the interior and exterior of the block could not be consistently determined. This message does indicate an error which should be fixed before proceeding with the analysis.
+- Orange – Kanten, die nicht mit anderen Kanten verknüpft sind, wurden erkannt. Bei geschlossenen Blöcken muss jede Kante mit einer anderen Kante verknüpft sein, damit ein geschlossener Block entsteht. Orange Kanten erfüllen diese Anforderung nicht. Diese Meldung weist auf einen Fehler hin, der vor dem Fortsetzen der Analyse behoben werden sollte.
 
-- Orange - edges that do not link to other edges have been detected. Closed blocks must have all edges linking to one other edge to form a closed block. Orange edges do not satisfy this requirement. This message does indicate an error which should be fixed before proceeding with the analysis.
-
-- Yellow - a surface has been disabled due to an unresolvable shape. The most likely cause of this problem is a very odd shape such as an extremely narrow triangle. Although this is an error, such errors can normally be ignored since extremely narrow shapes contribute little to the analysis results.
+- Gelb – eine Oberfläche wurde wegen einer nicht auflösbaren Form deaktiviert. Die wahrscheinlichste Ursache ist eine sehr ungewöhnliche Form, etwa ein extrem schmales Dreieck. Obwohl dies ein Fehler ist, kann er normalerweise ignoriert werden, da extrem schmale Formen kaum zu den Analyseergebnissen beitragen.

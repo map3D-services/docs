@@ -2,71 +2,68 @@
 title: "Desplazamiento"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+## 5.3.3.1 Desplazamiento total
 
-## 5.3.3.1 Total displacement
+Genera contornos de los desplazamientos.
 
-Contours the displacements.
-
-These components can be accessed via the Displacement Components toolbar as follows:
+Se puede acceder a estas componentes mediante la barra de herramientas Displacement Components, como se indica a continuación:
 
 ![Figure from page 240](/images/page-240-img-9.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
-Selecting the button on the Contours toolbar activates the Displacement Components toolbar. You can add this button to the Contours toolbar using the configuration button.
+Al seleccionar el botón de la barra de herramientas Contours se activa la barra de herramientas Displacement Components. Puede agregar este botón a la barra de herramientas Contours con el botón de configuración.
 
 ![Figure from page 240](/images/page-240-img-13.png)
 
-This toolbar is meant to provide quick access to displacement components.
+Esta barra de herramientas ofrece acceso rápido a las componentes del desplazamiento.
 
-Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Total Displacement   contours the total displacement Plot > Displacement > dx X-Displacement   contours the x-displacement component Plot > Displacement > dy Y-Displacement   contours the y-displacement component Plot > Displacement > dz Z-Displacement   contours the z-displacement component
+Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Desplazamiento total   genera contornos del desplazamiento total Plot > Displacement > dx Desplazamiento X   genera contornos de la componente x del desplazamiento Plot > Displacement > dy Desplazamiento Y   genera contornos de la componente y del desplazamiento Plot > Displacement > dz Desplazamiento Z   genera contornos de la componente z del desplazamiento
 
-To calculate the in-plane displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the grid plane and the displacement normal to the plane. Note that dni is oriented normal to the grid plane and parallel to the direction of a line grid.
+Para calcular los desplazamientos en el plano, el estado de desplazamiento en cada punto del plano de la grilla se reorienta para determinar el desplazamiento máximo paralelo al plano de la grilla y el desplazamiento normal al plano. Tenga en cuenta que dni está orientado normal al plano de la grilla y paralelo a la dirección de una grilla lineal.
 
-Plot > Displacement > dni In-plane normal   contours the displacement component normal to the grid plane.
+Plot > Displacement > dni Normal en el plano   genera contornos de la componente del desplazamiento normal al plano de la grilla.
 
-Plot > Displacement > dmi In-plane maximum   contours the maximum displacement tangential to the grid plane.
+Plot > Displacement > dmi Máximo en el plano   genera contornos del desplazamiento máximo tangencial al plano de la grilla.
 
 ![Figure from page 241](/images/page-241-img-3.png)
 
-To calculate the ubiquitous-plane #1 displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the ubiquitous plane #1 and the displacement normal to the plane. Note that dmi is not oriented normal to the grid plane.
+Para calcular los desplazamientos del plano ubicuo n.º 1, el estado de desplazamiento en cada punto del plano de la grilla se reorienta para determinar el desplazamiento máximo paralelo al plano ubicuo n.º 1 y el desplazamiento normal al plano. Tenga en cuenta que dmi no está orientado normal al plano de la grilla.
 
-Plot > Displacement > dnu Ubiquitous-plane normal   contours the displacement component normal to the ubiquitous plane.
+Plot > Displacement > dnu Normal al plano ubicuo   genera contornos de la componente del desplazamiento normal al plano ubicuo.
 
-Plot > Displacement > dmu Ubiquitous-plane maximum   contours the maximum displacement tangential to the ubiquitous plane.
+Plot > Displacement > dmu Máximo en el plano ubicuo   genera contornos del desplazamiento máximo tangencial al plano ubicuo.
 
 ![Figure from page 241](/images/page-241-img-7.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la dirección de manteo se mide positiva en sentido horario desde el eje y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- el manteo del plano se mide positivo hacia abajo desde la horizontal (es decir, la dirección de manteo).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- la inclinación de la normal se mide positiva hacia abajo (es decir, negativa hacia arriba) desde la horizontal.
 
-Notes:
+Notas:
 
-The displacement toolbar can only be activated after the model building - CAD Stage
+La barra de herramientas de desplazamiento solo se puede activar después de la etapa de construcción del modelo (CAD)
 
-Map3D Analysis Stages.
+Etapas de análisis de Map3D.
 
-The orientation of the ubiquitous shear plane is set using
+La orientación del plano de corte ubicuo se define con
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+El rango de contornos se define con
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Esta componente se puede agregar a la barra de herramientas de contornos si se desea
 
 Tools > Configure Contouring Toolbar > Displacement
 
-The user may find it handy to add the
+Puede resultar útil agregar el botón
 
 More Displacement Components
 
-button to the contouring toolbar for quick access to all displacement components.
+a la barra de herramientas de contornos para acceder rápidamente a todas las componentes del desplazamiento.
