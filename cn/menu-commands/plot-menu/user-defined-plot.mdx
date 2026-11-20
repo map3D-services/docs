@@ -2,209 +2,204 @@
 title: "用户自定义绘图"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
-Contours a user defined stress component.
+绘制用户自定义应力分量的等值线。
 
 ![Figure from page 242](/images/page-242-img-18.png)
 
 #### Stresses:
 
-- S1 S2 S3 principal stress components s1 s2 s3
+- S1 S2 S3 主应力分量 s1 s2 s3
 
-- Sxx Syy Szz Sxy Syz Sxz Cartesian stress components sxx syy szz txy tyz tzx
+- Sxx Syy Szz Sxy Syz Sxz 笛卡尔应力分量 sxx syy szz txy tyz tzx
 
-- Tmax maximum shear stress ½(s1 - s3)
+- Tmax 最大剪应力 ½(s1 - s3)
 
-- Toct octahedral shear stress toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
+- Toct 八面体剪应力 toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
 
-- Smean mean stress smean = ¹/3 (s1 + s2 + s3)
+- Smean 平均应力 smean = ¹/3 (s1 + s2 + s3)
 
-- Ti Si maximum shear and normal stress in the grid plane tip sip
+- Ti Si 网格平面内的最大剪应力和法向应力 tip sip
 
-- S1i S3i maximum and minimum stress tangential to the grid plane s1i s3i
+- S1i S3i 与网格平面相切的最大和最小应力 s1i s3i
 
-- Tu Su maximum shear and normal stress in the ubiquitous-plane tub sub. The orientation of the ubiquitous shear plane is set using
+- Tu Su 遍布平面内的最大剪应力和法向应力 tub sub。遍布剪切面的方向通过以下功能设置
 
-- S1u S3u maximum and minimum stress tangential to the ubiquitous plane s1u s3u \]
+- S1u S3u 与遍布平面相切的最大和最小应力 s1u s3u \]
 
-- Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions.
+- Effective/Total 有效应力或总应力分量。这些选项仅用于 Map3D Thermal-Fluid Flow，因为该程序可以计算稳态孔隙压力分布。
 
-- Induced/Absolute induced stress or absolute stress components (i.e. the stress without the premining stress contribution).
+- Induced/Absolute 诱发应力或绝对应力分量（即不含开采前应力贡献的应力）。
 
 #### Strains:
 
-- e1 e2 e3 major principal strain e1 e2 e3
+- e1 e2 e3 最大主应变 e1 e2 e3
 
-- exx eyy ezz exy eyz exz Cartesian strain components exx eyy ezz exy eyz ezx
+- exx eyy ezz exy eyz exz 笛卡尔应变分量 exx eyy ezz exy eyz ezx
 
-- emax maximum shear strain ½(e1 - e3)
+- emax 最大剪应变 ½(e1 - e3)
 
-- eoct octahedral shear strain eoct = ¹/3 [(e1 - e2)² + (e2 - e3)² +(e3 - e1)²]<sup>½</sup>
+- eoct 八面体剪应变 eoct = ¹/3 [(e1 - e2)² + (e2 - e3)² +(e3 - e1)²]<sup>½</sup>
 
-- evol volumetric strain evol = (e1 + e2 + e3)
+- evol 体积应变 evol = (e1 + e2 + e3)
 
-- esi eni maximum shear and normal strain in the grid plane esi eni
+- esi eni 网格平面内的最大剪应变和法向应变 esi eni
 
-- e1i e3i maximum and minimum strain tangential to the grid plane e1i e3i
+- e1i e3i 与网格平面相切的最大和最小应变 e1i e3i
 
-- esu enu maximum shear and normal strain in the ubiquitous-plane esu enu
+- esu enu 遍布平面内的最大剪应变和法向应变 esu enu
 
-- e1u e3u maximum and minimum strain tangential to the ubiquitous plane e1u e3u
+- e1u e3u 与遍布平面相切的最大和最小应变 e1u e3u
 
-- Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains.
+- Elastic/Plastic/Total 弹性、塑性或总应变分量。这些选项仅用于 Map3D Non-Linear，因为该程序可以计算非线性应变。
 
-- Induced/Absolute induced strain or absolute strain components (i.e. the stress without the premining stress contribution).
+- Induced/Absolute 诱发应变或绝对应变分量（即不含开采前应力贡献的应变）。
 
 #### Displacements:
 
-- ut total displacement, its trend and plunge dt
+- ut 总位移、其走向和倾伏角 dt
 
-- · ux uy uz Cartesian displacement components dx dy dz
+- · ux uy uz 笛卡尔位移分量 dx dy dz
 
-- uni displacement normal to the grid plane dni
+- uni 垂直于网格平面的位移 dni
 
-- umi maximum displacement tangential to the grid plane dmi
+- umi 与网格平面相切的最大位移 dmi
 
-- unu displacement normal to the ubiquitous plane dnu
+- unu 垂直于遍布平面的位移 dnu
 
-- umu maximum displacement tangential to the ubiquitous plane dmu
+- umu 与遍布平面相切的最大位移 dmu
 
 #### Thermal/Fluid Flow:
 
-- t temperature/head
+- t 温度/水头
 
-- qt total flow, its trend and plunge.
+- qt 总流量、其走向和倾伏角。
 
-- qx qy qz Cartesian flow components.
+- qx qy qz 笛卡尔流量分量。
 
-- qni displacement normal to the grid plane.
+- qni 垂直于网格平面的位移。
 
-- qmi maximum displacement tangential to the grid plane.
+- qmi 与网格平面相切的最大位移。
 
-- qnu displacement normal to the ubiquitous plane.
+- qnu 垂直于遍布平面的位移。
 
-- qmu maximum displacement tangential to the ubiquitous plane.
+- qmu 与遍布平面相切的最大位移。
 
 #### Functions:
 
-- sin() cos() tan()   sine, cosine and tangent trigonometric functions.
+- sin() cos() tan()   正弦、余弦和正切三角函数。
 
-- asin() acos() atan()   Inverse trigonometric functions.
+- asin() acos() atan()   反三角函数。
 
-- sqrt()   square root function.
+- sqrt()   平方根函数。
 
-- log()   natural logarithmic function.
+- log()   自然对数函数。
 
-- log10()   base 10 logarithmic function.
+- log10()   以 10 为底的对数函数。
 
-- exp()   exponential function (antilogarithm).
+- exp()   指数函数（反对数）。
 
-- abs()   absolute value.
+- abs()   绝对值。
 
-- n() an()   normal and inverse normal probability distribution. The argument used with the normal distribution is (Ds1/ _s_ ) which represents the excess major principal stress divided by the standard deviation (see ).
+- n() an()   正态分布和反正态概率分布。正态分布使用的参数为 (Ds1/ _s_ )，表示剩余最大主应力除以标准差（参见 ）。
 
-- t(,) at(,)   t and inverse t probability distribution. The argument used with the t distribution is (Ds1/ ( _sg),n_ -2) where Ds1 represents the excess major principal stress, _s_ represents the standard deviation, _n_ represents the number of data points, and _g_ represents the factor  [1 + 1/ _n_ + (s3 - sm) ²/s3²/( _n_ -1)]<sup>½</sup> where sm represents the mean value of s3, and s3 represents the standard deviation of s3.
+- t(,) at(,)   t 分布和反 t 概率分布。t 分布使用的参数为 (Ds1/ ( _sg),n_ -2)，其中 Ds1 表示剩余最大主应力，_s_ 表示标准差，_n_ 表示数据点个数，_g_ 表示系数 [1 + 1/ _n_ + (s3 - sm) ²/s3²/( _n_ -1)]<sup>½</sup>，其中 sm 表示 s3 的平均值，s3 表示 s3 的标准差。
 
-- sgn()   sign function return +1 for positive values, -1 for negative values and 0 for values with magnitude less than 10<sup>-12</sup> .
+- sgn()   符号函数：正值返回 +1，负值返回 -1，绝对值小于 10<sup>-12</sup> 的值返回 0。
 
 #### Strength:
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 剩余最大主应力 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax 剩余最大剪应力 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct 剩余八面体剪应力 Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 使用正态分布 N(Ds1 /std) 的概率
 
-- SFA Strength/Stress can be determined for Mohr-Coulomb as ( _UCS_ + _q_ s3 )/ s1
+- SFA 强度/应力，对于 Mohr-Coulomb 可确定为 ( _UCS_ + _q_ s3 )/ s1
 
-- or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+- 对于 Hoek-Brown 则为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-- SFB Strength/Stress can be determined  for Mohr-Coulomb as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3) or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / (s1 - s3)
+- SFB 强度/应力，对于 Mohr-Coulomb 可确定为 ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)，对于 Hoek-Brown 则为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / (s1 - s3)
 
-- SFC Strength/Stress can be determined  for Mohr-Coulomb as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SFC 强度/应力，对于 Mohr-Coulomb 可确定为 [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-or for Hoek-Brown as &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+对于 Hoek-Brown 则为 &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip 剩余面内剪应力 Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip 使用正态分布 N(Dtip /std) 的概率
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip 强度/应力可确定为 [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip 剩余面内壁面应力 Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip 面内壁面应力的岩石状态系数（Rock Condition Factor）RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub 剩余遍布平面剪应力 Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub 使用正态分布 N(Dtub /std) 的概率
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub 强度/应力可确定为 [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub 剩余 ub 平面壁面应力 Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub ub 平面壁面应力的岩石状态系数 RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# 绘制 Dtub 值最大的 UB 组编号（1、2 或 3）
 
-- _UCS phi q_ Mohr-Coulomb strength parameters defined using Plot > Strength Factors > Rockmass Strength Parameters note that these parameters are only defined if you have specified the Mohr-Coulomb or Druker-Prager strength criterion
+- _UCS phi q_ 使用 Plot > Strength Factors > Rockmass Strength Parameters 定义的 Mohr-Coulomb 强度参数；请注意，只有在指定了 Mohr-Coulomb 或 Drucker-Prager 强度准则时，这些参数才有定义
 
-- _RMa_ Rock mass strength defined for Mohr-Coulomb as ( _UCS_ + _q_ s3 )
+- _RMa_ 岩体强度，对于 Mohr-Coulomb 定义为 ( _UCS_ + _q_ s3 )
 
-or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+对于 Hoek-Brown 则为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-- _RMb_ Rock mass strength defined for Mohr-Coulomb as ( _UCS_ + _q_ s3 - s3 )
+- _RMb_ 岩体强度，对于 Mohr-Coulomb 定义为 ( _UCS_ + _q_ s3 - s3 )
 
-- or for Hoek-Brown as [ Ö( _m_ scs3 + _s_ sc²) ]
+- 对于 Hoek-Brown 则为 [ Ö( _m_ scs3 + _s_ sc²) ]
 
-- _RMc_ Rock mass strength defined  for Mohr-Coulomb as  [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) or for Hoek-Brown as &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/2
+- _RMc_ 岩体强度，对于 Mohr-Coulomb 定义为 [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)，对于 Hoek-Brown 则为 &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/2
 
-- _IP_ In-Plane strength defined using Mohr-Coulomb as [ Cohesion + sip tan(j) ]
+- _IP_ 面内强度，使用 Mohr-Coulomb 定义为 [ Cohesion + sip tan(j) ]
 
-- _UB_ Ubiquitous strength defined using Mohr-Coulomb as [ Cohesion + sub tan(j) ]
+- _UB_ 遍布强度，使用 Mohr-Coulomb 定义为 [ Cohesion + sub tan(j) ]
 
-- _sc_ Hoek-Brown strength parameter defined using Plot > Strength Factors > Rockmass Strength Parameters note that this parameter is only defined if you have specified the Hoek-Brown strength criterion
+- _sc_ 使用 Plot > Strength Factors > Rockmass Strength Parameters 定义的 Hoek-Brown 强度参数；请注意，只有在指定了 Hoek-Brown 强度准则时，该参数才有定义
 
 #### Location:
 
-- x y z   coordinate of grid point.
+- x y z   网格点坐标。
 
 #### Miscellaneous:
 
-- Dgrid distance to the nearest surface from each grid point.
+- Dgrid 每个网格点到最近表面的距离。
 
-- Dol distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+- Dol 到最近网格的距离 _Dgrid_ 除以网格间距 _Lgrid_ 。
 
-- f1 f2... user defined material parameters. These can be defined using Plot > Properties > Material Properties > User defined Parameters.
+- f1 f2... 用户自定义的材料参数。可以通过 Plot > Properties > Material Properties > User defined Parameters 定义。
 
 #### Operators:
 
-- + - * / ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
+- + - * / ^   加、减、乘、除和乘方运算符。请注意，先计算乘方，然后计算乘法和除法，最后计算加法和减法。
 
-- () [] &#123;&#125;   styles of brackets. Pairs of brackets must match.
+- () [] &#123;&#125;   括号类型。括号必须成对匹配。
 
-- >   maximum value. For example if the plot equation is specified as s1 > 10, the larger of s1 or 10 will be plotted.
+- >   最大值。例如，如果绘图方程指定为 s1 > 10，则将绘制 s1 和 10 中较大的值。
 
-- &lt;   minimum value. For example if the plot equation is specified as s1 &lt; 10, the smaller of s1 or 10 will be plotted.
+- &lt;   最小值。例如，如果绘图方程指定为 s1 &lt; 10，则将绘制 s1 和 10 中较小的值。
 
-- " "   comment.
+- " "   注释。
 
 #### Other:
 
-- phi:   atan(Ti/Si) plots the friction angle necessary to resist slip on a fault, joint set or bedding plane oriented in the same way as the grid plane.
+- phi:   atan(Ti/Si) 绘制抵抗断层、节理组或层理面（其方向与网格平面相同）上滑动所需的摩擦角。
 
-- Mohr-Coulomb:   60 + S3*tan(45+30/2)^2   plots the strength for a Mohr-Coulomb criterion with a UCS of 60 and friction angle of 30°. The equation _UCS_ + S3* _q_ or alternatively _UCS_ +S3*tan(45+ _phi_ /2)^2 could also be used here if the strength parameters have been previously
+- Mohr-Coulomb:   60 + S3*tan(45+30/2)^2   绘制 UCS 为 60、摩擦角为 30° 的 Mohr-Coulomb 准则的强度。如果之前已使用 Plot > Strength Factors > Rockmass Strength Parameters 定义了强度参数，这里也可以使用方程 _UCS_ + S3* _q_ 或 _UCS_ +S3*tan(45+ _phi_ /2)^2。
 
-- defined using Plot > Strength Factors > Rockmass Strength Parameters.
+- Hoek:     S3 + sqrt( 0.1*60*S3 + 0.005*60^2 )   绘制 sc 为 60、m 为 0.1、s 为 0.005 的 Hoek-Brown 准则的强度。
 
-- Hoek:     S3 + sqrt( 0.1*60*S3 + 0.005*60^2 )   plots the strength for a Hoek-Brown criterion with a sc of 60 and m of 0.1 and s of 0.005.
+- Range – 设置等值线范围。
 
-- Range – sets the contour range.
+- Plot – 重新生成等值线图。
 
-- Plot – regenerates the contour plot.
-
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+下拉窗口最多可存储 20 个不同的方程。这些方程会在 Map3D 各次会话之间保存在 map3d.ini 文件中。

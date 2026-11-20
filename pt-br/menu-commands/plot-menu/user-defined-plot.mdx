@@ -2,209 +2,206 @@
 title: "Plotagem definida pelo usuário"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
-
-Contours a user defined stress component.
+Gera contornos de uma componente de tensão definida pelo usuário.
 
 ![Figure from page 242](/images/page-242-img-18.png)
 
 #### Stresses:
 
-- S1 S2 S3 principal stress components s1 s2 s3
+- S1 S2 S3 componentes de tensão principal s1 s2 s3
 
-- Sxx Syy Szz Sxy Syz Sxz Cartesian stress components sxx syy szz txy tyz tzx
+- Sxx Syy Szz Sxy Syz Sxz componentes cartesianas da tensão sxx syy szz txy tyz tzx
 
-- Tmax maximum shear stress ½(s1 - s3)
+- Tmax tensão de cisalhamento máxima ½(s1 - s3)
 
-- Toct octahedral shear stress toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
+- Toct tensão de cisalhamento octaédrica toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
 
-- Smean mean stress smean = ¹/3 (s1 + s2 + s3)
+- Smean tensão média smean = ¹/3 (s1 + s2 + s3)
 
-- Ti Si maximum shear and normal stress in the grid plane tip sip
+- Ti Si tensão de cisalhamento máxima e tensão normal no plano da grade tip sip
 
-- S1i S3i maximum and minimum stress tangential to the grid plane s1i s3i
+- S1i S3i tensões máxima e mínima tangenciais ao plano da grade s1i s3i
 
-- Tu Su maximum shear and normal stress in the ubiquitous-plane tub sub. The orientation of the ubiquitous shear plane is set using
+- Tu Su tensão de cisalhamento máxima e tensão normal no plano ubíquo tub sub. A orientação do plano de cisalhamento ubíquo é definida com
 
-- S1u S3u maximum and minimum stress tangential to the ubiquitous plane s1u s3u \]
+- S1u S3u tensões máxima e mínima tangenciais ao plano ubíquo s1u s3u \]
 
-- Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions.
+- Effective/Total componentes da tensão efetiva ou da tensão total. Estas opções só são usadas no Map3D Thermal-Fluid Flow, pois esse código permite calcular distribuições de poropressão em regime permanente.
 
-- Induced/Absolute induced stress or absolute stress components (i.e. the stress without the premining stress contribution).
+- Induced/Absolute componentes da tensão induzida ou da tensão absoluta (ou seja, a tensão sem a contribuição da tensão pré-lavra).
 
 #### Strains:
 
-- e1 e2 e3 major principal strain e1 e2 e3
+- e1 e2 e3 deformação principal maior e1 e2 e3
 
-- exx eyy ezz exy eyz exz Cartesian strain components exx eyy ezz exy eyz ezx
+- exx eyy ezz exy eyz exz componentes cartesianas da deformação exx eyy ezz exy eyz ezx
 
-- emax maximum shear strain ½(e1 - e3)
+- emax deformação de cisalhamento máxima ½(e1 - e3)
 
-- eoct octahedral shear strain eoct = ¹/3 [(e1 - e2)² + (e2 - e3)² +(e3 - e1)²]<sup>½</sup>
+- eoct deformação de cisalhamento octaédrica eoct = ¹/3 [(e1 - e2)² + (e2 - e3)² +(e3 - e1)²]<sup>½</sup>
 
-- evol volumetric strain evol = (e1 + e2 + e3)
+- evol deformação volumétrica evol = (e1 + e2 + e3)
 
-- esi eni maximum shear and normal strain in the grid plane esi eni
+- esi eni deformação de cisalhamento máxima e deformação normal no plano da grade esi eni
 
-- e1i e3i maximum and minimum strain tangential to the grid plane e1i e3i
+- e1i e3i deformações máxima e mínima tangenciais ao plano da grade e1i e3i
 
-- esu enu maximum shear and normal strain in the ubiquitous-plane esu enu
+- esu enu deformação de cisalhamento máxima e deformação normal no plano ubíquo esu enu
 
-- e1u e3u maximum and minimum strain tangential to the ubiquitous plane e1u e3u
+- e1u e3u deformações máxima e mínima tangenciais ao plano ubíquo e1u e3u
 
-- Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains.
+- Elastic/Plastic/Total componentes da deformação elástica, plástica ou total. Estas opções só são usadas no Map3D Non-Linear, pois esse código permite calcular deformações não lineares.
 
-- Induced/Absolute induced strain or absolute strain components (i.e. the stress without the premining stress contribution).
+- Induced/Absolute componentes da deformação induzida ou da deformação absoluta (ou seja, sem a contribuição da tensão pré-lavra).
 
 #### Displacements:
 
-- ut total displacement, its trend and plunge dt
+- ut deslocamento total, sua direção e seu caimento dt
 
-- · ux uy uz Cartesian displacement components dx dy dz
+- · ux uy uz componentes cartesianas do deslocamento dx dy dz
 
-- uni displacement normal to the grid plane dni
+- uni deslocamento normal ao plano da grade dni
 
-- umi maximum displacement tangential to the grid plane dmi
+- umi deslocamento máximo tangencial ao plano da grade dmi
 
-- unu displacement normal to the ubiquitous plane dnu
+- unu deslocamento normal ao plano ubíquo dnu
 
-- umu maximum displacement tangential to the ubiquitous plane dmu
+- umu deslocamento máximo tangencial ao plano ubíquo dmu
 
 #### Thermal/Fluid Flow:
 
-- t temperature/head
+- t temperatura/carga hidráulica
 
-- qt total flow, its trend and plunge.
+- qt fluxo total, sua direção e seu caimento.
 
-- qx qy qz Cartesian flow components.
+- qx qy qz componentes cartesianas do fluxo.
 
-- qni displacement normal to the grid plane.
+- qni deslocamento normal ao plano da grade.
 
-- qmi maximum displacement tangential to the grid plane.
+- qmi deslocamento máximo tangencial ao plano da grade.
 
-- qnu displacement normal to the ubiquitous plane.
+- qnu deslocamento normal ao plano ubíquo.
 
-- qmu maximum displacement tangential to the ubiquitous plane.
+- qmu deslocamento máximo tangencial ao plano ubíquo.
 
 #### Functions:
 
-- sin() cos() tan()   sine, cosine and tangent trigonometric functions.
+- sin() cos() tan()   funções trigonométricas seno, cosseno e tangente.
 
-- asin() acos() atan()   Inverse trigonometric functions.
+- asin() acos() atan()   funções trigonométricas inversas.
 
-- sqrt()   square root function.
+- sqrt()   função raiz quadrada.
 
-- log()   natural logarithmic function.
+- log()   função logaritmo natural.
 
-- log10()   base 10 logarithmic function.
+- log10()   função logaritmo na base 10.
 
-- exp()   exponential function (antilogarithm).
+- exp()   função exponencial (antilogaritmo).
 
-- abs()   absolute value.
+- abs()   valor absoluto.
 
-- n() an()   normal and inverse normal probability distribution. The argument used with the normal distribution is (Ds1/ _s_ ) which represents the excess major principal stress divided by the standard deviation (see ).
+- n() an()   distribuição de probabilidade normal e normal inversa. O argumento usado com a distribuição normal é (Ds1/ _s_ ), que representa a tensão principal maior excedente dividida pelo desvio padrão (veja ).
 
-- t(,) at(,)   t and inverse t probability distribution. The argument used with the t distribution is (Ds1/ ( _sg),n_ -2) where Ds1 represents the excess major principal stress, _s_ represents the standard deviation, _n_ represents the number of data points, and _g_ represents the factor  [1 + 1/ _n_ + (s3 - sm) ²/s3²/( _n_ -1)]<sup>½</sup> where sm represents the mean value of s3, and s3 represents the standard deviation of s3.
+- t(,) at(,)   distribuição de probabilidade t e t inversa. O argumento usado com a distribuição t é (Ds1/ ( _sg),n_ -2), onde Ds1 representa a tensão principal maior excedente, _s_ representa o desvio padrão, _n_ representa o número de dados e _g_ representa o fator  [1 + 1/ _n_ + (s3 - sm) ²/s3²/( _n_ -1)]<sup>½</sup>, onde sm representa o valor médio de s3 e s3 representa o desvio padrão de s3.
 
-- sgn()   sign function return +1 for positive values, -1 for negative values and 0 for values with magnitude less than 10<sup>-12</sup> .
+- sgn()   função sinal: retorna +1 para valores positivos, -1 para valores negativos e 0 para valores com magnitude menor que 10<sup>-12</sup> .
 
 #### Strength:
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 tensão principal maior excedente Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax tensão de cisalhamento máxima excedente Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct tensão de cisalhamento octaédrica excedente Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 probabilidade usando a distribuição normal N(Ds1 /std)
 
-- SFA Strength/Stress can be determined for Mohr-Coulomb as ( _UCS_ + _q_ s3 )/ s1
+- SFA Resistência/Tensão pode ser determinado para Mohr-Coulomb como ( _UCS_ + _q_ s3 )/ s1
 
-- or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+- ou para Hoek-Brown como [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-- SFB Strength/Stress can be determined  for Mohr-Coulomb as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3) or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / (s1 - s3)
+- SFB Resistência/Tensão pode ser determinado para Mohr-Coulomb como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3) ou para Hoek-Brown como [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / (s1 - s3)
 
-- SFC Strength/Stress can be determined  for Mohr-Coulomb as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SFC Resistência/Tensão pode ser determinado para Mohr-Coulomb como [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-or for Hoek-Brown as &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+ou para Hoek-Brown como &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip tensão de cisalhamento excedente no plano Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip probabilidade usando a distribuição normal N(Dtip /std)
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip Resistência/Tensão pode ser determinado como [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip tensão excedente na parede no plano Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip fator de condição da rocha (Rock Condition Factor) para a tensão na parede no plano RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub tensão de cisalhamento excedente no plano ubíquo Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub probabilidade usando a distribuição normal N(Dtub /std)
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub Resistência/Tensão pode ser determinado como [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub tensão excedente na parede no plano ub Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub fator de condição da rocha para a tensão na parede no plano ub RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# Plota o número do conjunto UB (1, 2 ou 3) que tem o maior valor de Dtub
 
-- _UCS phi q_ Mohr-Coulomb strength parameters defined using Plot > Strength Factors > Rockmass Strength Parameters note that these parameters are only defined if you have specified the Mohr-Coulomb or Druker-Prager strength criterion
+- _UCS phi q_ Parâmetros de resistência de Mohr-Coulomb definidos com Plot > Strength Factors > Rockmass Strength Parameters; observe que esses parâmetros só estão definidos se você especificou o critério de resistência de Mohr-Coulomb ou de Drucker-Prager
 
-- _RMa_ Rock mass strength defined for Mohr-Coulomb as ( _UCS_ + _q_ s3 )
+- _RMa_ Resistência do maciço rochoso definida para Mohr-Coulomb como ( _UCS_ + _q_ s3 )
 
-or for Hoek-Brown as [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+ou para Hoek-Brown como [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-- _RMb_ Rock mass strength defined for Mohr-Coulomb as ( _UCS_ + _q_ s3 - s3 )
+- _RMb_ Resistência do maciço rochoso definida para Mohr-Coulomb como ( _UCS_ + _q_ s3 - s3 )
 
-- or for Hoek-Brown as [ Ö( _m_ scs3 + _s_ sc²) ]
+- ou para Hoek-Brown como [ Ö( _m_ scs3 + _s_ sc²) ]
 
-- _RMc_ Rock mass strength defined  for Mohr-Coulomb as  [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) or for Hoek-Brown as &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/2
+- _RMc_ Resistência do maciço rochoso definida para Mohr-Coulomb como [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) ou para Hoek-Brown como &#123;Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/2
 
-- _IP_ In-Plane strength defined using Mohr-Coulomb as [ Cohesion + sip tan(j) ]
+- _IP_ Resistência no plano definida usando Mohr-Coulomb como [ Cohesion + sip tan(j) ]
 
-- _UB_ Ubiquitous strength defined using Mohr-Coulomb as [ Cohesion + sub tan(j) ]
+- _UB_ Resistência ubíqua definida usando Mohr-Coulomb como [ Cohesion + sub tan(j) ]
 
-- _sc_ Hoek-Brown strength parameter defined using Plot > Strength Factors > Rockmass Strength Parameters note that this parameter is only defined if you have specified the Hoek-Brown strength criterion
+- _sc_ Parâmetro de resistência de Hoek-Brown definido com Plot > Strength Factors > Rockmass Strength Parameters; observe que esse parâmetro só está definido se você especificou o critério de resistência de Hoek-Brown
 
 #### Location:
 
-- x y z   coordinate of grid point.
+- x y z   coordenada do ponto de grade.
 
 #### Miscellaneous:
 
-- Dgrid distance to the nearest surface from each grid point.
+- Dgrid distância à superfície mais próxima a partir de cada ponto de grade.
 
-- Dol distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+- Dol distância à grade mais próxima _Dgrid_ dividida pelo espaçamento da grade _Lgrid_ .
 
-- f1 f2... user defined material parameters. These can be defined using Plot > Properties > Material Properties > User defined Parameters.
+- f1 f2... parâmetros de material definidos pelo usuário. Podem ser definidos com Plot > Properties > Material Properties > User defined Parameters.
 
 #### Operators:
 
-- + - * / ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
+- + - * / ^   operadores de adição, subtração, multiplicação, divisão e exponenciação. Observe que as exponenciais são calculadas primeiro, seguidas de multiplicação e divisão e, por fim, adição e subtração.
 
-- () [] &#123;&#125;   styles of brackets. Pairs of brackets must match.
+- () [] &#123;&#125;   tipos de parênteses. Os pares de parênteses devem corresponder.
 
-- >   maximum value. For example if the plot equation is specified as s1 > 10, the larger of s1 or 10 will be plotted.
+- >   valor máximo. Por exemplo, se a equação de plotagem for especificada como s1 > 10, será plotado o maior entre s1 e 10.
 
-- &lt;   minimum value. For example if the plot equation is specified as s1 &lt; 10, the smaller of s1 or 10 will be plotted.
+- &lt;   valor mínimo. Por exemplo, se a equação de plotagem for especificada como s1 &lt; 10, será plotado o menor entre s1 e 10.
 
-- " "   comment.
+- " "   comentário.
 
 #### Other:
 
-- phi:   atan(Ti/Si) plots the friction angle necessary to resist slip on a fault, joint set or bedding plane oriented in the same way as the grid plane.
+- phi:   atan(Ti/Si) plota o ângulo de atrito necessário para resistir ao deslizamento em uma falha, conjunto de juntas ou plano de acamamento orientado da mesma forma que o plano da grade.
 
-- Mohr-Coulomb:   60 + S3*tan(45+30/2)^2   plots the strength for a Mohr-Coulomb criterion with a UCS of 60 and friction angle of 30°. The equation _UCS_ + S3* _q_ or alternatively _UCS_ +S3*tan(45+ _phi_ /2)^2 could also be used here if the strength parameters have been previously
+- Mohr-Coulomb:   60 + S3*tan(45+30/2)^2   plota a resistência para um critério de Mohr-Coulomb com UCS de 60 e ângulo de atrito de 30°. A equação _UCS_ + S3* _q_ ou, alternativamente, _UCS_ +S3*tan(45+ _phi_ /2)^2 também pode ser usada aqui, se os parâmetros de resistência tiverem sido
 
-- defined using Plot > Strength Factors > Rockmass Strength Parameters.
+- definidos anteriormente com Plot > Strength Factors > Rockmass Strength Parameters.
 
-- Hoek:     S3 + sqrt( 0.1*60*S3 + 0.005*60^2 )   plots the strength for a Hoek-Brown criterion with a sc of 60 and m of 0.1 and s of 0.005.
+- Hoek:     S3 + sqrt( 0.1*60*S3 + 0.005*60^2 )   plota a resistência para um critério de Hoek-Brown com sc de 60, m de 0.1 e s de 0.005.
 
-- Range – sets the contour range.
+- Range – define a faixa de contornos.
 
-- Plot – regenerates the contour plot.
+- Plot – regenera a plotagem de contornos.
 
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+A janela suspensa permite armazenar até 20 equações diferentes. Elas são mantidas entre sessões do Map3D no arquivo map3d.ini.
