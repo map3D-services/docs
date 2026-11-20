@@ -2,131 +2,128 @@
 title: "Divers"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.3.8.1 Delem Distance à l'élément le plus proche sur les surfaces
 
-## 5.3.8.1 Delem Distance to nearest element on surfaces
+Trace les contours de la distance à l'élément le plus proche depuis chaque surface.
 
-Contours the distance to the nearest element from each surface.
+Map3D détermine _Delem_ comme la plus petite distance entre surfaces adjacentes du modèle.
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
-
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+Pendant le processus de discrétisation, toutes les surfaces du modèle (surfaces des blocs FF et plans DD) sont subdivisées en éléments de frontière de longueur de côté
 
 _Delem /DON_
 
-During matrix assembly, all elements that fit within the dimension
+Pendant l'assemblage de la matrice, tous les éléments qui tiennent dans la dimension
 
 _Delem/DOC_
 
-will be lumped together.
+seront regroupés (lumping).
 
-For more details refer to
+Pour plus de détails, voir
 
 CAD > Properties > Control Parameters.
 
-#### Related topics:
+#### Sujets connexes :
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.2 Dgrid Distance to nearest grid on surfaces
+## 5.3.8.2 Dgrid Distance à la grille la plus proche sur les surfaces
 
-Contours the distance to the nearest grid from each surface.
+Trace les contours de la distance à la grille la plus proche depuis chaque surface.
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+Map3D détermine _Dgrid_ comme la plus petite distance entre les surfaces du modèle et les plans de grille.
 
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+Pendant le processus de discrétisation, toutes les surfaces du modèle (surfaces des blocs FF et plans DD) sont subdivisées en éléments de frontière de longueur de côté
 
 _Dgrid/DOL_
 
-During grid assembly, all elements that fit within the dimension
+Pendant l'assemblage de la grille, tous les éléments qui tiennent dans la dimension
 
 _Dgrid/DOE_
 
-will be lumped together.
+seront regroupés (lumping).
 
-During grid assembly, all grid points that fit within the dimension
+Pendant l'assemblage de la grille, tous les points de grille qui tiennent dans la dimension
 
 _Dgrid/DOG_
 
-will be lumped together.
+seront regroupés (lumping).
 
-For more details refer to
+Pour plus de détails, voir
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### Sujets connexes :
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.3 Delem/Lelem DON ratio on surfaces
+## 5.3.8.3 Delem/Lelem Rapport DON sur les surfaces
 
-Contours the distance to the nearest element _Delem_ divided by the element width _Lelem_ .
+Trace les contours de la distance à l'élément le plus proche _Delem_ divisée par la largeur d'élément _Lelem_ .
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
+Map3D détermine _Delem_ comme la plus petite distance entre surfaces adjacentes du modèle.
 
-Small values of _DON_ can be related to convergence problems.
+De faibles valeurs de _DON_ peuvent être liées à des problèmes de convergence.
 
-For more details refer to
-
-CAD > Properties > Control Parameters.
-
-## 5.3.8.4 Dgrid/Lelem DOL ratio on surfaces
-
-Contours the distance to the nearest grid _Dgrid_ divided by the element width _Lelem_ .
-
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
-
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
-
-For more details refer to
+Pour plus de détails, voir
 
 CAD > Properties > Control Parameters.
 
-## 5.3.8.5 Dratio on surfaces
+## 5.3.8.4 Dgrid/Lelem Rapport DOL sur les surfaces
 
-Contours the coefficient ratio on surfaces.
+Trace les contours de la distance à la grille la plus proche _Dgrid_ divisée par la largeur d'élément _Lelem_ .
 
-This ratio identifies locations where surfaces are very close to one-another, indicating possible construction errors.
+Map3D détermine _Dgrid_ comme la plus petite distance entre les surfaces du modèle et les plans de grille.
 
-## 5.3.8.6 Dgrid Distance to nearest element on grids
+De faibles valeurs de _DOL_ peuvent être liées à des prédictions peu précises ( _DOL_ =1 pour une erreur de 10-20 %, _DOL_ =2 pour une erreur de 5-10 %, _DOL_ =4 pour une erreur &lt; 5 %).
 
-Contours the distance to the nearest surface from each grid point.
+Pour plus de détails, voir
 
-_Dgrid_ is determined by Map3D as the smallest distance between grid planes and model surfaces.
+CAD > Properties > Control Parameters.
 
-During the discretization process all grid planes are subdivided into elements with side length _Dgrid/DOL_
+## 5.3.8.5 Dratio sur les surfaces
 
-During grid assembly, all elements that fit within the dimension _Dgrid/DOE_
+Trace les contours du rapport des coefficients sur les surfaces.
 
-will be lumped together.
+Ce rapport repère les endroits où des surfaces sont très proches les unes des autres, ce qui indique d'éventuelles erreurs de construction.
 
-During grid assembly, all grid points that fit within the dimension
+## 5.3.8.6 Dgrid Distance à l'élément le plus proche sur les grilles
+
+Trace les contours de la distance à la surface la plus proche depuis chaque point de grille.
+
+Map3D détermine _Dgrid_ comme la plus petite distance entre les plans de grille et les surfaces du modèle.
+
+Pendant le processus de discrétisation, tous les plans de grille sont subdivisés en éléments de longueur de côté _Dgrid/DOL_
+
+Pendant l'assemblage de la grille, tous les éléments qui tiennent dans la dimension _Dgrid/DOE_
+
+seront regroupés (lumping).
+
+Pendant l'assemblage de la grille, tous les points de grille qui tiennent dans la dimension
 
 _Dgrid/DOG_
 
-will be lumped together.
+seront regroupés (lumping).
 
-For more details refer to
+Pour plus de détails, voir
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### Sujets connexes :
 
 Plot > Miscellaneous > Dgrid/Lgrid DOL ratio on grids
 
-## 5.3.8.7 Dgrid/Lgrid DOL ratio on grids
+## 5.3.8.7 Dgrid/Lgrid Rapport DOL sur les grilles
 
-Contours the distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+Trace les contours de la distance à la grille la plus proche _Dgrid_ divisée par l'espacement de grille _Lgrid_ .
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+Map3D détermine _Dgrid_ comme la plus petite distance entre les surfaces du modèle et les plans de grille.
 
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+De faibles valeurs de _DOL_ peuvent être liées à des prédictions peu précises ( _DOL_ =1 pour une erreur de 10-20 %, _DOL_ =2 pour une erreur de 5-10 %, _DOL_ =4 pour une erreur &lt; 5 %).
 
-For more details refer to
+Pour plus de détails, voir
 
 CAD > Properties > Control Parameters
 
-## 5.3.8.8 Matl# - Material Number on Grids
+## 5.3.8.8 Matl# - Numéro de matériau sur les grilles
 
-Plots material number as coloured contour.
+Trace le numéro de matériau sous forme de contours colorés.

@@ -2,133 +2,130 @@
 title: "可视化（EVP 文件）"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+此选项可对 EVP 文件格式（来自 IMS 微震系统）的点数据进行可视化。点可以显示为带光源阴影的球体，其直径和/或颜色随震级（量值）变化，也可以在平面上绘制等值线以显示密度等。
 
-This option enables visualization of point data in EVP file format (from IMS seismic systems). Points can be displayed as light source shaded spheres with diameter and/or colour varying as magnitude, and contoured on a plane to display density etc.
+Map3D 还支持文本格式文件的可视化。
 
-Map3D also supports visualization of text formatted files.
+每个点都可以标记一系列：
 
-Each point can be tagged with a series of:
+- 数值（例如颜色、大小、方向等）
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- 文本消息
 
-- text messages
+- 文件名（例如图形文件、文档、电子表格等）
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+左键单击某个点时，其位置、量值和文本消息会显示在状态栏上。
 
-Upon left clicking on a point, the location, magnitude and text message are displayed on the status bar.
+右键单击某个点会激活可视化数据库（Visual Database）。此功能可用于显示包含品位、岩体质量等有用地质信息的数据库。每个点都可以标记一系列：
 
-Right clicking on a point activates the Visual Database. This feature can be used to display a database of useful geologic information such as grade, rockmass quality etc. Each point can be tagged with a series of:
+- 数值（例如颜色、大小、方向等）
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- 文本消息
 
-- text messages
-
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+- 文件名（例如图形文件、文档、电子表格等）
 
 ![Figure from page 464](/images/page-464-img-1.png)
 
 #### Event File:
 
-The event file is in *.EVP file format.
+事件文件为 *.EVP 文件格式。
 
-EVP event files are produced by IMS seismic systems.
+EVP 事件文件由 IMS 微震系统生成。
 
-Seismic data are stored as a series of points as follows:
+地震数据按以下方式存储为一系列点：
 
 **date time le x1 y1 z1 M  E Mp Ep Ms Es trigs... "text message" "file name"... date time le x2 y2 z2 M  E Mp Ep Ms Es trigs... "text message" "file name"... date time le x3 y3 z3 M  E Mp Ep Ms Es trigs... "text message" "file name"...**
 
-where **xi yi zi** represent the coordinates of each point,
+其中 **xi yi zi** 表示每个点的坐标，
 
-**M** represents the seismic moment, **E** represents the energy radiated, **trigs** represents the number of triggers,
+**M** 表示地震矩，**E** 表示辐射能量，**trigs** 表示触发数，
 
-**text message** indicates an optional series of text strings that must be enclosed in double quotes. **file name** indicates an optional series of file names that must be enclosed in double quotes.
+**text message** 表示可选的一系列文本字符串，必须用双引号括起来。**file name** 表示可选的一系列文件名，必须用双引号括起来。
 
-- The text message and file name are displayed in the status bar across the bottom of the screen by picking an event with the left mouse button.
+- 用鼠标左键选取事件时，文本消息和文件名会显示在屏幕底部的状态栏中。
 
-- They can also be edited by picking an event with the right mouse button.
+- 用鼠标右键选取事件也可以对其进行编辑。
 
-- Picking with the right mouse button also allows for display of the file if the file name has been associated with an application (refer to Windows documentation on how to "Associate a file with a program").
+- 如果文件名已与某个应用程序关联，用鼠标右键选取还可以显示该文件（请参阅 Windows 文档中关于如何"将文件与程序关联"的说明）。
 
-#### Merging multiple files into one database
+#### 将多个文件合并到一个数据库
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+您可以按住 Windows 标准的 "shift" 或 "ctrl" 键同时选择多个文件。
 
-These files will be merging into one database.
+这些文件将合并到一个数据库中。
 
-This allows you to keep separate parts of your visualization data in different files then easily merge them together into one database.
+这样，您可以将可视化数据的不同部分保存在不同文件中，然后轻松地将它们合并到一个数据库中。
 
 #### Magnitude Equation:
 
-Defines the parameter that will be plotted, e.g. **(0.516*log10(M) + 0.344*log10(E) - 6.572**
+定义要绘制的参数，例如 **(0.516*log10(M) + 0.344*log10(E) - 6.572**
 
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+下拉窗口最多可存储 20 个不同的方程。这些方程会在 Map3D 各次会话之间保存在 map3d.ini 文件中。
 
 #### Plot Variables:
 
-**E M** data fields in the event file.
+**E M** 事件文件中的数据字段。
 
 #### Functions:
 
-**sin() cos() tan()** sine, cosine and tangent trigonometric functions **asin() acos() atan()** Inverse trigonometric functions **sqrt()** square root function
+**sin() cos() tan()** 正弦、余弦和正切三角函数 **asin() acos() atan()** 反三角函数 **sqrt()** 平方根函数
 
-**log()** natural logarithmic function **log10()** base 10 logarithmic function **abs()** absolute value **exp()** exponential function (antilogarithm) **n() t(,)** normal and t-distribution **an() at(,)** inverse normal and t-distribution
+**log()** 自然对数函数 **log10()** 以 10 为底的对数函数 **abs()** 绝对值 **exp()** 指数函数（反对数） **n() t(,)** 正态分布和 t 分布 **an() at(,)** 反正态分布和反 t 分布
 
 #### Location:
 
-**x y z** coordinate of grid point.
+**x y z** 网格点坐标。
 
 #### Operators:
 
-- **+ - * /** ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
+- **+ - * /** ^   加、减、乘、除和乘方运算符。请注意，先计算乘方，然后计算乘法和除法，最后计算加法和减法。
 
-- **() [] &#123;&#125;** styles of brackets. Pairs of brackets must match.
+- **() [] &#123;&#125;** 括号类型。括号必须成对匹配。
 
-- maximum value. For example if the plot equation is specified as f1 > 10, the larger of f1 or 10 will be plotted.
+- 最大值。例如，如果绘图方程指定为 f1 > 10，则将绘制 f1 和 10 中较大的值。
 
-- **&lt;** minimum value. For example if the plot equation is specified as f1 &lt; 10, the smaller of f1 or 10 will be plotted.
+- **&lt;** 最小值。例如，如果绘图方程指定为 f1 &lt; 10，则将绘制 f1 和 10 中较小的值。
 
 #### Filters:
 
-**Start/End Time** – the lower and upper limits of the date/time filter. **Mag Min/Max** – the lower and upper limits of the magnitude filter. **Trig Min/Max** – the lower and upper limits of the # triggers filter.
+**Start/End Time** – 日期/时间过滤器的下限和上限。**Mag Min/Max** – 震级过滤器的下限和上限。**Trig Min/Max** – 触发数过滤器的下限和上限。
 
-**Polygon File** – the name of the file containing the polygon filter. This file must be in *.pnt file format. To assist in creating this file the **Plane** function allows you to set the UDCS (user defined coordinate system) to the best fit plane.
+**Polygon File** – 包含多边形过滤器的文件名。该文件必须为 *.pnt 文件格式。为便于创建此文件，**Plane** 功能允许您将 UDCS（用户定义坐标系）设置为最佳拟合平面。
 
-**Offset Z-/Z+** – the lower and upper limits of the Z-offset from the Polygon filter.
+**Offset Z-/Z+** – 与多边形过滤器相比 Z 向偏移量的下限和上限。
 
 #### Point Plotting Options:
 
-**Filled** – points are filled with the specified colour, contoured colour and/or shaded. **Contoured Colours** –fill colour is adjusted according to the magnitude determined from the **Plot Equation** .
+**Filled** – 点以指定颜色、等值线颜色和/或阴影填充。**Contoured Colours** – 填充颜色根据由 **Plot Equation** 确定的量值进行调整。
 
-- **Dark** – fill colour is shaded to appear as light source shaded spheres using a dark rich colour scheme.
+- **Dark** – 填充颜色加阴影，呈现为带光源阴影的球体，使用深沉浓郁的配色方案。
 
-- **Light** – fill colour is shaded to appear as light source shaded spheres using a bright shinny colour scheme.
+- **Light** – 填充颜色加阴影，呈现为带光源阴影的球体，使用明亮光泽的配色方案。
 
-**Outlined** – points are outlined with the specified colour or contoured colour.
+**Outlined** – 点以指定颜色或等值线颜色描边。
 
-**Contoured Outline** – points are drawn with contour colours adjusted according to the magnitude determined from the **Plot Equation** .
+**Contoured Outline** – 点以等值线颜色绘制，颜色根据由 **Plot Equation** 确定的量值进行调整。
 
-**Contour Plane** – enables or disables display of a contour plane (refer to **Plane** ).
+**Contour Plane** – 启用或禁用等值线平面的显示（参见 **Plane** ）。
 
-**Fixed Radius** – points will be plotted as spheres with a the specified **Radius:** parameter.
+**Fixed Radius** – 点将绘制为球体，其半径为指定的 **Radius:** 参数。
 
-**Magnitude Scaled Radius** – points will be plotted as spheres with radius scaled to the magnitude (determined from the **Magnitude Equation** ) such that if the magnitude is less than the minimum of the contour range, the sphere is drawn with Min radius specified by the **Radius:** parameter.. If the magnitude exceeds the maximum of the contour range, the vector is drawn with the Max radius specified by the **Radius:** parameter.
+**Magnitude Scaled Radius** – 点将绘制为球体，其半径按量值（由 **Magnitude Equation** 确定）缩放：如果量值小于等值线范围的最小值，则球体按 **Radius:** 参数指定的最小半径绘制；如果量值超过等值线范围的最大值，则按 **Radius:** 参数指定的最大半径绘制。
 
 #### Other:
 
-- **Persist** – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired.
+- **Persist** – 选中后，每次对模型进行重新定向、平移或缩放时都会重新绘制这些点。由于这对大型模型可能很耗时，因此并非总是需要此选项。
 
-**Translucent** - draws the points as translucent spheres.
+**Translucent** - 将点绘制为半透明球体。
 
-**Min Contour** - when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important.
+**Min Contour** - 取消选中时，不绘制低于等值线范围最小值的等值线。当仅关注等值线范围的上部时，这对显示等值线很有用。
 
-**Max Contour** - when unchecked, contours above the maximum contour range are not drawn. This
+**Max Contour** - 取消选中时，不绘制高于等值线范围最大值的等值线。当仅关注等值线范围的下部时，
 
-is useful for displaying contours where only the lowerer part of the contour range is important. **Make Point** - adds of a new point.
+这对显示等值线很有用。**Make Point** - 添加新点。
 
-**Plane** – enables setup of the contour plane.
+**Plane** – 用于设置等值线平面。
 
-**Range** – specify the minimum, maximum and interval for radius scaling and contouring.
+**Range** – 指定半径缩放和等值线的最小值、最大值和间隔。
 
-Plot regenerates the plot. This button can be placed on either the View Toolbar (Tools > View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+Plot 重新生成绘图。此按钮可以放置在视图工具栏（Tools > View Toolbar Configure）或等值线工具栏（Tools > Contour Toolbar Configure）上。

@@ -2,27 +2,24 @@
 title: "多边形框"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+计算所有选定等值线点的加权平均值。此功能也可以通过 View > Length 激活。
 
-Calculates the weighted average value for all selected contour points. This function can also be activated using View > Length.
+系统会提示您依次单击选择一系列角点，以定义一个闭合多边形：
 
-You will be prompted to select a series of corners to define a closed polygon by picking each with a single mouse click:
+- 必须按住 Shift 键才能选择多条线段。
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- 选择起始点以闭合多段线，即可定义闭合多边形。
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- 如果定义了闭合多边形，多边形内的等值线点将参与平均计算。
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included in the averaging.
+- 如果定义的是开放多段线（未选择起始点），平均计算功能将无法工作。
 
-- The average routine will not function if you define an open polyline shape (by not selecting the starting point).
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+平均计算的方法是：将每个选定值乘以其对应表面或网格单元的面积，然后求和。该结果显示为 "Weighted Sum"。"Average" 由加权和除以总面积得到。
 
-The averaging is done by multiplying each selected value by the area of its associated surface or grid patch, then summing these. This result is presented as the "Weighted Sum". The "Average" is determined by dividing the weighted sum by the total area.
+所有数值均按矢量分量累加。主应力由笛卡尔分量的加权平均值确定。位移、流量和表面剪切分量由矢量分量的加权平均值确定。
 
-All values are accumulated as vector components. Principal stresses are determined from the weighted mean of the Cartesian components. Displacement, flow and surface shear components are determined from the weighted mean of the vector components.
+请注意，对于应力而言，"Weighted Sum" 实际上就是作用在该表面上的总力。
 
-Note that for stresses, the "Weighted Sum" is actually the total force acting on the surface.
-
-If you multiply by the shear modulus, the "Weighted Sum" of the plastic shear displacement (ride) is actually the Seismic Moment.
+如果乘以剪切模量，塑性剪切位移（ride）的 "Weighted Sum" 实际上就是地震矩。

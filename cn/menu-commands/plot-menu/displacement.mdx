@@ -2,71 +2,68 @@
 title: "位移"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.3.3.1 总位移
 
-## 5.3.3.1 Total displacement
+绘制位移的等值线。
 
-Contours the displacements.
-
-These components can be accessed via the Displacement Components toolbar as follows:
+这些分量可通过 Displacement Components 工具栏访问，方式如下：
 
 ![Figure from page 240](/images/page-240-img-9.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Displacement Components toolbar. You can add this button to the Contours toolbar using the configuration button.
+选择 Contours 工具栏上的按钮可激活 Displacement Components 工具栏。您可以使用配置按钮将此按钮添加到 Contours 工具栏。
 
 ![Figure from page 240](/images/page-240-img-13.png)
 
-This toolbar is meant to provide quick access to displacement components.
+该工具栏用于快速访问位移分量。
 
-Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Total Displacement   contours the total displacement Plot > Displacement > dx X-Displacement   contours the x-displacement component Plot > Displacement > dy Y-Displacement   contours the y-displacement component Plot > Displacement > dz Z-Displacement   contours the z-displacement component
+Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> 总位移   绘制总位移的等值线 Plot > Displacement > dx X 向位移   绘制 x 向位移分量的等值线 Plot > Displacement > dy Y 向位移   绘制 y 向位移分量的等值线 Plot > Displacement > dz Z 向位移   绘制 z 向位移分量的等值线
 
-To calculate the in-plane displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the grid plane and the displacement normal to the plane. Note that dni is oriented normal to the grid plane and parallel to the direction of a line grid.
+为计算面内位移，网格平面上每个点的位移状态都会被重新定向，以确定平行于网格平面的最大位移和垂直于该平面的位移。请注意，dni 垂直于网格平面，并平行于线网格的方向。
 
-Plot > Displacement > dni In-plane normal   contours the displacement component normal to the grid plane.
+Plot > Displacement > dni 面内法向   绘制垂直于网格平面的位移分量的等值线。
 
-Plot > Displacement > dmi In-plane maximum   contours the maximum displacement tangential to the grid plane.
+Plot > Displacement > dmi 面内最大值   绘制与网格平面相切的最大位移的等值线。
 
 ![Figure from page 241](/images/page-241-img-3.png)
 
-To calculate the ubiquitous-plane #1 displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the ubiquitous plane #1 and the displacement normal to the plane. Note that dmi is not oriented normal to the grid plane.
+为计算遍布平面 #1 的位移，网格平面上每个点的位移状态都会被重新定向，以确定平行于遍布平面 #1 的最大位移和垂直于该平面的位移。请注意，dmi 并不垂直于网格平面。
 
-Plot > Displacement > dnu Ubiquitous-plane normal   contours the displacement component normal to the ubiquitous plane.
+Plot > Displacement > dnu 遍布平面法向   绘制垂直于遍布平面的位移分量的等值线。
 
-Plot > Displacement > dmu Ubiquitous-plane maximum   contours the maximum displacement tangential to the ubiquitous plane.
+Plot > Displacement > dmu 遍布平面最大值   绘制与遍布平面相切的最大位移的等值线。
 
 ![Figure from page 241](/images/page-241-img-7.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-Notes:
+注意：
 
-The displacement toolbar can only be activated after the model building - CAD Stage
+只有在模型构建（CAD）阶段之后才能激活位移工具栏
 
-Map3D Analysis Stages.
+Map3D 分析阶段。
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+等值线范围通过以下功能设置
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+如有需要，可以将该分量添加到等值线工具栏
 
 Tools > Configure Contouring Toolbar > Displacement
 
-The user may find it handy to add the
+您可以将
 
 More Displacement Components
 
-button to the contouring toolbar for quick access to all displacement components.
+按钮添加到等值线工具栏，以便快速访问所有位移分量。

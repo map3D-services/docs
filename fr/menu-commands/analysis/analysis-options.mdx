@@ -2,79 +2,76 @@
 title: "Options d'analyse"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
-
-Sets up options that control various program operations.
+Définit des options qui contrôlent diverses opérations du programme.
 
 ![Figure from page 345](/images/page-345-img-8.png)
 
 #### File Load Options:
 
-Analysis > Options > Renumber Renumber surfaces so the volume is positive (during file load). Analysis > Options > Auto Repair Attempts to repair you model by filling gaps, deleting duplicates etc.(during file load).
+Analysis > Options > Renumber Renumérote les surfaces pour que le volume soit positif (pendant le chargement du fichier). Analysis > Options > Auto Repair Tente de réparer le modèle en comblant les vides, en supprimant les doublons, etc. (pendant le chargement du fichier).
 
 #### Intersection Options:
 
-Analysis > Options > Collapse Merge adjacent surfaces (during intersection analysis).
+Analysis > Options > Collapse Fusionne les surfaces adjacentes (pendant l'analyse des intersections).
 
-Analysis > Options > Planarity Subdivide non-planar quadrilaterals into triangles (during intersection analysis).
+Analysis > Options > Planarity Subdivise les quadrilatères non plans en triangles (pendant l'analyse des intersections).
 
-Analysis > Options > Closure Conducts closure and overlap checking, and resolves Boolean intersections (during intersection analysis).
+Analysis > Options > Closure Effectue la vérification de fermeture et de chevauchement, et résout les intersections booléennes (pendant l'analyse des intersections).
 
 #### Discretization Options:
 
-Analysis > Options > MSCALC Calculate results at user defined points (during Map3D BEM analysis).
+Analysis > Options > MSCALC Calcule les résultats en des points définis par l'utilisateur (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > LERD Calculate energy release rate and loading system stiffness (during Map3D BEM analysis).
+Analysis > Options > LERD Calcule le taux de libération d'énergie et la rigidité du système de chargement (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > ERR Calculate energy release rate and loading system stiffness (during Map3D BEM analysis).
+Analysis > Options > ERR Calcule le taux de libération d'énergie et la rigidité du système de chargement (pendant l'analyse BEM de Map3D).
 
 Analysis > Options > Lumping Accuracy
 
-Analysis > Options > Lumping Pre-calculate coefficient matrix size (during discretization analysis).
+Analysis > Options > Lumping Précalcule la taille de la matrice des coefficients (pendant l'analyse de discrétisation).
 
 #### Map3D BEM Analysis Options:
 
-Analysis > Options > V-ram Store part of the coefficient matrix in virtual RAM (during Map3D BEM analysis).
+Analysis > Options > V-ram Stocke une partie de la matrice des coefficients en RAM virtuelle (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > P-ram Store part of the coefficient matrix in physical RAM (during Map3D BEM analysis). Analysis > Options > Drive 1 Specify primary scratch drives for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > P-ram Stocke une partie de la matrice des coefficients en RAM physique (pendant l'analyse BEM de Map3D). Analysis > Options > Drive 1 Spécifie les lecteurs temporaires principaux pour la matrice des coefficients (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Drive 2 Specify secondary scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 2 Spécifie le lecteur temporaire secondaire pour la matrice des coefficients (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Drive 3 Specify third scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 3 Spécifie le troisième lecteur temporaire pour la matrice des coefficients (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Drive 4 Specify fourth scratch drive for coefficient matrix (during Map3D BEM analysis).
+Analysis > Options > Drive 4 Spécifie le quatrième lecteur temporaire pour la matrice des coefficients (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Creep Conduct elasto-visco-plastic creep analysis.
+Analysis > Options > Creep Effectue une analyse de fluage élasto-visco-plastique.
 
-Analysis > Options > Move Points Move field points that are very close to boundary surfaces (during Map3D BEM analysis).
+Analysis > Options > Move Points Déplace les points de champ très proches des surfaces frontières (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Verbose Write all solution vectors and field point results to the log file (during Map3D BEM analysis).
+Analysis > Options > Verbose Écrit tous les vecteurs solution et tous les résultats des points de champ dans le fichier journal (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > CGM Use the conjugate gradient solver (during Map3D BEM analysis).
+Analysis > Options > CGM Utilise le solveur à gradient conjugué (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Precondition Precondition the matrix (during Map3D BEM analysis). Analysis > Options > Accelerate Use the matrix accelerator (during Map3D BEM analysis). Analysis > Options > Linear Use higher order boundary elements (during Map3D BEM analysis).
+Analysis > Options > Precondition Préconditionne la matrice (pendant l'analyse BEM de Map3D). Analysis > Options > Accelerate Utilise l'accélérateur de matrice (pendant l'analyse BEM de Map3D). Analysis > Options > Linear Utilise des éléments de frontière d'ordre supérieur (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Quad Use higher order boundary elements (during Map3D BEM analysis).
+Analysis > Options > Quad Utilise des éléments de frontière d'ordre supérieur (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Threads = 8  indicates the number of threads currently active.
+Analysis > Options > Threads = 8  indique le nombre de threads actuellement actifs.
 
-Analysis > Options > Nosleep in analysis Use Windows asynchronous I/O routines (during Map3D BEM analysis).
+Analysis > Options > Nosleep in analysis Utilise les routines d'E/S asynchrones de Windows (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Async I/O Use Windows asynchronous I/O routines (during Map3D BEM analysis).
+Analysis > Options > Async I/O Utilise les routines d'E/S asynchrones de Windows (pendant l'analyse BEM de Map3D).
 
-Analysis > Options > Zero Strain Placement When a new material is assigned to a block CAD > Edit > Entity Properties, these materials are initialized to the specified stress state CAD > Properties > Material Properties.
+Analysis > Options > Zero Strain Placement Lorsqu'un nouveau matériau est affecté à un bloc avec CAD > Edit > Entity Properties, ces matériaux sont initialisés à l'état de contraintes spécifié dans CAD > Properties > Material Properties.
 
-Analysis > Options > Initialization Initialize the model so that the analysis continues from where a previous analysis completed.
+Analysis > Options > Initialization Initialise le modèle de sorte que l'analyse se poursuive là où une analyse précédente s'était terminée.
 
-Analysis > Options > Halt on Errors Initialize the model so that the analysis continues from where a previous analysis completed.
+Analysis > Options > Halt on Errors Initialise le modèle de sorte que l'analyse se poursuive là où une analyse précédente s'était terminée.
 
-Analysis > Options > Host Stress Datum is Ground Surface Treat the datum as ground surface such that any surfaces above the datum are assigned a zero stress state.
+Analysis > Options > Host Stress Datum is Ground Surface Traite le datum comme la surface du sol, de sorte que toute surface située au-dessus du datum reçoit un état de contraintes nul.
 
-Analysis > Options > Calculate Tangential Stress Components In elastic analyses, tangential stresses are not calculated unless requested. This is because they are not required for the solution process and do require additional analysis time. These values are calculated by default during plastic analysis.
+Analysis > Options > Calculate Tangential Stress Components Dans les analyses élastiques, les contraintes tangentielles ne sont pas calculées sauf demande explicite. En effet, elles ne sont pas nécessaires au processus de résolution et demandent un temps d'analyse supplémentaire. Ces valeurs sont calculées par défaut lors d'une analyse plastique.
 
 #### Miscellaneous Options:
 
-Analysis > Options > Batch Set up analysis batch queue.
+Analysis > Options > Batch Configure la file d'attente des lots d'analyse.
 
 Analysis > Options > Reset

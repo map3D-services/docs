@@ -2,71 +2,68 @@
 title: "Deslocamento"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+## 5.3.3.1 Deslocamento total
 
-## 5.3.3.1 Total displacement
+Gera contornos dos deslocamentos.
 
-Contours the displacements.
-
-These components can be accessed via the Displacement Components toolbar as follows:
+Essas componentes podem ser acessadas pela barra de ferramentas Displacement Components, da seguinte forma:
 
 ![Figure from page 240](/images/page-240-img-9.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de ferramentas pode ser alterada para a orientação vertical arrastando-a contra a borda direita ou esquerda da janela principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Ela pode voltar à orientação horizontal arrastando-a contra a borda superior ou inferior da janela principal.
 
-Selecting the button on the Contours toolbar activates the Displacement Components toolbar. You can add this button to the Contours toolbar using the configuration button.
+Ao selecionar o botão da barra de ferramentas Contours, a barra de ferramentas Displacement Components é ativada. Você pode adicionar este botão à barra de ferramentas Contours usando o botão de configuração.
 
 ![Figure from page 240](/images/page-240-img-13.png)
 
-This toolbar is meant to provide quick access to displacement components.
+Esta barra de ferramentas oferece acesso rápido às componentes do deslocamento.
 
-Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Total Displacement   contours the total displacement Plot > Displacement > dx X-Displacement   contours the x-displacement component Plot > Displacement > dy Y-Displacement   contours the y-displacement component Plot > Displacement > dz Z-Displacement   contours the z-displacement component
+Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Deslocamento total   gera contornos do deslocamento total Plot > Displacement > dx Deslocamento X   gera contornos da componente x do deslocamento Plot > Displacement > dy Deslocamento Y   gera contornos da componente y do deslocamento Plot > Displacement > dz Deslocamento Z   gera contornos da componente z do deslocamento
 
-To calculate the in-plane displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the grid plane and the displacement normal to the plane. Note that dni is oriented normal to the grid plane and parallel to the direction of a line grid.
+Para calcular os deslocamentos no plano, o estado de deslocamento em cada ponto do plano da grade é reorientado para determinar o deslocamento máximo paralelo ao plano da grade e o deslocamento normal ao plano. Observe que dni é orientado normal ao plano da grade e paralelo à direção de uma grade linear.
 
-Plot > Displacement > dni In-plane normal   contours the displacement component normal to the grid plane.
+Plot > Displacement > dni Normal no plano   gera contornos da componente do deslocamento normal ao plano da grade.
 
-Plot > Displacement > dmi In-plane maximum   contours the maximum displacement tangential to the grid plane.
+Plot > Displacement > dmi Máximo no plano   gera contornos do deslocamento máximo tangencial ao plano da grade.
 
 ![Figure from page 241](/images/page-241-img-3.png)
 
-To calculate the ubiquitous-plane #1 displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the ubiquitous plane #1 and the displacement normal to the plane. Note that dmi is not oriented normal to the grid plane.
+Para calcular os deslocamentos do plano ubíquo nº 1, o estado de deslocamento em cada ponto do plano da grade é reorientado para determinar o deslocamento máximo paralelo ao plano ubíquo nº 1 e o deslocamento normal ao plano. Observe que dmi não é orientado normal ao plano da grade.
 
-Plot > Displacement > dnu Ubiquitous-plane normal   contours the displacement component normal to the ubiquitous plane.
+Plot > Displacement > dnu Normal ao plano ubíquo   gera contornos da componente do deslocamento normal ao plano ubíquo.
 
-Plot > Displacement > dmu Ubiquitous-plane maximum   contours the maximum displacement tangential to the ubiquitous plane.
+Plot > Displacement > dmu Máximo no plano ubíquo   gera contornos do deslocamento máximo tangencial ao plano ubíquo.
 
 ![Figure from page 241](/images/page-241-img-7.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- a direção de mergulho é medida positiva no sentido horário a partir do eixo y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- o mergulho do plano é medido positivo para baixo a partir da horizontal (ou seja, a direção de mergulho).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- o caimento da normal é medido positivo para baixo (ou seja, negativo para cima) a partir da horizontal.
 
-Notes:
+Notas:
 
-The displacement toolbar can only be activated after the model building - CAD Stage
+A barra de ferramentas de deslocamento só pode ser ativada após a etapa de construção do modelo (CAD)
 
-Map3D Analysis Stages.
+Etapas de análise do Map3D.
 
-The orientation of the ubiquitous shear plane is set using
+A orientação do plano de cisalhamento ubíquo é definida com
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+A faixa de contornos é definida com
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Esta componente pode ser adicionada à barra de ferramentas de contornos, se desejado
 
 Tools > Configure Contouring Toolbar > Displacement
 
-The user may find it handy to add the
+Pode ser útil adicionar o botão
 
 More Displacement Components
 
-button to the contouring toolbar for quick access to all displacement components.
+à barra de ferramentas de contornos para acessar rapidamente todas as componentes do deslocamento.

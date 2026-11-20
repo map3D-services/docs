@@ -2,33 +2,30 @@
 title: "打开构造线"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+从文件加载构造线。
 
-Loads construction lines from a file.
+构造线用于确定地下要素（如采掘空间、接触面、构造等）的详细位置。Map3D 模型通常建立在这些构造线数据之上。
 
-Construction lines are used to define detailed locations of underground features such as excavations, contacts structure etc. A Map3D model is normally built on top of this construction line data.
+系统会提示您选择构造线文件的名称、位置和文件格式。构造线可从以下几种文件类型加载：
 
-You will be prompted to search for a construction line file name, location and file format. Construction lines can be loaded from several file types:
+- 点文件格式是一种通用 ASCII 数据文件，扩展名为 ".PNT"。该格式便于与其他 CAD 软件交换原始构造线数据。
 
-- Point file format is a universal ASCII data file with the extension ".PNT". This format is useful for exchanging raw construction line data with other CAD software.
+- AutoCAD-DXF 格式是一种常用的图形交换文件，扩展名为 ".DXF"。该格式便于与其他 CAD 软件交换构造线数据。
 
-- AutoCAD-DXF format is a popular drawing exchange file with the extension ".DXF". This format is useful for exchanging construction line data with other CAD software.
-
-The construction line data being loaded can either overwrite or be merged with existing data. The overwrite/merge option
+加载的构造线数据可以覆盖现有数据，也可以与现有数据合并。覆盖/合并选项
 
 #### File > Open > Merge Geometires
 
-appears at the bottom of the open file dialogue box.
+位于打开文件对话框的底部。
 
-#### Merging multiple files into one database
+#### 将多个文件合并到一个数据库
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+您可以按住 Windows 标准的 "shift" 或 "ctrl" 键同时选择多个文件。
 
-These files will be merging into one database.
+这些文件将合并到一个数据库中。
 
-This allows you to keep separate parts of construction line data in different files then easily merge them together into one database.
+这样，您可以将构造线数据的不同部分保存在不同文件中，然后轻松地将它们合并到一个数据库中。
 
-Another way of merging multiple files is to select the "Merge Geometries" option prior to selecting the additional file you want to add to the existing database.
+合并多个文件的另一种方法是，在选择要添加到现有数据库的其他文件之前，先选中 "Merge Geometries" 选项。
 
-This is useful if you already have construction line data open and want to add additional construction line data to this.
+如果您已打开构造线数据，并希望在其中添加更多构造线数据，此方法非常有用。

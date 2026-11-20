@@ -2,131 +2,132 @@
 title: "其他"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.3.8.1 Delem 表面上到最近单元的距离
 
-## 5.3.8.1 Delem Distance to nearest element on surfaces
+绘制每个表面到最近单元的距离等值线。
 
-Contours the distance to the nearest element from each surface.
+_Delem_ 由 Map3D 确定，为相邻模型表面之间的最小距离。
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
-
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+在离散化过程中，所有模型表面（FF 块体的表面和 DD 平面）都被细分为边长为
 
 _Delem /DON_
 
-During matrix assembly, all elements that fit within the dimension
+的边界单元。
+
+在矩阵组装过程中，所有落在尺寸
 
 _Delem/DOC_
 
-will be lumped together.
+范围内的单元将被合并（lumping）。
 
-For more details refer to
+有关更多详细信息，请参阅
 
-CAD > Properties > Control Parameters.
+CAD > Properties > Control Parameters。
 
-#### Related topics:
+#### 相关主题：
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.2 Dgrid Distance to nearest grid on surfaces
+## 5.3.8.2 Dgrid 表面上到最近网格的距离
 
-Contours the distance to the nearest grid from each surface.
+绘制每个表面到最近网格的距离等值线。
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+_Dgrid_ 由 Map3D 确定，为模型表面与网格平面之间的最小距离。
 
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+在离散化过程中，所有模型表面（FF 块体的表面和 DD 平面）都被细分为边长为
 
 _Dgrid/DOL_
 
-During grid assembly, all elements that fit within the dimension
+的边界单元。
+
+在网格组装过程中，所有落在尺寸
 
 _Dgrid/DOE_
 
-will be lumped together.
+范围内的单元将被合并（lumping）。
 
-During grid assembly, all grid points that fit within the dimension
+在网格组装过程中，所有落在尺寸
 
 _Dgrid/DOG_
 
-will be lumped together.
+范围内的网格点将被合并（lumping）。
 
-For more details refer to
+有关更多详细信息，请参阅
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### 相关主题：
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.3 Delem/Lelem DON ratio on surfaces
+## 5.3.8.3 Delem/Lelem 表面上的 DON 比值
 
-Contours the distance to the nearest element _Delem_ divided by the element width _Lelem_ .
+绘制到最近单元的距离 _Delem_ 除以单元宽度 _Lelem_ 的等值线。
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
+_Delem_ 由 Map3D 确定，为相邻模型表面之间的最小距离。
 
-Small values of _DON_ can be related to convergence problems.
+较小的 _DON_ 值可能与收敛问题有关。
 
-For more details refer to
+有关更多详细信息，请参阅
 
-CAD > Properties > Control Parameters.
+CAD > Properties > Control Parameters。
 
-## 5.3.8.4 Dgrid/Lelem DOL ratio on surfaces
+## 5.3.8.4 Dgrid/Lelem 表面上的 DOL 比值
 
-Contours the distance to the nearest grid _Dgrid_ divided by the element width _Lelem_ .
+绘制到最近网格的距离 _Dgrid_ 除以单元宽度 _Lelem_ 的等值线。
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+_Dgrid_ 由 Map3D 确定，为模型表面与网格平面之间的最小距离。
 
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+较小的 _DOL_ 值可能与预测精度较低有关（_DOL_ =1 时误差为 10-20%，_DOL_ =2 时误差为 5-10%，_DOL_ =4 时误差 &lt; 5%）。
 
-For more details refer to
+有关更多详细信息，请参阅
 
-CAD > Properties > Control Parameters.
+CAD > Properties > Control Parameters。
 
-## 5.3.8.5 Dratio on surfaces
+## 5.3.8.5 表面上的 Dratio
 
-Contours the coefficient ratio on surfaces.
+绘制表面上的系数比值等值线。
 
-This ratio identifies locations where surfaces are very close to one-another, indicating possible construction errors.
+该比值用于识别表面彼此非常接近的位置，这可能表明存在构造错误。
 
-## 5.3.8.6 Dgrid Distance to nearest element on grids
+## 5.3.8.6 Dgrid 网格上到最近单元的距离
 
-Contours the distance to the nearest surface from each grid point.
+绘制每个网格点到最近表面的距离等值线。
 
-_Dgrid_ is determined by Map3D as the smallest distance between grid planes and model surfaces.
+_Dgrid_ 由 Map3D 确定，为网格平面与模型表面之间的最小距离。
 
-During the discretization process all grid planes are subdivided into elements with side length _Dgrid/DOL_
+在离散化过程中，所有网格平面都被细分为边长为 _Dgrid/DOL_ 的单元。
 
-During grid assembly, all elements that fit within the dimension _Dgrid/DOE_
+在网格组装过程中，所有落在尺寸 _Dgrid/DOE_
 
-will be lumped together.
+范围内的单元将被合并（lumping）。
 
-During grid assembly, all grid points that fit within the dimension
+在网格组装过程中，所有落在尺寸
 
 _Dgrid/DOG_
 
-will be lumped together.
+范围内的网格点将被合并（lumping）。
 
-For more details refer to
+有关更多详细信息，请参阅
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### 相关主题：
 
 Plot > Miscellaneous > Dgrid/Lgrid DOL ratio on grids
 
-## 5.3.8.7 Dgrid/Lgrid DOL ratio on grids
+## 5.3.8.7 Dgrid/Lgrid 网格上的 DOL 比值
 
-Contours the distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+绘制到最近网格的距离 _Dgrid_ 除以网格间距 _Lgrid_ 的等值线。
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+_Dgrid_ 由 Map3D 确定，为模型表面与网格平面之间的最小距离。
 
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+较小的 _DOL_ 值可能与预测精度较低有关（_DOL_ =1 时误差为 10-20%，_DOL_ =2 时误差为 5-10%，_DOL_ =4 时误差 &lt; 5%）。
 
-For more details refer to
+有关更多详细信息，请参阅
 
 CAD > Properties > Control Parameters
 
-## 5.3.8.8 Matl# - Material Number on Grids
+## 5.3.8.8 Matl# - 网格上的材料编号
 
-Plots material number as coloured contour.
+将材料编号绘制为彩色等值线。

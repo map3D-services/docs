@@ -2,131 +2,132 @@
 title: "Sonstiges"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+## 5.3.8.1 Delem Abstand zum nächsten Element auf Oberflächen
 
-## 5.3.8.1 Delem Distance to nearest element on surfaces
+Stellt den Abstand zum nächsten Element von jeder Oberfläche aus als Konturen dar.
 
-Contours the distance to the nearest element from each surface.
+_Delem_ wird von Map3D als kleinster Abstand zwischen benachbarten Modelloberflächen bestimmt.
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
-
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+Während der Diskretisierung werden alle Modelloberflächen (Oberflächen von FF-Blöcken und DD-Ebenen) in Randelemente mit der Seitenlänge
 
 _Delem /DON_
 
-During matrix assembly, all elements that fit within the dimension
+unterteilt.
+
+Beim Aufbau der Matrix werden alle Elemente, die in die Abmessung
 
 _Delem/DOC_
 
-will be lumped together.
+passen, zusammengefasst (Lumping).
 
-For more details refer to
+Weitere Einzelheiten finden Sie unter
 
 CAD > Properties > Control Parameters.
 
-#### Related topics:
+#### Verwandte Themen:
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.2 Dgrid Distance to nearest grid on surfaces
+## 5.3.8.2 Dgrid Abstand zum nächsten Raster auf Oberflächen
 
-Contours the distance to the nearest grid from each surface.
+Stellt den Abstand zum nächsten Raster von jeder Oberfläche aus als Konturen dar.
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+_Dgrid_ wird von Map3D als kleinster Abstand zwischen Modelloberflächen und Rasterebenen bestimmt.
 
-During the discretization process all model surfaces (surfaces of FF blocks and DD planes) are subdivided into boundary elements with side length
+Während der Diskretisierung werden alle Modelloberflächen (Oberflächen von FF-Blöcken und DD-Ebenen) in Randelemente mit der Seitenlänge
 
 _Dgrid/DOL_
 
-During grid assembly, all elements that fit within the dimension
+unterteilt.
+
+Beim Rasteraufbau werden alle Elemente, die in die Abmessung
 
 _Dgrid/DOE_
 
-will be lumped together.
+passen, zusammengefasst (Lumping).
 
-During grid assembly, all grid points that fit within the dimension
+Beim Rasteraufbau werden alle Rasterpunkte, die in die Abmessung
 
 _Dgrid/DOG_
 
-will be lumped together.
+passen, zusammengefasst (Lumping).
 
-For more details refer to
+Weitere Einzelheiten finden Sie unter
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### Verwandte Themen:
 
 Plot > Miscellaneous > Delem/Lelem - DON ratio on surfaces
 
-## 5.3.8.3 Delem/Lelem DON ratio on surfaces
+## 5.3.8.3 Delem/Lelem DON-Verhältnis auf Oberflächen
 
-Contours the distance to the nearest element _Delem_ divided by the element width _Lelem_ .
+Stellt den Abstand zum nächsten Element _Delem_ geteilt durch die Elementbreite _Lelem_ als Konturen dar.
 
-_Delem_ is determined by Map3D as the smallest distance between adjacent model surfaces.
+_Delem_ wird von Map3D als kleinster Abstand zwischen benachbarten Modelloberflächen bestimmt.
 
-Small values of _DON_ can be related to convergence problems.
+Kleine Werte von _DON_ können mit Konvergenzproblemen zusammenhängen.
 
-For more details refer to
-
-CAD > Properties > Control Parameters.
-
-## 5.3.8.4 Dgrid/Lelem DOL ratio on surfaces
-
-Contours the distance to the nearest grid _Dgrid_ divided by the element width _Lelem_ .
-
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
-
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
-
-For more details refer to
+Weitere Einzelheiten finden Sie unter
 
 CAD > Properties > Control Parameters.
 
-## 5.3.8.5 Dratio on surfaces
+## 5.3.8.4 Dgrid/Lelem DOL-Verhältnis auf Oberflächen
 
-Contours the coefficient ratio on surfaces.
+Stellt den Abstand zum nächsten Raster _Dgrid_ geteilt durch die Elementbreite _Lelem_ als Konturen dar.
 
-This ratio identifies locations where surfaces are very close to one-another, indicating possible construction errors.
+_Dgrid_ wird von Map3D als kleinster Abstand zwischen Modelloberflächen und Rasterebenen bestimmt.
 
-## 5.3.8.6 Dgrid Distance to nearest element on grids
+Kleine Werte von _DOL_ können auf Vorhersagen mit geringer Genauigkeit hinweisen ( _DOL_ =1 für 10–20 % Fehler, _DOL_ =2 für 5–10 % Fehler, _DOL_ =4 für &lt; 5 % Fehler).
 
-Contours the distance to the nearest surface from each grid point.
+Weitere Einzelheiten finden Sie unter
 
-_Dgrid_ is determined by Map3D as the smallest distance between grid planes and model surfaces.
+CAD > Properties > Control Parameters.
 
-During the discretization process all grid planes are subdivided into elements with side length _Dgrid/DOL_
+## 5.3.8.5 Dratio auf Oberflächen
 
-During grid assembly, all elements that fit within the dimension _Dgrid/DOE_
+Stellt das Koeffizientenverhältnis auf Oberflächen als Konturen dar.
 
-will be lumped together.
+Dieses Verhältnis zeigt Stellen, an denen Oberflächen sehr nahe beieinander liegen, was auf mögliche Konstruktionsfehler hindeutet.
 
-During grid assembly, all grid points that fit within the dimension
+## 5.3.8.6 Dgrid Abstand zum nächsten Element auf Rastern
+
+Stellt den Abstand zur nächsten Oberfläche von jedem Rasterpunkt aus als Konturen dar.
+
+_Dgrid_ wird von Map3D als kleinster Abstand zwischen Rasterebenen und Modelloberflächen bestimmt.
+
+Während der Diskretisierung werden alle Rasterebenen in Elemente mit der Seitenlänge _Dgrid/DOL_ unterteilt.
+
+Beim Rasteraufbau werden alle Elemente, die in die Abmessung _Dgrid/DOE_
+
+passen, zusammengefasst (Lumping).
+
+Beim Rasteraufbau werden alle Rasterpunkte, die in die Abmessung
 
 _Dgrid/DOG_
 
-will be lumped together.
+passen, zusammengefasst (Lumping).
 
-For more details refer to
+Weitere Einzelheiten finden Sie unter
 
 CAD > Properties > Control Parameters
 
-#### Related topics:
+#### Verwandte Themen:
 
 Plot > Miscellaneous > Dgrid/Lgrid DOL ratio on grids
 
-## 5.3.8.7 Dgrid/Lgrid DOL ratio on grids
+## 5.3.8.7 Dgrid/Lgrid DOL-Verhältnis auf Rastern
 
-Contours the distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ .
+Stellt den Abstand zum nächsten Raster _Dgrid_ geteilt durch den Rasterabstand _Lgrid_ als Konturen dar.
 
-_Dgrid_ is determined by Map3D as the smallest distance between model surfaces and grid planes.
+_Dgrid_ wird von Map3D als kleinster Abstand zwischen Modelloberflächen und Rasterebenen bestimmt.
 
-Small values of _DOL_ can be related to low accuracy predictions ( _DOL_ =1 for 10-20% error, _DOL_ =2 for 5-10% error, _DOL_ =4 for &lt; 5% error).
+Kleine Werte von _DOL_ können auf Vorhersagen mit geringer Genauigkeit hinweisen ( _DOL_ =1 für 10–20 % Fehler, _DOL_ =2 für 5–10 % Fehler, _DOL_ =4 für &lt; 5 % Fehler).
 
-For more details refer to
+Weitere Einzelheiten finden Sie unter
 
 CAD > Properties > Control Parameters
 
-## 5.3.8.8 Matl# - Material Number on Grids
+## 5.3.8.8 Matl# - Materialnummer auf Rastern
 
-Plots material number as coloured contour.
+Stellt die Materialnummer als farbige Konturen dar.

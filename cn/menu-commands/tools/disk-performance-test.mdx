@@ -2,29 +2,26 @@
 title: "磁盘性能测试"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+测试硬盘系统的性能。
 
-Tests the performance of the hard disk system.
+此测试模拟 Map3D 在 BEM 分析求解阶段的行为。
 
-This test simulates the behaviour of Map3D during the solution stage of the BEM analysis.
+Buffer Size：磁盘读写所用缓冲区的大小。Map3D 的文件读写使用 256K 缓冲区。
 
-Buffer Size - Size of the buffer used for reads and write to disk. Map3D uses a 256K buffer for its file read and writes.
+Write Through：指示系统绕过所有中间缓存，直接写入磁盘。Map3D 的文件写入使用 "Write Through"。
 
-Write Through - Instructs the system to write through any intermediate cache and go directly to disk. Map3D uses "Write Through" for its file writes.
+No Buffering：指示系统在不使用中间缓冲或缓存的情况下写入文件。Map3D 的文件写入使用 "No Buffering"。
 
-No Buffering - Instructs the system to write to the file with no intermediate buffering or caching. Map3D uses "No Buffering" for its file writes.
-
-Asynchronous I/O - Instructs the system to enable more than one read and/or write operation to be performed simultaneously. This option is only supported under Window NT/2000. Map3D can be instructed to use this feature with
+Asynchronous I/O：指示系统允许同时执行多个读和/或写操作。此选项仅在 Windows NT/2000 下受支持。可通过以下方式让 Map3D 使用此功能：
 
 #### Analysis > Options > Async I/O
 
-Size MB - File size used for the test. It is recommended that this test be done with a large file size (considerably larger than the amount of RAM). Drive - Disk drive used for the test.
+Size MB：测试所用的文件大小。建议使用较大的文件进行测试（远大于内存容量）。Drive：测试所用的磁盘驱动器。
 
-The important results are:
+重要的结果包括：
 
-Write rate - the number of MBytes written to the disk per second. You should expect more than 5-10 MB/second.
+Write rate：每秒写入磁盘的 MB 数。预期应超过 5-10 MB/秒。
 
-Read rate - the number of MBytes read from the disk per second. You should expect more than 5-10 MB/second.
+Read rate：每秒从磁盘读取的 MB 数。预期应超过 5-10 MB/秒。
 
-Multiply/sec - the number of floating point multiplies done per second. You should expect more than 50 MFLOPS.
+Multiply/sec：每秒完成的浮点乘法次数。预期应超过 50 MFLOPS。

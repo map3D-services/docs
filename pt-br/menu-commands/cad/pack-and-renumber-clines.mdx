@@ -2,37 +2,34 @@
 title: "Compactar e renumerar linhas de construção"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Compacta e renumera todas as linhas de construção.
 
-Packs and renumbers all construction lines.
+Pontos de coordenadas muito próximos entre si são mesclados. Os vértices de linhas de construção que compartilham a mesma localização usarão o mesmo número de ponto de coordenadas e, portanto, se moverão juntos em qualquer operação de edição de coordenadas (Cad > Edit). Este recurso é útil para eliminar pequenas lacunas e sobreposições entre linhas de construção adjacentes.
 
-Coordinate points that are very close to one another are merged together. Corners of construction lines that share the same location will use the same coordinate point number and hence will move together in any coordinate editing operation (Cad > Edit). This feature is useful for eliminating small gaps and overlaps between adjacent construction lines.
-
-All possible construction line segments of the same colour will be linked together to form contiguous lines between intersection points.
+Todos os segmentos de linhas de construção da mesma cor que puderem ser ligados serão unidos para formar linhas contínuas entre pontos de interseção.
 
 **6**
 
 ![Figure from page 445](/images/page-445-img-2.png)
 
-In this example, 3 line segments will be formed consisting of the following groupings of points
+Neste exemplo, serão formados 3 segmentos de linha, compostos pelos seguintes agrupamentos de pontos
 
-- Line segment 1:  10, 1, 2, 3, 4.
+- Segmento de linha 1:  10, 1, 2, 3, 4.
 
-- Line segment 2:  4, 5, 6, 7, 8, 9, 10.
+- Segmento de linha 2:  4, 5, 6, 7, 8, 9, 10.
 
-- Line segment 3:  4, 10.
+- Segmento de linha 3:  4, 10.
 
-When you initiate this function you will be prompted to specify a pack search radius
+Ao iniciar esta função, você será solicitado a especificar um raio de busca para a compactação
 
 ![Figure from page 443](/images/page-443-img-14.png)
 
-Radius this value is used to merge points that are close to one another. A zero value for this parameter indicates that it will not be used, and instead Map3D will merge points if they are within a search radius of 1000th of the edge length from the line. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Radius: este valor é usado para mesclar pontos próximos entre si. Um valor zero para este parâmetro indica que ele não será usado; em vez disso, o Map3D mesclará pontos que estejam dentro de um raio de busca de 1/1000 do comprimento da aresta em relação à linha. Tenha extremo cuidado ao especificar um valor diferente de zero para este parâmetro, pois valores grandes podem causar mais problemas do que resolvem ao mesclar pontos demais.
 
-Any unused coordinate numbers are removed from the list of coordinates.
+Os números de coordenadas não usados são removidos da lista de coordenadas.
 
-This function should be used before using the CAD > Edit > Smooth Construction lines function.
+Esta função deve ser usada antes da função CAD > Edit > Smooth Construction lines.
 
-This function should be used before using the CAD > Snap > Trace Cline Snap function.
+Esta função deve ser usada antes da função CAD > Snap > Trace Cline Snap.
 
-Construction lines can be unpacked using the CAD > Unpack Clines function.
+As linhas de construção podem ser descompactadas com a função CAD > Unpack Clines.

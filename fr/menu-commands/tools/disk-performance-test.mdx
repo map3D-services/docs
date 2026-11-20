@@ -2,29 +2,26 @@
 title: "Test de performance du disque"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Teste les performances du système de disque dur.
 
-Tests the performance of the hard disk system.
+Ce test simule le comportement de Map3D pendant l'étape de résolution de l'analyse BEM.
 
-This test simulates the behaviour of Map3D during the solution stage of the BEM analysis.
+Buffer Size : taille du tampon utilisé pour les lectures et écritures sur disque. Map3D utilise un tampon de 256K pour ses lectures et écritures de fichiers.
 
-Buffer Size - Size of the buffer used for reads and write to disk. Map3D uses a 256K buffer for its file read and writes.
+Write Through : demande au système d'écrire sans passer par un cache intermédiaire, directement sur le disque. Map3D utilise « Write Through » pour ses écritures de fichiers.
 
-Write Through - Instructs the system to write through any intermediate cache and go directly to disk. Map3D uses "Write Through" for its file writes.
+No Buffering : demande au système d'écrire dans le fichier sans tampon ni cache intermédiaire. Map3D utilise « No Buffering » pour ses écritures de fichiers.
 
-No Buffering - Instructs the system to write to the file with no intermediate buffering or caching. Map3D uses "No Buffering" for its file writes.
-
-Asynchronous I/O - Instructs the system to enable more than one read and/or write operation to be performed simultaneously. This option is only supported under Window NT/2000. Map3D can be instructed to use this feature with
+Asynchronous I/O : demande au système d'autoriser plusieurs opérations de lecture et/ou d'écriture simultanées. Cette option n'est prise en charge que sous Windows NT/2000. Vous pouvez demander à Map3D d'utiliser cette fonction avec
 
 #### Analysis > Options > Async I/O
 
-Size MB - File size used for the test. It is recommended that this test be done with a large file size (considerably larger than the amount of RAM). Drive - Disk drive used for the test.
+Size MB : taille du fichier utilisé pour le test. Il est recommandé d'effectuer ce test avec un fichier volumineux (nettement plus grand que la quantité de RAM). Drive : lecteur de disque utilisé pour le test.
 
-The important results are:
+Les résultats importants sont :
 
-Write rate - the number of MBytes written to the disk per second. You should expect more than 5-10 MB/second.
+Write rate : le nombre de Mo écrits sur le disque par seconde. Vous devriez obtenir plus de 5-10 Mo/seconde.
 
-Read rate - the number of MBytes read from the disk per second. You should expect more than 5-10 MB/second.
+Read rate : le nombre de Mo lus sur le disque par seconde. Vous devriez obtenir plus de 5-10 Mo/seconde.
 
-Multiply/sec - the number of floating point multiplies done per second. You should expect more than 50 MFLOPS.
+Multiply/sec : le nombre de multiplications en virgule flottante effectuées par seconde. Vous devriez obtenir plus de 50 MFLOPS.

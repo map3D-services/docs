@@ -2,41 +2,38 @@
 title: "Visualisierungsdatenbank"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Mit dieser Funktion lässt sich eine Datenbank mit nützlichen geologischen Informationen wie Gehalt, Gebirgsqualität usw. anzeigen.
 
-This feature can be used to display a database of useful geologic information such as grade, rockmass quality etc.
+Jeder Punkt kann mit einer Reihe von Elementen versehen werden:
 
-Each point can be tagged with a series of:
+- numerische Werte (z. B. Farbe, Betrag, Orientierung usw.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- Schlüsselwörter
 
-- keywords
+- Textnachrichten
 
-- text messages
+- Dateinamen (z. B. Grafikdateien, Dokumente, Tabellenkalkulationen usw.)
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+Um diese Funktion zu aktivieren, klicken Sie mit der rechten Maustaste auf einen Visualisierungsdatenpunkt (siehe Visualization).
 
-To activate this feature you right-click on a visualization data point (see Visualization).
+Wenn keine Visualisierungspunkte vorhanden sind, kann mit Make Point ein neuer Punkt angelegt werden.
 
-If there are no visualization points one can be created using Make Point - adds of a new point.
-
-Upon right-clicking you will be presented with a popup menu with the following options:
+Beim Rechtsklick erscheint ein Kontextmenü mit den folgenden Optionen:
 
 ![Figure from page 467](/images/page-467-img-21.png)
 
-The "Display" items in the upper section of this menu are data that are attached to the data point (respectively, a text string, bitmap, spreadsheet and document). Selecting of these will display that item.
+Die „Display“-Einträge im oberen Teil dieses Menüs sind Daten, die dem Datenpunkt zugeordnet sind (jeweils eine Textzeichenfolge, eine Bitmap, eine Tabellenkalkulation und ein Dokument). Wenn Sie einen davon auswählen, wird dieses Element angezeigt.
 
-The items in the lower section of this menu are functions that access the database:
+Die Einträge im unteren Teil des Menüs sind Funktionen, die auf die Datenbank zugreifen:
 
-- **Keyword Filter (Show)** – used to specify a series of show keyword filters. Only point data that has one of these keywords associated with it will be visible, all others will be hidden. This allows users to filter display of desired database entries.
+- **Keyword Filter (Show)** – dient zum Festlegen einer Reihe von Schlüsselwortfiltern für die Anzeige. Nur Punktdaten, denen eines dieser Schlüsselwörter zugeordnet ist, sind sichtbar, alle anderen werden ausgeblendet. So lässt sich die Anzeige der gewünschten Datenbankeinträge filtern.
 
-- **Keyword Filter (Hide)** – used to specify a series of hide keyword filters. Point data that has one of these keywords associated with it will be hidden, all others will be visible. This allows users to filter display of unwanted database entries.
+- **Keyword Filter (Hide)** – dient zum Festlegen einer Reihe von Schlüsselwortfiltern zum Ausblenden. Punktdaten, denen eines dieser Schlüsselwörter zugeordnet ist, werden ausgeblendet, alle anderen sind sichtbar. So lässt sich die Anzeige unerwünschter Datenbankeinträge herausfiltern.
 
-- **Add Text (Keyword) Parameter** - used to add a text string to a data point. This text is used for keyword filtering. This text will be added to the display list.
+- **Add Text (Keyword) Parameter** - dient zum Hinzufügen einer Textzeichenfolge zu einem Datenpunkt. Dieser Text wird für die Schlüsselwortfilterung verwendet und der Anzeigeliste hinzugefügt.
 
-- **Add File Parameter** - used to add a file parameter to a data point. The file name is used for keyword filtering. This file will be added to the display list. Any file name can be specified here (.e.g. graphics files, spreadsheet files, document files etc.) If the file type is associated with an application, that application will be automatically started in order to display the specified file.
+- **Add File Parameter** - dient zum Hinzufügen eines Dateiparameters zu einem Datenpunkt. Der Dateiname wird für die Schlüsselwortfilterung verwendet, und die Datei wird der Anzeigeliste hinzugefügt. Hier kann jeder beliebige Dateiname angegeben werden (z. B. Grafikdateien, Tabellenkalkulationsdateien, Dokumentdateien usw.). Ist der Dateityp mit einer Anwendung verknüpft, wird diese Anwendung automatisch gestartet, um die angegebene Datei anzuzeigen.
 
-**Remove Parameter** - used to remove a parameter from the data point.
+**Remove Parameter** - dient zum Entfernen eines Parameters vom Datenpunkt.
 
-**Edit Parameter** - used to edit or modify a parameter.
+**Edit Parameter** - dient zum Bearbeiten bzw. Ändern eines Parameters.

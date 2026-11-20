@@ -2,71 +2,68 @@
 title: "Déplacement"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.3.3.1 Déplacement total
 
-## 5.3.3.1 Total displacement
+Trace les contours des déplacements.
 
-Contours the displacements.
-
-These components can be accessed via the Displacement Components toolbar as follows:
+Ces composantes sont accessibles via la barre d'outils Displacement Components, comme suit :
 
 ![Figure from page 240](/images/page-240-img-9.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Displacement Components toolbar. You can add this button to the Contours toolbar using the configuration button.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Displacement Components. Vous pouvez ajouter ce bouton à la barre d'outils Contours avec le bouton de configuration.
 
 ![Figure from page 240](/images/page-240-img-13.png)
 
-This toolbar is meant to provide quick access to displacement components.
+Cette barre d'outils donne un accès rapide aux composantes du déplacement.
 
-Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Total Displacement   contours the total displacement Plot > Displacement > dx X-Displacement   contours the x-displacement component Plot > Displacement > dy Y-Displacement   contours the y-displacement component Plot > Displacement > dz Z-Displacement   contours the z-displacement component
+Plot > Displacement > dtotal = ( dx² + dy² + dz² )<sup>½</sup> Déplacement total   trace les contours du déplacement total Plot > Displacement > dx Déplacement X   trace les contours de la composante x du déplacement Plot > Displacement > dy Déplacement Y   trace les contours de la composante y du déplacement Plot > Displacement > dz Déplacement Z   trace les contours de la composante z du déplacement
 
-To calculate the in-plane displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the grid plane and the displacement normal to the plane. Note that dni is oriented normal to the grid plane and parallel to the direction of a line grid.
+Pour calculer les déplacements dans le plan, l'état de déplacement en chaque point du plan de grille est réorienté afin de déterminer le déplacement maximal parallèle au plan de grille et le déplacement normal au plan. Notez que dni est orienté normalement au plan de grille et parallèlement à la direction d'une grille linéaire.
 
-Plot > Displacement > dni In-plane normal   contours the displacement component normal to the grid plane.
+Plot > Displacement > dni Normale dans le plan   trace les contours de la composante du déplacement normale au plan de grille.
 
-Plot > Displacement > dmi In-plane maximum   contours the maximum displacement tangential to the grid plane.
+Plot > Displacement > dmi Maximum dans le plan   trace les contours du déplacement maximal tangent au plan de grille.
 
 ![Figure from page 241](/images/page-241-img-3.png)
 
-To calculate the ubiquitous-plane #1 displacements, the displacement state at each point on the grid plane is reoriented to determine the maximum displacement parallel to the ubiquitous plane #1 and the displacement normal to the plane. Note that dmi is not oriented normal to the grid plane.
+Pour calculer les déplacements du plan ubiquiste n° 1, l'état de déplacement en chaque point du plan de grille est réorienté afin de déterminer le déplacement maximal parallèle au plan ubiquiste n° 1 et le déplacement normal au plan. Notez que dmi n'est pas orienté normalement au plan de grille.
 
-Plot > Displacement > dnu Ubiquitous-plane normal   contours the displacement component normal to the ubiquitous plane.
+Plot > Displacement > dnu Normale au plan ubiquiste   trace les contours de la composante du déplacement normale au plan ubiquiste.
 
-Plot > Displacement > dmu Ubiquitous-plane maximum   contours the maximum displacement tangential to the ubiquitous plane.
+Plot > Displacement > dmu Maximum dans le plan ubiquiste   trace les contours du déplacement maximal tangent au plan ubiquiste.
 
 ![Figure from page 241](/images/page-241-img-7.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la direction de pendage est mesurée positivement dans le sens horaire à partir de l'axe y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- le pendage du plan est mesuré positivement vers le bas à partir de l'horizontale (c'est-à-dire la direction de pendage).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- le plongement de la normale est mesuré positivement vers le bas (c'est-à-dire négativement vers le haut) à partir de l'horizontale.
 
-Notes:
+Remarques :
 
-The displacement toolbar can only be activated after the model building - CAD Stage
+La barre d'outils de déplacement ne peut être activée qu'après l'étape de construction du modèle (CAD)
 
-Map3D Analysis Stages.
+Étapes d'analyse de Map3D.
 
-The orientation of the ubiquitous shear plane is set using
+L'orientation du plan de cisaillement ubiquiste se définit avec
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Displacement
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 More Displacement Components
 
-button to the contouring toolbar for quick access to all displacement components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes du déplacement.

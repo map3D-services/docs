@@ -2,133 +2,130 @@
 title: "Visualização (de arquivos de texto)"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Esta opção permite visualizar dados de pontos em formato de arquivo de texto. Os pontos podem ser exibidos como esferas com sombreamento de fonte de luz, cujo diâmetro e/ou cor variam conforme a magnitude, e podem ser contornados em um plano para mostrar densidade etc.
 
-This option enables visualization of point data in text file format. Points can be displayed as light source shaded spheres with diameter and/or colour varying as magnitude, and contoured on a plane to display density etc.
+O Map3D também suporta a visualização de arquivos no formato EVP.
 
-Map3D also supports visualization of EVP formatted files.
+Cada ponto pode ser marcado com uma série de:
 
-Each point can be tagged with a series of:
+- valores numéricos (p. ex., cor, magnitude, orientação etc.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- mensagens de texto
 
-- text messages
+- nomes de arquivos (p. ex., arquivos gráficos, documentos, planilhas etc.)
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+Ao clicar com o botão esquerdo em um ponto, a localização, a magnitude e a mensagem de texto são exibidas na barra de status.
 
-Upon left clicking on a point, the location, magnitude and text message are displayed on the status bar.
+Clicar com o botão direito em um ponto ativa o banco de dados visual (Visual Database). Este recurso pode ser usado para exibir um banco de dados com informações geológicas úteis, como teor, qualidade do maciço rochoso etc. Cada ponto pode ser marcado com uma série de:
 
-Right clicking on a point activates the Visual Database. This feature can be used to display a database of useful geologic information such as grade, rockmass quality etc. Each point can be tagged with a series of:
+- valores numéricos (p. ex., cor, magnitude, orientação etc.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- mensagens de texto
 
-- text messages
-
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+- nomes de arquivos (p. ex., arquivos gráficos, documentos, planilhas etc.)
 
 ![Figure from page 460](/images/page-460-img-1.png)
 
 #### Event File:
 
-The event file is simply a text file (*.txt).
+O arquivo de eventos é simplesmente um arquivo de texto (*.txt).
 
-This format is useful for exchanging raw model data with other CAD software.
+Este formato é útil para trocar dados brutos de modelo com outros softwares CAD.
 
-Comment lines must start with an asterisk "*" or pound/hash "#".
+As linhas de comentário devem começar com um asterisco "*" ou com o sinal de jogo da velha "#".
 
-Seismic data are stored as a series of points as follows:
+Os dados sísmicos são armazenados como uma série de pontos, da seguinte forma:
 
 **x1 y1 z1 f1 f2 f3 … "text message" "file name"... x2 y2 z2 f1 f2 f3 … "text message" "file name"... x3 y3 z3 f1 f2 f3 … "text message" "file name"...**
 
-where **xi yi zi** represent the coordinates of each point,
+onde **xi yi zi** representam as coordenadas de cada ponto,
 
-**f1 f2 f3…** indicates an optional series of numeric values (e.g. colour, magnitude, orientation etc.), **text message** indicates an optional series of text strings that must be enclosed in double quotes. **file name** indicates an optional series of file names that must be enclosed in double quotes.
+**f1 f2 f3…** indica uma série opcional de valores numéricos (p. ex., cor, magnitude, orientação etc.), **text message** indica uma série opcional de cadeias de texto que devem estar entre aspas duplas. **file name** indica uma série opcional de nomes de arquivos que devem estar entre aspas duplas.
 
-- The text message and file name are displayed in the status bar across the bottom of the screen by picking an event with the left mouse button.
+- A mensagem de texto e o nome do arquivo são exibidos na barra de status, na parte inferior da tela, ao selecionar um evento com o botão esquerdo do mouse.
 
-- They can also be edited by picking an event with the right mouse button.
+- Eles também podem ser editados ao selecionar um evento com o botão direito do mouse.
 
-- Picking with the right mouse button also allows for display of the file if the file name has been associated with an application (refer to Windows documentation on how to "Associate a file with a program").
+- Selecionar com o botão direito do mouse também permite exibir o arquivo, se o nome do arquivo estiver associado a um aplicativo (consulte a documentação do Windows sobre como "Associar um arquivo a um programa").
 
-#### Merging multiple files into one database
+#### Mesclar vários arquivos em um único banco de dados
 
-You may select multiple files simultaneously by holding the standard windows "shift" or "ctrl" keys for multiple selections.
+Você pode selecionar vários arquivos ao mesmo tempo mantendo pressionadas as teclas padrão do Windows "shift" ou "ctrl" para seleções múltiplas.
 
-These files will be merging into one database.
+Esses arquivos serão mesclados em um único banco de dados.
 
-This allows you to keep separate parts of your visualization data in different files then easily merge them together into one database.
+Isso permite manter partes separadas dos dados de visualização em arquivos diferentes e depois mesclá-las facilmente em um único banco de dados.
 
 #### Plot Equation:
 
-Defines the parameter that will be plotted, e.g. **(f1-f2)/2** or equivalently **(sig1-sig3)/2**
+Define o parâmetro que será plotado, p. ex., **(f1-f2)/2** ou, de forma equivalente, **(sig1-sig3)/2**
 
-- The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+- A janela suspensa permite armazenar até 20 equações diferentes. Elas são mantidas entre sessões do Map3D no arquivo map3d.ini.
 
 #### Plot Variables:
 
-**f1 f2 f3…** data fields in the event file.
+**f1 f2 f3…** campos de dados do arquivo de eventos.
 
-User defined variables (for example **sig1 sig3 …** ) can be defined to indicate column headers corresponding to **f1 f2 f3…**
+Variáveis definidas pelo usuário (por exemplo, **sig1 sig3 …** ) podem ser definidas para indicar os cabeçalhos de coluna correspondentes a **f1 f2 f3…**
 
-These can be defined in the comment line - any line leading with "*" or "#" **.** Simply provide the user defined plot variables as for example as follows:
+Elas podem ser definidas na linha de comentário, ou seja, qualquer linha que comece com "*" ou "#" **.** Basta informar as variáveis de plotagem definidas pelo usuário, por exemplo, da seguinte forma:
 
 *** x y z sig1 sig2 ...**
 
 #### Functions:
 
-**sin() cos() tan()** sine, cosine and tangent trigonometric functions **asin() acos() atan()** Inverse trigonometric functions **sqrt()** square root function **log()** natural logarithmic function **log10()** base 10 logarithmic function **abs()** absolute value **exp()** exponential function (antilogarithm) **n() t(,)** normal and t-distribution **an() at(,)** inverse normal and t-distribution
+**sin() cos() tan()** funções trigonométricas seno, cosseno e tangente **asin() acos() atan()** funções trigonométricas inversas **sqrt()** função raiz quadrada **log()** função logaritmo natural **log10()** função logaritmo na base 10 **abs()** valor absoluto **exp()** função exponencial (antilogaritmo) **n() t(,)** distribuição normal e distribuição t **an() at(,)** distribuição normal inversa e distribuição t inversa
 
 #### Location:
 
-**x y z** coordinate of grid point.
+**x y z** coordenada do ponto de grade.
 
 #### Operators:
 
-- **+ - * /** ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
+- **+ - * /** ^   operadores de adição, subtração, multiplicação, divisão e exponenciação. Observe que as exponenciais são calculadas primeiro, seguidas de multiplicação e divisão e, por fim, adição e subtração.
 
-- **() [] &#123;&#125;** styles of brackets. Pairs of brackets must match.
+- **() [] &#123;&#125;** tipos de parênteses. Os pares de parênteses devem corresponder.
 
-- maximum value. For example if the plot equation is specified as f1 > 10, the larger of f1 or 10 will be plotted.
+- valor máximo. Por exemplo, se a equação de plotagem for especificada como f1 > 10, será plotado o maior entre f1 e 10.
 
-- **&lt;** minimum value. For example if the plot equation is specified as f1 &lt; 10, the smaller of f1 or 10 will be plotted.
+- **&lt;** valor mínimo. Por exemplo, se a equação de plotagem for especificada como f1 &lt; 10, será plotado o menor entre f1 e 10.
 
 #### Point Plotting Options:
 
-**Filled** – points are filled with the specified colour, contoured colour and/or shaded.
+**Filled** – os pontos são preenchidos com a cor especificada, com cor de contorno e/ou sombreados.
 
-**Contoured Colours** –fill colour is adjusted according to the magnitude determined from the **Plot Equation** .
+**Contoured Colours** – a cor de preenchimento é ajustada conforme a magnitude determinada a partir de **Plot Equation** .
 
-**Dark** – fill colour is shaded to appear as light source shaded spheres using a dark rich colour scheme.
+**Dark** – a cor de preenchimento é sombreada para parecer esferas com sombreamento de fonte de luz, usando um esquema de cores escuras e intensas.
 
-**Light** – fill colour is shaded to appear as light source shaded spheres using a bright shinny colour scheme.
+**Light** – a cor de preenchimento é sombreada para parecer esferas com sombreamento de fonte de luz, usando um esquema de cores claras e brilhantes.
 
-**Outlined** – points are outlined with the specified colour or contoured colour.
+**Outlined** – os pontos são delineados com a cor especificada ou com a cor de contorno.
 
-**Contoured Outline** – points are drawn with contour colours adjusted according to the magnitude determined from the **Plot Equation** .
+**Contoured Outline** – os pontos são desenhados com cores de contorno ajustadas conforme a magnitude determinada a partir de **Plot Equation** .
 
-**Contour Plane** – enables or disables display of a contour plane (refer to **Plane** ).
+**Contour Plane** – habilita ou desabilita a exibição de um plano de contornos (veja **Plane** ).
 
-**Fixed Radius** – points will be plotted as spheres with a the specified **Radius:** parameter.
+**Fixed Radius** – os pontos serão plotados como esferas com o parâmetro **Radius:** especificado.
 
-**Scaled Radius** – points will be plotted as spheres with radius scaled to the magnitude (determined
+**Scaled Radius** – os pontos serão plotados como esferas com raio escalonado pela magnitude (determinada
 
-from the **Plot Equation** ) such that if the magnitude is less than the minimum of the contour range, the sphere is drawn with zero radius. If the magnitude equals the maximum of the contour range, the vector is drawn with the radius specified by the **Radius:** parameter.
+a partir de **Plot Equation** ), de modo que, se a magnitude for menor que o mínimo da faixa de contornos, a esfera é desenhada com raio zero. Se a magnitude for igual ao máximo da faixa de contornos, o vetor é desenhado com o raio especificado pelo parâmetro **Radius:**.
 
 #### Other:
 
-**Persist** – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired.
+**Persist** – quando marcada, os pontos são replotados cada vez que o modelo é reorientado, transladado ou ampliado/reduzido com zoom. Como isso pode demorar em modelos grandes, nem sempre essa opção é desejável.
 
-**Translucent** - draws the points as translucent spheres.
+**Translucent** - desenha os pontos como esferas translúcidas.
 
-**Zero Contour** - when unchecked, contours below the minimum contour range are not drawn. This
+**Zero Contour** - quando desmarcada, os contornos abaixo do mínimo da faixa de contornos não são desenhados. Isso
 
-is useful for displaying contours where only the upper part of the contour range is important.
+é útil para exibir contornos em que apenas a parte superior da faixa é importante.
 
-**Make Point** - adds of a new point.
+**Make Point** - adiciona um novo ponto.
 
-**Plane** – enables setup of the contour plane.
+**Plane** – permite configurar o plano de contornos.
 
-**Range** – specify the minimum, maximum and interval for radius scaling and contouring.
+**Range** – especifica o mínimo, o máximo e o intervalo para o escalonamento do raio e para os contornos.
 
-Plot regenerates the plot. This button can be placed on either the View Toolbar (Tools > View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+Plot regenera a plotagem. Este botão pode ser colocado na barra de ferramentas de visualização (Tools > View Toolbar Configure) ou na barra de ferramentas de contornos (Tools > Contour Toolbar Configure).
