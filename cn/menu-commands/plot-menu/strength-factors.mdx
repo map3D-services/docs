@@ -2,30 +2,27 @@
 title: "强度系数"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.3.6.1 岩体参数
 
-## 5.3.6.1 Rock Mass Parameters
+### 5.3.6.1.1 岩体强度参数
 
-### 5.3.6.1.1 Rockmass Strength Parameters
+设置用于按主应力分量生成强度系数等值线图的强度参数。
 
-Sets up the strength parameters for generating strength factor contour plots in terms of principal stress components.
-
-These components can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb, HoekBrown or Drucker-Prager strength criteria to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb、Hoek-Brown 或 Drucker-Prager 强度准则一起使用，以估算因应力过大造成的岩体损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
@@ -33,75 +30,75 @@ Mohr-Coulomb in 3D FF blocks.
 
 ![Figure from page 249](/images/page-249-img-1.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+Material # 指定材料编号。材料 #1 代表围岩（host）材料。其他材料编号用于定义替代材料区域，如矿石、断层泥（gouge）、充填体等。
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the s1 direction.
+Standard Deviation 指定在 s1 方向上测得的破坏准则的不确定度。
 
-Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material Type 指定材料类型：Mohr-Coulomb、Hoek-Brown、Drucker-Prager 或 None。
 
-Tension Cutoff, UCS, Friction Angle the Mohr-Coulomb criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, UCS, Friction Angle Mohr-Coulomb 准则按主应力定义强度，如下所示：
 
 #### Mohr-Coulomb
 
 ![Figure from page 249](/images/page-249-img-7.png)
 
-Tension cutoff and UCS are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+拉伸截断（tension cutoff）和 UCS 以应力单位（MPa 或 psi）指定。摩擦角以度为单位指定。
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – 绘制累积损伤。参见 Accumulated Damage
 
 #### Hoek-Brown
 
 ![Figure from page 250](/images/page-250-img-6.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+Material # 指定材料编号。材料 #1 代表围岩（host）材料。其他材料编号用于定义替代材料区域，如矿石、断层泥（gouge）、充填体等。
 
-Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material Type 指定材料类型：Mohr-Coulomb、Hoek-Brown、Drucker-Prager 或 None。
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the s1 direction (specified in units of stress, MPa or psi).
+Standard Deviation 指定在 s1 方向上测得的破坏准则的不确定度（以应力单位 MPa 或 psi 指定）。
 
-Tension Cutoff, Sigma:C, m and s the Hoek-Brown criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, Sigma:C, m and s Hoek-Brown 准则按主应力定义强度，如下所示：
 
 #### Hoek-Brown
 
 ![Figure from page 251](/images/page-251-img-2.png)
 
-Tension cutoff and Sigma:C are specified in units of stress (MPa or psi).
+拉伸截断（tension cutoff）和 Sigma:C 以应力单位（MPa 或 psi）指定。
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – 绘制累积损伤。参见 Accumulated Damage
 
 #### Drucker-Prager
 
 ![Figure from page 251](/images/page-251-img-7.png)
 
-Material # specifies the material number. Material #1 represents the host material. Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc. Material Type specifies the material type: Mohr-Coulomb, Hoek-Brown, Drucker-Prager or None.
+Material # 指定材料编号。材料 #1 代表围岩（host）材料。其他材料编号用于定义替代材料区域，如矿石、断层泥（gouge）、充填体等。Material Type 指定材料类型：Mohr-Coulomb、Hoek-Brown、Drucker-Prager 或 None。
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the toct direction.
+Standard Deviation 指定在 toct 方向上测得的破坏准则的不确定度。
 
-Tension Cutoff, UCS, Friction Angle the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+Tension Cutoff, UCS, Friction Angle Drucker-Prager 准则按主应力定义强度，如下所示：
 
 #### Drucker-Prager
 
 ![Figure from page 252](/images/page-252-img-4.png)
 
-where
+其中
 
 toct = ¹/3 [(s1 - s2)² + (s2 - s3)² +(s3 - s1)²]<sup>½</sup>
 
 smean = ¹/3 (s1 + s2 + s3)
 
-Tension cutoff and UCS are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+拉伸截断（tension cutoff）和 UCS 以应力单位（MPa 或 psi）指定。摩擦角以度为单位指定。
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+请注意，强度参数已被选取，使得当 s2 等于 s3 时，该准则简化为 Mohr-Coulomb 准则。
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – 绘制累积损伤。参见 Accumulated Damage
 
-#### Related topics:
+#### 相关主题：
 
 Plot > Strength Factor > Probability N-distribution
 
@@ -113,133 +110,133 @@ Plot > Strength Factors > In-plane Parameters
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.2 Accumulated Damage
+### 5.3.6.1.2 累积损伤
 
-Plot Accumulated Damage.
+绘制累积损伤。
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问该分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+未启用 Acc 时，按当前应力值绘制剩余应力、破坏概率、强度系数和 RCF。
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+启用 Acc 时，将在整个模型加载历史中跟踪从第 1 步到当前步骤的损伤，因此绘制的是剩余应力、破坏概率、强度系数或 RCF 的最不利情况。
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+这使得弹性应力分析结果的使用方式类似于塑性模型中的累积应变。
 
-Damage tracking is done separately for the 5 following cases:
+损伤跟踪分别针对以下 5 种情况进行：
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. 岩体破坏（剩余 S1 应力、概率、强度系数）2. 面内剪切破坏（剩余剪应力、概率、强度系数）3. ub 平面剪切破坏（剩余剪应力、概率、强度系数）
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. 面内剩余壁面应力（剩余应力、RCF）
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. ub 平面剩余壁面应力（剩余应力、RCF）
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+请注意，首次屈服发生的步骤（MStep 1st Yield）和最大剩余应力发生的步骤（MStep Max Yield）都会被跟踪，并可显示为轨迹标签。
 
-### 5.3.6.1.3 S1 Excess Stress
+### 5.3.6.1.3 S1 剩余应力
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "A" 绘制剩余最大主应力和强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+方法 "A" 假定达到破坏的应力路径是在不丧失围压的情况下通过增大 s1 实现的。这代表矿柱破坏，其中 s1 被视为驱动力。
 
 #### Mohr-Coulomb
 
 ![Figure from page 255](/images/page-255-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
 #### Hoek-Brown
 
 ![Figure from page 255](/images/page-255-img-11.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager 仅通过方法 "C" 定义。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.4 Tmax Excess Stress
+### 5.3.6.1.4 Tmax 剩余应力
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "C" 绘制剩余剪应力或强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 256](/images/page-256-img-24.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+方法 "C" 假定达到破坏的应力路径是在丧失围压的情况下通过增大 s1 实现的。这代表拱座（abutment）破坏，其中 s1 - s3 被视为驱动力。
 
 ![Figure from page 257](/images/page-257-img-6.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -249,11 +246,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -261,177 +258,177 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   可确定为 [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   可确定为 toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   可确定为 toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+其中
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+请注意，强度参数已被选取，使得当 s2 等于 s3 时，该准则简化为 Mohr-Coulomb 准则。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-5.3.6.1.6  NS1 Normal Probability
+5.3.6.1.6  NS1 正态概率
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "A" 绘制剩余最大主应力和强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+方法 "A" 假定达到破坏的应力路径是在不丧失围压的情况下通过增大 s1 实现的。这代表矿柱破坏，其中 s1 被视为驱动力。
 
 ![Figure from page 260](/images/page-260-img-5.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
 #### Hoek-Brown
 
 ![Figure from page 261](/images/page-261-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager 仅通过方法 "C" 定义。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.8 SF-B Strength/Stress
+### 5.3.6.1.8 SF-B 强度/应力
 
-Contours the excess major principal stress and strength factor using method  "B". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "B" 绘制剩余最大主应力和强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "B" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 - s3 is considered to be the driving force.
+方法 "B" 假定达到破坏的应力路径是在不丧失围压的情况下通过增大 s1 实现的。这代表矿柱破坏，其中 s1 - s3 被视为驱动力。
 
 #### Mohr-Coulomb
 
 ![Figure from page 263](/images/page-263-img-2.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+Plot > Strength Factors > SF-B   Strength/Stress 可确定为 ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
+Plot > Strength Factors > SF/B   Stress/Strength 可确定为 (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "A".
+与方法 "A" 相同。
 
 #### Hoek-Brown
 
 ![Figure from page 263](/images/page-263-img-11.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF-B   Strength/Stress 可确定为 Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength 可确定为 (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "A".
+与方法 "A" 相同。
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager 仅通过方法 "C" 定义。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-A - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.9 SF-C Strength/Stress
+### 5.3.6.1.9 SF-C 强度/应力
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "C" 绘制剩余剪应力或强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+方法 "C" 假定达到破坏的应力路径是在丧失围压的情况下通过增大 s1 实现的。这代表拱座（abutment）破坏，其中 s1 - s3 被视为驱动力。
 
 ![Figure from page 265](/images/page-265-img-7.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -441,11 +438,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -453,177 +450,177 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   可确定为 [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   可确定为 toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   可确定为 toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+其中
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+请注意，强度参数已被选取，使得当 s2 等于 s3 时，该准则简化为 Mohr-Coulomb 准则。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.10 SF/A Stress/Strength
+### 5.3.6.1.10 SF/A 应力/强度
 
-Contours the excess major principal stress and strength factor using method  "A". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "A" 绘制剩余最大主应力和强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "A" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 is considered to be the driving force.
+方法 "A" 假定达到破坏的应力路径是在不丧失围压的情况下通过增大 s1 实现的。这代表矿柱破坏，其中 s1 被视为驱动力。
 
 ![Figure from page 260](/images/page-260-img-5.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 ( _UCS_ + _q_ s3 )/ s1 Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / ( _UCS_ + _q_ s3 ) Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
 #### Hoek-Brown
 
 ![Figure from page 261](/images/page-261-img-2.png)
 
-Plot > Strength Factors > SF-A   Strength/Stress can be determined as [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
+Plot > Strength Factors > SF-A   Strength/Stress 可确定为 [ s3 + Ö( _m_ scs3 + _s_ sc²) ] / s1
 
-Plot > Strength Factors > SF/A   Stress/Strength can be determined as s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF/A   Stress/Strength 可确定为 s1 / [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "B".
+与方法 "B" 相同。
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager 仅通过方法 "C" 定义。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-B - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.11 SF/B Stress/Strength
+### 5.3.6.1.11 SF/B 应力/强度
 
-Contours the excess major principal stress and strength factor using method  "B". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "B" 绘制剩余最大主应力和强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "B" assumes that the stress path to failure takes place by increasing s1 without loss of confinement. This is representative of a pillar failure where s1 - s3 is considered to be the driving force.
+方法 "B" 假定达到破坏的应力路径是在不丧失围压的情况下通过增大 s1 实现的。这代表矿柱破坏，其中 s1 - s3 被视为驱动力。
 
 #### Mohr-Coulomb
 
 ![Figure from page 263](/images/page-263-img-2.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+Plot > Strength Factors > SF-B   Strength/Stress 可确定为 ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
+Plot > Strength Factors > SF/B   Stress/Strength 可确定为 (s1 - s3)/( _UCS_ + _q_ s3 - s3 )
 
-Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - ( _UCS_ + _q_ s3 )
+Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "A".
+与方法 "A" 相同。
 
 #### Hoek-Brown
 
 ![Figure from page 263](/images/page-263-img-11.png)
 
-Plot > Strength Factors > SF-B   Strength/Stress can be determined as Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength can be determined as (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   excess stress can be determined as Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
+Plot > Strength Factors > SF-B   Strength/Stress 可确定为 Ö( _m_ scs3 + _s_ sc²)/(s1 - s3) Plot > Strength Factors > SF/B   Stress/Strength 可确定为 (s1 - s3)/Ö( _m_ scs3 + _s_ sc²) Plot > Strength Factors > Ds1   剩余应力可确定为 Ds1 = s1 - [ s3 + Ö( _m_ scs3 + _s_ sc²) ]
 
-Plot > Strength Factors > N(Ds1 /std)   Probability using the Normal distribution.
+Plot > Strength Factors > N(Ds1 /std)   使用正态分布的概率。
 
-the same as in method "A".
+与方法 "A" 相同。
 
-Drucker-Prager is only defined using method "C".
+Drucker-Prager 仅通过方法 "C" 定义。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-A - Strength/Stress Plot > Strength Factors > SF-C - Strength/Stress Plot > Strength Factors > dTmax - Excess Stress Plot > Strength Factors > dToct - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.1.12 SF/C Stress/Strength
+### 5.3.6.1.12 SF/C 应力/强度
 
-Contours the excess shear stress or strength factor using method "C". These components can be accessed via the Strength Factor Components toolbar as follows:
+使用方法 "C" 绘制剩余剪应力或强度系数的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-In elastic analysis the major and minor principal stresses can be used with the Mohr-Coulomb or HoekBrown strength criteria
+在弹性分析中，最大和最小主应力可与 Mohr-Coulomb 或 Hoek-Brown 强度准则一起使用
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+以估算因应力过大造成的损伤程度。由于这些参数均不具有方向敏感性，该准则适用于均质岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in 3D FF blocks.
 
-Method "C" assumes that the stress path to failure takes place by increasing s1 while loosing confinement. This is representative of an abutment failure where s1 - s3 is considered to be the driving force.
+方法 "C" 假定达到破坏的应力路径是在丧失围压的情况下通过增大 s1 实现的。这代表拱座（abutment）破坏，其中 s1 - s3 被视为驱动力。
 
 ![Figure from page 265](/images/page-265-img-7.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 [ _UCS_ + ½(s1+s3) ( _q_ - 1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 [ ½(s1 - s3)( _q_ +1) ]/ [ _UCS_ + ½(s1+s3) ( _q_ -1) ]
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
@@ -633,11 +630,11 @@ Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1)
 
 ![Figure from page 258](/images/page-258-img-2.png)
 
-Plot > Strength Factors > SF-C   Strength/Stress can be determined as &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
+Plot > Strength Factors > SF-C   Strength/Stress 可确定为 &#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc&#125;/(s1 - s3)
 
-Plot > Strength Factors > SF/C   Stress/Strength can be determined as (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
+Plot > Strength Factors > SF/C   Stress/Strength 可确定为 (s1 - s3)/&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
-Plot > Strength Factors > Dtmax   excess stress can be determined as
+Plot > Strength Factors > Dtmax   剩余应力可确定为
 
 Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ sc + _s_ sc²] - ¼ _m_ sc &#125;
 
@@ -645,135 +642,135 @@ Dtmax = ½(s1 - s3) - ½&#123; Ö[<sup>1</sup> /16 _m_ ²sc² + ½(s1 + s3) _m_ 
 
 ![Figure from page 258](/images/page-258-img-9.png)
 
-SF-C Strength/Stress   can be determined as [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
+SF-C Strength/Stress   可确定为 [ _UCS_ + ( _q_ –1) smean ] Ö(2) /[ toct ( _q_ +2) ]
 
-SF-C Stress/Strength   can be determined as toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   can be determined as toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+SF-C Stress/Strength   可确定为 toct /[ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2) Dtoct Excess   可确定为 toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-where
+其中
 
 _q_ = tan²(45+j/2) toct = ¹/3 Ö[( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²] smean = ¹/3 ( s1 + s2 + s3 )
 
-Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+请注意，强度参数已被选取，使得当 s2 等于 s3 时，该准则简化为 Mohr-Coulomb 准则。
 
-Strength parameters are setup using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Strength Parameters
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > SF-A - Stress/Strength Plot > Strength Factors > SF-B - Stress/Strength Plot > Strength Factors > dS1 - Excess Stress Plot > Strength Factors > In-plane Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-## 5.3.6.2 In-Plane Parameters
+## 5.3.6.2 面内参数
 
-5.3.6.2.1  In-plane parameters
+5.3.6.2.1  面内参数
 
-Sets up the strength parameters for generating strength factor contour plots in terms of in-plane stress components.
+设置用于按面内应力分量生成强度系数等值线图的强度参数。
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 275](/images/page-275-img-26.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+为计算面内剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于网格平面的最大剪应力和垂直于网格平面的应力。
 
 ![Figure from page 276](/images/page-276-img-2.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+在弹性分析中，最大面内剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用，以估算在与网格平面方向相同的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes
 
 ![Figure from page 277](/images/page-277-img-1.png)
 
-The Mohr-Coulomb criterion defines the shear strength in terms of shear stress and normal stress as follows:
+Mohr-Coulomb 准则按剪应力和法向应力定义抗剪强度，如下所示：
 
 #### Mohr-Coulomb
 
 ![Figure from page 277](/images/page-277-img-4.png)
 
-Tension cutoff, UCS and Cohesion are specified in units of stress (MPa or psi).
+拉伸截断（tension cutoff）、UCS 和黏聚力以应力单位（MPa 或 psi）指定。
 
-Friction angle is specified in degrees.
+摩擦角以度为单位指定。
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the tip direction (specified in units of stress, MPa or psi).
+Standard Deviation 指定在 tip 方向上测得的破坏准则的不确定度（以应力单位 MPa 或 psi 指定）。
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – 绘制累积损伤。参见 Accumulated Damage
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > Probability N-distribution Plot > Strength Factor > SF-ip - Stress/Strength Plot > Strength Factors > SF-ub - Stress/Strength Plot > Strength Factors > dTip - Excess Stress Plot > Strength Factors > dTub - Excess Stress Plot > Strength Factors > Rockmass Strength Parameters Plot > Strength Factors > Ubiquitous Parameters
 
-### 5.3.6.2.2 Accumulated Damage
+### 5.3.6.2.2 累积损伤
 
-Plot Accumulated Damage.
+绘制累积损伤。
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问该分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+未启用 Acc 时，按当前应力值绘制剩余应力、破坏概率、强度系数和 RCF。
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+启用 Acc 时，将在整个模型加载历史中跟踪从第 1 步到当前步骤的损伤，因此绘制的是剩余应力、破坏概率、强度系数或 RCF 的最不利情况。
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+这使得弹性应力分析结果的使用方式类似于塑性模型中的累积应变。
 
-Damage tracking is done separately for the 5 following cases:
+损伤跟踪分别针对以下 5 种情况进行：
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. 岩体破坏（剩余 S1 应力、概率、强度系数）2. 面内剪切破坏（剩余剪应力、概率、强度系数）3. ub 平面剪切破坏（剩余剪应力、概率、强度系数）
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. 面内剩余壁面应力（剩余应力、RCF）
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. ub 平面剩余壁面应力（剩余应力、RCF）
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+请注意，首次屈服发生的步骤（MStep 1st Yield）和最大剩余应力发生的步骤（MStep Max Yield）都会被跟踪，并可显示为轨迹标签。
 
-### 5.3.6.2.3 In-plane Excess Shear Stress
+### 5.3.6.2.3 面内剩余剪应力
 
-Contours the strength for in-plane shear.
+绘制面内抗剪强度的等值线。
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+为计算面内剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于网格平面的最大剪应力和垂直于网格平面的应力。
 
 ![Figure from page 229](/images/page-229-img-14.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion
+在弹性分析中，最大面内剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用
 
 #### Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+以估算在与网格平面方向相同的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes
 
@@ -781,93 +778,93 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tip without loosing confinement.
+这里假定达到破坏的应力路径是在不丧失围压的情况下通过增大 tip 实现的。
 
 #### Mohr-Coulomb
 
 ![Figure from page 280](/images/page-280-img-6.png)
 
-SF-ip Strength/Stress   can be determined as [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   can be determined as tip / [ Cohesion + sip tan(j) ] dTip Excess   can be determined as Dtip = tip - [ Cohesion + sip tan(j) ]
+SF-ip Strength/Stress   可确定为 [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   可确定为 tip / [ Cohesion + sip tan(j) ] dTip Excess   可确定为 Dtip = tip - [ Cohesion + sip tan(j) ]
 
-NTip Probability   can be determined as N(Dtip /std)
+NTip Probability   可确定为 N(Dtip /std)
 
-Strength parameters are set up using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess
 
 Plot > Strength Factors > NSub Probability
 
-### 5.3.6.2.4 In-plane Excess Wall Stress
+### 5.3.6.2.4 面内剩余壁面应力
 
-Contours the strength for in-plane wall stress. These components can be accessed via the Strength Factor Components toolbar as follows:
+绘制面内壁面应力强度的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane wall stress, the stress state at each point on the grid plane is reoriented to determine the maximum and minimum tangential stress parallel to the grid plane.
+为计算面内壁面应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于网格平面的最大和最小切向应力。
 
-The maximum wall stress for a virtual circular excavation oriented perpendicular to the grid plane can then be determined as [ 3 s1i - s3i ].
+然后即可确定垂直于网格平面的虚拟圆形采空区的最大壁面应力为 [ 3 s1i - s3i ]。
 
-Note that sip is oriented normal to the grid plane and parallel to the direction of a line grid. Also note that sip, s1i and s3i are perpendicular to one another.
+请注意，sip 垂直于网格平面，并平行于线网格的方向。还请注意，sip、s1i 和 s3i 彼此垂直。
 
 ![Figure from page 219](/images/page-219-img-2.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-dSip Excess   can be determined as Dsip = [ 3 s1i - s3i ] - UCS
+dSip Excess   可确定为 Dsip = [ 3 s1i - s3i ] - UCS
 
-RCFip   can be determined as RCFip = [ 3 s1i - s3i ]/UCS
+RCFip   可确定为 RCFip = [ 3 s1i - s3i ]/UCS
 
-Strength parameters are set up using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Stress > S1i - In-plane Maximum Plot > Stress > S3i - In-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess Plot > Strength Factors > dSub Excess Plot > Strength Factors > NSub Probability
 
-### 5.3.6.2.6 NTip Normal Probability
+### 5.3.6.2.6 NTip 正态概率
 
-Contours the strength for in-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+绘制面内抗剪强度的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 279](/images/page-279-img-10.png)
 
-To calculate the in-plane shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the grid plane.
+为计算面内剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于网格平面的最大剪应力和垂直于网格平面的应力。
 
 ![Figure from page 283](/images/page-283-img-2.png)
 
-In elastic analysis the maximum in-plane shear and normal stresses can be used with the MohrCoulomb strength criterion
+在弹性分析中，最大面内剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用
 
 #### Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+以估算在与网格平面方向相同的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes
 
@@ -875,53 +872,53 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tip without loosing confinement.
+这里假定达到破坏的应力路径是在不丧失围压的情况下通过增大 tip 实现的。
 
 #### Mohr-Coulomb
 
 ![Figure from page 280](/images/page-280-img-6.png)
 
-SF-ip Strength/Stress   can be determined as [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   can be determined as tip / [ Cohesion + sip tan(j) ] dTip Excess   can be determined as Dtip = tip - [ Cohesion + sip tan(j) ]
+SF-ip Strength/Stress   可确定为 [ Cohesion + sip tan(j) ] / tip SF-ip Stress/Strength   可确定为 tip / [ Cohesion + sip tan(j) ] dTip Excess   可确定为 Dtip = tip - [ Cohesion + sip tan(j) ]
 
-NTip Probability   can be determined as N(Dtip /std)
+NTip Probability   可确定为 N(Dtip /std)
 
-Strength parameters are set up using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > In-plane Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tip - In-plane Shear Plot > Stress > Sip - In-plane Normal Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTub Excess
 
 Plot > Strength Factors > NSub Probability
 
-## 5.3.6.3 UB-Plane Parameters
+## 5.3.6.3 UB 平面参数
 
-5.3.6.3.1  Ubiquitous parameters
+5.3.6.3.1  遍布参数
 
-Sets up the strength parameters for generating strength factor contour plots in terms of ubiquitousplane stress components.
+设置用于按遍布平面应力分量生成强度系数等值线图的强度参数。
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the
+选择
 
-button on the Contours toolbar activates the Strength Factor Components toolbar.
+Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+为计算遍布剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于遍布剪切面的最大剪应力和垂直于遍布剪切面的应力。
 
 ![Figure from page 285](/images/page-285-img-10.png)
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stresses can be used with the Mohr-Coulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+在弹性分析中，最大遍布平面剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用，以估算在指定方向的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes
 
@@ -931,99 +928,99 @@ Backfill-Hyperbolic in DD planes
 
 ![Figure from page 286](/images/page-286-img-1.png)
 
-Cohesion and Friction Angle the Mohr-Coulomb criterion defines strength in terms of principal stresses as follows:
+Cohesion 和 Friction Angle Mohr-Coulomb 准则按主应力定义强度，如下所示：
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-Tension cutoff, UCS and Cohesion are specified in units of stress (MPa or psi). Friction angle is specified in degrees.
+拉伸截断（tension cutoff）、UCS 和黏聚力以应力单位（MPa 或 psi）指定。摩擦角以度为单位指定。
 
-Standard Deviation specifies the uncertainty you have in the failure criterion measured in the tip direction (specified in units of stress, MPa or psi).
+Standard Deviation 指定在 tip 方向上测得的破坏准则的不确定度（以应力单位 MPa 或 psi 指定）。
 
-Dip of plane – specifies the dip of the ubiquitous plane (in degrees). The dip of the normal is automatically adjusted to reflect changes in this value.
+Dip of plane – 指定遍布平面的倾角（度）。法线的倾角会自动调整以反映该值的变化。
 
-Dip Direction – specifies the dip direction of the ubiquitous plane (in degrees).
+Dip Direction – 指定遍布平面的倾向（度）。
 
-Dip of Normal – specifies the dip of the normal to the ubiquitous plane (in degrees). The dip of plane is automatically adjusted to reflect changes in this value.
+Dip of Normal – 指定遍布平面法线的倾角（度）。平面的倾角会自动调整以反映该值的变化。
 
-Grid Normal – sets the ubiquitous plane parallel to the currently selected grid plane. In this case all inplane results will be identical to the ubiquitous plane results.
+Grid Normal – 将遍布平面设为与当前选定的网格平面平行。在这种情况下，所有面内结果将与遍布平面结果相同。
 
-Acc Dam – plots accumulated damage. Refer to Accumulated Damage
+Acc Dam – 绘制累积损伤。参见 Accumulated Damage
 
-Plot UB DIsks – toggles display of planar contour plot or disks representing the orientation of the UB plane.
+Plot UB DIsks – 切换平面等值线图与表示 UB 平面方向的圆盘的显示。
 
-Scaled Size – scales the size of the UB disk to the magnitude.
+Scaled Size – 按量值缩放 UB 圆盘的大小。
 
-UB DIsk Radius – specifies the radius of the UB disks.
+UB DIsk Radius – 指定 UB 圆盘的半径。
 
-Apply – regenerates the contour plot.
+Apply – 重新生成等值线图。
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the
+UB#2 & UB#3 – 激活遍布平面 #2 和/或 #3 的强度参数。选中后，
 
-minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
+将为所有强度参数给出所有活动遍布平面中的最小值（ Plot > Strength Factor > Probability N-distribution、Plot > Strength Factors > SF-ub - Stress/Strength 以及 Plot > Strength Factors > dTub - Excess Stress）。要确定哪个遍布平面的强度最小，可以绘制 Plot > Strength Factors > UB# with minimum strength），或在强度参数图上单击左键。
 
-Related topics:
+相关主题：
 
 Plot > Strength Factor > Probability N-distribution Plot > Strength Factors > SF-ub - Stress/Strength Plot > Strength Factor > SF-ip - Stress/Strength Plot > Strength Factors > dTub - Excess Stress Plot > Strength Factors > dTip - Excess Stress Plot > Strength Factors > UB# with minimum strength Plot > Strength Factors > Rockmass Strength Parameters
 
 Plot > Strength Factors > In-plane Parameters
 
-### 5.3.6.3.2 Accumulated Damage
+### 5.3.6.3.2 累积损伤
 
-Plot Accumulated Damage. This component can be accessed via the Strength Factor Components toolbar as follows:
+绘制累积损伤。可通过 Strength Factor Components 工具栏访问该分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 248](/images/page-248-img-20.png)
 
-When Acc is not activated, the Excess Stress, Probability of Failure, Strength Factor and RCF are plotted for the current stress values.
+未启用 Acc 时，按当前应力值绘制剩余应力、破坏概率、强度系数和 RCF。
 
-When Acc is activated, damage is tracked from step 1 to the current step throughout the model loading history, hence the worst case for Excess Stress, Probability of Failure, Strength Factor or RCF is plotted.
+启用 Acc 时，将在整个模型加载历史中跟踪从第 1 步到当前步骤的损伤，因此绘制的是剩余应力、破坏概率、强度系数或 RCF 的最不利情况。
 
-This allows elastic stress analysis results to be used in a manner similar to accumulated strain in a plasticity model.
+这使得弹性应力分析结果的使用方式类似于塑性模型中的累积应变。
 
-Damage tracking is done separately for the 5 following cases:
+损伤跟踪分别针对以下 5 种情况进行：
 
-1. Rock Mass failure (Excess S1 Stress, Probability, Strength Factor) 2. In-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor) 3. Ub-Plane Shear failure (Excess Shear Stress, Probability, Strength Factor)
+1. 岩体破坏（剩余 S1 应力、概率、强度系数）2. 面内剪切破坏（剩余剪应力、概率、强度系数）3. ub 平面剪切破坏（剩余剪应力、概率、强度系数）
 
-4. In-Plane Excess Wall Stress (Excess Stress, RCF)
+4. 面内剩余壁面应力（剩余应力、RCF）
 
-5. Ub-Plane Excess Wall Stress (Excess Stress, RCF)
+5. ub 平面剩余壁面应力（剩余应力、RCF）
 
-Note that both the step at which first yield occurs MStep 1st Yield, and the step at which the maximum excess stress occurs MStep Max Yield, are tracked and can be displayed as trajectory labels.
+请注意，首次屈服发生的步骤（MStep 1st Yield）和最大剩余应力发生的步骤（MStep Max Yield）都会被跟踪，并可显示为轨迹标签。
 
-- 5.3.6.3.3  Ubiquitous Excess Shear Stress
+- 5.3.6.3.3  遍布剩余剪应力
 
-Contours the strength for ubiquitous-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+绘制遍布平面抗剪强度的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+为计算遍布剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于遍布剪切面的最大剪应力和垂直于遍布剪切面的应力。
 
 ![Figure from page 289](/images/page-289-img-2.png)
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stress can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+在弹性分析中，最大遍布平面剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用，以估算在指定方向的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes
 
@@ -1031,93 +1028,93 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tub without loosing confinement.
+这里假定达到破坏的应力路径是在不丧失围压的情况下通过增大 tub 实现的。
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-SF-ub Strength/Stress   can be determined as [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   can be determined as tub / [ Cohesion + sub tan(j) ] dTub Excess   can be determined as Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   can be determined as N(Dtub /std)
+SF-ub Strength/Stress   可确定为 [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   可确定为 tub / [ Cohesion + sub tan(j) ] dTub Excess   可确定为 Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   可确定为 N(Dtub /std)
 
-Strength parameters are set up using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and
+UB#2 & UB#3 – 激活遍布平面 #2 和/或 #3 的强度参数。选中后，将为所有强度参数给出所有活动遍布平面中的最小值（ Plot > Strength Factor > Probability N-distribution、Plot > Strength Factors > SF-ub - Stress/Strength 以及
 
 Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
 
-### 5.3.6.3.4 Ubiquitous Plane Excess Wall Stress
+### 5.3.6.3.4 遍布平面剩余壁面应力
 
-Contours the strength for ub-plane wall stress.
+绘制 ub 平面壁面应力强度的等值线。
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 248](/images/page-248-img-16.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ub-plane wall stress, the stress state at each point on the grid plane is reoriented to determine the maximum and minimum tangential stress parallel to the ub plane.
+为计算 ub 平面壁面应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于 ub 平面的最大和最小切向应力。
 
-The maximum wall stress for a virtual circular excavation oriented perpendicular to the ub-plane can then be determined as [ 3 s1u - s3u ].
+然后即可确定垂直于 ub 平面的虚拟圆形采空区的最大壁面应力为 [ 3 s1u - s3u ]。
 
-Note that sub is oriented normal to the ub-plane. Also note that sub, s1 and s3u are perpendicular to one another.
+请注意，sub 垂直于 ub 平面。还请注意，sub、s1 和 s3u 彼此垂直。
 
 ![Figure from page 291](/images/page-291-img-13.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- 倾向自 y 轴起顺时针方向为正。
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- 平面的倾角自水平面起向下为正（即沿倾向方向）。
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- 法线的俯角自水平面起向下为正（即向上为负）。
 
-dSub Excess   can be determined as Dsub = [ 3 s1u - s3u ] - UCS
+dSub Excess   可确定为 Dsub = [ 3 s1u - s3u ] - UCS
 
-RCFub   can be determined as RCFub = [ 3 s1u - s3u ]/UCS
+RCFub   可确定为 RCFub = [ 3 s1u - s3u ]/UCS
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-### 5.3.6.3.6 NTub Normal Probability
+### 5.3.6.3.6 NTub 正态概率
 
-Contours the strength for ubiquitous-plane shear. These components can be accessed via the Strength Factor Components toolbar as follows:
+绘制遍布平面抗剪强度的等值线。可通过 Strength Factor Components 工具栏访问这些分量，方法如下：
 
 ![Figure from page 254](/images/page-254-img-3.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+将该工具栏拖到主窗口的左边缘或右边缘，可将其改为垂直方向。
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+将其拖到主窗口的上边缘或下边缘，可恢复为水平方向。
 
-Selecting the button on the Contours toolbar activates the Strength Factor Components toolbar.
+选择 Contours 工具栏上的按钮可激活 Strength Factor Components 工具栏。
 
 ![Figure from page 285](/images/page-285-img-8.png)
 
-To calculate the ubiquitous shear and normal stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous shear plane and the stress normal to the ubiquitous shear plane.
+为计算遍布剪应力和法向应力，网格平面上每个点的应力状态都会被重新定向，以确定平行于遍布剪切面的最大剪应力和垂直于遍布剪切面的应力。
 
 ![Figure from page 289](/images/page-289-img-2.png)
 
-The orientation of the ubiquitous shear plane is set using
+遍布剪切面的方向通过以下功能设置
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-In elastic analysis the maximum ubiquitous-plane shear and normal stress can be used with the MohrCoulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+在弹性分析中，最大遍布平面剪应力和法向应力可与 Mohr-Coulomb 强度准则一起使用，以估算在指定方向的断层、节理组或层理面上因应力过大而产生的滑动量。由于这些参数依赖于方向，该准则适用于各向异性岩体的稳定性评价。
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+相比之下，在非线性分析中，除非使用了某种蠕变，否则应力永远不会超过强度。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。因此，对于非线性分析，通常直接考察模型预测的非线性应变量或应变率
 
 Mohr-Coulomb in DD planes
 
@@ -1125,22 +1122,22 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-Here we assume that the stress path to failure takes place by increasing tub without loosing confinement.
+这里假定达到破坏的应力路径是在不丧失围压的情况下通过增大 tub 实现的。
 
 #### Mohr-Coulomb
 
 ![Figure from page 286](/images/page-286-img-4.png)
 
-SF-ub Strength/Stress   can be determined as [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   can be determined as tub / [ Cohesion + sub tan(j) ] dTub Excess   can be determined as Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   can be determined as N(Dtub /std)
+SF-ub Strength/Stress   可确定为 [ Cohesion + sub tan(j) ] / tub SF-ub Stress/Strength   可确定为 tub / [ Cohesion + sub tan(j) ] dTub Excess   可确定为 Dtub = tub - [ Cohesion + sub tan(j) ] NTub Probability   可确定为 N(Dtub /std)
 
-Strength parameters are set up using
+强度参数通过以下功能设置
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Related topics:
+相关主题：
 
 Plot > Stress > Tub - Ubiquitous-plane Shear Plot > Stress > Sub - Ubiquitous-plane Normal Plot > Stress > S1u - Ubiquitous-plane Maximum Plot > Stress > S3u - Ubiquitous-plane Minimum Plot > Strength Factors > SF-ub Strength/Stress Plot > Strength Factors > dTip Excess Plot > Strength Factors > dSip Excess Plot > Strength Factors > NTip Probability
 
-UB#2 & UB#3 – activates strength parameters for ubiquitous plane #2 and/or #3. When checked, the minimum for all active ubiquitous planes is presented for all strength parameters ( Plot > Strength Factor > Probability N-distribution, Plot > Strength Factors > SF-ub - Stress/Strength and
+UB#2 & UB#3 – 激活遍布平面 #2 和/或 #3 的强度参数。选中后，将为所有强度参数给出所有活动遍布平面中的最小值（ Plot > Strength Factor > Probability N-distribution、Plot > Strength Factors > SF-ub - Stress/Strength 以及
 
 Plot > Strength Factors > dTub - Excess Stress). To determine which ubiquitous plane has the minimum strength you can plot Plot > Strength Factors > UB# with minimum strength) or left click on and strength parameter plot.
