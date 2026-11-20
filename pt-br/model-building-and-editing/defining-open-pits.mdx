@@ -1,0 +1,7 @@
+---
+title: "Definição de cavas a céu aberto"
+---
+
+Embora as cavas a céu aberto possam ser construídas com elementos de descontinuidade de deslocamento, isso não é recomendado. A melhor forma de tratá-las é construí-las como escavações (usando definições de blocos com elementos de força fictícia) adjacentes à superfície do terreno. Isso porque a lógica de interseção integrada ao Map3D consegue detectar o interior dos blocos de escavação e cortar quaisquer feições que os interceptem (como falhas, zonas de minério ou galerias). Além disso, os elementos de descontinuidade de deslocamento situados ao longo da borda de uma escavação (por exemplo, a superfície do terreno) também serão detectados e tratados corretamente.
+
+Essa mesma lógica não existe para zonas definidas por elementos de descontinuidade de deslocamento. O usuário poderia facilmente construir um modelo com múltiplos elementos de descontinuidade de deslocamento sobrepostos, que não convergirá.

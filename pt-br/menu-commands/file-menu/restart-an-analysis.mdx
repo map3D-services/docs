@@ -1,0 +1,21 @@
+---
+title: "Reiniciar uma análise"
+---
+
+Reinicia uma análise abortada ou interrompida por queda de energia ou falha do sistema operacional.
+
+Essa função examina todas as etapas de lavra associadas ao arquivo de reinício selecionado para determinar em qual etapa a análise foi interrompida. Em seguida, verifica se todos os arquivos temporários necessários para reiniciar a análise estão disponíveis. Por fim, exibe essas informações e oferece a opção de reiniciar a análise do ponto em que parou, se possível.
+
+Para reiniciar, os seguintes arquivos temporários devem estar intactos:
+
+- file.00n, onde n é o número da etapa de lavra em que a análise parou.
+
+- file.1 e file.2: esses arquivos são usados para reiniciar o solucionador.
+
+- file.dms: esse arquivo só é usado com a opção de deformação zero (Analysis > Options > Zero Strain Support Placement).
+
+- file.hms: esse arquivo só é usado pelo Map3Di para acumular o carregamento de campo à medida que a análise avança.
+
+Observações:
+
+Consulte Analysis > Options > Initialize para iniciar uma nova análise a partir do ponto em que um modelo anterior terminou.

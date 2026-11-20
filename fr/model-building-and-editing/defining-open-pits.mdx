@@ -1,0 +1,7 @@
+---
+title: "Définir des fosses à ciel ouvert"
+---
+
+Bien que les fosses à ciel ouvert puissent être construites avec des éléments à discontinuité de déplacement, cette méthode est déconseillée. Il est préférable de les construire comme des excavations (au moyen de définitions de blocs avec des éléments à force fictive) adjacentes à la surface du sol. En effet, la logique d'intersection intégrée à Map3D peut détecter l'intérieur des blocs d'excavation et couper toute structure qui les recoupe (failles, zones minéralisées ou galeries, par exemple). De plus, les éléments à discontinuité de déplacement situés le long du bord d'une excavation (la surface du sol, par exemple) sont également détectés et traités correctement.
+
+Cette logique n'existe pas pour les zones définies par des éléments à discontinuité de déplacement. Vous pourriez facilement construire un modèle comportant plusieurs éléments à discontinuité de déplacement superposés, qui ne convergera pas.

@@ -1,0 +1,15 @@
+---
+title: "Réordonner les liens entre blocs"
+---
+
+Lors de l'importation de modèles depuis d'autres logiciels de CAO, il est important de fournir à Map3D un moyen d'identifier la composition des blocs.
+
+Le plus simple est d'attribuer des numéros de couleur différents aux blocs adjacents : Map3D peut alors facilement déterminer quelles surfaces appartiennent à chaque bloc. Vous pouvez aussi attribuer un nom de bloc unique à chaque surface.
+
+Lorsque ce n'est pas possible, une nouvelle routine tente de déterminer quelles surfaces appartiennent à des blocs adjacents.
+
+Pour cela, elle recherche les connexions de surfaces aux sommets communs, en supposant que les surfaces sont fournies dans une séquence cohérente.
+
+Par exemple, les surfaces 1 à 12 forment un bloc, les surfaces 13 à 24 un autre bloc, etc. La nouvelle routine « CAD > Resequence Block Links » effectue ce traitement.
+
+Notez que cette routine ne doit être utilisée qu'en dernier recours pour remettre en ordre des modèles mal construits.

@@ -1,0 +1,17 @@
+---
+title: "Caixa de média"
+---
+
+Calcula o valor médio ponderado de todos os pontos de contorno selecionados.
+
+Será solicitado que você selecione os dois cantos da janela, cada um com um clique. Somente os pontos de contorno dentro da janela serão incluídos. Para ver a localização real dos pontos de contorno, ative a exibição de trajetórias (Plot > Options > Trajectories). Os pontos de contorno ficam onde as trajetórias são desenhadas.
+
+A média é calculada multiplicando cada valor selecionado pela área da superfície ou retalho de grade associado e somando esses produtos. Esse resultado é apresentado como "Weighted Sum". O "Average" é obtido dividindo a soma ponderada pela área total.
+
+Todos os valores são acumulados como componentes vetoriais. As tensões principais são determinadas a partir da média ponderada das componentes cartesianas. As componentes de deslocamento, fluxo e cisalhamento superficial são determinadas a partir da média ponderada das componentes vetoriais.
+
+Observe que, para tensões, a "Weighted Sum" é na verdade a força total que atua na superfície.
+
+Se multiplicada pelo módulo de cisalhamento, a "Weighted Sum" do deslocamento de cisalhamento plástico (ride) é na verdade o momento sísmico.
+
+Formas poligonais complexas podem ser definidas com Plot > Polygon Box.

@@ -1,0 +1,79 @@
+---
+title: "Formulation par éléments de frontière"
+---
+
+La modélisation numérique cherche à simuler mathématiquement la façon dont le massif rocheux réagit à l'exploitation. Pour cela, elle prend en compte les effets suivants :
+
+- Conditions de chargement : avant l'exploitation, le massif rocheux est chargé par le poids des terrains sus-jacents et par les forces tectoniques.
+
+- Éléments de soutènement structurels : il peut aussi exister des charges dues au soutènement mécanique, au remblai, à l'échauffement, etc.
+
+- Géométrie : lorsque vous creusez des excavations, ces charges préexistantes se redistribuent autour des excavations et se concentrent dans les appuis et les piliers. Les dykes rigides et les zones minéralisées tendres influencent également la réponse.
+
+- Élasticité : là où les contraintes ne dépassent pas la résistance, la roche se déforme de façon plus ou moins élastique. Cela signifie simplement que les déformations restent relativement faibles et sont en grande partie réversibles.
+
+- Non-linéarité : là où les contraintes se concentrent au point de dépasser la résistance, la roche cède sous ces charges et se déforme. Les déformations peuvent alors être relativement importantes et en grande partie irréversibles. Cela peut inclure les effets du glissement des failles, de la fissuration et de la plastification non linéaire 3D généralisée.
+
+#### Comment fonctionne la modélisation numérique ?
+
+La modélisation numérique réalise cette simulation en imposant certaines contraintes physiques à la façon dont le massif rocheux peut réagir :
+
+**Équilibre** : les forces appliquées doivent toujours s'équilibrer en tout point du modèle. Si vous isolez un petit cube de matériau et examinez les contraintes qui s'exercent sur lui, ces contraintes doivent être en équilibre.
+
+- ¶sxx /¶ _x_ + ¶txy /¶ _y_ + ¶txz /¶ _z_ + _X_ = 0
+
+- ¶txy /¶ _x_ + ¶syy/¶ _y_ + ¶tyz /¶ _z_ + _Y_ = 0
+
+- ¶txz /¶ _x_ + ¶tyz /¶ _y_ + ¶szz /¶ _z_ + _Z_ = 0
+
+Notez que les termes _X_, _Y_ et _Z_ représentent des forces de volume qui permettent d'appliquer tout type de chargement de champ externe. Ce chargement de champ peut résulter d'un échauffement, de pressions de fluides, de la non-linéarité du matériau, etc. Ces termes peuvent en outre être déterminés à partir de nombreuses formes d'auscultation in situ, par exemple les pressions de fluides (rabattement de puits, barrages, fracturation hydraulique), l'échauffement (échauffement naturel, stockage de déchets nucléaires), les déformations (mesurées par extensomètres) et l'activité sismique (définition du glissement des failles ou de la non-linéarité du matériau à partir des données sismiques). Ce sont ces termes qui servent à intégrer la modélisation numérique et la surveillance sismique dans Map3Di.
+
+**Continuité** : dans le milieu continu du massif rocheux, la masse de matériau doit être conservée. Du matériau ne peut ni disparaître ni être créé.
+
+- ¶²exx /¶ _y_ ² + ¶²eyy/¶ _x_ ² = 2 ¶²exy/¶ _x_ /¶ _y_
+
+- ¶²eyy /¶ _z_ ² + ¶²ezz/¶ _y_ ² = 2 ¶²eyz/¶ _y_ /¶ _z_
+
+- ¶²ezz /¶ _x_ ²  + ¶²exx/¶ _z_ ² = 2 ¶²ezx/¶ _z_ /¶ _x_
+
+- ¶²exx /¶ _y_ /¶ _z_ = ¶/¶ _x ( -_ ¶eyz /¶ _x +_ ¶ezx /¶ _y +_ ¶exy /¶ _z )_
+
+- ¶²eyy/¶ _z_ /¶ _x_ = ¶/¶ _y ( -_ ¶ezx /¶ _y +_ ¶exy/¶ _z +_ ¶eyz /¶ _x )_
+
+- ¶²ezz /¶ _x_ /¶ _y_ = ¶/¶ _z ( -_ ¶exy/¶ _z +_ ¶eyz /¶ _x +_ ¶ezx /¶ _y )_
+
+**Élasticité** : là où les contraintes ne dépassent pas la résistance, la roche se déforme de façon élastique linéaire : les contraintes varient proportionnellement aux déformations élastiques.
+
+sxx  = s°xx + [ (1-u) exx + u ( eyy + ezz  ) ] _E_ /[(1+u)(1-2u)] syy = s°yy + [ (1-u) eyy + u ( ezz + exx  ) ] _E_ /[(1+u)(1-2u)] szz  = s°zz  + [ (1-u) ezz  + u ( exx + eyy ) ] _E_ /[(1+u)(1-2u)] txy  = t°xy + exy _E_ /(1+u) tyz  = t°yz + eyz _E_ /(1+u) tzx  = t°zx  + ezx _E_ /(1+u)
+
+Notez que c'est ici que les contraintes initiales ou en champ lointain (s°) sont intégrées à la physique du problème.
+
+**Non-linéarité** : là où les contraintes se concentrent au point de dépasser la résistance, la roche cède sous ces charges et se déforme. Les déformations peuvent se poursuivre jusqu'à ce que les contraintes se relâchent au niveau de la résistance. Ce phénomène peut s'accompagner d'une certaine dilatance. Cela peut inclure les effets du glissement des failles, de la fissuration et de la plastification non linéaire 3D généralisée.
+
+Notez que les équations d'équilibre et de continuité sont exprimées sous forme d'équations différentielles. Pour les résoudre, il faut les intégrer sur le volume du massif rocheux de manière à satisfaire les conditions aux limites appropriées. Il existe de nombreuses façons d'y parvenir. Les méthodes des éléments de frontière intègrent les équations de façon analytique, puis utilisent une approximation numérique pour satisfaire les conditions aux limites. Les méthodes des éléments finis et des différences finies utilisent un schéma d'intégration numérique pour intégrer les équations différentielles.
+
+Quelle que soit la méthode utilisée, toutes recourent au final à une forme d'approximation numérique et aboutissent à un grand système d'équations décrivant les interactions entre les différentes parties du massif rocheux. Dans la BEM, les équations obtenues s'écrivent
+
+ssurface = sfar_field + _M P_
+
+où _M_ est le système d'équations simultanées et _P_ représente les charges ou les déformations à appliquer pour annuler les contraintes sur les surfaces d'excavation. Cela constitue une description mathématique de la réponse du massif rocheux. Tous les modèles numériques utilisent une variante de cette approche.
+
+Ces équations doivent être résolues simultanément de façon à satisfaire les conditions aux limites. En résolvant ces équations dans tout le massif rocheux, avec les conditions de chargement et la géométrie, vous réalisez une « analyse des contraintes ».
+
+Map3D repose sur une méthode indirecte des éléments de frontière très efficace (Banerjee et Butterfield, 1981) et utilise simultanément des éléments à force fictive et à discontinuité de déplacement. Des éléments de frontière spéciaux et exclusifs sont intégrés aux versions d'analyse thermique et non linéaire.
+
+Cette formulation par éléments de frontière offre de nombreux avantages par rapport aux autres techniques d'analyse des contraintes. Les formulations directes par éléments de frontière exigent environ deux fois plus de calcul pour assembler et résoudre la matrice des éléments de frontière que la méthode indirecte utilisée dans Map3D.
+
+Des techniques de regroupement matriciel réduisent la taille de la matrice. Il est ainsi possible de traiter de très grands problèmes (plus de 333333 éléments, soit 1000000 de degrés de liberté) sur PC. Sans regroupement, un problème de 64000 éléments occuperait 147 Go d'espace disque. Avec le regroupement, ce volume peut être ramené à moins de 1 Go. Vous pouvez ainsi définir en détail la géométrie minière existante et ajouter de nouvelles exploitations au besoin. L'effort nécessaire pour préparer et exécuter les analyses s'en trouve fortement réduit, et la mine entière peut être prise en compte si nécessaire.
+
+Avec la formulation par éléments de frontière, on part d'un milieu élastique homogène infini (le massif rocheux). La construction du modèle consiste à créer des excavations et à superposer des zones hétérogènes (dykes, zones minéralisées ou zones plastifiantes) ainsi que toutes les failles ou diaclases susceptibles de glisser. Comme on part d'un milieu infini, les frontières en champ lointain sont prises en compte automatiquement.
+
+Il en va autrement des formulations par domaine, comme les méthodes des éléments finis ou des différences finies, où l'on part d'un espace vide. Avec ces méthodes, la construction du modèle consiste à assembler l'ensemble du massif rocheux et tous ses composants. Les éléments doivent être assemblés jusqu'à une frontière en champ lointain située à de nombreux diamètres des excavations.
+
+Si les formulations par éléments finis et par différences finies sont très abouties pour les problèmes non linéaires comme la plasticité, les écoulements transitoires de chaleur et de fluides et les simulations dynamiques, elles sont aussi très difficiles à utiliser et exigent des temps de calcul très longs. Cette difficulté tient à la grande quantité d'informations nécessaire pour discrétiser le massif rocheux encaissant. Même si les générateurs de maillage et les interfaces graphiques performantes permettent de la limiter, le coût et l'effort d'apprentissage de l'interface l'emportent sur la simplicité avec laquelle les analyses par éléments de frontière de Map3D peuvent être réalisées.
+
+Ces différences fondamentales rendent la méthode des éléments de frontière bien plus adaptée et économique (en temps d'analyse) pour les problèmes de massifs rocheux.
+
+Map3D a surmonté bon nombre des limites supposées de la méthode des éléments de frontière. Le programme prend en charge des séquences d'exploitation en plusieurs étapes et plusieurs zones de matériaux aux propriétés et aux états de contrainte différents. Ces zones peuvent avoir un comportement non linéaire. Plusieurs plans de faille sécants peuvent glisser et s'ouvrir selon la résistance au cisaillement définie par l'utilisateur. L'analyse des contraintes thermiques/fluides en régime permanent peut également être simulée.
+
+La technologie de modélisation volumique intégrée simplifie grandement la construction des modèles en construisant les intersections complexes en interne. Les routines de discrétisation de Map3D vous évitent d'avoir à optimiser vous-même l'utilisation des éléments, en les concentrant automatiquement là où des résultats sont demandés. Les procédures internes de regroupement ramènent la taille de la matrice et l'effort de calcul à une dépendance quasi linéaire vis-à-vis de la taille du problème.

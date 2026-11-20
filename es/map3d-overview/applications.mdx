@@ -1,0 +1,21 @@
+---
+title: "Aplicaciones"
+---
+
+Map3D es adecuado para modelar problemas de diseño en ingeniería de rocas que involucren tanto grandes cuerpos mineralizados tabulares como excavaciones masivas irregulares.
+
+El programa está diseñado para ser muy versátil en su aplicación. Puede simular desde geometrías tabulares simples hasta formas detalladas de excavaciones 3D y problemas de gran escala a nivel de toda la mina. Los modelos pueden incluir túneles, grandes excavaciones de forma irregular, zonas de mineral, excavaciones masivas y tabulares, rajos abiertos, fallas, fracturas y más. Las excavaciones pueden estar intersectadas por múltiples fallas o discontinuidades a las que se permite deslizar o abrirse. El tamaño y la complejidad del problema solo están limitados por el nivel de detalle que el usuario desee incorporar.
+
+Map3D puede simular elementos de soporte como arcos, marcos de acero, puntales, revestimientos gruesos, chocos, relleno resistente, etc. Al simular sistemas de soporte rígidos como arcos, marcos de acero, puntales, revestimientos gruesos, chocos, relleno resistente, etc., es necesario modelar el movimiento del terreno hasta el momento de la colocación del soporte y luego insertar los elementos de soporte, ya sea en un estado libre de esfuerzos y deformaciones o con un preesfuerzo prescrito. Esta función es especialmente útil para simular elementos de soporte estructural y permite su colocación, la modificación de sus propiedades y su posterior retiro si se desea. Esta opción está habilitada para bloques FF 3D y/o planos DD.
+
+Para habilitar esta función, primero debe excavar el elemento de soporte deseado (un bloque FF 3D o un plano DD) hasta el estado de preesfuerzo deseado (use un código de material cero para esfuerzos nulos o un número de material negativo para un estado de esfuerzos prescrito) y luego, en una etapa de minado posterior, insertar el material de soporte (use un número de material positivo para ello). Con la opción Analysis > Options > Zero Strain Support Placement activada, Map3D realiza los cálculos necesarios para colocar los elementos de soporte en un estado libre de esfuerzos y deformaciones o con un preesfuerzo prescrito en la etapa de minado actual. La acción de excavar hasta un estado de esfuerzos nulo o prescrito seguida de la inserción de un material alternativo indica a Map3D que debe realizar los cálculos necesarios.
+
+Map3D puede aplicarse al análisis de problemas de diseño subterráneo y de secuencia de minado, así como a la evaluación del diseño de pilares, la estabilidad de la luz de los caserones y la estabilidad de fallas. Según la versión utilizada, puede emplearse un comportamiento no lineal del material al modelar pilares, mantos y estribos.
+
+Existe una función para superponer efectos de cargas de campo externas en el modelo de Map3D: Map3Di.
+
+También existe una función para visualizar datos puntuales: Seismic. Los puntos pueden mostrarse como esferas sombreadas por una fuente de luz, cuyo diámetro y/o color varían según la magnitud. Cada punto puede etiquetarse con una serie de valores numéricos (por ejemplo, color, magnitud, orientación, etc.) y un mensaje de texto. Al hacer clic en un punto, su ubicación, magnitud y mensaje de texto se muestran en la barra de estado. Esta función puede utilizarse para mostrar una base de datos de información geológica útil, como la ley o la calidad del macizo rocoso.
+
+La carga de campo puede provenir del calentamiento térmico, la presión de fluidos, el comportamiento no lineal y las deformaciones indicadas por la sismicidad. Estos efectos pueden utilizarse para caracterizar rasgos geológicos, considerar cambios de litología e incorporar los efectos de la carga sísmica en el modelo de Map3D.
+
+Descripción general de la construcción de modelos

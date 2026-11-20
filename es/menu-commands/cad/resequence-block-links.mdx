@@ -1,0 +1,15 @@
+---
+title: "Resecuenciar vínculos de bloques"
+---
+
+Al importar modelos desde otros programas CAD, es importante proporcionar a Map3D alguna forma de identificar cómo se forman los bloques.
+
+La mejor forma es simplemente asignar números de color distintos a los bloques adyacentes; así Map3D puede determinar fácilmente qué superficies pertenecen a cada bloque. Como alternativa, puede especificar un nombre de bloque único para cada superficie.
+
+Cuando esto no es posible, existe una nueva rutina que intenta determinar qué superficies pertenecen a bloques adyacentes.
+
+Para ello busca conexiones de superficies en esquinas comunes, suponiendo que las superficies se proporcionan en algún tipo de secuencia coherente.
+
+Por ejemplo, las superficies 1-12 forman un bloque, las superficies 13-24 forman otro bloque, etc. La nueva rutina "CAD > Resequence Block Links" realiza este procesamiento.
+
+Tenga en cuenta que esta rutina solo debe usarse como último recurso para reordenar modelos mal construidos.

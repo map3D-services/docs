@@ -1,0 +1,7 @@
+---
+title: "Inaktive Blöcke zur Visualisierung definieren"
+---
+
+Bei der Modellerstellung ist es oft wünschenswert, Details der Ausrichtungsstrecken zur Visualisierung einzubeziehen. Dies erleichtert die Interpretation des Modells, da Benutzer vertraute Stellen im Bergwerk leichter erkennen. Solche detaillierten Geometrien können zwar in die Spannungsanalyse von Map3D einbezogen werden, ihre Anwesenheit verlängert jedoch die Rechenzeit, da mehr Randelemente erforderlich sind. Da kleine Strecken normalerweise nur benachbarte Hohlräume beeinflussen, können die meisten davon ohne nennenswerten Einfluss auf die Ergebnisse aus der Analyse herausgelassen werden.
+
+Dennoch ist es wünschenswert, die genaue Lage der Strecken zur besseren Visualisierung über die Analyseergebnisse zu legen. Blöcke können in die Map3D-Datenbank aufgenommen, aber von der Analyse ausgeschlossen werden, indem man ihnen einfach den Blocktyp „inaktiv“ zuweist. Diese Blöcke werden von Verschneidung, Diskretisierung und Analyse ausgenommen und erhöhen daher den Rechenaufwand nicht.

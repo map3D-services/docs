@@ -1,0 +1,79 @@
+---
+title: "Randelementformulierung"
+---
+
+Numerische Modellierung ist der Versuch, das Verhalten des Gebirges beim Abbau mathematisch zu simulieren. Dazu werden folgende Einflüsse berücksichtigt:
+
+- Lastbedingungen: Vor dem Abbau ist das Gebirge durch Überlagerung und tektonische Kräfte belastet.
+
+- Tragende Ausbauelemente: Zusätzlich können Lasten aus mechanischem Gebirgsausbau, Versatz, Erwärmung usw. auftreten.
+
+- Geometrie: Wenn Sie Hohlräume auffahren, werden diese bereits vorhandenen Lasten um die Hohlräume umgelagert und konzentrieren sich in Widerlagern und Pfeilern. Steife Gänge und weiche Erzzonen beeinflussen das Verhalten ebenfalls.
+
+- Elastizität: An Stellen, an denen die Spannungen die Festigkeit nicht überschreiten, verformt sich das Gestein mehr oder weniger elastisch. Das bedeutet einfach, dass die Verformungen relativ klein und größtenteils reversibel sind.
+
+- Nichtlinearität: An Stellen, an denen sich die Spannungen so stark konzentrieren, dass sie die Festigkeit überschreiten, gibt das Gestein unter diesen Lasten nach und verformt sich. Die Verformungen können dann relativ groß und größtenteils irreversibel sein. Dazu können Störungsgleiten, Rissbildung und allgemeines nichtlineares Fließen in 3D gehören.
+
+#### Wie funktioniert numerische Modellierung?
+
+Die numerische Modellierung erreicht diese Simulation, indem sie dem möglichen Verhalten des Gebirges bestimmte physikalische Bedingungen auferlegt:
+
+**Gleichgewicht**: Die angreifenden Kräfte müssen sich an jeder Stelle des Modells stets gegenseitig ausgleichen. Wenn Sie einen kleinen Materialwürfel herausschneiden und die auf ihn wirkenden Spannungen betrachten, müssen diese im Gleichgewicht sein.
+
+- ¶sxx /¶ _x_ + ¶txy /¶ _y_ + ¶txz /¶ _z_ + _X_ = 0
+
+- ¶txy /¶ _x_ + ¶syy/¶ _y_ + ¶tyz /¶ _z_ + _Y_ = 0
+
+- ¶txz /¶ _x_ + ¶tyz /¶ _y_ + ¶szz /¶ _z_ + _Z_ = 0
+
+Beachten Sie, dass die Terme _X_, _Y_ und _Z_ Volumenkräfte darstellen, mit denen sich beliebige externe Feldlasten aufbringen lassen. Solche Feldlasten können aus Erwärmung, Fluiddrücken, Materialnichtlinearität usw. resultieren. Außerdem lassen sie sich aus vielen Formen der In-situ-Überwachung bestimmen, zum Beispiel aus Fluiddrücken (Brunnenabsenkung, Talsperren, hydraulische Rissbildung), Erwärmung (natürliche Erwärmung, Endlagerung radioaktiver Abfälle), Verformungen (mit Extensometern gemessen) und seismischer Aktivität (Bestimmung von Störungsgleiten oder Materialnichtlinearität aus seismischen Daten). Genau diese Terme werden in Map3Di für die Verknüpfung der numerischen Modellierung mit der seismischen Überwachung verwendet.
+
+**Kontinuität**: Im Gebirgskontinuum muss die Materialmasse erhalten bleiben. Material kann weder verschwinden noch neu entstehen.
+
+- ¶²exx /¶ _y_ ² + ¶²eyy/¶ _x_ ² = 2 ¶²exy/¶ _x_ /¶ _y_
+
+- ¶²eyy /¶ _z_ ² + ¶²ezz/¶ _y_ ² = 2 ¶²eyz/¶ _y_ /¶ _z_
+
+- ¶²ezz /¶ _x_ ²  + ¶²exx/¶ _z_ ² = 2 ¶²ezx/¶ _z_ /¶ _x_
+
+- ¶²exx /¶ _y_ /¶ _z_ = ¶/¶ _x ( -_ ¶eyz /¶ _x +_ ¶ezx /¶ _y +_ ¶exy /¶ _z )_
+
+- ¶²eyy/¶ _z_ /¶ _x_ = ¶/¶ _y ( -_ ¶ezx /¶ _y +_ ¶exy/¶ _z +_ ¶eyz /¶ _x )_
+
+- ¶²ezz /¶ _x_ /¶ _y_ = ¶/¶ _z ( -_ ¶exy/¶ _z +_ ¶eyz /¶ _x +_ ¶ezx /¶ _y )_
+
+**Elastizität**: An Stellen, an denen die Spannungen die Festigkeit nicht überschreiten, verformt sich das Gestein linear-elastisch: Die Spannungen ändern sich direkt proportional zu den elastischen Dehnungen.
+
+sxx  = s°xx + [ (1-u) exx + u ( eyy + ezz  ) ] _E_ /[(1+u)(1-2u)] syy = s°yy + [ (1-u) eyy + u ( ezz + exx  ) ] _E_ /[(1+u)(1-2u)] szz  = s°zz  + [ (1-u) ezz  + u ( exx + eyy ) ] _E_ /[(1+u)(1-2u)] txy  = t°xy + exy _E_ /(1+u) tyz  = t°yz + eyz _E_ /(1+u) tzx  = t°zx  + ezx _E_ /(1+u)
+
+Beachten Sie, dass an dieser Stelle die Primär- bzw. Fernfeldspannungen (s°) in die Physik einfließen.
+
+**Nichtlinearität**: An Stellen, an denen sich die Spannungen so stark konzentrieren, dass sie die Festigkeit überschreiten, gibt das Gestein unter diesen Lasten nach und verformt sich. Die Verformungen dürfen so lange fortschreiten, bis die Spannungen auf das Niveau der Festigkeit abgebaut sind. Dies kann mit einer gewissen Dilatanz einhergehen. Dazu können Störungsgleiten, Rissbildung und allgemeines nichtlineares Fließen in 3D gehören.
+
+Beachten Sie, dass die Gleichgewichts- und Kontinuitätsgleichungen als Differentialgleichungen formuliert sind. Um sie zu lösen, müssen sie über das Gebirgsvolumen so integriert werden, dass die jeweiligen Randbedingungen erfüllt sind. Dafür gibt es viele Möglichkeiten. Randelementmethoden integrieren die Gleichungen analytisch und verwenden dann eine numerische Näherung, um die Randbedingungen zu erfüllen. Finite-Elemente- und Finite-Differenzen-Methoden integrieren die Differentialgleichungen mit einem numerischen Integrationsverfahren.
+
+Unabhängig von der Methode verwenden letztlich alle eine Form der numerischen Näherung, und man erhält ein großes Gleichungssystem, das beschreibt, wie die verschiedenen Teile des Gebirges miteinander wechselwirken. Bei der BEM haben die resultierenden Gleichungen die Form
+
+ssurface = sfar_field + _M P_
+
+wobei _M_ das System simultaner Gleichungen ist und _P_ die Lasten oder Verformungen darstellt, die aufgebracht werden müssen, damit die Spannungen an den Hohlraumoberflächen null werden. Dies stellt eine mathematische Beschreibung des Gebirgsverhaltens dar. Alle numerischen Modelle verwenden eine Variante dieses Ansatzes.
+
+Diese Gleichungen müssen simultan so gelöst werden, dass die Randbedingungen erfüllt sind. Indem Sie diese Gleichungen für das gesamte Gebirge zusammen mit den Lastbedingungen und der Geometrie lösen, führen Sie eine „Spannungsanalyse“ durch.
+
+Map3D basiert auf einer sehr effizienten indirekten Randelementmethode (Banerjee und Butterfield, 1981) und verwendet gleichzeitig Elemente mit fiktiven Kräften und Verschiebungsdiskontinuitäts-Elemente. Für die Versionen mit thermischer und nichtlinearer Analyse sind spezielle, proprietäre Randelemente integriert.
+
+Diese Randelementformulierung bietet viele Vorteile gegenüber anderen Verfahren der Spannungsanalyse. Direkte Randelementformulierungen benötigen etwa den doppelten Rechenaufwand für das Aufstellen und Lösen der Randelementmatrix im Vergleich zu der in Map3D verwendeten indirekten Methode.
+
+Verfahren zur Matrixzusammenfassung (Lumping) verringern die Matrixgröße. Dadurch lassen sich sehr große Probleme (mehr als 333333 Elemente bzw. 1000000 Freiheitsgrade) auf PCs bearbeiten. Ohne Zusammenfassung würde ein Problem mit 64000 Elementen 147 GB Festplattenspeicher belegen. Mit Zusammenfassung lässt sich dies auf weniger als 1 GB reduzieren. So können Sie die bestehende Abbaugeometrie detailliert abbilden und bei Bedarf neuen Abbau hinzufügen. Der Aufwand für die Einrichtung und Durchführung von Analysen sinkt dadurch erheblich, und bei Bedarf kann das gesamte Bergwerk betrachtet werden.
+
+Bei der Randelementformulierung geht man von einem unendlichen, homogenen, elastischen Medium (dem Gebirge) aus. Die Modellerstellung besteht darin, Hohlräume auszubrechen und inhomogene Zonen (Gänge, Erzzonen oder nachgiebige Zonen) sowie alle Störungen oder Klüfte, auf denen Gleiten auftreten kann, zu überlagern. Da man von einem unendlichen Medium ausgeht, werden Fernfeldränder automatisch berücksichtigt.
+
+Dies unterscheidet sich von Gebietsformulierungen wie der Finite-Elemente- oder der Finite-Differenzen-Methode, bei denen man von einem leeren Raum ausgeht. Bei diesen Methoden besteht die Modellerstellung darin, das gesamte Gebirge mit all seinen Bestandteilen zusammenzusetzen. Die Elemente müssen bis zu einem Fernfeldrand aufgebaut werden, der viele Durchmesser von den Hohlräumen entfernt liegt.
+
+Finite-Elemente- und Finite-Differenzen-Formulierungen sind zwar für nichtlineare Probleme wie Plastizität, instationäre Wärme- und Fluidströmung sowie dynamische Simulationen sehr weit entwickelt, sie sind jedoch auch sehr schwierig zu handhaben und erfordern sehr lange Rechenzeiten. Die Schwierigkeit ergibt sich aus der großen Informationsmenge, die zur Diskretisierung des umgebenden Gebirges erforderlich ist. Netzgeneratoren und leistungsfähige grafische Oberflächen können dies zwar verringern, doch Kosten und Einarbeitungsaufwand überwiegen die Einfachheit, mit der sich Randelementanalysen in Map3D durchführen lassen.
+
+Diese grundlegenden Unterschiede machen die Randelementmethode für Gebirgsprobleme wesentlich geeigneter und wirtschaftlicher (hinsichtlich der Rechenzeit).
+
+Viele der vermeintlichen Grenzen der Randelementmethode wurden in Map3D überwunden. Das Programm unterstützt mehrstufige Abbaufolgen und mehrere Materialzonen mit unterschiedlichen Materialeigenschaften und Spannungszuständen. Diese Zonen dürfen sich nichtlinear verhalten. Mehrere sich schneidende Störungsflächen können entsprechend der vom Benutzer festgelegten Scherfestigkeit gleiten und sich öffnen. Auch stationäre thermische/hydraulische Spannungsanalysen lassen sich simulieren.
+
+Die integrierte Volumenmodellierung macht die Modellerstellung sehr einfach, da komplexe Schnitte intern erzeugt werden. Die in Map3D integrierten Diskretisierungsroutinen nehmen Ihnen die Optimierung des Elementeinsatzes ab, indem sie Elemente automatisch nur dort konzentrieren, wo Ergebnisse angefordert werden. Die internen Zusammenfassungsverfahren reduzieren Matrixgröße und Rechenaufwand auf eine nahezu lineare Abhängigkeit von der Problemgröße.

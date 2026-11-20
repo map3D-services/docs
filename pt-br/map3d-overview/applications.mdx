@@ -1,0 +1,21 @@
+---
+title: "Aplicações"
+---
+
+O Map3D é adequado para modelar problemas de projeto em engenharia de rochas que envolvam tanto grandes corpos de minério tabulares quanto escavações maciças irregulares.
+
+O programa foi projetado para ser muito versátil em sua aplicação. Ele pode simular desde geometrias tabulares simples até formas detalhadas de escavações 3D e problemas de grande escala abrangendo toda a mina. Os modelos podem incluir túneis, grandes escavações de forma irregular, zonas de minério, escavações maciças e tabulares, cavas a céu aberto, falhas, fraturas e muito mais. As escavações podem ser interceptadas por múltiplas falhas ou descontinuidades que podem deslizar ou se abrir. O tamanho e a complexidade do problema são limitados apenas pelo nível de detalhe que o usuário deseja incorporar.
+
+O Map3D pode simular elementos de suporte como arcos, cambotas de aço, escoras, revestimentos espessos, fogueiras de madeira, enchimento resistente etc. Ao simular sistemas de suporte rígidos desse tipo, é necessário modelar o movimento do terreno até o momento da instalação do suporte e, em seguida, inserir os elementos de suporte em um estado livre de tensões e deformações ou com uma protensão prescrita. Esse recurso é especialmente útil para simular elementos de suporte estrutural e permite sua instalação, a modificação de suas propriedades e sua remoção posterior, se desejado. Essa opção está disponível para blocos FF 3D e/ou planos DD.
+
+Para ativar esse recurso, primeiro escave o elemento de suporte desejado (um bloco FF 3D ou um plano DD) até o estado de protensão desejado (use um código de material zero para tensões nulas ou um número de material negativo para um estado de tensões prescrito) e, em uma etapa de lavra posterior, insira o material de suporte (use um número de material positivo para isso). Com a opção Analysis > Options > Zero Strain Support Placement marcada, o Map3D realiza os cálculos necessários para instalar os elementos de suporte em um estado livre de tensões e deformações ou com uma protensão prescrita na etapa de lavra atual. A escavação até um estado de tensões nulo ou prescrito, seguida da inserção de um material alternativo, sinaliza ao Map3D que ele deve realizar os cálculos necessários.
+
+O Map3D pode ser aplicado à análise de problemas de layout subterrâneo e de sequência de lavra, bem como à avaliação do projeto de pilares, da estabilidade do vão dos realces e da estabilidade de falhas. Dependendo da versão utilizada, o comportamento não linear do material pode ser considerado na modelagem de pilares, camadas e encontros.
+
+Há um recurso para sobrepor efeitos de carregamento de campo externos ao modelo do Map3D: o Map3Di.
+
+Há também um recurso para visualizar dados pontuais: o Seismic. Os pontos podem ser exibidos como esferas sombreadas por uma fonte de luz, com diâmetro e/ou cor variando conforme a magnitude. Cada ponto pode receber uma série de valores numéricos (por exemplo, cor, magnitude, orientação etc.) e uma mensagem de texto. Ao clicar em um ponto, sua localização, magnitude e mensagem de texto são exibidas na barra de status. Esse recurso pode ser usado para exibir um banco de dados de informações geológicas úteis, como teor e qualidade do maciço rochoso.
+
+O carregamento de campo pode resultar de aquecimento térmico, pressão de fluidos, comportamento não linear e deformações indicadas pela sismicidade. Esses efeitos podem ser usados para caracterizar feições geológicas, considerar mudanças de litologia e incorporar efeitos de carregamento sísmico ao modelo do Map3D.
+
+Visão geral da construção de modelos

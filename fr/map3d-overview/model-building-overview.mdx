@@ -1,0 +1,31 @@
+---
+title: "Présentation de la construction de modèles"
+---
+
+Map3D repose sur la formulation par éléments de frontière. Avec cette méthode, on part d'un milieu élastique homogène infini (le massif rocheux). La construction du modèle consiste à créer des excavations et à superposer des zones hétérogènes (dykes, zones minéralisées ou zones plastifiantes) ainsi que toutes les failles ou diaclases susceptibles de glisser. Comme on part d'un milieu infini, les frontières en champ lointain sont prises en compte automatiquement.
+
+Il en va autrement des formulations par domaine, comme les méthodes des éléments finis ou des différences finies, où l'on part d'un espace vide. Avec ces méthodes, la construction du modèle consiste à assembler l'ensemble du massif rocheux et tous ses composants. Les éléments doivent être assemblés jusqu'à une frontière en champ lointain située à de nombreux diamètres des excavations.
+
+Ces différences fondamentales rendent la méthode des éléments de frontière bien plus adaptée et économique (en temps d'analyse) pour les problèmes de massifs rocheux.
+
+Map3D propose plusieurs types d'éléments de frontière :
+
+Les éléments à force fictive (FF) servent à définir l'emplacement des surfaces d'excavation et des frontières entre régions de propriétés différentes.
+
+Les éléments à discontinuité de déplacement (DD) servent à définir l'emplacement des diaclases, des failles, des fractures, des parois de fosse et de la surface du sol. Ces éléments peuvent recouper les excavations à n'importe quel endroit, car Map3D construit les intersections d'arêtes en interne.
+
+Les éléments inactifs servent à construire des surfaces d'excavation qui peuvent être affichées mais ne sont pas utilisées dans l'analyse des contraintes.
+
+Des éléments de frontière spéciaux et exclusifs sont intégrés aux versions d'analyse thermique et non linéaire.
+
+#### Formulation par éléments de frontière
+
+L'objectif de la construction du modèle est de créer une série de facettes de surface qui, ensemble, forment une enveloppe continue, sans raccord ni chevauchement, décrivant l'emplacement des excavations, les frontières des régions de modules différents, les failles, etc. Ces surfaces doivent ensuite être subdivisées en éléments de frontière plus petits, sur lesquels les fonctions d'influence sont évaluées et résolues. Cette approche s'appelle la modélisation surfacique.
+
+Vous pouvez construire librement des modèles surfaciques et fournir ces données d'entrée de base à Map3D. Si cette approche est idéale pour décrire des contours de minerai ou des modèles tels que construits, elle s'avère fastidieuse et source d'erreurs pour construire des agencements miniers. Pour simplifier la construction des modèles, le programme intègre un puissant préprocesseur capable d'accepter et de manipuler des entités tridimensionnelles d'ordre supérieur. Cette approche s'appelle la modélisation volumique.
+
+La modélisation volumique permet de construire des modèles à partir d'une série de blocs tridimensionnels. Ces blocs, de forme et de taille quelconques, servent à construire les excavations et les accès, ainsi qu'à définir des zones hétérogènes (zones minéralisées, dykes et zones plastifiantes).
+
+Le programme construit automatiquement les intersections entre les excavations, les failles et les différentes zones de matériaux. En associant cette fonction aux opérations booléennes intégrées, vous pouvez construire facilement des séquences d'exploitation complexes en plusieurs étapes. Map3D crée la description surfacique nécessaire et discrétise automatiquement ces surfaces en éléments pour l'analyse des contraintes par éléments de frontière.
+
+#### Prédiction de la réponse du massif rocheux par modélisation numérique

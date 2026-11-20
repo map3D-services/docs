@@ -1,0 +1,17 @@
+---
+title: "Caja de promedio"
+---
+
+Calcula el valor medio ponderado de todos los puntos de contorno seleccionados.
+
+Se le pedirá que seleccione las dos esquinas de la ventana haciendo un clic en cada una. Solo se incluirán los puntos de contorno que queden dentro de la ventana. Para ver la ubicación real de los puntos de contorno, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se encuentran donde se dibujan las trayectorias.
+
+El promedio se calcula multiplicando cada valor seleccionado por el área de su superficie o parche de grilla asociado y sumando luego estos productos. Este resultado se presenta como "Weighted Sum". El "Average" se obtiene dividiendo la suma ponderada por el área total.
+
+Todos los valores se acumulan como componentes vectoriales. Los esfuerzos principales se determinan a partir de la media ponderada de las componentes cartesianas. Las componentes de desplazamiento, flujo y corte superficial se determinan a partir de la media ponderada de las componentes vectoriales.
+
+Tenga en cuenta que, para los esfuerzos, la "Weighted Sum" es en realidad la fuerza total que actúa sobre la superficie.
+
+Si la multiplica por el módulo de corte, la "Weighted Sum" del desplazamiento de corte plástico (ride) es en realidad el momento sísmico.
+
+Pueden definirse formas poligonales complejas con Plot > Polygon Box.

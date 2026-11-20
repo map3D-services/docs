@@ -1,0 +1,21 @@
+---
+title: "Analyse neu starten"
+---
+
+Startet eine Analyse neu, die abgebrochen oder durch einen Stromausfall oder Systemabsturz unterbrochen wurde.
+
+Diese Funktion durchsucht alle Abbauschritte der ausgewählten Neustartdatei, um festzustellen, bei welchem Abbauschritt die Analyse unterbrochen wurde. Anschließend prüft sie, ob alle für den Neustart erforderlichen temporären Dateien vorhanden sind. Schließlich zeigt sie diese Informationen an und bietet, falls möglich, an, die Analyse an der Unterbrechungsstelle fortzusetzen.
+
+Für einen Neustart müssen folgende temporäre Dateien intakt sein:
+
+- file.00n, wobei n die Nummer des Abbauschritts ist, an dem die Analyse unterbrochen wurde.
+
+- file.1 und file.2 – diese Dateien dienen zum Neustart des Lösers.
+
+- file.dms – diese Datei wird nur mit der Option für dehnungsfreien Einbau verwendet (Analysis > Options > Zero Strain Support Placement).
+
+- file.hms – diese Datei wird nur von Map3Di verwendet, um die Feldlasten im Verlauf der Analyse aufzusummieren.
+
+Hinweise:
+
+Siehe Analysis > Options > Initialize, um eine neue Analyse ab dem Endzustand eines vorherigen Modells zu starten.

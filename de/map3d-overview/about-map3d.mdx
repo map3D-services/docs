@@ -1,0 +1,147 @@
+---
+title: "Über Map3D"
+---
+
+Map3D wird von Dr. Terry Wiles (support@map3d.com) von Map3D International Ltd entwickelt und betreut. Die Entwicklung von Map3D begann Ende der 1970er-Jahre, und das Programm hat seitdem viele umfassende Überarbeitungen durchlaufen. Seit 1990 ist es kommerziell erhältlich. Das Programm wird ständig weiterentwickelt und von engagierten Fachleuten betreut, die seit über 50 Jahren in der Felsmechanik und numerischen Modellierung tätig sind.
+
+Das Programm wird von Hunderten von Bergbau-, Bau- und Geotechnikunternehmen, Ingenieurbüros, Forschungszentren und Universitäten weltweit eingesetzt (unter anderem in Argentinien, Armenien, Australien, Österreich, Belgien, Bolivien, Botswana, Brasilien, Bulgarien, Burkina Faso, Kanada, China, Kolumbien, der Demokratischen Republik Kongo, der Dominikanischen Republik, Ecuador, Ägypten, El Salvador, Eritrea, Finnland, Ghana, Griechenland, Guatemala, Honduras, Indien, Indonesien, Irland, Italien, Japan, Kasachstan, Korea, Mali, Mexiko, Marokko, der Mongolei, Namibia, Nicaragua, Papua-Neuguinea, Peru, den Philippinen, Portugal, Russland, Saudi-Arabien, Südafrika, Spanien, Schweden, der Schweiz, Tansania, der Türkei, dem Vereinigten Königreich, den USA, Sambia und Simbabwe). In Stellenanzeigen werden Map3D-Kenntnisse häufig vorausgesetzt. Die Demoversion (demo_version) wird weltweit eingesetzt, um Studierenden die Grundlagen der numerischen Modellierung und des 3D-CAD zu vermitteln.
+
+Das Programm wurde in vielen Projekten eingesetzt, darunter die Planung von Untertage- und Tagebauen, die Bewertung der Grubenstabilität, die Planung von Endlagern für radioaktive Abfälle, Simulationen der Rissausbreitung, Probleme des Störungsgleitens, die Rückrechnung von In-situ-Spannungen, die Planung von Steinbrüchen, die Standsicherheit von Tagebauböschungen, die Ausbreitung hydraulischer Risse, das Versagen von Erdböschungen usw. Die aktuelle Forschung und Entwicklung konzentriert sich auf quantitative Bemessungsverfahren, plastische 3D-Modellierung, die Simulation des Gebirgsausbaus, die Bewertung der Gebirgsschlaggefahr, die Simulation des Discing und die Verknüpfung der Modellierung mit der seismischen Überwachung.
+
+**Randelementmethode**: Map3D basiert auf der sehr effizienten indirekten Randelementmethode und verwendet gleichzeitig Elemente mit fiktiven Kräften (FF), Verschiebungsdiskontinuitäts-Elemente (DD) sowie spezielle, proprietäre Randelemente für die Versionen mit thermischer, nichtlinearer und viskoplastischer Analyse (Map3D-Versionen).
+
+Forschung und Entwicklung der letzten 50 Jahre haben es ermöglicht, viele der vermeintlichen Grenzen der Randelementmethode zu überwinden. Das Programm unterstützt mehrstufige Abbaufolgen, mehrere Materialzonen mit unterschiedlichen Materialeigenschaften und Spannungszuständen sowie ein diskontinuierliches Gesteinsverhalten mit einer begrenzten Anzahl diskreter Strukturen. Sowohl 3D-Zonen als auch DD-Zonen dürfen sich nichtlinear und/oder plastisch verhalten. Mehrere sich schneidende Störungsflächen können entsprechend der vom Benutzer festgelegten Scherfestigkeit gleiten und sich öffnen. Gekoppelte stationäre thermische/hydraulische Spannungsanalysen lassen sich simulieren. Kriech- und Relaxationsprobleme in Echtzeit können mit expliziten Zeitschritten behandelt werden.
+
+**Elastische oder plastische Modellierung**: Befürworter der plastischen Modellierung schreiben ihr gegenüber der elastischen Modellierung häufig besondere Fähigkeiten zu, zum Beispiel:
+
+- Die Fähigkeit, Ausmaß, Ort, Zeitpunkt und Orientierung von Schädigungen vorherzusagen.
+
+- Die Fähigkeit, Spannungsumlagerungen infolge von Fließen zu simulieren.
+
+- Die Fähigkeit, die akkumulierte Schädigung mit fortschreitendem Abbau zu verfolgen.
+
+Obwohl Map3D vollständige 3D-Gebirgsplastizität analysieren kann, lassen sich all diese vermeintlich exklusiven plastischen Fähigkeiten auch mit elastischer Modellierung abdecken.
+
+Dies ist dank neuer Analysewerkzeuge möglich, die in das Programm integriert wurden:
+
+- Elastische Map3D-Modelle können Ausmaß, Ort, Zeitpunkt und Orientierung von Schädigungen über die Berechnung der Überschussspannung vollständig vorhersagen.
+
+- Drei Hauptversagensarten können bewertet werden:
+
+   - Gebirgsversagen.
+
+   - Störungsartiges Versagen in der Ebene.
+
+Strukturell orientierte Schwächeflächen (UB-Ebenen, ubiquitär) mit bis zu 3 Kluftscharen.
+
+- Spannungsumlagerungen lassen sich durch Einbeziehung entfestigter Zonen simulieren.
+
+- Eine neue Funktion verfolgt die akkumulierte Schädigung (Überschussspannung) in elastischen Modellen: Die Schädigung wird mit fortschreitendem Abbau verfolgt.
+
+   - Der während des fortschreitenden Abbaus erreichte Höchstwert der Überschussspannung wird erfasst und kann im Verlauf der Abbauschritte dargestellt werden.
+
+Sowohl der erste Fließschritt als auch die Schritte maximalen Fließens werden gespeichert und können als Trajektoriennummern angezeigt werden.
+
+Die neuen Fähigkeiten von MAP3D ermöglichen es, viele Verhaltensweisen zu behandeln, die bisher nur mit nichtlinearer und plastischer Modellierung möglich waren.
+
+Dabei bleiben die einfache Bedienung und die Vorteile der elastischen Modellierung bei der Rechenleistung erhalten.
+
+Diese Fähigkeiten heben die Vorteile der plastischen Modellierung weitgehend auf.
+
+Falls eine plastische Simulation erforderlich ist:
+
+- Map3D Visco-Plastic ermöglicht die vollständige Simulation des Gebirgsfließens mit denselben Modelleingabedateien.
+
+- Map3D Fault-Slip ermöglicht die vollständige Simulation des Fließens durch Störungsgleiten mit denselben Modelleingabedateien.
+
+**Programmgenauigkeit**: Die Lösungsgenauigkeit wird durch ein automatisiertes Diskretisierungsverfahren gesteuert. Elemente können anhand benutzergesteuerter Parameter automatisch in interessierenden Bereichen konzentriert werden. Dies erspart Ihnen die mühsame manuelle Diskretisierung des Modells, verbessert die Genauigkeit und minimiert die Problemgröße.
+
+**Problemgröße**: Map3D kann auf einem PC mit wenigen GB Festplattenspeicher über 24 Millionen Freiheitsgrade verarbeiten. Kleine Probleme lassen sich in Minuten lösen, die größten können eine Nacht oder einige Tage beanspruchen. Diese enorme Effizienz wird durch Matrixzusammenfassung (Lumping) erreicht. So können Sie die bestehende Abbaugeometrie des gesamten Bergwerks detailliert abbilden und bei Bedarf neuen Abbau hinzufügen. Der Aufwand für die Einrichtung und Durchführung von Analysen sinkt dadurch erheblich, und bei Bedarf kann das gesamte Bergwerk betrachtet werden.
+
+**Mehrprozessor- und Mehrplattenbetrieb**: Map3D unterstützt die Parallelverarbeitung vollständig, sodass die Rechenzeit linear mit der Anzahl der Prozessoren skaliert (Prozessoren mit 6 Kernen lösen Probleme 6-mal schneller als Einkernprozessoren). Darüber hinaus verfügt das Programm über eine integrierte überlappende Festplattennutzung, mit der Lese- und Schreibraten linear mit der Anzahl der Festplatten skalieren (mit 4 Festplatten sind Lese- und Schreibvorgänge 4-mal schneller als mit einer).
+
+**Vorverarbeitung**: In Map3D ist ein vollständiges CAD-Paket integriert, das zahlreiche Funktionen zum Datenaustausch mit anderen CAD-Paketen bietet. Viele Funktionen, darunter die automatischen Nachzeichnen- und Extrusionsfunktionen, ermöglichen die mühelose Erstellung komplexer Modelle. Umfangreiche Fehlerprüfungs- und automatische Korrekturroutinen erlauben die Verwendung nahezu jeder Modellgeometrie. Boolesche Schnittroutinen korrigieren überlappende und nicht passende Blockverbindungen ohne Eingriff des Benutzers. Import und Export von Geometriedateien im DXF- oder PNT-Format (ASCII) werden vollständig unterstützt.
+
+**Nachbearbeitung**: Ein vollständiges Darstellungspaket mit Hunderten von Darstellungs- und Datenexportfunktionen ist enthalten. Benutzerdefinierte Darstellungen und visuell ausgewählte Datenausgaben verringern den Aufwand für Interpretation und Berichterstellung. Ausgaben können direkt nach Excel erfolgen und automatisch grafisch dargestellt werden.
+
+#### Warum Map3D?
+
+Map3D wurde von Grund auf speziell für Bergbauanwendungen entwickelt. Das Programm ist darauf ausgelegt, schnell hochgenaue Ergebnisse zu liefern, damit Sie sich auf die Ingenieurarbeit statt auf die Modellierung konzentrieren können. Große, komplexe Probleme lassen sich einfach mit der eigenen CAD-Oberfläche von Map3D oder außerhalb des Programms erstellen und dann in verschiedenen Formaten importieren. Kein anderes Programm kann die Analysen von Map3D in derselben Zeit (Rechen-, Vor- und Nachbearbeitungszeit), zu denselben Kosten (um ein Vielfaches günstiger) und mit derselben Einfachheit (Map3D kann vor Ort für Routineanalysen eingesetzt werden) durchführen. Einige Vorteile von Map3D:
+
+- Bequemer Aufstiegspfad von elastischer Analyse über Störungsgleiten, thermische/hydraulische Strömung und nichtlineare bis hin zu viskoplastischer Analyse (Map3D-Versionen) mit derselben Oberfläche
+
+- Umfangreiches Schulungsprogramm sowohl zur Programmfunktionalität als auch zur detaillierten ingenieurtechnischen Interpretation der Ergebnisse (siehe Map3D-Schulungen)
+
+- Leistungsfähige integrierte CAD-Oberfläche – keine Software von Drittanbietern erforderlich
+
+- Einfache Erstellung einfacher oder komplexer 3D-Formen.
+
+- Sehr große Probleme lassen sich problemlos auf einem Desktop-Computer lösen (24.000.000 Freiheitsgrade)
+
+- Automatische Erzeugung von Excel-Diagrammen aus Konturdaten
+
+- Darstellungen der Versagenswahrscheinlichkeit
+
+- Die automatische Blockverschneidung erspart Ihnen manuelle Konstruktionsarbeit
+
+- Ermöglicht das Einbringen von Versatz
+
+- Mehrstufige Abbaufolgen
+
+- Hochgenaue Elemente (für dieselbe Genauigkeit sind nur halb so viele Elemente erforderlich wie bei den meisten Programmen)
+
+- Dank fortschrittlicher Zusammenfassungsverfahren sind die Rechenzeiten im Vergleich zu anderen Programmen sehr kurz
+
+- Bis zu 100 verschiedene Materialzonen
+
+- Viskoplastische Simulationen des Störungsgleitens
+
+- Tafelförmiger Abbau mit nachgiebigen Pfeilern
+
+- Die automatische Diskretisierung gewährleistet eine leicht steuerbare und gleichbleibende Genauigkeit
+
+- Leistungsfähiger integrierter Ergebnisbetrachter
+
+- Einfache Aufbereitung der Ergebnisse zur Interpretation von Gebirgsversagen, Gleiten auf Störungsflächen, Ergebnissen entlang orientierter Bohrungen und ubiquitärem Gleiten auf Schichtflächen oder Kluftscharen.
+
+- Die integrierte interaktive Visualisierungsdatenbank ermöglicht die Darstellung und Konturierung seismischer Daten
+
+- Konturdarstellung benutzerdefinierter Funktionen
+
+- Programmsupport inklusive
+
+- Kontinuierliche Weiterentwicklung und Verbesserung seit über 26 Jahren
+
+- Einsatz von Elementen mit fiktiven Kräften und Verschiebungsdiskontinuitäts-Elementen (sowie spezieller Elemente für thermische/hydraulische Strömung und 3D-Plastizität).
+
+- Elemente höherer Ordnung für Biegeprobleme
+
+- Ebene Raster, Linienraster und Punktraster zur Ergebnisanzeige
+
+- Isotrope und anisotrope Versagenskriterien
+
+- RCF-Darstellungen (Rock wall Condition Factor, Zustandsfaktor der Gebirgswand)
+
+- Integrierte beschleunigte, vorkonditionierte und konjugierte Gradienten-Löser arbeiten zusammen für schnelle, zuverlässige und genaue Lösungen
+
+- Import- und Exportfunktion für Eingabedaten zu anderen CAD-Programmen
+
+- Import- und Exportfunktion für Analyseergebnisse zu anderen Programmen
+
+- Keine teuren Anschaffungsgebühren – Map3D wird jährlich lizenziert
+
+- Direkte Schnittstelle zu Deswik zur Erstellung von Map3D-Geometrien einschließlich Angabe von Map3D-Blocknamen, Farben und Abbaureihenfolge.
+
+- Direkter Export nach Excel, 3D-PDF, VRML und vieles mehr.
+
+**Einige Anwender**: Zu den aktuellen und früheren Anwendern von Map3D gehören: University of Toronto (Canada), Vale (formerly CRVD INCO Ontario) (Creighton Mine, Stobie Mine, Frood Mine, South Mine, Garson Mine, Levack Mine, Mines Research, Mines Technology - Methods & Design), INCO Manitoba (Canada), Noranda (Canada), CNG Softeck Co. (Korea), Anglo Gold (South Africa), Golder Associates (Canada and Australia), Placer Dome Western Area Joint Venture (South Africa), Mount Isa Mines (Australia), Brunswick Mining and Smelting (Canada), Goldcorp (Canada), Mincad Systems (Australia), Kanowna Belle Gold Mines (Australia), U. of British Columbia (Canada), U. of Western Australia, U. of New South Wales (Australia), Laval U. (Canada), McGill U. (Canada), Rock Mechanics Technology (England), Endeavor Mine (Australia), Australian Mining Consultants, Aur Resources (Canada), CSIR Division of Mining Technology (South Africa), Snowden Mining Industry Consultants (South Africa and Australia), Tara Mines (Ireland), Georock Inc. (Canada), Romec n.v. (Belgium), Agnico Eagle - Division Laronde (Canada), Queensland University (Australia), Geomechanics Research Centre Laurentian U. (Canada), Agnew Gold (Australia), Western Mining Corp. (Australia), Tao Lekoa Mine (South Africa), AngloGold Ashanti (South Africa and Australia), Kalgoorlie Consolidated Gold Mines (Australia), INWE Rock Engineering, Lourence Geotechnical (Australia), Western Deep Levels (South Mine, West Mine, Regional Office), Zinkgruvan Mining AB (Sweden), Elandsrand Gold Mine (South Africa), TWP Consulting (South Africa), Tshepong Mine (South Africa), CAMBIOR Inc. (Canada), Natural Resources Canada, Avmin Target Mine (South Africa), SRK Consulting (South Africa, Australia, Sweden), U. of Waterloo (Canada), St Ives Gold (Australia), Mine Geant Dormant (Canada), Normandy Jundee Operation (Australia), KULeuven - Unit Mining (Belgium), Leinster Nickel Operation (Australia), Doyon Mine (Canada), ISS International (South Africa), ISS Pacific (Australia), Musselwhite Mine (Canada), Finsch Diamond Mine (South Africa), Queen's University (Canada), Plutonic Gold Mine (Australia), Campbell Mine (Canada), JCI Travistock Colliery (South Africa), Strata Control Technology (Australia), Cayeli Bakir Isletmeleri A. S. (Turkey), Asker - Thabazimbi ISCOR (South Africa), Douglas Partners (Australia), U. of Queensland (Australia), Bambanani Mine (South Africa), Palabora Mining Company Ltd. (South Africa), Newcrest Mining Ltd. (Australia), Delft U. of Technology (The Netherlands), ANGLOVAAL (South Africa), Impala Platinum (South Africa), Battle Mountain Canada, Black Mountain (South Africa), Tsumeb - Otjihase Mine (Namibia), Kloof, Division of Kloof G.M. Co. Ltd. (South Africa), Rustenburg Platinum Mines Ltd. (South Africa), Savuka Mine (South Africa), BCL Botswana (Botswana), Terra Sancta (Australia), Mines Aurizon - Casa Berardi (Canada), Rockland Ltd. (Canada), Darlot Gold Mine (Australia), Forrestania Gold NL (Australia), WA Department of Minerals and Energy (Australia), Great Central Mines - Wiluna Gold (Australia), Central Mines Engineering Group - Inco Ltd (Canada), Kundana Gold (Australia), Henty Gold Mine - Goldfields Ltd. (Australia), Elura Mine (Australia), Western Australia School of Mines, Cannington - BHP World Minerals (Australia), WMC Olympic Dam Operations (Australia), BFP Consultants Pty Ltd (Australia), Julius Kruttschnitt Mineral Research Centre (Australia), Mountan U. of Leoben (Austria), CNR-C.S. Problemi Minerari (Italy), Japan Nuclear Development Institute (Japan), Lassonde Mineral Engineering (Canada), Coffey Geosciences Pty Ltd (Australia), Pajingo Joint Venture (Australia), TauTona Mine (South Africa), Bronzewing - McClure Gold Operations (Australia), Normandy Golden Grove Operation (Australia), McArther River Mining Pty Ltd (Australia), Boulby Mine - Cleveland Potash Limited (United Kingdom), AngloGold Ashanti Mineracao: Cuiaba (Brasil), Harmony Gold Mining Company Limited (Australia), Mirarco Mining Innovation (Canada), Northam Platinum Limited Zondereinde Division (South Africa), Open House Management Solutions (South Africa), Great Noligwa Mine (South Africa), Konkola Copper Mines (Zambia), Osborne Mines (Australia), Politecnico di Torino (Italy), Atomic Energy Canada, Ekati Diamond Mine (Canada), Musslewhite Mine (Canada), Cadia Holdings Ltd. (Australia), INGWE Rock Engineering (South Africa), Mountan University of Technology (Austria), Australian Centre for Geomechanics, Granites Gold Mine (Australia), Northparkes Mines (Australia), Basis Soft Inc. (Korea), Ritsumeikan University (Japan), Science & Technology Central South University (Changsha, Hunan China), Groundwork Consulting (Australia), LionOre Australia, MPI Mines (Australia), Lisheen Mine (Ireland), Northeastern University (Shengyang, Liaoning, P.R.China), Beck Arndt Engineering (Australia), La Mine Niobec (Canada), Second Avenue Subway (New York USA), Anglo Platinum (South Africa), Ressources MSV Inc. (Canada), Selwyn Operations (Australia), Newmont Australia Technical Services (Australia), Kigam - Geotechnical Engineering Division (Korea), Dempers and Seymour P/L (Australia), Cobar Management Pty Ltd (Australia), Big Bell Mining Operations (Australia), Auriongold Kalgoorlie Operations (Australia), Peak Gold Mines (Australia), Driefontein Consolidated (Pty) Ltd (South Africa), Newmont - Pajingo Joint Venture (Australia), AurionGold - Paddington Gold Pty Limited (Australia), Mincor Operations (Australia), Falconbridge Ltd. (Canada), Sons of Gwalia - Southern Cross Operations (Australia), E-Mining Technology S.A. (Chile), Beaconsfield Gold (Australia), MMG Rosebery Mine (Australia), Instituto Innovacion en Mineria y Metalurgia (Chile), IRSM of Chinese Academy of Sciences (China), Brently, Lucas & Associates (South Africa), Kirkland Lake Gold Inc.(Canada), Chelopech Mining AD (Bulgaria), Northwind Enterprises (Australia), Cameco Corporation (Canada), Barrick Goldstrike Mines (USA), Barrick Gold -Lawlers Gold Mine (Australia), RMIT - Faculty of Engineering (Australia), Perilya Broken Hill Ltd (Australia), Placer (PNG) - Porgera Joint Venture (Papua New Guinea), Codelco Chile - Division Andina (Chile), Codelco Chile - Division El Teniente (Chile), Codelco Chile - Division Norte (Chile), IM2 S.A. - Filial Codelco (Chile), Codelco Chile - Division Salvador, Geo-Engineering Technology Limitada (Chile), Xstrata Copper (Australia), Xstrata Nickel (Australia), Mining Geotechnical Solutions (Australia), Freeport McMoRan Copper & Gold (USA), Kopanang Gold Mine (South Africa), Seoul National University (Korea), Lawlers Gold Mine (Australia), Bendigo Mining Limited (Australia), Codelco, Gerencia Corporativa (Chile), Stawell Gold Mines (Australia), Samancor - Western Chrome Mines (South Africa), Mponeng Mine (South Africa), KMCL - Bulyanhulu Site (Tanzania), Ballarat Goldfields (Australia), Goldfields Mine Management (Australia), Dynatec Corporation (Canada), P.T. Freeport Indonesia, EKJV Management (Australia), BHPB Nickel West - Leinster Nickel Operation (Australia), Birla - Mt. Gordon (Australia), Ridgeway Project - Cadia Holdings (Australia), U. of South Australia, Sunrise Dam Gold Mine (Australia), Oxiana Golden Grove (Australia), Moab Khotsong Mine (South Africa), MIDD & MIDDindi Consulting (South Africa), Redco Ltda (Chile), Mining One Pty Ltd (Australia), Birla Nifty - Nifty Copper (Australia), Cracow Gold Mine (Australia), Beta-Hunt Mine (Australia), Universidad de Chile - Facultad de Ciencias Fisicas y Mathematicas, Geotechnical Consulting Pty Ltd (Australia), NVI Mining Ltd. Myra Falls (Australia), East Bolder Mine - Stillwater Mining (USA), Cambior - La Mine Geant-Dormant (Canada), University of Quebec Chicoutimia (Canada), New Gold Afton Project (Australia), A Karzulovic & Associates (Chile), Strata Engineering (Australia), Peter O'Bryan & Associates (Australia), Barrick Granny Smith (Australia), Xstrata Nickel - Raglan Mine (Canada), Genivar (Canada), President Steyn Gold Mine (South Africa), GFL Mining Services Limited (South Africa), Mopani Copper Mine (Zambia), Tau Lekoa Mine (South Africa), Stanford University Department of Geophysics (USA), Simon Fraser University - Department of Earth Sciences (Canada), Resolution Copper Company (Canada), North American Tungsten Corporation (Canada), Gold Fields Technical Services (South Africa), Maggie Hays - Lake Johnston Operations (Australia), Nickel West Cliffs Project - BHP Billiton (Australia), Ditton Geotechnical Services (Australia), GeoMech Services (Australia), Outokumpu Torino Works (Finland), Wardell Armstrong International Ltd (UK), Cosmos Nickel Project - Jubilee Mines NL (Australia), Long Nickel Project - Lighting Nickel Pty (Australia), RESPEC (USA), Xstrata Nickel - Craig Mine (Canada), Northern 3500 Orebody - Xstrata Copper (Australia), Xstrata Zinc - Mount Isa Mines (Australia), Goldfields - Beatrix 4 Shaft (South Africa), Omya Central Europe (Austria), Pyhasalmi Mine Oy (Finland), Outokumpu Torino Works (Finland), Mining One Pty Ltd (Australia), P.T. Newmont Tenggara (Indonesia), Peak Gold Mines (Australia), Argyle Diamond Mine (Australia), Bullant Gold Mine (Australia), Geosinergia Ingenieria y Medio Ambiente Ltd (Chile), Lonmin Platinum (South Africa), DERK Ingenieria y Geologia Ltda (Chile), Montana Exploradora de Guatemala S.A.(Guatemala), St. Barbara Limited (Australia), Boliden Mineral AB (Sweden), Vattenfall Power Consultant (Sweden), Lulea University of Technology (Sweden), LKAB Mining Technology (Sweden), Associacao Instituto Technologio Vale - ITV (Brasil), Mina San Rafael, S.A. - Mina El Escobal (Guatemala), Hecla - Lucky Friday Mine (USA), Kittila Mine - Agnico-Eagle Finland Oy (Finland), Central Institute of Mining and Fuel Research (India), Sibanye Gold (South Africa), Global Mine Design (UK), Eagle Mine LLC (USA), Newmont USA Limited - Leeville Operation (USA), Agnico Eagle Mines Limited (Mexico), NIOSH OMSHR Pittsburg Mining Research Division (USA), ARANZ Geo Limited (New Zealand), Thiess Pty Ltd (Australia), Glencore - Ernest Henry - Copper (Australia), Syama Mine, Society des Mines de Syama (Mali), Glencore Mount Isa Mines Ltd (Australia), La Mancha Resources - Frogs Leg Mine (Australia), Northern Star Resources Limited (Australia), Dundee Precious Metals - Kapan (Armenia), Minera Cuzcatlan (Mexico), Minera Candelaria (Chile), SVS Ingenieros (Chile), ENAMI CHILE (Chile), Kibali Gold Mine - Randgold Resources Ltd. (Democratic Republic of Congo), Unki Mines (Pvt) Ltd (Zimbabwe), Lady Loretta - Zinc Assets Australia (Australia), Salt Lake Mining Pty Ltd (Australia), Mt Carlton and Pajingo - Evolution Mining (Australia), NIOSH OMSHR Spokane Research Lab (USA), Rubicon Minerals Corporation (Canada), Les Mines Opinaca Ltee, Projet Eleonore (Canada), Lac des Iles Mine - North American Palladium (Canada), Pakalnis and Associates (Canada), Nyrstar - Langlois Mine (Canada), Mufulira Mine - Mopani Copper Mines Plc (Zambia), Black Mountain (South Africa), Bindura Nickel Corporation, Trojan Nickel Mine (Zimbabwe), Fosterville Gold Mine Pty Ltd (Australia), Ranger 3 Deeps - E.R.A. (Australia), Kazzinc Ltd (Kazakhstan), Independence Group - Jabiru - Jaguar Limited (Australia), MMG - Dugald River Mine (Australia), AuRico Gold Inc (Canada), Nyrstar Myra Falls Ltd (Canada), Universidad de Chile (Chile), GMT Ltda (Chile), MINSUR S.A. (Peru), AMEC Chile (Chile), Compania Minera El Toqui (Chile), Devourge Industries Ltd (Zambia), Assmang Manganese - Black Rock Mine Operation (South Africa), School of Engineering and ICT, U. of Tasmania (Australia), Primero Gold Canada Inc (Canada), AMEC Earth and Environmental (Canada), Mine Westwood - IAMGOLD (Canada), Stantec Inc (Canada), Knight Piesold Ltd (Canada), Osisko Mining Corporation (Canada), Kinross Gold Corporation - Technical Services (Canada), Silver Lake Resources, Daisy Milano Mine Site (Australia), Minerals and Metals Group, Golden Grove (Australia), South32 Cannington Pty Ltd (Australia), Morobe Mining, Nine Mile, Awilunga Estate (Papua New Guinea), Copper Mines of Tasmania (Australia), AngloGold Ashanti Mineracao: Cuiaba (Brasil), Mineracao Serra Grande (Brasil), Xstrata Zinc, Mine Matagami (Canada), St. Andrew Goldfields Ltd., Holt-Holloway Mine (Canada), Hecla Quebec - Casa Berardi (Canada), Barrick Cortez (USA), Barrick Gold Corp. - Hemlo Operations (Canada), ASDR Industries (Canada), Centre for Excellence in Mining Innovation (Canada), Two Rivers Platinum (Pty) Ltd (South Africa), Chibuluma Copper South Mine PLC (Zambia), Loulo Mine, Randgold Resources Limited (Zambia), Santiago University (Chile), Tomas Fernando Villegas Barba (Mexico), ACE [Arab Consulting Engineers] (Egypt), Growth & Intl Projects, GoldFields Australasia (Australia), Tritton Resources Pty Limited (Australia), Compania Minera San Geronimo (Chile), Jacobina Mineracao - Yamana Gold Inc (Brasil), FF GeoMechanics (Chile), Minera Florida Ltda (Chile), Minera Triton S.A. (Nicaragua), Minera Sierra Gorda SCM (Chile), Sociedad Minera El Brocal S.A.A. (Peru), GFI Mining SA (Pty) Ltd, Kloof Division (South Africa), Anglogold Ashanti - Obuasi Mine (Ghana), ARMgold/Harmony Freegold JV (South Africa), BCG Engineering Inc (Canada), University of New South Wales (Australia), Agnico-Eagle - Division Goldex (Canada), McArthur River Mine - Cameco Corporation (Canada), Thinkrox Inc (Canada), New Gold Inc., New Afton (Canada), Snap Lake Mine, De Beers Canada Inc (Canada), Mine Design Engineering (Canada), DB Operating Corporation (Canada), BCD Resources (Operations) NL - Tasmania Mine (Australia), Minera El Toqui (Chile), Capstone Gold S.A. (Mexico), Universidad De La Serena (Chile), Segala Mining Co SA (SEMICO SA) (Mali), Bariq Mining Limited (Saudi Arabia), TREM Rock Engineering (South Africa), U. of Saskatchewan, Civil & Geological Eng. (Canada), Call & Nicholas Inc (USA), LVI Geotechnical (Australia), Camborne School of Mines, U. of Exeter (UK), PUCOBRE (Chile), Compania Minera Dona Ines de Collahuasi (Chile), Compania Minera Nevada SpA (Chile), Mining Plus Pty Ltd (Australia), Flying Fox Mine - Forrestania Nickel Project (Australia), Oceana Gold Didipio Operations (Philippines), Sandfire Resources NL (Australia), MineGeoTech Pty Ltd (Australia), 2M Engineering (Indonesia), MINERA MILPO S.A.A  (Peru), Siga Ingenieria Y Consultores S.A. (Chile), Bluestone Mines Tasmania Joint Venture (Australia), Barrick (Australia Pacific) Yilgarn (Australia), Apex Gold Pty Ltd (Australia), Jennmar Australia Pty Ltd (Australia), Tecnologia Y Geociencias Limitada (Chile), Kazakhmys Services Limited (Kazakhstan), Cairo University - Faculty of Engineering (Egypt), Isa Ashari Qudraturrahman (CV PRJ) (Australia), Ezulwini Mine - First Uranium Corporation (South Africa), University of Pretoria (South Africa), Eldorado Gold Corporation (China), Carpentaria Gold - Ravenswood Operations (Australia), Anglo Coal Australia Pty Ltd (Australia), Eastplats Ltd - Crocodile River Mine (South Africa), Great Noligwa Mine (South Africa), Randfontein Estates - Harmony Gold Mining Co (South Africa), PipeFlo (South Africa), Haldeman Mining Company S.A. (Chile), ARCADIS CHILE S.A (Chile), Geomechanicos Consultores Ltda (Chile), Otter Juan Mine - Goldfields Mine Management (Australia), Straits Resources Limited (Australia), Halcrow Group Limited (Australia), Mine-concept Engineering Services (Canada), Diavik Diamond Mines Inc (Canada), Green Geotechnical Pty Ltd (Australia), Custom GeoEng Solutions Inc (Canada), Ingenieria de Rocas Limitada (Chile), BHP Billiton Energy Coal South Africa Ltd (South Africa), Luanshya Copper Mines Plc (Zambia), Brentley, Lucas & Associates Pty Ltd (South Africa), Oz Minerals (Australia), Rio Tinto - Technology and Innovation (USA), InnovExplo Inc (Canada), AMEC Foster Wheeler Americas (Canada), Geohart Consultants Pty Ltd (Australia), ROCKLAND LTD (Canada), Sudbury Integrated Nickel Operations, Glencore (Canada), East Boulder Mine - Stillwater Mining (USA), Breakwater Resources Ltd (Canada), School of Resources & Safety Eng - Central SU (China), Manxmin Pty. Ltd (Australia).
+
+Map3D wird entwickelt und betreut von:
+
+![Abbildung von Seite 25](/images/page-25-img-3.png)
+
+Dr. Terry D. Wiles Map3D International Ltd. E-Mail: support@map3d.com Website: [www.map3d.com](https://www.map3d.com)
+
+Map3D wird lizenziert, nicht verkauft. Die Nutzung von Map3D erfolgt über eine Lizenzvereinbarung, die durch einen zeitbasierten Schutzschlüssel gesteuert wird. Das Programm wird normalerweise jährlich lizenziert, mehrjährige Lizenzen können jedoch im Voraus vereinbart werden.
+
+Vertrieb und Support erfolgen durch Map3D International Ltd und über ein weltweites Netz von Vertretern in Australien, Brasilien, Kanada, Chile, China, Indien, Indonesien, Kasachstan und Südafrika (www.map3d.com/how_to_buy).

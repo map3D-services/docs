@@ -1,0 +1,51 @@
+---
+title: "Ejemplo de caserón con FFLoop"
+---
+
+#### Paso 1: Importar los planos de mina digitalizados.
+
+- Los planos de este ejemplo están en un archivo llamado "bulk.dxf".
+
+- Se importan con el comando File > Open Construction Lines.
+
+![Figura de la página 168](/images/page-168-img-2.png)
+
+**Paso 2: A continuación, inicie la rutina FFLoop y configure el modo de ajuste CLoop.**
+
+- FFLoop se inicia seleccionando (CAD > Build > FFLoop).
+
+- El modo de ajuste CLoop se configura seleccionando (CAD > Snap > Trace CLoop).
+
+![Figura de la página 169](/images/page-169-img-1.png)
+
+#### Paso 3: Construir el FFLoop.
+
+- El FFLoop se construye seleccionando un punto en cada línea de construcción.
+
+- Observe que se generan puntos automáticamente a intervalos de 10 m a lo largo de los lados largos
+
+- Es mejor seleccionar puntos situados en esquinas o quiebres pronunciados, ya que la línea entre los lazos guiará el proceso de construcción.
+
+![Figura de la página 170](/images/page-170-img-1.png)
+
+#### Paso 4: Indicar el fin de la construcción.
+
+- Una vez definidos todos los lazos, seleccione de nuevo (CAD > Build > FFLoop) para indicar el fin de la construcción.
+
+- También puede indicarse seleccionando el último punto (es decir, el punto 3) por segunda vez.
+
+![Figura de la página 171](/images/page-171-img-1.png)
+
+**Paso 5: Construir el caserón.**
+
+- Ahora el FFLoop puede construirse con la función.
+
+- Especifique 10 como espaciado de malla (Mesh Spacing) y seleccione OK.
+
+![Figura de la página 172](/images/page-172-img-1.png)
+
+**Paso 6: Construcción completada.**
+
+- Con esto se completa la construcción del caserón.
+
+![Figura de la página 173](/images/page-173-img-2.png)

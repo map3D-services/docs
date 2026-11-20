@@ -16,375 +16,2256 @@
     }
   },
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Map3D User's Manual - Version 72",
-        "pages": [
-          "index"
-        ]
-      },
-      {
-        "group": "Map3D Overview",
-        "pages": [
-          "map3d-overview/introduction",
-          "map3d-overview/about-map3d",
-          "map3d-overview/map3d-overview",
-          "map3d-overview/applications",
-          "map3d-overview/model-building-overview",
-          "map3d-overview/boundary-element-formulation",
-          "map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
-          "map3d-overview/implementation-of-modelling-into-the-mine-design-process"
-        ]
-      },
-      {
-        "group": "Model Building and Editing",
-        "pages": [
-          "model-building-and-editing/model-building-and-editing",
-          "model-building-and-editing/building-surface-models",
-          "model-building-and-editing/building-models-out-of-blocks",
-          "model-building-and-editing/constructing-alternate-material-zones",
-          "model-building-and-editing/material-codes-mining-step-sequence",
-          "model-building-and-editing/defining-ground-surface",
-          "model-building-and-editing/defining-open-pits",
-          "model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
-          "model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
-          "model-building-and-editing/common-problems-when-model-building",
-          "model-building-and-editing/discretizaiton-and-lumping"
-        ]
-      },
-      {
-        "group": "Model Building Tutorials",
-        "pages": [
-          "model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
-          "model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
-          "model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
-          "model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
-          "model-building-tutorials/freehand-sketching-room-and-pillar-mining",
-          "model-building-tutorials/bulk-mining-example",
-          "model-building-tutorials/tabular-mining-example",
-          "model-building-tutorials/ddloop-pillar-example",
-          "model-building-tutorials/ffloop-drift-example",
-          "model-building-tutorials/ffloop-stope-example"
-        ]
-      },
-      {
-        "group": "Model Calibration Tutorials",
-        "pages": [
-          "model-calibration-tutorials/rock-mass-overbreak-failure",
-          "model-calibration-tutorials/rock-mass-pillar-failure",
-          "model-calibration-tutorials/structurally-controlled-overbreak-failure",
-          "model-calibration-tutorials/fault-slip-failure"
-        ]
-      },
-      {
-        "group": "Menu Commands",
-        "pages": [
+        "language": "en",
+        "default": true,
+        "groups": [
           {
-            "group": "File Menu",
-            "root": "menu-commands/file-menu",
+            "group": "Map3D User's Manual - Version 72",
             "pages": [
-              "menu-commands/file-menu/model-view-quick-open-model",
-              "menu-commands/file-menu/results-view-open-analysis-results",
-              "menu-commands/file-menu/new-model-cad",
-              "menu-commands/file-menu/quick-open-view-only",
-              "menu-commands/file-menu/open-model-cad",
-              "menu-commands/file-menu/save-model-cad",
-              "menu-commands/file-menu/save-model-as-cad",
-              "menu-commands/file-menu/import-model-from-dxf-or-pnt",
-              "menu-commands/file-menu/export-model-as-dxf-or-pnt",
-              "menu-commands/file-menu/restore-auto-save-cad-state",
-              "menu-commands/file-menu/save-named-cad-state",
-              "menu-commands/file-menu/restore-named-cad-state",
-              "menu-commands/file-menu/new-construction-lines",
-              "menu-commands/file-menu/quick-open-construciton-lines-view-only",
-              "menu-commands/file-menu/open-construction-lines",
-              "menu-commands/file-menu/save-construction-lines",
-              "menu-commands/file-menu/save-construction-lines-as",
-              "menu-commands/file-menu/open-analysis-results",
-              "menu-commands/file-menu/subtract-restart-files",
-              "menu-commands/file-menu/restart-an-analysis",
-              "menu-commands/file-menu/update-restart-files",
-              "menu-commands/file-menu/mining-step",
-              "menu-commands/file-menu/output",
-              "menu-commands/file-menu/image-viewer",
-              "menu-commands/file-menu/save-view",
-              "menu-commands/file-menu/restore-view",
-              "menu-commands/file-menu/recent-files",
-              "menu-commands/file-menu/exit"
-            ],
-            "directory": "accordion"
+              "index"
+            ]
           },
           {
-            "group": "View Menu",
-            "root": "menu-commands/view-menu",
+            "group": "Map3D Overview",
             "pages": [
-              "menu-commands/view-menu/hide",
-              "menu-commands/view-menu/hide-block-colours",
-              "menu-commands/view-menu/hide-excavation-steps",
-              "menu-commands/view-menu/hide-cline-colours",
-              "menu-commands/view-menu/hide-grid-colours",
-              "menu-commands/view-menu/render",
-              "menu-commands/view-menu/find-coordinate",
-              "menu-commands/view-menu/initialize",
-              "menu-commands/view-menu/zoom-extents",
-              "menu-commands/view-menu/zoom",
-              "menu-commands/view-menu/pan",
-              "menu-commands/view-menu/length",
-              "menu-commands/view-menu/centre-of-rotation",
-              "menu-commands/view-menu/translation-increment",
-              "menu-commands/view-menu/rotation-increment",
-              "menu-commands/view-menu/zoom-factor",
-              "menu-commands/view-menu/view-xy-plane",
-              "menu-commands/view-menu/view-yz-plane",
-              "menu-commands/view-menu/view-zx-plane",
-              "menu-commands/view-menu/view-grid-plane",
-              "menu-commands/view-menu/view-digitizer-plane",
-              "menu-commands/view-menu/view-640x480",
-              "menu-commands/view-menu/continuous-rotation"
-            ],
-            "directory": "accordion"
+              "map3d-overview/introduction",
+              "map3d-overview/about-map3d",
+              "map3d-overview/map3d-overview",
+              "map3d-overview/applications",
+              "map3d-overview/model-building-overview",
+              "map3d-overview/boundary-element-formulation",
+              "map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
           },
           {
-            "group": "Plot Menu",
-            "root": "menu-commands/plot-menu",
+            "group": "Model Building and Editing",
             "pages": [
-              "menu-commands/plot-menu/stress",
-              "menu-commands/plot-menu/strain",
-              "menu-commands/plot-menu/displacement",
-              "menu-commands/plot-menu/user-defined-plot",
-              "menu-commands/plot-menu/thermalflux",
-              "menu-commands/plot-menu/strength-factors",
-              "menu-commands/plot-menu/surface-components",
-              "menu-commands/plot-menu/miscellaneous",
-              "menu-commands/plot-menu/contour-range",
-              "menu-commands/plot-menu/grid-selection",
-              "menu-commands/plot-menu/plot-options",
-              "menu-commands/plot-menu/properties",
-              "menu-commands/plot-menu/average-box",
-              "menu-commands/plot-menu/polygon-box",
-              "menu-commands/plot-menu/excel-plot-grids",
-              "menu-commands/plot-menu/excel-plot-surfaces"
-            ],
-            "directory": "accordion"
+              "model-building-and-editing/model-building-and-editing",
+              "model-building-and-editing/building-surface-models",
+              "model-building-and-editing/building-models-out-of-blocks",
+              "model-building-and-editing/constructing-alternate-material-zones",
+              "model-building-and-editing/material-codes-mining-step-sequence",
+              "model-building-and-editing/defining-ground-surface",
+              "model-building-and-editing/defining-open-pits",
+              "model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "model-building-and-editing/common-problems-when-model-building",
+              "model-building-and-editing/discretizaiton-and-lumping"
+            ]
           },
           {
-            "group": "Analysis",
-            "root": "menu-commands/analysis",
+            "group": "Model Building Tutorials",
             "pages": [
-              "menu-commands/analysis/analysis",
-              "menu-commands/analysis/analysis-options"
-            ],
-            "directory": "accordion"
+              "model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "model-building-tutorials/bulk-mining-example",
+              "model-building-tutorials/tabular-mining-example",
+              "model-building-tutorials/ddloop-pillar-example",
+              "model-building-tutorials/ffloop-drift-example",
+              "model-building-tutorials/ffloop-stope-example"
+            ]
           },
           {
-            "group": "CAD",
-            "root": "menu-commands/cad",
+            "group": "Model Calibration Tutorials",
             "pages": [
-              "menu-commands/cad/build",
-              "menu-commands/cad/snap",
-              "menu-commands/cad/properties",
-              "menu-commands/cad/edit",
-              "menu-commands/cad/grid-selection",
-              "menu-commands/cad/digitizer-setup",
-              "menu-commands/cad/resequence-block-links",
-              "menu-commands/cad/recheck-blocks-for-errors",
-              "menu-commands/cad/pack-and-renumber-blocks",
-              "menu-commands/cad/unpack-blocks",
-              "menu-commands/cad/unpack-surfaces",
-              "menu-commands/cad/ungroup-dds",
-              "menu-commands/cad/pack-and-renumber-clines",
-              "menu-commands/cad/unpack-clines"
-            ],
-            "directory": "accordion"
+              "model-calibration-tutorials/rock-mass-overbreak-failure",
+              "model-calibration-tutorials/rock-mass-pillar-failure",
+              "model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "model-calibration-tutorials/fault-slip-failure"
+            ]
           },
           {
-            "group": "Tools",
-            "root": "menu-commands/tools",
+            "group": "Menu Commands",
             "pages": [
-              "menu-commands/tools/mouse-options",
-              "menu-commands/tools/toolbars",
-              "menu-commands/tools/assign-hotkeys",
-              "menu-commands/tools/opengl",
-              "menu-commands/tools/disk-performance-test",
-              "menu-commands/tools/smooth-scroll",
-              "menu-commands/tools/cursor-pick-box-size"
-            ],
-            "directory": "accordion"
+              {
+                "group": "File Menu",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "menu-commands/file-menu/model-view-quick-open-model",
+                  "menu-commands/file-menu/results-view-open-analysis-results",
+                  "menu-commands/file-menu/new-model-cad",
+                  "menu-commands/file-menu/quick-open-view-only",
+                  "menu-commands/file-menu/open-model-cad",
+                  "menu-commands/file-menu/save-model-cad",
+                  "menu-commands/file-menu/save-model-as-cad",
+                  "menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "menu-commands/file-menu/restore-auto-save-cad-state",
+                  "menu-commands/file-menu/save-named-cad-state",
+                  "menu-commands/file-menu/restore-named-cad-state",
+                  "menu-commands/file-menu/new-construction-lines",
+                  "menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "menu-commands/file-menu/open-construction-lines",
+                  "menu-commands/file-menu/save-construction-lines",
+                  "menu-commands/file-menu/save-construction-lines-as",
+                  "menu-commands/file-menu/open-analysis-results",
+                  "menu-commands/file-menu/subtract-restart-files",
+                  "menu-commands/file-menu/restart-an-analysis",
+                  "menu-commands/file-menu/update-restart-files",
+                  "menu-commands/file-menu/mining-step",
+                  "menu-commands/file-menu/output",
+                  "menu-commands/file-menu/image-viewer",
+                  "menu-commands/file-menu/save-view",
+                  "menu-commands/file-menu/restore-view",
+                  "menu-commands/file-menu/recent-files",
+                  "menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "View Menu",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "menu-commands/view-menu/hide",
+                  "menu-commands/view-menu/hide-block-colours",
+                  "menu-commands/view-menu/hide-excavation-steps",
+                  "menu-commands/view-menu/hide-cline-colours",
+                  "menu-commands/view-menu/hide-grid-colours",
+                  "menu-commands/view-menu/render",
+                  "menu-commands/view-menu/find-coordinate",
+                  "menu-commands/view-menu/initialize",
+                  "menu-commands/view-menu/zoom-extents",
+                  "menu-commands/view-menu/zoom",
+                  "menu-commands/view-menu/pan",
+                  "menu-commands/view-menu/length",
+                  "menu-commands/view-menu/centre-of-rotation",
+                  "menu-commands/view-menu/translation-increment",
+                  "menu-commands/view-menu/rotation-increment",
+                  "menu-commands/view-menu/zoom-factor",
+                  "menu-commands/view-menu/view-xy-plane",
+                  "menu-commands/view-menu/view-yz-plane",
+                  "menu-commands/view-menu/view-zx-plane",
+                  "menu-commands/view-menu/view-grid-plane",
+                  "menu-commands/view-menu/view-digitizer-plane",
+                  "menu-commands/view-menu/view-640x480",
+                  "menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Plot Menu",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "menu-commands/plot-menu/stress",
+                  "menu-commands/plot-menu/strain",
+                  "menu-commands/plot-menu/displacement",
+                  "menu-commands/plot-menu/user-defined-plot",
+                  "menu-commands/plot-menu/thermalflux",
+                  "menu-commands/plot-menu/strength-factors",
+                  "menu-commands/plot-menu/surface-components",
+                  "menu-commands/plot-menu/miscellaneous",
+                  "menu-commands/plot-menu/contour-range",
+                  "menu-commands/plot-menu/grid-selection",
+                  "menu-commands/plot-menu/plot-options",
+                  "menu-commands/plot-menu/properties",
+                  "menu-commands/plot-menu/average-box",
+                  "menu-commands/plot-menu/polygon-box",
+                  "menu-commands/plot-menu/excel-plot-grids",
+                  "menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Analysis",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "menu-commands/analysis/analysis",
+                  "menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "menu-commands/cad/build",
+                  "menu-commands/cad/snap",
+                  "menu-commands/cad/properties",
+                  "menu-commands/cad/edit",
+                  "menu-commands/cad/grid-selection",
+                  "menu-commands/cad/digitizer-setup",
+                  "menu-commands/cad/resequence-block-links",
+                  "menu-commands/cad/recheck-blocks-for-errors",
+                  "menu-commands/cad/pack-and-renumber-blocks",
+                  "menu-commands/cad/unpack-blocks",
+                  "menu-commands/cad/unpack-surfaces",
+                  "menu-commands/cad/ungroup-dds",
+                  "menu-commands/cad/pack-and-renumber-clines",
+                  "menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Tools",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "menu-commands/tools/mouse-options",
+                  "menu-commands/tools/toolbars",
+                  "menu-commands/tools/assign-hotkeys",
+                  "menu-commands/tools/opengl",
+                  "menu-commands/tools/disk-performance-test",
+                  "menu-commands/tools/smooth-scroll",
+                  "menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "menu-commands/shift-key-selection",
+              "menu-commands/crosshairs",
+              {
+                "group": "Visualization",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "menu-commands/visualization/visualization-of-text-files",
+                  "menu-commands/visualization/visualization-of-evp-files",
+                  "menu-commands/visualization/visualization-database",
+                  "menu-commands/visualization/contour-plane-options",
+                  "menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Help",
+                "root": "menu-commands/help",
+                "pages": [
+                  "menu-commands/help/contents-and-index",
+                  "menu-commands/help/whats-this",
+                  "menu-commands/help/web-wwwmap3dcom",
+                  "menu-commands/help/email-supportmap3dcom",
+                  "menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "menu-commands/help/download-map3d-update-setupexe",
+                  "menu-commands/help/download-map3d-update-map3dzip",
+                  "menu-commands/help/download-html-users-manual",
+                  "menu-commands/help/download-pdf-users-manual",
+                  "menu-commands/help/download-ebook-users-manual",
+                  "menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
           },
-          "menu-commands/shift-key-selection",
-          "menu-commands/crosshairs",
           {
-            "group": "Visualization",
-            "root": "menu-commands/visualization",
+            "group": "Appendix",
             "pages": [
-              "menu-commands/visualization/visualization-of-text-files",
-              "menu-commands/visualization/visualization-of-evp-files",
-              "menu-commands/visualization/visualization-database",
-              "menu-commands/visualization/contour-plane-options",
-              "menu-commands/visualization/plot"
-            ],
-            "directory": "accordion"
-          },
-          {
-            "group": "Help",
-            "root": "menu-commands/help",
-            "pages": [
-              "menu-commands/help/contents-and-index",
-              "menu-commands/help/whats-this",
-              "menu-commands/help/web-wwwmap3dcom",
-              "menu-commands/help/email-supportmap3dcom",
-              "menu-commands/help/email-key-check-to-supportmap3dcom",
-              "menu-commands/help/download-map3d-update-setupexe",
-              "menu-commands/help/download-map3d-update-map3dzip",
-              "menu-commands/help/download-html-users-manual",
-              "menu-commands/help/download-pdf-users-manual",
-              "menu-commands/help/download-ebook-users-manual",
-              "menu-commands/help/about-map3d"
-            ],
-            "directory": "accordion"
+              {
+                "group": "Analysis",
+                "root": "appendix/analysis",
+                "pages": [
+                  "appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "appendix/analysis/analysis-abort",
+                  "appendix/analysis/analysis-auto-plot",
+                  "appendix/analysis/analysis-auto-range",
+                  "appendix/analysis/analysis-bem-analysis",
+                  "appendix/analysis/analysis-discretization",
+                  "appendix/analysis/analysis-go-to-cad",
+                  "appendix/analysis/analysis-go-to-results",
+                  "appendix/analysis/analysis-view-results",
+                  "appendix/analysis/analysis-intersections",
+                  "appendix/analysis/analysis-load-model",
+                  "appendix/analysis/analysis-minimize",
+                  "appendix/analysis/analysis-options-accelerator",
+                  "appendix/analysis/analysis-options-async-io",
+                  "appendix/analysis/analysis-options-auto-repair",
+                  "appendix/analysis/analysis-options-batch",
+                  "appendix/analysis/analysis-options-cgm",
+                  "appendix/analysis/analysis-options-closure",
+                  "appendix/analysis/analysis-options-collinearity",
+                  "appendix/analysis/analysis-options-collinearity-search-radius",
+                  "appendix/analysis/analysis-options-collapse",
+                  "appendix/analysis/analysis-options-creep",
+                  "appendix/analysis/analysis-options-threads",
+                  "appendix/analysis/analysis-options-drive",
+                  "appendix/analysis/analysis-options-move-points",
+                  "appendix/analysis/analysis-options-mscalc",
+                  "appendix/analysis/analysis-options-initialization",
+                  "appendix/analysis/analysis-options-halt-on-errors",
+                  "appendix/analysis/analysis-options-initialization-file-name",
+                  "appendix/analysis/analysis-options-lerdlss",
+                  "appendix/analysis/analysis-options-lerdlss-file-name",
+                  "appendix/analysis/analysis-options-linear-quad",
+                  "appendix/analysis/analysis-options-lumping",
+                  "appendix/analysis/analysis-options-lumping-accuracy",
+                  "appendix/analysis/analysis-options-planar",
+                  "appendix/analysis/analysis-options-p-ram",
+                  "appendix/analysis/analysis-options-precondition",
+                  "appendix/analysis/analysis-options-renumber",
+                  "appendix/analysis/analysis-options-reset",
+                  "appendix/analysis/analysis-options-v-ram",
+                  "appendix/analysis/analysis-options-verbose",
+                  "appendix/analysis/analysis-options-zero-strain-placement",
+                  "appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "appendix/analysis/analysis-suspend",
+                  "appendix/analysis/analysis-conclude",
+                  "appendix/analysis/analysis-disable",
+                  "appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "appendix/cad",
+                "pages": [
+                  "appendix/cad/cad-properties-map3di-setup-view",
+                  "appendix/cad/cad-build-block-mesh-spacing",
+                  "appendix/cad/cad-snap",
+                  "appendix/cad/cad-edit",
+                  "appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "appendix/cad/cad-edit-entities",
+                  "appendix/cad/cad-edit-entities-2",
+                  "appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "appendix/cad/cad-digitizer-activate",
+                  "appendix/cad/cad-properties-material-properties-stress-state",
+                  "appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "File",
+                "root": "appendix/file",
+                "pages": [
+                  "appendix/file/file-open-merge-materials",
+                  "appendix/file/file-output-animated-gif-recorder-append-images",
+                  "appendix/file/file-pnt-output-file-format",
+                  "appendix/file/file-pnt-construction-line-file-format",
+                  "appendix/file/file-pnt-model-file-format",
+                  "appendix/file/file-restart-file-formats",
+                  "appendix/file/file-construction-line-file-formats",
+                  "appendix/file/file-dxf-construction-line-file-format",
+                  "appendix/file/file-dxf-model-file-format",
+                  "appendix/file/file-inp-model-file-format",
+                  "appendix/file/file-open-recent-directories",
+                  "appendix/file/file-open-merge-geometries",
+                  "appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Materials",
+                "root": "appendix/materials",
+                "pages": [
+                  "appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "appendix/materials/materials-softened-material",
+                  "appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "appendix/materials/materials-user-defined-parameters",
+                  "appendix/materials/materials-dump-to-file",
+                  "appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "appendix/dock-the-view-toolbar",
+              "appendix/dock-the-contour-toolbar",
+              "appendix/map3d-analysis-stages",
+              "appendix/map3d-versions",
+              "appendix/map3d-fault-slip",
+              "appendix/map3d-modeller",
+              "appendix/map3d-results-viewer",
+              "appendix/map3di-integrated-seismicity",
+              "appendix/map3d-thermal-fluid-flow",
+              "appendix/map3d-non-linear",
+              "appendix/map3d-visco-plastic",
+              "appendix/model-building-tutorials",
+              "appendix/plot-stress",
+              "appendix/plot-failure-modes",
+              "appendix/plot-strain",
+              "appendix/plot-surface-components",
+              "appendix/stress-orientation-icon",
+              "appendix/translating-the-model",
+              "appendix/view-render-discretize",
+              "appendix/visualization-make-point",
+              "appendix/global-transform-z-up"
+            ]
           }
         ]
       },
       {
-        "group": "Appendix",
-        "pages": [
+        "language": "es",
+        "groups": [
           {
-            "group": "Analysis",
-            "root": "appendix/analysis",
+            "group": "Manual del usuario de Map3D - versión 72",
             "pages": [
-              "appendix/analysis/analysis-options-mscalc-output-file-name",
-              "appendix/analysis/analysis-abort",
-              "appendix/analysis/analysis-auto-plot",
-              "appendix/analysis/analysis-auto-range",
-              "appendix/analysis/analysis-bem-analysis",
-              "appendix/analysis/analysis-discretization",
-              "appendix/analysis/analysis-go-to-cad",
-              "appendix/analysis/analysis-go-to-results",
-              "appendix/analysis/analysis-view-results",
-              "appendix/analysis/analysis-intersections",
-              "appendix/analysis/analysis-load-model",
-              "appendix/analysis/analysis-minimize",
-              "appendix/analysis/analysis-options-accelerator",
-              "appendix/analysis/analysis-options-async-io",
-              "appendix/analysis/analysis-options-auto-repair",
-              "appendix/analysis/analysis-options-batch",
-              "appendix/analysis/analysis-options-cgm",
-              "appendix/analysis/analysis-options-closure",
-              "appendix/analysis/analysis-options-collinearity",
-              "appendix/analysis/analysis-options-collinearity-search-radius",
-              "appendix/analysis/analysis-options-collapse",
-              "appendix/analysis/analysis-options-creep",
-              "appendix/analysis/analysis-options-threads",
-              "appendix/analysis/analysis-options-drive",
-              "appendix/analysis/analysis-options-move-points",
-              "appendix/analysis/analysis-options-mscalc",
-              "appendix/analysis/analysis-options-initialization",
-              "appendix/analysis/analysis-options-halt-on-errors",
-              "appendix/analysis/analysis-options-initialization-file-name",
-              "appendix/analysis/analysis-options-lerdlss",
-              "appendix/analysis/analysis-options-lerdlss-file-name",
-              "appendix/analysis/analysis-options-linear-quad",
-              "appendix/analysis/analysis-options-lumping",
-              "appendix/analysis/analysis-options-lumping-accuracy",
-              "appendix/analysis/analysis-options-planar",
-              "appendix/analysis/analysis-options-p-ram",
-              "appendix/analysis/analysis-options-precondition",
-              "appendix/analysis/analysis-options-renumber",
-              "appendix/analysis/analysis-options-reset",
-              "appendix/analysis/analysis-options-v-ram",
-              "appendix/analysis/analysis-options-verbose",
-              "appendix/analysis/analysis-options-zero-strain-placement",
-              "appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
-              "appendix/analysis/analysis-options-calculate-tangential-stress-components",
-              "appendix/analysis/analysis-options-nosleep-for-analysis",
-              "appendix/analysis/analysis-suspend",
-              "appendix/analysis/analysis-conclude",
-              "appendix/analysis/analysis-disable",
-              "appendix/analysis/analysis-dialog"
-            ],
-            "directory": "accordion"
+              "es/index"
+            ]
           },
           {
-            "group": "CAD",
-            "root": "appendix/cad",
+            "group": "Descripción general de Map3D",
             "pages": [
-              "appendix/cad/cad-properties-map3di-setup-view",
-              "appendix/cad/cad-build-block-mesh-spacing",
-              "appendix/cad/cad-snap",
-              "appendix/cad/cad-edit",
-              "appendix/cad/cad-edit-entity-properties-ddplane-thickness",
-              "appendix/cad/cad-edit-entities",
-              "appendix/cad/cad-edit-entities-2",
-              "appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
-              "appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
-              "appendix/cad/cad-digitizer-activate",
-              "appendix/cad/cad-properties-material-properties-stress-state",
-              "appendix/cad/cad-properties-material-properties-stress-state-cartesian",
-              "appendix/cad/cad-properties-material-properties-stress-state-datum",
-              "appendix/cad/cad-build"
-            ],
-            "directory": "accordion"
+              "es/map3d-overview/introduction",
+              "es/map3d-overview/about-map3d",
+              "es/map3d-overview/map3d-overview",
+              "es/map3d-overview/applications",
+              "es/map3d-overview/model-building-overview",
+              "es/map3d-overview/boundary-element-formulation",
+              "es/map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "es/map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
           },
           {
-            "group": "File",
-            "root": "appendix/file",
+            "group": "Construcción y edición de modelos",
             "pages": [
-              "appendix/file/file-open-merge-materials",
-              "appendix/file/file-output-animated-gif-recorder-append-images",
-              "appendix/file/file-pnt-output-file-format",
-              "appendix/file/file-pnt-construction-line-file-format",
-              "appendix/file/file-pnt-model-file-format",
-              "appendix/file/file-restart-file-formats",
-              "appendix/file/file-construction-line-file-formats",
-              "appendix/file/file-dxf-construction-line-file-format",
-              "appendix/file/file-dxf-model-file-format",
-              "appendix/file/file-inp-model-file-format",
-              "appendix/file/file-open-recent-directories",
-              "appendix/file/file-open-merge-geometries",
-              "appendix/file/file-model-file-formats"
-            ],
-            "directory": "accordion"
+              "es/model-building-and-editing/model-building-and-editing",
+              "es/model-building-and-editing/building-surface-models",
+              "es/model-building-and-editing/building-models-out-of-blocks",
+              "es/model-building-and-editing/constructing-alternate-material-zones",
+              "es/model-building-and-editing/material-codes-mining-step-sequence",
+              "es/model-building-and-editing/defining-ground-surface",
+              "es/model-building-and-editing/defining-open-pits",
+              "es/model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "es/model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "es/model-building-and-editing/common-problems-when-model-building",
+              "es/model-building-and-editing/discretizaiton-and-lumping"
+            ]
           },
           {
-            "group": "Materials",
-            "root": "appendix/materials",
+            "group": "Tutoriales de construcción de modelos",
             "pages": [
-              "appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
-              "appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
-              "appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
-              "appendix/materials/materials-fault-gouge-in-dd-planes",
-              "appendix/materials/materials-equilibrated-gouge-in-dd-planes",
-              "appendix/materials/materials-yielding-pillar-in-dd-planes",
-              "appendix/materials/materials-softened-material",
-              "appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
-              "appendix/materials/materials-quadratic-backfill-in-dd-planes",
-              "appendix/materials/materials-user-defined-parameters",
-              "appendix/materials/materials-dump-to-file",
-              "appendix/materials/materials-expansion-coefficient-and-conductivity"
-            ],
-            "directory": "accordion"
+              "es/model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "es/model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "es/model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "es/model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "es/model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "es/model-building-tutorials/bulk-mining-example",
+              "es/model-building-tutorials/tabular-mining-example",
+              "es/model-building-tutorials/ddloop-pillar-example",
+              "es/model-building-tutorials/ffloop-drift-example",
+              "es/model-building-tutorials/ffloop-stope-example"
+            ]
           },
-          "appendix/dock-the-view-toolbar",
-          "appendix/dock-the-contour-toolbar",
-          "appendix/map3d-analysis-stages",
-          "appendix/map3d-versions",
-          "appendix/map3d-fault-slip",
-          "appendix/map3d-modeller",
-          "appendix/map3d-results-viewer",
-          "appendix/map3di-integrated-seismicity",
-          "appendix/map3d-thermal-fluid-flow",
-          "appendix/map3d-non-linear",
-          "appendix/map3d-visco-plastic",
-          "appendix/model-building-tutorials",
-          "appendix/plot-stress",
-          "appendix/plot-failure-modes",
-          "appendix/plot-strain",
-          "appendix/plot-surface-components",
-          "appendix/stress-orientation-icon",
-          "appendix/translating-the-model",
-          "appendix/view-render-discretize",
-          "appendix/visualization-make-point",
-          "appendix/global-transform-z-up"
+          {
+            "group": "Tutoriales de calibración de modelos",
+            "pages": [
+              "es/model-calibration-tutorials/rock-mass-overbreak-failure",
+              "es/model-calibration-tutorials/rock-mass-pillar-failure",
+              "es/model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "es/model-calibration-tutorials/fault-slip-failure"
+            ]
+          },
+          {
+            "group": "Comandos de menú",
+            "pages": [
+              {
+                "group": "Menú Archivo",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "es/menu-commands/file-menu/model-view-quick-open-model",
+                  "es/menu-commands/file-menu/results-view-open-analysis-results",
+                  "es/menu-commands/file-menu/new-model-cad",
+                  "es/menu-commands/file-menu/quick-open-view-only",
+                  "es/menu-commands/file-menu/open-model-cad",
+                  "es/menu-commands/file-menu/save-model-cad",
+                  "es/menu-commands/file-menu/save-model-as-cad",
+                  "es/menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "es/menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "es/menu-commands/file-menu/restore-auto-save-cad-state",
+                  "es/menu-commands/file-menu/save-named-cad-state",
+                  "es/menu-commands/file-menu/restore-named-cad-state",
+                  "es/menu-commands/file-menu/new-construction-lines",
+                  "es/menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "es/menu-commands/file-menu/open-construction-lines",
+                  "es/menu-commands/file-menu/save-construction-lines",
+                  "es/menu-commands/file-menu/save-construction-lines-as",
+                  "es/menu-commands/file-menu/open-analysis-results",
+                  "es/menu-commands/file-menu/subtract-restart-files",
+                  "es/menu-commands/file-menu/restart-an-analysis",
+                  "es/menu-commands/file-menu/update-restart-files",
+                  "es/menu-commands/file-menu/mining-step",
+                  "es/menu-commands/file-menu/output",
+                  "es/menu-commands/file-menu/image-viewer",
+                  "es/menu-commands/file-menu/save-view",
+                  "es/menu-commands/file-menu/restore-view",
+                  "es/menu-commands/file-menu/recent-files",
+                  "es/menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menú Vista",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "es/menu-commands/view-menu/hide",
+                  "es/menu-commands/view-menu/hide-block-colours",
+                  "es/menu-commands/view-menu/hide-excavation-steps",
+                  "es/menu-commands/view-menu/hide-cline-colours",
+                  "es/menu-commands/view-menu/hide-grid-colours",
+                  "es/menu-commands/view-menu/render",
+                  "es/menu-commands/view-menu/find-coordinate",
+                  "es/menu-commands/view-menu/initialize",
+                  "es/menu-commands/view-menu/zoom-extents",
+                  "es/menu-commands/view-menu/zoom",
+                  "es/menu-commands/view-menu/pan",
+                  "es/menu-commands/view-menu/length",
+                  "es/menu-commands/view-menu/centre-of-rotation",
+                  "es/menu-commands/view-menu/translation-increment",
+                  "es/menu-commands/view-menu/rotation-increment",
+                  "es/menu-commands/view-menu/zoom-factor",
+                  "es/menu-commands/view-menu/view-xy-plane",
+                  "es/menu-commands/view-menu/view-yz-plane",
+                  "es/menu-commands/view-menu/view-zx-plane",
+                  "es/menu-commands/view-menu/view-grid-plane",
+                  "es/menu-commands/view-menu/view-digitizer-plane",
+                  "es/menu-commands/view-menu/view-640x480",
+                  "es/menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menú Gráfico",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "es/menu-commands/plot-menu/stress",
+                  "es/menu-commands/plot-menu/strain",
+                  "es/menu-commands/plot-menu/displacement",
+                  "es/menu-commands/plot-menu/user-defined-plot",
+                  "es/menu-commands/plot-menu/thermalflux",
+                  "es/menu-commands/plot-menu/strength-factors",
+                  "es/menu-commands/plot-menu/surface-components",
+                  "es/menu-commands/plot-menu/miscellaneous",
+                  "es/menu-commands/plot-menu/contour-range",
+                  "es/menu-commands/plot-menu/grid-selection",
+                  "es/menu-commands/plot-menu/plot-options",
+                  "es/menu-commands/plot-menu/properties",
+                  "es/menu-commands/plot-menu/average-box",
+                  "es/menu-commands/plot-menu/polygon-box",
+                  "es/menu-commands/plot-menu/excel-plot-grids",
+                  "es/menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Análisis",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "es/menu-commands/analysis/analysis",
+                  "es/menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "es/menu-commands/cad/build",
+                  "es/menu-commands/cad/snap",
+                  "es/menu-commands/cad/properties",
+                  "es/menu-commands/cad/edit",
+                  "es/menu-commands/cad/grid-selection",
+                  "es/menu-commands/cad/digitizer-setup",
+                  "es/menu-commands/cad/resequence-block-links",
+                  "es/menu-commands/cad/recheck-blocks-for-errors",
+                  "es/menu-commands/cad/pack-and-renumber-blocks",
+                  "es/menu-commands/cad/unpack-blocks",
+                  "es/menu-commands/cad/unpack-surfaces",
+                  "es/menu-commands/cad/ungroup-dds",
+                  "es/menu-commands/cad/pack-and-renumber-clines",
+                  "es/menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Herramientas",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "es/menu-commands/tools/mouse-options",
+                  "es/menu-commands/tools/toolbars",
+                  "es/menu-commands/tools/assign-hotkeys",
+                  "es/menu-commands/tools/opengl",
+                  "es/menu-commands/tools/disk-performance-test",
+                  "es/menu-commands/tools/smooth-scroll",
+                  "es/menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "es/menu-commands/shift-key-selection",
+              "es/menu-commands/crosshairs",
+              {
+                "group": "Visualización",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "es/menu-commands/visualization/visualization-of-text-files",
+                  "es/menu-commands/visualization/visualization-of-evp-files",
+                  "es/menu-commands/visualization/visualization-database",
+                  "es/menu-commands/visualization/contour-plane-options",
+                  "es/menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Ayuda",
+                "root": "menu-commands/help",
+                "pages": [
+                  "es/menu-commands/help/contents-and-index",
+                  "es/menu-commands/help/whats-this",
+                  "es/menu-commands/help/web-wwwmap3dcom",
+                  "es/menu-commands/help/email-supportmap3dcom",
+                  "es/menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "es/menu-commands/help/download-map3d-update-setupexe",
+                  "es/menu-commands/help/download-map3d-update-map3dzip",
+                  "es/menu-commands/help/download-html-users-manual",
+                  "es/menu-commands/help/download-pdf-users-manual",
+                  "es/menu-commands/help/download-ebook-users-manual",
+                  "es/menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
+          },
+          {
+            "group": "Apéndice",
+            "pages": [
+              {
+                "group": "Análisis",
+                "root": "appendix/analysis",
+                "pages": [
+                  "es/appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "es/appendix/analysis/analysis-abort",
+                  "es/appendix/analysis/analysis-auto-plot",
+                  "es/appendix/analysis/analysis-auto-range",
+                  "es/appendix/analysis/analysis-bem-analysis",
+                  "es/appendix/analysis/analysis-discretization",
+                  "es/appendix/analysis/analysis-go-to-cad",
+                  "es/appendix/analysis/analysis-go-to-results",
+                  "es/appendix/analysis/analysis-view-results",
+                  "es/appendix/analysis/analysis-intersections",
+                  "es/appendix/analysis/analysis-load-model",
+                  "es/appendix/analysis/analysis-minimize",
+                  "es/appendix/analysis/analysis-options-accelerator",
+                  "es/appendix/analysis/analysis-options-async-io",
+                  "es/appendix/analysis/analysis-options-auto-repair",
+                  "es/appendix/analysis/analysis-options-batch",
+                  "es/appendix/analysis/analysis-options-cgm",
+                  "es/appendix/analysis/analysis-options-closure",
+                  "es/appendix/analysis/analysis-options-collinearity",
+                  "es/appendix/analysis/analysis-options-collinearity-search-radius",
+                  "es/appendix/analysis/analysis-options-collapse",
+                  "es/appendix/analysis/analysis-options-creep",
+                  "es/appendix/analysis/analysis-options-threads",
+                  "es/appendix/analysis/analysis-options-drive",
+                  "es/appendix/analysis/analysis-options-move-points",
+                  "es/appendix/analysis/analysis-options-mscalc",
+                  "es/appendix/analysis/analysis-options-initialization",
+                  "es/appendix/analysis/analysis-options-halt-on-errors",
+                  "es/appendix/analysis/analysis-options-initialization-file-name",
+                  "es/appendix/analysis/analysis-options-lerdlss",
+                  "es/appendix/analysis/analysis-options-lerdlss-file-name",
+                  "es/appendix/analysis/analysis-options-linear-quad",
+                  "es/appendix/analysis/analysis-options-lumping",
+                  "es/appendix/analysis/analysis-options-lumping-accuracy",
+                  "es/appendix/analysis/analysis-options-planar",
+                  "es/appendix/analysis/analysis-options-p-ram",
+                  "es/appendix/analysis/analysis-options-precondition",
+                  "es/appendix/analysis/analysis-options-renumber",
+                  "es/appendix/analysis/analysis-options-reset",
+                  "es/appendix/analysis/analysis-options-v-ram",
+                  "es/appendix/analysis/analysis-options-verbose",
+                  "es/appendix/analysis/analysis-options-zero-strain-placement",
+                  "es/appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "es/appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "es/appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "es/appendix/analysis/analysis-suspend",
+                  "es/appendix/analysis/analysis-conclude",
+                  "es/appendix/analysis/analysis-disable",
+                  "es/appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "appendix/cad",
+                "pages": [
+                  "es/appendix/cad/cad-properties-map3di-setup-view",
+                  "es/appendix/cad/cad-build-block-mesh-spacing",
+                  "es/appendix/cad/cad-snap",
+                  "es/appendix/cad/cad-edit",
+                  "es/appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "es/appendix/cad/cad-edit-entities",
+                  "es/appendix/cad/cad-edit-entities-2",
+                  "es/appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "es/appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "es/appendix/cad/cad-digitizer-activate",
+                  "es/appendix/cad/cad-properties-material-properties-stress-state",
+                  "es/appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "es/appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "es/appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Archivo",
+                "root": "appendix/file",
+                "pages": [
+                  "es/appendix/file/file-open-merge-materials",
+                  "es/appendix/file/file-output-animated-gif-recorder-append-images",
+                  "es/appendix/file/file-pnt-output-file-format",
+                  "es/appendix/file/file-pnt-construction-line-file-format",
+                  "es/appendix/file/file-pnt-model-file-format",
+                  "es/appendix/file/file-restart-file-formats",
+                  "es/appendix/file/file-construction-line-file-formats",
+                  "es/appendix/file/file-dxf-construction-line-file-format",
+                  "es/appendix/file/file-dxf-model-file-format",
+                  "es/appendix/file/file-inp-model-file-format",
+                  "es/appendix/file/file-open-recent-directories",
+                  "es/appendix/file/file-open-merge-geometries",
+                  "es/appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Materiales",
+                "root": "appendix/materials",
+                "pages": [
+                  "es/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "es/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "es/appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "es/appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "es/appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "es/appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "es/appendix/materials/materials-softened-material",
+                  "es/appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "es/appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "es/appendix/materials/materials-user-defined-parameters",
+                  "es/appendix/materials/materials-dump-to-file",
+                  "es/appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "es/appendix/dock-the-view-toolbar",
+              "es/appendix/dock-the-contour-toolbar",
+              "es/appendix/map3d-analysis-stages",
+              "es/appendix/map3d-versions",
+              "es/appendix/map3d-fault-slip",
+              "es/appendix/map3d-modeller",
+              "es/appendix/map3d-results-viewer",
+              "es/appendix/map3di-integrated-seismicity",
+              "es/appendix/map3d-thermal-fluid-flow",
+              "es/appendix/map3d-non-linear",
+              "es/appendix/map3d-visco-plastic",
+              "es/appendix/model-building-tutorials",
+              "es/appendix/plot-stress",
+              "es/appendix/plot-failure-modes",
+              "es/appendix/plot-strain",
+              "es/appendix/plot-surface-components",
+              "es/appendix/stress-orientation-icon",
+              "es/appendix/translating-the-model",
+              "es/appendix/view-render-discretize",
+              "es/appendix/visualization-make-point",
+              "es/appendix/global-transform-z-up"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "groups": [
+          {
+            "group": "Manuel d'utilisation de Map3D - version 72",
+            "pages": [
+              "fr/index"
+            ]
+          },
+          {
+            "group": "Présentation de Map3D",
+            "pages": [
+              "fr/map3d-overview/introduction",
+              "fr/map3d-overview/about-map3d",
+              "fr/map3d-overview/map3d-overview",
+              "fr/map3d-overview/applications",
+              "fr/map3d-overview/model-building-overview",
+              "fr/map3d-overview/boundary-element-formulation",
+              "fr/map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "fr/map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
+          },
+          {
+            "group": "Construction et modification de modèles",
+            "pages": [
+              "fr/model-building-and-editing/model-building-and-editing",
+              "fr/model-building-and-editing/building-surface-models",
+              "fr/model-building-and-editing/building-models-out-of-blocks",
+              "fr/model-building-and-editing/constructing-alternate-material-zones",
+              "fr/model-building-and-editing/material-codes-mining-step-sequence",
+              "fr/model-building-and-editing/defining-ground-surface",
+              "fr/model-building-and-editing/defining-open-pits",
+              "fr/model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "fr/model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "fr/model-building-and-editing/common-problems-when-model-building",
+              "fr/model-building-and-editing/discretizaiton-and-lumping"
+            ]
+          },
+          {
+            "group": "Tutoriels de construction de modèles",
+            "pages": [
+              "fr/model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "fr/model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "fr/model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "fr/model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "fr/model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "fr/model-building-tutorials/bulk-mining-example",
+              "fr/model-building-tutorials/tabular-mining-example",
+              "fr/model-building-tutorials/ddloop-pillar-example",
+              "fr/model-building-tutorials/ffloop-drift-example",
+              "fr/model-building-tutorials/ffloop-stope-example"
+            ]
+          },
+          {
+            "group": "Tutoriels de calage de modèles",
+            "pages": [
+              "fr/model-calibration-tutorials/rock-mass-overbreak-failure",
+              "fr/model-calibration-tutorials/rock-mass-pillar-failure",
+              "fr/model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "fr/model-calibration-tutorials/fault-slip-failure"
+            ]
+          },
+          {
+            "group": "Commandes de menu",
+            "pages": [
+              {
+                "group": "Menu Fichier",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "fr/menu-commands/file-menu/model-view-quick-open-model",
+                  "fr/menu-commands/file-menu/results-view-open-analysis-results",
+                  "fr/menu-commands/file-menu/new-model-cad",
+                  "fr/menu-commands/file-menu/quick-open-view-only",
+                  "fr/menu-commands/file-menu/open-model-cad",
+                  "fr/menu-commands/file-menu/save-model-cad",
+                  "fr/menu-commands/file-menu/save-model-as-cad",
+                  "fr/menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "fr/menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "fr/menu-commands/file-menu/restore-auto-save-cad-state",
+                  "fr/menu-commands/file-menu/save-named-cad-state",
+                  "fr/menu-commands/file-menu/restore-named-cad-state",
+                  "fr/menu-commands/file-menu/new-construction-lines",
+                  "fr/menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "fr/menu-commands/file-menu/open-construction-lines",
+                  "fr/menu-commands/file-menu/save-construction-lines",
+                  "fr/menu-commands/file-menu/save-construction-lines-as",
+                  "fr/menu-commands/file-menu/open-analysis-results",
+                  "fr/menu-commands/file-menu/subtract-restart-files",
+                  "fr/menu-commands/file-menu/restart-an-analysis",
+                  "fr/menu-commands/file-menu/update-restart-files",
+                  "fr/menu-commands/file-menu/mining-step",
+                  "fr/menu-commands/file-menu/output",
+                  "fr/menu-commands/file-menu/image-viewer",
+                  "fr/menu-commands/file-menu/save-view",
+                  "fr/menu-commands/file-menu/restore-view",
+                  "fr/menu-commands/file-menu/recent-files",
+                  "fr/menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menu Affichage",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "fr/menu-commands/view-menu/hide",
+                  "fr/menu-commands/view-menu/hide-block-colours",
+                  "fr/menu-commands/view-menu/hide-excavation-steps",
+                  "fr/menu-commands/view-menu/hide-cline-colours",
+                  "fr/menu-commands/view-menu/hide-grid-colours",
+                  "fr/menu-commands/view-menu/render",
+                  "fr/menu-commands/view-menu/find-coordinate",
+                  "fr/menu-commands/view-menu/initialize",
+                  "fr/menu-commands/view-menu/zoom-extents",
+                  "fr/menu-commands/view-menu/zoom",
+                  "fr/menu-commands/view-menu/pan",
+                  "fr/menu-commands/view-menu/length",
+                  "fr/menu-commands/view-menu/centre-of-rotation",
+                  "fr/menu-commands/view-menu/translation-increment",
+                  "fr/menu-commands/view-menu/rotation-increment",
+                  "fr/menu-commands/view-menu/zoom-factor",
+                  "fr/menu-commands/view-menu/view-xy-plane",
+                  "fr/menu-commands/view-menu/view-yz-plane",
+                  "fr/menu-commands/view-menu/view-zx-plane",
+                  "fr/menu-commands/view-menu/view-grid-plane",
+                  "fr/menu-commands/view-menu/view-digitizer-plane",
+                  "fr/menu-commands/view-menu/view-640x480",
+                  "fr/menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menu Tracé",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "fr/menu-commands/plot-menu/stress",
+                  "fr/menu-commands/plot-menu/strain",
+                  "fr/menu-commands/plot-menu/displacement",
+                  "fr/menu-commands/plot-menu/user-defined-plot",
+                  "fr/menu-commands/plot-menu/thermalflux",
+                  "fr/menu-commands/plot-menu/strength-factors",
+                  "fr/menu-commands/plot-menu/surface-components",
+                  "fr/menu-commands/plot-menu/miscellaneous",
+                  "fr/menu-commands/plot-menu/contour-range",
+                  "fr/menu-commands/plot-menu/grid-selection",
+                  "fr/menu-commands/plot-menu/plot-options",
+                  "fr/menu-commands/plot-menu/properties",
+                  "fr/menu-commands/plot-menu/average-box",
+                  "fr/menu-commands/plot-menu/polygon-box",
+                  "fr/menu-commands/plot-menu/excel-plot-grids",
+                  "fr/menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Analyse",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "fr/menu-commands/analysis/analysis",
+                  "fr/menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAO",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "fr/menu-commands/cad/build",
+                  "fr/menu-commands/cad/snap",
+                  "fr/menu-commands/cad/properties",
+                  "fr/menu-commands/cad/edit",
+                  "fr/menu-commands/cad/grid-selection",
+                  "fr/menu-commands/cad/digitizer-setup",
+                  "fr/menu-commands/cad/resequence-block-links",
+                  "fr/menu-commands/cad/recheck-blocks-for-errors",
+                  "fr/menu-commands/cad/pack-and-renumber-blocks",
+                  "fr/menu-commands/cad/unpack-blocks",
+                  "fr/menu-commands/cad/unpack-surfaces",
+                  "fr/menu-commands/cad/ungroup-dds",
+                  "fr/menu-commands/cad/pack-and-renumber-clines",
+                  "fr/menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Outils",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "fr/menu-commands/tools/mouse-options",
+                  "fr/menu-commands/tools/toolbars",
+                  "fr/menu-commands/tools/assign-hotkeys",
+                  "fr/menu-commands/tools/opengl",
+                  "fr/menu-commands/tools/disk-performance-test",
+                  "fr/menu-commands/tools/smooth-scroll",
+                  "fr/menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "fr/menu-commands/shift-key-selection",
+              "fr/menu-commands/crosshairs",
+              {
+                "group": "Visualisation",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "fr/menu-commands/visualization/visualization-of-text-files",
+                  "fr/menu-commands/visualization/visualization-of-evp-files",
+                  "fr/menu-commands/visualization/visualization-database",
+                  "fr/menu-commands/visualization/contour-plane-options",
+                  "fr/menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Aide",
+                "root": "menu-commands/help",
+                "pages": [
+                  "fr/menu-commands/help/contents-and-index",
+                  "fr/menu-commands/help/whats-this",
+                  "fr/menu-commands/help/web-wwwmap3dcom",
+                  "fr/menu-commands/help/email-supportmap3dcom",
+                  "fr/menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "fr/menu-commands/help/download-map3d-update-setupexe",
+                  "fr/menu-commands/help/download-map3d-update-map3dzip",
+                  "fr/menu-commands/help/download-html-users-manual",
+                  "fr/menu-commands/help/download-pdf-users-manual",
+                  "fr/menu-commands/help/download-ebook-users-manual",
+                  "fr/menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
+          },
+          {
+            "group": "Annexe",
+            "pages": [
+              {
+                "group": "Analyse",
+                "root": "appendix/analysis",
+                "pages": [
+                  "fr/appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "fr/appendix/analysis/analysis-abort",
+                  "fr/appendix/analysis/analysis-auto-plot",
+                  "fr/appendix/analysis/analysis-auto-range",
+                  "fr/appendix/analysis/analysis-bem-analysis",
+                  "fr/appendix/analysis/analysis-discretization",
+                  "fr/appendix/analysis/analysis-go-to-cad",
+                  "fr/appendix/analysis/analysis-go-to-results",
+                  "fr/appendix/analysis/analysis-view-results",
+                  "fr/appendix/analysis/analysis-intersections",
+                  "fr/appendix/analysis/analysis-load-model",
+                  "fr/appendix/analysis/analysis-minimize",
+                  "fr/appendix/analysis/analysis-options-accelerator",
+                  "fr/appendix/analysis/analysis-options-async-io",
+                  "fr/appendix/analysis/analysis-options-auto-repair",
+                  "fr/appendix/analysis/analysis-options-batch",
+                  "fr/appendix/analysis/analysis-options-cgm",
+                  "fr/appendix/analysis/analysis-options-closure",
+                  "fr/appendix/analysis/analysis-options-collinearity",
+                  "fr/appendix/analysis/analysis-options-collinearity-search-radius",
+                  "fr/appendix/analysis/analysis-options-collapse",
+                  "fr/appendix/analysis/analysis-options-creep",
+                  "fr/appendix/analysis/analysis-options-threads",
+                  "fr/appendix/analysis/analysis-options-drive",
+                  "fr/appendix/analysis/analysis-options-move-points",
+                  "fr/appendix/analysis/analysis-options-mscalc",
+                  "fr/appendix/analysis/analysis-options-initialization",
+                  "fr/appendix/analysis/analysis-options-halt-on-errors",
+                  "fr/appendix/analysis/analysis-options-initialization-file-name",
+                  "fr/appendix/analysis/analysis-options-lerdlss",
+                  "fr/appendix/analysis/analysis-options-lerdlss-file-name",
+                  "fr/appendix/analysis/analysis-options-linear-quad",
+                  "fr/appendix/analysis/analysis-options-lumping",
+                  "fr/appendix/analysis/analysis-options-lumping-accuracy",
+                  "fr/appendix/analysis/analysis-options-planar",
+                  "fr/appendix/analysis/analysis-options-p-ram",
+                  "fr/appendix/analysis/analysis-options-precondition",
+                  "fr/appendix/analysis/analysis-options-renumber",
+                  "fr/appendix/analysis/analysis-options-reset",
+                  "fr/appendix/analysis/analysis-options-v-ram",
+                  "fr/appendix/analysis/analysis-options-verbose",
+                  "fr/appendix/analysis/analysis-options-zero-strain-placement",
+                  "fr/appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "fr/appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "fr/appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "fr/appendix/analysis/analysis-suspend",
+                  "fr/appendix/analysis/analysis-conclude",
+                  "fr/appendix/analysis/analysis-disable",
+                  "fr/appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAO",
+                "root": "appendix/cad",
+                "pages": [
+                  "fr/appendix/cad/cad-properties-map3di-setup-view",
+                  "fr/appendix/cad/cad-build-block-mesh-spacing",
+                  "fr/appendix/cad/cad-snap",
+                  "fr/appendix/cad/cad-edit",
+                  "fr/appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "fr/appendix/cad/cad-edit-entities",
+                  "fr/appendix/cad/cad-edit-entities-2",
+                  "fr/appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "fr/appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "fr/appendix/cad/cad-digitizer-activate",
+                  "fr/appendix/cad/cad-properties-material-properties-stress-state",
+                  "fr/appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "fr/appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "fr/appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Fichier",
+                "root": "appendix/file",
+                "pages": [
+                  "fr/appendix/file/file-open-merge-materials",
+                  "fr/appendix/file/file-output-animated-gif-recorder-append-images",
+                  "fr/appendix/file/file-pnt-output-file-format",
+                  "fr/appendix/file/file-pnt-construction-line-file-format",
+                  "fr/appendix/file/file-pnt-model-file-format",
+                  "fr/appendix/file/file-restart-file-formats",
+                  "fr/appendix/file/file-construction-line-file-formats",
+                  "fr/appendix/file/file-dxf-construction-line-file-format",
+                  "fr/appendix/file/file-dxf-model-file-format",
+                  "fr/appendix/file/file-inp-model-file-format",
+                  "fr/appendix/file/file-open-recent-directories",
+                  "fr/appendix/file/file-open-merge-geometries",
+                  "fr/appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Matériaux",
+                "root": "appendix/materials",
+                "pages": [
+                  "fr/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "fr/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "fr/appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "fr/appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "fr/appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "fr/appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "fr/appendix/materials/materials-softened-material",
+                  "fr/appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "fr/appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "fr/appendix/materials/materials-user-defined-parameters",
+                  "fr/appendix/materials/materials-dump-to-file",
+                  "fr/appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "fr/appendix/dock-the-view-toolbar",
+              "fr/appendix/dock-the-contour-toolbar",
+              "fr/appendix/map3d-analysis-stages",
+              "fr/appendix/map3d-versions",
+              "fr/appendix/map3d-fault-slip",
+              "fr/appendix/map3d-modeller",
+              "fr/appendix/map3d-results-viewer",
+              "fr/appendix/map3di-integrated-seismicity",
+              "fr/appendix/map3d-thermal-fluid-flow",
+              "fr/appendix/map3d-non-linear",
+              "fr/appendix/map3d-visco-plastic",
+              "fr/appendix/model-building-tutorials",
+              "fr/appendix/plot-stress",
+              "fr/appendix/plot-failure-modes",
+              "fr/appendix/plot-strain",
+              "fr/appendix/plot-surface-components",
+              "fr/appendix/stress-orientation-icon",
+              "fr/appendix/translating-the-model",
+              "fr/appendix/view-render-discretize",
+              "fr/appendix/visualization-make-point",
+              "fr/appendix/global-transform-z-up"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "de",
+        "groups": [
+          {
+            "group": "Map3D-Benutzerhandbuch - Version 72",
+            "pages": [
+              "de/index"
+            ]
+          },
+          {
+            "group": "Map3D im Überblick",
+            "pages": [
+              "de/map3d-overview/introduction",
+              "de/map3d-overview/about-map3d",
+              "de/map3d-overview/map3d-overview",
+              "de/map3d-overview/applications",
+              "de/map3d-overview/model-building-overview",
+              "de/map3d-overview/boundary-element-formulation",
+              "de/map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "de/map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
+          },
+          {
+            "group": "Modelle erstellen und bearbeiten",
+            "pages": [
+              "de/model-building-and-editing/model-building-and-editing",
+              "de/model-building-and-editing/building-surface-models",
+              "de/model-building-and-editing/building-models-out-of-blocks",
+              "de/model-building-and-editing/constructing-alternate-material-zones",
+              "de/model-building-and-editing/material-codes-mining-step-sequence",
+              "de/model-building-and-editing/defining-ground-surface",
+              "de/model-building-and-editing/defining-open-pits",
+              "de/model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "de/model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "de/model-building-and-editing/common-problems-when-model-building",
+              "de/model-building-and-editing/discretizaiton-and-lumping"
+            ]
+          },
+          {
+            "group": "Tutorials zur Modellerstellung",
+            "pages": [
+              "de/model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "de/model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "de/model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "de/model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "de/model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "de/model-building-tutorials/bulk-mining-example",
+              "de/model-building-tutorials/tabular-mining-example",
+              "de/model-building-tutorials/ddloop-pillar-example",
+              "de/model-building-tutorials/ffloop-drift-example",
+              "de/model-building-tutorials/ffloop-stope-example"
+            ]
+          },
+          {
+            "group": "Tutorials zur Modellkalibrierung",
+            "pages": [
+              "de/model-calibration-tutorials/rock-mass-overbreak-failure",
+              "de/model-calibration-tutorials/rock-mass-pillar-failure",
+              "de/model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "de/model-calibration-tutorials/fault-slip-failure"
+            ]
+          },
+          {
+            "group": "Menübefehle",
+            "pages": [
+              {
+                "group": "Menü Datei",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "de/menu-commands/file-menu/model-view-quick-open-model",
+                  "de/menu-commands/file-menu/results-view-open-analysis-results",
+                  "de/menu-commands/file-menu/new-model-cad",
+                  "de/menu-commands/file-menu/quick-open-view-only",
+                  "de/menu-commands/file-menu/open-model-cad",
+                  "de/menu-commands/file-menu/save-model-cad",
+                  "de/menu-commands/file-menu/save-model-as-cad",
+                  "de/menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "de/menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "de/menu-commands/file-menu/restore-auto-save-cad-state",
+                  "de/menu-commands/file-menu/save-named-cad-state",
+                  "de/menu-commands/file-menu/restore-named-cad-state",
+                  "de/menu-commands/file-menu/new-construction-lines",
+                  "de/menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "de/menu-commands/file-menu/open-construction-lines",
+                  "de/menu-commands/file-menu/save-construction-lines",
+                  "de/menu-commands/file-menu/save-construction-lines-as",
+                  "de/menu-commands/file-menu/open-analysis-results",
+                  "de/menu-commands/file-menu/subtract-restart-files",
+                  "de/menu-commands/file-menu/restart-an-analysis",
+                  "de/menu-commands/file-menu/update-restart-files",
+                  "de/menu-commands/file-menu/mining-step",
+                  "de/menu-commands/file-menu/output",
+                  "de/menu-commands/file-menu/image-viewer",
+                  "de/menu-commands/file-menu/save-view",
+                  "de/menu-commands/file-menu/restore-view",
+                  "de/menu-commands/file-menu/recent-files",
+                  "de/menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menü Ansicht",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "de/menu-commands/view-menu/hide",
+                  "de/menu-commands/view-menu/hide-block-colours",
+                  "de/menu-commands/view-menu/hide-excavation-steps",
+                  "de/menu-commands/view-menu/hide-cline-colours",
+                  "de/menu-commands/view-menu/hide-grid-colours",
+                  "de/menu-commands/view-menu/render",
+                  "de/menu-commands/view-menu/find-coordinate",
+                  "de/menu-commands/view-menu/initialize",
+                  "de/menu-commands/view-menu/zoom-extents",
+                  "de/menu-commands/view-menu/zoom",
+                  "de/menu-commands/view-menu/pan",
+                  "de/menu-commands/view-menu/length",
+                  "de/menu-commands/view-menu/centre-of-rotation",
+                  "de/menu-commands/view-menu/translation-increment",
+                  "de/menu-commands/view-menu/rotation-increment",
+                  "de/menu-commands/view-menu/zoom-factor",
+                  "de/menu-commands/view-menu/view-xy-plane",
+                  "de/menu-commands/view-menu/view-yz-plane",
+                  "de/menu-commands/view-menu/view-zx-plane",
+                  "de/menu-commands/view-menu/view-grid-plane",
+                  "de/menu-commands/view-menu/view-digitizer-plane",
+                  "de/menu-commands/view-menu/view-640x480",
+                  "de/menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menü Darstellung",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "de/menu-commands/plot-menu/stress",
+                  "de/menu-commands/plot-menu/strain",
+                  "de/menu-commands/plot-menu/displacement",
+                  "de/menu-commands/plot-menu/user-defined-plot",
+                  "de/menu-commands/plot-menu/thermalflux",
+                  "de/menu-commands/plot-menu/strength-factors",
+                  "de/menu-commands/plot-menu/surface-components",
+                  "de/menu-commands/plot-menu/miscellaneous",
+                  "de/menu-commands/plot-menu/contour-range",
+                  "de/menu-commands/plot-menu/grid-selection",
+                  "de/menu-commands/plot-menu/plot-options",
+                  "de/menu-commands/plot-menu/properties",
+                  "de/menu-commands/plot-menu/average-box",
+                  "de/menu-commands/plot-menu/polygon-box",
+                  "de/menu-commands/plot-menu/excel-plot-grids",
+                  "de/menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Analyse",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "de/menu-commands/analysis/analysis",
+                  "de/menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "de/menu-commands/cad/build",
+                  "de/menu-commands/cad/snap",
+                  "de/menu-commands/cad/properties",
+                  "de/menu-commands/cad/edit",
+                  "de/menu-commands/cad/grid-selection",
+                  "de/menu-commands/cad/digitizer-setup",
+                  "de/menu-commands/cad/resequence-block-links",
+                  "de/menu-commands/cad/recheck-blocks-for-errors",
+                  "de/menu-commands/cad/pack-and-renumber-blocks",
+                  "de/menu-commands/cad/unpack-blocks",
+                  "de/menu-commands/cad/unpack-surfaces",
+                  "de/menu-commands/cad/ungroup-dds",
+                  "de/menu-commands/cad/pack-and-renumber-clines",
+                  "de/menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Werkzeuge",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "de/menu-commands/tools/mouse-options",
+                  "de/menu-commands/tools/toolbars",
+                  "de/menu-commands/tools/assign-hotkeys",
+                  "de/menu-commands/tools/opengl",
+                  "de/menu-commands/tools/disk-performance-test",
+                  "de/menu-commands/tools/smooth-scroll",
+                  "de/menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "de/menu-commands/shift-key-selection",
+              "de/menu-commands/crosshairs",
+              {
+                "group": "Visualisierung",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "de/menu-commands/visualization/visualization-of-text-files",
+                  "de/menu-commands/visualization/visualization-of-evp-files",
+                  "de/menu-commands/visualization/visualization-database",
+                  "de/menu-commands/visualization/contour-plane-options",
+                  "de/menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Hilfe",
+                "root": "menu-commands/help",
+                "pages": [
+                  "de/menu-commands/help/contents-and-index",
+                  "de/menu-commands/help/whats-this",
+                  "de/menu-commands/help/web-wwwmap3dcom",
+                  "de/menu-commands/help/email-supportmap3dcom",
+                  "de/menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "de/menu-commands/help/download-map3d-update-setupexe",
+                  "de/menu-commands/help/download-map3d-update-map3dzip",
+                  "de/menu-commands/help/download-html-users-manual",
+                  "de/menu-commands/help/download-pdf-users-manual",
+                  "de/menu-commands/help/download-ebook-users-manual",
+                  "de/menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
+          },
+          {
+            "group": "Anhang",
+            "pages": [
+              {
+                "group": "Analyse",
+                "root": "appendix/analysis",
+                "pages": [
+                  "de/appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "de/appendix/analysis/analysis-abort",
+                  "de/appendix/analysis/analysis-auto-plot",
+                  "de/appendix/analysis/analysis-auto-range",
+                  "de/appendix/analysis/analysis-bem-analysis",
+                  "de/appendix/analysis/analysis-discretization",
+                  "de/appendix/analysis/analysis-go-to-cad",
+                  "de/appendix/analysis/analysis-go-to-results",
+                  "de/appendix/analysis/analysis-view-results",
+                  "de/appendix/analysis/analysis-intersections",
+                  "de/appendix/analysis/analysis-load-model",
+                  "de/appendix/analysis/analysis-minimize",
+                  "de/appendix/analysis/analysis-options-accelerator",
+                  "de/appendix/analysis/analysis-options-async-io",
+                  "de/appendix/analysis/analysis-options-auto-repair",
+                  "de/appendix/analysis/analysis-options-batch",
+                  "de/appendix/analysis/analysis-options-cgm",
+                  "de/appendix/analysis/analysis-options-closure",
+                  "de/appendix/analysis/analysis-options-collinearity",
+                  "de/appendix/analysis/analysis-options-collinearity-search-radius",
+                  "de/appendix/analysis/analysis-options-collapse",
+                  "de/appendix/analysis/analysis-options-creep",
+                  "de/appendix/analysis/analysis-options-threads",
+                  "de/appendix/analysis/analysis-options-drive",
+                  "de/appendix/analysis/analysis-options-move-points",
+                  "de/appendix/analysis/analysis-options-mscalc",
+                  "de/appendix/analysis/analysis-options-initialization",
+                  "de/appendix/analysis/analysis-options-halt-on-errors",
+                  "de/appendix/analysis/analysis-options-initialization-file-name",
+                  "de/appendix/analysis/analysis-options-lerdlss",
+                  "de/appendix/analysis/analysis-options-lerdlss-file-name",
+                  "de/appendix/analysis/analysis-options-linear-quad",
+                  "de/appendix/analysis/analysis-options-lumping",
+                  "de/appendix/analysis/analysis-options-lumping-accuracy",
+                  "de/appendix/analysis/analysis-options-planar",
+                  "de/appendix/analysis/analysis-options-p-ram",
+                  "de/appendix/analysis/analysis-options-precondition",
+                  "de/appendix/analysis/analysis-options-renumber",
+                  "de/appendix/analysis/analysis-options-reset",
+                  "de/appendix/analysis/analysis-options-v-ram",
+                  "de/appendix/analysis/analysis-options-verbose",
+                  "de/appendix/analysis/analysis-options-zero-strain-placement",
+                  "de/appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "de/appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "de/appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "de/appendix/analysis/analysis-suspend",
+                  "de/appendix/analysis/analysis-conclude",
+                  "de/appendix/analysis/analysis-disable",
+                  "de/appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "appendix/cad",
+                "pages": [
+                  "de/appendix/cad/cad-properties-map3di-setup-view",
+                  "de/appendix/cad/cad-build-block-mesh-spacing",
+                  "de/appendix/cad/cad-snap",
+                  "de/appendix/cad/cad-edit",
+                  "de/appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "de/appendix/cad/cad-edit-entities",
+                  "de/appendix/cad/cad-edit-entities-2",
+                  "de/appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "de/appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "de/appendix/cad/cad-digitizer-activate",
+                  "de/appendix/cad/cad-properties-material-properties-stress-state",
+                  "de/appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "de/appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "de/appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Datei",
+                "root": "appendix/file",
+                "pages": [
+                  "de/appendix/file/file-open-merge-materials",
+                  "de/appendix/file/file-output-animated-gif-recorder-append-images",
+                  "de/appendix/file/file-pnt-output-file-format",
+                  "de/appendix/file/file-pnt-construction-line-file-format",
+                  "de/appendix/file/file-pnt-model-file-format",
+                  "de/appendix/file/file-restart-file-formats",
+                  "de/appendix/file/file-construction-line-file-formats",
+                  "de/appendix/file/file-dxf-construction-line-file-format",
+                  "de/appendix/file/file-dxf-model-file-format",
+                  "de/appendix/file/file-inp-model-file-format",
+                  "de/appendix/file/file-open-recent-directories",
+                  "de/appendix/file/file-open-merge-geometries",
+                  "de/appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Materialien",
+                "root": "appendix/materials",
+                "pages": [
+                  "de/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "de/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "de/appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "de/appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "de/appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "de/appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "de/appendix/materials/materials-softened-material",
+                  "de/appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "de/appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "de/appendix/materials/materials-user-defined-parameters",
+                  "de/appendix/materials/materials-dump-to-file",
+                  "de/appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "de/appendix/dock-the-view-toolbar",
+              "de/appendix/dock-the-contour-toolbar",
+              "de/appendix/map3d-analysis-stages",
+              "de/appendix/map3d-versions",
+              "de/appendix/map3d-fault-slip",
+              "de/appendix/map3d-modeller",
+              "de/appendix/map3d-results-viewer",
+              "de/appendix/map3di-integrated-seismicity",
+              "de/appendix/map3d-thermal-fluid-flow",
+              "de/appendix/map3d-non-linear",
+              "de/appendix/map3d-visco-plastic",
+              "de/appendix/model-building-tutorials",
+              "de/appendix/plot-stress",
+              "de/appendix/plot-failure-modes",
+              "de/appendix/plot-strain",
+              "de/appendix/plot-surface-components",
+              "de/appendix/stress-orientation-icon",
+              "de/appendix/translating-the-model",
+              "de/appendix/view-render-discretize",
+              "de/appendix/visualization-make-point",
+              "de/appendix/global-transform-z-up"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "pt-BR",
+        "groups": [
+          {
+            "group": "Manual do usuário do Map3D - versão 72",
+            "pages": [
+              "pt-br/index"
+            ]
+          },
+          {
+            "group": "Visão geral do Map3D",
+            "pages": [
+              "pt-br/map3d-overview/introduction",
+              "pt-br/map3d-overview/about-map3d",
+              "pt-br/map3d-overview/map3d-overview",
+              "pt-br/map3d-overview/applications",
+              "pt-br/map3d-overview/model-building-overview",
+              "pt-br/map3d-overview/boundary-element-formulation",
+              "pt-br/map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "pt-br/map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
+          },
+          {
+            "group": "Construção e edição de modelos",
+            "pages": [
+              "pt-br/model-building-and-editing/model-building-and-editing",
+              "pt-br/model-building-and-editing/building-surface-models",
+              "pt-br/model-building-and-editing/building-models-out-of-blocks",
+              "pt-br/model-building-and-editing/constructing-alternate-material-zones",
+              "pt-br/model-building-and-editing/material-codes-mining-step-sequence",
+              "pt-br/model-building-and-editing/defining-ground-surface",
+              "pt-br/model-building-and-editing/defining-open-pits",
+              "pt-br/model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "pt-br/model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "pt-br/model-building-and-editing/common-problems-when-model-building",
+              "pt-br/model-building-and-editing/discretizaiton-and-lumping"
+            ]
+          },
+          {
+            "group": "Tutoriais de construção de modelos",
+            "pages": [
+              "pt-br/model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "pt-br/model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "pt-br/model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "pt-br/model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "pt-br/model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "pt-br/model-building-tutorials/bulk-mining-example",
+              "pt-br/model-building-tutorials/tabular-mining-example",
+              "pt-br/model-building-tutorials/ddloop-pillar-example",
+              "pt-br/model-building-tutorials/ffloop-drift-example",
+              "pt-br/model-building-tutorials/ffloop-stope-example"
+            ]
+          },
+          {
+            "group": "Tutoriais de calibração de modelos",
+            "pages": [
+              "pt-br/model-calibration-tutorials/rock-mass-overbreak-failure",
+              "pt-br/model-calibration-tutorials/rock-mass-pillar-failure",
+              "pt-br/model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "pt-br/model-calibration-tutorials/fault-slip-failure"
+            ]
+          },
+          {
+            "group": "Comandos de menu",
+            "pages": [
+              {
+                "group": "Menu Arquivo",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "pt-br/menu-commands/file-menu/model-view-quick-open-model",
+                  "pt-br/menu-commands/file-menu/results-view-open-analysis-results",
+                  "pt-br/menu-commands/file-menu/new-model-cad",
+                  "pt-br/menu-commands/file-menu/quick-open-view-only",
+                  "pt-br/menu-commands/file-menu/open-model-cad",
+                  "pt-br/menu-commands/file-menu/save-model-cad",
+                  "pt-br/menu-commands/file-menu/save-model-as-cad",
+                  "pt-br/menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "pt-br/menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "pt-br/menu-commands/file-menu/restore-auto-save-cad-state",
+                  "pt-br/menu-commands/file-menu/save-named-cad-state",
+                  "pt-br/menu-commands/file-menu/restore-named-cad-state",
+                  "pt-br/menu-commands/file-menu/new-construction-lines",
+                  "pt-br/menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "pt-br/menu-commands/file-menu/open-construction-lines",
+                  "pt-br/menu-commands/file-menu/save-construction-lines",
+                  "pt-br/menu-commands/file-menu/save-construction-lines-as",
+                  "pt-br/menu-commands/file-menu/open-analysis-results",
+                  "pt-br/menu-commands/file-menu/subtract-restart-files",
+                  "pt-br/menu-commands/file-menu/restart-an-analysis",
+                  "pt-br/menu-commands/file-menu/update-restart-files",
+                  "pt-br/menu-commands/file-menu/mining-step",
+                  "pt-br/menu-commands/file-menu/output",
+                  "pt-br/menu-commands/file-menu/image-viewer",
+                  "pt-br/menu-commands/file-menu/save-view",
+                  "pt-br/menu-commands/file-menu/restore-view",
+                  "pt-br/menu-commands/file-menu/recent-files",
+                  "pt-br/menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menu Visualizar",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "pt-br/menu-commands/view-menu/hide",
+                  "pt-br/menu-commands/view-menu/hide-block-colours",
+                  "pt-br/menu-commands/view-menu/hide-excavation-steps",
+                  "pt-br/menu-commands/view-menu/hide-cline-colours",
+                  "pt-br/menu-commands/view-menu/hide-grid-colours",
+                  "pt-br/menu-commands/view-menu/render",
+                  "pt-br/menu-commands/view-menu/find-coordinate",
+                  "pt-br/menu-commands/view-menu/initialize",
+                  "pt-br/menu-commands/view-menu/zoom-extents",
+                  "pt-br/menu-commands/view-menu/zoom",
+                  "pt-br/menu-commands/view-menu/pan",
+                  "pt-br/menu-commands/view-menu/length",
+                  "pt-br/menu-commands/view-menu/centre-of-rotation",
+                  "pt-br/menu-commands/view-menu/translation-increment",
+                  "pt-br/menu-commands/view-menu/rotation-increment",
+                  "pt-br/menu-commands/view-menu/zoom-factor",
+                  "pt-br/menu-commands/view-menu/view-xy-plane",
+                  "pt-br/menu-commands/view-menu/view-yz-plane",
+                  "pt-br/menu-commands/view-menu/view-zx-plane",
+                  "pt-br/menu-commands/view-menu/view-grid-plane",
+                  "pt-br/menu-commands/view-menu/view-digitizer-plane",
+                  "pt-br/menu-commands/view-menu/view-640x480",
+                  "pt-br/menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Menu Plotagem",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "pt-br/menu-commands/plot-menu/stress",
+                  "pt-br/menu-commands/plot-menu/strain",
+                  "pt-br/menu-commands/plot-menu/displacement",
+                  "pt-br/menu-commands/plot-menu/user-defined-plot",
+                  "pt-br/menu-commands/plot-menu/thermalflux",
+                  "pt-br/menu-commands/plot-menu/strength-factors",
+                  "pt-br/menu-commands/plot-menu/surface-components",
+                  "pt-br/menu-commands/plot-menu/miscellaneous",
+                  "pt-br/menu-commands/plot-menu/contour-range",
+                  "pt-br/menu-commands/plot-menu/grid-selection",
+                  "pt-br/menu-commands/plot-menu/plot-options",
+                  "pt-br/menu-commands/plot-menu/properties",
+                  "pt-br/menu-commands/plot-menu/average-box",
+                  "pt-br/menu-commands/plot-menu/polygon-box",
+                  "pt-br/menu-commands/plot-menu/excel-plot-grids",
+                  "pt-br/menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Análise",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "pt-br/menu-commands/analysis/analysis",
+                  "pt-br/menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "pt-br/menu-commands/cad/build",
+                  "pt-br/menu-commands/cad/snap",
+                  "pt-br/menu-commands/cad/properties",
+                  "pt-br/menu-commands/cad/edit",
+                  "pt-br/menu-commands/cad/grid-selection",
+                  "pt-br/menu-commands/cad/digitizer-setup",
+                  "pt-br/menu-commands/cad/resequence-block-links",
+                  "pt-br/menu-commands/cad/recheck-blocks-for-errors",
+                  "pt-br/menu-commands/cad/pack-and-renumber-blocks",
+                  "pt-br/menu-commands/cad/unpack-blocks",
+                  "pt-br/menu-commands/cad/unpack-surfaces",
+                  "pt-br/menu-commands/cad/ungroup-dds",
+                  "pt-br/menu-commands/cad/pack-and-renumber-clines",
+                  "pt-br/menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Ferramentas",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "pt-br/menu-commands/tools/mouse-options",
+                  "pt-br/menu-commands/tools/toolbars",
+                  "pt-br/menu-commands/tools/assign-hotkeys",
+                  "pt-br/menu-commands/tools/opengl",
+                  "pt-br/menu-commands/tools/disk-performance-test",
+                  "pt-br/menu-commands/tools/smooth-scroll",
+                  "pt-br/menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "pt-br/menu-commands/shift-key-selection",
+              "pt-br/menu-commands/crosshairs",
+              {
+                "group": "Visualização",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "pt-br/menu-commands/visualization/visualization-of-text-files",
+                  "pt-br/menu-commands/visualization/visualization-of-evp-files",
+                  "pt-br/menu-commands/visualization/visualization-database",
+                  "pt-br/menu-commands/visualization/contour-plane-options",
+                  "pt-br/menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Ajuda",
+                "root": "menu-commands/help",
+                "pages": [
+                  "pt-br/menu-commands/help/contents-and-index",
+                  "pt-br/menu-commands/help/whats-this",
+                  "pt-br/menu-commands/help/web-wwwmap3dcom",
+                  "pt-br/menu-commands/help/email-supportmap3dcom",
+                  "pt-br/menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "pt-br/menu-commands/help/download-map3d-update-setupexe",
+                  "pt-br/menu-commands/help/download-map3d-update-map3dzip",
+                  "pt-br/menu-commands/help/download-html-users-manual",
+                  "pt-br/menu-commands/help/download-pdf-users-manual",
+                  "pt-br/menu-commands/help/download-ebook-users-manual",
+                  "pt-br/menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
+          },
+          {
+            "group": "Apêndice",
+            "pages": [
+              {
+                "group": "Análise",
+                "root": "appendix/analysis",
+                "pages": [
+                  "pt-br/appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "pt-br/appendix/analysis/analysis-abort",
+                  "pt-br/appendix/analysis/analysis-auto-plot",
+                  "pt-br/appendix/analysis/analysis-auto-range",
+                  "pt-br/appendix/analysis/analysis-bem-analysis",
+                  "pt-br/appendix/analysis/analysis-discretization",
+                  "pt-br/appendix/analysis/analysis-go-to-cad",
+                  "pt-br/appendix/analysis/analysis-go-to-results",
+                  "pt-br/appendix/analysis/analysis-view-results",
+                  "pt-br/appendix/analysis/analysis-intersections",
+                  "pt-br/appendix/analysis/analysis-load-model",
+                  "pt-br/appendix/analysis/analysis-minimize",
+                  "pt-br/appendix/analysis/analysis-options-accelerator",
+                  "pt-br/appendix/analysis/analysis-options-async-io",
+                  "pt-br/appendix/analysis/analysis-options-auto-repair",
+                  "pt-br/appendix/analysis/analysis-options-batch",
+                  "pt-br/appendix/analysis/analysis-options-cgm",
+                  "pt-br/appendix/analysis/analysis-options-closure",
+                  "pt-br/appendix/analysis/analysis-options-collinearity",
+                  "pt-br/appendix/analysis/analysis-options-collinearity-search-radius",
+                  "pt-br/appendix/analysis/analysis-options-collapse",
+                  "pt-br/appendix/analysis/analysis-options-creep",
+                  "pt-br/appendix/analysis/analysis-options-threads",
+                  "pt-br/appendix/analysis/analysis-options-drive",
+                  "pt-br/appendix/analysis/analysis-options-move-points",
+                  "pt-br/appendix/analysis/analysis-options-mscalc",
+                  "pt-br/appendix/analysis/analysis-options-initialization",
+                  "pt-br/appendix/analysis/analysis-options-halt-on-errors",
+                  "pt-br/appendix/analysis/analysis-options-initialization-file-name",
+                  "pt-br/appendix/analysis/analysis-options-lerdlss",
+                  "pt-br/appendix/analysis/analysis-options-lerdlss-file-name",
+                  "pt-br/appendix/analysis/analysis-options-linear-quad",
+                  "pt-br/appendix/analysis/analysis-options-lumping",
+                  "pt-br/appendix/analysis/analysis-options-lumping-accuracy",
+                  "pt-br/appendix/analysis/analysis-options-planar",
+                  "pt-br/appendix/analysis/analysis-options-p-ram",
+                  "pt-br/appendix/analysis/analysis-options-precondition",
+                  "pt-br/appendix/analysis/analysis-options-renumber",
+                  "pt-br/appendix/analysis/analysis-options-reset",
+                  "pt-br/appendix/analysis/analysis-options-v-ram",
+                  "pt-br/appendix/analysis/analysis-options-verbose",
+                  "pt-br/appendix/analysis/analysis-options-zero-strain-placement",
+                  "pt-br/appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "pt-br/appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "pt-br/appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "pt-br/appendix/analysis/analysis-suspend",
+                  "pt-br/appendix/analysis/analysis-conclude",
+                  "pt-br/appendix/analysis/analysis-disable",
+                  "pt-br/appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "appendix/cad",
+                "pages": [
+                  "pt-br/appendix/cad/cad-properties-map3di-setup-view",
+                  "pt-br/appendix/cad/cad-build-block-mesh-spacing",
+                  "pt-br/appendix/cad/cad-snap",
+                  "pt-br/appendix/cad/cad-edit",
+                  "pt-br/appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "pt-br/appendix/cad/cad-edit-entities",
+                  "pt-br/appendix/cad/cad-edit-entities-2",
+                  "pt-br/appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "pt-br/appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "pt-br/appendix/cad/cad-digitizer-activate",
+                  "pt-br/appendix/cad/cad-properties-material-properties-stress-state",
+                  "pt-br/appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "pt-br/appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "pt-br/appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Arquivo",
+                "root": "appendix/file",
+                "pages": [
+                  "pt-br/appendix/file/file-open-merge-materials",
+                  "pt-br/appendix/file/file-output-animated-gif-recorder-append-images",
+                  "pt-br/appendix/file/file-pnt-output-file-format",
+                  "pt-br/appendix/file/file-pnt-construction-line-file-format",
+                  "pt-br/appendix/file/file-pnt-model-file-format",
+                  "pt-br/appendix/file/file-restart-file-formats",
+                  "pt-br/appendix/file/file-construction-line-file-formats",
+                  "pt-br/appendix/file/file-dxf-construction-line-file-format",
+                  "pt-br/appendix/file/file-dxf-model-file-format",
+                  "pt-br/appendix/file/file-inp-model-file-format",
+                  "pt-br/appendix/file/file-open-recent-directories",
+                  "pt-br/appendix/file/file-open-merge-geometries",
+                  "pt-br/appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "Materiais",
+                "root": "appendix/materials",
+                "pages": [
+                  "pt-br/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "pt-br/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "pt-br/appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "pt-br/appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "pt-br/appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "pt-br/appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "pt-br/appendix/materials/materials-softened-material",
+                  "pt-br/appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "pt-br/appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "pt-br/appendix/materials/materials-user-defined-parameters",
+                  "pt-br/appendix/materials/materials-dump-to-file",
+                  "pt-br/appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "pt-br/appendix/dock-the-view-toolbar",
+              "pt-br/appendix/dock-the-contour-toolbar",
+              "pt-br/appendix/map3d-analysis-stages",
+              "pt-br/appendix/map3d-versions",
+              "pt-br/appendix/map3d-fault-slip",
+              "pt-br/appendix/map3d-modeller",
+              "pt-br/appendix/map3d-results-viewer",
+              "pt-br/appendix/map3di-integrated-seismicity",
+              "pt-br/appendix/map3d-thermal-fluid-flow",
+              "pt-br/appendix/map3d-non-linear",
+              "pt-br/appendix/map3d-visco-plastic",
+              "pt-br/appendix/model-building-tutorials",
+              "pt-br/appendix/plot-stress",
+              "pt-br/appendix/plot-failure-modes",
+              "pt-br/appendix/plot-strain",
+              "pt-br/appendix/plot-surface-components",
+              "pt-br/appendix/stress-orientation-icon",
+              "pt-br/appendix/translating-the-model",
+              "pt-br/appendix/view-render-discretize",
+              "pt-br/appendix/visualization-make-point",
+              "pt-br/appendix/global-transform-z-up"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "cn",
+        "groups": [
+          {
+            "group": "Map3D 用户手册 - 第 72 版",
+            "pages": [
+              "cn/index"
+            ]
+          },
+          {
+            "group": "Map3D 概述",
+            "pages": [
+              "cn/map3d-overview/introduction",
+              "cn/map3d-overview/about-map3d",
+              "cn/map3d-overview/map3d-overview",
+              "cn/map3d-overview/applications",
+              "cn/map3d-overview/model-building-overview",
+              "cn/map3d-overview/boundary-element-formulation",
+              "cn/map3d-overview/rock-mass-response-predictions-using-numerical-modelling",
+              "cn/map3d-overview/implementation-of-modelling-into-the-mine-design-process"
+            ]
+          },
+          {
+            "group": "模型构建与编辑",
+            "pages": [
+              "cn/model-building-and-editing/model-building-and-editing",
+              "cn/model-building-and-editing/building-surface-models",
+              "cn/model-building-and-editing/building-models-out-of-blocks",
+              "cn/model-building-and-editing/constructing-alternate-material-zones",
+              "cn/model-building-and-editing/material-codes-mining-step-sequence",
+              "cn/model-building-and-editing/defining-ground-surface",
+              "cn/model-building-and-editing/defining-open-pits",
+              "cn/model-building-and-editing/defining-fault-planes-and-tabular-mining-zones",
+              "cn/model-building-and-editing/defining-inactive-blocks-for-visualization-purposes",
+              "cn/model-building-and-editing/common-problems-when-model-building",
+              "cn/model-building-and-editing/discretizaiton-and-lumping"
+            ]
+          },
+          {
+            "group": "建模教程",
+            "pages": [
+              "cn/model-building-tutorials/video-demo-of-ffloop-model-building-with-multiple-loops",
+              "cn/model-building-tutorials/video-demo-of-ddloop-model-building-with-sub-parallel-lines",
+              "cn/model-building-tutorials/video-demo-of-ddloop-model-building-with-interior-loops",
+              "cn/model-building-tutorials/video-demo-of-ffloop-model-simplification-using-slicing",
+              "cn/model-building-tutorials/freehand-sketching-room-and-pillar-mining",
+              "cn/model-building-tutorials/bulk-mining-example",
+              "cn/model-building-tutorials/tabular-mining-example",
+              "cn/model-building-tutorials/ddloop-pillar-example",
+              "cn/model-building-tutorials/ffloop-drift-example",
+              "cn/model-building-tutorials/ffloop-stope-example"
+            ]
+          },
+          {
+            "group": "模型校准教程",
+            "pages": [
+              "cn/model-calibration-tutorials/rock-mass-overbreak-failure",
+              "cn/model-calibration-tutorials/rock-mass-pillar-failure",
+              "cn/model-calibration-tutorials/structurally-controlled-overbreak-failure",
+              "cn/model-calibration-tutorials/fault-slip-failure"
+            ]
+          },
+          {
+            "group": "菜单命令",
+            "pages": [
+              {
+                "group": "文件菜单",
+                "root": "menu-commands/file-menu",
+                "pages": [
+                  "cn/menu-commands/file-menu/model-view-quick-open-model",
+                  "cn/menu-commands/file-menu/results-view-open-analysis-results",
+                  "cn/menu-commands/file-menu/new-model-cad",
+                  "cn/menu-commands/file-menu/quick-open-view-only",
+                  "cn/menu-commands/file-menu/open-model-cad",
+                  "cn/menu-commands/file-menu/save-model-cad",
+                  "cn/menu-commands/file-menu/save-model-as-cad",
+                  "cn/menu-commands/file-menu/import-model-from-dxf-or-pnt",
+                  "cn/menu-commands/file-menu/export-model-as-dxf-or-pnt",
+                  "cn/menu-commands/file-menu/restore-auto-save-cad-state",
+                  "cn/menu-commands/file-menu/save-named-cad-state",
+                  "cn/menu-commands/file-menu/restore-named-cad-state",
+                  "cn/menu-commands/file-menu/new-construction-lines",
+                  "cn/menu-commands/file-menu/quick-open-construciton-lines-view-only",
+                  "cn/menu-commands/file-menu/open-construction-lines",
+                  "cn/menu-commands/file-menu/save-construction-lines",
+                  "cn/menu-commands/file-menu/save-construction-lines-as",
+                  "cn/menu-commands/file-menu/open-analysis-results",
+                  "cn/menu-commands/file-menu/subtract-restart-files",
+                  "cn/menu-commands/file-menu/restart-an-analysis",
+                  "cn/menu-commands/file-menu/update-restart-files",
+                  "cn/menu-commands/file-menu/mining-step",
+                  "cn/menu-commands/file-menu/output",
+                  "cn/menu-commands/file-menu/image-viewer",
+                  "cn/menu-commands/file-menu/save-view",
+                  "cn/menu-commands/file-menu/restore-view",
+                  "cn/menu-commands/file-menu/recent-files",
+                  "cn/menu-commands/file-menu/exit"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "视图菜单",
+                "root": "menu-commands/view-menu",
+                "pages": [
+                  "cn/menu-commands/view-menu/hide",
+                  "cn/menu-commands/view-menu/hide-block-colours",
+                  "cn/menu-commands/view-menu/hide-excavation-steps",
+                  "cn/menu-commands/view-menu/hide-cline-colours",
+                  "cn/menu-commands/view-menu/hide-grid-colours",
+                  "cn/menu-commands/view-menu/render",
+                  "cn/menu-commands/view-menu/find-coordinate",
+                  "cn/menu-commands/view-menu/initialize",
+                  "cn/menu-commands/view-menu/zoom-extents",
+                  "cn/menu-commands/view-menu/zoom",
+                  "cn/menu-commands/view-menu/pan",
+                  "cn/menu-commands/view-menu/length",
+                  "cn/menu-commands/view-menu/centre-of-rotation",
+                  "cn/menu-commands/view-menu/translation-increment",
+                  "cn/menu-commands/view-menu/rotation-increment",
+                  "cn/menu-commands/view-menu/zoom-factor",
+                  "cn/menu-commands/view-menu/view-xy-plane",
+                  "cn/menu-commands/view-menu/view-yz-plane",
+                  "cn/menu-commands/view-menu/view-zx-plane",
+                  "cn/menu-commands/view-menu/view-grid-plane",
+                  "cn/menu-commands/view-menu/view-digitizer-plane",
+                  "cn/menu-commands/view-menu/view-640x480",
+                  "cn/menu-commands/view-menu/continuous-rotation"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "绘图菜单",
+                "root": "menu-commands/plot-menu",
+                "pages": [
+                  "cn/menu-commands/plot-menu/stress",
+                  "cn/menu-commands/plot-menu/strain",
+                  "cn/menu-commands/plot-menu/displacement",
+                  "cn/menu-commands/plot-menu/user-defined-plot",
+                  "cn/menu-commands/plot-menu/thermalflux",
+                  "cn/menu-commands/plot-menu/strength-factors",
+                  "cn/menu-commands/plot-menu/surface-components",
+                  "cn/menu-commands/plot-menu/miscellaneous",
+                  "cn/menu-commands/plot-menu/contour-range",
+                  "cn/menu-commands/plot-menu/grid-selection",
+                  "cn/menu-commands/plot-menu/plot-options",
+                  "cn/menu-commands/plot-menu/properties",
+                  "cn/menu-commands/plot-menu/average-box",
+                  "cn/menu-commands/plot-menu/polygon-box",
+                  "cn/menu-commands/plot-menu/excel-plot-grids",
+                  "cn/menu-commands/plot-menu/excel-plot-surfaces"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "分析",
+                "root": "menu-commands/analysis",
+                "pages": [
+                  "cn/menu-commands/analysis/analysis",
+                  "cn/menu-commands/analysis/analysis-options"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "menu-commands/cad",
+                "pages": [
+                  "cn/menu-commands/cad/build",
+                  "cn/menu-commands/cad/snap",
+                  "cn/menu-commands/cad/properties",
+                  "cn/menu-commands/cad/edit",
+                  "cn/menu-commands/cad/grid-selection",
+                  "cn/menu-commands/cad/digitizer-setup",
+                  "cn/menu-commands/cad/resequence-block-links",
+                  "cn/menu-commands/cad/recheck-blocks-for-errors",
+                  "cn/menu-commands/cad/pack-and-renumber-blocks",
+                  "cn/menu-commands/cad/unpack-blocks",
+                  "cn/menu-commands/cad/unpack-surfaces",
+                  "cn/menu-commands/cad/ungroup-dds",
+                  "cn/menu-commands/cad/pack-and-renumber-clines",
+                  "cn/menu-commands/cad/unpack-clines"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "工具",
+                "root": "menu-commands/tools",
+                "pages": [
+                  "cn/menu-commands/tools/mouse-options",
+                  "cn/menu-commands/tools/toolbars",
+                  "cn/menu-commands/tools/assign-hotkeys",
+                  "cn/menu-commands/tools/opengl",
+                  "cn/menu-commands/tools/disk-performance-test",
+                  "cn/menu-commands/tools/smooth-scroll",
+                  "cn/menu-commands/tools/cursor-pick-box-size"
+                ],
+                "directory": "accordion"
+              },
+              "cn/menu-commands/shift-key-selection",
+              "cn/menu-commands/crosshairs",
+              {
+                "group": "可视化",
+                "root": "menu-commands/visualization",
+                "pages": [
+                  "cn/menu-commands/visualization/visualization-of-text-files",
+                  "cn/menu-commands/visualization/visualization-of-evp-files",
+                  "cn/menu-commands/visualization/visualization-database",
+                  "cn/menu-commands/visualization/contour-plane-options",
+                  "cn/menu-commands/visualization/plot"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "帮助",
+                "root": "menu-commands/help",
+                "pages": [
+                  "cn/menu-commands/help/contents-and-index",
+                  "cn/menu-commands/help/whats-this",
+                  "cn/menu-commands/help/web-wwwmap3dcom",
+                  "cn/menu-commands/help/email-supportmap3dcom",
+                  "cn/menu-commands/help/email-key-check-to-supportmap3dcom",
+                  "cn/menu-commands/help/download-map3d-update-setupexe",
+                  "cn/menu-commands/help/download-map3d-update-map3dzip",
+                  "cn/menu-commands/help/download-html-users-manual",
+                  "cn/menu-commands/help/download-pdf-users-manual",
+                  "cn/menu-commands/help/download-ebook-users-manual",
+                  "cn/menu-commands/help/about-map3d"
+                ],
+                "directory": "accordion"
+              }
+            ]
+          },
+          {
+            "group": "附录",
+            "pages": [
+              {
+                "group": "分析",
+                "root": "appendix/analysis",
+                "pages": [
+                  "cn/appendix/analysis/analysis-options-mscalc-output-file-name",
+                  "cn/appendix/analysis/analysis-abort",
+                  "cn/appendix/analysis/analysis-auto-plot",
+                  "cn/appendix/analysis/analysis-auto-range",
+                  "cn/appendix/analysis/analysis-bem-analysis",
+                  "cn/appendix/analysis/analysis-discretization",
+                  "cn/appendix/analysis/analysis-go-to-cad",
+                  "cn/appendix/analysis/analysis-go-to-results",
+                  "cn/appendix/analysis/analysis-view-results",
+                  "cn/appendix/analysis/analysis-intersections",
+                  "cn/appendix/analysis/analysis-load-model",
+                  "cn/appendix/analysis/analysis-minimize",
+                  "cn/appendix/analysis/analysis-options-accelerator",
+                  "cn/appendix/analysis/analysis-options-async-io",
+                  "cn/appendix/analysis/analysis-options-auto-repair",
+                  "cn/appendix/analysis/analysis-options-batch",
+                  "cn/appendix/analysis/analysis-options-cgm",
+                  "cn/appendix/analysis/analysis-options-closure",
+                  "cn/appendix/analysis/analysis-options-collinearity",
+                  "cn/appendix/analysis/analysis-options-collinearity-search-radius",
+                  "cn/appendix/analysis/analysis-options-collapse",
+                  "cn/appendix/analysis/analysis-options-creep",
+                  "cn/appendix/analysis/analysis-options-threads",
+                  "cn/appendix/analysis/analysis-options-drive",
+                  "cn/appendix/analysis/analysis-options-move-points",
+                  "cn/appendix/analysis/analysis-options-mscalc",
+                  "cn/appendix/analysis/analysis-options-initialization",
+                  "cn/appendix/analysis/analysis-options-halt-on-errors",
+                  "cn/appendix/analysis/analysis-options-initialization-file-name",
+                  "cn/appendix/analysis/analysis-options-lerdlss",
+                  "cn/appendix/analysis/analysis-options-lerdlss-file-name",
+                  "cn/appendix/analysis/analysis-options-linear-quad",
+                  "cn/appendix/analysis/analysis-options-lumping",
+                  "cn/appendix/analysis/analysis-options-lumping-accuracy",
+                  "cn/appendix/analysis/analysis-options-planar",
+                  "cn/appendix/analysis/analysis-options-p-ram",
+                  "cn/appendix/analysis/analysis-options-precondition",
+                  "cn/appendix/analysis/analysis-options-renumber",
+                  "cn/appendix/analysis/analysis-options-reset",
+                  "cn/appendix/analysis/analysis-options-v-ram",
+                  "cn/appendix/analysis/analysis-options-verbose",
+                  "cn/appendix/analysis/analysis-options-zero-strain-placement",
+                  "cn/appendix/analysis/analysis-options-host-stress-datum-is-ground-surface",
+                  "cn/appendix/analysis/analysis-options-calculate-tangential-stress-components",
+                  "cn/appendix/analysis/analysis-options-nosleep-for-analysis",
+                  "cn/appendix/analysis/analysis-suspend",
+                  "cn/appendix/analysis/analysis-conclude",
+                  "cn/appendix/analysis/analysis-disable",
+                  "cn/appendix/analysis/analysis-dialog"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "CAD",
+                "root": "appendix/cad",
+                "pages": [
+                  "cn/appendix/cad/cad-properties-map3di-setup-view",
+                  "cn/appendix/cad/cad-build-block-mesh-spacing",
+                  "cn/appendix/cad/cad-snap",
+                  "cn/appendix/cad/cad-edit",
+                  "cn/appendix/cad/cad-edit-entity-properties-ddplane-thickness",
+                  "cn/appendix/cad/cad-edit-entities",
+                  "cn/appendix/cad/cad-edit-entities-2",
+                  "cn/appendix/cad/cad-edit-build-a-list-of-entities-for-editing",
+                  "cn/appendix/cad/cad-edit-build-a-list-of-verticies-for-editing",
+                  "cn/appendix/cad/cad-digitizer-activate",
+                  "cn/appendix/cad/cad-properties-material-properties-stress-state",
+                  "cn/appendix/cad/cad-properties-material-properties-stress-state-cartesian",
+                  "cn/appendix/cad/cad-properties-material-properties-stress-state-datum",
+                  "cn/appendix/cad/cad-build"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "文件",
+                "root": "appendix/file",
+                "pages": [
+                  "cn/appendix/file/file-open-merge-materials",
+                  "cn/appendix/file/file-output-animated-gif-recorder-append-images",
+                  "cn/appendix/file/file-pnt-output-file-format",
+                  "cn/appendix/file/file-pnt-construction-line-file-format",
+                  "cn/appendix/file/file-pnt-model-file-format",
+                  "cn/appendix/file/file-restart-file-formats",
+                  "cn/appendix/file/file-construction-line-file-formats",
+                  "cn/appendix/file/file-dxf-construction-line-file-format",
+                  "cn/appendix/file/file-dxf-model-file-format",
+                  "cn/appendix/file/file-inp-model-file-format",
+                  "cn/appendix/file/file-open-recent-directories",
+                  "cn/appendix/file/file-open-merge-geometries",
+                  "cn/appendix/file/file-model-file-formats"
+                ],
+                "directory": "accordion"
+              },
+              {
+                "group": "材料",
+                "root": "appendix/materials",
+                "pages": [
+                  "cn/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
+                  "cn/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
+                  "cn/appendix/materials/materials-drucker-prager-in-3d-ff-blocks",
+                  "cn/appendix/materials/materials-fault-gouge-in-dd-planes",
+                  "cn/appendix/materials/materials-equilibrated-gouge-in-dd-planes",
+                  "cn/appendix/materials/materials-yielding-pillar-in-dd-planes",
+                  "cn/appendix/materials/materials-softened-material",
+                  "cn/appendix/materials/materials-hyperbolic-backfill-in-dd-planes",
+                  "cn/appendix/materials/materials-quadratic-backfill-in-dd-planes",
+                  "cn/appendix/materials/materials-user-defined-parameters",
+                  "cn/appendix/materials/materials-dump-to-file",
+                  "cn/appendix/materials/materials-expansion-coefficient-and-conductivity"
+                ],
+                "directory": "accordion"
+              },
+              "cn/appendix/dock-the-view-toolbar",
+              "cn/appendix/dock-the-contour-toolbar",
+              "cn/appendix/map3d-analysis-stages",
+              "cn/appendix/map3d-versions",
+              "cn/appendix/map3d-fault-slip",
+              "cn/appendix/map3d-modeller",
+              "cn/appendix/map3d-results-viewer",
+              "cn/appendix/map3di-integrated-seismicity",
+              "cn/appendix/map3d-thermal-fluid-flow",
+              "cn/appendix/map3d-non-linear",
+              "cn/appendix/map3d-visco-plastic",
+              "cn/appendix/model-building-tutorials",
+              "cn/appendix/plot-stress",
+              "cn/appendix/plot-failure-modes",
+              "cn/appendix/plot-strain",
+              "cn/appendix/plot-surface-components",
+              "cn/appendix/stress-orientation-icon",
+              "cn/appendix/translating-the-model",
+              "cn/appendix/view-render-discretize",
+              "cn/appendix/visualization-make-point",
+              "cn/appendix/global-transform-z-up"
+            ]
+          }
         ]
       }
     ]

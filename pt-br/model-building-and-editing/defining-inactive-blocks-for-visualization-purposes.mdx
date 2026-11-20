@@ -1,0 +1,7 @@
+---
+title: "Definição de blocos inativos para visualização"
+---
+
+Muitas vezes, ao construir um modelo, é conveniente incluir detalhes das frentes de desenvolvimento para fins de visualização. Isso facilita a interpretação do modelo, pois os usuários conseguem identificar com mais facilidade locais conhecidos da mina. Embora essas geometrias detalhadas possam ser incluídas na análise de tensões do Map3D, sua presença aumenta o tempo de análise devido ao maior número de elementos de contorno necessários. Como galerias pequenas normalmente só influenciam as escavações próximas, a maioria delas pode ser deixada fora da análise sem afetar significativamente os resultados.
+
+No entanto, é conveniente sobrepor a localização detalhada das galerias aos resultados da análise para facilitar a visualização. Os blocos podem ser incluídos no banco de dados do Map3D sem serem incluídos na análise, bastando atribuir a eles um tipo de bloco inativo. Esses blocos serão excluídos das etapas de interseção, discretização e análise do programa e, portanto, não aumentam o esforço computacional.

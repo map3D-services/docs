@@ -1,0 +1,7 @@
+---
+title: "Définir des blocs inactifs pour la visualisation"
+---
+
+Lors de la construction d'un modèle, il est souvent souhaitable d'inclure le détail des galeries de traçage à des fins de visualisation. Cela facilite l'interprétation du modèle, car les utilisateurs repèrent plus facilement des endroits familiers de la mine. Si ces géométries détaillées peuvent être incluses dans l'analyse des contraintes de Map3D, leur présence augmente le temps d'analyse en raison du plus grand nombre d'éléments de frontière nécessaires. Comme les petites galeries n'influencent généralement que les excavations voisines, la plupart peuvent être exclues de l'analyse sans modifier sensiblement les résultats.
+
+Il reste toutefois souhaitable de superposer l'emplacement détaillé des galeries aux résultats de l'analyse pour faciliter la visualisation. Des blocs peuvent être intégrés à la base de données de Map3D sans être inclus dans l'analyse : il suffit de leur attribuer un type de bloc inactif. Ces blocs sont exclus des étapes d'intersection, de discrétisation et d'analyse du programme, et n'augmentent donc pas l'effort de calcul.

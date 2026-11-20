@@ -1,0 +1,7 @@
+---
+title: "Definición de rajos abiertos"
+---
+
+Aunque los rajos abiertos pueden construirse con elementos de discontinuidad de desplazamiento, no se recomienda. La mejor forma de tratar los rajos abiertos es construirlos como excavaciones (mediante definiciones de bloques con elementos de fuerza ficticia) adyacentes a la superficie del terreno. Esto se debe a que la lógica de intersección integrada en Map3D puede detectar el interior de los bloques de excavación y recortar cualquier rasgo que los intersecte (como fallas, zonas de mineral o galerías). Además, los elementos de discontinuidad de desplazamiento que se encuentran a lo largo del borde de una excavación (por ejemplo, la superficie del terreno) también se detectarán y tratarán correctamente.
+
+Esta misma lógica no existe para las zonas definidas mediante elementos de discontinuidad de desplazamiento. El usuario podría construir fácilmente un modelo con múltiples elementos de discontinuidad de desplazamiento superpuestos, que no convergerá.

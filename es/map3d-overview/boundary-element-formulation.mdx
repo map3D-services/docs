@@ -1,0 +1,79 @@
+---
+title: "Formulación de elementos de contorno"
+---
+
+El modelamiento numérico es un intento de simular matemáticamente la forma en que el macizo rocoso responde a la minería. Para ello se consideran los efectos de:
+
+- Condiciones de carga: antes de la minería, el macizo rocoso está cargado por la sobrecarga y las fuerzas tectónicas.
+
+- Elementos de soporte estructural: también puede haber cargas debidas al soporte mecánico del terreno, al relleno, al calentamiento, etc.
+
+- Geometría: al realizar excavaciones, estas cargas preexistentes se redistribuyen alrededor de las excavaciones y se concentran en los estribos y pilares. Los diques rígidos y las zonas de mineral blandas también influyen en la respuesta.
+
+- Elasticidad: en los lugares donde los esfuerzos no superan la resistencia, la roca se deforma de manera más o menos elástica. Esto significa simplemente que las deformaciones son de magnitud relativamente pequeña y en su mayoría recuperables.
+
+- No linealidad: en los lugares donde los esfuerzos se concentran hasta superar la resistencia, la roca cede ante estas cargas y se deforma. Esto significa que las deformaciones pueden ser de magnitud relativamente grande y en su mayoría no recuperables. Esto puede incluir los efectos del deslizamiento de fallas, el agrietamiento y la fluencia no lineal 3D generalizada.
+
+#### ¿Cómo funciona el modelamiento numérico?
+
+El modelamiento numérico logra esta simulación aplicando ciertas restricciones físicas a la forma en que puede responder el macizo rocoso:
+
+**Equilibrio**: las fuerzas aplicadas deben equilibrarse siempre entre sí en todos los puntos del modelo. Si se extrae un pequeño cubo de material y se examinan los esfuerzos que actúan sobre él, estos esfuerzos deben estar en equilibrio.
+
+- ¶sxx /¶ _x_ + ¶txy /¶ _y_ + ¶txz /¶ _z_ + _X_ = 0
+
+- ¶txy /¶ _x_ + ¶syy/¶ _y_ + ¶tyz /¶ _z_ + _Y_ = 0
+
+- ¶txz /¶ _x_ + ¶tyz /¶ _y_ + ¶szz /¶ _z_ + _Z_ = 0
+
+Observe que los términos _X_, _Y_ y _Z_ representan fuerzas de cuerpo que pueden utilizarse para aplicar cualquier tipo de carga de campo externa. Dicha carga de campo puede ser resultado del calentamiento, de las presiones de fluidos, de la no linealidad del material, etc. Además, estas cargas pueden determinarse a partir de muchas formas de monitoreo in situ, por ejemplo presiones de fluidos (abatimiento de pozos, presas, fracturamiento hidráulico), calentamiento (calentamiento natural, almacenamiento de residuos nucleares), deformaciones (monitoreadas con extensómetros) y actividad sísmica (definición del deslizamiento de fallas o de la no linealidad del material a partir de datos sísmicos). Son estos términos los que se utilizarán para integrar el modelamiento numérico con el monitoreo sísmico en Map3Di.
+
+**Continuidad**: en el medio continuo del macizo rocoso, la masa de material debe conservarse. No puede desaparecer ni crearse material.
+
+- ¶²exx /¶ _y_ ² + ¶²eyy/¶ _x_ ² = 2 ¶²exy/¶ _x_ /¶ _y_
+
+- ¶²eyy /¶ _z_ ² + ¶²ezz/¶ _y_ ² = 2 ¶²eyz/¶ _y_ /¶ _z_
+
+- ¶²ezz /¶ _x_ ²  + ¶²exx/¶ _z_ ² = 2 ¶²ezx/¶ _z_ /¶ _x_
+
+- ¶²exx /¶ _y_ /¶ _z_ = ¶/¶ _x ( -_ ¶eyz /¶ _x +_ ¶ezx /¶ _y +_ ¶exy /¶ _z )_
+
+- ¶²eyy/¶ _z_ /¶ _x_ = ¶/¶ _y ( -_ ¶ezx /¶ _y +_ ¶exy/¶ _z +_ ¶eyz /¶ _x )_
+
+- ¶²ezz /¶ _x_ /¶ _y_ = ¶/¶ _z ( -_ ¶exy/¶ _z +_ ¶eyz /¶ _x +_ ¶ezx /¶ _y )_
+
+**Elasticidad**: en los lugares donde los esfuerzos no superan la resistencia, la roca se deforma de manera elástica lineal: los esfuerzos varían en proporción directa a las deformaciones elásticas.
+
+sxx  = s°xx + [ (1-u) exx + u ( eyy + ezz  ) ] _E_ /[(1+u)(1-2u)] syy = s°yy + [ (1-u) eyy + u ( ezz + exx  ) ] _E_ /[(1+u)(1-2u)] szz  = s°zz  + [ (1-u) ezz  + u ( exx + eyy ) ] _E_ /[(1+u)(1-2u)] txy  = t°xy + exy _E_ /(1+u) tyz  = t°yz + eyz _E_ /(1+u) tzx  = t°zx  + ezx _E_ /(1+u)
+
+Observe que es aquí donde los esfuerzos premineros o de campo lejano (s°) se incorporan a la física del problema.
+
+**No linealidad**: en los lugares donde los esfuerzos se concentran hasta superar la resistencia, la roca cede ante estas cargas y se deforma. Se permite que las deformaciones avancen hasta que los esfuerzos se relajen hasta el valor de la resistencia. Esto puede ir acompañado de cierta dilatancia. Esto puede incluir los efectos del deslizamiento de fallas, el agrietamiento y la fluencia no lineal 3D generalizada.
+
+Observe que las ecuaciones de equilibrio y continuidad se expresan como ecuaciones diferenciales. Para resolverlas, es necesario integrarlas sobre el volumen del macizo rocoso de modo que se cumplan las condiciones de contorno correspondientes. Hay muchas formas de lograrlo. Los métodos de elementos de contorno integran las ecuaciones analíticamente y luego utilizan una aproximación numérica para cumplir las condiciones de contorno. Los métodos de elementos finitos y de diferencias finitas utilizan un esquema de integración numérica para integrar las ecuaciones diferenciales.
+
+Independientemente del método utilizado, al final todos emplean algún tipo de aproximación numérica y se obtiene un gran sistema de ecuaciones que describe cómo interactúan entre sí las distintas partes del macizo rocoso. En el BEM, las ecuaciones resultantes tienen la forma
+
+ssurface = sfar_field + _M P_
+
+donde _M_ es el sistema de ecuaciones simultáneas y _P_ representa las cargas o deformaciones que deben aplicarse para que los esfuerzos en las superficies de excavación sean nulos. Esto constituye una descripción matemática de cómo responde el macizo rocoso. Todos los modelos numéricos utilizan alguna variante de este enfoque.
+
+Estas ecuaciones deben resolverse simultáneamente de modo que se cumplan las condiciones de contorno. Al resolver estas ecuaciones en todo el macizo rocoso, junto con las condiciones de carga y la geometría, se realiza un "análisis de esfuerzos".
+
+Map3D se basa en un método indirecto de elementos de contorno muy eficiente (Banerjee y Butterfield, 1981) e incorpora el uso simultáneo de elementos de fuerza ficticia y de discontinuidad de desplazamiento. Se incorporan elementos de contorno especiales propios para las versiones de análisis térmico y no lineal.
+
+Esta formulación de elementos de contorno ofrece muchas ventajas frente a otras técnicas de análisis de esfuerzos. Las formulaciones directas de elementos de contorno requieren aproximadamente el doble de esfuerzo computacional para ensamblar y resolver la matriz de elementos de contorno que el método indirecto utilizado en Map3D.
+
+Se utilizan técnicas de agrupamiento de matrices para reducir el tamaño de la matriz y, como resultado, es posible abordar problemas muy grandes (más de 333333 elementos, es decir, 1000000 de grados de libertad) en computadores personales. Sin agrupamiento, un problema de 64000 elementos ocuparía 147 GB de espacio en disco. Con agrupamiento, esto puede reducirse a menos de 1 GB. Esto permite especificar en detalle la geometría minera existente y añadir nueva minería según sea necesario. Así se reduce en gran medida el esfuerzo necesario para preparar y ejecutar los análisis, y es posible considerar toda la mina cuando sea necesario.
+
+Con la formulación de elementos de contorno, se parte de un medio elástico homogéneo infinito (macizo rocoso). El proceso de construcción del modelo consiste en realizar excavaciones y superponer zonas no homogéneas (diques, zonas de mineral o zonas cedentes) y cualquier falla o diaclasa en la que pueda producirse deslizamiento. Como se parte de un medio infinito, los contornos de campo lejano se consideran automáticamente.
+
+Esto es distinto de las formulaciones de dominio, como los métodos de elementos finitos o de diferencias finitas, en las que se parte de un espacio vacío. En estos últimos métodos, la construcción del modelo consiste en ensamblar todo el macizo rocoso y todos sus componentes. Los elementos deben ensamblarse hasta algún contorno de campo lejano situado a muchos diámetros de distancia de las excavaciones.
+
+Si bien las formulaciones de elementos finitos y de diferencias finitas están muy desarrolladas para problemas no lineales como la plasticidad, el flujo transitorio de calor y de fluidos y las simulaciones dinámicas, también son muy difíciles de usar y requieren tiempos de cálculo muy largos. La dificultad de uso proviene de la gran cantidad de información necesaria para discretizar el macizo rocoso encajante. Aunque esto puede minimizarse mediante generadores de mallas y potentes interfaces gráficas, el costo y el esfuerzo de aprender la interfaz superan la sencillez con la que pueden realizarse los análisis de elementos de contorno de Map3D.
+
+Estas diferencias fundamentales hacen que el método de elementos de contorno sea mucho más adecuado y económico (en términos de tiempo de análisis) para los problemas de macizos rocosos.
+
+Map3D ha superado muchas de las supuestas limitaciones del método de elementos de contorno. El programa admite secuencias de minado de múltiples etapas y múltiples zonas de material con distintas propiedades y estados de esfuerzo. Se permite que estas zonas tengan un comportamiento no lineal. Múltiples planos de falla que se intersectan pueden deslizar y abrirse según la resistencia al corte especificada por el usuario. También puede simularse el análisis de esfuerzos térmico/de fluidos en régimen permanente.
+
+La tecnología de modelamiento sólido integrada simplifica mucho la construcción de modelos, ya que construye internamente las intersecciones complejas. Las rutinas de discretización integradas en Map3D liberan al usuario de la tarea de optimizar el uso de elementos, concentrándolos automáticamente solo donde se solicitan resultados. Los procedimientos internos de agrupamiento reducen tanto el tamaño de la matriz como el esfuerzo computacional a una dependencia casi lineal respecto del tamaño del problema.
