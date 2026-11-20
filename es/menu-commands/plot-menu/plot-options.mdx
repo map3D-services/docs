@@ -1,134 +1,131 @@
 ---
-title: "Opciones de gráfico"
+title: "Opciones de graficación"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Configura las opciones del gráfico de contornos.
 
-Sets up contour plot options.
-
-This routine can be initiated either by picking the button or simple right clicking on any contour.
+Esta rutina se puede iniciar seleccionando el botón o simplemente haciendo clic derecho sobre cualquier contorno.
 
 ![Figure from page 318](/images/page-318-img-25.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Esta barra de herramientas se puede cambiar a orientación vertical arrastrándola contra el borde derecho o izquierdo de la ventana principal.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Se puede volver a la orientación horizontal arrastrándola contra el borde superior o inferior de la ventana principal.
 
 ![Figure from page 321](/images/page-321-img-1.png)
 
 #### Trajectory-Label Options:
 
-- 3D Fixed Length – display fixed length 3D orientation indicators.
+- 3D Fixed Length – muestra indicadores de orientación 3D de largo fijo.
 
-The indicator is constructed as a 3D vector with an arrow head placed on the end that points away from you (i.e. into the display). This permits you to determine whether the vector is dipping away from you or towards you. Vectors that appear as dots point directly into or away from the display.
+El indicador se construye como un vector 3D con una punta de flecha en el extremo que apunta alejándose de usted (es decir, hacia el interior de la pantalla). Esto permite determinar si el vector se inclina alejándose o acercándose a usted. Los vectores que aparecen como puntos apuntan directamente hacia el interior o el exterior de la pantalla.
 
-If you orient the view such that you are looking along the edge of a grid, you will see the vectors protruding in and out of the contour plane.
+Si orienta la vista de modo que mire a lo largo del borde de una grilla, verá los vectores sobresaliendo hacia adentro y hacia afuera del plano de contornos.
 
-The length of the vectors is set with the TLength: parameter.
+El largo de los vectores se define con el parámetro TLength:.
 
-The density of the vectors is set with the TSpacing: parameter.
+La densidad de los vectores se define con el parámetro TSpacing:.
 
-- 3D Scaled Length – display scaled length 3D orientation indicators.
+- 3D Scaled Length – muestra indicadores de orientación 3D de largo escalado.
 
-The indicator is constructed as described above.
+El indicador se construye como se describió arriba.
 
-The length of the vectors are scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the vector is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the TLength: parameter.
+El largo de los vectores se escala según la magnitud del esfuerzo, de modo que si la magnitud es igual al mínimo del rango de contornos, el vector se dibuja con largo cero. Si la magnitud es igual al máximo del rango de contornos, el vector se dibuja con el largo especificado por el parámetro TLength:.
 
-- 2D Fixed Length – display fixed length 2D orientation indicators.
+- 2D Fixed Length – muestra indicadores de orientación 2D de largo fijo.
 
-The indicator is constructed as a 2D projection of the true 3D vector, in the plane of the grid.
+El indicador se construye como una proyección 2D del vector 3D real, en el plano de la grilla.
 
-The length of the vectors is set with the TLength: parameter.
+El largo de los vectores se define con el parámetro TLength:.
 
-The density of the vectors is set with the TSpacing: parameter.
+La densidad de los vectores se define con el parámetro TSpacing:.
 
-- 2D Scaled Length – display scaled length 2D orientation indicators.
+- 2D Scaled Length – muestra indicadores de orientación 2D de largo escalado.
 
-The indicator is constructed as described above.
+El indicador se construye como se describió arriba.
 
-The indicator is constructed as a 2D projection of the true 3D vector, in the plane of the grid.
+El indicador se construye como una proyección 2D del vector 3D real, en el plano de la grilla.
 
-The length of the vectors are scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the vector is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the TLength: parameter.
+El largo de los vectores se escala según la magnitud del esfuerzo, de modo que si la magnitud es igual al mínimo del rango de contornos, el vector se dibuja con largo cero. Si la magnitud es igual al máximo del rango de contornos, el vector se dibuja con el largo especificado por el parámetro TLength:.
 
-- Contour Numbers – display contour numbers on the contours. The number corresponds to the magnitude of the contour at each point.
+- Contour Numbers – muestra números de contorno sobre los contornos. El número corresponde a la magnitud del contorno en cada punto.
 
-- Point Numbers – display point numbers on the contours. The number corresponds to the record number of each point.
+- Point Numbers – muestra números de punto sobre los contornos. El número corresponde al número de registro de cada punto.
 
-- Coordinate Numbers – display coordinate numbers on the contours. The number corresponds to the x,y,z coordinates of each point.
+- Coordinate Numbers – muestra números de coordenadas sobre los contornos. El número corresponde a las coordenadas x,y,z de cada punto.
 
-- UB Number – display the number of the ubiquitous joint set (1, 2 or 3) with the maximum excess shear stress on the contours. Refer to Ubiquitous Parameters
+- UB Number – muestra sobre los contornos el número del sistema de diaclasas ubicuas (1, 2 o 3) con el máximo esfuerzo de corte en exceso. Vea Ubiquitous Parameters
 
-- MStep Max Yield – display the step at which the maximum excess stress occurs. Refer to Accumulated Damage
+- MStep Max Yield – muestra la etapa en la que ocurre el máximo esfuerzo en exceso. Vea Accumulated Damage
 
-- MStep 1st Yield – display the step at which the first yield occurs. Refer to Accumulated Damage
+- MStep 1st Yield – muestra la etapa en la que ocurre la primera fluencia. Vea Accumulated Damage
 
-- Large Numbers – display numbers with large size or small size.
+- Large Numbers – muestra los números en tamaño grande o pequeño.
 
-- Length – set the length that the orientation indicators will be drawn. If you set this parameter too small, the trajectory vectors will be too small to see. If you set this parameter too large, the trajectory vectors will overlap and create a confusing display.
+- Length – define el largo con que se dibujarán los indicadores de orientación. Si define este parámetro demasiado pequeño, los vectores de trayectoria serán demasiado pequeños para verse. Si lo define demasiado grande, los vectores de trayectoria se superpondrán y la visualización será confusa.
 
-- Spacing – set the spacing between adjacent orientation indicators or numbers. If set this parameter to zero, trajectories will be drawn at all grid points. For finely discretized grids, the trajectory vectors may be too concentrated and difficult to distinguish. Larger values for this parameter will result in fewer trajectory symbols being drawn.
+- Spacing – define el espaciamiento entre indicadores de orientación o números adyacentes. Si define este parámetro en cero, las trayectorias se dibujarán en todos los puntos de la grilla. En grillas muy finamente discretizadas, los vectores de trayectoria pueden quedar demasiado concentrados y ser difíciles de distinguir. Valores mayores de este parámetro harán que se dibujen menos símbolos de trayectoria.
 
-- Colour – set the colour with which the trajectories are drawn.
+- Colour – define el color con que se dibujan las trayectorias.
 
 #### Contour Options:
 
-- Contour Lines – draws lines between the contour colours. These lines help highlight the boundary between different contour intervals and are particularly useful for black and white presentation.
+- Contour Lines – dibuja líneas entre los colores de los contornos. Estas líneas ayudan a resaltar el límite entre distintos intervalos de contorno y son especialmente útiles para presentaciones en blanco y negro.
 
-- Opaque – draws the contours as opaque colours. If both this option and the translucent option are unchecked, only contour lines (i.e. no coloured contour) will be drawn.
+- Opaque – dibuja los contornos con colores opacos. Si esta opción y la opción translúcida están ambas desmarcadas, solo se dibujarán líneas de contorno (es decir, sin contornos de color).
 
-- Translucent - draws the contours as translucent colours. If both this option and the opaque option are unchecked, only contour lines (i.e. no coloured contour) will be drawn.
+- Translucent - dibuja los contornos con colores translúcidos. Si esta opción y la opción opaca están ambas desmarcadas, solo se dibujarán líneas de contorno (es decir, sin contornos de color).
 
 #### Display Options:
 
-- Blank – when checked, contours are blanked out where the grid plane passes through excavation blocks. This is useful to identify the extent of excavations when portions of the model have been hidden. It is also useful for generation of 2D sections since the location of the excavations are clearly visible.
+- Blank – cuando está marcada, los contornos se ocultan donde el plano de la grilla atraviesa bloques de excavación. Esto es útil para identificar la extensión de las excavaciones cuando se han ocultado partes del modelo. También es útil para generar secciones 2D, ya que la ubicación de las excavaciones queda claramente visible.
 
-Blank Colour: - sets colour used for Blanking.
+Blank Colour: - define el color usado para el ocultamiento.
 
-Grid Lines – contours are drawn with lines at regular grid intervals. The desired interval is set using the Spacing: parameter.
+Grid Lines – los contornos se dibujan con líneas a intervalos regulares de la grilla. El intervalo deseado se define con el parámetro Spacing:.
 
-Outlines – outlines are drawn around the grid edges. When using multiple grids you may not want to see these outlines.
+Outlines – se dibujan contornos alrededor de los bordes de la grilla. Al usar varias grillas puede que no desee ver estos contornos.
 
-Discretization – the grid discretization is superimposed on the contours.
+Discretization – la discretización de la grilla se superpone a los contornos.
 
-Min Contour – when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important.
+Min Contour – cuando no está marcada, no se dibujan los contornos por debajo del mínimo del rango de contornos. Esto es útil para mostrar contornos en los que solo importa la parte superior del rango.
 
-For example when displaying non-linear strain components or excess stresses, it is often useful to only have non-zero portions of the contours visible.
+Por ejemplo, al mostrar componentes de deformación no lineal o esfuerzos en exceso, a menudo es útil que solo sean visibles las partes de los contornos distintas de cero.
 
-If the desired parameter has a negative value simply swap the maximum and minimum contour range or plot the absolute value of the parameter.
+Si el parámetro deseado tiene un valor negativo, simplemente intercambie el máximo y el mínimo del rango de contornos o grafique el valor absoluto del parámetro.
 
-Max Contour – when unchecked, contours above the maximum contour range are not drawn.
+Max Contour – cuando no está marcada, no se dibujan los contornos por encima del máximo del rango de contornos.
 
-- Tension Cutoff Symbol – when checked a special tension symbol will be plotted anywhere the stress state is below the specified tension cutoff. This option is only used for strength factor plots.
+- Tension Cutoff Symbol – cuando está marcada, se graficará un símbolo especial de tracción en todos los lugares donde el estado de esfuerzos esté por debajo del límite de tracción especificado. Esta opción solo se usa en los gráficos de factores de resistencia.
 
-- Smooth Contours – if you have not checked the linear analysis option, results are only calculated at the centre of each boundary element and contour plots of surface values will appear very checkered. This option smoothes these contours to assist in interpretation.
+- Smooth Contours – si no ha marcado la opción de análisis lineal, los resultados solo se calculan en el centro de cada elemento de borde y los gráficos de contornos de valores superficiales se verán muy cuadriculados. Esta opción suaviza estos contornos para facilitar la interpretación.
 
-If you have checked the linear analysis option results are calculated at element corners. Since no smoothing is required this option is ignored.
+Si ha marcado la opción de análisis lineal, los resultados se calculan en las esquinas de los elementos. Como no se requiere suavizado, esta opción se ignora.
 
-This option has no effect on grid plots.
+Esta opción no tiene efecto sobre los gráficos de grillas.
 
-Fault contours – Contours are drawn on fault surfaces. These are DD surfaces with fault-gouge material type.
+Fault contours – se dibujan contornos sobre las superficies de falla. Estas son superficies DD con tipo de material arcilla de falla (fault-gouge).
 
-Excavation contours – Contours are drawn on excavation surfaces. These are FF or DD surfaces with 0 material type.
+Excavation contours – se dibujan contornos sobre las superficies de excavación. Estas son superficies FF o DD con tipo de material 0.
 
-Scalled Contours – display contours as a topographical surface.
+Scalled Contours – muestra los contornos como una superficie topográfica.
 
-The height normal to the plane is scaled to the stress magnitude such that if the magnitude equals the minimum of the contour range, the height is drawn with zero length. If the magnitude equals the maximum of the contour range, the vector is drawn with the length specified by the CRadius: parameter.
+La altura normal al plano se escala según la magnitud del esfuerzo, de modo que si la magnitud es igual al mínimo del rango de contornos, la altura se dibuja con largo cero. Si la magnitud es igual al máximo del rango de contornos, el vector se dibuja con el largo especificado por el parámetro CRadius:.
 
-For line grids, the radius of the tube is scaled.
+En el caso de grillas lineales, se escala el radio del tubo.
 
-UB disks – toggles display of planar contour plot or disks representing the orientation of the UB plane. Refer to UB-Plane Parameters for more information.
+UB disks – alterna la visualización del gráfico de contornos plano o de discos que representan la orientación del plano UB. Para más información, vea UB-Plane Parameters.
 
-Hex contours – in the Visco-Plastic version of Map3D this will enable display of values calculated at internal node points.
+Hex contours – en la versión Visco-Plastic de Map3D, esto habilita la visualización de valores calculados en nodos internos.
 
-Horizontal Legend - orients the contour interval legend horizontally.
+Horizontal Legend - orienta horizontalmente la leyenda de intervalos de contorno.
 
-Vertical Banner - orients the contour interval legend vertically.
+Vertical Banner - orienta verticalmente la leyenda de intervalos de contorno.
 
-GSpacing: - sets the grid interval.
+GSpacing: - define el intervalo de la grilla.
 
-CRadius - sets the radius for contouring of line grids.
+CRadius - define el radio para el contorneo de grillas lineales.
 
 #### Miscellaneous:
 
-Apply – regenerates the contour plot.
+Apply – regenera el gráfico de contornos.

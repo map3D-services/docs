@@ -1,104 +1,101 @@
 ---
-title: "Renderizar"
+title: "Renderização"
 ---
-
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
 
 ## 5.2.6.1 Block Outlines
 
-Sets up rendering options for the model.
+Configura as opções de renderização do modelo.
 
-View > Render > Block Outlines - blocks are drawn with outlines showing the edges of the blocks.
+View > Render > Block Outlines - os blocos são desenhados com contornos mostrando suas arestas.
 
-View > Render > Grid Lines - blocks are drawn with lines at regular grid intervals. You are prompted for the grid interval when you activate this feature.
+View > Render > Grid Lines - os blocos são desenhados com linhas em intervalos regulares da grade. O intervalo da grade é solicitado quando você ativa este recurso.
 
-View > Render > Block Colours - blocks are drawn with colour shading. Turn this feature off for a wireframe view.
+View > Render > Block Colours - os blocos são desenhados com sombreamento de cor. Desative este recurso para obter uma vista de estrutura de arame.
 
-View > Render > Material Numbers - blocks are coloured corresponding to the material property inserted in the block. The same block may have different materials in it depending on the currently active mining step.
+View > Render > Material Numbers - os blocos são coloridos conforme a propriedade de material atribuída ao bloco. Um mesmo bloco pode ter materiais diferentes dependendo da etapa de lavra ativa no momento.
 
-When using this function, make sure to select the appropriate mining step
+Ao usar esta função, certifique-se de selecionar a etapa de lavra apropriada
 
 #### File > Mining Step
 
-View > Render > Mining Step Numbers - blocks are coloured corresponding to the mining step at which they are excavated.
+View > Render > Mining Step Numbers - os blocos são coloridos conforme a etapa de lavra em que são escavados.
 
-View > Render > Dark Shading - blocks are drawn with a dark light-source shading model. You are prompted for an edge radius when you activate this feature. The edge radius is used to shade edges and corners to give them a rounded appearance. The edge radius should be specified as a fraction of the block thickness. Shading can considerably slow down the refresh rate.
+View > Render > Dark Shading - os blocos são desenhados com um modelo de sombreamento de fonte de luz escuro. Um raio de aresta é solicitado quando você ativa este recurso. O raio de aresta é usado para sombrear arestas e cantos, dando-lhes aparência arredondada. O raio de aresta deve ser especificado como uma fração da espessura do bloco. O sombreamento pode reduzir consideravelmente a taxa de atualização.
 
-View > Render > Bright Shading - blocks are drawn with a bright light-source shading model. You are prompted for an edge radius when you activate this feature. The edge radius is used to shade edges and corners to give them a rounded appearance. The edge radius should be specified as a fraction of the block thickness. Shading can considerably slow down the refresh rate.
+View > Render > Bright Shading - os blocos são desenhados com um modelo de sombreamento de fonte de luz brilhante. Um raio de aresta é solicitado quando você ativa este recurso. O raio de aresta é usado para sombrear arestas e cantos, dando-lhes aparência arredondada. O raio de aresta deve ser especificado como uma fração da espessura do bloco. O sombreamento pode reduzir consideravelmente a taxa de atualização.
 
-View > Render > Texture Rendering - Toggles texture rendering on/off. Texture rendering allow you to colour surfaces with a bitmap image instead of a solid colour.Refer to Assign Bock Textures
+View > Render > Texture Rendering - ativa ou desativa a renderização de texturas. A renderização de texturas permite colorir as superfícies com uma imagem bitmap em vez de uma cor sólida. Veja Assign Bock Textures
 
-View > Render > Block Numbers - blocks are drawn with numbers on their surfaces. These numbers correspond to the currently selected render mode: Block Colours, Material Numbers, or Mining Step Numbers.
+View > Render > Block Numbers - os blocos são desenhados com números em suas superfícies. Esses números correspondem ao modo de renderização atualmente selecionado: Block Colours, Material Numbers ou Mining Step Numbers.
 
-View > Render > Block Names - blocks are drawn with the block names on their surfaces.
+View > Render > Block Names - os blocos são desenhados com os nomes dos blocos em suas superfícies.
 
-View > Render > Coordinate Numbers - blocks are drawn with the block names on their surfaces.
+View > Render > Coordinate Numbers - os blocos são desenhados com os nomes dos blocos em suas superfícies.
 
-View > Render > Backfacing Surfaces - when activated, back-facing surfaces of 3D FF blocks are drawn. Generally the user does not need or want to see these surfaces.
+View > Render > Backfacing Surfaces - quando ativada, as faces posteriores dos blocos FF 3D são desenhadas. Em geral, o usuário não precisa nem deseja ver essas superfícies.
 
-View > Render > Fixed With Spacing - when activated, surfaces with specified fixed width discretization will be rendered showing the discretization.
+View > Render > Fixed With Spacing - quando ativada, as superfícies com discretização de largura fixa especificada são renderizadas mostrando a discretização.
 
-View > Render > Discretize - Toggles the display of discretized and non-discretized views of the model. View > Render > Perspective - Toggles the display of perspective or orthogonal viewing. In orthogonal mode, all dimensions are drawn to true scale. In perspective view, entities further from the observer are drawn smaller in size.
+View > Render > Discretize - alterna a exibição do modelo discretizado e não discretizado. View > Render > Perspective - alterna entre a visualização em perspectiva e a ortogonal. No modo ortogonal, todas as dimensões são desenhadas em escala real. Na vista em perspectiva, as entidades mais distantes do observador são desenhadas menores.
 
-View > Render > Clines Dot Radius - specifies the radius of dots that will be drawn at all corner points along construction lines. This significantly slows the drawing operation and should only be used if needed. A zero value indicates that no dots will be drawn.
+View > Render > Clines Dot Radius - especifica o raio dos pontos que serão desenhados em todos os vértices das linhas de construção. Isso reduz significativamente a velocidade de desenho e só deve ser usado se necessário. Um valor zero indica que nenhum ponto será desenhado.
 
-View > Render > Point Size - specifies the radius of dots that will be drawn at all corner points during selection.
+View > Render > Point Size - especifica o raio dos pontos que serão desenhados em todos os vértices durante a seleção.
 
-View > Render > Line Width - specifies the width of the block outlines and contour lines.
+View > Render > Line Width - especifica a largura dos contornos dos blocos e das linhas de contorno.
 
 ## 5.2.6.9 Assign Block Textures
 
-Texture rendering allow you to colour surfaces with a bitmap image instead of a solid colour. To achieve this, do the following:
+A renderização de texturas permite colorir as superfícies com uma imagem bitmap em vez de uma cor sólida. Para isso, faça o seguinte:
 
-1. select which colour number you want to assign the texture to (eg. Colour 0, Colour 1 ...)
+1. selecione o número de cor ao qual deseja atribuir a textura (p. ex., Colour 0, Colour 1 ...)
 
-2. select one of the pre-defined bitmaps, or select your own bitmap using "Image File".
+2. selecione um dos bitmaps predefinidos ou escolha o seu próprio bitmap com "Image File".
 
-3. In order to map the bitmap image onto each surface you must specify the "Texture Bitmap With" The "Texture Bitmap With" scales the specified bitmap so that the pattern repeated at the geometric width specified.
+3. Para mapear a imagem bitmap em cada superfície, é preciso especificar o "Texture Bitmap With". O "Texture Bitmap With" escalona o bitmap especificado de modo que o padrão se repita na largura geométrica indicada.
 
-For example if you specify 1m as the width, then the bitmap will be scaled such that it is drawn with a width of 1m on your block surfaces.
+Por exemplo, se você especificar 1 m como largura, o bitmap será escalonado de modo a ser desenhado com 1 m de largura nas superfícies dos seus blocos.
 
 ![Figure from page 210](/images/page-210-img-1.png)
 
 ## 5.2.6.10 Small Block Numbers
 
-Sets up rendering options for the model.
+Configura as opções de renderização do modelo.
 
-View > Render > Block Outlines - blocks are drawn with outlines showing the edges of the blocks.
+View > Render > Block Outlines - os blocos são desenhados com contornos mostrando suas arestas.
 
-View > Render > Grid Lines - blocks are drawn with lines at regular grid intervals. You are prompted for the grid interval when you activate this feature.
+View > Render > Grid Lines - os blocos são desenhados com linhas em intervalos regulares da grade. O intervalo da grade é solicitado quando você ativa este recurso.
 
-View > Render > Block Colours - blocks are drawn with colour shading. Turn this feature off for a wireframe view.
+View > Render > Block Colours - os blocos são desenhados com sombreamento de cor. Desative este recurso para obter uma vista de estrutura de arame.
 
-View > Render > Material Numbers - blocks are coloured corresponding to the material property inserted in the block. The same block may have different materials in it depending on the currently active mining step.
+View > Render > Material Numbers - os blocos são coloridos conforme a propriedade de material atribuída ao bloco. Um mesmo bloco pode ter materiais diferentes dependendo da etapa de lavra ativa no momento.
 
-When using this function, make sure to select the appropriate mining step
+Ao usar esta função, certifique-se de selecionar a etapa de lavra apropriada
 
 #### File > Mining Step
 
-View > Render > Mining Step Numbers - blocks are coloured corresponding to the mining step at which they are excavated.
+View > Render > Mining Step Numbers - os blocos são coloridos conforme a etapa de lavra em que são escavados.
 
-View > Render > Dark Shading - blocks are drawn with a dark light-source shading model. You are prompted for an edge radius when you activate this feature. The edge radius is used to shade edges and corners to give them a rounded appearance. The edge radius should be specified as a fraction of the block thickness. Shading can considerably slow down the refresh rate.
+View > Render > Dark Shading - os blocos são desenhados com um modelo de sombreamento de fonte de luz escuro. Um raio de aresta é solicitado quando você ativa este recurso. O raio de aresta é usado para sombrear arestas e cantos, dando-lhes aparência arredondada. O raio de aresta deve ser especificado como uma fração da espessura do bloco. O sombreamento pode reduzir consideravelmente a taxa de atualização.
 
-View > Render > Bright Shading - blocks are drawn with a bright light-source shading model. You are prompted for an edge radius when you activate this feature. The edge radius is used to shade edges and corners to give them a rounded appearance. The edge radius should be specified as a fraction of the block thickness. Shading can considerably slow down the refresh rate.
+View > Render > Bright Shading - os blocos são desenhados com um modelo de sombreamento de fonte de luz brilhante. Um raio de aresta é solicitado quando você ativa este recurso. O raio de aresta é usado para sombrear arestas e cantos, dando-lhes aparência arredondada. O raio de aresta deve ser especificado como uma fração da espessura do bloco. O sombreamento pode reduzir consideravelmente a taxa de atualização.
 
-View > Render > Texture Rendering - Toggles texture rendering on/off. Texture rendering allow you to colour surfaces with a bitmap image instead of a solid colour.Refer to Assign Bock Textures
+View > Render > Texture Rendering - ativa ou desativa a renderização de texturas. A renderização de texturas permite colorir as superfícies com uma imagem bitmap em vez de uma cor sólida. Veja Assign Bock Textures
 
-View > Render > Block Numbers - blocks are drawn with numbers on their surfaces. These numbers correspond to the currently selected render mode: Block Colours, Material Numbers, or Mining Step Numbers.
+View > Render > Block Numbers - os blocos são desenhados com números em suas superfícies. Esses números correspondem ao modo de renderização atualmente selecionado: Block Colours, Material Numbers ou Mining Step Numbers.
 
-View > Render > Block Names - blocks are drawn with the block names on their surfaces.
+View > Render > Block Names - os blocos são desenhados com os nomes dos blocos em suas superfícies.
 
-View > Render > Coordinate Numbers - blocks are drawn with the block names on their surfaces.
+View > Render > Coordinate Numbers - os blocos são desenhados com os nomes dos blocos em suas superfícies.
 
-View > Render > Backfacing Surfaces - when activated, back-facing surfaces of 3D FF blocks are drawn. Generally the user does not need or want to see these surfaces.
+View > Render > Backfacing Surfaces - quando ativada, as faces posteriores dos blocos FF 3D são desenhadas. Em geral, o usuário não precisa nem deseja ver essas superfícies.
 
-View > Render > Fixed With Spacing - when activated, surfaces with specified fixed width discretization will be rendered showing the discretization.
+View > Render > Fixed With Spacing - quando ativada, as superfícies com discretização de largura fixa especificada são renderizadas mostrando a discretização.
 
-View > Render > Discretize - Toggles the display of discretized and non-discretized views of the model. View > Render > Perspective - Toggles the display of perspective or orthogonal viewing. In orthogonal mode, all dimensions are drawn to true scale. In perspective view, entities further from the observer are drawn smaller in size.
+View > Render > Discretize - alterna a exibição do modelo discretizado e não discretizado. View > Render > Perspective - alterna entre a visualização em perspectiva e a ortogonal. No modo ortogonal, todas as dimensões são desenhadas em escala real. Na vista em perspectiva, as entidades mais distantes do observador são desenhadas menores.
 
-View > Render > Clines Dot Radius - specifies the radius of dots that will be drawn at all corner points along construction lines. This significantly slows the drawing operation and should only be used if needed. A zero value indicates that no dots will be drawn.
+View > Render > Clines Dot Radius - especifica o raio dos pontos que serão desenhados em todos os vértices das linhas de construção. Isso reduz significativamente a velocidade de desenho e só deve ser usado se necessário. Um valor zero indica que nenhum ponto será desenhado.
 
-View > Render > Point Size - specifies the radius of dots that will be drawn at all corner points during selection.
+View > Render > Point Size - especifica o raio dos pontos que serão desenhados em todos os vértices durante a seleção.
 
-View > Render > Line Width - specifies the width of the block outlines and contour lines.
+View > Render > Line Width - especifica a largura dos contornos dos blocos e das linhas de contorno.
