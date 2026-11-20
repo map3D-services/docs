@@ -2,30 +2,27 @@
 title: "编辑"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.5.4.1 实体属性
 
-## 5.5.4.1 Entity Properties
+编辑块体类型、颜色、开采顺序等。
 
-Edit block type, colour, mining sequence etc.
-
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 406](/images/page-406-img-14.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -33,163 +30,163 @@ CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+如果对话框中的任何字段显示为 "Variable"，则是因为您选择的某些块体在该字段上具有不同的属性。如果希望保持这些属性不变（即每个块体各不相同），请将该字段保留为 "Variable"。如果希望为所有选定块体更改该字段的值，请输入所需的值。
 
 ![Figure from page 407](/images/page-407-img-6.png)
 
-Block Volume - If you have selected all FF blocks, the total combined volume of the blocks will be displayed. If you have selected all FF blocks, the total combined volume of the blocks will be displayed.
+Block Volume - 如果您选择的全部是 FF 块体，将显示这些块体的总体积。如果您选择的全部是 FF 块体，将显示这些块体的总体积。
 
-DDPlane Area - If you have selected all DD blocks, displays the combined area of all of the DDPlanes included in the DDLoop.
+DDPlane Area - 如果您选择的全部是 DD 块体，则显示 DDLoop 中包含的所有 DDPlane 的总面积。
 
-Block Name - specifies a descriptive name for the block.
+Block Name - 指定块体的描述性名称。
 
-Element Type - specifies the type of boundary element that will be used for the block.
+Element Type - 指定块体所使用的边界单元类型。
 
-- Displacement Discontinuity - DD type elements should be used for tabular mining excavations, fractures and fault planes.
+- Displacement Discontinuity - DD 型单元应用于板状开采空区、裂隙和断层面。
 
-- Fictitious Force - FF type elements should be used for three-dimensional features such as excavations, alternate material zones, back-filled stopes etc.
+- Fictitious Force - FF 型单元应用于三维要素，如采空区、替代材料区、充填采场等。
 
-- Inactive elements can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+- 非活动单元可用于显示仅供可视化而包含、不用于实际应力分析的要素。
 
-- Note that DD type elements can be changed into GPlanes.
+- 请注意，DD 型单元可以转换为 GPlane。
 
-Block Colour - specifies the colour number that will be used to display the block.
+Block Colour - 指定用于显示块体的颜色编号。
 
-- Specifies the colour number that will be assigned to each button. A total of 10 colours are available for display. These are numbered respectively
+- 指定分配给每个按钮的颜色编号。共有 10 种颜色可供显示。它们依次编号为
 
-- 1 through 10,
+- 1 到 10，
 
-11 through 20,
+11 到 20，
 
-21 through 30, etc.,
+21 到 30 等，
 
-- such that the same colour is displayed for numbers 1, 11, 21...,
+- 因此编号 1、11、21 ……显示相同的颜色，
 
 - 2, 22, 32...,
 
 - 3, 23, 33..., etc.
 
-Fixed Element Width - specifies the user defined element width.
+Fixed Element Width - 指定用户定义的单元宽度。
 
-- This parameter can be used to force uniform discretization on selected entities. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- 该参数可用于对选定实体强制采用均匀离散化。指定此值时务必格外小心，因为较小的值很容易导致问题规模过大。
 
-- In general this option should not be used (unchecked) and discretization should be left to the _AL_ and _AG_ parameters. These latter parameters will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size. For further discussion refer to
+- 一般情况下不应使用此选项（取消选中），离散化应交由 _AL_ 和 _AG_ 参数处理。后者仅在需要分析结果的位置集中布置单元，从而优化单元使用并最小化问题规模。更多讨论请参阅
 
 CAD > Properties Control Parameters
 
-- This parameter can also be used to avoid making surfaces with sides larger than this during the intersection analysis. Any surfaces whose side length exceeds this dimension will not be collapsed
+- 在相交分析期间，该参数也可用于避免生成边长大于此值的表面。边长超过此尺寸的任何表面都不会被合并（collapse）
 
 #### Analysis > Options > Collapse
 
-- During the discretization process, any surface whose side length exceeds this dimension will be subdivided to prevent surfaces having sides larger than this.
+- 在离散化过程中，边长超过此尺寸的任何表面都将被细分，以防止出现边长大于此值的表面。
 
-- For an example of the use of this parameter refer to Tabular Mining Example
+- 有关此参数的使用示例，请参阅 Tabular Mining Example
 
-Matl_Code LERD/MStep - specifies the material code that will be substituted into the block for the LERD/LSS calculation.
+Matl_Code LERD/MStep - 指定用于 LERD/LSS 计算时代入块体的材料代码。
 
-The first box is for the material code.
+第一个框用于填写材料代码。
 
-The second box is to specify the mining step number when the calculation is to be done. If this box is left blank then the LERD calculation will be done for all steps.
+第二个框用于指定进行计算的开采步骤编号。如果此框留空，则对所有步骤进行 LERD 计算。
 
 #### Analysis > Options > LERD/LSS.
 
-DDPlane Thickness - specifies the thickness of the material inserted into the DD element (i.e. fault gouge, seam width, mining width or pillar height).
+DDPlane Thickness - 指定插入 DD 单元中的材料厚度（即断层泥、矿层宽度、采幅或矿柱高度）。
 
-- Normal displacement (closure) of the feature when in-filled will be limited to this thickness. Also, the normal displacement (closure) and shear displacement (ride) are divided by the thickness to determine the strain occurring in the in-filling material
+- 该要素被充填时，其法向位移（闭合量）将被限制在此厚度内。此外，法向位移（闭合量）和剪切位移（ride）都要除以该厚度，以确定充填材料中发生的应变
 
 Mohr-Coulomb in DD planes
 
 Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes
 
-- This parameter should be specified in the same units used to specify the coordinate positions (e.g. metres or feet).
+- 该参数应使用与指定坐标位置相同的单位（例如米或英尺）。
 
-Mining Step n - specifies the material code that will be used for this block in mining step n.
+Mining Step n - 指定在开采步骤 n 中用于该块体的材料代码。
 
-- In the above example, the block is non-existent at step 1, has material #2 (Ore) inserted in it at step 2, it is excavated at step 3 (material code 0 means to excavate), and finally at step 4 material #5 (backfill) is inserted.
+- 在上例中，块体在步骤 1 中不存在，在步骤 2 中插入材料 #2（矿石），在步骤 3 中被开挖（材料代码 0 表示开挖），最后在步骤 4 中插入材料 #5（充填体）。
 
-- When you use a positive material number, the material is placed into the block at the specified initial stress state, and is then allowed to deform according to the elastic/plastic properties you have set for that material number.
+- 使用正的材料编号时，材料以指定的初始应力状态置入块体，然后按您为该材料编号设置的弹/塑性属性发生变形。
 
-- When you use a negative material number, the material is placed into the block at the specified initial stress state, but the stress state is held at these vales regardless of the deformations, thereby providing a stress boundary condition.
+- 使用负的材料编号时，材料以指定的初始应力状态置入块体，但无论发生何种变形，应力状态都保持在这些数值，从而提供应力边界条件。
 
-Extrude DD into FF blocks - allows you to extrude a DD plane into an FF block. You will be prompted for the extrusion vector
+Extrude DD into FF blocks - 允许您将 DD 平面拉伸为 FF 块体。系统将提示您输入拉伸矢量
 
-More Steps - allows specification of additional mining steps.
+More Steps - 允许指定更多开采步骤。
 
-Clear All Steps - clears all mining steps (1-100).
+Clear All Steps - 清除所有开采步骤（1-100）。
 
-Copy From… - allows you to select another block to copy the entity properties from.
+Copy From… - 允许您选择另一个块体，从中复制实体属性。
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - 完成块体编辑并修改已更改的所有属性。
 
-Cancel - aborts block editing.
+Cancel - 中止块体编辑。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-DD blocks can be extruded into 3D FF blocks simply by changing the element type from Displacement Discontinuity to Fictitious Force.
+只需将单元类型从 Displacement Discontinuity 更改为 Fictitious Force，即可将 DD 块体拉伸为 3D FF 块体。
 
 ![Figure from page 409](/images/page-409-img-18.png)
 
-In this case corners 1 through 4 define the base of the block. The top and sides are automatically generated during the extrusion process. FF blocks can be collapsed into DD planes by changing the element type from Fictitious Force to Displacement Discontinuity. In this case the base of the block (the side defined by corners 1, 2, 3 and 4) will become the DD plane and the remainder of the block sides will be discarded.
+在这种情况下，角点 1 到 4 定义块体的底面。顶面和侧面在拉伸过程中自动生成。将单元类型从 Fictitious Force 更改为 Displacement Discontinuity，可将 FF 块体合并为 DD 平面。在这种情况下，块体的底面（由角点 1、2、3 和 4 定义的面）将成为 DD 平面，块体的其余各面将被丢弃。
 
-Note that it is possible to create zero volume blocks for example by specifying a zero length offset vector. This allows users to construct individual FF surfaces if desired. While this is permissible it is not recommended as this can lead to unclosed volumes.
+请注意，可以创建体积为零的块体，例如指定长度为零的偏移矢量。这使用户可以根据需要构建单个 FF 表面。虽然这是允许的，但不建议这样做，因为它可能导致体积不闭合。
 
-Notes
+注意
 
-Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable
+应使用不同的颜色编号来表示块体的逻辑分组（例如不同的水平、剖面或逻辑开采单元，如开拓、采场等）。这些颜色可由用户定义
 
 #### Tools > Custom Colours
 
-Any blocks with the same colour number will be automatically combined into single complex shapes by Map3D.
+具有相同颜色编号的所有块体将被 Map3D 自动合并为单一的复杂形状。
 
-Since it is easy to toggle on and off the display of specific block colour numbers
+由于很容易开启和关闭特定块体颜色编号的显示
 
 #### View > Hide Block Colours
 
-This provides an efficient method to work with complex model data.
+这为处理复杂的模型数据提供了一种高效的方法。
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-For discussion on model building aspects refer to:
+有关模型构建方面的讨论，请参阅：
 
 #### Model Building and Editing
 
-For tutorials on model building refer to:
+有关模型构建教程，请参阅：
 
 Model Building Tutorials
 
-## 5.5.4.2 Erase Entities
+## 5.5.4.2 删除实体
 
-Erase selected entities.
+删除选定的实体。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 410](/images/page-410-img-17.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities,
 
@@ -199,307 +196,307 @@ CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit 
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.3 Move Entities
+## 5.5.4.3 移动实体
 
-Move selected entities.
+移动选定的实体。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 411](/images/page-411-img-22.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities,
 
 CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 412](/images/page-412-img-9.png)
 
-X, Y and Z – offset specify the components of the offset vector. All selected entities will be moved by this amount.
+X, Y and Z – offset 指定偏移矢量的各分量。所有选定实体都将移动该量。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick - 激活光标十字线，以便从模型中交互式选取偏移矢量。这需要选取两个点来定义该矢量。
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected entities will be moved by this amount.
+Length, Plunge and Direction - 指定偏移矢量的各分量。所有选定实体都将移动该量。
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - 激活光标，以便交互式选择一个表面，使偏移矢量垂直于该表面。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - 完成编辑并调用对选定块体的实体属性的编辑。
 
-OK - completes editing of the offset vector and moves the selected blocks.
+OK - 完成偏移矢量的编辑并移动选定的块体。
 
-Cancel - aborts moving of entities.
+Cancel - 中止实体的移动。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.4 Copy Entities
+## 5.5.4.4 复制实体
 
-Copy selected entities.
+复制选定的实体。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 87](/images/page-87-img-12.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 414](/images/page-414-img-1.png)
 
-X, Y and Z – offset specify the components of the offset vector. All selected entities will be copied to the location specified by this offset.
+X, Y and Z – offset 指定偏移矢量的各分量。所有选定实体都将被复制到该偏移所指定的位置。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick - 激活光标十字线，以便从模型中交互式选取偏移矢量。这需要选取两个点来定义该矢量。
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected entities will be copied to the location specified by this offset.
+Length, Plunge and Direction - 指定偏移矢量的各分量。所有选定实体都将被复制到该偏移所指定的位置。
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - 激活光标，以便交互式选择一个表面，使偏移矢量垂直于该表面。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - 完成编辑并调用对选定块体的实体属性的编辑。
 
-OK - completes editing of the offset vector and moves the selected blocks.
+OK - 完成偏移矢量的编辑并移动选定的块体。
 
-Cancel - aborts moving of entities.
+Cancel - 中止实体的移动。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.5 Scale Entities
+## 5.5.4.5 缩放实体
 
-Scale the selected entities.
+缩放选定的实体。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 415](/images/page-415-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities,
 
 CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 415](/images/page-415-img-23.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre for scaling. During scaling, this point will stay stationary. All other points will be moved to achieve the desired scaling.
+X, Y and Z – coordinates 指定缩放中心的坐标。缩放期间，该点保持不动。所有其他点都将移动以实现所需的缩放。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - 激活光标十字线，以便从模型中交互式选取旋转中心。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+选取后，缩放中心的各分量会显示在对话框中。
 
-Centroid - calculates the centre of all selected entities.
+Centroid - 计算所有选定实体的中心。
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - 完成坐标编辑，并提示您输入缩放系数。
 
 ![Figure from page 416](/images/page-416-img-4.png)
 
-X, Y and Z - scale specifies the amount by which the entities are to be scaled. Below, the block is scaled 1.5 times in the y direction.
+X, Y and Z - scale 指定实体的缩放量。下图中，块体在 y 方向上放大了 1.5 倍。
 
 ![Figure from page 416](/images/page-416-img-6.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - 完成编辑并调用对选定块体的实体属性的编辑。
 
-OK - completes editing of the scale factors and scales the selected entities.
+OK - 完成缩放系数的编辑并缩放选定的实体。
 
-Cancel - aborts the scaling of entities.
+Cancel - 中止实体的缩放。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.6 Rotate Azimuth
+## 5.5.4.6 旋转方位角
 
-Rotate the azimuth of selected entities.
+旋转选定实体的方位角。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 417](/images/page-417-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 417](/images/page-417-img-22.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre of rotation.
+X, Y and Z – coordinates 指定旋转中心的坐标。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - 激活光标十字线，以便从模型中交互式选取旋转中心。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+选取后，缩放中心的各分量会显示在对话框中。
 
-Centroid - calculates the centre of all selected entities.
+Centroid - 计算所有选定实体的中心。
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - 完成坐标编辑，并提示您输入缩放系数。
 
 ![Figure from page 418](/images/page-418-img-3.png)
 
-- Azimuth - specifies the angle (in degrees) through which you want the selected entities to be rotated. · The rotation takes place in the X-Y plane, thus all vertical lines remain vertical.
+- Azimuth - 指定希望选定实体旋转的角度（度）。· 旋转在 X-Y 平面内进行，因此所有竖直线保持竖直。
 
 ![Figure from page 418](/images/page-418-img-5.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - 完成编辑并调用对选定块体的实体属性的编辑。
 
-OK - completes editing of the azimuth and rotates the selected entities.
+OK - 完成方位角的编辑并旋转选定的实体。
 
-Cancel - aborts the rotating of entities.
+Cancel - 中止实体的旋转。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.7 Rotate Dip
+## 5.5.4.7 旋转倾角
 
-Rotate the dip of selected entities.
+旋转选定实体的倾角。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 419](/images/page-419-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -507,185 +504,185 @@ CAD > Edit > Slice Entities Slice selected entities,
 
 CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 419](/images/page-419-img-25.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre of rotation.
+X, Y and Z – coordinates 指定旋转中心的坐标。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - 激活光标十字线，以便从模型中交互式选取旋转中心。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+选取后，缩放中心的各分量会显示在对话框中。
 
-Centroid - calculates the centre of all selected entities.
+Centroid - 计算所有选定实体的中心。
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - 完成坐标编辑，并提示您输入缩放系数。
 
 ![Figure from page 420](/images/page-420-img-4.png)
 
-Dip - specifies the angle (in degrees) through which you want the selected entities to be rotated.
+Dip - 指定希望选定实体旋转的角度（度）。
 
-Dip Direction - specifies the azimuth (in degrees) at which the dip is to take place. The dip direction is 90° from the strike of the dip plane.
+Dip Direction - 指定发生倾斜的方位角（度）。倾向与倾斜面的走向成 90°。
 
 ![Figure from page 420](/images/page-420-img-7.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - 完成编辑并调用对选定块体的实体属性的编辑。
 
-OK - completes editing of the dip and dip direction and rotates the selected entities.
+OK - 完成倾角和倾向的编辑并旋转选定的实体。
 
-Cancel - aborts the rotating of entities.
+Cancel - 中止实体的旋转。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.8 Slice Entities
+## 5.5.4.8 切割实体
 
-Slice entities.
+切割实体。
 
-All entities can be sliced including FF blocks, DD planes, Grid planes, Grid lines and Construction lines.
+所有实体都可以被切割，包括 FF 块体、DD 平面、网格平面、网格线和构造线。
 
 Video Demo of Model_Simplification_Using_Slicing
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要编辑的实体列表
 
 ![Figure from page 419](/images/page-419-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
 ![Figure from page 421](/images/page-421-img-13.png)
 
-X, Y and Z – coordinate specify a point on the slicing/cutting plane.
+X, Y and Z – coordinate 指定切割平面上的一点。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the point.
+Pick - 激活光标十字线，以便交互式选取该点。
 
-Dip of Plane, Dip Direction and Normal - specify the orientation of the slicing/cutting plane.
+Dip of Plane, Dip Direction and Normal - 指定切割平面的方向。
 
-Norm - activates the cursor allowing interactive selection of a surface to make the slice plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+Norm - 激活光标，以便交互式选择一个表面，使切割平面与之平行。平面的倾角和倾向将被设置为垂直于所选表面。
 
-Apply Slice Colour - when checked this specifies the colour number to be assigned to the CLines that are created during slicing, otherwise the colour of the object being sliced will be used.
+Apply Slice Colour - 选中时，指定分配给切割期间创建的 CLine 的颜色编号；否则将使用被切割对象的颜色。
 
-Multiple Slices - specifies that multiple slices should be created at the specified slice spacing.
+Multiple Slices - 指定按指定的切片间距创建多个切片。
 
-Require Loops - slices can either be single lines or optionally formed into closed loops.
+Require Loops - 切片可以是单条线，也可以选择形成闭合回路。
 
-Slice Spacing - specifies the optional multi-slice spacing.
+Slice Spacing - 指定可选的多切片间距。
 
-Show Slices (hide other CLines) - will automatically hide all pre-existing CLines and display the newly created Cline slices.
+Show Slices (hide other CLines) - 将自动隐藏所有已有的 CLine，并显示新创建的 CLine 切片。
 
-Slice Spacing (hide all Geometry) - will automatically hide all pre-existing Geometry and display the newly created Cline slices.
+Slice Spacing (hide all Geometry) - 将自动隐藏所有已有的几何体，并显示新创建的 CLine 切片。
 
-Slice Spacing (translucent Geometry) - will automatically set all pre-existing Geometry to translucent, and display the newly created Cline slices.
+Slice Spacing (translucent Geometry) - 将自动把所有已有的几何体设为半透明，并显示新创建的 CLine 切片。
 
-- There are multiple "View > Hide" options available to control the display of the various entities including:
+- 有多个 "View > Hide" 选项可用于控制各类实体的显示，包括：
 
 ![Figure from page 422](/images/page-422-img-13.png)
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-Slice - executes the slicing/cutting operation for the selected blocks.
+Slice - 对选定的块体执行切割操作。
 
-Cancel - aborts slicing of entities.
+Cancel - 中止实体的切割。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.9 Dump to File
+## 5.5.4.9 转储到文件
 
-Dumps selected entities to a file.
+将选定的实体转储到文件。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to dump
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要转储的实体列表
 
 ![Figure from page 423](/images/page-423-img-14.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.10 Group Entities
+## 5.5.4.10 组合实体
 
-Group the selected entities into a single block. This is an advanced option that should only be used by experienced users.
+将选定的实体组合为单个块体。这是一个高级选项，仅应由有经验的用户使用。
 
-At times you may need to erase or build individual surfaces, then group them together to form a single block. This function groups entities together to form seamless closed block from individual surfaces. Note that when using this operation the user must ensure that the grouped surfaces form a seamless, closed surface envelope with no internal surfaces. The presence of internal surfaces may cause errors.
+有时可能需要删除或构建单个表面，然后将它们组合成一个块体。此功能将实体组合起来，由单个表面形成无缝闭合的块体。请注意，使用此操作时，用户必须确保被组合的表面形成无缝闭合的表面包络，且没有内部表面。存在内部表面可能导致错误。
 
-The group function was implemented to allow advanced users to erase a few surface elements and rebuild them. It is also useful for joining surfaces together that are brought in from CAD packages. Note that the user is required to ensure that there are no internal surfaces and the surfaces you group together do form a seamless, closed surface envelope.
+组合功能的实现是为了让高级用户可以删除少数表面单元并重新构建。它还可用于连接从 CAD 软件包带入的表面。请注意，用户必须确保没有内部表面，并且所组合的表面确实形成了无缝闭合的表面包络。
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to group
+可以点击按钮，或直接在任意实体上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要组合的实体列表
 
 ![Figure from page 424](/images/page-424-img-11.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 此工具栏的使用方法详见 Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -693,169 +690,169 @@ CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-If any of the fields in the dialogue box read "Variable" it is because some of the surfaces you have selected have different properties for that field. In order to group the selected entities into a single block, all surfaces must have the same settings for all fields. Use CAD > Edit > Entity Properties to do this.
+如果对话框中的任何字段显示为 "Variable"，则是因为您选择的某些表面在该字段上具有不同的属性。要将选定的实体组合为单个块体，所有表面在所有字段中必须具有相同的设置。请使用 CAD > Edit > Entity Properties 来完成此操作。
 
 ![Figure from page 147](/images/page-147-img-5.png)
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.11 Stretch Verticies
+## 5.5.4.11 拉伸顶点
 
-Adds an offset to selected vertices.
+对选定顶点添加偏移。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to stretch
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要拉伸的顶点列表
 
 ![Figure from page 426](/images/page-426-img-5.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 427](/images/page-427-img-2.png)
 
-X, Y and Z – offset specify the components of the stretch vector.
+X, Y and Z – offset 指定拉伸矢量的各分量。
 
-- All selected vertices will be moved to the location specified by this offset.
+- 所有选定顶点都将移动到该偏移所指定的位置。
 
-- This requires that you select two points to define this vector.
+- 这需要选取两个点来定义该矢量。
 
-- Once selected, the components of the offset vector are displayed in the dialogue box.
+- 选取后，偏移矢量的各分量会显示在对话框中。
 
-Pick activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick 激活光标十字线，以便从模型中交互式选取偏移矢量。这需要选取两个点来定义该矢量。
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected vertices will be moved by this amount.
+Length, Plunge and Direction - 指定偏移矢量的各分量。所有选定顶点都将移动该量。
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - 激活光标，以便交互式选择一个表面，使偏移矢量垂直于该表面。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.12 Move Verticies to point
+## 5.5.4.12 将顶点移动到点
 
-Moves selected vertices to a point.
+将选定的顶点移动到某个点。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要移动的顶点列表。
 
 ![Figure from page 428](/images/page-428-img-5.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 428](/images/page-428-img-25.png)
 
-X, Y and Z – coordinate specify the coordinates of the point. All selected vertices will be moved to this point.
+X, Y and Z – coordinate 指定点的坐标。所有选定顶点都将移动到该点。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the point from the model.
+Pick - 激活光标十字线，以便从模型中交互式选取该点。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.13 Move Verticies to X
+## 5.5.4.13 将顶点移动到 X
 
-Moves the X-coordinate of selected vertices.
+移动选定顶点的 X 坐标。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要移动的顶点列表。
 
 ![Figure from page 429](/images/page-429-img-20.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z
 
@@ -865,119 +862,119 @@ CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 430](/images/page-430-img-11.png)
 
-X – coordinate specify the X-coordinate of the point. The X-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+X – coordinate 指定点的 X 坐标。所有选定顶点（即列表中的顶点）的 X 坐标都将移动到该值。
 
-Search width all coordinates with the search width distance of the specified x-coordinate value will be moved even if they are not in the list.
+Search width 与指定的 x 坐标值相距在搜索宽度以内的所有坐标都将被移动，即使它们不在列表中。
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick 激活光标十字线，以便从模型中交互式选取该点。为便于在模型上直观地选取点，所有捕捉功能均可使用
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.14 Move Verticies to Y
+## 5.5.4.14 将顶点移动到 Y
 
-Moves the Y-coordinate of selected vertices.
+移动选定顶点的 Y 坐标。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要移动的顶点列表。
 
 ![Figure from page 431](/images/page-431-img-4.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 431](/images/page-431-img-24.png)
 
-Y – coordinate specify the Y-coordinate of the point. The Y-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+Y – coordinate 指定点的 Y 坐标。所有选定顶点（即列表中的顶点）的 Y 坐标都将移动到该值。
 
-Search width all coordinates with the search width distance of the specified y-coordinate value will be moved even if they are not in the list.
+Search width 与指定的 y 坐标值相距在搜索宽度以内的所有坐标都将被移动，即使它们不在列表中。
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick 激活光标十字线，以便从模型中交互式选取该点。为便于在模型上直观地选取点，所有捕捉功能均可使用
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.15 Move Verticies to Z
+## 5.5.4.15 将顶点移动到 Z
 
-Moves the Z-coordinate of selected vertices.
+移动选定顶点的 Z 坐标。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要移动的顶点列表。
 
 ![Figure from page 432](/images/page-432-img-19.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y
 
@@ -991,133 +988,133 @@ CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 433](/images/page-433-img-14.png)
 
-Z – coordinate specify the Z-coordinate of the point. The Z-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+Z – coordinate 指定点的 Z 坐标。所有选定顶点（即列表中的顶点）的 Z 坐标都将移动到该值。
 
-Search width all coordinates with the search width distance of the specified z-coordinate value will be moved even if they are not in the list.
+Search width 与指定的 z 坐标值相距在搜索宽度以内的所有坐标都将被移动，即使它们不在列表中。
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick 激活光标十字线，以便从模型中交互式选取该点。为便于在模型上直观地选取点，所有捕捉功能均可使用
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-## 5.5.4.16 Move Verticies to Plane
+## 5.5.4.16 将顶点移动到平面
 
-Moves the selected vertices to a plane. Vertices are moved in the direction normal (or a user specified direction) to the plane.
+将选定的顶点移动到某个平面。顶点沿垂直于该平面的方向（或用户指定的方向）移动。
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要移动的顶点列表。
 
 ![Figure from page 434](/images/page-434-img-4.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 435](/images/page-435-img-1.png)
 
-X Y Z – coordinate specify the coordinates of any point on the plane.
+X Y Z – coordinate 指定平面上任意一点的坐标。
 
-Pick activates the cursor cross-hairs allowing interactive selection of the x y z coordinates of the point on the plane from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick 激活光标十字线，以便从模型中交互式选取平面上该点的 x y z 坐标。为便于在模型上直观地选取点，所有捕捉功能均可使用
 
-Dip of Plane specify the dip of the plane (positive down in degrees).
+Dip of Plane 指定平面的倾角（向下为正，单位为度）。
 
-Dip Direction specify the azimuth of the dip vector (degrees).
+Dip Direction 指定倾斜矢量的方位角（度）。
 
-Norm - activates the cursor allowing interactive selection of a surface to make the plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+Norm - 激活光标，以便交互式选择一个表面，使平面与之平行。平面的倾角和倾向将被设置为垂直于所选表面。
 
-Search width all coordinates with the search width distance of the specified plane will be moved even if they are not in the list.
+Search width 与指定平面相距在搜索宽度以内的所有坐标都将被移动，即使它们不在列表中。
 
-Alternate projection direction - if not checked then all points will be projected on the selected plane in the direction normal to the plane. If checked, then the user can specify their own desired projection direction.
+Alternate projection direction - 如果未选中，则所有点都将沿垂直于平面的方向投影到所选平面上。如果选中，用户可以指定自己所需的投影方向。
 
-Plunge - user specified projection direction.
+Plunge - 用户指定的投影方向。
 
-Direction - user specified projection direction.
+Direction - 用户指定的投影方向。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于在模型上直观地选取点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+选取后，偏移矢量的各分量会显示在对话框中。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 Tools > Double Click Time
 
-## 5.5.4.17 Subdivide Edges
+## 5.5.4.17 细分边
 
 #### CAD > Edit > Remove
 
-Inserts vertices on block edges or construction line edges (also see Construction Vertex).
+在块体边或构造线边上插入顶点（另请参阅 Construction Vertex）。
 
-This routine can be initiated either by picking the button or simple right-clicking on any edge. When you initiate this routine you will first be prompted to build a list of locations where you wish to insert vertices.
+可以点击按钮，或直接在任意边上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要插入顶点的位置列表。
 
 ![Figure from page 436](/images/page-436-img-20.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y
 
@@ -1131,148 +1128,148 @@ CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-Notes:
+注意：
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- 通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- 使用此轨迹平滑功能之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-- You can adjust the double click time using Tools > Double Click Time.
+- 可以使用 Tools > Double Click Time 调整双击时间。
 
-## 5.5.4.18 Smooth Construction Lines
+## 5.5.4.18 平滑构造线
 
-Smooths construction lines by eliminating corner points (also see Construction Vertex).
+通过消除角点来平滑构造线（另请参阅 Construction Vertex）。
 
 #### CAD > Edit > Remove
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to smooth.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要平滑的顶点列表。
 
 ![Figure from page 437](/images/page-437-img-31.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices
 
 CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
 ![Figure from page 438](/images/page-438-img-17.png)
 
-The Spacing value limits the minimum space between points. For example if the Spacing was specified as 2m and the trace length between points 4 and 5 in the following figure was 1.5m, point 4 would be removed and replaced by a straight line between points 3 and 5.
+Spacing 值限制点与点之间的最小间距。例如，如果 Spacing 指定为 2m，而下图中点 4 和点 5 之间的轨迹长度为 1.5m，则点 4 将被删除，并由点 3 和点 5 之间的直线取代。
 
 ![Figure from page 438](/images/page-438-img-19.png)
 
-A zero value for this parameter indicates that it will not be used.
+此参数为零表示不使用该参数。
 
-The Angle value limits the minimum angle between successive line segments. For example if the Angle was specified as 10° and the direction of line segment 3-4 was 7° different than the direction of line
+Angle 值限制相邻线段之间的最小夹角。例如，如果 Angle 指定为 10°，而线段 3-4 的方向与
 
-segment 4-5 in the following figure, point 4 would be removed and replaced by a straight line between points 3 and 5.
+下图中线段 4-5 的方向相差 7°，则点 4 将被删除，并由点 3 和点 5 之间的直线取代。
 
 ![Figure from page 439](/images/page-439-img-3.png)
 
-A zero value for this parameter indicates that it will not be used.
+此参数为零表示不使用该参数。
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - 完成偏移矢量的编辑并拉伸选定的顶点。
 
-Cancel - aborts stretching of vertices.
+Cancel - 中止顶点的拉伸。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-Notes:
+注意：
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- 通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- 使用此轨迹平滑功能之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-- You can adjust the double click time using Tools > Double Click Time.
+- 可以使用 Tools > Double Click Time 调整双击时间。
 
-## 5.5.4.19 Remove Construction Line Vertex
+## 5.5.4.19 删除构造线顶点
 
-Smooths construction lines by eliminating individual corner points (also see Construction Lines).
+通过消除单个角点来平滑构造线（另请参阅 Construction Lines）。
 
 #### CAD > Edit > Smooth
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to remove.
+可以点击按钮，或直接在任意顶点上单击右键来启动此功能。启动此功能后，系统会首先提示您建立要删除的顶点列表。
 
 ![Figure from page 440](/images/page-440-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- 如果勾选了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多项选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，选中的实体会被添加到列表中；但如果按住 Ctrl 键，选中的实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可以拖出交叉窗口。
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- 此工具栏的使用方法详见 Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上一次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 单击右键时按住 Alt 键，会自动重复上一次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选择所需实体后，可以点击任意编辑按钮：
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 单击右键查看选项列表。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次机会通过选择以下功能撤销所做的修改
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以通过选择以下功能恢复相同的选择集，并再次修改同一组实体
 
 #### Redo
 
-You can adjust the double click time using
+可以使用以下功能调整双击时间
 
 #### Tools > Double Click Time
 
-Notes:
+注意：
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- 通过设置 View > Render > Cline dot radius 参数，可以查看构造线上所有点的位置。
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- 使用此轨迹平滑功能之前，应使用 CAD > Pack and Renumber Clines 功能整理构造线。
 
-- You can adjust the double click time using Tools > Double Click Time.
+- 可以使用 Tools > Double Click Time 调整双击时间。

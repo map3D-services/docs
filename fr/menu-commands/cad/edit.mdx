@@ -2,30 +2,27 @@
 title: "Modifier"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.5.4.1 Propriétés des entités
 
-## 5.5.4.1 Entity Properties
+Modifie le type de bloc, la couleur, la séquence d'exploitation, etc.
 
-Edit block type, colour, mining sequence etc.
-
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 406](/images/page-406-img-14.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -33,163 +30,163 @@ CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+Si l'un des champs de la boîte de dialogue indique « Variable », c'est que certains des blocs sélectionnés ont des propriétés différentes pour ce champ. Si vous souhaitez laisser ces propriétés telles quelles (c'est-à-dire différentes pour chaque bloc), laissez le champ sur « Variable ». Si vous souhaitez modifier la valeur de ce champ pour tous les blocs sélectionnés, saisissez la valeur souhaitée.
 
 ![Figure from page 407](/images/page-407-img-6.png)
 
-Block Volume - If you have selected all FF blocks, the total combined volume of the blocks will be displayed. If you have selected all FF blocks, the total combined volume of the blocks will be displayed.
+Block Volume - si vous avez sélectionné uniquement des blocs FF, le volume total combiné des blocs sera affiché. Si vous avez sélectionné uniquement des blocs FF, le volume total combiné des blocs sera affiché.
 
-DDPlane Area - If you have selected all DD blocks, displays the combined area of all of the DDPlanes included in the DDLoop.
+DDPlane Area - si vous avez sélectionné uniquement des blocs DD, affiche l'aire combinée de tous les DDPlanes inclus dans le DDLoop.
 
-Block Name - specifies a descriptive name for the block.
+Block Name - spécifie un nom descriptif pour le bloc.
 
-Element Type - specifies the type of boundary element that will be used for the block.
+Element Type - spécifie le type d'élément de frontière qui sera utilisé pour le bloc.
 
-- Displacement Discontinuity - DD type elements should be used for tabular mining excavations, fractures and fault planes.
+- Displacement Discontinuity - les éléments de type DD doivent être utilisés pour les excavations tabulaires, les fractures et les plans de faille.
 
-- Fictitious Force - FF type elements should be used for three-dimensional features such as excavations, alternate material zones, back-filled stopes etc.
+- Fictitious Force - les éléments de type FF doivent être utilisés pour les éléments tridimensionnels tels que les excavations, les zones de matériau alterné, les chantiers remblayés, etc.
 
-- Inactive elements can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+- Les éléments inactifs peuvent servir à afficher des éléments inclus uniquement à des fins de visualisation et qui ne seront pas utilisés dans l'analyse des contraintes proprement dite.
 
-- Note that DD type elements can be changed into GPlanes.
+- Notez que les éléments de type DD peuvent être convertis en GPlanes.
 
-Block Colour - specifies the colour number that will be used to display the block.
+Block Colour - spécifie le numéro de couleur qui sera utilisé pour afficher le bloc.
 
-- Specifies the colour number that will be assigned to each button. A total of 10 colours are available for display. These are numbered respectively
+- Spécifie le numéro de couleur qui sera affecté à chaque bouton. Un total de 10 couleurs sont disponibles pour l'affichage. Elles sont numérotées respectivement
 
-- 1 through 10,
+- de 1 à 10,
 
-11 through 20,
+de 11 à 20,
 
-21 through 30, etc.,
+de 21 à 30, etc.,
 
-- such that the same colour is displayed for numbers 1, 11, 21...,
+- de sorte que la même couleur est affichée pour les numéros 1, 11, 21...,
 
 - 2, 22, 32...,
 
 - 3, 23, 33..., etc.
 
-Fixed Element Width - specifies the user defined element width.
+Fixed Element Width - spécifie la largeur d'élément définie par l'utilisateur.
 
-- This parameter can be used to force uniform discretization on selected entities. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Ce paramètre peut servir à imposer une discrétisation uniforme sur les entités sélectionnées. Soyez extrêmement prudent en spécifiant cette valeur, car une petite valeur peut facilement conduire à une taille de problème énorme.
 
-- In general this option should not be used (unchecked) and discretization should be left to the _AL_ and _AG_ parameters. These latter parameters will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size. For further discussion refer to
+- En général, cette option ne doit pas être utilisée (décochée) et la discrétisation doit être laissée aux paramètres _AL_ et _AG_ . Ces derniers ne concentrent les éléments que là où des résultats d'analyse sont demandés, ce qui optimise l'utilisation des éléments et réduit la taille du problème. Pour une discussion plus détaillée, voir
 
 CAD > Properties Control Parameters
 
-- This parameter can also be used to avoid making surfaces with sides larger than this during the intersection analysis. Any surfaces whose side length exceeds this dimension will not be collapsed
+- Ce paramètre peut aussi servir à éviter de créer, pendant l'analyse des intersections, des surfaces dont les côtés dépassent cette valeur. Aucune surface dont la longueur de côté dépasse cette dimension ne sera réduite (collapse)
 
 #### Analysis > Options > Collapse
 
-- During the discretization process, any surface whose side length exceeds this dimension will be subdivided to prevent surfaces having sides larger than this.
+- Pendant le processus de discrétisation, toute surface dont la longueur de côté dépasse cette dimension sera subdivisée afin d'éviter des surfaces dont les côtés seraient plus grands.
 
-- For an example of the use of this parameter refer to Tabular Mining Example
+- Pour un exemple d'utilisation de ce paramètre, voir Tabular Mining Example
 
-Matl_Code LERD/MStep - specifies the material code that will be substituted into the block for the LERD/LSS calculation.
+Matl_Code LERD/MStep - spécifie le code de matériau qui sera substitué dans le bloc pour le calcul LERD/LSS.
 
-The first box is for the material code.
+La première case sert au code de matériau.
 
-The second box is to specify the mining step number when the calculation is to be done. If this box is left blank then the LERD calculation will be done for all steps.
+La seconde case sert à spécifier le numéro de l'étape d'exploitation à laquelle le calcul doit être effectué. Si cette case est laissée vide, le calcul LERD sera effectué pour toutes les étapes.
 
 #### Analysis > Options > LERD/LSS.
 
-DDPlane Thickness - specifies the thickness of the material inserted into the DD element (i.e. fault gouge, seam width, mining width or pillar height).
+DDPlane Thickness - spécifie l'épaisseur du matériau inséré dans l'élément DD (c'est-à-dire gouge de faille, épaisseur de couche, largeur d'exploitation ou hauteur de pilier).
 
-- Normal displacement (closure) of the feature when in-filled will be limited to this thickness. Also, the normal displacement (closure) and shear displacement (ride) are divided by the thickness to determine the strain occurring in the in-filling material
+- La convergence (déplacement normal) de la structure lorsqu'elle est remplie sera limitée à cette épaisseur. De plus, le déplacement normal (convergence) et le déplacement de cisaillement (ride) sont divisés par l'épaisseur pour déterminer la déformation qui se produit dans le matériau de remplissage
 
 Mohr-Coulomb in DD planes
 
 Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes
 
-- This parameter should be specified in the same units used to specify the coordinate positions (e.g. metres or feet).
+- Ce paramètre doit être spécifié dans les mêmes unités que celles utilisées pour les coordonnées (p. ex. mètres ou pieds).
 
-Mining Step n - specifies the material code that will be used for this block in mining step n.
+Mining Step n - spécifie le code de matériau qui sera utilisé pour ce bloc à l'étape d'exploitation n.
 
-- In the above example, the block is non-existent at step 1, has material #2 (Ore) inserted in it at step 2, it is excavated at step 3 (material code 0 means to excavate), and finally at step 4 material #5 (backfill) is inserted.
+- Dans l'exemple ci-dessus, le bloc n'existe pas à l'étape 1, contient le matériau n° 2 (minerai) à l'étape 2, est excavé à l'étape 3 (le code de matériau 0 signifie excaver) et, enfin, à l'étape 4 le matériau n° 5 (remblai) y est inséré.
 
-- When you use a positive material number, the material is placed into the block at the specified initial stress state, and is then allowed to deform according to the elastic/plastic properties you have set for that material number.
+- Lorsque vous utilisez un numéro de matériau positif, le matériau est placé dans le bloc avec l'état de contraintes initial spécifié, puis peut se déformer selon les propriétés élastiques/plastiques que vous avez définies pour ce numéro de matériau.
 
-- When you use a negative material number, the material is placed into the block at the specified initial stress state, but the stress state is held at these vales regardless of the deformations, thereby providing a stress boundary condition.
+- Lorsque vous utilisez un numéro de matériau négatif, le matériau est placé dans le bloc avec l'état de contraintes initial spécifié, mais l'état de contraintes est maintenu à ces valeurs quelles que soient les déformations, ce qui fournit une condition aux limites en contraintes.
 
-Extrude DD into FF blocks - allows you to extrude a DD plane into an FF block. You will be prompted for the extrusion vector
+Extrude DD into FF blocks - permet d'extruder un plan DD en un bloc FF. Le vecteur d'extrusion vous sera demandé
 
-More Steps - allows specification of additional mining steps.
+More Steps - permet de spécifier des étapes d'exploitation supplémentaires.
 
-Clear All Steps - clears all mining steps (1-100).
+Clear All Steps - efface toutes les étapes d'exploitation (1-100).
 
-Copy From… - allows you to select another block to copy the entity properties from.
+Copy From… - permet de sélectionner un autre bloc dont copier les propriétés d'entité.
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - termine la modification des blocs et applique les propriétés qui ont été changées.
 
-Cancel - aborts block editing.
+Cancel - abandonne la modification des blocs.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-DD blocks can be extruded into 3D FF blocks simply by changing the element type from Displacement Discontinuity to Fictitious Force.
+Les blocs DD peuvent être extrudés en blocs FF 3D simplement en changeant le type d'élément de Displacement Discontinuity en Fictitious Force.
 
 ![Figure from page 409](/images/page-409-img-18.png)
 
-In this case corners 1 through 4 define the base of the block. The top and sides are automatically generated during the extrusion process. FF blocks can be collapsed into DD planes by changing the element type from Fictitious Force to Displacement Discontinuity. In this case the base of the block (the side defined by corners 1, 2, 3 and 4) will become the DD plane and the remainder of the block sides will be discarded.
+Dans ce cas, les coins 1 à 4 définissent la base du bloc. Le toit et les côtés sont générés automatiquement pendant le processus d'extrusion. Les blocs FF peuvent être réduits en plans DD en changeant le type d'élément de Fictitious Force en Displacement Discontinuity. Dans ce cas, la base du bloc (le côté défini par les coins 1, 2, 3 et 4) devient le plan DD et les autres côtés du bloc sont supprimés.
 
-Note that it is possible to create zero volume blocks for example by specifying a zero length offset vector. This allows users to construct individual FF surfaces if desired. While this is permissible it is not recommended as this can lead to unclosed volumes.
+Notez qu'il est possible de créer des blocs de volume nul, par exemple en spécifiant un vecteur de décalage de longueur nulle. Cela permet aux utilisateurs de construire des surfaces FF individuelles s'ils le souhaitent. Bien que cela soit permis, ce n'est pas recommandé, car cela peut conduire à des volumes non fermés.
 
-Notes
+Remarques
 
-Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable
+Il convient d'utiliser des numéros de couleur différents pour représenter des regroupements logiques de blocs (p. ex. pour différents niveaux, coupes ou unités d'exploitation logiques telles que les travaux de développement, les chantiers, etc.). Ces couleurs sont définissables par l'utilisateur
 
 #### Tools > Custom Colours
 
-Any blocks with the same colour number will be automatically combined into single complex shapes by Map3D.
+Tous les blocs ayant le même numéro de couleur seront automatiquement combinés par Map3D en formes complexes uniques.
 
-Since it is easy to toggle on and off the display of specific block colour numbers
+Comme il est facile d'activer et de désactiver l'affichage de numéros de couleur de bloc spécifiques
 
 #### View > Hide Block Colours
 
-This provides an efficient method to work with complex model data.
+cela offre une méthode efficace pour travailler avec des données de modèle complexes.
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-For discussion on model building aspects refer to:
+Pour une discussion sur les aspects de la construction de modèles, voir :
 
 #### Model Building and Editing
 
-For tutorials on model building refer to:
+Pour des tutoriels sur la construction de modèles, voir :
 
 Model Building Tutorials
 
-## 5.5.4.2 Erase Entities
+## 5.5.4.2 Effacer des entités
 
-Erase selected entities.
+Efface les entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 410](/images/page-410-img-17.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities,
 
@@ -199,307 +196,307 @@ CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit 
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.3 Move Entities
+## 5.5.4.3 Déplacer des entités
 
-Move selected entities.
+Déplace les entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 411](/images/page-411-img-22.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities,
 
 CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 412](/images/page-412-img-9.png)
 
-X, Y and Z – offset specify the components of the offset vector. All selected entities will be moved by this amount.
+X, Y and Z – offset spécifient les composantes du vecteur de décalage. Toutes les entités sélectionnées seront déplacées de cette valeur.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le vecteur de décalage sur le modèle. Cela exige de sélectionner deux points pour définir ce vecteur.
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected entities will be moved by this amount.
+Length, Plunge and Direction - spécifient les composantes du vecteur de décalage. Toutes les entités sélectionnées seront déplacées de cette valeur.
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre le vecteur de décalage normal.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - termine la modification et lance la modification des propriétés d'entité des blocs sélectionnés.
 
-OK - completes editing of the offset vector and moves the selected blocks.
+OK - termine la modification du vecteur de décalage et déplace les blocs sélectionnés.
 
-Cancel - aborts moving of entities.
+Cancel - abandonne le déplacement des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.4 Copy Entities
+## 5.5.4.4 Copier des entités
 
-Copy selected entities.
+Copie les entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 87](/images/page-87-img-12.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 414](/images/page-414-img-1.png)
 
-X, Y and Z – offset specify the components of the offset vector. All selected entities will be copied to the location specified by this offset.
+X, Y and Z – offset spécifient les composantes du vecteur de décalage. Toutes les entités sélectionnées seront copiées à l'emplacement indiqué par ce décalage.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le vecteur de décalage sur le modèle. Cela exige de sélectionner deux points pour définir ce vecteur.
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected entities will be copied to the location specified by this offset.
+Length, Plunge and Direction - spécifient les composantes du vecteur de décalage. Toutes les entités sélectionnées seront copiées à l'emplacement indiqué par ce décalage.
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre le vecteur de décalage normal.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - termine la modification et lance la modification des propriétés d'entité des blocs sélectionnés.
 
-OK - completes editing of the offset vector and moves the selected blocks.
+OK - termine la modification du vecteur de décalage et déplace les blocs sélectionnés.
 
-Cancel - aborts moving of entities.
+Cancel - abandonne le déplacement des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.5 Scale Entities
+## 5.5.4.5 Mettre à l'échelle des entités
 
-Scale the selected entities.
+Met à l'échelle les entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 415](/images/page-415-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities,
 
 CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 415](/images/page-415-img-23.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre for scaling. During scaling, this point will stay stationary. All other points will be moved to achieve the desired scaling.
+X, Y and Z – coordinates spécifient les coordonnées du centre de mise à l'échelle. Pendant la mise à l'échelle, ce point reste fixe. Tous les autres points sont déplacés pour obtenir la mise à l'échelle souhaitée.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le centre de rotation sur le modèle.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du centre de mise à l'échelle s'affichent dans la boîte de dialogue.
 
-Centroid - calculates the centre of all selected entities.
+Centroid - calcule le centre de toutes les entités sélectionnées.
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - termine la modification des coordonnées et vous demande les facteurs d'échelle.
 
 ![Figure from page 416](/images/page-416-img-4.png)
 
-X, Y and Z - scale specifies the amount by which the entities are to be scaled. Below, the block is scaled 1.5 times in the y direction.
+X, Y and Z - scale spécifie le facteur par lequel les entités doivent être mises à l'échelle. Ci-dessous, le bloc est mis à l'échelle 1,5 fois dans la direction y.
 
 ![Figure from page 416](/images/page-416-img-6.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - termine la modification et lance la modification des propriétés d'entité des blocs sélectionnés.
 
-OK - completes editing of the scale factors and scales the selected entities.
+OK - termine la modification des facteurs d'échelle et met à l'échelle les entités sélectionnées.
 
-Cancel - aborts the scaling of entities.
+Cancel - abandonne la mise à l'échelle des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.6 Rotate Azimuth
+## 5.5.4.6 Faire pivoter l'azimut
 
-Rotate the azimuth of selected entities.
+Fait pivoter l'azimut des entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 417](/images/page-417-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 417](/images/page-417-img-22.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre of rotation.
+X, Y and Z – coordinates spécifient les coordonnées du centre de rotation.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le centre de rotation sur le modèle.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du centre de mise à l'échelle s'affichent dans la boîte de dialogue.
 
-Centroid - calculates the centre of all selected entities.
+Centroid - calcule le centre de toutes les entités sélectionnées.
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - termine la modification des coordonnées et vous demande les facteurs d'échelle.
 
 ![Figure from page 418](/images/page-418-img-3.png)
 
-- Azimuth - specifies the angle (in degrees) through which you want the selected entities to be rotated. · The rotation takes place in the X-Y plane, thus all vertical lines remain vertical.
+- Azimuth - spécifie l'angle (en degrés) de rotation souhaité pour les entités sélectionnées. · La rotation s'effectue dans le plan X-Y ; toutes les lignes verticales restent donc verticales.
 
 ![Figure from page 418](/images/page-418-img-5.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - termine la modification et lance la modification des propriétés d'entité des blocs sélectionnés.
 
-OK - completes editing of the azimuth and rotates the selected entities.
+OK - termine la modification de l'azimut et fait pivoter les entités sélectionnées.
 
-Cancel - aborts the rotating of entities.
+Cancel - abandonne la rotation des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.7 Rotate Dip
+## 5.5.4.7 Faire pivoter le pendage
 
-Rotate the dip of selected entities.
+Fait pivoter le pendage des entités sélectionnées.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 419](/images/page-419-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -507,185 +504,185 @@ CAD > Edit > Slice Entities Slice selected entities,
 
 CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 419](/images/page-419-img-25.png)
 
-X, Y and Z – coordinates specify the coordinates of the centre of rotation.
+X, Y and Z – coordinates spécifient les coordonnées du centre de rotation.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the centre or rotation from the model.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le centre de rotation sur le modèle.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the centre for scaling are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du centre de mise à l'échelle s'affichent dans la boîte de dialogue.
 
-Centroid - calculates the centre of all selected entities.
+Centroid - calcule le centre de toutes les entités sélectionnées.
 
-OK - completes editing of the coordinates and prompts you for the scale factors.
+OK - termine la modification des coordonnées et vous demande les facteurs d'échelle.
 
 ![Figure from page 420](/images/page-420-img-4.png)
 
-Dip - specifies the angle (in degrees) through which you want the selected entities to be rotated.
+Dip - spécifie l'angle (en degrés) de rotation souhaité pour les entités sélectionnées.
 
-Dip Direction - specifies the azimuth (in degrees) at which the dip is to take place. The dip direction is 90° from the strike of the dip plane.
+Dip Direction - spécifie l'azimut (en degrés) selon lequel le pendage doit s'opérer. La direction de pendage est à 90° de la direction du plan de pendage.
 
 ![Figure from page 420](/images/page-420-img-7.png)
 
-Edit - completes editing and invoked editing of the entity properties for the selected blocks.
+Edit - termine la modification et lance la modification des propriétés d'entité des blocs sélectionnés.
 
-OK - completes editing of the dip and dip direction and rotates the selected entities.
+OK - termine la modification du pendage et de la direction de pendage et fait pivoter les entités sélectionnées.
 
-Cancel - aborts the rotating of entities.
+Cancel - abandonne la rotation des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.8 Slice Entities
+## 5.5.4.8 Couper des entités
 
-Slice entities.
+Coupe des entités.
 
-All entities can be sliced including FF blocks, DD planes, Grid planes, Grid lines and Construction lines.
+Toutes les entités peuvent être coupées, y compris les blocs FF, les plans DD, les plans de grille, les lignes de grille et les lignes de construction.
 
 Video Demo of Model_Simplification_Using_Slicing
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez modifier
 
 ![Figure from page 419](/images/page-419-img-2.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
 ![Figure from page 421](/images/page-421-img-13.png)
 
-X, Y and Z – coordinate specify a point on the slicing/cutting plane.
+X, Y and Z – coordinate spécifient un point du plan de coupe.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the point.
+Pick - active le réticule du curseur pour sélectionner le point de façon interactive.
 
-Dip of Plane, Dip Direction and Normal - specify the orientation of the slicing/cutting plane.
+Dip of Plane, Dip Direction and Normal - spécifient l'orientation du plan de coupe.
 
-Norm - activates the cursor allowing interactive selection of a surface to make the slice plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre le plan de coupe parallèle. Le pendage et la direction de pendage du plan seront réglés normalement à la surface sélectionnée.
 
-Apply Slice Colour - when checked this specifies the colour number to be assigned to the CLines that are created during slicing, otherwise the colour of the object being sliced will be used.
+Apply Slice Colour - lorsque cette option est cochée, spécifie le numéro de couleur à affecter aux CLines créées pendant la coupe ; sinon, la couleur de l'objet coupé est utilisée.
 
-Multiple Slices - specifies that multiple slices should be created at the specified slice spacing.
+Multiple Slices - indique que plusieurs coupes doivent être créées à l'espacement de coupe spécifié.
 
-Require Loops - slices can either be single lines or optionally formed into closed loops.
+Require Loops - les coupes peuvent être de simples lignes ou, en option, former des boucles fermées.
 
-Slice Spacing - specifies the optional multi-slice spacing.
+Slice Spacing - spécifie l'espacement facultatif pour plusieurs coupes.
 
-Show Slices (hide other CLines) - will automatically hide all pre-existing CLines and display the newly created Cline slices.
+Show Slices (hide other CLines) - masquera automatiquement toutes les CLines préexistantes et affichera les coupes de CLine nouvellement créées.
 
-Slice Spacing (hide all Geometry) - will automatically hide all pre-existing Geometry and display the newly created Cline slices.
+Slice Spacing (hide all Geometry) - masquera automatiquement toute la géométrie préexistante et affichera les coupes de CLine nouvellement créées.
 
-Slice Spacing (translucent Geometry) - will automatically set all pre-existing Geometry to translucent, and display the newly created Cline slices.
+Slice Spacing (translucent Geometry) - rendra automatiquement translucide toute la géométrie préexistante et affichera les coupes de CLine nouvellement créées.
 
-- There are multiple "View > Hide" options available to control the display of the various entities including:
+- Plusieurs options « View > Hide » sont disponibles pour contrôler l'affichage des différentes entités, notamment :
 
 ![Figure from page 422](/images/page-422-img-13.png)
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-Slice - executes the slicing/cutting operation for the selected blocks.
+Slice - exécute l'opération de coupe pour les blocs sélectionnés.
 
-Cancel - aborts slicing of entities.
+Cancel - abandonne la coupe des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.9 Dump to File
+## 5.5.4.9 Exporter vers un fichier
 
-Dumps selected entities to a file.
+Exporte les entités sélectionnées vers un fichier.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to dump
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez exporter
 
 ![Figure from page 423](/images/page-423-img-14.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.10 Group Entities
+## 5.5.4.10 Regrouper des entités
 
-Group the selected entities into a single block. This is an advanced option that should only be used by experienced users.
+Regroupe les entités sélectionnées en un seul bloc. Il s'agit d'une option avancée qui ne doit être utilisée que par des utilisateurs expérimentés.
 
-At times you may need to erase or build individual surfaces, then group them together to form a single block. This function groups entities together to form seamless closed block from individual surfaces. Note that when using this operation the user must ensure that the grouped surfaces form a seamless, closed surface envelope with no internal surfaces. The presence of internal surfaces may cause errors.
+Il peut arriver que vous deviez effacer ou construire des surfaces individuelles, puis les regrouper pour former un seul bloc. Cette fonction regroupe des entités pour former un bloc fermé continu à partir de surfaces individuelles. Notez qu'en utilisant cette opération, l'utilisateur doit s'assurer que les surfaces regroupées forment une enveloppe fermée et continue, sans surfaces internes. La présence de surfaces internes peut provoquer des erreurs.
 
-The group function was implemented to allow advanced users to erase a few surface elements and rebuild them. It is also useful for joining surfaces together that are brought in from CAD packages. Note that the user is required to ensure that there are no internal surfaces and the surfaces you group together do form a seamless, closed surface envelope.
+La fonction de regroupement a été mise en œuvre pour permettre aux utilisateurs avancés d'effacer quelques éléments de surface et de les reconstruire. Elle est aussi utile pour assembler des surfaces importées depuis des logiciels de CAO. Notez que l'utilisateur doit s'assurer qu'il n'y a pas de surfaces internes et que les surfaces regroupées forment bien une enveloppe fermée et continue.
 
-This routine can be initiated either by picking the button or simple right-clicking on any entity. When you initiate this routine you will first be prompted to build a list of entities that you wish to group
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle entité. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des entités que vous souhaitez regrouper
 
 ![Figure from page 424](/images/page-424-img-11.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities,
 
@@ -693,169 +690,169 @@ CAD > Edit > Dump to File Dump selected entities to a file,
 
 CAD > Edit > Group Group selected entities into a single block,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-If any of the fields in the dialogue box read "Variable" it is because some of the surfaces you have selected have different properties for that field. In order to group the selected entities into a single block, all surfaces must have the same settings for all fields. Use CAD > Edit > Entity Properties to do this.
+Si l'un des champs de la boîte de dialogue indique « Variable », c'est que certaines des surfaces sélectionnées ont des propriétés différentes pour ce champ. Pour regrouper les entités sélectionnées en un seul bloc, toutes les surfaces doivent avoir les mêmes réglages pour tous les champs. Utilisez CAD > Edit > Entity Properties pour cela.
 
 ![Figure from page 147](/images/page-147-img-5.png)
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.11 Stretch Verticies
+## 5.5.4.11 Étirer des sommets
 
-Adds an offset to selected vertices.
+Ajoute un décalage aux sommets sélectionnés.
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to stretch
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez étirer
 
 ![Figure from page 426](/images/page-426-img-5.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 427](/images/page-427-img-2.png)
 
-X, Y and Z – offset specify the components of the stretch vector.
+X, Y and Z – offset spécifient les composantes du vecteur d'étirement.
 
-- All selected vertices will be moved to the location specified by this offset.
+- Tous les sommets sélectionnés seront déplacés à l'emplacement indiqué par ce décalage.
 
-- This requires that you select two points to define this vector.
+- Cela exige de sélectionner deux points pour définir ce vecteur.
 
-- Once selected, the components of the offset vector are displayed in the dialogue box.
+- Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-Pick activates the cursor cross-hairs allowing interactive selection of the offset vector from the model. This requires that you select two points to define this vector.
+Pick active le réticule du curseur pour sélectionner de façon interactive le vecteur de décalage sur le modèle. Cela exige de sélectionner deux points pour définir ce vecteur.
 
-Length, Plunge and Direction - specify the components of the offset vector. All selected vertices will be moved by this amount.
+Length, Plunge and Direction - spécifient les composantes du vecteur de décalage. Tous les sommets sélectionnés seront déplacés de cette valeur.
 
-Norm - activates the cursor allowing interactive selection of a surface to make the offset vector normal to.
+Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre le vecteur de décalage normal.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.12 Move Verticies to point
+## 5.5.4.12 Déplacer des sommets vers un point
 
-Moves selected vertices to a point.
+Déplace les sommets sélectionnés vers un point.
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez déplacer.
 
 ![Figure from page 428](/images/page-428-img-5.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 428](/images/page-428-img-25.png)
 
-X, Y and Z – coordinate specify the coordinates of the point. All selected vertices will be moved to this point.
+X, Y and Z – coordinate spécifient les coordonnées du point. Tous les sommets sélectionnés seront déplacés vers ce point.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the point from the model.
+Pick - active le réticule du curseur pour sélectionner de façon interactive le point sur le modèle.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.13 Move Verticies to X
+## 5.5.4.13 Déplacer des sommets vers X
 
-Moves the X-coordinate of selected vertices.
+Déplace la coordonnée X des sommets sélectionnés.
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez déplacer.
 
 ![Figure from page 429](/images/page-429-img-20.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z
 
@@ -865,119 +862,119 @@ CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 430](/images/page-430-img-11.png)
 
-X – coordinate specify the X-coordinate of the point. The X-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+X – coordinate spécifie la coordonnée X du point. La coordonnée X de tous les sommets sélectionnés (c'est-à-dire les sommets de la liste) sera déplacée vers cette valeur.
 
-Search width all coordinates with the search width distance of the specified x-coordinate value will be moved even if they are not in the list.
+Search width toutes les coordonnées situées à une distance égale à la largeur de recherche de la valeur de coordonnée x spécifiée seront déplacées, même si elles ne figurent pas dans la liste.
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick active le réticule du curseur pour sélectionner de façon interactive le point sur le modèle. Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.14 Move Verticies to Y
+## 5.5.4.14 Déplacer des sommets vers Y
 
-Moves the Y-coordinate of selected vertices.
+Déplace la coordonnée Y des sommets sélectionnés.
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez déplacer.
 
 ![Figure from page 431](/images/page-431-img-4.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 431](/images/page-431-img-24.png)
 
-Y – coordinate specify the Y-coordinate of the point. The Y-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+Y – coordinate spécifie la coordonnée Y du point. La coordonnée Y de tous les sommets sélectionnés (c'est-à-dire les sommets de la liste) sera déplacée vers cette valeur.
 
-Search width all coordinates with the search width distance of the specified y-coordinate value will be moved even if they are not in the list.
+Search width toutes les coordonnées situées à une distance égale à la largeur de recherche de la valeur de coordonnée y spécifiée seront déplacées, même si elles ne figurent pas dans la liste.
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick active le réticule du curseur pour sélectionner de façon interactive le point sur le modèle. Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.15 Move Verticies to Z
+## 5.5.4.15 Déplacer des sommets vers Z
 
-Moves the Z-coordinate of selected vertices.
+Déplace la coordonnée Z des sommets sélectionnés.
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez déplacer.
 
 ![Figure from page 432](/images/page-432-img-19.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y
 
@@ -991,133 +988,133 @@ CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 433](/images/page-433-img-14.png)
 
-Z – coordinate specify the Z-coordinate of the point. The Z-coordinate of all selected vertices (i.e. vertices in the list) will be moved to this value.
+Z – coordinate spécifie la coordonnée Z du point. La coordonnée Z de tous les sommets sélectionnés (c'est-à-dire les sommets de la liste) sera déplacée vers cette valeur.
 
-Search width all coordinates with the search width distance of the specified z-coordinate value will be moved even if they are not in the list.
+Search width toutes les coordonnées situées à une distance égale à la largeur de recherche de la valeur de coordonnée z spécifiée seront déplacées, même si elles ne figurent pas dans la liste.
 
-Pick activates the cursor cross-hairs allowing interactive selection of the point from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick active le réticule du curseur pour sélectionner de façon interactive le point sur le modèle. Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-## 5.5.4.16 Move Verticies to Plane
+## 5.5.4.16 Déplacer des sommets vers un plan
 
-Moves the selected vertices to a plane. Vertices are moved in the direction normal (or a user specified direction) to the plane.
+Déplace les sommets sélectionnés vers un plan. Les sommets sont déplacés dans la direction normale au plan (ou dans une direction spécifiée par l'utilisateur).
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to move.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez déplacer.
 
 ![Figure from page 434](/images/page-434-img-4.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 435](/images/page-435-img-1.png)
 
-X Y Z – coordinate specify the coordinates of any point on the plane.
+X Y Z – coordinate spécifient les coordonnées d'un point quelconque du plan.
 
-Pick activates the cursor cross-hairs allowing interactive selection of the x y z coordinates of the point on the plane from the model. To assist in visually selecting points from the model, all snap functions are available
+Pick active le réticule du curseur pour sélectionner de façon interactive, sur le modèle, les coordonnées x y z du point du plan. Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles
 
-Dip of Plane specify the dip of the plane (positive down in degrees).
+Dip of Plane spécifie le pendage du plan (positif vers le bas, en degrés).
 
-Dip Direction specify the azimuth of the dip vector (degrees).
+Dip Direction spécifie l'azimut du vecteur de pendage (degrés).
 
-Norm - activates the cursor allowing interactive selection of a surface to make the plane parallel to. The dip and dip direction of the plane will be set normal to the selected surface.
+Norm - active le curseur pour sélectionner de façon interactive une surface à laquelle rendre le plan parallèle. Le pendage et la direction de pendage du plan seront réglés normalement à la surface sélectionnée.
 
-Search width all coordinates with the search width distance of the specified plane will be moved even if they are not in the list.
+Search width toutes les coordonnées situées à une distance égale à la largeur de recherche du plan spécifié seront déplacées, même si elles ne figurent pas dans la liste.
 
-Alternate projection direction - if not checked then all points will be projected on the selected plane in the direction normal to the plane. If checked, then the user can specify their own desired projection direction.
+Alternate projection direction - si cette option n'est pas cochée, tous les points seront projetés sur le plan sélectionné dans la direction normale au plan. Si elle est cochée, l'utilisateur peut spécifier la direction de projection de son choix.
 
-Plunge - user specified projection direction.
+Plunge - direction de projection spécifiée par l'utilisateur.
 
-Direction - user specified projection direction.
+Direction - direction de projection spécifiée par l'utilisateur.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Pour faciliter la sélection visuelle de points sur le modèle, toutes les fonctions d'accrochage sont disponibles.
 
 #### CAD > Snap
 
-Once selected, the components of the offset vector are displayed in the dialogue box.
+Une fois sélectionnées, les composantes du vecteur de décalage s'affichent dans la boîte de dialogue.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 Tools > Double Click Time
 
-## 5.5.4.17 Subdivide Edges
+## 5.5.4.17 Subdiviser des arêtes
 
 #### CAD > Edit > Remove
 
-Inserts vertices on block edges or construction line edges (also see Construction Vertex).
+Insère des sommets sur les arêtes de blocs ou de lignes de construction (voir aussi Construction Vertex).
 
-This routine can be initiated either by picking the button or simple right-clicking on any edge. When you initiate this routine you will first be prompted to build a list of locations where you wish to insert vertices.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quelle arête. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des emplacements où vous souhaitez insérer des sommets.
 
 ![Figure from page 436](/images/page-436-img-20.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y
 
@@ -1131,148 +1128,148 @@ CAD > Edit > Smooth Construction Lines
 
 CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-Notes:
+Remarques :
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- Avant d'utiliser cette fonction de lissage de tracé, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-- You can adjust the double click time using Tools > Double Click Time.
+- Vous pouvez régler le délai du double-clic avec Tools > Double Click Time.
 
-## 5.5.4.18 Smooth Construction Lines
+## 5.5.4.18 Lisser les lignes de construction
 
-Smooths construction lines by eliminating corner points (also see Construction Vertex).
+Lisse les lignes de construction en éliminant des points d'angle (voir aussi Construction Vertex).
 
 #### CAD > Edit > Remove
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to smooth.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez lisser.
 
 ![Figure from page 437](/images/page-437-img-31.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices
 
 CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
 ![Figure from page 438](/images/page-438-img-17.png)
 
-The Spacing value limits the minimum space between points. For example if the Spacing was specified as 2m and the trace length between points 4 and 5 in the following figure was 1.5m, point 4 would be removed and replaced by a straight line between points 3 and 5.
+La valeur de Spacing limite l'espace minimal entre les points. Par exemple, si Spacing était spécifié à 2 m et que la longueur du tracé entre les points 4 et 5 de la figure suivante était de 1,5 m, le point 4 serait supprimé et remplacé par une ligne droite entre les points 3 et 5.
 
 ![Figure from page 438](/images/page-438-img-19.png)
 
-A zero value for this parameter indicates that it will not be used.
+Une valeur nulle pour ce paramètre indique qu'il ne sera pas utilisé.
 
-The Angle value limits the minimum angle between successive line segments. For example if the Angle was specified as 10° and the direction of line segment 3-4 was 7° different than the direction of line
+La valeur de Angle limite l'angle minimal entre des segments de ligne successifs. Par exemple, si Angle était spécifié à 10° et que la direction du segment de ligne 3-4 différait de 7° de celle du
 
-segment 4-5 in the following figure, point 4 would be removed and replaced by a straight line between points 3 and 5.
+segment de ligne 4-5 de la figure suivante, le point 4 serait supprimé et remplacé par une ligne droite entre les points 3 et 5.
 
 ![Figure from page 439](/images/page-439-img-3.png)
 
-A zero value for this parameter indicates that it will not be used.
+Une valeur nulle pour ce paramètre indique qu'il ne sera pas utilisé.
 
-OK - completes editing of the offset vector and stretches the selected vertices.
+OK - termine la modification du vecteur de décalage et étire les sommets sélectionnés.
 
-Cancel - aborts stretching of vertices.
+Cancel - abandonne l'étirement des sommets.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-Notes:
+Remarques :
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- Avant d'utiliser cette fonction de lissage de tracé, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-- You can adjust the double click time using Tools > Double Click Time.
+- Vous pouvez régler le délai du double-clic avec Tools > Double Click Time.
 
-## 5.5.4.19 Remove Construction Line Vertex
+## 5.5.4.19 Supprimer un sommet de ligne de construction
 
-Smooths construction lines by eliminating individual corner points (also see Construction Lines).
+Lisse les lignes de construction en éliminant des points d'angle individuels (voir aussi Construction Lines).
 
 #### CAD > Edit > Smooth
 
-This routine can be initiated either by picking the button or simple right-clicking on any vertex. When you initiate this routine you will first be prompted to build a list of vertices that you wish to remove.
+Cette routine peut être lancée en cliquant sur le bouton ou simplement en faisant un clic droit sur n'importe quel sommet. Au lancement de cette routine, vous serez d'abord invité à constituer une liste des sommets que vous souhaitez supprimer.
 
 ![Figure from page 440](/images/page-440-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the Shift-key to make multiple selections.
+- Si Tools > Shift-key Selection est cochée, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Par défaut, les entités sélectionnées sont ajoutées à la liste ; toutefois, si la touche Ctrl est maintenue enfoncée, les entités sélectionnées sont retirées de la liste.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Tout en maintenant la touche Shift ou Ctrl enfoncée, vous pouvez faire glisser pour ouvrir une fenêtre de sélection par intersection.
 
-- Use of this toolbar is detailed in Build A List of Vertices for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Vertices for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Maintenir la touche Alt enfoncée lors d'un clic droit répète automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
 CAD > Edit > Stretch Vertices CAD > Edit > Move Vertices to Point CAD > Edit > Move Vertices to X CAD > Edit > Move Vertices to Y CAD > Edit > Move Vertices to Z CAD > Edit > Move Vertices to Plane CAD > Edit > Subdivide Construction Lines CAD > Edit > Smooth Construction Lines CAD > Edit > Remove Construction Vertex
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquer sur n'importe quel sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- faire un clic droit pour afficher une liste d'options.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous disposez d'une chance d'annuler les modifications en sélectionnant
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même jeu de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 #### Redo
 
-You can adjust the double click time using
+Vous pouvez régler le délai du double-clic avec
 
 #### Tools > Double Click Time
 
-Notes:
+Remarques :
 
-- The location of all points along construction lines can be viewed by setting the View > Render > Cline dot radius parameter.
+- L'emplacement de tous les points le long des lignes de construction peut être visualisé en réglant le paramètre View > Render > Cline dot radius.
 
-- Before using this trace smoothing function, construction lines should be cleaned up using the CAD > Pack and Renumber Clines function.
+- Avant d'utiliser cette fonction de lissage de tracé, les lignes de construction doivent être nettoyées avec la fonction CAD > Pack and Renumber Clines.
 
-- You can adjust the double click time using Tools > Double Click Time.
+- Vous pouvez régler le délai du double-clic avec Tools > Double Click Time.
