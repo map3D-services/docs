@@ -2,438 +2,427 @@
 title: "Contrainte"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.3.1.1 Contrainte principale majeure
 
-## 5.3.1.1 Major Principal Stress
-
-This allows you to principal stress components s1 s2 s3. These components can be accessed via the Stress Components toolbar as follows:
+Permet de visualiser les composantes de contrainte principale s1 s2 s3. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-In elastic analysis, the major principal stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion
+En analyse élastique, la contrainte principale majeure est normalement utilisée avec la contrainte principale mineure et le critère de résistance de Mohr-Coulomb ou de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage in the rockmass due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+pour estimer l'ampleur de l'endommagement du massif rocheux dû à la surcontrainte. Comme aucun de ces paramètres n'est sensible à l'orientation, ce critère est représentatif de la stabilité d'un massif rocheux homogène.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En revanche, en analyse non linéaire, les contraintes ne peuvent jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur de la déformation non linéaire ou la vitesse de déformation prédite par le modèle
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+La surcontrainte peut être présentée sous plusieurs formes, notamment :
 
 Plot > Strength Factor > SF-A Strength/Stress Plot > Strength Factor > SF-B Strength/Stress Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Chacune de ces composantes peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-The intermediate principal stress is normally used in the calculation of the octahedral shear stress
+La contrainte principale intermédiaire est normalement utilisée dans le calcul de la contrainte de cisaillement octaédrique
 
 Plot > Stress > Toct Octahedral shear Stress
 
-or the mean stress
+ou de la contrainte moyenne
 
 Plot > Stress > Smean Mean Stress.
 
-## 5.3.1.4 Maximum Shear Stress
+## 5.3.1.4 Contrainte de cisaillement maximale
 
-This allows you to principal stress components tmax=½(s1 - s3). This component can be accessed via the Stress Components toolbar as follows:
+Permet de visualiser la composante de contrainte tmax=½(s1 - s3). Cette composante est accessible via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-In elastic analysis, the maximum shear stress is normally used with the minor principal stress and the Mohr-Coulomb or Hoek-Brown strength criterion
+En analyse élastique, la contrainte de cisaillement maximale est normalement utilisée avec la contrainte principale mineure et le critère de résistance de Mohr-Coulomb ou de Hoek-Brown
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+pour estimer l'ampleur de l'endommagement dû à la surcontrainte. Comme aucun de ces paramètres n'est sensible à l'orientation, ce critère est représentatif de la stabilité d'un massif rocheux homogène.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En revanche, en analyse non linéaire, les contraintes ne peuvent jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur de la déformation non linéaire ou la vitesse de déformation prédite par le modèle
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+La surcontrainte peut être présentée sous plusieurs formes, notamment :
 
 Plot > Strength Factor > SF-A Strength/Stress Plot > Strength Factor > SF-B Strength/Stress Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+La plage de contours se définit avec
 
-Plot > Range
+#### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Chacune de ces composantes peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-## 5.3.1.5 In-Plane Shear Stress
+## 5.3.1.5 Contrainte de cisaillement dans le plan
 
-This allows you to contour the maximum shear stress acting on the grid plane, and the stress
-
-component normal to the grid plane or parallel to a line grid. These components can be accessed via the Stress Components toolbar as follows:
+Permet de tracer les contours de la contrainte de cisaillement maximale agissant sur le plan de grille, ainsi que de la composante de contrainte normale au plan de grille ou parallèle à une grille linéaire. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-To calculate the in-plane stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the grid plane and the stress normal to the plane. Note that sip is oriented normal to the grid plane and parallel to the direction of a line grid.
+Pour calculer les contraintes dans le plan, l'état de contraintes en chaque point du plan de grille est réorienté afin de déterminer la contrainte de cisaillement maximale parallèle au plan de grille et la contrainte normale au plan. Notez que sip est orientée normalement au plan de grille et parallèlement à la direction d'une grille linéaire.
 
 ![Figure from page 217](/images/page-217-img-6.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la direction de pendage est mesurée positivement dans le sens horaire à partir de l'axe y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- le pendage du plan est mesuré positivement vers le bas à partir de l'horizontale (c'est-à-dire la direction de pendage).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- le plongement de la normale est mesuré positivement vers le bas (c'est-à-dire négativement vers le haut) à partir de l'horizontale.
 
-In elastic analysis, the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion
+En analyse élastique, la contrainte de cisaillement maximale dans le plan est normalement utilisée avec la contrainte normale dans le plan et le critère de résistance de Mohr-Coulomb
 
 Plot > Strength Factors > In-plane Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane oriented in the same way as the grid plane. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+pour estimer l'ampleur du glissement dû à la surcontrainte sur une faille, un système de joints ou un plan de stratification orienté de la même façon que le plan de grille. Comme ces paramètres dépendent de l'orientation, ce critère est représentatif de la stabilité d'un massif rocheux anisotrope.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En revanche, en analyse non linéaire, les contraintes ne peuvent jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur de la déformation non linéaire ou la vitesse de déformation prédite par le modèle
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes.
 
-Over-stressing can be presented in several forms including:
+La surcontrainte peut être présentée sous plusieurs formes, notamment :
 
 Plot > Strength Factors > SF-ip Strength/Stress Plot > Strength Factors > dTip Excess Shear Stress
 
-The contour range is set using
+La plage de contours se définit avec
 
-Plot > Range
+#### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
+Chacune de ces composantes peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-Related topics:
+Sujets connexes :
 
 Plot > Stress > S1i In-plane Maximum Plot > Stress > S3i In-plane Minimum Plot > Stress > Tub Ubiquitous-plane Shear Plot > Stress > Sub Ubiquitous-plane Normal
 
-## 5.3.1.7 In-Plane Maximum Stress
+## 5.3.1.7 Contrainte maximale dans le plan
 
-This allows you to contour the maximum and minimum stresses tangential to the currently selected grid plane or perpendicular to a line grid. These components can be accessed via the Stress Components toolbar as follows:
+Permet de tracer les contours des contraintes maximale et minimale tangentes au plan de grille actuellement sélectionné ou perpendiculaires à une grille linéaire. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-To calculate the maximum and minimum in-plane stresses, the stresses tangential to the grid plane are determined, then resolved to give the maximum and minimum values. Note that sip is oriented normal to
-
-the grid plane and parallel to the direction of a line grid. Also note that sip, s1i and s3i are perpendicular to one another.
+Pour calculer les contraintes maximale et minimale dans le plan, les contraintes tangentes au plan de grille sont déterminées, puis résolues pour donner les valeurs maximale et minimale. Notez que sip est orientée normalement au plan de grille et parallèlement à la direction d'une grille linéaire. Notez également que sip, s1i et s3i sont perpendiculaires entre elles.
 
 ![Figure from page 219](/images/page-219-img-2.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la direction de pendage est mesurée positivement dans le sens horaire à partir de l'axe y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- le pendage du plan est mesuré positivement vers le bas à partir de l'horizontale (c'est-à-dire la direction de pendage).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- le plongement de la normale est mesuré positivement vers le bas (c'est-à-dire négativement vers le haut) à partir de l'horizontale.
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 #### Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-Related topics:
+Sujets connexes :
 
 Plot > Stress > Tip In-plane Shear Plot > Stress > Sip In-plane Normal Plot > Stress > S1u Ubiquitous-plane Maximum. Plot > Stress > S3u Ubiquitous-plane Minimum.
 
-## 5.3.1.9 Ubiquitous-Plane Shear Stress
+## 5.3.1.9 Contrainte de cisaillement dans le plan ubiquiste
 
-This allows you to contour the maximum shear stress acting on ubiquitous plane #1, and the stress component normal to this plane. These components can be accessed via the Stress Components toolbar as follows:
+Permet de tracer les contours de la contrainte de cisaillement maximale agissant sur le plan ubiquiste n° 1, ainsi que de la composante de contrainte normale à ce plan. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-To calculate the ubiquitous stresses, the stress state at each point on the grid plane is reoriented to determine the maximum shear stress parallel to the ubiquitous plane and the stress normal to the ubiquitous plane. Note that sub is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid.
+Pour calculer les contraintes ubiquistes, l'état de contraintes en chaque point du plan de grille est réorienté afin de déterminer la contrainte de cisaillement maximale parallèle au plan ubiquiste et la contrainte normale au plan ubiquiste. Notez que sub est orientée normalement au plan ubiquiste et n'est pas parallèle à la direction d'une grille linéaire.
 
 ![Figure from page 220](/images/page-220-img-6.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la direction de pendage est mesurée positivement dans le sens horaire à partir de l'axe y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- le pendage du plan est mesuré positivement vers le bas à partir de l'horizontale (c'est-à-dire la direction de pendage).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- le plongement de la normale est mesuré positivement vers le bas (c'est-à-dire négativement vers le haut) à partir de l'horizontale.
 
-The orientation of the ubiquitous shear plane is set using
-
-#### Plot > Strength Factors > Ubiquitous Parameters
-
-In elastic analysis the maximum ubiquitous-plane shear stress is normally used with the ubiquitousplane normal stress and the Mohr-Coulomb strength criterion
+L'orientation du plan de cisaillement ubiquiste se définit avec
 
 #### Plot > Strength Factors > Ubiquitous Parameters
 
-to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane at the specified orientation. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En analyse élastique, la contrainte de cisaillement maximale dans le plan ubiquiste est normalement utilisée avec la contrainte normale au plan ubiquiste et le critère de résistance de Mohr-Coulomb
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating
+#### Plot > Strength Factors > Ubiquitous Parameters
 
-a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+pour estimer l'ampleur du glissement dû à la surcontrainte sur une faille, un système de joints ou un plan de stratification selon l'orientation spécifiée. Comme ces paramètres dépendent de l'orientation, ce critère est représentatif de la stabilité d'un massif rocheux anisotrope.
+
+En revanche, en analyse non linéaire, les contraintes ne peuvent jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur de la déformation non linéaire ou la vitesse de déformation prédite par le modèle
 
 Mohr-Coulomb in DD planes Fault-Gouge in DD planes Backfill-Hyperbolic in DD planes.
 
-Over-stressing can be presented in several forms including:
+La surcontrainte peut être présentée sous plusieurs formes, notamment :
 
 Plot > Strength Factors > SF-ub Strength/Stress. Plot > Strength Factors > dTub Excess Shear Stress.
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-Related topics:
+Sujets connexes :
 
 Plot > Stress > S1u Ubiquitous-plane Maximum Plot > Stress > S3u Ubiquitous-plane Minimum Plot > Stress > Tip In-plane Shear Plot > Stress > Sip In-plane Normal
 
-The orientation of the ubiquitous-plane is specified in
+L'orientation du plan ubiquiste est spécifiée dans
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-## 5.3.1.11 Ubiquitous-Plane Maximum Stress
+## 5.3.1.11 Contrainte maximale dans le plan ubiquiste
 
-This allows you to contour the the maximum and minimum stresses tangential to the ubiquitous plane #1.
-
-These components can be accessed via the Stress Components toolbar as follows:
+Permet de tracer les contours des contraintes maximale et minimale tangentes au plan ubiquiste n° 1. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-To calculate the maximum and minimum ubiquitous-plane stresses, the stresses tangential to the plane are determined, then resolved to give the maximum and minimum values. Note that sub is oriented normal to the ubiquitous plane and is not parallel to the direction of a line grid. Also note that sub, s1u and s3u are perpendicular to one another.
+Pour calculer les contraintes maximale et minimale dans le plan ubiquiste, les contraintes tangentes au plan sont déterminées, puis résolues pour donner les valeurs maximale et minimale. Notez que sub est orientée normalement au plan ubiquiste et n'est pas parallèle à la direction d'une grille linéaire. Notez également que sub, s1u et s3u sont perpendiculaires entre elles.
 
 ![Figure from page 222](/images/page-222-img-3.png)
 
-- dip direction is measured positive clockwise from the y-axis.
+- la direction de pendage est mesurée positivement dans le sens horaire à partir de l'axe y.
 
-- dip of the plane is measured positive down from the horizontal (i.e. the dip direction).
+- le pendage du plan est mesuré positivement vers le bas à partir de l'horizontale (c'est-à-dire la direction de pendage).
 
-- plunge of the normal is measured positive down (i.e. negative up) from the horizontal.
+- le plongement de la normale est mesuré positivement vers le bas (c'est-à-dire négativement vers le haut) à partir de l'horizontale.
 
-The orientation of the ubiquitous shear plane is set using
+L'orientation du plan de cisaillement ubiquiste se définit avec
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 #### Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-Related topics:
+Sujets connexes :
 
 Plot > Stress > Tub In-plane Shear Plot > Stress > Sub In-plane Normal Plot > Stress > S1i In-plane Maximum. Plot > Stress > S3i In-plane Minimum.
 
-## 5.3.1.13 Octahedral Shear Stress
+## 5.3.1.13 Contrainte de cisaillement octaédrique
 
-Contours the octahedral shear stress
+Trace les contours de la contrainte de cisaillement octaédrique
 
 toct = ¹/3 [ (s1 - s2)² + (s2 - s3)² +(s3 - s1)² ]<sup>½</sup>
 
-and mean stress
+et de la contrainte moyenne
 
 smean = ¹/3 (s1 + s2 + s3)
 
-These components can be accessed via the Stress Components toolbar as follows:
+Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 219](/images/page-219-img-24.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 217](/images/page-217-img-4.png)
 
-In elastic analysis the octahedral shear stress is normally used with the mean stress and the DruckerPrager strength criterion
+En analyse élastique, la contrainte de cisaillement octaédrique est normalement utilisée avec la contrainte moyenne et le critère de résistance de Drucker-Prager
 
 #### Plot > Strength Factors > Strength Parameters
 
-to estimate the amount of damage due to over-stressing. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+pour estimer l'ampleur de l'endommagement dû à la surcontrainte. Comme aucun de ces paramètres n'est sensible à l'orientation, ce critère est représentatif de la stabilité d'un massif rocheux homogène.
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of non-linear strain or the strain rate predicted by the model
+En revanche, en analyse non linéaire, les contraintes ne peuvent jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur de la déformation non linéaire ou la vitesse de déformation prédite par le modèle
 
 Mohr-Coulomb in 3D FF blocks.
 
-Over-stressing can be presented in several forms including:
+La surcontrainte peut être présentée sous plusieurs formes, notamment :
 
 Plot > Strength Factors > SF-C Strength/Stress Plot > Strength Factors > dToct Excess Stress Plot > Strength Factors > dS1 Excess Stress Plot > Strength Factors > dTmax Excess Stress
 
-The contour range is set using
+La plage de contours se définit avec
 
 #### Plot > Range
 
-Any of these components can be added to the contouring toolbar if desired
-
-#### Tools > Configure Contouring Toolbar > Stress
-
-The user may find it handy to add the
-
-#### More Stress Components
-
-button to the contouring toolbar for quick access to all stress components.
-
-## 5.3.1.15 Sxx Cartesian Stress
-
-Contours the Cartesian stress components. These components can be accessed via the Stress Components toolbar as follows:
-
-![Figure from page 214](/images/page-214-img-14.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
-
-![Figure from page 214](/images/page-214-img-18.png)
-
-Plot > Stress > sxx Cartesian Stress Component   normal stress in the direction of the x-axis. Plot > Stress > syy Cartesian Stress Component   normal stress in the direction of the y-axis. Plot > Stress > szz Cartesian Stress Component   normal stress in the direction of the z-axis. Plot > Stress > txy Cartesian Stress Component   shear stress in the x-y plane. Plot > Stress > tyz Cartesian Stress Component   shear stress in the y-z plane. Plot > Stress > tzx Cartesian Stress Component   shear stress in the x-z plane.
-
-The contour range is set using
-
-#### Plot > Range
-
-Any of these components can be added to the contouring toolbar if desired
+Chacune de ces composantes peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar > Stress
 
-The user may find it handy to add the
+Il peut être pratique d'ajouter le bouton
 
 #### More Stress Components
 
-button to the contouring toolbar for quick access to all stress components.
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
 
-## 5.3.1.21 Value
+## 5.3.1.15 Contrainte cartésienne Sxx
 
-### 5.3.1.21.1 Effective stress
-
-Selects the effective or total stress component. These components can be accessed via the Stress Components toolbar as follows:
+Trace les contours des composantes cartésiennes de la contrainte. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-Effective stress is the skeletal stress (i.e. without the pore pressure component). Total stress is the skeletal stress plus the pore pressure (or thermal component).
+Plot > Stress > sxx Cartesian Stress Component   contrainte normale dans la direction de l'axe x. Plot > Stress > syy Cartesian Stress Component   contrainte normale dans la direction de l'axe y. Plot > Stress > szz Cartesian Stress Component   contrainte normale dans la direction de l'axe z. Plot > Stress > txy Cartesian Stress Component   contrainte de cisaillement dans le plan x-y. Plot > Stress > tyz Cartesian Stress Component   contrainte de cisaillement dans le plan y-z. Plot > Stress > tzx Cartesian Stress Component   contrainte de cisaillement dans le plan x-z.
 
-This option is only used with Map3D Thermal-Fluid Flow the Thermal stress/Fluid flow analysis version of Map3D.
+La plage de contours se définit avec
 
-Refer to Expansion Coefficient and Conductivity for details.
+#### Plot > Range
 
-### 5.3.1.21.3 Induced Stress
+Chacune de ces composantes peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
-Plot the induced or absolute stress component. These components can be accessed via the Stress Components toolbar as follows:
+Tools > Configure Contouring Toolbar > Stress
+
+Il peut être pratique d'ajouter le bouton
+
+#### More Stress Components
+
+à la barre d'outils des contours pour accéder rapidement à toutes les composantes de contrainte.
+
+## 5.3.1.21 Valeur
+
+### 5.3.1.21.1 Contrainte effective
+
+Sélectionne la composante de la contrainte effective ou de la contrainte totale. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition.
+La contrainte effective est la contrainte du squelette solide (c'est-à-dire sans la composante de pression interstitielle). La contrainte totale est la contrainte du squelette solide plus la pression interstitielle (ou la composante thermique).
 
-Absolute stress is the stress including the pre-mining stress contribution.
+Cette option n'est utilisée qu'avec Map3D Thermal-Fluid Flow, la version de Map3D dédiée à l'analyse des contraintes thermiques/de l'écoulement de fluides.
 
-Also see:
+Pour plus de détails, voir Expansion Coefficient et Conductivity.
+
+### 5.3.1.21.3 Contrainte induite
+
+Trace la composante de la contrainte induite ou de la contrainte absolue. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
+
+![Figure from page 214](/images/page-214-img-14.png)
+
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
+
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
+
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
+
+![Figure from page 214](/images/page-214-img-18.png)
+
+La contrainte induite est la contrainte sans la contribution de la contrainte antérieure à l'exploitation. Elle représente la variation de contrainte depuis l'état antérieur à l'exploitation.
+
+La contrainte absolue est la contrainte incluant la contribution de la contrainte antérieure à l'exploitation.
+
+Voir aussi :
 
 Plot > Strain > Value > Induced Strain
 
