@@ -2,143 +2,140 @@
 title: "Gráfico no Excel (superfícies)"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Plota no Excel as componentes de superfície especificadas.
 
-Plots specified surface components in Excel.
+É preciso contornar os resultados de superfície para poder selecioná-los no gráfico do Excel (p. ex., Plot > Surface Components > Ts Shear Stress).
 
-You must contour surface results in order to be able to select these for Excel plotting (e.g. Plot > Surface Components > Ts Shear Stress).
+O primeiro parâmetro será usado como eixo x do gráfico (ou seja, a abscissa). Os parâmetros adicionais definirão os eixos y do gráfico (ou seja, as séries ou ordenadas). Vários parâmetros de eixos y podem ser especificados.
 
-The first parameter will be used as the x plot axis (i..e abscissa). Additional parameters will define the y plot axes (i.e. series or ordinates). Multiple y plot axes parameters can be specified.
+Dois tipos de gráficos do Excel podem ser criados:
 
-Two types of Excel plots can be created:
+- pontos de contorno selecionados.
 
-- selected contour points.
+- uma série de pontos ao longo de uma polilinha.
 
-- a series of points along the length of a polyline.
+A plotagem no Excel por meio do Map3D é feita pelo suplemento Map3D.xla
 
-Excel plotting through Map3D is facilitated by the add-in routine Map3D.xla
+- Esta rotina é carregada automaticamente quando o Map3D inicia o Excel.
 
-- This routine is automatically loaded when Map3D starts Excel.
-
-- You must allow this macro to run in order for the Map3D plotting routines to work.
+- Você deve permitir que esta macro seja executada para que as rotinas de plotagem do Map3D funcionem.
 
 ![Figure from page 340](/images/page-340-img-11.png)
 
-Fully populated   Specifies that all missing contour points will be generated via interpolation.
+Fully populated   Especifica que todos os pontos de contorno ausentes serão gerados por interpolação.
 
-- This option applies only to plotting of selected contour points (Points, Window and closed Polyline).
+- Esta opção se aplica apenas à plotagem de pontos de contorno selecionados (Points, Window e polilinha fechada).
 
-- This option does not apply to plotting on an open polyline.
+- Esta opção não se aplica à plotagem sobre uma polilinha aberta.
 
-- Map3D calculates results on a sparsely populated grid in order to save on analysis time.
+- O Map3D calcula os resultados em uma grade esparsa para economizar tempo de análise.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories).
+- Para ver a localização dos pontos de contorno reais, ative a exibição de trajetórias (Plot > Options > Trajectories).
 
-- With this option unchecked, only the actual contour points will be included in the plot.
+- Com esta opção desmarcada, somente os pontos de contorno reais serão incluídos no gráfico.
 
-- With this option checked, all missing contour points will be included in the plot.
+- Com esta opção marcada, todos os pontos de contorno ausentes serão incluídos no gráfico.
 
-Line interpolation width   Specifies the desired spacing at which contour points will be generated via interpolation.
+Line interpolation width   Especifica o espaçamento desejado com que os pontos de contorno serão gerados por interpolação.
 
-- This option applies only to plotting on an open polyline.
+- Esta opção se aplica apenas à plotagem sobre uma polilinha aberta.
 
-- This option does not apply to plotting of selected contour points.
+- Esta opção não se aplica à plotagem de pontos de contorno selecionados.
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- Se Line interpolation width for zero, somente as extremidades da polilinha aberta serão plotadas.
 
-- Otherwise points will be generated along the polyline via interpolation at the specified Line interpolation width.
+- Caso contrário, serão gerados pontos ao longo da polilinha por interpolação no Line interpolation width especificado.
 
-Step # only   Specifies that the results for step # only will be dumped (# is the currently displayed loaded mining step).
+Step # only   Especifica que somente os resultados da etapa # serão exportados (# é a etapa de lavra carregada exibida atualmente).
 
-Steps 1-5   Specifies that the results for all steps will be dumped.
+Steps 1-5   Especifica que os resultados de todas as etapas serão exportados.
 
-- Note that this can take a considerable amount of time for large datasets so you must be patient and wait for Map3D  to cycle through all of the steps.
+- Observe que isso pode levar um tempo considerável em grandes conjuntos de dados; portanto, tenha paciência e aguarde o Map3D percorrer todas as etapas.
 
-Use Commas   Specifies that the results dumped to Excel will have commas in place of decimal points for the number format.
+Use Commas   Especifica que os resultados exportados para o Excel usarão vírgulas no lugar de pontos decimais no formato dos números.
 
-Restart Excel   If Map3D looses communication with Excel, you must Restart Excel to re-establish communications.
+Restart Excel   Se o Map3D perder a comunicação com o Excel, é preciso reiniciar o Excel (Restart Excel) para restabelecer a comunicação.
 
-Points   activates graphical picking of individual points.
+Points   ativa a seleção gráfica de pontos individuais.
 
-- The nearest point to the pick point will be plotted.
+- O ponto mais próximo do ponto selecionado será plotado.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver a localização dos pontos de contorno reais, ative a exibição de trajetórias (Plot > Options > Trajectories). Os pontos de contorno ficam onde as trajetórias são desenhadas.
 
-Window   activates a rectangular pick window.
+Window   ativa uma janela de seleção retangular.
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- Você será solicitado a selecionar os dois cantos da janela clicando uma vez com o mouse em cada um.
 
-- Only grid points enclosed within the window will be included in the plot.
+- Somente os pontos de grade contidos na janela serão incluídos no gráfico.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver a localização dos pontos de contorno reais, ative a exibição de trajetórias (Plot > Options > Trajectories). Os pontos de contorno ficam onde as trajetórias são desenhadas.
 
-Polyline (closed)   activates a graphical pick polygon.
+Polyline (closed)   ativa um polígono de seleção gráfico.
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- Você deve manter pressionada a tecla Shift para que vários segmentos de linha possam ser selecionados.
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- Uma forma poligonal fechada é definida fechando a polilinha ao selecionar o ponto inicial.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- Se você definir uma forma poligonal fechada, os pontos de contorno contidos no polígono serão plotados.
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- Se você definir uma polilinha aberta, será plotada uma série de pontos ao longo da polilinha.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver a localização dos pontos de contorno reais, ative a exibição de trajetórias (Plot > Options > Trajectories). Os pontos de contorno ficam onde as trajetórias são desenhadas.
 
-Polyline (open)   activates a graphical pick polygon.
+Polyline (open)   ativa um polígono de seleção gráfico.
 
-- You can select two points to define a single line segment.
+- Você pode selecionar dois pontos para definir um único segmento de linha.
 
-- If you hold down the Shift-key multiple line segments can be selected.
+- Se você mantiver pressionada a tecla Shift, vários segmentos de linha poderão ser selecionados.
 
-- You can specify the desired spacing at which contour points will be generated via interpolation with using the Line interpolation width parameter.
+- Você pode especificar o espaçamento desejado com que os pontos de contorno serão gerados por interpolação usando o parâmetro Line interpolation width.
 
-- The user may find it useful to superimpose a regular grid on top of the contours (View > Render > Grid Lines) to assist in selecting the polyline location.
+- Pode ser útil sobrepor uma grade regular aos contornos (View > Render > Grid Lines) para ajudar a escolher a localização da polilinha.
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- Se Line interpolation width for zero, somente as extremidades da polilinha aberta serão plotadas.
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- Se você definir uma polilinha aberta, será plotada uma série de pontos ao longo da polilinha.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- Se você definir uma forma poligonal fechada, os pontos de contorno contidos no polígono serão plotados.
 
 #### Excel Chart Control:
 
-New chart - creates a new Excel chart.
+New chart - cria um novo gráfico do Excel.
 
-Extend existing chart - adds data to the existing Excel chart. All plot parameters must be the same as those used previously.
+Extend existing chart - adiciona dados ao gráfico do Excel existente. Todos os parâmetros de plotagem devem ser os mesmos usados anteriormente.
 
-Change series - changes or adds new series to an existing Excel chart. Only the first plot parameter must be the same. Additional plot parameters can be specified as desired.
+Change series - altera ou adiciona novas séries a um gráfico do Excel existente. Somente o primeiro parâmetro de plotagem deve ser o mesmo. Parâmetros de plotagem adicionais podem ser especificados conforme desejado.
 
 #### Stresses:
 
-sn tsn psn stress normal to the surface, its trend and plunge.
+sn tsn psn tensão normal à superfície, sua direção e seu caimento (plunge).
 
-ts tts pts maximum shear stress in the plane of the surface, its trend and plunge. ts1 ts2   shear stress components in the plane of the surface. ts1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ts2 is perpendicular to ts1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ts tts pts tensão de cisalhamento máxima no plano da superfície, sua direção e seu caimento. ts1 ts2   componentes da tensão de cisalhamento no plano da superfície. ts1 é paralela ao primeiro lado (ou seja, o lado definido por x1 y1 z1 – x2 y2 z2). ts2 é perpendicular a ts1 na direção do segundo lado (ou seja, o lado definido por x2 y2 z2 – x3 y3 z3).
 
-ser surface stress error. Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations. This parameter indicates the error for each of the equations.
+ser erro de tensão superficial. Solucionadores iterativos funcionam determinando o erro da solução atual de cada equação simultânea e, em seguida, reduzindo esses erros por um processo de aproximações sucessivas. Este parâmetro indica o erro de cada uma das equações.
 
-fer failure criterion error. This parameter is only used for non-linear creep analyzes (including fault slip and 3D material non-linearity). This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. This parameter indicates the viscous stress for each of the equations.
+fer erro do critério de ruptura. Este parâmetro só é usado em análises de fluência não lineares (incluindo deslizamento de falhas e não linearidade de materiais 3D). Este parâmetro deve estar sempre próximo de zero, a menos que alguma viscosidade tenha sido especificada e o problema se torne não linear. Neste último caso, a fluência viscosa pode permitir estados de tensão acima do critério de ruptura, indicando falta de equilíbrio estático. Este parâmetro indica a tensão viscosa de cada uma das equações.
 
-smax tsmax psmax maximum tangential stress, its trend and plunge. smin tsmin psmin minimum tangential stress, its trend and plunge. Effective/Total – effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute induced stress or absolute stress components (i.e. the stress without the premining stress contribution).
+smax tsmax psmax tensão tangencial máxima, sua direção e seu caimento. smin tsmin psmin tensão tangencial mínima, sua direção e seu caimento. Effective/Total – componentes da tensão efetiva ou da tensão total. Estas opções só são usadas no Map3D Thermal-Fluid Flow, pois esse código permite calcular distribuições de poropressão em regime permanente. Induced/Absolute componentes da tensão induzida ou da tensão absoluta (ou seja, a tensão sem a contribuição da tensão pré-lavra).
 
 #### Strains:
 
-en ten pen strain in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the normal displacement (closure) divided by the thickness. es tes pes maximum shear strain in the plane of the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the  shear displacement (ride) divided by the thickness.
+en ten pen deformação na direção normal à superfície, sua direção e seu caimento. Este parâmetro só é usado em planos DD e é calculado como o deslocamento normal (fechamento) dividido pela espessura. es tes pes deformação de cisalhamento máxima no plano da superfície, sua direção e seu caimento. Este parâmetro só é usado em planos DD e é calculado como o deslocamento de cisalhamento (ride) dividido pela espessura.
 
-es1 es2   shear strain components in the plane of the surface. es1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). es2 is perpendicular to es1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+es1 es2   componentes da deformação de cisalhamento no plano da superfície. es1 é paralela ao primeiro lado (ou seja, o lado definido por x1 y1 z1 – x2 y2 z2). es2 é perpendicular a es1 na direção do segundo lado (ou seja, o lado definido por x2 y2 z2 – x3 y3 z3).
 
-Elastic/Plastic/Total elastic, plastic or total strain components. These options are used for DD planes in Map3D Fault-Slip, and also used in Map3D Non-Linear, as this code allows for calculation of non-linear strains.
+Elastic/Plastic/Total componentes da deformação elástica, plástica ou total. Estas opções são usadas para planos DD no Map3D Fault-Slip e também no Map3D Non-Linear, pois esse código permite calcular deformações não lineares.
 
-Induced/Absolute induced strain or absolute strain components (i.e. the stress without the premining stress contribution).
+Induced/Absolute componentes da deformação induzida ou da deformação absoluta (ou seja, sem a contribuição da tensão pré-lavra).
 
 #### Displacements:
 
-dn tdn pdn normal displacement (closure) in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+dn tdn pdn deslocamento normal (fechamento) na direção normal à superfície, sua direção e seu caimento. Este parâmetro só é usado em planos DD. Observe que o valor elástico, plástico ou total pode ser especificado.
 
-ds tds pds maximum shear displacement (ride) in the plane of the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+ds tds pds deslocamento de cisalhamento máximo (ride) no plano da superfície, sua direção e seu caimento. Este parâmetro só é usado em planos DD. Observe que o valor elástico, plástico ou total pode ser especificado.
 
-ds1 ds2   shear displacement (ride) components in the plane of the surface. ds1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ds1 ds2   componentes do deslocamento de cisalhamento (ride) no plano da superfície. ds1 é paralela ao primeiro lado (ou seja, o lado definido por x1 y1 z1 – x2 y2 z2). ds2 é perpendicular a ds1 na direção do segundo lado (ou seja, o lado definido por x2 y2 z2 – x3 y3 z3).
 
 #### Miscellaneous:
 
-L  Length along a line. Use the Polyline command to select the desired line. X  coordinate value. Y  coordinate value. Z  coordinate value. area   the area of the surface. matl# the number of the material assigned to the surface. step# the mining step number. blk#   the block number. name the block name. dof#   the degree of freedom number. ERR   energy release rate plot.
+L  comprimento ao longo de uma linha. Use o comando Polyline para selecionar a linha desejada. X  valor da coordenada. Y  valor da coordenada. Z  valor da coordenada. area   a área da superfície. matl# o número do material atribuído à superfície. step# o número da etapa de lavra. blk#   o número do bloco. name o nome do bloco. dof#   o número do grau de liberdade. ERR   gráfico da taxa de liberação de energia.

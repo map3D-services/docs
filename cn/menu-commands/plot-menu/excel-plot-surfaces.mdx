@@ -2,143 +2,140 @@
 title: "Excel 绘图（表面）"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Excel 中绘制指定的表面分量。
 
-Plots specified surface components in Excel.
+必须先对表面结果绘制等值线，才能选择它们进行 Excel 绘图（例如 Plot > Surface Components > Ts Shear Stress）。
 
-You must contour surface results in order to be able to select these for Excel plotting (e.g. Plot > Surface Components > Ts Shear Stress).
+第一个参数将用作绘图的 x 轴（即横坐标）。其他参数将定义绘图的 y 轴（即数据系列或纵坐标）。可以指定多个 y 轴参数。
 
-The first parameter will be used as the x plot axis (i..e abscissa). Additional parameters will define the y plot axes (i.e. series or ordinates). Multiple y plot axes parameters can be specified.
+可以创建两种类型的 Excel 绘图：
 
-Two types of Excel plots can be created:
+- 选定的等值线点。
 
-- selected contour points.
+- 沿多段线长度方向的一系列点。
 
-- a series of points along the length of a polyline.
+通过 Map3D 进行 Excel 绘图由加载项 Map3D.xla 实现
 
-Excel plotting through Map3D is facilitated by the add-in routine Map3D.xla
+- 当 Map3D 启动 Excel 时，该程序会自动加载。
 
-- This routine is automatically loaded when Map3D starts Excel.
-
-- You must allow this macro to run in order for the Map3D plotting routines to work.
+- 必须允许运行此宏，Map3D 的绘图功能才能正常工作。
 
 ![Figure from page 340](/images/page-340-img-11.png)
 
-Fully populated   Specifies that all missing contour points will be generated via interpolation.
+Fully populated   指定通过插值生成所有缺失的等值线点。
 
-- This option applies only to plotting of selected contour points (Points, Window and closed Polyline).
+- 此选项仅适用于选定等值线点的绘图（Points、Window 和闭合多段线）。
 
-- This option does not apply to plotting on an open polyline.
+- 此选项不适用于在开放多段线上绘图。
 
-- Map3D calculates results on a sparsely populated grid in order to save on analysis time.
+- 为节省分析时间，Map3D 在稀疏网格上计算结果。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories).
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。
 
-- With this option unchecked, only the actual contour points will be included in the plot.
+- 取消选中此选项时，绘图中只包含实际的等值线点。
 
-- With this option checked, all missing contour points will be included in the plot.
+- 选中此选项时，绘图中包含所有缺失的等值线点。
 
-Line interpolation width   Specifies the desired spacing at which contour points will be generated via interpolation.
+Line interpolation width   指定通过插值生成等值线点的所需间距。
 
-- This option applies only to plotting on an open polyline.
+- 此选项仅适用于在开放多段线上绘图。
 
-- This option does not apply to plotting of selected contour points.
+- 此选项不适用于选定等值线点的绘图。
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- 如果 Line interpolation width 设为零，则只绘制开放多段线的端点。
 
-- Otherwise points will be generated along the polyline via interpolation at the specified Line interpolation width.
+- 否则，将按指定的 Line interpolation width 通过插值沿多段线生成点。
 
-Step # only   Specifies that the results for step # only will be dumped (# is the currently displayed loaded mining step).
+Step # only   指定仅导出第 # 步的结果（# 为当前显示的已加载开采步骤）。
 
-Steps 1-5   Specifies that the results for all steps will be dumped.
+Steps 1-5   指定导出所有步骤的结果。
 
-- Note that this can take a considerable amount of time for large datasets so you must be patient and wait for Map3D  to cycle through all of the steps.
+- 请注意，对于大型数据集这可能需要相当长的时间，因此必须耐心等待 Map3D 循环完所有步骤。
 
-Use Commas   Specifies that the results dumped to Excel will have commas in place of decimal points for the number format.
+Use Commas   指定导出到 Excel 的结果在数字格式中使用逗号代替小数点。
 
-Restart Excel   If Map3D looses communication with Excel, you must Restart Excel to re-establish communications.
+Restart Excel   如果 Map3D 与 Excel 失去通信，必须重新启动 Excel（Restart Excel）以重新建立通信。
 
-Points   activates graphical picking of individual points.
+Points   激活图形化拾取单个点。
 
-- The nearest point to the pick point will be plotted.
+- 将绘制离拾取点最近的点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-Window   activates a rectangular pick window.
+Window   激活矩形拾取窗口。
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- 系统会提示您分别单击选择窗口的两个角点。
 
-- Only grid points enclosed within the window will be included in the plot.
+- 只有窗口内包含的网格点才会纳入绘图。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-Polyline (closed)   activates a graphical pick polygon.
+Polyline (closed)   激活图形化拾取多边形。
 
-- You must hold down the Shift-key so that multiple line segments can be selected.
+- 必须按住 Shift 键才能选择多条线段。
 
-- A closed polygonal shape is defined by closing the polyline by selecting the starting point.
+- 选择起始点以闭合多段线，即可定义闭合多边形。
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- 如果定义了闭合多边形，将绘制多边形内的等值线点。
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- 如果定义的是开放多段线，将绘制沿多段线长度方向的一系列点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-Polyline (open)   activates a graphical pick polygon.
+Polyline (open)   激活图形化拾取多边形。
 
-- You can select two points to define a single line segment.
+- 可以选择两个点来定义单条线段。
 
-- If you hold down the Shift-key multiple line segments can be selected.
+- 如果按住 Shift 键，可以选择多条线段。
 
-- You can specify the desired spacing at which contour points will be generated via interpolation with using the Line interpolation width parameter.
+- 可以使用 Line interpolation width 参数指定通过插值生成等值线点的所需间距。
 
-- The user may find it useful to superimpose a regular grid on top of the contours (View > Render > Grid Lines) to assist in selecting the polyline location.
+- 在等值线上叠加规则网格（View > Render > Grid Lines）可能有助于选择多段线的位置。
 
-- If the Line interpolation width is set to zero, only the ends of the open polyline will be plotted.
+- 如果 Line interpolation width 设为零，则只绘制开放多段线的端点。
 
-- If you define an open polyline shape - a series of points along the length of the polyline will be plotted.
+- 如果定义的是开放多段线，将绘制沿多段线长度方向的一系列点。
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be plotted.
+- 如果定义了闭合多边形，将绘制多边形内的等值线点。
 
 #### Excel Chart Control:
 
-New chart - creates a new Excel chart.
+New chart - 创建新的 Excel 图表。
 
-Extend existing chart - adds data to the existing Excel chart. All plot parameters must be the same as those used previously.
+Extend existing chart - 向现有 Excel 图表添加数据。所有绘图参数必须与之前使用的相同。
 
-Change series - changes or adds new series to an existing Excel chart. Only the first plot parameter must be the same. Additional plot parameters can be specified as desired.
+Change series - 更改现有 Excel 图表的数据系列或添加新系列。只有第一个绘图参数必须相同。可以根据需要指定其他绘图参数。
 
 #### Stresses:
 
-sn tsn psn stress normal to the surface, its trend and plunge.
+sn tsn psn 垂直于表面的应力、其走向和倾伏角。
 
-ts tts pts maximum shear stress in the plane of the surface, its trend and plunge. ts1 ts2   shear stress components in the plane of the surface. ts1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ts2 is perpendicular to ts1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ts tts pts 表面平面内的最大剪应力、其走向和倾伏角。ts1 ts2   表面平面内的剪应力分量。ts1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。ts2 垂直于 ts1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。
 
-ser surface stress error. Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations. This parameter indicates the error for each of the equations.
+ser 表面应力误差。迭代求解器的工作方式是确定每个联立方程当前解的误差，然后通过逐次逼近的过程减小这些误差。该参数表示每个方程的误差。
 
-fer failure criterion error. This parameter is only used for non-linear creep analyzes (including fault slip and 3D material non-linearity). This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. This parameter indicates the viscous stress for each of the equations.
+fer 破坏准则误差。该参数仅用于非线性蠕变分析（包括断层滑动和 3D 材料非线性）。除非指定了某种黏性且问题变为非线性，否则该参数应始终接近零。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。该参数表示每个方程的黏性应力。
 
-smax tsmax psmax maximum tangential stress, its trend and plunge. smin tsmin psmin minimum tangential stress, its trend and plunge. Effective/Total – effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute induced stress or absolute stress components (i.e. the stress without the premining stress contribution).
+smax tsmax psmax 最大切向应力、其走向和倾伏角。smin tsmin psmin 最小切向应力、其走向和倾伏角。Effective/Total – 有效应力或总应力分量。这些选项仅用于 Map3D Thermal-Fluid Flow，因为该程序可以计算稳态孔隙压力分布。Induced/Absolute 诱发应力或绝对应力分量（即不含开采前应力贡献的应力）。
 
 #### Strains:
 
-en ten pen strain in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the normal displacement (closure) divided by the thickness. es tes pes maximum shear strain in the plane of the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the  shear displacement (ride) divided by the thickness.
+en ten pen 垂直于表面方向的应变、其走向和倾伏角。该参数仅用于 DD 平面，计算方法为法向位移（闭合量）除以厚度。es tes pes 表面平面内的最大剪应变、其走向和倾伏角。该参数仅用于 DD 平面，计算方法为剪切位移（ride）除以厚度。
 
-es1 es2   shear strain components in the plane of the surface. es1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). es2 is perpendicular to es1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+es1 es2   表面平面内的剪应变分量。es1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。es2 垂直于 es1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。
 
-Elastic/Plastic/Total elastic, plastic or total strain components. These options are used for DD planes in Map3D Fault-Slip, and also used in Map3D Non-Linear, as this code allows for calculation of non-linear strains.
+Elastic/Plastic/Total 弹性、塑性或总应变分量。这些选项用于 Map3D Fault-Slip 中的 DD 平面，也用于 Map3D Non-Linear，因为该程序可以计算非线性应变。
 
-Induced/Absolute induced strain or absolute strain components (i.e. the stress without the premining stress contribution).
+Induced/Absolute 诱发应变或绝对应变分量（即不含开采前应力贡献的应变）。
 
 #### Displacements:
 
-dn tdn pdn normal displacement (closure) in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+dn tdn pdn 垂直于表面方向的法向位移（闭合量）、其走向和倾伏角。该参数仅用于 DD 平面。请注意，可以指定弹性值、塑性值或总值。
 
-ds tds pds maximum shear displacement (ride) in the plane of the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+ds tds pds 表面平面内的最大剪切位移（ride）、其走向和倾伏角。该参数仅用于 DD 平面。请注意，可以指定弹性值、塑性值或总值。
 
-ds1 ds2   shear displacement (ride) components in the plane of the surface. ds1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ds1 ds2   表面平面内的剪切位移（ride）分量。ds1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。ds2 垂直于 ds1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。
 
 #### Miscellaneous:
 
-L  Length along a line. Use the Polyline command to select the desired line. X  coordinate value. Y  coordinate value. Z  coordinate value. area   the area of the surface. matl# the number of the material assigned to the surface. step# the mining step number. blk#   the block number. name the block name. dof#   the degree of freedom number. ERR   energy release rate plot.
+L  沿线的长度。使用 Polyline 命令选择所需的线。X  坐标值。Y  坐标值。Z  坐标值。area   表面面积。matl# 指定给表面的材料编号。step# 开采步骤编号。blk#   块体编号。name 块体名称。dof#   自由度编号。ERR   能量释放率绘图。
