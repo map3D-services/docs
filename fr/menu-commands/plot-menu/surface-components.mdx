@@ -2,50 +2,45 @@
 title: "Composantes de surface"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+## 5.3.7.1 Contours de surface désactivés
 
-## 5.3.7.1 Surface Contours Off
+Désactive les contours.
 
-Turns the contours off.
-
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-## 5.3.7.2 Serr Stress error
+## 5.3.7.2 Serr Erreur de contrainte
 
-Contours the surface stress error.
+Trace les contours de l'erreur de contrainte de surface.
 
-These components can be accessed via the Strength Factor Components toolbar as follows:
+Ces composantes sont accessibles via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault slip, creep etc. The iterative solver functions by determining the error in the current solution of each
+Pendant la résolution de la matrice, Map3D tente de résoudre progressivement les équations simultanées enregistrées dans la matrice des coefficients, ainsi que toute autre équation décrivant les zones de matériau alterné, le glissement de failles, le fluage, etc. Le solveur itératif fonctionne en déterminant l'erreur de la solution courante de chaque équation simultanée (l'erreur de contrainte de surface), puis en réduisant ces erreurs par un processus d'approximations successives.
 
-simultaneous equation (the surface stress error), then reducing these errors by a process of successive approximations.
+Le Stress Error trace les contours de l'erreur de contrainte actuelle sur toutes les surfaces.
 
-The Stress Error contours the current stress error on all surfaces.
+Le Maximum Stress Error trace les contours des emplacements où se produisent les erreurs de contrainte maximales.
 
-The Maximum Stress Error contours the locations where the maximum stress errors occur.
-
-A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance STOL
+On considère qu'une solution convergée a été obtenue lorsque l'erreur maximale de contrainte de surface et l'erreur maximale du critère de rupture sont ramenées en dessous de la tolérance de contrainte STOL spécifiée par l'utilisateur
 
 Analysis > CParams
 
@@ -55,29 +50,29 @@ Plot > Surface Components > Ferr - Failure Error
 
 Analysis Dialog
 
-## 5.3.7.3 Ferr Failure error
+## 5.3.7.3 Ferr Erreur de rupture
 
-Contours the surface failure criterion error.
+Trace les contours de l'erreur du critère de rupture de surface.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault slip, creep etc. The iterative solver functions by determining the error in the current solution of each simultaneous equation (the surface stress error), then reducing these errors by a process of successive approximations.
+Pendant la résolution de la matrice, Map3D tente de résoudre progressivement les équations simultanées enregistrées dans la matrice des coefficients, ainsi que toute autre équation décrivant les zones de matériau alterné, le glissement de failles, le fluage, etc. Le solveur itératif fonctionne en déterminant l'erreur de la solution courante de chaque équation simultanée (l'erreur de contrainte de surface), puis en réduisant ces erreurs par un processus d'approximations successives.
 
-A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance STOL
+On considère qu'une solution convergée a été obtenue lorsque l'erreur maximale de contrainte de surface et l'erreur maximale du critère de rupture sont ramenées en dessous de la tolérance de contrainte STOL spécifiée par l'utilisateur
 
 Analysis > CParams
 
-The failure criterion error is only used for non-linear creep analyzes (including fault slip and 3D material non-linearity). This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium.
+L'erreur du critère de rupture n'est utilisée que pour les analyses de fluage non linéaires (y compris le glissement de failles et la non-linéarité des matériaux 3D). Ce paramètre doit toujours être proche de zéro, sauf si une certaine viscosité a été spécifiée et que le problème devient non linéaire. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique.
 
 #### Related Topics:
 
@@ -85,23 +80,23 @@ Plot > Surface Components > Serr - Stress Error
 
 Analysis > Options > Creep Analysis Dialog
 
-## 5.3.7.4 Shear stress
+## 5.3.7.4 Contrainte de cisaillement
 
-Contours the maximum shear stress in the plane of the surface. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours de la contrainte de cisaillement maximale dans le plan de la surface. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-In elastic analysis the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane.
+En analyse élastique, la contrainte de cisaillement maximale dans le plan est normalement utilisée avec la contrainte normale dans le plan et le critère de résistance de Mohr-Coulomb pour estimer l'ampleur du glissement dû à la surcontrainte sur une faille, un système de joints ou un plan de stratification.
 
-By contrast, in non-linear analysis the maximum in-plane shear stress can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of slip predicted by the model
+En revanche, en analyse non linéaire, la contrainte de cisaillement maximale dans le plan ne peut jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur du glissement prédite par le modèle
 
 Mohr-Coulomb in DD planes
 
@@ -109,11 +104,11 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -121,25 +116,25 @@ Tools > Configure Contouring Toolbar
 
 Plot > Surface Components > Sn Normal Stress Plot > Surface Components > dTs - Excess Shear Stress Plot > Surface Components > dEs - Incremental Shear Strain Plot > Surface Components > Es - Shear Strain Plot > Surface Components > ds - Shear Displacement (Ride)
 
-## 5.3.7.5 Normal stress
+## 5.3.7.5 Contrainte normale
 
-Contours the stress normal to the surface.
+Trace les contours de la contrainte normale à la surface.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-In elastic analysis the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane.
+En analyse élastique, la contrainte de cisaillement maximale dans le plan est normalement utilisée avec la contrainte normale dans le plan et le critère de résistance de Mohr-Coulomb pour estimer l'ampleur du glissement dû à la surcontrainte sur une faille, un système de joints ou un plan de stratification.
 
-By contrast, in non-linear analysis the maximum in-plane shear stress can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of slip predicted by the model
+En revanche, en analyse non linéaire, la contrainte de cisaillement maximale dans le plan ne peut jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur du glissement prédite par le modèle
 
 Mohr-Coulomb in DD planes
 
@@ -147,11 +142,11 @@ Fault-Gouge in DD planes
 
 Backfill-Hyperbolic in DD planes
 
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -167,69 +162,69 @@ Plot > Surface Components > Es - Shear Strain
 
 Plot > Surface Components > ds - Shear Displacement (Ride)
 
-## 5.3.7.6 Maximum Tangential Stress
+## 5.3.7.6 Contrainte tangentielle maximale
 
-Contours the stresses tangential to the surface. These components can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours des contraintes tangentes à la surface. Ces composantes sont accessibles via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-In elastic analyses, tangential stresses are not calculated unless requested. This is because they are not required for the solution process and do require addition al analysis time. This calcuation is requested by checking Analysis > Options > Calculate Tangential Stress Components.
+Dans les analyses élastiques, les contraintes tangentielles ne sont pas calculées sauf demande explicite. En effet, elles ne sont pas nécessaires au processus de résolution et demandent un temps d'analyse supplémentaire. Ce calcul se demande en cochant Analysis > Options > Calculate Tangential Stress Components.
 
-These values are calculated by default during plastic analysis.
+Ces valeurs sont calculées par défaut lors d'une analyse plastique.
 
-In elastic analysis the maximum tangential stress is often referred to as the extreme fibre stress. This is useful to determine locations where the stresses exceed the unconfined compressive strength or tensile strenght of the rock mass.
+En analyse élastique, la contrainte tangentielle maximale est souvent appelée contrainte en fibre extrême. C'est utile pour repérer les endroits où les contraintes dépassent la résistance à la compression simple ou la résistance à la traction du massif rocheux.
 
-The contour range is set using
-
-#### Plot > Range
-
-This component can be added to the contour toolbar if desired
-
-Tools > Configure Contouring Toolbar
-
-## 5.3.7.8 Shear strain
-
-Contours the shear strain occurring in the in-filling material of DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
-
-![Figure from page 295](/images/page-295-img-6.png)
-
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
-
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
-
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
-
-![Figure from page 295](/images/page-295-img-10.png)
-
-The shear strain is determined by dividing the shear displacement (ride) by the DDplane thickness.
-
-CAD > Edit > Entity Properties > DDplane Thickess
-
-Note that there are three components of strain that can be contoured:
-
-Plot > Surface Components > Value > Elastic Plot > Surface Components > Value > Plastic Plot > Surface Components > Value > Total
-
-There are also two different ways of presenting the strain:
-
-Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
-
-Note that is the current level of shear strain acting on the DD surfaces.
-
-Since the displacement can change direction and even reverse during slip, the total accumulated shear strain can give different values.
-
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
+
+Tools > Configure Contouring Toolbar
+
+## 5.3.7.8 Déformation de cisaillement
+
+Trace les contours de la déformation de cisaillement qui se produit dans le matériau de remplissage des éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
+
+![Figure from page 295](/images/page-295-img-6.png)
+
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
+
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
+
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
+
+![Figure from page 295](/images/page-295-img-10.png)
+
+La déformation de cisaillement est déterminée en divisant le déplacement de cisaillement (ride) par l'épaisseur du plan DD.
+
+CAD > Edit > Entity Properties > DDplane Thickess
+
+Notez que trois composantes de la déformation peuvent être contourées :
+
+Plot > Surface Components > Value > Elastic Plot > Surface Components > Value > Plastic Plot > Surface Components > Value > Total
+
+Il existe aussi deux façons différentes de présenter la déformation :
+
+Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
+
+Notez qu'il s'agit du niveau actuel de déformation de cisaillement agissant sur les surfaces DD.
+
+Comme le déplacement peut changer de direction et même s'inverser pendant le glissement, la déformation de cisaillement totale cumulée peut donner des valeurs différentes.
+
+La plage de contours se définit avec
+
+Plot > Range
+
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -239,33 +234,33 @@ Plot > Surface Components > dEs - Incremental Shear Strain
 
 Plot > Surface Components > ds - Shear Displacement (Ride)
 
-## 5.3.7.10 Normal strain
+## 5.3.7.10 Déformation normale
 
-Contours the normal strain occurring in the in-filling material of DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours de la déformation normale qui se produit dans le matériau de remplissage des éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-The normal strain is determined by dividing the normal displacement (closure) by the DDplane thickness
+La déformation normale est déterminée en divisant le déplacement normal (convergence) par l'épaisseur du plan DD
 
 #### CAD > Edit > Entity Properties > DDplane Thickess
 
-Note that there are three components of strain that can be contoured:
+Notez que trois composantes de la déformation peuvent être contourées :
 
 Plot > Surface Components > Value > Elastic Plot > Surface Components > Value > Plastic Plot > Surface Components > Value > Total
 
-The contour range is set using
+La plage de contours se définit avec
 
-#### Plot > Range
+Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -273,33 +268,33 @@ Tools > Configure Contouring Toolbar
 
 Plot > Surface Components > dn - Normal Displacement (Closure)
 
-## 5.3.7.11 Shear Displacement (Ride)
+## 5.3.7.11 Déplacement de cisaillement (Ride)
 
-Contours the ride or shear displacement occurring on DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours du ride ou déplacement de cisaillement qui se produit sur les éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-Note that there are three components of shear displacement that can be contoured:
+Notez que trois composantes du déplacement de cisaillement peuvent être contourées :
 
 Plot > Surface Components > Value > Elastic Plot > Surface Components > Value > Plastic Plot > Surface Components > Value > Total
 
-There are also two different ways of presenting the displacement:
+Il existe aussi deux façons différentes de présenter le déplacement :
 
 Plot > Strain > Value > Induced Strain Plot > Strain > Value > Absolute Strain
 
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -307,29 +302,29 @@ Tools > Configure Contouring Toolbar
 
 Plot > Surface Components > dEs - Incremental Shear Strain Plot > Surface Components > Es - Shear Strain
 
-## 5.3.7.12 Normal Displacement (Closure)
+## 5.3.7.12 Déplacement normal (convergence)
 
-Contours the closure or normal displacement occurring on DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours de la convergence ou déplacement normal qui se produit sur les éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-Note that there are three components of closure that can be contoured:
+Notez que trois composantes de la convergence peuvent être contourées :
 
 Plot > Surface Components > Value > Elastic Plot > Surface Components > Value > Plastic Plot > Surface Components > Value > Total
 
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -339,55 +334,55 @@ Plot > Surface Components > ds - Shear Displacement (Ride)
 
 ## 5.3.7.13 ERR
 
-Calculate energy release rate.
+Calcule le taux de libération d'énergie.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-This routine enables the user to calculate energy release rate ( _ERR_ ) ahead of an excavation face. An alternative method is available where _ERR_ can be calculated at any desired location Analysis > Options > LERD/LSS
+Cette routine permet à l'utilisateur de calculer le taux de libération d'énergie ( _ERR_ ) en avant d'un front d'excavation. Une autre méthode permet de calculer _ERR_ à n'importe quel emplacement souhaité : Analysis > Options > LERD/LSS
 
 #### Crack-tip Formulation
 
-Consider a planar crack in an infinite homogeneous elastic medium. It is well known that near the crack tip, the aperture d exhibits a Ö _r_ response near the face
+Considérons une fissure plane dans un milieu élastique homogène infini. Il est bien connu qu'à proximité de la pointe de la fissure, l'ouverture d présente une réponse en Ö _r_ près du front
 
-and the stress s exhibits a 1/Ö _r_ response
+et la contrainte s présente une réponse en 1/Ö _r_
 
-where _r_ represents the distance from the crack tip.
+où _r_ représente la distance à la pointe de la fissure.
 
-The total energy released can be determined for a small increment of face advance a by superimposing the normal displacement (closure) with the stress over the region a. This requires that we offset the coordinate system for d by the distance a giving
+L'énergie totale libérée peut être déterminée pour un petit incrément d'avancement du front a en superposant le déplacement normal (convergence) à la contrainte sur la région a. Cela exige de décaler le système de coordonnées de d de la distance a, ce qui donne
 
-The total energy released can then be calculated from (the integral is taken from 0 to a)
+L'énergie totale libérée peut alors être calculée à partir de (l'intégrale est prise de 0 à a)
 
 - _W_ = ½ ò s d _dr_
 
 [4] = ½ _p_ d _p_ s ò Ö(a- _r_ )/Ö _r dr_ = ¼ p a _p_ d _p_ s
 
-The energy release rate can now be determined by differentiating by a to arrive at
+Le taux de libération d'énergie peut maintenant être déterminé en dérivant par rapport à a pour aboutir à
 
-This expression has only made the assumption that d exhibits a Ö _r_ response near the face and that s exhibits a 1/Ö _r_ response near the face. No assumptions regarding the geometry have been made. There is no requirement for _p_ d to be related to _p_ s in any way. Note that these assumptions are only true in an infinite homogeneous elastic medium. Near bi-material interfaces or other excavation surfaces these assumptions break down.
+Cette expression ne suppose que le fait que d présente une réponse en Ö _r_ près du front et que s présente une réponse en 1/Ö _r_ près du front. Aucune hypothèse sur la géométrie n'a été faite. Il n'est pas nécessaire que _p_ d soit lié à _p_ s de quelque manière que ce soit. Notez que ces hypothèses ne sont vraies que dans un milieu élastique homogène infini. Près d'interfaces bi-matériaux ou d'autres surfaces d'excavation, ces hypothèses ne tiennent plus.
 
 #### Analytical Solution for a Planar Crack
 
-Consider a planar crack with width 2 _c_ and length eight times the width.
+Considérons une fissure plane de largeur 2 _c_ et de longueur égale à huit fois la largeur.
 
 ![Figure from page 305](/images/page-305-img-3.png)
 
-For such a shape, the aperture (normal displacement or closure) can be determined analytically as (at the mid-section)
+Pour une telle forme, l'ouverture (déplacement normal ou convergence) peut être déterminée analytiquement comme (à la section médiane)
 
 #### d = 4(1-n²)/ _E p_ Ö( _c_ ²- _x_ ²) [6]
 
-where _E_ and n represent respectively Young's (rock mass scale - deformation) modulus and Poisson's ratio, and _p_ represents the homogeneous pre-mining stress state. The stress ahead of the crack tip can also be determined analytically as
+où _E_ et n représentent respectivement le module de Young (à l'échelle du massif rocheux, de déformation) et le coefficient de Poisson, et _p_ représente l'état de contraintes homogène antérieur à l'exploitation. La contrainte en avant de la pointe de la fissure peut aussi être déterminée analytiquement comme
 
-The work done in deforming the crack surfaces is equivalent to the total energy released and can be determined as follows (the integral is taken from - _c_ to + _c_ )
+Le travail effectué pour déformer les surfaces de la fissure est équivalent à l'énergie totale libérée et peut être déterminé comme suit (l'intégrale est prise de - _c_ à + _c_ )
 
 - _W_ = ½ ò _p_ d _dx_
 
@@ -395,61 +390,61 @@ The work done in deforming the crack surfaces is equivalent to the total energy 
 
 - = p (1-n²) _p_ ² _c_ ²/ _E_
 
-As the length of the crack increases, the energy release per unit length of crack extension can be determined by differentiation as
+À mesure que la longueur de la fissure augmente, l'énergie libérée par unité de longueur d'extension de la fissure peut être déterminée par dérivation comme
 
-For extension of one end of the crack only, we obtain the energy release rate as half this value
+Pour l'extension d'une seule extrémité de la fissure, on obtient le taux de libération d'énergie égal à la moitié de cette valeur
 
 _ERR_ = p (1-n²) _p_ ² _c_ / _E_ [10]
 
 #### Comparison with Planar Crack Solution
 
-If we now compare the planar crack geometry with the crack-tip formulation, it can be observed that for planar crack (comparing equations [1] and [2] with [6] and [7])
+Si l'on compare maintenant la géométrie de fissure plane avec la formulation de pointe de fissure, on observe que, pour la fissure plane (en comparant les équations [1] et [2] avec [6] et [7])
 
 _p_ d = 4(1-n²)/ _E p_ Ö(2 _c_ ) [11] _p_ s = _p_ Ö(c/2) [12]
 
-Observation of these equations reveals that these two parameters can be related in the case of a planar crack geometry by
+L'observation de ces équations montre que ces deux paramètres peuvent être reliés, dans le cas d'une géométrie de fissure plane, par
 
 _p_ d = 8(1-n²)/ _E p_ s [13]
 
-Substituting these into equation [5] for _ERR_ provides
+En les substituant dans l'équation [5] pour _ERR_ , on obtient
 
 _ERR_ = p (1-n²) _p_ ² _c_ / _E_ [14]
 
-the same result as determined for the planar crack (equation [10]).
+soit le même résultat que celui déterminé pour la fissure plane (équation [10]).
 
-Various substitutions for _p_ d and _p_ s can be made to determine
+Diverses substitutions de _p_ d et _p_ s permettent de déterminer
 
-_ERR_ = 2p (1-n²) p _p_ s²/ _E_ [15] and _ERR_ = 1/32 p _p_ d² _E_ /(1-n²) [16]
+_ERR_ = 2p (1-n²) p _p_ s²/ _E_ [15] et _ERR_ = 1/32 p _p_ d² _E_ /(1-n²) [16]
 
-This later equation is the same expression derived by Ryder and Jager (their equation [11], p. 236, Rock Mechanics for Tabular Hard Rock Mines, 2002). They state that this equation is used to calculate _ERR_ in MINSIM. Some form of a-edge correction (Ryder and Napier, Numerical Methods in Geomechanics, Nagoya, 1985) is also apparently implemented but the details on exactly how this done are unclear.
+Cette dernière équation est la même expression que celle établie par Ryder et Jager (leur équation [11], p. 236, Rock Mechanics for Tabular Hard Rock Mines, 2002). Ils indiquent que cette équation est utilisée pour calculer _ERR_ dans MINSIM. Une forme de correction d'arête a (Ryder et Napier, Numerical Methods in Geomechanics, Nagoya, 1985) est apparemment aussi mise en œuvre, mais les détails de sa réalisation ne sont pas clairs.
 
 #### _ERR_ Calculation in Map3D
 
-Both of _p_ d and _p_ s can be determined from numerical modelling.
+_p_ d et _p_ s peuvent tous deux être déterminés par modélisation numérique.
 
 ![Figure from page 307](/images/page-307-img-1.png)
 
-For example, given the normal displacement (closure) dm determined at distance _a_ behind the advancing face, _p_ d can be determined using equation [1] as
+Par exemple, étant donné le déplacement normal (convergence) dm déterminé à une distance _a_ derrière le front en avancement, _p_ d peut être déterminé à l'aide de l'équation [1] comme
 
-Similarly, given the stress sm at distance _b_ ahead of the advancing face, _p_ s can be determined using equation [2] as
+De même, étant donné la contrainte sm à une distance _b_ en avant du front en avancement, _p_ s peut être déterminé à l'aide de l'équation [2] comme
 
-Note that there is no reason for _a_ to be equal to _b_ and hence there is no requirement for uniform boundary element sizes.
+Notez qu'il n'y a aucune raison pour que _a_ soit égal à _b_ ; il n'est donc pas nécessaire d'avoir des tailles uniformes d'éléments de frontière.
 
-Once either or both of _p_ d and _p_ s are determined, _ERR_ is readily calculated from equation [5], [15] or [16].
+Une fois que l'un des deux, _p_ d ou _p_ s, ou les deux, sont déterminés, _ERR_ se calcule facilement à partir de l'équation [5], [15] ou [16].
 
-Detailed studies of stress and displacement distributions near the crack tip reveal that for constant DD elements, both the aperture and stress are consistently over-estimated. Fortunately, the degree of overestimation is closely related to the element size and it can be found that if _a_ is multiplied by 3/2 and _b_ is multiplied by 2/3, much more accurate results can be obtained. With these substitutions, and using equation [17] and [18], _ERR_ can be determined from
+Des études détaillées des distributions de contraintes et de déplacements près de la pointe de la fissure révèlent que, pour des éléments DD constants, l'ouverture comme la contrainte sont systématiquement surestimées. Heureusement, le degré de surestimation est étroitement lié à la taille de l'élément, et l'on constate qu'en multipliant _a_ par 3/2 et _b_ par 2/3, on obtient des résultats beaucoup plus précis. Avec ces substitutions, et en utilisant les équations [17] et [18], _ERR_ peut être déterminé à partir de
 
 - _ERR_ = 1/6 p dm sm Ö(2/3 _b)_ / Ö(3/2 _a)_
 
 - = 1/6 p dm sm Ö( _b_ / _a)_ [19]
 
-This equation is used to calculate _ERR_ in Map3D.
+Cette équation est utilisée pour calculer _ERR_ dans Map3D.
 
 #### An Example
 
-With _E_ of 60000 MPa, n of 0.25, _p_ of 100 MPa and _c_ of 100 m we calculate theoretical values for _p_ s of 707.11, _p_ d of 0.088388 and 49.1 MN/m for _ERR_
+Avec _E_ de 60000 MPa, n de 0,25, _p_ de 100 MPa et _c_ de 100 m, on calcule des valeurs théoriques de _p_ s de 707,11, de _p_ d de 0,088388 et de 49,1 MN/m pour _ERR_
 
-This can be modelled using Map3D using uniform elements of width _w_ , to provide the following results:
+Cela peut être modélisé avec Map3D en utilisant des éléments uniformes de largeur _w_, pour obtenir les résultats suivants :
 
 |_w_(m)|_b_=_a_(m)|sm (MPa)|dm (m)|_ERR _(MN/m)|error|
 |---|---|---|---|---|---|
@@ -461,25 +456,25 @@ This can be modelled using Map3D using uniform elements of width _w_ , to provid
 |5|2.5|554.58|0.1705|49.5|+0.9%|
 |3.125|1.5625|697.764|0.1349|49.3|+0.4%|
 
-Note that the stress sm and normal displacement (closure) dm are determined at the element centres. Since uniform element widths were used, _a_ equals _b_ equals ½ _w_
+Notez que la contrainte sm et le déplacement normal (convergence) dm sont déterminés aux centres des éléments. Comme des largeurs d'éléments uniformes ont été utilisées, _a_ est égal à _b_ et égal à ½ _w_
 
-## 5.3.7.14 SF-D Strength/Stress
+## 5.3.7.14 SF-D Résistance/Contrainte
 
-Contours the strength/stress ratio on DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours du rapport résistance/contrainte sur les éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-In elastic analysis the maximum in-plane shear stress is normally used with the in-plane normal stress and the Mohr-Coulomb strength criterion to estimate the amount of slip due to over-stressing, on a fault, joint set or bedding plane.
+En analyse élastique, la contrainte de cisaillement maximale dans le plan est normalement utilisée avec la contrainte normale dans le plan et le critère de résistance de Mohr-Coulomb pour estimer l'ampleur du glissement dû à la surcontrainte sur une faille, un système de joints ou un plan de stratification.
 
-By contrast, in non-linear analysis the maximum in-plane shear stress can never exceed the strength unless some creep is used. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. Hence for non-linear analysis one normally directly considers the amount of slip predicted by the model
+En revanche, en analyse non linéaire, la contrainte de cisaillement maximale dans le plan ne peut jamais dépasser la résistance, sauf si un certain fluage est utilisé. Dans ce dernier cas, le fluage visqueux peut permettre des états de contraintes supérieurs au critère de rupture, ce qui indique un manque d'équilibre statique. Par conséquent, en analyse non linéaire, on considère normalement directement l'ampleur du glissement prédite par le modèle
 
 Mohr-Coulomb in DD planes
 
@@ -491,17 +486,17 @@ Backfill-Hyperbolic in DD planes
 
 ![Figure from page 309](/images/page-309-img-7.png)
 
-Strength/Stress   can be determined as  [ Cohesion + (sn-p) tan(j) ] / ts
+Strength/Stress   peut être déterminé comme  [ Cohesion + (sn-p) tan(j) ] / ts
 
-dTs   Excess Shear Stress  can be determined as Dts = ts - [ Cohesion + (sn-p) tan(j) ]
+dTs   Excess Shear Stress  peut être déterminé comme Dts = ts - [ Cohesion + (sn-p) tan(j) ]
 
-If fluid pressure is specified as part of the Stress State, the effective normal stress (sn-p) is used (here p is the fluid pressure).
+Si la pression de fluide est spécifiée dans le cadre du Stress State, la contrainte normale effective (sn-p) est utilisée (ici p est la pression de fluide).
 
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
@@ -509,37 +504,37 @@ Tools > Configure Contouring Toolbar
 
 Plot > Surface Components > dTs - Excess Shear Stress
 
-## 5.3.7.15 Excess Shear Stress
+## 5.3.7.15 Contrainte de cisaillement excédentaire
 
-Contours the excess stress Dts on DD elements.
+Trace les contours de la contrainte excédentaire Dts sur les éléments DD.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-This feature is used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip). For details refer to
+Cette fonction n'est utilisée que dans les analyses non linéaires (blocs FF 3D dans Map3D Non-Linear et plans DD dans Map3D Fault-Slip). Pour plus de détails, voir
 
 CAD > Properties > Material Properties
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance. This limits the size of plastic creep increment Deplastic on each yielding element
+À chaque pas de fluage, l'état de contraintes de tous les éléments en plastification (éléments où la contrainte dépasse la résistance) est calculé comme la résistance plus la résistance au fluage. Cela limite la taille de l'incrément de fluage plastique Deplastic sur chaque élément en plastification
 
 - ts = Strength + _C_ Deplastic /D _t_
 
 - _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The contribution to the stress ts, made by the creep increment is the excess stress given by
+où la résistance au fluage est déterminée comme le coefficient de fluage _C_ multiplié par la vitesse de déformation plastique. Notez que l'utilisateur doit choisir à la fois le coefficient de fluage _C_ et la taille du pas de temps D _t_, puis spécifier leur quotient comme module visqueux _G_ . La contribution à la contrainte ts apportée par l'incrément de fluage est la contrainte excédentaire donnée par
 
 Dts   = _C_ Deplastic /D _t_
 
-The accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+La déformation plastique cumulée eplastic est déterminée comme la somme des incréments de fluage plastique Deplastic de tous les pas de fluage.
 
 #### Related Topics:
 
@@ -547,39 +542,39 @@ Plot > Surface Components > dEs - Incremental Shear Strain Plot > Surface Compon
 
 Analysis > Options > Creep
 
-## 5.3.7.16 Incremental Shear Strain
+## 5.3.7.16 Déformation de cisaillement incrémentale
 
-Contours the plastic creep increment Deplastic on DD elements.
+Trace les contours de l'incrément de fluage plastique Deplastic sur les éléments DD.
 
-This component can be accessed via the Strength Factor Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-6.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-10.png)
 
-This feature is used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip). For details refer to
+Cette fonction n'est utilisée que dans les analyses non linéaires (blocs FF 3D dans Map3D Non-Linear et plans DD dans Map3D Fault-Slip). Pour plus de détails, voir
 
 CAD > Properties > Material Properties
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance. This limits the size of plastic creep increment \plastic on each yielding element
+À chaque pas de fluage, l'état de contraintes de tous les éléments en plastification (éléments où la contrainte dépasse la résistance) est calculé comme la résistance plus la résistance au fluage. Cela limite la taille de l'incrément de fluage plastique Deplastic sur chaque élément en plastification
 
 - ts = Strength + _C_ Deplastic /D _t_
 
 - _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The contribution to the stress ts, made by the creep increment is the excess stress given by
+où la résistance au fluage est déterminée comme le coefficient de fluage _C_ multiplié par la vitesse de déformation plastique. Notez que l'utilisateur doit choisir à la fois le coefficient de fluage _C_ et la taille du pas de temps D _t_, puis spécifier leur quotient comme module visqueux _G_ . La contribution à la contrainte ts apportée par l'incrément de fluage est la contrainte excédentaire donnée par
 
 Dts   = _C_ Deplastic /D _t_
 
-The accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+La déformation plastique cumulée eplastic est déterminée comme la somme des incréments de fluage plastique Deplastic de tous les pas de fluage.
 
-Note that since the user must select the time step size D _t_ , in order to define the viscous modulus _G_ , the shear strain rate is easily determined from the incremental shear strain Deplastic, simply by dividing by the time step size.
+Notez que, comme l'utilisateur doit choisir la taille du pas de temps D _t_ pour définir le module visqueux _G_ , la vitesse de déformation de cisaillement se détermine facilement à partir de la déformation de cisaillement incrémentale Deplastic, simplement en divisant par la taille du pas de temps.
 
 #### Related Topics:
 
@@ -591,35 +586,35 @@ Plot > Surface Components > Es - Shear Strain
 
 Analysis > Options > Creep
 
-## 5.3.7.17 Stress/Strain rate
+## 5.3.7.17 Rapport contrainte/vitesse de déformation
 
-Contours the excess stress divided by the plastic creep increment Dts / Deplastic on DD elements. This component can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours de la contrainte excédentaire divisée par l'incrément de fluage plastique Dts / Deplastic sur les éléments DD. Cette composante est accessible via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-This feature is used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip). For details refer to
+Cette fonction n'est utilisée que dans les analyses non linéaires (blocs FF 3D dans Map3D Non-Linear et plans DD dans Map3D Fault-Slip). Pour plus de détails, voir
 
-#### CAD > Properties > Material Properties
+CAD > Properties > Material Properties
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance. This limits the size of plastic creep increment Deplastic on each yielding element
+À chaque pas de fluage, l'état de contraintes de tous les éléments en plastification (éléments où la contrainte dépasse la résistance) est calculé comme la résistance plus la résistance au fluage. Cela limite la taille de l'incrément de fluage plastique Deplastic sur chaque élément en plastification
 
 - ts = Strength + _C_ Deplastic /D _t_
 
 - _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The contribution to the stress ts, made by the creep increment is the excess stress given by
+où la résistance au fluage est déterminée comme le coefficient de fluage _C_ multiplié par la vitesse de déformation plastique. Notez que l'utilisateur doit choisir à la fois le coefficient de fluage _C_ et la taille du pas de temps D _t_, puis spécifier leur quotient comme module visqueux _G_ . La contribution à la contrainte ts apportée par l'incrément de fluage est la contrainte excédentaire donnée par
 
 Dts   = _C_ Deplastic /D _t_
 
-The accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+La déformation plastique cumulée eplastic est déterminée comme la somme des incréments de fluage plastique Deplastic de tous les pas de fluage.
 
 #### Related Topics:
 
@@ -627,125 +622,125 @@ Plot > Surface Components > dTs - Excess Shear Stress Plot > Surface Components 
 
 #### Analysis > Options > Creep
 
-## 5.3.7.18 Cohesion
+## 5.3.7.18 Cohésion
 
-Contours the Cohesion and Friction angle of the gouge material. These components can be accessed via the Strength Factor Components toolbar as follows:
+Trace les contours de la cohésion et de l'angle de frottement du matériau de gouge. Ces composantes sont accessibles via la barre d'outils Strength Factor Components, comme suit :
 
 ![Figure from page 295](/images/page-295-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Surface Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Surface Components.
 
 ![Figure from page 295](/images/page-295-img-18.png)
 
-This is of particular interest when you use the Equilibrated-Gouge material type since the cohesion and friction angle can vary from place to place..
+Cela présente un intérêt particulier lorsque vous utilisez le type de matériau Equilibrated-Gouge, puisque la cohésion et l'angle de frottement peuvent varier d'un endroit à l'autre.
 
-## 5.3.7.20 Temperature/Head
+## 5.3.7.20 Température/Charge hydraulique
 
-Contours the temperature or head.
+Trace les contours de la température ou de la charge hydraulique.
 
-Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
+Map3D Thermal-Fluid Flow peut servir à résoudre simultanément l'écoulement permanent de chaleur/de fluide couplé à l'analyse des contraintes. Le programme est conçu de sorte que l'utilisateur n'ait qu'à spécifier les conditions aux limites de température/charge hydraulique ; le problème couplé de contraintes et d'écoulement thermique/de fluide est ensuite résolu simultanément. Cette fonction est utile pour simuler des effets de chauffage ou de refroidissement et la réponse drainée ou non drainée des sols.
 
-For more details refer to
+Pour plus de détails, voir
 
 #### Expansion Coefficient and Conductivity
 
-The contour range is set using
-
-#### Plot > Range
-
-This component can be added to the contour toolbar if desired
-
-Tools > Configure Contouring Toolbar
-
-## 5.3.7.21 Normal Flux
-
-Contours the flow rate normal to the surface.
-
-Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
-
-For more details refer to
-
-Expansion Coefficient and Conductivity
-
-The contour range is set using
+La plage de contours se définit avec
 
 Plot > Range
 
-This component can be added to the contour toolbar if desired
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
 
 Tools > Configure Contouring Toolbar
 
-## 5.3.7.22 Value
+## 5.3.7.21 Flux normal
 
-5.3.7.22.1  Elastic strain
+Trace les contours du débit normal à la surface.
 
-Selects the elastic, plastic or total strain component. These components can be accessed via the Strain Components toolbar as follows:
+Map3D Thermal-Fluid Flow peut servir à résoudre simultanément l'écoulement permanent de chaleur/de fluide couplé à l'analyse des contraintes. Le programme est conçu de sorte que l'utilisateur n'ait qu'à spécifier les conditions aux limites de température/charge hydraulique ; le problème couplé de contraintes et d'écoulement thermique/de fluide est ensuite résolu simultanément. Cette fonction est utile pour simuler des effets de chauffage ou de refroidissement et la réponse drainée ou non drainée des sols.
+
+Pour plus de détails, voir
+
+Expansion Coefficient and Conductivity
+
+La plage de contours se définit avec
+
+Plot > Range
+
+Cette composante peut être ajoutée à la barre d'outils des contours si vous le souhaitez
+
+Tools > Configure Contouring Toolbar
+
+## 5.3.7.22 Valeur
+
+5.3.7.22.1  Déformation élastique
+
+Sélectionne la composante de la déformation élastique, plastique ou totale. Ces composantes sont accessibles via la barre d'outils Strain Components, comme suit :
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
-You can add this button to the Contours toolbar using the configuration button.
+Vous pouvez ajouter ce bouton à la barre d'outils Contours avec le bouton de configuration.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-For details, refer to
+Pour plus de détails, voir
 
 Mohr-Coulomb in 3D FF blocks.
 
-### 5.3.7.22.4 Absolute Strain
+### 5.3.7.22.4 Déformation absolue
 
-Plot the induced or absolute strain component.
+Trace la composante de la déformation induite ou de la déformation absolue.
 
-This component can be accessed via the Strain Components toolbar as follows:
+Cette composante est accessible via la barre d'outils Strain Components, comme suit :
 
 ![Figure from page 226](/images/page-226-img-12.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
-You can add this button to the Contours toolbar using the configuration button.
+Vous pouvez ajouter ce bouton à la barre d'outils Contours avec le bouton de configuration.
 
 ![Figure from page 227](/images/page-227-img-4.png)
 
-Induced strain is the strain without the pre-mining strain contribution. This represents the strain change since the pre-mining condition.
+La déformation induite est la déformation sans la contribution de la déformation antérieure à l'exploitation. Elle représente la variation de déformation depuis l'état antérieur à l'exploitation.
 
-Absolute strain is the strain including the pre-mining strain contribution.
+La déformation absolue est la déformation incluant la contribution de la déformation antérieure à l'exploitation.
 
-Also see:
+Voir aussi :
 
 Plot > Stress > Value > Induced Strain Plot > Stress > Value > Absolute Strain
 
-### 5.3.7.22.6 Induced Stress
+### 5.3.7.22.6 Contrainte induite
 
-Plot the induced or absolute stress component. These components can be accessed via the Stress Components toolbar as follows:
+Trace la composante de la contrainte induite ou de la contrainte absolue. Ces composantes sont accessibles via la barre d'outils Stress Components, comme suit :
 
 ![Figure from page 214](/images/page-214-img-14.png)
 
-This toolbar can be changed to a vertical orientation by dragging is against either the right or left hand edge of the main window.
+Cette barre d'outils peut passer à l'orientation verticale en la faisant glisser contre le bord droit ou gauche de la fenêtre principale.
 
-It can be changed back to a horizontal orientation by dragging is against either the top or bottom edge of the main window.
+Elle peut revenir à l'orientation horizontale en la faisant glisser contre le bord supérieur ou inférieur de la fenêtre principale.
 
-Selecting the button on the Contours toolbar activates the Stress Components toolbar.
+Sélectionner le bouton de la barre d'outils Contours active la barre d'outils Stress Components.
 
 ![Figure from page 214](/images/page-214-img-18.png)
 
-Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition.
+La contrainte induite est la contrainte sans la contribution de la contrainte antérieure à l'exploitation. Elle représente la variation de contrainte depuis l'état antérieur à l'exploitation.
 
-Absolute stress is the stress including the pre-mining stress contribution.
+La contrainte absolue est la contrainte incluant la contribution de la contrainte antérieure à l'exploitation.
 
-Also see:
+Voir aussi :
 
 Plot > Strain > Value > Induced Strain
 
