@@ -2,350 +2,347 @@
 title: "输出"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+## 5.1.23.1 复制屏幕到剪贴板
 
-## 5.1.23.1 Copy Screen to Clipboard
+将屏幕的位图转储到 Windows 剪贴板。该图像可粘贴到其他应用程序中。
 
-Dumps a bitmap of the screen to the windows clipboard. This image can be pasted into other applications.
-
-Since normally the screen background is black and element outlines are white, the user may want to select
+由于屏幕背景通常为黑色、单元轮廓为白色，您可能需要选择
 
 File > Output > Copy Screen (B&W flipped)
 
-to exchange these two colours.
+以交换这两种颜色。
 
-## 5.1.23.2 Copy Screen (B&W flipped)
+## 5.1.23.2 复制屏幕（黑白反转）
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG) , GIF (Compuserve Graphics Interchange Format)  or BMP (Windows device independent bitmap *.BMP) file with the screen background and element outline colours exchanged. This file can be loaded into other software for report presentation and printing.
+将屏幕的位图转储到 PNG（Portable Network Graphics - *.PNG）、GIF（Compuserve Graphics Interchange Format）或 BMP（Windows 设备无关位图 *.BMP）文件，并交换屏幕背景色与单元轮廓色。该文件可加载到其他软件中，用于报告展示和打印。
 
-For more details refer to
+更多详情请参阅
 
 File > Output > PNG, GIF or BMP image
 
-## 5.1.23.3 PNG, GIF, JPEG, BMP or TIFF Screen Image
+## 5.1.23.3 PNG、GIF、JPEG、BMP 或 TIFF 屏幕图像
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG), GIF (CompuServe Graphics Interchange Format), BMP (Windows device independent bitmap *.BMP) or TIFF (tagged image file format) file. This file can be loaded into other software for report presentation and printing.
+将屏幕的位图转储到 PNG（Portable Network Graphics - *.PNG）、GIF（CompuServe Graphics Interchange Format）、BMP（Windows 设备无关位图 *.BMP）或 TIFF（tagged image file format）文件。该文件可加载到其他软件中，用于报告展示和打印。
 
-Since normally the screen background is black and element outlines are white, the user may want to select
+由于屏幕背景通常为黑色、单元轮廓为白色，您可能需要选择
 
 File > Output > PNG, GIF, JPEG, BMP or TIFF (B&W flipped)
 
-to exchange these two colours.
+以交换这两种颜色。
 
-These files can be displayed using File > Image Viewer
+这些文件可以使用 File > Image Viewer 显示
 
-BMP format is a well supported (most web browsers, word processors and paint programs) graphic file format. The main advantage of BMP format is support for all colours displayed. Unfortunately since there is no compression, these files can be very large (1MB or more each).
+BMP 格式是一种受到广泛支持的图形文件格式（大多数网页浏览器、文字处理器和绘图程序均支持）。BMP 格式的主要优点是支持显示的所有颜色。遗憾的是，由于没有压缩，这些文件可能非常大（每个 1MB 或更大）。
 
-PNG format is a well supported (most web browsers, word processors and paint programs) graphic file format. The main advantages of PNG format are excellent lossless compression (normally 1% of the size of a BMP file) and support for all colours displayed. Refer to File > Output > Image Recorder for animation details.
+PNG 格式是一种受到广泛支持的图形文件格式（大多数网页浏览器、文字处理器和绘图程序均支持）。PNG 格式的主要优点是出色的无损压缩（通常为 BMP 文件大小的 1%）并支持显示的所有颜色。有关动画的详情，请参阅 File > Output > Image Recorder。
 
-GIF format is the more widely supported graphic file format. The main advantages of GIF format are excellent lossless compression (normally 1% of the size of a BMP file) and animation capability. Unfortunately GIF only provides support for 256 display colours. Depending on what is displayed, Map3D can use up to 512 colours and hence GIF may not reproduce screen images in all colours
+GIF 格式是支持最为广泛的图形文件格式。GIF 格式的主要优点是出色的无损压缩（通常为 BMP 文件大小的 1%）和动画功能。遗憾的是，GIF 仅支持 256 种显示颜色。根据所显示的内容，Map3D 最多可使用 512 种颜色，因此 GIF 可能无法以全部颜色再现屏幕图像
 
-GIF format has been implemented using the specification Version 89a ©1987,1988,1989,1990 Copyright CompuServe Incorporated, Columbus, Ohio.
+GIF 格式依据 Version 89a ©1987,1988,1989,1990 Copyright CompuServe Incorporated, Columbus, Ohio 规范实现。
 
-This software uses the FreeImage open source image library. See [http://freeimage.sourceforge.net](http://freeimage.sourceforge.net) for details. FreeImage is used under the (GNU GPL or FIPL), version (license version).
+本软件使用 FreeImage 开源图像库。详情请参阅 [http://freeimage.sourceforge.net](http://freeimage.sourceforge.net)。FreeImage 依据（GNU GPL 或 FIPL）第（许可证版本）版使用。
 
-## 5.1.23.4 PNG, GIF, JPEG, BMP or TIFF (B&W flipped)
+## 5.1.23.4 PNG、GIF、JPEG、BMP 或 TIFF（黑白反转）
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG) , GIF (Compuserve Graphics Interchange Format)  or BMP (Windows device independent bitmap *.BMP) file with the screen background and element outline colours exchanged. This file can be loaded into other software for report presentation and printing.
+将屏幕的位图转储到 PNG（Portable Network Graphics - *.PNG）、GIF（Compuserve Graphics Interchange Format）或 BMP（Windows 设备无关位图 *.BMP）文件，并交换屏幕背景色与单元轮廓色。该文件可加载到其他软件中，用于报告展示和打印。
 
-For more details refer to
+更多详情请参阅
 
 File > Output > PNG, JPEG, GIF, BMP or TIFF image
 
-## 5.1.23.5 DXF Screen Image
+## 5.1.23.5 DXF 屏幕图像
 
-Dumps a screen image to a file (*.DXF) in AutoCAD drawing exchange format. This is a vector format that can be imported into many software packages for further rendering.
+将屏幕图像转储到 AutoCAD 图形交换格式的文件（*.DXF）。这是一种矢量格式，可导入许多软件包中进行进一步渲染。
 
-## 5.1.23.6 PNT Screen Image
+## 5.1.23.6 PNT 屏幕图像
 
-Dumps a screen image to a file (*.PNT) in a universal ASCII data file with the extension ".PNT". The PNT format is useful for exchanging raw model data with other CAD software. This is a vector format that can be imported into many software packages for further rendering.
+将屏幕图像转储到文件（*.PNT），即扩展名为 ".PNT" 的通用 ASCII 数据文件。PNT 格式便于与其他 CAD 软件交换原始模型数据。这是一种矢量格式，可导入许多软件包中进行进一步渲染。
 
-## 5.1.23.7 OBJ Screen Image
+## 5.1.23.7 OBJ 屏幕图像
 
-Dumps a screen image to a file (*.OBJ) in Wavefront format. This is useful for exchanging model data with other CAD and virtual reality modelling software. This is a vector format that can be imported into many software packages for further rendering.
+将屏幕图像转储到 Wavefront 格式的文件（*.OBJ）。这便于与其他 CAD 和虚拟现实建模软件交换模型数据。这是一种矢量格式，可导入许多软件包中进行进一步渲染。
 
-## 5.1.23.8 WRL Screen Image
+## 5.1.23.8 WRL 屏幕图像
 
-Dumps a screen image to a file (*.WRL) in VRML format. VRML is useful for exchanging model data with other CAD and virtual reality modelling software. This is a vector format that can be imported into many software packages for further rendering.
+将屏幕图像转储到 VRML 格式的文件（*.WRL）。VRML 便于与其他 CAD 和虚拟现实建模软件交换模型数据。这是一种矢量格式，可导入许多软件包中进行进一步渲染。
 
-## 5.1.23.9 3D-PDF Screen Image
+## 5.1.23.9 3D-PDF 屏幕图像
 
-Dumps a screen image to a file in PDF (3D) format. 3D PDF can be viewed in full 3D with Adobe Reader.
+将屏幕图像转储到 PDF（3D）格式的文件。3D PDF 可在 Adobe Reader 中以完整 3D 方式查看。
 
-## 5.1.23.10 Selected Grid Components
+## 5.1.23.10 选定的网格分量
 
-Dumps selected grid components to a text file (*.txt) in a user controlled format.
+将选定的网格分量以用户控制的格式转储到文本文件（*.txt）。
 
-By default all points on all grids are dumped. If you want to dump only a selected set of points use the window function defined below.
+默认情况下，所有网格上的所有点都会被转储。如果只想转储选定的一组点，请使用下文介绍的窗口功能。
 
 ![Figure from page 192](/images/page-192-img-1.png)
 
-Upon selecting the desired data then OK, you will be prompted for a file name to save the data. You can select CSV (comma separated/delimited data), TSV (tab separated/delimited data) or TXT (space sepat\rated/delimited data). You can also specify to automatically open the file in Excel or Notepad. Note that you should not use CSV files with commas as decimal points.
+选择所需数据并点击 OK 后，系统会提示您输入用于保存数据的文件名。您可以选择 CSV（逗号分隔/定界数据）、TSV（制表符分隔/定界数据）或 TXT（空格分隔/定界数据）。您还可以指定自动在 Excel 或记事本（Notepad）中打开该文件。请注意，不应使用以逗号作为小数点的 CSV 文件。
 
 ![Figure from page 193](/images/page-193-img-2.png)
 
 #### Stresses:
 
-s1 ts1 ps1 major principal stress s1 its trend and plunge.
+s1 ts1 ps1 最大主应力 s1、其走向和倾伏角。
 
-s2 ts2 ps2 intermediate principal stress s2 its trend and plunge.
+s2 ts2 ps2 中间主应力 s2、其走向和倾伏角。
 
-s3 ts3 ps3 minor principal stress s3 its trend and plunge. sxx syy szz sxy syz sxz Cartesian stress components. tmax maximum shear stress tmax = ½ ( s1 - s3 ) toct octahedral shear stress toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean mean stress smean = ¹/3 ( s1 + s2 + s3 )
+s3 ts3 ps3 最小主应力 s3、其走向和倾伏角。sxx syy szz sxy syz sxz 笛卡尔应力分量。tmax 最大剪应力 tmax = ½ ( s1 - s3 ) toct 八面体剪应力 toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean 平均应力 smean = ¹/3 ( s1 + s2 + s3 )
 
-ti tti pti maximum shear stress in the grid plane, its trend and plunge. si tsi psi normal stress in the grid plane, its trend and plunge. s1i ts1i ps1i maximum stress tangential to the grid plane, its trend and plunge. s3i ts3i ps3i minimum stress tangential to the grid plane, its trend and plunge. tu ttu ptu maximum shear stress in the ubiquitous-plane, its trend and plunge. su tsu psu stress normal to the ubiquitous plane, its trend and plunge. s1u ts1u ps1u maximum stress tangential to the ubiquitous plane, its trend and plunge. s3u ts3u ps3u minimum stress tangential to the ubiquitous plane, its trend and plunge. The orientation of the ubiquitous-plane is specified in
+ti tti pti 网格平面内的最大剪应力、其走向和倾伏角。si tsi psi 网格平面内的法向应力、其走向和倾伏角。s1i ts1i ps1i 与网格平面相切的最大应力、其走向和倾伏角。s3i ts3i ps3i 与网格平面相切的最小应力、其走向和倾伏角。tu ttu ptu 遍布平面内的最大剪应力、其走向和倾伏角。su tsu psu 垂直于遍布平面的应力、其走向和倾伏角。s1u ts1u ps1u 与遍布平面相切的最大应力、其走向和倾伏角。s3u ts3u ps3u 与遍布平面相切的最小应力、其走向和倾伏角。遍布平面的方向在以下位置指定
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition. Absolute stress is the stress including the pre-mining stress contribution.
+Effective/Total 有效应力或总应力分量。这些选项仅用于 Map3D Thermal-Fluid Flow，因为该程序可以计算稳态孔隙压力分布。Induced/Absolute 诱发应力是不含开采前应力贡献的应力，表示相对于开采前状态的应力变化。绝对应力是包含开采前应力贡献的应力。
 
 #### Strains:
 
-e1 te1 pe1 major principal strain e1 its trend and plunge. e2 te2 pe2 intermediate principal strain e2 its trend and plunge.
+e1 te1 pe1 最大主应变 e1、其走向和倾伏角。e2 te2 pe2 中间主应变 e2、其走向和倾伏角。
 
-e3 te3 pe3 minor principal strain e3 its trend and plunge. exx eyy ezz exy eyz exz Cartesian strain components. emax maximum shear strain emax = ½ ( e1 - e3 ) eoct octahedral shear strain eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol volumetric strain evol = ( e1 + e2 + e3 ) esi tesi pesi maximum shear strain in the grid plane, its trend and plunge. eni teni peni normal strain in the grid plane, its trend and plunge. e1i te1i pe1i maximum strain tangential to the grid plane, its trend and plunge. e3i te3i pe3i minimum strain tangential to the grid plane, its trend and plunge. esu tesu pesu maximum shear strain in the ubiquitous-plane, its trend and plunge. enu tenu penu strain normal to the ubiquitous plane, its trend and plunge. e1u te1u pe1u maximum strain tangential to the ubiquitous plane, its trend and plunge. e3u te3u pe3u minimum strain tangential to the ubiquitous plane, its trend and plunge. Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains. Induced/Absolute Induced strain is the strain without the pre-mining contribution. This represents the strain change since the pre-mining condition. Absolute strain is the strain including the pre-mining strain contribution.
+e3 te3 pe3 最小主应变 e3、其走向和倾伏角。exx eyy ezz exy eyz exz 笛卡尔应变分量。emax 最大剪应变 emax = ½ ( e1 - e3 ) eoct 八面体剪应变 eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol 体积应变 evol = ( e1 + e2 + e3 ) esi tesi pesi 网格平面内的最大剪应变、其走向和倾伏角。eni teni peni 网格平面内的法向应变、其走向和倾伏角。e1i te1i pe1i 与网格平面相切的最大应变、其走向和倾伏角。e3i te3i pe3i 与网格平面相切的最小应变、其走向和倾伏角。esu tesu pesu 遍布平面内的最大剪应变、其走向和倾伏角。enu tenu penu 垂直于遍布平面的应变、其走向和倾伏角。e1u te1u pe1u 与遍布平面相切的最大应变、其走向和倾伏角。e3u te3u pe3u 与遍布平面相切的最小应变、其走向和倾伏角。Elastic/Plastic/Total 弹性、塑性或总应变分量。这些选项仅用于 Map3D Non-Linear，因为该程序可以计算非线性应变。Induced/Absolute 诱发应变是不含开采前贡献的应变，表示相对于开采前状态的应变变化。绝对应变是包含开采前应变贡献的应变。
 
 #### Displacements:
 
-ut tut put total displacement, its trend and plunge. ux uy uz Cartesian displacement components. uni tuni puni displacement normal to the grid plane, its trend and plunge. umi tumi pumi maximum displacement tangential to the grid plane, its trend and plunge. unu tunu punu displacement normal to the ubiquitous plane, its trend and plunge. umu tumu pumu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+ut tut put 总位移、其走向和倾伏角。ux uy uz 笛卡尔位移分量。uni tuni puni 垂直于网格平面的位移、其走向和倾伏角。umi tumi pumi 与网格平面相切的最大位移、其走向和倾伏角。unu tunu punu 垂直于遍布平面的位移、其走向和倾伏角。umu tumu pumu 与遍布平面相切的最大位移、其走向和倾伏角。
 
 #### Flow:
 
-t temperature/head.
+t 温度/水头。
 
-qt tqt pqt total flow, its trend and plunge. qx qy qz Cartesian flow components. qni tqni pqni displacement normal to the grid plane, its trend and plunge. qmi tqmi pqmi maximum displacement tangential to the grid plane, its trend and plunge. qnu tqnu pqnu displacement normal to the ubiquitous plane, its trend and plunge. qmu tqmu pqmu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+qt tqt pqt 总流量、其走向和倾伏角。qx qy qz 笛卡尔流量分量。qni tqni pqni 垂直于网格平面的位移、其走向和倾伏角。qmi tqmi pqmi 与网格平面相切的最大位移、其走向和倾伏角。qnu tqnu pqnu 垂直于遍布平面的位移、其走向和倾伏角。qmu tqmu pqmu 与遍布平面相切的最大位移、其走向和倾伏角。
 
 #### Strength:
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 剩余最大主应力 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax 剩余最大剪应力 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct 剩余八面体剪应力 Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 使用正态分布 N(Ds1 /std) 的概率
 
-- SFA Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1
+- SFA 强度/应力可确定为 ( _UCS_ + _q_ s3 )/ s1
 
-- SFB Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+- SFB 强度/应力可确定为 ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-- SFC Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SFC 强度/应力可确定为 [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip 剩余面内剪应力 Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip 使用正态分布 N(Dtip /std) 的概率
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip 强度/应力可确定为 [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip 剩余面内壁面应力 Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip 面内壁面应力的岩石状态系数（Rock Condition Factor）RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub 剩余遍布平面剪应力 Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub 使用正态分布 N(Dtub /std) 的概率
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub 强度/应力可确定为 [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub 剩余 ub 平面壁面应力 Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub ub 平面壁面应力的岩石状态系数 RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# 绘制 Dtub 值最大的 UB 组编号（1、2 或 3）
 
-- _UCS phi q_ Mohr-Coulomb strength parameters defined using Plot > Strength Factors > Rockmass Strength Parameters note that these parameters are only defined if you have specified the Mohr-Coulomb or Druker-Prager strength criterion
+- _UCS phi q_ 使用 Plot > Strength Factors > Rockmass Strength Parameters 定义的 Mohr-Coulomb 强度参数；请注意，只有在指定了 Mohr-Coulomb 或 Druker-Prager 强度准则时，这些参数才有定义
 
-- _sc_ Hoek-Brown strength parameter defined using Plot > Strength Factors > Rockmass Strength Parameters note that this parameter is only defined if you have specified the Hoek-Brown strength criterion
+- _sc_ 使用 Plot > Strength Factors > Rockmass Strength Parameters 定义的 Hoek-Brown 强度参数；请注意，只有在指定了 Hoek-Brown 强度准则时，该参数才有定义
 
 #### Miscellaneous:
 
-user User defined value.
+user 用户自定义值。
 
-grid# the number of the grid where the point is located. matl# the number of the material within which the point is located. The host material is material number 1. In problems where multiple materials are used, results may be calculated in an alternate material zone.
+grid# 点所在网格的编号。matl# 点所处材料的编号。围岩（host）材料的编号为 1。在使用多种材料的问题中，结果可能在替代材料区域内计算。
 
-step# the mining step number. name the name of the grid. area the area of the grid patch adjacent to the point picked. dgrid distance to the nearest surface from each grid point. dol distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ . f1 f2... user defined material parameters. These can be defined using Plot > Properties > Material Properties > User defined Parameters.
+step# 开采步骤编号。name 网格名称。area 所选点相邻的网格单元面积。dgrid 每个网格点到最近表面的距离。dol 到最近网格的距离 _Dgrid_ 除以网格间距 _Lgrid_ 。f1 f2... 用户自定义的材料参数。可以通过 Plot > Properties > Material Properties > User defined Parameters 定义。
 
 #### Data Format:
 
-Points data will be written out as a series of points with one point per line:
+点数据将按每行一个点的方式写出：
 
 - x1 y1 z1 values1 x2 y2 z2 values2 x3 y3 z3 values3 x4 y4 z4 values4
 
-where xi yi zi represent the coordinates of each point,
+其中 xi yi zi 表示每个点的坐标，
 
-valuesi represents the values of the list of user selected components at each point. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi 表示每个点处用户所选分量列表的值。用户自定义值将作为注释行（即以星号 "*" 开头的行）列在文件开头。
 
-Polylines data will be written out as a series of polylines in PNT file format
+多段线数据将按 PNT 文件格式写出为一系列多段线
 
 - x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
 
-where xi yi zi represent the coordinates of each point,
+其中 xi yi zi 表示每个点的坐标，
 
-- 3 indicates that this point is the beginning of a new line,
+- 3 表示该点是新线的起点，
 
-- 2 indicates that this point is a continuation of the same line,
+- 2 表示该点是同一条线的延续，
 
-valuesi represents the values of the list of user selected components at each corner of the polyline. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi 表示多段线每个角点处用户所选分量列表的值。用户自定义值将作为注释行（即以星号 "*" 开头的行）列在文件开头。
 
-Fully Populated data will be written out such that all data will be on a regular sized grid.
+Fully Populated：数据将按所有数据均位于规则尺寸网格上的方式写出。
 
-Use Commas data will be written out with commas in place of decimal points.
+Use Commas：数据将以逗号代替小数点写出。
 
 #### Other:
 
-&lt;&lt;    to shrink the dialogue box to small size
+&lt;&lt;    将对话框缩小为小尺寸
 
->>    to expand the dialogue box to large size Cartesian   configures for output of cartesian stress components. Principal   configures for output of principal stress components. Window   activates a graphical pick window.
+>>    将对话框放大为大尺寸 Cartesian   配置笛卡尔应力分量的输出。Principal   配置主应力分量的输出。Window   激活图形拾取窗口。
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- 系统会提示您分别单击选择窗口的两个角点。
 
-- Only grid points enclosed within the window will be included in the dump.
+- 只有窗口内包含的网格点才会包含在转储中。
 
-- If you do not use this function all points on all grids are dumped.
+- 如果不使用此功能，则转储所有网格上的所有点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-Polyline   activates a graphical pick polygon. You will be prompted to select a series of corners to define a polygon by picking each with a single mouse click:
+Polyline   激活图形拾取多边形。系统会提示您依次单击选择一系列角点来定义多边形：
 
-- You must hold the Shift-key down while selecting these points.
+- 选择这些点时必须按住 Shift 键。
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included.
+- 如果定义了闭合多边形，将包含多边形内的等值线点。
 
-- If you define an open polygonal shape - a series of points along the length of the polyline will be included.
+- 如果定义的是开放多边形，将包含沿多段线长度方向的一系列点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-- Simple rectangular widow shapes can be defined by holding the Shift-key and dragging open a window (same as with the Window button).
+- 按住 Shift 键并拖出窗口，可以定义简单的矩形窗口（与 Window 按钮相同）。
 
-## 5.1.23.11 Selected Surface Components
+## 5.1.23.11 选定的表面分量
 
-Dumps selected surface components to a text file (*.txt) in a user controlled format.
+将选定的表面分量以用户控制的格式转储到文本文件（*.txt）。
 
-By default all points on all surfaces are dumped. If you want to dump only a selected set of points use the window function defined below.
+默认情况下，所有表面上的所有点都会被转储。如果只想转储选定的一组点，请使用下文介绍的窗口功能。
 
 ![Figure from page 197](/images/page-197-img-1.png)
 
-Upon selecting the desired data then OK, you will be prompted for a file name to save the data. You can select CSV (comma separated/delimited data), TSV (tab separated/delimited data) or TXT (space sepat\rated/delimited data).
+选择所需数据并点击 OK 后，系统会提示您输入用于保存数据的文件名。您可以选择 CSV（逗号分隔/定界数据）、TSV（制表符分隔/定界数据）或 TXT（空格分隔/定界数据）。
 
-You can also specify to automatically open the file in Excel or Notepad. Note that you should not use CSV files with commas as decimal points.
+您还可以指定自动在 Excel 或记事本（Notepad）中打开该文件。请注意，不应使用以逗号作为小数点的 CSV 文件。
 
 ![Figure from page 193](/images/page-193-img-2.png)
 
 #### Stresses:
 
-sn tsn psn stress normal to the surface, its trend and plunge.
+sn tsn psn 垂直于表面的应力、其走向和倾伏角。
 
-ts tts pts maximum shear stress in the plane of the surface, its trend and plunge. ts1 ts2   shear stress components in the plane of the surface. ts1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ts2 is perpendicular to ts1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ts tts pts 表面平面内的最大剪应力、其走向和倾伏角。ts1 ts2   表面平面内的剪应力分量。ts1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。ts2 垂直于 ts1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。
 
-ser surface stress error. Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations. This parameter indicates the error for each of the equations.
+ser 表面应力误差。迭代求解器的工作方式是确定每个联立方程当前解的误差，然后通过逐次逼近的过程减小这些误差。该参数表示每个方程的误差。
 
-fer failure criterion error. This parameter is only used for non-linear creep analyzes (including fault slip and 3D material non-linearity). This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. This parameter indicates the viscous stress for each of the equations.
+fer 破坏准则误差。该参数仅用于非线性蠕变分析（包括断层滑动和 3D 材料非线性）。除非指定了某种黏性且问题变为非线性，否则该参数应始终接近零。在后一种情况下，黏性蠕变可能使应力状态超出破坏准则，表明缺乏静力平衡。该参数表示每个方程的黏性应力。
 
-smax tsmax psmax maximum tangential stress, its trend and plunge. smin tsmin psmin minimum tangential stress, its trend and plunge. Effective/Total – effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions.
+smax tsmax psmax 最大切向应力、其走向和倾伏角。smin tsmin psmin 最小切向应力、其走向和倾伏角。Effective/Total – 有效应力或总应力分量。这些选项仅用于 Map3D Thermal-Fluid Flow，因为该程序可以计算稳态孔隙压力分布。
 
 #### Strains:
 
-en ten pen strain in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the normal displacement (closure) divided by the thickness. es tes pes maximum shear strain in the plane of the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the  shear displacement (ride) divided by the thickness. es1 es2   shear strain components in the plane of the surface. es1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). es2 is perpendicular to es1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+en ten pen 垂直于表面方向的应变、其走向和倾伏角。该参数仅用于 DD 平面，计算方法为法向位移（闭合量）除以厚度。es tes pes 表面平面内的最大剪应变、其走向和倾伏角。该参数仅用于 DD 平面，计算方法为剪切位移（ride）除以厚度。es1 es2   表面平面内的剪应变分量。es1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。es2 垂直于 es1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。
 
 #### Displacements:
 
-dn tdn pdn normal displacement (closure) in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+dn tdn pdn 垂直于表面方向的法向位移（闭合量）、其走向和倾伏角。该参数仅用于 DD 平面。请注意，可以指定弹性值、塑性值或总值。
 
-ds tds pds maximum shear displacement (ride) in the plane of the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+ds tds pds 表面平面内的最大剪切位移（ride）、其走向和倾伏角。该参数仅用于 DD 平面。请注意，可以指定弹性值、塑性值或总值。
 
-ds1 ds2   shear displacement (ride) components in the plane of the surface. ds1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3). Elastic/Plastic/Total elastic, plastic or total strain/displacement components. These options are only used for DD planes.
+ds1 ds2   表面平面内的剪切位移（ride）分量。ds1 平行于第一条边（即由 x1 y1 z1 – x2 y2 z2 定义的边）。ds2 垂直于 ds1，指向第二条边（即由 x2 y2 z2 – x3 y3 z3 定义的边）的方向。Elastic/Plastic/Total 弹性、塑性或总应变/位移分量。这些选项仅用于 DD 平面。
 
 #### Miscellaneous:
 
-area   the area of the surface. matl# the number of the material assigned to the surface. step# the mining step number. blk#   the block number. name   the name of the block surface. dof#   the degree of freedom number.
+area   表面面积。matl# 指定给表面的材料编号。step# 开采步骤编号。blk#   块体编号。name   块体表面名称。dof#   自由度编号。
 
 #### Data Format
 
-Points data will be written out as a series of points with one point per line.
+点数据将按每行一个点的方式写出。
 
 x1 y1 z1 values1 x2 y2 z2 values2 x3 y3 z3 values3 x4 y4 z4 values4
 
-where xi yi zi represent the coordinates of each point,
+其中 xi yi zi 表示每个点的坐标，
 
-valuesi represents the values of the list of user selected components at each point. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi 表示每个点处用户所选分量列表的值。用户自定义值将作为注释行（即以星号 "*" 开头的行）列在文件开头。
 
-Polylines data will be written out as a series of polylines in PNT file format x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
+多段线数据将按 PNT 文件格式写出为一系列多段线 x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
 
-where xi yi zi represent the coordinates of each point,
+其中 xi yi zi 表示每个点的坐标，
 
-3 indicates that this point is the beginning of a new line,
+3 表示该点是新线的起点，
 
-2 indicates that this point is a continuation of the same line,
+2 表示该点是同一条线的延续，
 
-valuesi represents the values of the list of user selected components at each corner of the polyline. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi 表示多段线每个角点处用户所选分量列表的值。用户自定义值将作为注释行（即以星号 "*" 开头的行）列在文件开头。
 
-If linear BEM analysis (Analysis > Options > Linear) was not selected, valuesi are only available at the element centres and hence will only be supplied for the first point. If linear BEM analysis was selected, values are available at each corner and hence will only be supplied for all points.
+如果未选择线性 BEM 分析（Analysis > Options > Linear），valuesi 仅在单元中心可用，因此只会为第一个点提供。如果选择了线性 BEM 分析，则各角点处的值均可用，因此会为所有点提供。
 
 #### Other
 
-&lt;&lt;    to shrink the dialogue box to small size >>    to expand the dialogue box to large size Window   activates a graphical pick window.
+&lt;&lt;    将对话框缩小为小尺寸 >>    将对话框放大为大尺寸 Window   激活图形拾取窗口。
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- 系统会提示您分别单击选择窗口的两个角点。
 
-- Only grid points enclosed within the window will be included in the dump.
+- 只有窗口内包含的网格点才会包含在转储中。
 
-- If you do not use this function all points on all grids are dumped.
+- 如果不使用此功能，则转储所有网格上的所有点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-Polyline   activates a graphical pick polygon. You will be prompted to select a series of corners to define a polygon by picking each with a single mouse click:
+Polyline   激活图形拾取多边形。系统会提示您依次单击选择一系列角点来定义多边形：
 
-- You must hold the Shift-key down while selecting these points.
+- 选择这些点时必须按住 Shift 键。
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included.
+- 如果定义了闭合多边形，将包含多边形内的等值线点。
 
-- If you define an open polygonal shape - a series of points along the length of the polyline will be included.
+- 如果定义的是开放多边形，将包含沿多段线长度方向的一系列点。
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- 要查看实际等值线点的位置，请启用轨迹显示（Plot > Options > Trajectories）。等值线点位于绘制轨迹的位置。
 
-- Simple rectangular widow shapes can be defined by holding the Shift-key and dragging open a window (same as with the Window button).
+- 按住 Shift 键并拖出窗口，可以定义简单的矩形窗口（与 Window 按钮相同）。
 
-Use Commas data will be written out with commas in place of decimal points.
+Use Commas：数据将以逗号代替小数点写出。
 
-## 5.1.23.12 Animated TIFF/GIF Recorder
+## 5.1.23.12 动画 TIFF/GIF 录制器
 
-Records multiple sequential images to individual PNG, GIF, BMP or TIFF files.
+将多幅连续图像录制到各自独立的 PNG、GIF、BMP 或 TIFF 文件中。
 
-Many presentation programs allow you to construct simple animations by displaying a sequence of images. The Map3D image recorder allows you to record multiple screen dumps to a individual PNG, GIF, BMP or TIFF files.
+许多演示程序允许通过显示一系列图像来制作简单的动画。Map3D 图像录制器允许将多个屏幕转储录制到各自独立的 PNG、GIF、BMP 或 TIFF 文件中。
 
-The animated TIFF/GIF Recorder saves multiple images to the same TIFF or GIF file. These images can be played back with an image viewer that can display animated TIFFs or GIFs (such as Map3D Image Viewer, most internet browsers, Windows Photo Viewer etc.).
+动画 TIFF/GIF 录制器会将多幅图像保存到同一个 TIFF 或 GIF 文件中。这些图像可以用能够显示动画 TIFF 或 GIF 的图像查看器回放（例如 Map3D Image Viewer、大多数互联网浏览器、Windows 照片查看器等）。
 
-The Image Recorder creates multiple images to separate files. Once you select File > Output > Image Recorder, you will be prompted to specify a file name to save the animation. Image file names will be generated by appending the image count onto the file name you specify (e.g. name0001.png, name0002.png, name0003.png ...).
+Image Recorder 会将多幅图像创建为单独的文件。选择 File > Output > Image Recorder 后，系统会提示您指定用于保存动画的文件名。图像文件名将通过在您指定的文件名后附加图像序号生成（例如 name0001.png、name0002.png、name0003.png ……）。
 
-The recorder dialogue box provides information on the current animation and allows you to control recording and specify animation options.
+录制器对话框提供当前动画的信息，并允许您控制录制和指定动画选项。
 
 ![Figure from page 200](/images/page-200-img-8.png)
 
-The current number of images in the animation is displayed along with the status of the recorder. Various status states include:
+对话框会显示动画中当前的图像数量以及录制器的状态。各种状态包括：
 
-Ready/Paused – animation file is open and ready to record. Press Grab or Auto to add an image.
+Ready/Paused – 动画文件已打开，可以录制。按 Grab 或 Auto 可添加图像。
 
-Capturing Image – image is being added to the animation.
+Capturing Image – 正在向动画中添加图像。
 
-Ready/Auto Capture - displayed images will be automatically added to the animation as you update the screen.
+Ready/Auto Capture - 随着您更新屏幕，所显示的图像将自动添加到动画中。
 
-Recorder Off – animation file is closed and not ready to record.
+Recorder Off – 动画文件已关闭，未准备好录制。
 
-Grab – adds the current displayed image to the animation.
+Grab – 将当前显示的图像添加到动画中。
 
-Auto – automatically adds displayed images to the animation as you update the screen. This includes all rotation, translation and plotting operations you perform.
+Auto – 随着您更新屏幕，自动将显示的图像添加到动画中。这包括您执行的所有旋转、平移和绘图操作。
 
-Pause – disables automatic mode.
+Pause – 禁用自动模式。
 
-Flipped/NoFlip – toggles background and foreground (normally black and white) will be reversed.
+Flipped/NoFlip – 切换背景与前景（通常为黑色和白色）是否反转。
 
-End – stops the recorder and closes the animation file.
+End – 停止录制器并关闭动画文件。
 
 #### Notes:
 
-Additional images can be appended to an existing sequence of images be checking File > Output > Image Recorder > Append Images when selecting the file name for the animation sequence.
+在选择动画序列的文件名时，勾选 File > Output > Image Recorder > Append Images，可以将更多图像追加到现有的图像序列中。
 
-Rotation and translation operations can be repeated automatically by typing n# before selecting the operation. For example to produce an animated display of a stress plot, specify the following
+在选择操作之前输入 n#，可以自动重复旋转和平移操作。例如，要制作应力图的动画显示，请指定以下内容
 
 Plot > Options > Persist
 
@@ -353,12 +350,12 @@ Plot > Stress > Sigma:1
 
 View > Rotation Increment > 10
 
-Select the Auto button
+选择 Auto 按钮
 
-Type in 35#
+输入 35#
 
-Select rotate right (either from the rotation toolbar or the PageDown key).
+选择向右旋转（可从旋转工具栏中选择，也可按 Page Down 键）。
 
-A series of files numbered name001 to name036 will be created. These can be imported into presentation software for animation and display.
+将创建一系列编号从 name001 到 name036 的文件。这些文件可以导入演示软件中进行动画制作和显示。
 
-Stress contours that change as mining progresses can be displayed by grabbing a series of plots as the mining step is advanced.
+随着开采推进而变化的应力等值线，可以在推进开采步骤的同时抓取一系列绘图来显示。

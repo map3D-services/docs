@@ -2,350 +2,347 @@
 title: "Salida"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+## 5.1.23.1 Copiar pantalla al portapapeles
 
-## 5.1.23.1 Copy Screen to Clipboard
+Vuelca un mapa de bits de la pantalla al portapapeles de Windows. Esta imagen se puede pegar en otras aplicaciones.
 
-Dumps a bitmap of the screen to the windows clipboard. This image can be pasted into other applications.
-
-Since normally the screen background is black and element outlines are white, the user may want to select
+Como normalmente el fondo de la pantalla es negro y los contornos de los elementos son blancos, es posible que desee seleccionar
 
 File > Output > Copy Screen (B&W flipped)
 
-to exchange these two colours.
+para intercambiar estos dos colores.
 
-## 5.1.23.2 Copy Screen (B&W flipped)
+## 5.1.23.2 Copiar pantalla (B&N invertido)
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG) , GIF (Compuserve Graphics Interchange Format)  or BMP (Windows device independent bitmap *.BMP) file with the screen background and element outline colours exchanged. This file can be loaded into other software for report presentation and printing.
+Vuelca un mapa de bits de la pantalla a un archivo PNG (Portable Network Graphics - *.PNG), GIF (Compuserve Graphics Interchange Format) o BMP (mapa de bits independiente del dispositivo de Windows *.BMP), con los colores del fondo de la pantalla y de los contornos de los elementos intercambiados. Este archivo se puede cargar en otro software para presentar e imprimir informes.
 
-For more details refer to
+Para más detalles, vea
 
 File > Output > PNG, GIF or BMP image
 
-## 5.1.23.3 PNG, GIF, JPEG, BMP or TIFF Screen Image
+## 5.1.23.3 Imagen de pantalla PNG, GIF, JPEG, BMP o TIFF
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG), GIF (CompuServe Graphics Interchange Format), BMP (Windows device independent bitmap *.BMP) or TIFF (tagged image file format) file. This file can be loaded into other software for report presentation and printing.
+Vuelca un mapa de bits de la pantalla a un archivo PNG (Portable Network Graphics - *.PNG), GIF (CompuServe Graphics Interchange Format), BMP (mapa de bits independiente del dispositivo de Windows *.BMP) o TIFF (tagged image file format). Este archivo se puede cargar en otro software para presentar e imprimir informes.
 
-Since normally the screen background is black and element outlines are white, the user may want to select
+Como normalmente el fondo de la pantalla es negro y los contornos de los elementos son blancos, es posible que desee seleccionar
 
 File > Output > PNG, GIF, JPEG, BMP or TIFF (B&W flipped)
 
-to exchange these two colours.
+para intercambiar estos dos colores.
 
-These files can be displayed using File > Image Viewer
+Estos archivos se pueden mostrar con File > Image Viewer
 
-BMP format is a well supported (most web browsers, word processors and paint programs) graphic file format. The main advantage of BMP format is support for all colours displayed. Unfortunately since there is no compression, these files can be very large (1MB or more each).
+El formato BMP es un formato de archivo gráfico con amplia compatibilidad (la mayoría de los navegadores web, procesadores de texto y programas de dibujo). La principal ventaja del formato BMP es que admite todos los colores mostrados. Lamentablemente, como no hay compresión, estos archivos pueden ser muy grandes (1 MB o más cada uno).
 
-PNG format is a well supported (most web browsers, word processors and paint programs) graphic file format. The main advantages of PNG format are excellent lossless compression (normally 1% of the size of a BMP file) and support for all colours displayed. Refer to File > Output > Image Recorder for animation details.
+El formato PNG es un formato de archivo gráfico con amplia compatibilidad (la mayoría de los navegadores web, procesadores de texto y programas de dibujo). Las principales ventajas del formato PNG son su excelente compresión sin pérdidas (normalmente 1% del tamaño de un archivo BMP) y que admite todos los colores mostrados. Para detalles sobre animación, vea File > Output > Image Recorder.
 
-GIF format is the more widely supported graphic file format. The main advantages of GIF format are excellent lossless compression (normally 1% of the size of a BMP file) and animation capability. Unfortunately GIF only provides support for 256 display colours. Depending on what is displayed, Map3D can use up to 512 colours and hence GIF may not reproduce screen images in all colours
+El formato GIF es el formato de archivo gráfico de mayor compatibilidad. Las principales ventajas del formato GIF son su excelente compresión sin pérdidas (normalmente 1% del tamaño de un archivo BMP) y su capacidad de animación. Lamentablemente, GIF solo admite 256 colores de visualización. Dependiendo de lo que se muestre, Map3D puede usar hasta 512 colores, por lo que GIF puede no reproducir las imágenes de pantalla en todos sus colores
 
-GIF format has been implemented using the specification Version 89a ©1987,1988,1989,1990 Copyright CompuServe Incorporated, Columbus, Ohio.
+El formato GIF se ha implementado usando la especificación Versión 89a ©1987,1988,1989,1990 Copyright CompuServe Incorporated, Columbus, Ohio.
 
-This software uses the FreeImage open source image library. See [http://freeimage.sourceforge.net](http://freeimage.sourceforge.net) for details. FreeImage is used under the (GNU GPL or FIPL), version (license version).
+Este software usa la biblioteca de imágenes de código abierto FreeImage. Vea [http://freeimage.sourceforge.net](http://freeimage.sourceforge.net) para más detalles. FreeImage se usa bajo la (GNU GPL o FIPL), versión (versión de la licencia).
 
-## 5.1.23.4 PNG, GIF, JPEG, BMP or TIFF (B&W flipped)
+## 5.1.23.4 PNG, GIF, JPEG, BMP o TIFF (B&N invertido)
 
-Dumps a bitmap of the screen to a PNG (Portable Network Graphics - *.PNG) , GIF (Compuserve Graphics Interchange Format)  or BMP (Windows device independent bitmap *.BMP) file with the screen background and element outline colours exchanged. This file can be loaded into other software for report presentation and printing.
+Vuelca un mapa de bits de la pantalla a un archivo PNG (Portable Network Graphics - *.PNG), GIF (Compuserve Graphics Interchange Format) o BMP (mapa de bits independiente del dispositivo de Windows *.BMP), con los colores del fondo de la pantalla y de los contornos de los elementos intercambiados. Este archivo se puede cargar en otro software para presentar e imprimir informes.
 
-For more details refer to
+Para más detalles, vea
 
 File > Output > PNG, JPEG, GIF, BMP or TIFF image
 
-## 5.1.23.5 DXF Screen Image
+## 5.1.23.5 Imagen de pantalla DXF
 
-Dumps a screen image to a file (*.DXF) in AutoCAD drawing exchange format. This is a vector format that can be imported into many software packages for further rendering.
+Vuelca una imagen de la pantalla a un archivo (*.DXF) en formato de intercambio de dibujos de AutoCAD. Es un formato vectorial que se puede importar en muchos paquetes de software para renderizado posterior.
 
-## 5.1.23.6 PNT Screen Image
+## 5.1.23.6 Imagen de pantalla PNT
 
-Dumps a screen image to a file (*.PNT) in a universal ASCII data file with the extension ".PNT". The PNT format is useful for exchanging raw model data with other CAD software. This is a vector format that can be imported into many software packages for further rendering.
+Vuelca una imagen de la pantalla a un archivo (*.PNT), un archivo de datos ASCII universal con la extensión ".PNT". El formato PNT es útil para intercambiar datos brutos de modelos con otro software CAD. Es un formato vectorial que se puede importar en muchos paquetes de software para renderizado posterior.
 
-## 5.1.23.7 OBJ Screen Image
+## 5.1.23.7 Imagen de pantalla OBJ
 
-Dumps a screen image to a file (*.OBJ) in Wavefront format. This is useful for exchanging model data with other CAD and virtual reality modelling software. This is a vector format that can be imported into many software packages for further rendering.
+Vuelca una imagen de la pantalla a un archivo (*.OBJ) en formato Wavefront. Es útil para intercambiar datos de modelos con otro software CAD y de modelamiento de realidad virtual. Es un formato vectorial que se puede importar en muchos paquetes de software para renderizado posterior.
 
-## 5.1.23.8 WRL Screen Image
+## 5.1.23.8 Imagen de pantalla WRL
 
-Dumps a screen image to a file (*.WRL) in VRML format. VRML is useful for exchanging model data with other CAD and virtual reality modelling software. This is a vector format that can be imported into many software packages for further rendering.
+Vuelca una imagen de la pantalla a un archivo (*.WRL) en formato VRML. VRML es útil para intercambiar datos de modelos con otro software CAD y de modelamiento de realidad virtual. Es un formato vectorial que se puede importar en muchos paquetes de software para renderizado posterior.
 
-## 5.1.23.9 3D-PDF Screen Image
+## 5.1.23.9 Imagen de pantalla 3D-PDF
 
-Dumps a screen image to a file in PDF (3D) format. 3D PDF can be viewed in full 3D with Adobe Reader.
+Vuelca una imagen de la pantalla a un archivo en formato PDF (3D). El PDF 3D se puede ver en 3D completo con Adobe Reader.
 
-## 5.1.23.10 Selected Grid Components
+## 5.1.23.10 Componentes de grilla seleccionadas
 
-Dumps selected grid components to a text file (*.txt) in a user controlled format.
+Vuelca las componentes de grilla seleccionadas a un archivo de texto (*.txt) en un formato controlado por el usuario.
 
-By default all points on all grids are dumped. If you want to dump only a selected set of points use the window function defined below.
+Por defecto se vuelcan todos los puntos de todas las grillas. Si desea volcar solo un conjunto seleccionado de puntos, use la función de ventana que se define más abajo.
 
 ![Figure from page 192](/images/page-192-img-1.png)
 
-Upon selecting the desired data then OK, you will be prompted for a file name to save the data. You can select CSV (comma separated/delimited data), TSV (tab separated/delimited data) or TXT (space sepat\rated/delimited data). You can also specify to automatically open the file in Excel or Notepad. Note that you should not use CSV files with commas as decimal points.
+Una vez seleccionados los datos deseados y presionado OK, se le pedirá un nombre de archivo para guardar los datos. Puede seleccionar CSV (datos separados/delimitados por comas), TSV (datos separados/delimitados por tabulaciones) o TXT (datos separados/delimitados por espacios). También puede especificar que el archivo se abra automáticamente en Excel o en el Bloc de notas (Notepad). Tenga en cuenta que no se deben usar archivos CSV con comas como separador decimal.
 
 ![Figure from page 193](/images/page-193-img-2.png)
 
 #### Stresses:
 
-s1 ts1 ps1 major principal stress s1 its trend and plunge.
+s1 ts1 ps1 esfuerzo principal mayor s1, su rumbo y su inclinación (plunge).
 
-s2 ts2 ps2 intermediate principal stress s2 its trend and plunge.
+s2 ts2 ps2 esfuerzo principal intermedio s2, su rumbo y su inclinación.
 
-s3 ts3 ps3 minor principal stress s3 its trend and plunge. sxx syy szz sxy syz sxz Cartesian stress components. tmax maximum shear stress tmax = ½ ( s1 - s3 ) toct octahedral shear stress toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean mean stress smean = ¹/3 ( s1 + s2 + s3 )
+s3 ts3 ps3 esfuerzo principal menor s3, su rumbo y su inclinación. sxx syy szz sxy syz sxz componentes cartesianas del esfuerzo. tmax esfuerzo de corte máximo tmax = ½ ( s1 - s3 ) toct esfuerzo de corte octaédrico toct = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]<sup>½</sup> smean esfuerzo medio smean = ¹/3 ( s1 + s2 + s3 )
 
-ti tti pti maximum shear stress in the grid plane, its trend and plunge. si tsi psi normal stress in the grid plane, its trend and plunge. s1i ts1i ps1i maximum stress tangential to the grid plane, its trend and plunge. s3i ts3i ps3i minimum stress tangential to the grid plane, its trend and plunge. tu ttu ptu maximum shear stress in the ubiquitous-plane, its trend and plunge. su tsu psu stress normal to the ubiquitous plane, its trend and plunge. s1u ts1u ps1u maximum stress tangential to the ubiquitous plane, its trend and plunge. s3u ts3u ps3u minimum stress tangential to the ubiquitous plane, its trend and plunge. The orientation of the ubiquitous-plane is specified in
+ti tti pti esfuerzo de corte máximo en el plano de la grilla, su rumbo y su inclinación. si tsi psi esfuerzo normal en el plano de la grilla, su rumbo y su inclinación. s1i ts1i ps1i esfuerzo máximo tangencial al plano de la grilla, su rumbo y su inclinación. s3i ts3i ps3i esfuerzo mínimo tangencial al plano de la grilla, su rumbo y su inclinación. tu ttu ptu esfuerzo de corte máximo en el plano ubicuo, su rumbo y su inclinación. su tsu psu esfuerzo normal al plano ubicuo, su rumbo y su inclinación. s1u ts1u ps1u esfuerzo máximo tangencial al plano ubicuo, su rumbo y su inclinación. s3u ts3u ps3u esfuerzo mínimo tangencial al plano ubicuo, su rumbo y su inclinación. La orientación del plano ubicuo se especifica en
 
 Plot > Strength Factors > Ubiquitous Parameters
 
-Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition. Absolute stress is the stress including the pre-mining stress contribution.
+Effective/Total componentes del esfuerzo efectivo o del esfuerzo total. Estas opciones solo se usan en Map3D Thermal-Fluid Flow, ya que este código permite calcular distribuciones de presión de poros en régimen permanente. Induced/Absolute El esfuerzo inducido es el esfuerzo sin la contribución del esfuerzo previo a la explotación. Representa el cambio de esfuerzo desde la condición previa a la explotación. El esfuerzo absoluto es el esfuerzo que incluye la contribución del esfuerzo previo a la explotación.
 
 #### Strains:
 
-e1 te1 pe1 major principal strain e1 its trend and plunge. e2 te2 pe2 intermediate principal strain e2 its trend and plunge.
+e1 te1 pe1 deformación principal mayor e1, su rumbo y su inclinación. e2 te2 pe2 deformación principal intermedia e2, su rumbo y su inclinación.
 
-e3 te3 pe3 minor principal strain e3 its trend and plunge. exx eyy ezz exy eyz exz Cartesian strain components. emax maximum shear strain emax = ½ ( e1 - e3 ) eoct octahedral shear strain eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol volumetric strain evol = ( e1 + e2 + e3 ) esi tesi pesi maximum shear strain in the grid plane, its trend and plunge. eni teni peni normal strain in the grid plane, its trend and plunge. e1i te1i pe1i maximum strain tangential to the grid plane, its trend and plunge. e3i te3i pe3i minimum strain tangential to the grid plane, its trend and plunge. esu tesu pesu maximum shear strain in the ubiquitous-plane, its trend and plunge. enu tenu penu strain normal to the ubiquitous plane, its trend and plunge. e1u te1u pe1u maximum strain tangential to the ubiquitous plane, its trend and plunge. e3u te3u pe3u minimum strain tangential to the ubiquitous plane, its trend and plunge. Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains. Induced/Absolute Induced strain is the strain without the pre-mining contribution. This represents the strain change since the pre-mining condition. Absolute strain is the strain including the pre-mining strain contribution.
+e3 te3 pe3 deformación principal menor e3, su rumbo y su inclinación. exx eyy ezz exy eyz exz componentes cartesianas de la deformación. emax deformación de corte máxima emax = ½ ( e1 - e3 ) eoct deformación de corte octaédrica eoct = ¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]<sup>½</sup> evol deformación volumétrica evol = ( e1 + e2 + e3 ) esi tesi pesi deformación de corte máxima en el plano de la grilla, su rumbo y su inclinación. eni teni peni deformación normal en el plano de la grilla, su rumbo y su inclinación. e1i te1i pe1i deformación máxima tangencial al plano de la grilla, su rumbo y su inclinación. e3i te3i pe3i deformación mínima tangencial al plano de la grilla, su rumbo y su inclinación. esu tesu pesu deformación de corte máxima en el plano ubicuo, su rumbo y su inclinación. enu tenu penu deformación normal al plano ubicuo, su rumbo y su inclinación. e1u te1u pe1u deformación máxima tangencial al plano ubicuo, su rumbo y su inclinación. e3u te3u pe3u deformación mínima tangencial al plano ubicuo, su rumbo y su inclinación. Elastic/Plastic/Total componentes de la deformación elástica, plástica o total. Estas opciones solo se usan en Map3D Non-Linear, ya que este código permite calcular deformaciones no lineales. Induced/Absolute La deformación inducida es la deformación sin la contribución previa a la explotación. Representa el cambio de deformación desde la condición previa a la explotación. La deformación absoluta es la deformación que incluye la contribución de la deformación previa a la explotación.
 
 #### Displacements:
 
-ut tut put total displacement, its trend and plunge. ux uy uz Cartesian displacement components. uni tuni puni displacement normal to the grid plane, its trend and plunge. umi tumi pumi maximum displacement tangential to the grid plane, its trend and plunge. unu tunu punu displacement normal to the ubiquitous plane, its trend and plunge. umu tumu pumu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+ut tut put desplazamiento total, su rumbo y su inclinación. ux uy uz componentes cartesianas del desplazamiento. uni tuni puni desplazamiento normal al plano de la grilla, su rumbo y su inclinación. umi tumi pumi desplazamiento máximo tangencial al plano de la grilla, su rumbo y su inclinación. unu tunu punu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. umu tumu pumu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
 #### Flow:
 
-t temperature/head.
+t temperatura/carga hidráulica.
 
-qt tqt pqt total flow, its trend and plunge. qx qy qz Cartesian flow components. qni tqni pqni displacement normal to the grid plane, its trend and plunge. qmi tqmi pqmi maximum displacement tangential to the grid plane, its trend and plunge. qnu tqnu pqnu displacement normal to the ubiquitous plane, its trend and plunge. qmu tqmu pqmu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+qt tqt pqt flujo total, su rumbo y su inclinación. qx qy qz componentes cartesianas del flujo. qni tqni pqni desplazamiento normal al plano de la grilla, su rumbo y su inclinación. qmi tqmi pqmi desplazamiento máximo tangencial al plano de la grilla, su rumbo y su inclinación. qnu tqnu pqnu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. qmu tqmu pqmu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
 #### Strength:
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 esfuerzo principal mayor en exceso Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax esfuerzo de corte máximo en exceso Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct esfuerzo de corte octaédrico en exceso Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 probabilidad usando la distribución normal N(Ds1 /std)
 
-- SFA Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1
+- SFA Resistencia/Esfuerzo se puede determinar como ( _UCS_ + _q_ s3 )/ s1
 
-- SFB Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+- SFB Resistencia/Esfuerzo se puede determinar como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-- SFC Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SFC Resistencia/Esfuerzo se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip esfuerzo de corte en el plano, en exceso Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip probabilidad usando la distribución normal N(Dtip /std)
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip Resistencia/Esfuerzo se puede determinar como [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip esfuerzo en la pared en el plano, en exceso Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip factor de condición de la roca (Rock Condition Factor) para el esfuerzo en la pared en el plano RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub esfuerzo de corte en el plano ubicuo, en exceso Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub probabilidad usando la distribución normal N(Dtub /std)
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub Resistencia/Esfuerzo se puede determinar como [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub esfuerzo en la pared en el plano ub, en exceso Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub factor de condición de la roca para el esfuerzo en la pared en el plano ub RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# Grafica el número del sistema UB (1, 2 o 3) que tiene el mayor valor de Dtub
 
-- _UCS phi q_ Mohr-Coulomb strength parameters defined using Plot > Strength Factors > Rockmass Strength Parameters note that these parameters are only defined if you have specified the Mohr-Coulomb or Druker-Prager strength criterion
+- _UCS phi q_ Parámetros de resistencia de Mohr-Coulomb definidos con Plot > Strength Factors > Rockmass Strength Parameters; tenga en cuenta que estos parámetros solo están definidos si se ha especificado el criterio de resistencia de Mohr-Coulomb o de Druker-Prager
 
-- _sc_ Hoek-Brown strength parameter defined using Plot > Strength Factors > Rockmass Strength Parameters note that this parameter is only defined if you have specified the Hoek-Brown strength criterion
+- _sc_ Parámetro de resistencia de Hoek-Brown definido con Plot > Strength Factors > Rockmass Strength Parameters; tenga en cuenta que este parámetro solo está definido si se ha especificado el criterio de resistencia de Hoek-Brown
 
 #### Miscellaneous:
 
-user User defined value.
+user Valor definido por el usuario.
 
-grid# the number of the grid where the point is located. matl# the number of the material within which the point is located. The host material is material number 1. In problems where multiple materials are used, results may be calculated in an alternate material zone.
+grid# el número de la grilla en la que se ubica el punto. matl# el número del material dentro del cual se ubica el punto. El material de la roca de caja (host) es el material número 1. En problemas donde se usan varios materiales, los resultados pueden calcularse en una zona de material alterno.
 
-step# the mining step number. name the name of the grid. area the area of the grid patch adjacent to the point picked. dgrid distance to the nearest surface from each grid point. dol distance to the nearest grid _Dgrid_ divided by the grid spacing _Lgrid_ . f1 f2... user defined material parameters. These can be defined using Plot > Properties > Material Properties > User defined Parameters.
+step# el número de la etapa de explotación. name el nombre de la grilla. area el área de la celda de grilla adyacente al punto seleccionado. dgrid distancia a la superficie más cercana desde cada punto de la grilla. dol distancia a la grilla más cercana _Dgrid_ dividida por el espaciamiento de la grilla _Lgrid_ . f1 f2... parámetros de material definidos por el usuario. Se pueden definir con Plot > Properties > Material Properties > User defined Parameters.
 
 #### Data Format:
 
-Points data will be written out as a series of points with one point per line:
+Los datos de puntos se escribirán como una serie de puntos, con un punto por línea:
 
 - x1 y1 z1 values1 x2 y2 z2 values2 x3 y3 z3 values3 x4 y4 z4 values4
 
-where xi yi zi represent the coordinates of each point,
+donde xi yi zi representan las coordenadas de cada punto,
 
-valuesi represents the values of the list of user selected components at each point. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi representa los valores de la lista de componentes seleccionadas por el usuario en cada punto. Los valores definidos por el usuario se listarán como una línea de comentario (es decir, una línea que comienza con un asterisco "*") al inicio del archivo.
 
-Polylines data will be written out as a series of polylines in PNT file format
+Los datos de polilíneas se escribirán como una serie de polilíneas en formato de archivo PNT
 
 - x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
 
-where xi yi zi represent the coordinates of each point,
+donde xi yi zi representan las coordenadas de cada punto,
 
-- 3 indicates that this point is the beginning of a new line,
+- 3 indica que este punto es el comienzo de una nueva línea,
 
-- 2 indicates that this point is a continuation of the same line,
+- 2 indica que este punto es la continuación de la misma línea,
 
-valuesi represents the values of the list of user selected components at each corner of the polyline. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi representa los valores de la lista de componentes seleccionadas por el usuario en cada vértice de la polilínea. Los valores definidos por el usuario se listarán como una línea de comentario (es decir, una línea que comienza con un asterisco "*") al inicio del archivo.
 
-Fully Populated data will be written out such that all data will be on a regular sized grid.
+Fully Populated: los datos se escribirán de modo que todos queden sobre una grilla de tamaño regular.
 
-Use Commas data will be written out with commas in place of decimal points.
+Use Commas: los datos se escribirán con comas en lugar de puntos decimales.
 
 #### Other:
 
-&lt;&lt;    to shrink the dialogue box to small size
+&lt;&lt;    para reducir el cuadro de diálogo a tamaño pequeño
 
->>    to expand the dialogue box to large size Cartesian   configures for output of cartesian stress components. Principal   configures for output of principal stress components. Window   activates a graphical pick window.
+>>    para ampliar el cuadro de diálogo a tamaño grande Cartesian   configura la salida de las componentes cartesianas del esfuerzo. Principal   configura la salida de las componentes del esfuerzo principal. Window   activa una ventana de selección gráfica.
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- Se le pedirá que seleccione las dos esquinas de la ventana haciendo un solo clic con el mouse en cada una.
 
-- Only grid points enclosed within the window will be included in the dump.
+- Solo se incluirán en el volcado los puntos de grilla contenidos dentro de la ventana.
 
-- If you do not use this function all points on all grids are dumped.
+- Si no usa esta función, se vuelcan todos los puntos de todas las grillas.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-Polyline   activates a graphical pick polygon. You will be prompted to select a series of corners to define a polygon by picking each with a single mouse click:
+Polyline   activa un polígono de selección gráfico. Se le pedirá que seleccione una serie de vértices para definir un polígono, haciendo un solo clic con el mouse en cada uno:
 
-- You must hold the Shift-key down while selecting these points.
+- Debe mantener presionada la tecla Shift mientras selecciona estos puntos.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included.
+- Si define una forma poligonal cerrada, se incluirán los puntos de contorno encerrados en el polígono.
 
-- If you define an open polygonal shape - a series of points along the length of the polyline will be included.
+- Si define una forma poligonal abierta, se incluirá una serie de puntos a lo largo de la polilínea.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-- Simple rectangular widow shapes can be defined by holding the Shift-key and dragging open a window (same as with the Window button).
+- Se pueden definir ventanas rectangulares simples manteniendo presionada la tecla Shift y arrastrando para abrir una ventana (igual que con el botón Window).
 
-## 5.1.23.11 Selected Surface Components
+## 5.1.23.11 Componentes de superficie seleccionadas
 
-Dumps selected surface components to a text file (*.txt) in a user controlled format.
+Vuelca las componentes de superficie seleccionadas a un archivo de texto (*.txt) en un formato controlado por el usuario.
 
-By default all points on all surfaces are dumped. If you want to dump only a selected set of points use the window function defined below.
+Por defecto se vuelcan todos los puntos de todas las superficies. Si desea volcar solo un conjunto seleccionado de puntos, use la función de ventana que se define más abajo.
 
 ![Figure from page 197](/images/page-197-img-1.png)
 
-Upon selecting the desired data then OK, you will be prompted for a file name to save the data. You can select CSV (comma separated/delimited data), TSV (tab separated/delimited data) or TXT (space sepat\rated/delimited data).
+Una vez seleccionados los datos deseados y presionado OK, se le pedirá un nombre de archivo para guardar los datos. Puede seleccionar CSV (datos separados/delimitados por comas), TSV (datos separados/delimitados por tabulaciones) o TXT (datos separados/delimitados por espacios).
 
-You can also specify to automatically open the file in Excel or Notepad. Note that you should not use CSV files with commas as decimal points.
+También puede especificar que el archivo se abra automáticamente en Excel o en el Bloc de notas (Notepad). Tenga en cuenta que no se deben usar archivos CSV con comas como separador decimal.
 
 ![Figure from page 193](/images/page-193-img-2.png)
 
 #### Stresses:
 
-sn tsn psn stress normal to the surface, its trend and plunge.
+sn tsn psn esfuerzo normal a la superficie, su rumbo y su inclinación.
 
-ts tts pts maximum shear stress in the plane of the surface, its trend and plunge. ts1 ts2   shear stress components in the plane of the surface. ts1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ts2 is perpendicular to ts1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+ts tts pts esfuerzo de corte máximo en el plano de la superficie, su rumbo y su inclinación. ts1 ts2   componentes del esfuerzo de corte en el plano de la superficie. ts1 es paralela al primer lado (es decir, el lado definido por x1 y1 z1 – x2 y2 z2). ts2 es perpendicular a ts1 en la dirección del segundo lado (es decir, el lado definido por x2 y2 z2 – x3 y3 z3).
 
-ser surface stress error. Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations. This parameter indicates the error for each of the equations.
+ser error de esfuerzo superficial. Los solucionadores iterativos funcionan determinando el error en la solución actual de cada ecuación simultánea y luego reduciendo estos errores mediante un proceso de aproximaciones sucesivas. Este parámetro indica el error de cada una de las ecuaciones.
 
-fer failure criterion error. This parameter is only used for non-linear creep analyzes (including fault slip and 3D material non-linearity). This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear. In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium. This parameter indicates the viscous stress for each of the equations.
+fer error del criterio de falla. Este parámetro solo se usa en análisis de fluencia no lineal (incluidos el deslizamiento de fallas y la no linealidad de materiales 3D). Este parámetro siempre debe ser cercano a cero, a menos que se haya especificado alguna viscosidad y el problema se vuelva no lineal. En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático. Este parámetro indica el esfuerzo viscoso de cada una de las ecuaciones.
 
-smax tsmax psmax maximum tangential stress, its trend and plunge. smin tsmin psmin minimum tangential stress, its trend and plunge. Effective/Total – effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions.
+smax tsmax psmax esfuerzo tangencial máximo, su rumbo y su inclinación. smin tsmin psmin esfuerzo tangencial mínimo, su rumbo y su inclinación. Effective/Total – componentes del esfuerzo efectivo o del esfuerzo total. Estas opciones solo se usan en Map3D Thermal-Fluid Flow, ya que este código permite calcular distribuciones de presión de poros en régimen permanente.
 
 #### Strains:
 
-en ten pen strain in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the normal displacement (closure) divided by the thickness. es tes pes maximum shear strain in the plane of the surface, its trend and plunge. This parameter is only used for DD planes and is calculated as the  shear displacement (ride) divided by the thickness. es1 es2   shear strain components in the plane of the surface. es1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). es2 is perpendicular to es1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3).
+en ten pen deformación en la dirección normal a la superficie, su rumbo y su inclinación. Este parámetro solo se usa en planos DD y se calcula como el desplazamiento normal (cierre) dividido por el espesor. es tes pes deformación de corte máxima en el plano de la superficie, su rumbo y su inclinación. Este parámetro solo se usa en planos DD y se calcula como el desplazamiento de corte (ride) dividido por el espesor. es1 es2   componentes de la deformación de corte en el plano de la superficie. es1 es paralela al primer lado (es decir, el lado definido por x1 y1 z1 – x2 y2 z2). es2 es perpendicular a es1 en la dirección del segundo lado (es decir, el lado definido por x2 y2 z2 – x3 y3 z3).
 
 #### Displacements:
 
-dn tdn pdn normal displacement (closure) in the direction normal to the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+dn tdn pdn desplazamiento normal (cierre) en la dirección normal a la superficie, su rumbo y su inclinación. Este parámetro solo se usa en planos DD. Tenga en cuenta que se puede especificar el valor elástico, plástico o total.
 
-ds tds pds maximum shear displacement (ride) in the plane of the surface, its trend and plunge. This parameter is only used for DD planes. Note that the elastic, plastic or total value can be specified.
+ds tds pds desplazamiento de corte máximo (ride) en el plano de la superficie, su rumbo y su inclinación. Este parámetro solo se usa en planos DD. Tenga en cuenta que se puede especificar el valor elástico, plástico o total.
 
-ds1 ds2   shear displacement (ride) components in the plane of the surface. ds1 is parallel to the first side (i.e. the side defined by x1 y1 z1 – x2 y2 z2). ds2 is perpendicular to ds1 in the direction of the second side (i.e. the side defined by x2 y2 z2 – x3 y3 z3). Elastic/Plastic/Total elastic, plastic or total strain/displacement components. These options are only used for DD planes.
+ds1 ds2   componentes del desplazamiento de corte (ride) en el plano de la superficie. ds1 es paralela al primer lado (es decir, el lado definido por x1 y1 z1 – x2 y2 z2). ds2 es perpendicular a ds1 en la dirección del segundo lado (es decir, el lado definido por x2 y2 z2 – x3 y3 z3). Elastic/Plastic/Total componentes de la deformación/desplazamiento elástico, plástico o total. Estas opciones solo se usan para planos DD.
 
 #### Miscellaneous:
 
-area   the area of the surface. matl# the number of the material assigned to the surface. step# the mining step number. blk#   the block number. name   the name of the block surface. dof#   the degree of freedom number.
+area   el área de la superficie. matl# el número del material asignado a la superficie. step# el número de la etapa de explotación. blk#   el número de bloque. name   el nombre de la superficie del bloque. dof#   el número del grado de libertad.
 
 #### Data Format
 
-Points data will be written out as a series of points with one point per line.
+Los datos de puntos se escribirán como una serie de puntos, con un punto por línea.
 
 x1 y1 z1 values1 x2 y2 z2 values2 x3 y3 z3 values3 x4 y4 z4 values4
 
-where xi yi zi represent the coordinates of each point,
+donde xi yi zi representan las coordenadas de cada punto,
 
-valuesi represents the values of the list of user selected components at each point. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi representa los valores de la lista de componentes seleccionadas por el usuario en cada punto. Los valores definidos por el usuario se listarán como una línea de comentario (es decir, una línea que comienza con un asterisco "*") al inicio del archivo.
 
-Polylines data will be written out as a series of polylines in PNT file format x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
+Los datos de polilíneas se escribirán como una serie de polilíneas en formato de archivo PNT x1 y1 z1 3 values1 x2 y2 z2 2 values2 x3 y3 z3 2 values3 x4 y4 z4 2 values4
 
-where xi yi zi represent the coordinates of each point,
+donde xi yi zi representan las coordenadas de cada punto,
 
-3 indicates that this point is the beginning of a new line,
+3 indica que este punto es el comienzo de una nueva línea,
 
-2 indicates that this point is a continuation of the same line,
+2 indica que este punto es la continuación de la misma línea,
 
-valuesi represents the values of the list of user selected components at each corner of the polyline. The user defined values will be listed as a comment line (i.e. a line beginning with an asterisk "*") at the beginning of the file.
+valuesi representa los valores de la lista de componentes seleccionadas por el usuario en cada vértice de la polilínea. Los valores definidos por el usuario se listarán como una línea de comentario (es decir, una línea que comienza con un asterisco "*") al inicio del archivo.
 
-If linear BEM analysis (Analysis > Options > Linear) was not selected, valuesi are only available at the element centres and hence will only be supplied for the first point. If linear BEM analysis was selected, values are available at each corner and hence will only be supplied for all points.
+Si no se seleccionó el análisis BEM lineal (Analysis > Options > Linear), valuesi solo están disponibles en los centros de los elementos y, por lo tanto, solo se entregarán para el primer punto. Si se seleccionó el análisis BEM lineal, los valores están disponibles en cada vértice y, por lo tanto, se entregarán para todos los puntos.
 
 #### Other
 
-&lt;&lt;    to shrink the dialogue box to small size >>    to expand the dialogue box to large size Window   activates a graphical pick window.
+&lt;&lt;    para reducir el cuadro de diálogo a tamaño pequeño >>    para ampliar el cuadro de diálogo a tamaño grande Window   activa una ventana de selección gráfica.
 
-- You will be prompted to select the two corners of the window by picking each with a single mouse click.
+- Se le pedirá que seleccione las dos esquinas de la ventana haciendo un solo clic con el mouse en cada una.
 
-- Only grid points enclosed within the window will be included in the dump.
+- Solo se incluirán en el volcado los puntos de grilla contenidos dentro de la ventana.
 
-- If you do not use this function all points on all grids are dumped.
+- Si no usa esta función, se vuelcan todos los puntos de todas las grillas.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-Polyline   activates a graphical pick polygon. You will be prompted to select a series of corners to define a polygon by picking each with a single mouse click:
+Polyline   activa un polígono de selección gráfico. Se le pedirá que seleccione una serie de vértices para definir un polígono, haciendo un solo clic con el mouse en cada uno:
 
-- You must hold the Shift-key down while selecting these points.
+- Debe mantener presionada la tecla Shift mientras selecciona estos puntos.
 
-- If you define a closed polygonal shape - those contour points enclosed in the polygon will be included.
+- Si define una forma poligonal cerrada, se incluirán los puntos de contorno encerrados en el polígono.
 
-- If you define an open polygonal shape - a series of points along the length of the polyline will be included.
+- Si define una forma poligonal abierta, se incluirá una serie de puntos a lo largo de la polilínea.
 
-- To view the location of the actual contour points enable display of trajectories (Plot > Options > Trajectories). The contour points are located where the trajectories are drawn.
+- Para ver la ubicación de los puntos de contorno reales, active la visualización de trayectorias (Plot > Options > Trajectories). Los puntos de contorno se ubican donde se dibujan las trayectorias.
 
-- Simple rectangular widow shapes can be defined by holding the Shift-key and dragging open a window (same as with the Window button).
+- Se pueden definir ventanas rectangulares simples manteniendo presionada la tecla Shift y arrastrando para abrir una ventana (igual que con el botón Window).
 
-Use Commas data will be written out with commas in place of decimal points.
+Use Commas: los datos se escribirán con comas en lugar de puntos decimales.
 
-## 5.1.23.12 Animated TIFF/GIF Recorder
+## 5.1.23.12 Grabador de TIFF/GIF animado
 
-Records multiple sequential images to individual PNG, GIF, BMP or TIFF files.
+Graba varias imágenes secuenciales en archivos PNG, GIF, BMP o TIFF individuales.
 
-Many presentation programs allow you to construct simple animations by displaying a sequence of images. The Map3D image recorder allows you to record multiple screen dumps to a individual PNG, GIF, BMP or TIFF files.
+Muchos programas de presentación permiten construir animaciones simples mostrando una secuencia de imágenes. El grabador de imágenes de Map3D permite grabar varios volcados de pantalla en archivos PNG, GIF, BMP o TIFF individuales.
 
-The animated TIFF/GIF Recorder saves multiple images to the same TIFF or GIF file. These images can be played back with an image viewer that can display animated TIFFs or GIFs (such as Map3D Image Viewer, most internet browsers, Windows Photo Viewer etc.).
+El grabador de TIFF/GIF animado guarda varias imágenes en un mismo archivo TIFF o GIF. Estas imágenes se pueden reproducir con un visor de imágenes capaz de mostrar TIFF o GIF animados (como el Map3D Image Viewer, la mayoría de los navegadores de internet, el Visor de fotos de Windows, etc.).
 
-The Image Recorder creates multiple images to separate files. Once you select File > Output > Image Recorder, you will be prompted to specify a file name to save the animation. Image file names will be generated by appending the image count onto the file name you specify (e.g. name0001.png, name0002.png, name0003.png ...).
+El Image Recorder crea varias imágenes en archivos separados. Una vez que seleccione File > Output > Image Recorder, se le pedirá que especifique un nombre de archivo para guardar la animación. Los nombres de los archivos de imagen se generarán agregando el número de imagen al nombre de archivo que especifique (p. ej., name0001.png, name0002.png, name0003.png ...).
 
-The recorder dialogue box provides information on the current animation and allows you to control recording and specify animation options.
+El cuadro de diálogo del grabador entrega información sobre la animación actual y permite controlar la grabación y especificar las opciones de animación.
 
 ![Figure from page 200](/images/page-200-img-8.png)
 
-The current number of images in the animation is displayed along with the status of the recorder. Various status states include:
+Se muestra el número actual de imágenes de la animación junto con el estado del grabador. Los distintos estados incluyen:
 
-Ready/Paused – animation file is open and ready to record. Press Grab or Auto to add an image.
+Ready/Paused – el archivo de animación está abierto y listo para grabar. Presione Grab o Auto para agregar una imagen.
 
-Capturing Image – image is being added to the animation.
+Capturing Image – se está agregando una imagen a la animación.
 
-Ready/Auto Capture - displayed images will be automatically added to the animation as you update the screen.
+Ready/Auto Capture - las imágenes mostradas se agregarán automáticamente a la animación a medida que actualiza la pantalla.
 
-Recorder Off – animation file is closed and not ready to record.
+Recorder Off – el archivo de animación está cerrado y no está listo para grabar.
 
-Grab – adds the current displayed image to the animation.
+Grab – agrega a la animación la imagen que se muestra actualmente.
 
-Auto – automatically adds displayed images to the animation as you update the screen. This includes all rotation, translation and plotting operations you perform.
+Auto – agrega automáticamente a la animación las imágenes mostradas a medida que actualiza la pantalla. Esto incluye todas las operaciones de rotación, traslación y graficación que realice.
 
-Pause – disables automatic mode.
+Pause – deshabilita el modo automático.
 
-Flipped/NoFlip – toggles background and foreground (normally black and white) will be reversed.
+Flipped/NoFlip – alterna el fondo y el primer plano (normalmente negro y blanco), que se invertirán.
 
-End – stops the recorder and closes the animation file.
+End – detiene el grabador y cierra el archivo de animación.
 
 #### Notes:
 
-Additional images can be appended to an existing sequence of images be checking File > Output > Image Recorder > Append Images when selecting the file name for the animation sequence.
+Se pueden agregar imágenes adicionales a una secuencia de imágenes existente marcando File > Output > Image Recorder > Append Images al seleccionar el nombre de archivo de la secuencia de animación.
 
-Rotation and translation operations can be repeated automatically by typing n# before selecting the operation. For example to produce an animated display of a stress plot, specify the following
+Las operaciones de rotación y traslación se pueden repetir automáticamente escribiendo n# antes de seleccionar la operación. Por ejemplo, para producir una visualización animada de un gráfico de esfuerzos, especifique lo siguiente
 
 Plot > Options > Persist
 
@@ -353,12 +350,12 @@ Plot > Stress > Sigma:1
 
 View > Rotation Increment > 10
 
-Select the Auto button
+Seleccione el botón Auto
 
-Type in 35#
+Escriba 35#
 
-Select rotate right (either from the rotation toolbar or the PageDown key).
+Seleccione rotar a la derecha (ya sea desde la barra de herramientas de rotación o con la tecla Page Down).
 
-A series of files numbered name001 to name036 will be created. These can be imported into presentation software for animation and display.
+Se creará una serie de archivos numerados de name001 a name036. Estos se pueden importar en software de presentación para animarlos y mostrarlos.
 
-Stress contours that change as mining progresses can be displayed by grabbing a series of plots as the mining step is advanced.
+Los contornos de esfuerzo que cambian a medida que avanza la explotación se pueden mostrar capturando una serie de gráficos a medida que se avanza la etapa de explotación.
