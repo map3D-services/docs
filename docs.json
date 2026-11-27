@@ -460,7 +460,7 @@
             "pages": [
               {
                 "group": "Menú Archivo",
-                "root": "menu-commands/file-menu",
+                "root": "es/menu-commands/file-menu",
                 "pages": [
                   "es/menu-commands/file-menu/model-view-quick-open-model",
                   "es/menu-commands/file-menu/results-view-open-analysis-results",
@@ -495,7 +495,7 @@
               },
               {
                 "group": "Menú Vista",
-                "root": "menu-commands/view-menu",
+                "root": "es/menu-commands/view-menu",
                 "pages": [
                   "es/menu-commands/view-menu/hide",
                   "es/menu-commands/view-menu/hide-block-colours",
@@ -525,7 +525,7 @@
               },
               {
                 "group": "Menú Gráfico",
-                "root": "menu-commands/plot-menu",
+                "root": "es/menu-commands/plot-menu",
                 "pages": [
                   "es/menu-commands/plot-menu/stress",
                   "es/menu-commands/plot-menu/strain",
@@ -548,7 +548,7 @@
               },
               {
                 "group": "Análisis",
-                "root": "menu-commands/analysis",
+                "root": "es/menu-commands/analysis",
                 "pages": [
                   "es/menu-commands/analysis/analysis",
                   "es/menu-commands/analysis/analysis-options"
@@ -557,7 +557,7 @@
               },
               {
                 "group": "CAD",
-                "root": "menu-commands/cad",
+                "root": "es/menu-commands/cad",
                 "pages": [
                   "es/menu-commands/cad/build",
                   "es/menu-commands/cad/snap",
@@ -578,7 +578,7 @@
               },
               {
                 "group": "Herramientas",
-                "root": "menu-commands/tools",
+                "root": "es/menu-commands/tools",
                 "pages": [
                   "es/menu-commands/tools/mouse-options",
                   "es/menu-commands/tools/toolbars",
@@ -594,7 +594,7 @@
               "es/menu-commands/crosshairs",
               {
                 "group": "Visualización",
-                "root": "menu-commands/visualization",
+                "root": "es/menu-commands/visualization",
                 "pages": [
                   "es/menu-commands/visualization/visualization-of-text-files",
                   "es/menu-commands/visualization/visualization-of-evp-files",
@@ -606,7 +606,7 @@
               },
               {
                 "group": "Ayuda",
-                "root": "menu-commands/help",
+                "root": "es/menu-commands/help",
                 "pages": [
                   "es/menu-commands/help/contents-and-index",
                   "es/menu-commands/help/whats-this",
@@ -629,7 +629,7 @@
             "pages": [
               {
                 "group": "Análisis",
-                "root": "appendix/analysis",
+                "root": "es/appendix/analysis",
                 "pages": [
                   "es/appendix/analysis/analysis-options-mscalc-output-file-name",
                   "es/appendix/analysis/analysis-abort",
@@ -685,7 +685,7 @@
               },
               {
                 "group": "CAD",
-                "root": "appendix/cad",
+                "root": "es/appendix/cad",
                 "pages": [
                   "es/appendix/cad/cad-properties-map3di-setup-view",
                   "es/appendix/cad/cad-build-block-mesh-spacing",
@@ -706,7 +706,7 @@
               },
               {
                 "group": "Archivo",
-                "root": "appendix/file",
+                "root": "es/appendix/file",
                 "pages": [
                   "es/appendix/file/file-open-merge-materials",
                   "es/appendix/file/file-output-animated-gif-recorder-append-images",
@@ -726,7 +726,7 @@
               },
               {
                 "group": "Materiales",
-                "root": "appendix/materials",
+                "root": "es/appendix/materials",
                 "pages": [
                   "es/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
                   "es/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
@@ -835,7 +835,7 @@
             "pages": [
               {
                 "group": "Menu Fichier",
-                "root": "menu-commands/file-menu",
+                "root": "fr/menu-commands/file-menu",
                 "pages": [
                   "fr/menu-commands/file-menu/model-view-quick-open-model",
                   "fr/menu-commands/file-menu/results-view-open-analysis-results",
@@ -870,7 +870,7 @@
               },
               {
                 "group": "Menu Affichage",
-                "root": "menu-commands/view-menu",
+                "root": "fr/menu-commands/view-menu",
                 "pages": [
                   "fr/menu-commands/view-menu/hide",
                   "fr/menu-commands/view-menu/hide-block-colours",
@@ -900,7 +900,7 @@
               },
               {
                 "group": "Menu Tracé",
-                "root": "menu-commands/plot-menu",
+                "root": "fr/menu-commands/plot-menu",
                 "pages": [
                   "fr/menu-commands/plot-menu/stress",
                   "fr/menu-commands/plot-menu/strain",
@@ -923,7 +923,7 @@
               },
               {
                 "group": "Analyse",
-                "root": "menu-commands/analysis",
+                "root": "fr/menu-commands/analysis",
                 "pages": [
                   "fr/menu-commands/analysis/analysis",
                   "fr/menu-commands/analysis/analysis-options"
@@ -932,7 +932,7 @@
               },
               {
                 "group": "CAO",
-                "root": "menu-commands/cad",
+                "root": "fr/menu-commands/cad",
                 "pages": [
                   "fr/menu-commands/cad/build",
                   "fr/menu-commands/cad/snap",
@@ -953,7 +953,7 @@
               },
               {
                 "group": "Outils",
-                "root": "menu-commands/tools",
+                "root": "fr/menu-commands/tools",
                 "pages": [
                   "fr/menu-commands/tools/mouse-options",
                   "fr/menu-commands/tools/toolbars",
@@ -969,7 +969,7 @@
               "fr/menu-commands/crosshairs",
               {
                 "group": "Visualisation",
-                "root": "menu-commands/visualization",
+                "root": "fr/menu-commands/visualization",
                 "pages": [
                   "fr/menu-commands/visualization/visualization-of-text-files",
                   "fr/menu-commands/visualization/visualization-of-evp-files",
@@ -981,7 +981,7 @@
               },
               {
                 "group": "Aide",
-                "root": "menu-commands/help",
+                "root": "fr/menu-commands/help",
                 "pages": [
                   "fr/menu-commands/help/contents-and-index",
                   "fr/menu-commands/help/whats-this",
@@ -1004,7 +1004,7 @@
             "pages": [
               {
                 "group": "Analyse",
-                "root": "appendix/analysis",
+                "root": "fr/appendix/analysis",
                 "pages": [
                   "fr/appendix/analysis/analysis-options-mscalc-output-file-name",
                   "fr/appendix/analysis/analysis-abort",
@@ -1060,7 +1060,7 @@
               },
               {
                 "group": "CAO",
-                "root": "appendix/cad",
+                "root": "fr/appendix/cad",
                 "pages": [
                   "fr/appendix/cad/cad-properties-map3di-setup-view",
                   "fr/appendix/cad/cad-build-block-mesh-spacing",
@@ -1081,7 +1081,7 @@
               },
               {
                 "group": "Fichier",
-                "root": "appendix/file",
+                "root": "fr/appendix/file",
                 "pages": [
                   "fr/appendix/file/file-open-merge-materials",
                   "fr/appendix/file/file-output-animated-gif-recorder-append-images",
@@ -1101,7 +1101,7 @@
               },
               {
                 "group": "Matériaux",
-                "root": "appendix/materials",
+                "root": "fr/appendix/materials",
                 "pages": [
                   "fr/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
                   "fr/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
@@ -1210,7 +1210,7 @@
             "pages": [
               {
                 "group": "Menü Datei",
-                "root": "menu-commands/file-menu",
+                "root": "de/menu-commands/file-menu",
                 "pages": [
                   "de/menu-commands/file-menu/model-view-quick-open-model",
                   "de/menu-commands/file-menu/results-view-open-analysis-results",
@@ -1245,7 +1245,7 @@
               },
               {
                 "group": "Menü Ansicht",
-                "root": "menu-commands/view-menu",
+                "root": "de/menu-commands/view-menu",
                 "pages": [
                   "de/menu-commands/view-menu/hide",
                   "de/menu-commands/view-menu/hide-block-colours",
@@ -1275,7 +1275,7 @@
               },
               {
                 "group": "Menü Darstellung",
-                "root": "menu-commands/plot-menu",
+                "root": "de/menu-commands/plot-menu",
                 "pages": [
                   "de/menu-commands/plot-menu/stress",
                   "de/menu-commands/plot-menu/strain",
@@ -1298,7 +1298,7 @@
               },
               {
                 "group": "Analyse",
-                "root": "menu-commands/analysis",
+                "root": "de/menu-commands/analysis",
                 "pages": [
                   "de/menu-commands/analysis/analysis",
                   "de/menu-commands/analysis/analysis-options"
@@ -1307,7 +1307,7 @@
               },
               {
                 "group": "CAD",
-                "root": "menu-commands/cad",
+                "root": "de/menu-commands/cad",
                 "pages": [
                   "de/menu-commands/cad/build",
                   "de/menu-commands/cad/snap",
@@ -1328,7 +1328,7 @@
               },
               {
                 "group": "Werkzeuge",
-                "root": "menu-commands/tools",
+                "root": "de/menu-commands/tools",
                 "pages": [
                   "de/menu-commands/tools/mouse-options",
                   "de/menu-commands/tools/toolbars",
@@ -1344,7 +1344,7 @@
               "de/menu-commands/crosshairs",
               {
                 "group": "Visualisierung",
-                "root": "menu-commands/visualization",
+                "root": "de/menu-commands/visualization",
                 "pages": [
                   "de/menu-commands/visualization/visualization-of-text-files",
                   "de/menu-commands/visualization/visualization-of-evp-files",
@@ -1356,7 +1356,7 @@
               },
               {
                 "group": "Hilfe",
-                "root": "menu-commands/help",
+                "root": "de/menu-commands/help",
                 "pages": [
                   "de/menu-commands/help/contents-and-index",
                   "de/menu-commands/help/whats-this",
@@ -1379,7 +1379,7 @@
             "pages": [
               {
                 "group": "Analyse",
-                "root": "appendix/analysis",
+                "root": "de/appendix/analysis",
                 "pages": [
                   "de/appendix/analysis/analysis-options-mscalc-output-file-name",
                   "de/appendix/analysis/analysis-abort",
@@ -1435,7 +1435,7 @@
               },
               {
                 "group": "CAD",
-                "root": "appendix/cad",
+                "root": "de/appendix/cad",
                 "pages": [
                   "de/appendix/cad/cad-properties-map3di-setup-view",
                   "de/appendix/cad/cad-build-block-mesh-spacing",
@@ -1456,7 +1456,7 @@
               },
               {
                 "group": "Datei",
-                "root": "appendix/file",
+                "root": "de/appendix/file",
                 "pages": [
                   "de/appendix/file/file-open-merge-materials",
                   "de/appendix/file/file-output-animated-gif-recorder-append-images",
@@ -1476,7 +1476,7 @@
               },
               {
                 "group": "Materialien",
-                "root": "appendix/materials",
+                "root": "de/appendix/materials",
                 "pages": [
                   "de/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
                   "de/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
@@ -1585,7 +1585,7 @@
             "pages": [
               {
                 "group": "Menu Arquivo",
-                "root": "menu-commands/file-menu",
+                "root": "pt-br/menu-commands/file-menu",
                 "pages": [
                   "pt-br/menu-commands/file-menu/model-view-quick-open-model",
                   "pt-br/menu-commands/file-menu/results-view-open-analysis-results",
@@ -1620,7 +1620,7 @@
               },
               {
                 "group": "Menu Visualizar",
-                "root": "menu-commands/view-menu",
+                "root": "pt-br/menu-commands/view-menu",
                 "pages": [
                   "pt-br/menu-commands/view-menu/hide",
                   "pt-br/menu-commands/view-menu/hide-block-colours",
@@ -1650,7 +1650,7 @@
               },
               {
                 "group": "Menu Plotagem",
-                "root": "menu-commands/plot-menu",
+                "root": "pt-br/menu-commands/plot-menu",
                 "pages": [
                   "pt-br/menu-commands/plot-menu/stress",
                   "pt-br/menu-commands/plot-menu/strain",
@@ -1673,7 +1673,7 @@
               },
               {
                 "group": "Análise",
-                "root": "menu-commands/analysis",
+                "root": "pt-br/menu-commands/analysis",
                 "pages": [
                   "pt-br/menu-commands/analysis/analysis",
                   "pt-br/menu-commands/analysis/analysis-options"
@@ -1682,7 +1682,7 @@
               },
               {
                 "group": "CAD",
-                "root": "menu-commands/cad",
+                "root": "pt-br/menu-commands/cad",
                 "pages": [
                   "pt-br/menu-commands/cad/build",
                   "pt-br/menu-commands/cad/snap",
@@ -1703,7 +1703,7 @@
               },
               {
                 "group": "Ferramentas",
-                "root": "menu-commands/tools",
+                "root": "pt-br/menu-commands/tools",
                 "pages": [
                   "pt-br/menu-commands/tools/mouse-options",
                   "pt-br/menu-commands/tools/toolbars",
@@ -1719,7 +1719,7 @@
               "pt-br/menu-commands/crosshairs",
               {
                 "group": "Visualização",
-                "root": "menu-commands/visualization",
+                "root": "pt-br/menu-commands/visualization",
                 "pages": [
                   "pt-br/menu-commands/visualization/visualization-of-text-files",
                   "pt-br/menu-commands/visualization/visualization-of-evp-files",
@@ -1731,7 +1731,7 @@
               },
               {
                 "group": "Ajuda",
-                "root": "menu-commands/help",
+                "root": "pt-br/menu-commands/help",
                 "pages": [
                   "pt-br/menu-commands/help/contents-and-index",
                   "pt-br/menu-commands/help/whats-this",
@@ -1754,7 +1754,7 @@
             "pages": [
               {
                 "group": "Análise",
-                "root": "appendix/analysis",
+                "root": "pt-br/appendix/analysis",
                 "pages": [
                   "pt-br/appendix/analysis/analysis-options-mscalc-output-file-name",
                   "pt-br/appendix/analysis/analysis-abort",
@@ -1810,7 +1810,7 @@
               },
               {
                 "group": "CAD",
-                "root": "appendix/cad",
+                "root": "pt-br/appendix/cad",
                 "pages": [
                   "pt-br/appendix/cad/cad-properties-map3di-setup-view",
                   "pt-br/appendix/cad/cad-build-block-mesh-spacing",
@@ -1831,7 +1831,7 @@
               },
               {
                 "group": "Arquivo",
-                "root": "appendix/file",
+                "root": "pt-br/appendix/file",
                 "pages": [
                   "pt-br/appendix/file/file-open-merge-materials",
                   "pt-br/appendix/file/file-output-animated-gif-recorder-append-images",
@@ -1851,7 +1851,7 @@
               },
               {
                 "group": "Materiais",
-                "root": "appendix/materials",
+                "root": "pt-br/appendix/materials",
                 "pages": [
                   "pt-br/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
                   "pt-br/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
@@ -1960,7 +1960,7 @@
             "pages": [
               {
                 "group": "文件菜单",
-                "root": "menu-commands/file-menu",
+                "root": "cn/menu-commands/file-menu",
                 "pages": [
                   "cn/menu-commands/file-menu/model-view-quick-open-model",
                   "cn/menu-commands/file-menu/results-view-open-analysis-results",
@@ -1995,7 +1995,7 @@
               },
               {
                 "group": "视图菜单",
-                "root": "menu-commands/view-menu",
+                "root": "cn/menu-commands/view-menu",
                 "pages": [
                   "cn/menu-commands/view-menu/hide",
                   "cn/menu-commands/view-menu/hide-block-colours",
@@ -2025,7 +2025,7 @@
               },
               {
                 "group": "绘图菜单",
-                "root": "menu-commands/plot-menu",
+                "root": "cn/menu-commands/plot-menu",
                 "pages": [
                   "cn/menu-commands/plot-menu/stress",
                   "cn/menu-commands/plot-menu/strain",
@@ -2048,7 +2048,7 @@
               },
               {
                 "group": "分析",
-                "root": "menu-commands/analysis",
+                "root": "cn/menu-commands/analysis",
                 "pages": [
                   "cn/menu-commands/analysis/analysis",
                   "cn/menu-commands/analysis/analysis-options"
@@ -2057,7 +2057,7 @@
               },
               {
                 "group": "CAD",
-                "root": "menu-commands/cad",
+                "root": "cn/menu-commands/cad",
                 "pages": [
                   "cn/menu-commands/cad/build",
                   "cn/menu-commands/cad/snap",
@@ -2078,7 +2078,7 @@
               },
               {
                 "group": "工具",
-                "root": "menu-commands/tools",
+                "root": "cn/menu-commands/tools",
                 "pages": [
                   "cn/menu-commands/tools/mouse-options",
                   "cn/menu-commands/tools/toolbars",
@@ -2094,7 +2094,7 @@
               "cn/menu-commands/crosshairs",
               {
                 "group": "可视化",
-                "root": "menu-commands/visualization",
+                "root": "cn/menu-commands/visualization",
                 "pages": [
                   "cn/menu-commands/visualization/visualization-of-text-files",
                   "cn/menu-commands/visualization/visualization-of-evp-files",
@@ -2106,7 +2106,7 @@
               },
               {
                 "group": "帮助",
-                "root": "menu-commands/help",
+                "root": "cn/menu-commands/help",
                 "pages": [
                   "cn/menu-commands/help/contents-and-index",
                   "cn/menu-commands/help/whats-this",
@@ -2129,7 +2129,7 @@
             "pages": [
               {
                 "group": "分析",
-                "root": "appendix/analysis",
+                "root": "cn/appendix/analysis",
                 "pages": [
                   "cn/appendix/analysis/analysis-options-mscalc-output-file-name",
                   "cn/appendix/analysis/analysis-abort",
@@ -2185,7 +2185,7 @@
               },
               {
                 "group": "CAD",
-                "root": "appendix/cad",
+                "root": "cn/appendix/cad",
                 "pages": [
                   "cn/appendix/cad/cad-properties-map3di-setup-view",
                   "cn/appendix/cad/cad-build-block-mesh-spacing",
@@ -2206,7 +2206,7 @@
               },
               {
                 "group": "文件",
-                "root": "appendix/file",
+                "root": "cn/appendix/file",
                 "pages": [
                   "cn/appendix/file/file-open-merge-materials",
                   "cn/appendix/file/file-output-animated-gif-recorder-append-images",
@@ -2226,7 +2226,7 @@
               },
               {
                 "group": "材料",
-                "root": "appendix/materials",
+                "root": "cn/appendix/materials",
                 "pages": [
                   "cn/appendix/materials/materials-mohr-coulomb-in-3d-ff-blocks",
                   "cn/appendix/materials/materials-hoek-brown-in-3d-ff-blocks",
