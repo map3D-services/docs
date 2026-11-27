@@ -1,12 +1,10 @@
 ---
-title: "Discretizaiton and Lumping"
+title: "Discretization and Lumping"
 ---
 
-Map3D uses several different, but complimentary strategies to permit analysis of very large problem sizes. Discretization is controlled such that boundary elements are only used in locations where they are needed. Several forms of lumping are then used to reduce analysis time and disk space requirements. Together, these features enable Map3D to accommodate very large problem sizes (more than 2,000,000 elements) on PC platforms.
+Map3D uses several different, but complementary strategies to permit analysis of very large problem sizes. Discretization is controlled such that boundary elements are only used in locations where they are needed. Several forms of lumping are then used to reduce analysis time and disk space requirements. Together, these features enable Map3D to accommodate very large problem sizes (more than 2,000,000 elements) on PC platforms.
 
-Without lumping, a 64000 element problem would take 147 GB of disk space. With lumping, this can be reduced to less than 1 GB. The time required for analysis reduces by approximately the same proportion. This permits users to specify existing mining geometry in detail, and add new mining as
-
-required. This greatly reduces the effort required to set up and run analyzes and permits the whole mine to be considered when necessary.
+Without lumping, a 64000 element problem would take 147 GB of disk space. With lumping, this can be reduced to less than 1 GB. The time required for analysis reduces by approximately the same proportion. This permits users to specify existing mining geometry in detail, and add new mining as required. This greatly reduces the effort required to set up and run analyses and permits the whole mine to be considered when necessary.
 
 All discretization and lumping parameters are expressed in terms of a distance over length ratio. In all cases the distance is measured between two points of interest (e.g. from one element to another, or from an element to the nearest grid point). In this ratio, the length is the size of the element, or grid spacing at one of the points of interest.
 
@@ -66,7 +64,7 @@ The next most difficult type of problem to solve is one where narrow stopes are 
 
 #### _Lelem_ = _Delem_ / _DON_
 
-such that _Lelem_ is not less that _AL_ , small values of _DON_ will generate small elements only near locations where stopes are narrow. As one moves away from these areas, the element size will very quickly increase. The use of fictitious force elements to create this type of tabular shaped excavation can result in a poorly conditioned matrix unless a value of _DON_ of approximately one half is used. This must of course be accompanied by a sufficiently small value of _AL_ to permit small elements to be generated.
+such that _Lelem_ is not less than _AL_ , small values of _DON_ will generate small elements only near locations where stopes are narrow. As one moves away from these areas, the element size will very quickly increase. The use of fictitious force elements to create this type of tabular shaped excavation can result in a poorly conditioned matrix unless a value of _DON_ of approximately one half is used. This must of course be accompanied by a sufficiently small value of _AL_ to permit small elements to be generated.
 
 _AL_ should normally be set equal to the width of the narrowest pillar, stope, or the smallest hangingwall to footwall distance. This will permit the discretization routine to use as small size elements as are necessary to ensure proper matrix conditioning.
 
@@ -80,9 +78,7 @@ _AL_ should normally be set equal to the width of the narrowest pillar or the sm
 
 In summary, _AL_ should be set equal to the width of the narrowest pillar or the smallest hangingwall to footwall distance. Larger values may be necessary if too many elements are generated. _DON_ should be set to 0.5 for normal problems, and 1.0 for problems where narrow pillars are defined.
 
-During discretization, Map3D will attempt to satisfy the specified _DON_ ratio for all elements. When discretizing, the maximum number of boundary elements that any block or plate edge can be divided into is 256. If this number of subdivisions is reached, and the specified _DON_ ratio has still not been
-
-achieved, Map3D will issue a warning message instructing the user to subdivide the block or plate into smaller pieces.
+During discretization, Map3D will attempt to satisfy the specified _DON_ ratio for all elements. When discretizing, the maximum number of boundary elements that any block or plate edge can be divided into is 256. If this number of subdivisions is reached, and the specified _DON_ ratio has still not been achieved, Map3D will issue a warning message instructing the user to subdivide the block or plate into smaller pieces.
 
 Once discretization is complete, the distance _Delem_ can be plotted using
 
@@ -94,7 +90,7 @@ Plot > Miscellaneous > Delem/Lelem _DON_ ratio on surfaces
 
 Locations where _DON_ is small (less than 0.5) could result in a non-convergent solution process.
 
-Note that if desired, this behaviour can be overridden on an element by element basis my specifying the maximum width for each element
+Note that if desired, this behaviour can be overridden on an element by element basis by specifying the maximum width for each element
 
 #### CAD > Edit > Entity Properties > Maximum Width
 
@@ -108,7 +104,7 @@ Since at some locations the distance _Dgrid_ may be zero, a minimum element side
 
 This same relationship is also used to subdivide grid planes into points where field stresses, strains and displacements are calculated. A minimum grid spacing of half _AG_ will be used.
 
-The _AG_ parameter should be set equal to smallest dimension of interest. To obtain reasonable accurate results, _AG_ should be set to approximately one quarter the stope or pillar width. For example if the user wants to see the stress distribution across a 2m wide pillar, a value of 0.5 for _AG_ would give a sufficient number of field points for accurate contouring.
+The _AG_ parameter should be set equal to smallest dimension of interest. To obtain reasonably accurate results, _AG_ should be set to approximately one quarter the stope or pillar width. For example if the user wants to see the stress distribution across a 2m wide pillar, a value of 0.5 for _AG_ would give a sufficient number of field points for accurate contouring.
 
 The same units used to specify the coordinate locations should be used (e.g. metres or feet).
 
@@ -126,7 +122,7 @@ The field point spacing and element side length _Lgrid_ , are determined from th
 
 _Lgrid_ = _Dgrid_ / _DOL_
 
-such that _Lgrid_ is not less that _AG_ , small values of _DOL_ will generate small elements and grid spacing only near locations where grids pass near to stopes. As one moves away from these areas, the element size will very quickly increase.
+such that _Lgrid_ is not less than _AG_ , small values of _DOL_ will generate small elements and grid spacing only near locations where grids pass near to stopes. As one moves away from these areas, the element size will very quickly increase.
 
 ![Figure from page 67](/images/page-67-img-1.png)
 
@@ -150,7 +146,7 @@ Small values of _DOL_ (one or less) will generate small field point spacings and
 
 ![Figure from page 68](/images/page-68-img-5.png)
 
-Result accuracy can be directly related to the magnitude of _DOL_ . Errors are limited to approximately 1020% for _DOL_ near one, and 5-10% for _DOL_ near two. These values are only approximate, and it is therefore recommended that in problems where high accuracy is required, values of _DOL_ near four be used. In problems where low accuracy is necessary, _DOL_ near one is adequate. It is not recommended to set _DOL_ less that one.
+Result accuracy can be directly related to the magnitude of _DOL_ . Errors are limited to approximately 10-20% for _DOL_ near one, and 5-10% for _DOL_ near two. These values are only approximate, and it is therefore recommended that in problems where high accuracy is required, values of _DOL_ near four be used. In problems where low accuracy is necessary, _DOL_ near one is adequate. It is not recommended to set _DOL_ less than one.
 
 Note that large values of _DOL_ and small values for _AG_ result in increased number of elements and increased run times, but greater accuracy.
 
