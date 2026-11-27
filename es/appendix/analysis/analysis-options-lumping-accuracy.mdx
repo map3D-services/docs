@@ -2,19 +2,16 @@
 title: "Análisis > Opciones > Precisión del agrupamiento"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Cuando esta opción está activada, el agrupamiento solo se permite entre elementos adyacentes que comparten el mismo sistema de coordenadas local (es decir, normales paralelas y lados paralelos). Esto garantiza una precisión relativamente buena de las zonas agrupadas.
 
-When this option is checked, lumping will only be allowed between adjacent elements that share the same local coordinate system (i.e. parallel normals and parallel sides). This ensures relatively good accuracy of lumped zones.
+Cuando esta opción no está activada, el agrupamiento se permite entre todos los elementos adyacentes, sin importar su orientación. Este procedimiento da como resultado un mayor agrupamiento y, por tanto, una matriz de coeficientes más pequeña, pero a costa de una menor precisión de los resultados.
 
-When this option is not checked, lumping will be allowed between all adjacent elements regardless of the orientation. This procedure will result in increased lumping and hence smaller coefficient matrix size, but at the expense of reduced accuracy of the results.
+El método de elementos de borde genera una matriz de coeficientes completamente poblada de tamaño 4•n² bytes, donde n es el número de grados de libertad. Incluso en problemas pequeños, los requisitos de espacio en disco y el tiempo de análisis pueden llegar a ser muy grandes (p. ej., 20,000 grados de libertad requieren 2 GBytes de espacio en disco sin agrupamiento). Los problemas grandes se vuelven rápidamente imposibles de resolver (p. ej., 200,000 grados de libertad requieren 160 GBytes de espacio en disco sin agrupamiento). Para superar este problema, Map3D realiza un procedimiento llamado agrupamiento de matriz. Normalmente esto logra una reducción del tamaño de la matriz de coeficientes de 10 veces en problemas pequeños y de más de 100 veces en problemas más grandes.
 
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+Notas
 
-Notes
-
-This function must be checked before conducting the discretization analysis
+Esta función debe estar activada antes de realizar el análisis de discretización
 
 #### Analysis > Discretization
 
-Refer to Analysis > Options > Lumping for information on lumping.
+Consulta Analysis > Options > Lumping para obtener información sobre el agrupamiento.

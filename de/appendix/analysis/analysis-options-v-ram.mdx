@@ -2,19 +2,16 @@
 title: "Analyse > Optionen > V-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Speichert einen Teil der Koeffizientenmatrix im virtuellen RAM – während der Map3D-BEM-Analyse.
 
-Store part of the coefficient matrix in virtual RAM – during Map3D BEM analysis.
+Wenn in Ihrem Computer viel RAM installiert ist, kann diese Option die Ausführung erheblich beschleunigen, da Daten wesentlich schneller aus dem RAM als von der Festplatte abgerufen werden können. Leider erlaubt 32-Bit-Windows jedem Prozess nur die Adressierung von 2 GB. Nach Abzug des Overheads bleiben nur etwa 1 GB für zusätzlichen Speicher, selbst wenn reichlich RAM vorhanden ist. Für Benutzer mit viel RAM im Computer besteht eine Alternative darin, anstelle des virtuellen RAM den physischen RAM zu verwenden (Analysis > Options > P-ram).
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Unfortunately Windows 32 bit only allows each process to address 2GB. After you remove overheads this leaves only about 1GB for auxiliary storage, even if you have plenty of RAM. For users with large amounts of RAM in their computer, an alternative is to use physical RAM (Analysis > Options > P-ram) instead of virtual RAM.
+Hinweise:
 
-Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss vor der Durchführung der Map3D-BEM-Analyse aktiviert werden
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+Sie sollten nur so viel RAM zuweisen, wie Map3D verwenden soll, und dabei ausreichend Platz für alle anderen Anwendungen lassen, die Sie ausführen möchten.
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Sie sollten diesen Parameter niemals größer als den verfügbaren RAM einstellen, da dies zu übermäßigem Auslagern (Paging) durch Ihr Betriebssystem führt und die Analyse erheblich verlangsamt.

@@ -2,32 +2,29 @@
 title: "Materialien > Drucker-Prager in 3D-FF-Blöcken"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
-Hoek-Brown material can only be used as a failure criterion for elastic analyzes in Map3D Fault-Slip.
+Hoek-Brown-Material kann in Map3D Fault-Slip nur als Versagenskriterium für elastische Analysen verwendet werden.
 
 ![Figure from page 549](/images/page-549-img-15.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name – legt einen beschreibenden Namen für das Material fest.
 
-Material # - specifies the material number.
+Material # – legt die Materialnummer fest.
 
-- Material #1 is reserved for the host material.
+- Materialnummer 1 ist für das Wirtsmaterial reserviert.
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+- Die übrigen Materialnummern dienen zur Definition abweichender Materialzonen wie Erz, Störungsletten, Versatz usw.
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+Material Type – legt den Materialtyp fest (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar oder none).
 
-- Drucker-Prager - defines the failure envelope as a straight line.
+- Drucker-Prager – definiert die Bruchhüllkurve als Gerade.
 
-- For 3D FF blocks the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+- Für 3D-FF-Blöcke definiert das Drucker-Prager-Kriterium die Festigkeit anhand der Hauptspannungen wie folgt:
 
 **Drucker-Prager in 3D FF blocks**
 
 ![Figure from page 550](/images/page-550-img-6.png)
 
-where
+wobei
 
 toct  = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]½
 
@@ -35,71 +32,71 @@ sm = ¹/3 ( s1 + s2 + s3 )
 
 _q_ = tan²(45+½ j)
 
-- Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+- Beachten Sie, dass die Festigkeitsparameter so gewählt wurden, dass sich das Kriterium auf das MohrCoulomb-Kriterium vereinfacht, wenn s2 gleich s3 ist.
 
-- Tension cutoff and _UCS_ - are specified in units of stress (MPa or psi).
+- Tension cutoff und _UCS_ werden in Spannungseinheiten (MPa oder psi) angegeben.
 
-- Friction angle and dilation angle are specified in degrees.
+- Friction angle und dilation angle werden in Grad angegeben.
 
-- Cohesion is not used for 3D FF blocks.
+- Cohesion wird für 3D-FF-Blöcke nicht verwendet.
 
-- Only the peak values are used.
+- Es werden nur die Spitzenwerte verwendet.
 
-Young's Modulus and Poisson's Ratio - specify Young's (rock mass scale - deformation) Modulus in units of stress (MPa or psi).
+Young's Modulus and Poisson's Ratio – legen den Elastizitätsmodul (Gebirgsmaßstab – Verformung) in Spannungseinheiten (MPa oder psi) fest.
 
-- Only the peak values are used.
+- Es werden nur die Spitzenwerte verwendet.
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation – legt die Standardabweichung in Spannungseinheiten (MPa oder psi) fest.
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- Dieser Parameter beschreibt die Unsicherheit der Festigkeitsparameter.
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > Rockmass Probability N-distribution.
+- Dieser Parameter wird nur für die Darstellung der Scherversagenswahrscheinlichkeit verwendet Plot > Strength Factors > Rockmass Probability N-distribution.
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are not used for the Drucker-Prager material.
+Viscous Modulus ( _Gn_ und _Gs_ ) – Diese Parameter werden für das Drucker-Prager-Material nicht verwendet.
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow. Map3D Thermal- Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+Expansion Coefficient und Conductivity werden nur in Map3D Thermal-Fluid Flow verwendet. Mit Map3D Thermal-Fluid Flow lässt sich die stationäre Wärme- bzw. Fluidströmung gekoppelt mit der Spannungsanalyse gleichzeitig lösen.
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only – wenn aktiviert, verhält sich dieses Material nur elastisch, d. h., die Festigkeitsparameter werden nicht verwendet.
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- Damit lassen sich Zonen mit unterschiedlichen elastischen Eigenschaften und/oder Anfangsspannungszuständen definieren. Dazu können beispielsweise steife Gänge, weiche Erzzonen, Versatz oder Ausbauelemente gehören.
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic – wenn aktiviert, verhält sich dieses Material elasto-viskoplastisch, d. h., die Festigkeitsparameter werden als Fließregel verwendet.
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- Damit lassen sich Zonen sowohl mit unterschiedlichen elastischen Eigenschaften als auch mit unterschiedlichen Festigkeitsparametern definieren.
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- Beachten Sie, dass in Map3D Fault-Slip nur DD-Elemente (d. h. Störungsletten) sich nichtlinear verhalten dürfen.
 
-- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+- In Map3D Non-Linear kann auch das 3D-Gebirge plastisch nachgeben.
 
-- Yielding of Drucker-Prager materials is not supported at this time.
+- Das Fließen von Drucker-Prager-Materialien wird derzeit nicht unterstützt.
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive – wenn aktiviert, wird dieses Material in der Spannungsanalyse nicht verwendet und beeinflusst daher die vorhergesagten Spannungen, Dehnungen oder Verschiebungen nicht.
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Damit lassen sich Zonen mit unterschiedlichen Festigkeitsparametern definieren, die beim Erzeugen von Konturen der Festigkeitsfaktoren verwendet werden.
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined – ermöglicht die Festlegung benutzerdefinierter Parameter, die bei der Konturdarstellung verwendet werden.
 
-- Different parameters are defined for each material number.
+- Für jede Materialnummer werden unterschiedliche Parameter definiert.
 
       - Plot > Stress > User
 
-   - These parameters are used with
+   - Diese Parameter werden verwendet mit
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Damit lassen sich Zonen mit unterschiedlichen Festigkeitsparametern definieren, die beim Erzeugen von Konturen der Festigkeitsfaktoren verwendet werden.
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File – ermöglicht es Ihnen, alle Materialeigenschaftsdaten in eine Datei auszugeben, die Sie in Notepad oder Excel ansehen können.
 
-Copy from material - allows you to copy the material properties from one material number to another.
+Copy from material – ermöglicht es Ihnen, die Materialeigenschaften von einer Materialnummer auf eine andere zu kopieren.
 
-- All properties including the stress state are copied.
+- Alle Eigenschaften einschließlich des Spannungszustands werden kopiert.
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State – legt den Anfangsspannungszustand (Fernfeld) für das Material fest.
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- Die meisten Materialien werden in Blöcke mit demselben Spannungszustand (Fernfeld) eingesetzt.
 
-- Materials such as props or backfill are placed at near zero initial stresses.
+- Materialien wie Stempel oder Versatz werden mit Anfangsspannungen nahe null angesetzt.
 
-Related Topics:
+Verwandte Themen:
 
 Mohr_Coulomb in 3D FF blocks
 

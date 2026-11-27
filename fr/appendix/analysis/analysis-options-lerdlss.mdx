@@ -2,111 +2,108 @@
 title: "Analyse > Options > LERD/LSS"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Calcule le taux de libération d'énergie et la rigidité du système de chargement pendant l'analyse BEM de Map3D.
 
-Calculate energy release rate and loading system stiffness – during Map3D BEM analysis.
+Cette routine permet de calculer le taux de libération d'énergie ( _ERR_ ) en tout point souhaité et offre une grande souplesse pour contrôler le déroulement du calcul. Une autre
 
-This routine enables the user to calculate energy release rate ( _ERR_ ) at any desired location and provides a wide range of flexibility for controlling how the calculation is conducted. An alternative
+méthode est disponible, où _ERR_ est calculé uniquement en avant du front d'une excavation : Plot > Surface Components > ERR
 
-method is available where _ERR_ is calculated ahead of an excavation face only Plot > Surface Components > ERR
+Lorsque vous sélectionnez LERD/LSS, le programme vous demande un nom de fichier de données dans lequel écrire les résultats des calculs LERD/LSS. L'extension par défaut de ce fichier est ".ERR".
 
-When you select LERD/LSS, you will be prompted for a data file name where the results from the LERD/LSS calculations are to be written. The default extension for this file is ".ERR".
+Les résultats sont écrits dans ce fichier au format suivant :
 
-Results will be written to this file in the following format:
-
-If the test block is constructed as a 3D block (using FF elements)
+Si le bloc d'essai est construit comme un bloc 3D (à l'aide d'éléments FF)
 
 **Block# Volume Area   Wk  Wf  Ev  LSS   x y z** s **1  t1  p1** s **2  t2  p2** s **3  t3  p3**
 
-where s **i  ti  pi** represent a principal stress component, its trend and plunge.
+où s **i  ti  pi** représentent une composante de contrainte principale, sa direction (trend) et son plongement (plunge).
 
-If the test block is constructed as a planar feature (using DD elements)
+Si le bloc d'essai est construit comme un élément plan (à l'aide d'éléments DD)
 
 **Block# Volume Area   Wk  Wf  Ev  LSS   x y z** t **s  ts  ps** s **n  tn  pn**
 
-where t **s  ts  ps** represent the maximum in-plane shear stress, its trend and plunge, and s **n  tn  pn** represent the normal stress, its trend and plunge.
+où t **s  ts  ps** représentent la contrainte de cisaillement maximale dans le plan, sa direction et son plongement, et s **n  tn  pn** représentent la contrainte normale, sa direction et son plongement.
 
-In both cases, **x y z** are the coordinates of the centre of the test block where the stresses are calculated.
+Dans les deux cas, **x y z** sont les coordonnées du centre du bloc d'essai où les contraintes sont calculées.
 
-**Wk  Wf** and **LSS** are defined below.
+**Wk  Wf** et **LSS** sont définis ci-dessous.
 
-**Ev** is the volume change that occurs during the LERD/ERR calculation.
+**Ev** est la variation de volume qui se produit pendant le calcul LERD/ERR.
 
-In addition, the total energy release associated with new excavations made during for the current mining step will also be calculated. Note that no test blocks need to be specified for this calculation to take place. Results will be reported as follows:
+De plus, la libération d'énergie totale associée aux nouvelles excavations réalisées à l'étape d'exploitation en cours est également calculée. Notez qu'aucun bloc d'essai n'a besoin d'être spécifié pour que ce calcul ait lieu. Les résultats sont présentés comme suit :
 
 #### Stp# Volume Area Wk Wf Ev LSS
 
-A useful indicator of the nature of the response expected during yielding are the loading system stiffness ( _LSS_ ) and local energy release density ( _LERD_ ). At different locations in a model one can
+La rigidité du système de chargement ( _LSS_ ) et la densité locale de libération d'énergie ( _LERD_ ) sont de bons indicateurs de la nature de la réponse attendue pendant la plastification. En différents endroits d'un modèle, on peut
 
-expect these indicators to change owing to geometric effects. At locations where the _LSS_ is stiffer that the post peak response of the yielding rock, one can expect controlled failure that progresses in sequence with the advancing mining. However, at locations where the _LSS_ is softer that the post peak response of the yielding rock, one can expect uncontrolled failures. The amount of excess energy available can be expected to correlate with the magnitude of the event.
+s'attendre à ce que ces indicateurs varient en raison d'effets géométriques. Aux endroits où la _LSS_ est plus rigide que la réponse post-pic de la roche en plastification, on peut s'attendre à une rupture contrôlée qui progresse en suivant l'avancement de l'exploitation. En revanche, aux endroits où la _LSS_ est plus souple que la réponse post-pic de la roche en plastification, on peut s'attendre à des ruptures incontrôlées. La quantité d'énergie excédentaire disponible devrait être corrélée à la magnitude de l'événement.
 
-In order to determine the _LSS_ or _LERD_ in a numerical model it is necessary to flex the model and observe the loading system response. This is done by specification of the Material Code for the LERD/LSS calculation using
+Pour déterminer la _LSS_ ou la _LERD_ dans un modèle numérique, il faut fléchir le modèle et observer la réponse du système de chargement. Pour cela, on spécifie le code de matériau du calcul LERD/LSS à l'aide de
 
 #### CAD > Edit > Entity Properties > Matl Code LERD/LSS
 
-This special Material Code is used to temporarily alter the material properties or boundary conditions in the test area to cause the model to deform in some way.
+Ce code de matériau spécial sert à modifier temporairement les propriétés du matériau ou les conditions aux limites dans la zone d'essai afin de provoquer une certaine déformation du modèle.
 
-Since the _LSS_ is expected to change from one location to another, it is necessary do this at all locations of interest. By carefully monitoring the loading system response during this deformation, the _LSS_ and the various amounts of energy transferred can be calculated.
+Comme la _LSS_ devrait changer d'un endroit à l'autre, il faut procéder ainsi à tous les endroits d'intérêt. En surveillant attentivement la réponse du système de chargement pendant cette déformation, on peut calculer la _LSS_ et les différentes quantités d'énergie transférées.
 
-Consider the simple example of a fault plane passing through a mining zone, and ask the question "How would this fault respond if it were to yield?". One could simply substitute a lower friction angle and observe how the rock mass deformed. Let's call "Stage I" the model with the fault at its normal friction angle, and "Stage II" the same model but with the fault at some reduced friction angle. At some location on the fault plane we can expect the following type of response.
+Prenons l'exemple simple d'un plan de faille traversant une zone d'exploitation, et posons la question : « Comment cette faille réagirait-elle si elle se plastifiait ? ». On pourrait simplement substituer un angle de frottement plus faible et observer comment le massif rocheux se déforme. Appelons « Étape I » le modèle avec la faille à son angle de frottement normal, et « Étape II » le même modèle avec la faille à un angle de frottement réduit. En un point du plan de faille, on peut s'attendre au type de réponse suivant.
 
 ![Figure from page 495](/images/page-495-img-8.png)
 
-The _LSS_ is simply the slope of the load deformation response curve. The maximum amount of energy that can be released as kinetic energy is the area of the upper triangle labelled as Wk (one should expect this to correlate with observed event magnitude). The minimum amount of energy that can be dissipated in the frictional deformation of the fault is the area of the lower rectangle labelled as Wf (one should expect this to correlate with the amount of damage observed at the event source). This calculation must be conducted at all locations on the fault plane in order to get the total energy transferred as a result of the reduction in friction angle. Note that depending on how the material properties are set up there could be normal deformations (dilation occurring with the shear response) that this must be included in the energy calculations.
+La _LSS_ est simplement la pente de la courbe de réponse charge-déformation. La quantité maximale d'énergie pouvant être libérée sous forme d'énergie cinétique correspond à l'aire du triangle supérieur noté Wk (on s'attend à ce qu'elle soit corrélée à la magnitude de l'événement observé). La quantité minimale d'énergie pouvant être dissipée dans la déformation par frottement de la faille correspond à l'aire du rectangle inférieur noté Wf (on s'attend à ce qu'elle soit corrélée à l'ampleur des dommages observés à la source de l'événement). Ce calcul doit être effectué en tous les points du plan de faille afin d'obtenir l'énergie totale transférée à la suite de la réduction de l'angle de frottement. Notez que, selon la façon dont les propriétés du matériau sont définies, il peut y avoir des déformations normales (dilatance accompagnant la réponse en cisaillement) qui doivent être incluses dans les calculs d'énergie.
 
-The same calculations can be done for a pillar between two drifts. For this case let's call "Stage I" the model with the pillar intact. In order to flex the model we could substitute a different material into the pillar and call this "Stage II". All of the above calculations and interpretations for Wk and Wf can then be taken again. Note that as above, there will be contributions from both normal and shear components included in the energy calculations.
+Les mêmes calculs peuvent être effectués pour un pilier entre deux galeries. Dans ce cas, appelons « Étape I » le modèle avec le pilier intact. Pour fléchir le modèle, on pourrait substituer un matériau différent dans le pilier et appeler cela « Étape II ». Tous les calculs et interprétations de Wk et Wf ci-dessus peuvent alors être repris. Notez que, comme précédemment, les composantes normale et de cisaillement contribuent toutes deux aux calculs d'énergie.
 
-Since Map3D calculates the stresses acting on boundary elements, the total energy transfer can be calculated as the integral of the stresses through their deformations over all elements. In the case of the pillar example above, if we actually excavate the pillar to obtain stage II, then divide Wk by the volume of the pillar, we obtain the local energy release density ( _LERD_ ). This has been found to correlate very well with violent failure episodes. (Note that for the case of tabular mining, if you divide Wk by the area (in the plane of mining), you obtain the classical energy release rate, _ERR_ ).
+Comme Map3D calcule les contraintes agissant sur les éléments de frontière, le transfert d'énergie total peut être calculé comme l'intégrale des contraintes sur leurs déformations, sur l'ensemble des éléments. Dans l'exemple du pilier ci-dessus, si l'on excave réellement le pilier pour obtenir l'étape II, puis que l'on divise Wk par le volume du pilier, on obtient la densité locale de libération d'énergie ( _LERD_ ). Celle-ci s'est révélée très bien corrélée aux épisodes de rupture violente. (Notez que, dans le cas d'une exploitation tabulaire, si l'on divise Wk par l'aire (dans le plan d'exploitation), on obtient le taux classique de libération d'énergie, _ERR_ ).
 
-To reinforce this concept let's consider a real example. Consider multiple pillar bursts that occurred over several years of mining. For each failure, a numerical model was run to determine the stress state at the time and location of the failure. If we plot all of these stress predictions on a set of s **1** versus s **3** axes we obtain the following:
+Pour renforcer ce concept, considérons un exemple réel. Prenons plusieurs coups de terrain sur piliers survenus au cours de plusieurs années d'exploitation. Pour chaque rupture, un modèle numérique a été exécuté afin de déterminer l'état de contraintes au moment et à l'endroit de la rupture. Si l'on reporte toutes ces prédictions de contraintes sur un ensemble d'axes s **1** en fonction de s **3**, on obtient ce qui suit :
 
 ![Figure from page 496](/images/page-496-img-3.png)
 
-This figure illustrates that there is a strong correlation between the stress state at the time of each burst and a linear strength criterion. The coefficient of correlation of this data is 0.90. Stated in a different way, the mean error in prediction of s **1** is approximately 17 MPa. This gives a coefficient of variation of only 9%.
+Cette figure montre qu'il existe une forte corrélation entre l'état de contraintes au moment de chaque coup de terrain et un critère de résistance linéaire. Le coefficient de corrélation de ces données est de 0,90. Autrement dit, l'erreur moyenne de prédiction de s **1** est d'environ 17 MPa. Cela donne un coefficient de variation de seulement 9 %.
 
 ![Figure from page 496](/images/page-496-img-5.png)
 
-The _LERD_ at the time of the burst as each location also shows a strong correlation between the stress state at the time of each burst and a linear criterion. The coefficient of correlation of this data is 0.88.
+La _LERD_ au moment du coup de terrain, à chaque emplacement, montre également une forte corrélation entre l'état de contraintes au moment de chaque coup de terrain et un critère linéaire. Le coefficient de corrélation de ces données est de 0,88.
 
-Stated in a different way, the mean error in prediction of _LERD_ is approximately 0.045 MPa/mª. This gives a coefficient of variation of only 14%.
+Autrement dit, l'erreur moyenne de prédiction de la _LERD_ est d'environ 0,045 MPa/mª. Cela donne un coefficient de variation de seulement 14 %.
 
-While the Wk and Wf components are readily calculated in this way, the definition of _LSS_ is not so straightforward. However a representative _LSS_ can be determined as follows:
+Si les composantes Wk et Wf se calculent facilement de cette manière, la définition de la _LSS_ est moins directe. On peut toutefois déterminer une _LSS_ représentative comme suit :
 
-Identify a representative area for which the _LSS_ is to be determined. This is done by building a test block that should encompass the anticipated yield zone.
+Identifiez une zone représentative pour laquelle la _LSS_ doit être déterminée. Pour cela, construisez un bloc d'essai qui doit englober la zone de plastification prévue.
 
-You construct the test block as you would any other feature, but identify this block as a "test block" by specifying the desired Material Code for the LERD/LSS calculation using
+Vous construisez le bloc d'essai comme n'importe quel autre élément, mais vous l'identifiez comme « bloc d'essai » en spécifiant le code de matériau souhaité pour le calcul LERD/LSS à l'aide de
 
 #### CAD > Edit > Entity Properties > Matl Code LERD/LSS
 
-The Material Code for the Mining Steps should be set according to how you want this zone to be treated during the mining sequence. These blocks can be used as alternate material zones and excavated if desired.
+Le code de matériau des étapes d'exploitation doit être défini selon la façon dont vous souhaitez que cette zone soit traitée pendant la séquence d'exploitation. Ces blocs peuvent servir de zones de matériau alternatif et être excavés si vous le souhaitez.
 
-Assuming that this test block is filled with a fictitious material whose post-peak stiffness exactly matches the loading system response, and that the behaviour of the test block can be described by
+En supposant que ce bloc d'essai soit rempli d'un matériau fictif dont la rigidité post-pic correspond exactement à la réponse du système de chargement, et que le comportement du bloc d'essai puisse être décrit par
 
 s **1 =** **_LSS_** e **1** s **2 =** **_LSS_** e **2** s **3 =** **_LSS_** e **3**
 
-The energy density can be calculated as
+La densité d'énergie peut être calculée comme
 
 **½ (** s **1** e **1 +** s **2** e **2 +** s **3** e **3 )**
 
-The mean energy density can be estimated as
+La densité d'énergie moyenne peut être estimée comme
 
 **( Wk + Wf ) /** **_Volume_**
 
-Hence the loading system stiffness can determined from
+La rigidité du système de chargement peut donc être déterminée à partir de
 
 **_LSS_ = ½ (** s **1² +** s **2² +** s **3² )** **_Volume_ / ( Wk + Wf )**
 
-If we do this calculation for the data presented above we obtain the following plot.
+Si l'on effectue ce calcul pour les données présentées ci-dessus, on obtient le graphique suivant.
 
 ![Figure from page 497](/images/page-497-img-17.png)
 
-The _LSS_ at the time of the burst as each location shows a strong stress independent value. The mean error in prediction of _LSS_ is approximately 4730 MPa. This gives a coefficient of variation of only 7%.
+La _LSS_ au moment du coup de terrain, à chaque emplacement, présente une valeur nettement indépendante de la contrainte. L'erreur moyenne de prédiction de la _LSS_ est d'environ 4730 MPa. Cela donne un coefficient de variation de seulement 7 %.
 
-This _LSS_ calculation is only representative provided the stresses are uniformly distributed throughout the test block. In cases where this is not true, poor correlation with _LSS_ is found.
+Ce calcul de la _LSS_ n'est représentatif que si les contraintes sont réparties uniformément dans le bloc d'essai. Lorsque ce n'est pas le cas, la corrélation avec la _LSS_ est faible.
 
 #### Notes
 
-This function must be checked before conducting the discretization analysis
+Cette fonction doit être cochée avant de lancer l'analyse de discrétisation
 
 Analysis > Discretization

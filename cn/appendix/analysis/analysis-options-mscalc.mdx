@@ -2,121 +2,118 @@
 title: "分析 > 选项 > MSCALC"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间计算用户定义点处的结果。
 
-Calculate results at user defined points – during Map3D BEM analysis.
+分析结果可以在用户定义的坐标位置处计算。
 
-Analysis results can be calculated at user defined coordinate locations.
+选择 MSCALC 时，系统会提示您输入数据文件名和所需的输出格式，如下所示。
 
-When you select MSCALC, you will be prompted for a data file name and the desired output format as follows.
+#### 数据文件格式：
 
-#### Data file format:
+数据文件就是一个文本文件（*.txt），其中列出需要计算结果的坐标位置。
 
-The data file contains is simply a text file (*.txt) with a list of the coordinate locations where the results are to be calculated.
-
-The format of this file requires one set of coordinates per line
+该文件的格式要求每行一组坐标
 
 x1 y1 z1 x2 y2 z2 x3 y3 z3 x4 y4 z4 ...
 
-where x y z represent the coordinates of each point.
+其中 x y z 表示每个点的坐标。
 
-If desired, you can specify x y z dipub ddrub And in addition, you can also specify x y z dipub ddrub so phi
+如有需要，您可以指定 x y z dipub ddrub 此外，您还可以指定 x y z dipub ddrub so phi
 
-Here dipub ddrub represent respectively dip and direction of desired UB plane
+这里 dipub ddrub 分别表示所需 UB 平面的倾角和倾向
 
-- these would only be used if you are calculating some UB components such as su tu
+- 仅当您计算某些 UB 分量（如 su tu）时才会用到
 
-so and phi represent respectively the cohesion and friction angle
+so 和 phi 分别表示黏聚力和摩擦角
 
-- these would only be used if you are calculating some UB strength parameters such as sfu rcfu dsu ntu
+- 仅当您计算某些 UB 强度参数（如 sfu rcfu dsu ntu）时才会用到
 
-#### Output file format:
+#### 输出文件格式：
 
-Results are written back to the same data file with x y z coordinates followed by user specified parameters.
+结果将写回同一数据文件，其中 x y z 坐标之后是用户指定的参数。
 
 ![Figure from page 490](/images/page-490-img-10.png)
 
-#### Stresses:
+#### 应力：
 
-s1 ts1 ps1 major principal stress s1 its trend and plunge. s2 ts2 ps2 intermediate principal stress s2 its trend and plunge. s3 ts3 ps3 minor principal stress s3 its trend and plunge. user User defined value. sxx syy szz sxy syz sxz Cartesian stress components. tmax maximum shear stress tmax=½ ( s1 - s3 ) toct octahedral shear stress toct=¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]1/2 smean mean stress smean=¹/3 ( s1 + s2 + s3 ) ti tti pti maximum shear stress in the grid plane, its trend and plunge. si tsi psi normal stress in the grid plane, its trend and plunge. s1i ts1i ps1i maximum stress tangential to the grid plane, its trend and plunge. s3i ts3i ps3i minimum stress tangential to the grid plane, its trend and plunge. tu ttu ptu maximum shear stress in the ubiquitous-plane, its trend and plunge. su tsu psu stress normal to the ubiquitous plane, its trend and plunge. s1u ts1u ps1u maximum stress tangential to the ubiquitous plane, its trend and plunge. s3u ts3u ps3u minimum stress tangential to the ubiquitous plane, its trend and plunge. The orientation of the ubiquitous-plane is specified in
+s1 ts1 ps1 最大主应力 s1 及其走向和倾伏角。 s2 ts2 ps2 中间主应力 s2 及其走向和倾伏角。 s3 ts3 ps3 最小主应力 s3 及其走向和倾伏角。 user 用户定义值。 sxx syy szz sxy syz sxz 笛卡尔应力分量。 tmax 最大剪应力 tmax=½ ( s1 - s3 ) toct 八面体剪应力 toct=¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]1/2 smean 平均应力 smean=¹/3 ( s1 + s2 + s3 ) ti tti pti 网格平面内的最大剪应力及其走向和倾伏角。 si tsi psi 网格平面内的法向应力及其走向和倾伏角。 s1i ts1i ps1i 与网格平面相切的最大应力及其走向和倾伏角。 s3i ts3i ps3i 与网格平面相切的最小应力及其走向和倾伏角。 tu ttu ptu 遍布平面内的最大剪应力及其走向和倾伏角。 su tsu psu 垂直于遍布平面的应力及其走向和倾伏角。 s1u ts1u ps1u 与遍布平面相切的最大应力及其走向和倾伏角。 s3u ts3u ps3u 与遍布平面相切的最小应力及其走向和倾伏角。 遍布平面的方向在以下位置指定
 
-Plot > Strength Factors > Ubiquitous Parameters Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition. Absolute stress is the stress including the pre-mining stress contribution.
+Plot > Strength Factors > Ubiquitous Parameters Effective/Total 有效应力或总应力分量。这些选项仅用于 Map3D Thermal-Fluid Flow，因为该程序可以计算稳态孔隙压力分布。 Induced/Absolute 诱发应力是不含开采前应力贡献的应力，表示相对于开采前状态的应力变化。绝对应力是包含开采前应力贡献的应力。
 
-#### Strains:
+#### 应变：
 
-e1 te1 pe1 major principal strain e1 its trend and plunge. e2 te2 pe2 intermediate principal strain e2 its trend and plunge. e3 te3 pe3 minor principal strain e3 its trend and plunge. exx eyy ezz exy eyz exz Cartesian strain components. emax maximum shear strain emax=½ ( e1 - e3 ) eoct octahedral shear strain eoct=¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]1/2 evol volumetric strain evol=( e1 + e2 + e3 ) esi tesi pesi maximum shear strain in the grid plane, its trend and plunge. eni teni peni normal strain in the grid plane, its trend and plunge. e1i te1i pe1i maximum strain tangential to the grid plane, its trend and plunge. e3i te3i pe3i minimum strain tangential to the grid plane, its trend and plunge. esu tesu pesu maximum shear strain in the ubiquitous-plane, its trend and plunge. enu tenu penu strain normal to the ubiquitous plane, its trend and plunge. e1u te1u pe1u maximum strain tangential to the ubiquitous plane, its trend and plunge. e3u te3u pe3u minimum strain tangential to the ubiquitous plane, its trend and plunge. Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains. Induced/Absolute Induced strain is the strain without the pre-mining contribution. This represents the strain change since the pre-mining condition. Absolute strain is the strain including the pre-mining strain contribution.
+e1 te1 pe1 最大主应变 e1 及其走向和倾伏角。 e2 te2 pe2 中间主应变 e2 及其走向和倾伏角。 e3 te3 pe3 最小主应变 e3 及其走向和倾伏角。 exx eyy ezz exy eyz exz 笛卡尔应变分量。 emax 最大剪应变 emax=½ ( e1 - e3 ) eoct 八面体剪应变 eoct=¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]1/2 evol 体积应变 evol=( e1 + e2 + e3 ) esi tesi pesi 网格平面内的最大剪应变及其走向和倾伏角。 eni teni peni 网格平面内的法向应变及其走向和倾伏角。 e1i te1i pe1i 与网格平面相切的最大应变及其走向和倾伏角。 e3i te3i pe3i 与网格平面相切的最小应变及其走向和倾伏角。 esu tesu pesu 遍布平面内的最大剪应变及其走向和倾伏角。 enu tenu penu 垂直于遍布平面的应变及其走向和倾伏角。 e1u te1u pe1u 与遍布平面相切的最大应变及其走向和倾伏角。 e3u te3u pe3u 与遍布平面相切的最小应变及其走向和倾伏角。 Elastic/Plastic/Total 弹性、塑性或总应变分量。这些选项仅用于 Map3D Non-Linear，因为该程序可以计算非线性应变。 Induced/Absolute 诱发应变是不含开采前贡献的应变，表示相对于开采前状态的应变变化。绝对应变是包含开采前应变贡献的应变。
 
-#### Displacements:
+#### 位移：
 
-ut tut put total displacement, its trend and plunge. ux uy uz Cartesian displacement components. uni tuni puni displacement normal to the grid plane, its trend and plunge. umi tumi pumi maximum displacement tangential to the grid plane, its trend and plunge. unu tunu punu displacement normal to the ubiquitous plane, its trend and plunge. umu tumu pumu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+ut tut put 总位移及其走向和倾伏角。 ux uy uz 笛卡尔位移分量。 uni tuni puni 垂直于网格平面的位移及其走向和倾伏角。 umi tumi pumi 与网格平面相切的最大位移及其走向和倾伏角。 unu tunu punu 垂直于遍布平面的位移及其走向和倾伏角。 umu tumu pumu 与遍布平面相切的最大位移及其走向和倾伏角。
 
-#### Flow:
+#### 流动：
 
-t temperature/head.
+t 温度/水头。
 
-qt tqt pqt total flow, its trend and plunge. qx qy qz Cartesian flow components.
+qt tqt pqt 总流量及其走向和倾伏角。 qx qy qz 笛卡尔流量分量。
 
-qni tqni pqni displacement normal to the grid plane, its trend and plunge.
+qni tqni pqni 垂直于网格平面的位移及其走向和倾伏角。
 
-qmi tqmi pqmi maximum displacement tangential to the grid plane, its trend and plunge. qnu tqnu pqnu displacement normal to the ubiquitous plane, its trend and plunge. qmu tqmu pqmu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+qmi tqmi pqmi 与网格平面相切的最大位移及其走向和倾伏角。 qnu tqnu pqnu 垂直于遍布平面的位移及其走向和倾伏角。 qmu tqmu pqmu 与遍布平面相切的最大位移及其走向和倾伏角。
 
-#### Strength:
+#### 强度：
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 超限最大主应力 Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax 超限最大剪应力 Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct 超限八面体剪应力 Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 使用正态分布 N(Ds1 /std) 的概率
 
-- SF-A Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1
+- SF-A 强度/应力可确定为 ( _UCS_ + _q_ s3 )/ s1
 
-- SF-B Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+- SF-B 强度/应力可确定为 ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-- SF-C Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SF-C 强度/应力可确定为 [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip 超限面内剪应力 Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip 使用正态分布 N(Dtip /std) 的概率
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip 强度/应力可确定为 [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip 超限面内壁面应力 Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip 面内壁面应力的岩石状况系数 RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub 超限遍布平面剪应力 Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub 使用正态分布 N(Dtub /std) 的概率
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub 强度/应力可确定为 [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub 超限 ub 平面壁面应力 Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub ub 平面壁面应力的岩石状况系数 RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# 绘制 Dtub 值最大的 UB 组编号（1、2 或 3）
 
-#### Miscellaneous:
+#### 其他：
 
-matl# the number of the material within which the point is located. The host material is material number 1. In problems where multiple materials are used, results may be calculated in an alternate material zone.
+matl# 该点所在材料的编号。主体材料为材料编号 1。在使用多种材料的问题中，可以在替代材料区内计算结果。
 
-step# the mining step number.
+step# 开采步编号。
 
-ubd, ubt, ubn represent respectively the dip, dip direction and normal of the ubiquitous plane.
+ubd, ubt, ubn 分别表示遍布平面的倾角、倾向和法线。
 
-#### Other:
+#### 其他选项：
 
-Cartesian   configures for output of cartesian stress components. Principal   configures for output of principal stress components.
+Cartesian   配置为输出笛卡尔应力分量。 Principal   配置为输出主应力分量。
 
-#### Notes:
+#### 注意：
 
-This function must be checked before conducting the discretization analysis
+必须在进行离散化分析之前选中此功能
 
 Analysis > Discretization.
 
-Any desired number of points can be specified.
+可以指定任意数量的点。
 
-The model is discretized according to the locations of the specified points.
+模型将根据所指定点的位置进行离散化。

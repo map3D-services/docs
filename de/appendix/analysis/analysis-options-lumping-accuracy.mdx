@@ -2,19 +2,16 @@
 title: "Analyse > Optionen > Genauigkeit der Zusammenfassung"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Wenn diese Option aktiviert ist, ist das Zusammenfassen (Lumping) nur zwischen benachbarten Elementen zulässig, die dasselbe lokale Koordinatensystem teilen (d. h. parallele Normalen und parallele Seiten). Dies gewährleistet eine relativ gute Genauigkeit der zusammengefassten Zonen.
 
-When this option is checked, lumping will only be allowed between adjacent elements that share the same local coordinate system (i.e. parallel normals and parallel sides). This ensures relatively good accuracy of lumped zones.
+Wenn diese Option nicht aktiviert ist, ist das Zusammenfassen zwischen allen benachbarten Elementen unabhängig von ihrer Orientierung zulässig. Dieses Verfahren führt zu stärkerem Zusammenfassen und damit zu einer kleineren Koeffizientenmatrix, jedoch auf Kosten einer geringeren Genauigkeit der Ergebnisse.
 
-When this option is not checked, lumping will be allowed between all adjacent elements regardless of the orientation. This procedure will result in increased lumping and hence smaller coefficient matrix size, but at the expense of reduced accuracy of the results.
+Die Randelementmethode erzeugt eine vollständig besetzte Koeffizientenmatrix der Größe 4•n² Byte, wobei n die Anzahl der Freiheitsgrade ist. Selbst bei kleinen Problemen können Speicherplatzbedarf und Analysezeit recht groß werden (z. B. benötigen 20.000 Freiheitsgrade ohne Zusammenfassen 2 GByte Speicherplatz). Große Probleme lassen sich schnell nicht mehr praktikabel lösen (z. B. benötigen 200.000 Freiheitsgrade ohne Zusammenfassen 160 GByte Speicherplatz). Um dieses Problem zu überwinden, wird in Map3D ein Verfahren namens Matrix-Lumping durchgeführt. Damit wird die Größe der Koeffizientenmatrix typischerweise bei kleinen Problemen um den Faktor 10 und bei größeren Problemen um mehr als den Faktor 100 verringert.
 
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+Hinweise
 
-Notes
-
-This function must be checked before conducting the discretization analysis
+Diese Funktion muss vor der Durchführung der Diskretisierungsanalyse aktiviert werden
 
 #### Analysis > Discretization
 
-Refer to Analysis > Options > Lumping for information on lumping.
+Informationen zum Zusammenfassen (Lumping) finden Sie unter Analysis > Options > Lumping.

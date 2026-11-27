@@ -2,36 +2,33 @@
 title: "Map3D Fault-Slip"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+**Map3D Fault-Slip** - 弹性岩体与完全塑性断层滑移应力分析。
 
-**Map3D Fault-Slip** - elastic rock mass and fully plastic fault-slip stress analysis.
+该模块用于对三维模型进行应力分析，适用于土木、地质和采矿项目。
 
-This module is used for conducting stress analysis of 3D models. This software is used for civil, geological and mining projects.
+包含三维 CAD 建模器（Map3D Modeller）、结果查看器（Map3D Results Viewer）和 GIS 可视化数据库。
 
-Includes the 3D CAD modeller (Map3D Modeller), results viewer (Map3D Results Viewer) and the GIS visual database.
+应力分析采用 BEM（边界元法），具有多项特性：
 
-The stress analysis utilizes the BEM (boundary element method) and has many features:
+- 超大问题规模。Map3D 可对含有数千个开挖体的模型（超过一百万个自由度）进行应力分析。这样可以详细表示几何形状，无需简化大型模型（过度简化是建模误差的主要来源）。可轻松模拟全矿范围的模型。
 
-- Very large problem sizes. Map3D can conduct stress analysis on models with thousands of excavations (over one million degrees of freedom). This allows for detailed representation of the geometry and eliminates the need to simplify large models (over simplification is a primary source of error in modelling). Mine widemodels can by readily simulated.
+- 完整的三维复杂开挖形状。可轻松分析竣工详细模型和复杂的三维形状。由于应力分析基于边界元法（BEM），只需指定开挖体（及其他特征）的表面，无需定义（划分单元）相邻开挖体之间的矿柱。任意形状都可轻松组合成一个待分析的大型模型。
 
-- Full 3D complex excavation shapes. As-built detailed models and complex 3D shapes can readily be analyzed. Since the stress analysis is based on the boundary element method (BEM), only the surfaces of the excavations (and other features) needs to be specified. There is no need for definition (subdivision into elements) of the pillars between adjacent excavations. Any arbitrary shapes are readily combined into a single large model ready for analysis.
+- 具有不同模量的多个弹性区（刚性岩脉或软矿石）。Map3D 完全支持引入不同的材料区，便于考虑刚性或软弱岩石类型。
 
-- Multiple elastic zones with different moduli (stiff dykes or soft ore). Map3D is fully capable of incorporating alternate material zones. This makes consideration of stiff or soft rock types easy to consider.
+- 具有不同采前应力状态的区域。
 
-- Zones with different pre-mining stress states.
+- 带屈服矿柱的板状开采。这种近似通常适用于大型窄脉矿山。
 
-- Tabular mining with yielding pillars. This approximation is often appropriate for large narrow vein mines.
+- 以弹-黏-塑性方式滑移和膨胀（包括蠕变）的离散非平面断层面。这些特征采用位移不连续法实现。程序采用弹-黏-塑性流动法则，以适应多种不同类型的行为。可轻松进行采矿和地震模拟的断层滑移分析。
 
-- Discrete non-planar fault planes that slip and dilate elasto-visco-plastically (including creep). These features are implemented using the displacement discontinuity method. Elasto-visco-plastic flow rules are implemented to accommodate a variety of different types of behaviour. Fault slip analysis for both mining as well as earthquake simulation is readily accommodated.
+- 可模拟裂纹和裂隙，包括能量释放率和应力强度计算。裂隙扩展可模拟为一系列离散步骤。
 
-- Cracks and fractures can be simulated including energy release rate and stress intensity calculations. Fracture propagation can be simulated as a series of discrete steps.
+- 考虑充填体放置或裂纹扩展等影响需要多个采矿步。Map3D 目前支持 40 步。可在任意阶段将各种材料替换到开挖体或裂隙中。
 
-- Multiple mining steps are required to consider effects such as backfill placement or crack propagation. Map3D currently allows for 40 steps. Various materials can be substituted into excavations or fractures at any stage.
+- 自动布尔相交功能允许开挖体、断层和裂隙相互交叉和重叠。没有这一功能，对于复杂模型，几乎无法对相交特征进行建模。Map3D 可轻松处理这些情况。
 
-- Automatic Boolean intersections allows for excavations, faults and fractures to cross and overlap. Without this capability, modelling of intersecting features would be practically impossible for complex models. Map3D handles these situations with ease.
-
-- Automated discretization. Models can be manually discretized if desired, or this can be left to the automated routines built into the program. These routines ensure that elements are concentrated only where needed providing consistently high accuracy while optimizing for analysis time.
+- 自动离散。模型可根据需要手动离散，也可交由程序内置的自动化例程完成。这些例程确保仅在需要之处加密单元，在优化分析时间的同时始终保持高精度。
 
 ![Figure from page 590](/images/page-590-img-1.png)
 
@@ -43,6 +40,6 @@ The stress analysis utilizes the BEM (boundary element method) and has many feat
 
 ![Figure from page 591](/images/page-591-img-2.png)
 
-A demonstration version of Map3D Fault-Slip is available at no charge. All features are available except the user is only permitted to run small size problems. This version is extremely useful for teaching the fundamentals of modelling, visualization and 3D CAD.
+Map3D Fault-Slip 提供免费演示版。除只允许运行小规模问题外，所有功能均可使用。该版本非常适合用于教学建模、可视化和三维 CAD 的基础知识。
 
-Map3Di Integrated Seismicity
+Map3Di 集成地震活动性

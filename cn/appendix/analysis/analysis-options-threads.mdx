@@ -2,21 +2,18 @@
 title: "分析 > 选项 > 线程"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+显示处于活动状态的内核/线程数。
 
-Displays the number of cores/threads active.
+借助多处理器/多驱动器选项，Map3D 完全支持并行处理和并行磁盘 I/O。
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+如果您已获得使用多处理器/多驱动器选项的许可，Map3D 将在所有可用处理器之间并行分配并执行所有分析过程。
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D will conduct all analysis procedures in parallel distributed among all available processors.
+**CPU：** 近年的 CPU 已有双核、四核和六核版本。Map3D V58 现已支持并行处理，可实现更快的计算速度。这使矩阵组装和网格组装时间缩短了 6 倍以上。多 CPU 计算机的速度会更快。
 
-**CPU:** Recent CPU's are now available as dual, quad and hex cores. Map3D V58 now supports parallel processing which allows faster computational rates. This results in more than 6x reduction in matrix assembly and grid assembly times. Multi-CPU computers would go even faster.
+下面的并行处理基准测试清楚地表明，您可以预期双核 CPU 的性能提高两倍以上，
 
-The following parallel processing benchmark clearly shows that you can expect dual cores CPU's to perform more than twice as fast,
-
-quad cores to perform more than 4 times as fast and hex-cores to perform more than 6 times faster. In hyper-threading enabled CPUs, 2 computational threads are superimposed on the same core. This is the reason why Map3D-MP actually achieves performance better than the theoretical maximum.
+四核提高 4 倍以上，六核提高 6 倍以上。在启用超线程的 CPU 中，同一内核上叠加 2 个计算线程。这就是 Map3D-MP 实际取得的性能优于理论最大值的原因。
 
 ![Figure from page 487](/images/page-487-img-1.png)
 
-In order to achieve these performance gains it is necessary to improve both the processing power and/or disk I/O rate Analysis > Options > Drive #.
+要获得这些性能提升，需要同时提高处理能力和/或磁盘 I/O 速率 Analysis > Options > Drive #.

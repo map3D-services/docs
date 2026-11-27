@@ -2,106 +2,103 @@
 title: "Materiales > Mohr-Coulomb en bloques FF 3D"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
-
-Mohr-Coulomb material can be used to describe non-linear response in 3D FF blocks in Map3D NonLinear. It can also be used as a failure criterion for elastic analyzes in Map3D Fault-Slip.
+El material Mohr-Coulomb se puede usar para describir la respuesta no lineal en bloques FF 3D en Map3D NonLinear. También se puede usar como criterio de falla para análisis elásticos en Map3D Fault-Slip.
 
 ![Figure from page 542](/images/page-542-img-4.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name - especifica un nombre descriptivo para el material.
 
-Material # - specifies the material number.
+Material # - especifica el número del material.
 
-- Material #1 is reserved for the host material.
+- El material n.º 1 está reservado para el material huésped.
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill, softened materials etc.
+- Los demás números de material se usan para definir zonas de materiales alternativos, como mineral, relleno de falla, relleno, materiales ablandados, etc.
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Equilibrated-Gouge, Yielding-Pillar, Hyperbolic-Backfill, Quadratic-Backfill, Softened-Material or none).
+Material Type - especifica el tipo de material (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Equilibrated-Gouge, Yielding-Pillar, Hyperbolic-Backfill, Quadratic-Backfill, Softened-Material o ninguno).
 
-- Mohr-Coulomb - defines the failure envelope as a straight line.
+- Mohr-Coulomb - define la envolvente de falla como una línea recta.
 
-- For 3D FF blocks the Mohr-Coulomb criterion defines strength in terms of principal stresses as follows:
+- Para bloques FF 3D, el criterio de Mohr-Coulomb define la resistencia en función de los esfuerzos principales de la siguiente manera:
 
-#### Mohr-Coulomb in 3D FF blocks
+#### Mohr-Coulomb en bloques FF 3D
 
 ![Figure from page 543](/images/page-543-img-2.png)
 
-- Tension cutoff and _UCS_ - are specified in units of stress (MPa or psi).
+- Tension cutoff y _UCS_ - se especifican en unidades de esfuerzo (MPa o psi).
 
-- Friction angle and dilation angle are specified in degrees.
+- El ángulo de fricción y el ángulo de dilatación se especifican en grados.
 
-- Cohesion is related to _UCS_ and friction angle by the relationship _UCS_ =2 _Coh_ tan(45+j/2). If Cohesion is specified then _UCS_ is determined from this relation.
+- La cohesión se relaciona con _UCS_ y el ángulo de fricción mediante la relación _UCS_ =2 _Coh_ tan(45+j/2). Si se especifica la cohesión, _UCS_ se determina a partir de esta relación.
 
-- Peak values of these parameters are used up until failure. After yielding, the residual values are used to provide a strain softening response.
+- Los valores pico de estos parámetros se usan hasta la falla. Después de la fluencia, se usan los valores residuales para obtener una respuesta de ablandamiento por deformación.
 
-- Residual values are ignored in elastic analyzes.
+- Los valores residuales se ignoran en los análisis elásticos.
 
-Young's Modulus and Poisson's Ratio - specify Young's (rock mass scale - deformation) Modulus in units of stress (MPa or psi).
+Young's Modulus y Poisson's Ratio - especifique el módulo de Young (a escala de macizo rocoso - deformación) en unidades de esfuerzo (MPa o psi).
 
-- Peak values of these parameters are used up until failure.
+- Los valores pico de estos parámetros se usan hasta la falla.
 
-- After yielding, the residual values are used. Residual values are ignored in elastic analyzes.
+- Después de la fluencia, se usan los valores residuales. Los valores residuales se ignoran en los análisis elásticos.
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation - especifique la desviación estándar en unidades de esfuerzo (MPa o psi).
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- Este parámetro describe la incertidumbre que se tiene sobre los parámetros de resistencia.
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > Rockmass Probability N-distribution.
+- Este parámetro solo se usa para graficar la probabilidad de falla por corte Plot > Strength Factors > Rockmass Probability N-distribution.
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip). For 3D FF blocks only _Gs_ is used.
+Viscous Modulus ( _Gn_ y _Gs_ ) - Estos parámetros se usan solo en análisis no lineales (bloques FF 3D en Map3D Non-Linear y planos DD en Map3D Fault-Slip). Para bloques FF 3D solo se usa _Gs_ .
 
-- The viscous modulus describes the creep response. where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ .
+- El módulo viscoso describe la respuesta de fluencia lenta, donde la resistencia a la fluencia lenta se determina como el coeficiente de fluencia lenta _C_ multiplicado por la tasa de deformación plástica. Observe que se deben seleccionar tanto el coeficiente de fluencia lenta _C_ como el tamaño del paso de tiempo D _t_ , y luego especificar el cociente de ambos como el módulo viscoso _G_ .
 
-- Specify the viscous modulus in units of stress (MPa or psi).
+- Especifique el módulo viscoso en unidades de esfuerzo (MPa o psi).
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow.
+Expansion Coefficient y Conductivity solo se usan en Map3D Thermal-Fluid Flow.
 
-- Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+- Map3D Thermal-Fluid Flow se puede usar para resolver simultáneamente el flujo de calor/fluidos en estado estacionario acoplado al análisis de esfuerzos.
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only - cuando está activada, este material responderá solo de forma elástica; es decir, no se usarán los parámetros de resistencia.
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- Esto se puede usar para definir zonas con distintas propiedades elásticas y/o estados de esfuerzo iniciales. Por ejemplo, diques rígidos, zonas de mineral blando, relleno o elementos de sostenimiento.
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic - cuando está activada, este material responderá de forma elasto-visco-plástica; es decir, los parámetros de resistencia se usarán como regla de flujo.
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- Esto se puede usar para definir zonas con distintas propiedades elásticas y parámetros de resistencia.
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- Observe que en Map3D Fault-Slip solo los elementos DD (es decir, la relleno de falla) pueden responder de forma no lineal.
 
-- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+- En Map3D Non-Linear, el macizo rocoso 3D también puede ceder plásticamente.
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive - cuando está activada, este material no se usará en el análisis de esfuerzos y, por lo tanto, no afectará los esfuerzos, las deformaciones ni los desplazamientos predichos.
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Esto se puede usar para definir zonas con distintos parámetros de resistencia que se usarán al generar contornos de factores de resistencia.
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined - permite especificar parámetros definidos por el usuario para usarlos en los contornos.
 
-- Different parameters are defined for each material number.
+- Se definen parámetros distintos para cada número de material.
 
    - Plot > Stress > User
 
-- These parameters are used with
+- Estos parámetros se usan con
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Esto se puede usar para definir zonas con distintos parámetros de resistencia que se usarán al generar contornos de factores de resistencia.
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File - permite volcar todos los datos de propiedades de los materiales a un archivo para verlos en el Bloc de notas o en Excel.
 
-Copy from material - allows you to copy the material properties from one material number to another. All properties including the stress state are copied.
+Copy from material - permite copiar las propiedades del material de un número de material a otro. Se copian todas las propiedades, incluido el estado de esfuerzos.
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State - especifica el estado de esfuerzos inicial (en campo lejano) del material.
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- La mayoría de los materiales se insertan en bloques con el mismo estado de esfuerzos (en campo lejano).
 
-- Materials such as props or backfill are placed at near zero initial stresses.
+- Los materiales como puntales o relleno se colocan con esfuerzos iniciales casi nulos.
 
-In elastic analysis the principal stresses are normally used with the Mohr-Coulomb or Hoek-Brown strength criterion to estimate the amount of damage due to over-stressing. One can expect that more excess stress in an elastic analysis would in general correlate with increased amounts of plastic strain in a non-linear analysis. Since none of the parameters have any orientation sensitivity, this criterion is representative for homogeneous rock mass stability.
+En el análisis elástico, los esfuerzos principales se usan normalmente con el criterio de resistencia de Mohr-Coulomb o de Hoek-Brown para estimar la cantidad de daño por sobreesfuerzo. Cabe esperar que un mayor esfuerzo en exceso en un análisis elástico se correlacione, en general, con mayores cantidades de deformación plástica en un análisis no lineal. Como ninguno de los parámetros es sensible a la orientación, este criterio es representativo de la estabilidad de un macizo rocoso homogéneo.
 
-#### Mohr-Coulomb in 3D FF blocks
+#### Mohr-Coulomb en bloques FF 3D
 
 ![Figure from page 544](/images/page-544-img-21.png)
 
-Over-stressing can be presented in several ways including:
+El sobreesfuerzo se puede presentar de varias formas, entre ellas:
 
 Plot > Strength Factors > dS1 - Excess Stress
 
@@ -111,47 +108,47 @@ Plot > Strength Factor > SF-A - Strength/Stress Plot > Strength Factor > SF-B - 
 
 Plot > Strength Factors > SF-C - Strength/Stress
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used (in this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium). Hence for non-linear analysis one normally directly considers the plastic strain or the plastic strain rate predicted by the model as an indicator of damage.
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia lenta (en este último caso, la fluencia lenta viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático). Por lo tanto, en el análisis no lineal normalmente se considera directamente la deformación plástica o la tasa de deformación plástica predicha por el modelo como indicador de daño.
 
-In 3D FF blocks, the elastic strains are determined from the stresses by
+En bloques FF 3D, las deformaciones elásticas se determinan a partir de los esfuerzos mediante
 
 sxx   = sxxf  + [ (1-n) exxelastic + n ( eyyelastic + ezzelastic ) ] _E_ / [ (1+n) (1-2n) ] syy  = syyf + [ (1-n) eyyelastic + n ( ezzelastic + exxelastic  ) ] _E_ / [ (1+n) (1-2n) ] szz   = szzf  + [ (1-n) ezzelastic  + n ( exxelastic + eyyelastic ) ] _E_ / [ (1+n) (1-2n) ] txy  = txyf +  exyelastic _E_ / (1+n) tyz  = tyzf  +  eyzelastic _E_ / (1+n) txz  = txzf  +  exzelastic _E_ / (1+n)
 
-where _E_ and n represent respectively Young's (rock mass scale - deformation) modulus and Poisson's ratio, and sf and tf represent the initial (pre-mining) stress state
+donde _E_ y n representan, respectivamente, el módulo de Young (a escala de macizo rocoso - deformación) y la relación de Poisson, y sf y tf representan el estado de esfuerzos inicial (previo a la explotación)
 
-In Map3D Non-Linear, if the stress goes above the strength, the plastic strain can be determined by limiting the stress
+En Map3D Non-Linear, si el esfuerzo supera la resistencia, la deformación plástica se puede determinar limitando el esfuerzo
 
-where
+donde
 
 s1 - s1° - _C_ De1plastic /D _t_ = _UCS_ + _q_ ( s3 - s3° - _C_ De3plastic /D _t_ ) s1°  = [ (1-n) e1plastic + n ( e2plastic + e3plastic ) ] _E_ / [ (1+n) (1-2n) ] s2°  = [ (1-n) e2plastic + n ( e3plastic + e1plastic ) ] _E_ / [ (1+n) (1-2n) ] s3°  = [ (1-n) e3plastic + n ( e1plastic + e2plastic ) ] _E_ / [ (1+n) (1-2n) ]
 
-The accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+La deformación plástica acumulada eplastic se determina como la suma de los incrementos de fluencia plástica Deplastic de todos los pasos de fluencia.
 
-If the stress goes below the tension cutoff, the plastic strain can be determined by limiting the stress
+Si el esfuerzo cae por debajo del límite de tracción (tension cutoff), la deformación plástica se puede determinar limitando el esfuerzo
 
 s3 - s3° - _C_ De3plastic /D _t_ = _To_
 
-The plastic volumetric strain can also have a dilation component
+La deformación volumétrica plástica también puede tener una componente de dilatación
 
 evolume = ( e1plastic + e2plastic + e3plastic ) = tan( _dilation angle_ ) e1plastic
 
-The total strain is equal to the sum of the elastic and plastic parts.
+La deformación total es igual a la suma de las partes elástica y plástica.
 
-The creep response is simulated using a linear (Bingham) creep model.
+La respuesta de fluencia lenta se simula con un modelo de fluencia lineal (de Bingham).
 
 ![Figure from page 546](/images/page-546-img-1.png)
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance
+En cada paso de fluencia, el estado de esfuerzos en todos los elementos en fluencia (elementos donde el esfuerzo supera la resistencia) se calcula como la resistencia más la resistencia a la fluencia lenta
 
 s = _Strength_ + _C_ Deplastic /D _t_
 
 _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The creep resistance can be used simply as a technique for damping the non-linear deformations or for real time dependent creep simulation
+donde la resistencia a la fluencia lenta se determina como el coeficiente de fluencia lenta _C_ multiplicado por la tasa de deformación plástica. Observe que se deben seleccionar tanto el coeficiente de fluencia lenta _C_ como el tamaño del paso de tiempo D _t_ , y luego especificar el cociente de ambos como el módulo viscoso _G_ . La resistencia a la fluencia lenta se puede usar simplemente como técnica para amortiguar las deformaciones no lineales o para una simulación real de fluencia lenta dependiente del tiempo
 
 #### Analysis > Options > Creep
 
-The strains can be presented in several ways including:
+Las deformaciones se pueden presentar de varias formas, entre ellas:
 
 Plot > Strain > Value > Elastic
 
@@ -165,8 +162,8 @@ Plot > Strain > Emax - Maximum shear strain
 
 Plot > Strain > Evolume - Volumetric shear strain
 
-Related Topics:
+Temas relacionados:
 
-Hoek-Brown in 3D FF blocks
+Hoek-Brown en bloques FF 3D
 
-Drucker-Prager in 3D FF blocks
+Drucker-Prager en bloques FF 3D

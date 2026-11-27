@@ -2,73 +2,70 @@
 title: "材料 > 软化材料"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+软化材料可用于模拟地层屈服及由此产生的应力重分布效应。尽管塑性建模无疑是实现这一目的的最佳方法，但材料软化同样可用于模拟地层屈服、应力重分布以及对周边区域可能产生的影响。这种方法的优点是，工程师可以快速、轻松地研究非线性行为。
 
-Softened materials can be used to simulate ground yielding and the resulting stress redistribution effects. Although plasticity modelling is undoubtedly the best method of doing this, material softening can also be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate nonlinear behaviour quickly and easily.
+软化背后的理论在 **Elastic softening to simulate plastic yielding.pdf** 中有详细说明。以下为简要概述。
 
-The theory behind softening is explained in detail in **Elastic softening to simulate plastic yielding.pdf** . Following is a brief summary.
-
-In numerical modelling, de-stressing of an elastic rock mass is accomplished by allowing plastic strains. These strains act to dissipate the excess stress indicated by the elastic response. An alternative method to induce plastic deformations is shown in the figure below. Here, the stress-strain modulus is progressively reduced in magnitude. It can be observed that although technically this reduces the stiffness of the elastic stress-strain response, this can be interpreted as being equivalent to increments (De<sup>p</sup> ) of plastic strain.
+在数值建模中，弹性岩体的卸压是通过允许塑性应变来实现的。这些应变用于耗散弹性响应所显示的多余应力。下图所示为另一种引发塑性变形的方法：逐步降低应力-应变模量的大小。可以看到，虽然从技术上讲这会降低弹性应力-应变响应的刚度，但这可解释为等同于塑性应变增量（De<sup>p</sup> ）。
 
 ![Figure from page 569](/images/page-569-img-1.png)
 
-Rock failure is generally understood to be the result of shear failure and can be simulated with shear modulus reduction: whereas volume changes are associated with dilation or compaction depending on the stress conditions and nature of the rock itself. Shear modulus reduction can be used to reduce the stress differential (s1-s3), and bulk modulus reduction can be used to control the volumetric strain
+岩石破坏通常被理解为剪切破坏的结果，可通过降低剪切模量来模拟；而体积变化则与剪胀或压实相关，具体取决于应力条件和岩石本身的性质。降低剪切模量可用于减小应力差（s1-s3），降低体积模量可用于控制体积应变
 
-(evolume=e1+e2+e3). This allows independent control of the shear failure process and dilational response. Whether softening is automated or done manually, care must obviously be taken to de-stress by a realistic amount to ensure that the final stress state in the affected pillars satisfies a well calibrated strength criterion.
+（evolume=e1+e2+e3）。这样可以独立控制剪切破坏过程和剪胀响应。无论软化是自动完成还是手动完成，显然都必须注意使卸压量符合实际，以确保受影响矿柱的最终应力状态满足经过良好标定的强度准则。
 
-The non-softened bulk modulus **_B_** and the shear modulus **_G_** can be determined from Young's modulus **_E_** and Poisson's ration as follows:
+未软化的体积模量 **_B_** 和剪切模量 **_G_** 可根据杨氏模量 **_E_** 和泊松比按下式确定：
 
 **_B = E/3/(1-2_** n **_) G = E/2/(1+_** n **_)_**
 
-The softened bulk modulus **_Bs_** and softened shear modulus **_Gs_** are determined using the Volume Softening parameter **_b_** , and Shear Softening parameter **_g_** ,  in the table below such that
+软化后的体积模量 **_Bs_** 和软化后的剪切模量 **_Gs_** 由下表中的体积软化参数 **_b_** 和剪切软化参数 **_g_** 确定，即
 
 **_Bs = B×b Gs = G×g_**
 
 ![Figure from page 570](/images/page-570-img-1.png)
 
-For example, shear softening with **_g=1_** represents no softening, whereas shear softening with **_g=0.5_** represents a reduction in the shear modulus of 50%...
+例如，**_g=1_** 的剪切软化表示不软化，而 **_g=0.5_** 的剪切软化表示剪切模量降低 50%...
 
-To demonstrate the simplicity of the softening procedure, an example of an overstressed tunnel with side wall yielding. Note that the objective of this example is not to duplicate results from plastic modelling, nor should one expect to be able to do so. However, this will demonstrate side wall softening, de-stressing, stress transfer and yielding. Here it is desired to demonstrate that with softening:
+为了说明软化过程的简便性，下面给出一个侧壁屈服的超应力巷道示例。请注意，该示例的目的不是复现塑性建模的结果，也不应期望能够做到这一点。不过，它将演示侧壁软化、卸压、应力转移和屈服。这里希望说明，通过软化：
 
-- stresses can be dissipated to surrounding abutments,
+- 应力可以耗散到周围的拱座，
 
-- larger strains and displacements associated with plasticity can be generated.
+- 可以产生与塑性相关的更大应变和位移。
 
-#### Plastic Model Results
+#### 塑性模型结果
 
-Consider a 1 m radius circular tunnel with 30 MPa homogeneous pre-mining stresses. A MohrCoulomb failure criterion has been used throughout with a UCS of 11.9 MPa, friction angle of 30°, Young’s modulus of 6780 MPa and Poisson’s ratio of 0.21 This model has been analysed using Map3D Visco-Plastic. Elastic/perfectly plastic behaviour has been used with dilation rate set to zero. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+考虑一条半径为 1 m 的圆形巷道，采前均匀应力为 30 MPa。全程采用 MohrCoulomb 破坏准则，UCS 为 11.9 MPa，摩擦角为 30°，杨氏模量为 6780 MPa，泊松比为 0.21。该模型使用 Map3D Visco-Plastic 进行了分析。采用弹性/理想塑性行为，剪胀率设为零。下图左侧显示最大主应力，右侧显示位移。
 
 ![Figure from page 571](/images/page-571-img-1.png)
 
 ![Figure from page 571](/images/page-571-img-2.png)
 
-These Map3D Visco-Plastic model results closely match the closed form analytic solution for the plastic stresses and displacement. For reference, the elastic analytic solution is also shown.
+这些 Map3D Visco-Plastic 模型结果与塑性应力和位移的闭合解析解非常吻合。作为参考，图中还给出了弹性解析解。
 
 ![Figure from page 571](/images/page-571-img-4.png)
 
 ![Figure from page 571](/images/page-571-img-5.png)
 
-#### Softened Model Results
+#### 软化模型结果
 
-In order to model the above with softening, a zone around the side walls of the tunnel has been softened as shown below where the drive is shown in blue and softened zone is shown in purple. This softened zone has been chosen to be the same size as the plastic zone determined above (1.74 m radius).
+为了用软化来模拟上述情形，对巷道侧壁周围的一个区域进行了软化，如下图所示，其中巷道为蓝色，软化区为紫色。该软化区选取的大小与上面确定的塑性区相同（半径 1.74 m）。
 
 ![Figure from page 571](/images/page-571-img-8.png)
 
-In this case it is desired to demonstrate that plastic closure can be emulated with a simple softened model.
+这里希望说明，塑性闭合可以用简单的软化模型来模拟。
 
-Herein, the elastic shear modulus was softened by a factor of **_g=0.2_** , while the bulk modulus was held constant. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+此处，弹性剪切模量按系数 **_g=0.2_** 软化，而体积模量保持不变。下图左侧显示最大主应力，右侧显示位移。
 
 ![Figure from page 572](/images/page-572-img-1.png)
 
 ![Figure from page 572](/images/page-572-img-2.png)
 
-The softened results show an excellent match for both the plastic minor principal stress and displacement. Note that while the actual softened major principal stress values do not match the plastic results in the yield zone in detail, on average they are about the correct magnitude. Also the stress has been redistributed to the elastic “abutment” quite accurately showing nearly the exact amount of stress concentration expected.
+软化结果与塑性的最小主应力和位移均吻合得很好。请注意，虽然屈服区内软化后的最大主应力实际值与塑性结果在细节上并不吻合，但平均而言量级大致正确。此外，应力已相当准确地重分布到弹性“拱座”，所显示的应力集中程度几乎与预期完全一致。
 
 ![Figure from page 572](/images/page-572-img-4.png)
 
 ![Figure from page 572](/images/page-572-img-5.png)
 
-While the results for softening do not match the plastic analysis results perfectly, they have obviously simulated yielding of the side wall material and driven the elastic results much closer to those from the plastic model. It would appear that material softening can be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate non-linear behaviour quickly and easily when compared to plastic modelling. Softened models require very little increased analysis time compared to simple elastic models.
+虽然软化的结果与塑性分析结果并不完全吻合，但显然已经模拟了侧壁材料的屈服，并使弹性结果更接近塑性模型的结果。看来材料软化可用于模拟地层屈服、应力重分布以及对周边区域可能产生的影响。与塑性建模相比，这种方法的优点是工程师可以快速、轻松地研究非线性行为。与简单的弹性模型相比，软化模型所需的分析时间几乎没有增加。
 
-A more detailed description and examples are provided in **Elastic softening to simulate plastic yielding.pdf** .
+更详细的说明和示例见 **Elastic softening to simulate plastic yielding.pdf** 。

@@ -2,37 +2,34 @@
 title: "材料 > 膨胀系数与传导率"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+Map3D Thermal-Fluid Flow 可同时求解与应力分析耦合的稳态热/流体流动。程序的设置使用户只需指定温度/水头边界条件，随后即可同步求解耦合的热/流体流动应力问题。该功能适用于模拟加热或冷却效应以及土体的排水或不排水响应。
 
-Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
-
-The steady state thermal/fluid flow problem is solved according to Laplace's equation in threedimensions. This is directly coupled to the stress analysis through an expansion coefficient A, where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+稳态热/流体流动问题按三维拉普拉斯方程求解。该问题通过膨胀系数 A 与应力分析直接耦合，其中温度变化或流体压力变化（相对于背景值）会引起初始应力
 
 s° = _A_ D _T_
 
-The stresses can be presented either without or with the initial stresses s°.
+应力可显示为不含或含初始应力 s° 的形式。
 
 Plot > Stress > Value > Seff Effective Stress
 
 Plot > Stress > Value > Stotal Total Stress
 
-For fluid flow problems the expansion coefficient should be set to unity (positive one) for saturated media
+对于流体流动问题，饱和介质的膨胀系数应设为 1（正一）
 
 _A_ = 1
 
-For thermal problems the expansion coefficient should be specified as a negative quantity given by
+对于热问题，膨胀系数应指定为负值，由下式给出
 
 _A_ = -a _E_ /(1-2n)
 
-where a, _E_ and n represent the coefficient of thermal expansion (i.e. the linear expansivity), Young's (rock mass scale - deformation) modulus and Poisson's ratio.
+其中 a、_E_ 和 n 分别表示热膨胀系数（即线膨胀系数）、杨氏模量（岩体尺度的变形模量）和泊松比。
 
-It is also necessary to specify the conductivity _C_ . This parameter relates the gradient to the flux _q_ x such that
+还需要指定热导率 _C_ 。该参数将梯度与通量 _q_ x 联系起来，即
 
 _q_ x = - _C_ ¶ _T_ /¶ _x_
 
-The recommended units for _C_ are J/(m s 8C).
+_C_ 的推荐单位为 J/(m s 8C)。
 
-The various flow parameters can be plotted using
+各种流动参数可通过以下功能绘制
 
 Plot > Flow

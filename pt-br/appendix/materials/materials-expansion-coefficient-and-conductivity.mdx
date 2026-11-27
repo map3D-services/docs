@@ -2,37 +2,34 @@
 title: "Materiais > Coeficiente de expansão e condutividade"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+O Map3D Thermal-Fluid Flow pode ser usado para resolver simultaneamente o fluxo de calor/fluido em regime permanente acoplado à análise de tensões. O programa é configurado de modo que o usuário precise especificar apenas as condições de contorno de temperatura/carga hidráulica; o problema acoplado de tensões com fluxo térmico/de fluido é então resolvido simultaneamente. Este recurso é útil para simular efeitos de aquecimento ou resfriamento e a resposta drenada ou não drenada de solos.
 
-Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
-
-The steady state thermal/fluid flow problem is solved according to Laplace's equation in threedimensions. This is directly coupled to the stress analysis through an expansion coefficient A, where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+O problema de fluxo térmico/de fluido em regime permanente é resolvido segundo a equação de Laplace em três dimensões. Ele é acoplado diretamente à análise de tensões por meio de um coeficiente de expansão A, em que a variação de temperatura ou a variação de pressão de fluido (em relação ao valor de fundo) induz as tensões iniciais
 
 s° = _A_ D _T_
 
-The stresses can be presented either without or with the initial stresses s°.
+As tensões podem ser apresentadas sem ou com as tensões iniciais s°.
 
-Plot > Stress > Value > Seff Effective Stress
+Plot > Stress > Value > Seff Tensão efetiva
 
-Plot > Stress > Value > Stotal Total Stress
+Plot > Stress > Value > Stotal Tensão total
 
-For fluid flow problems the expansion coefficient should be set to unity (positive one) for saturated media
+Para problemas de fluxo de fluido, o coeficiente de expansão deve ser definido como unitário (um positivo) para meios saturados
 
 _A_ = 1
 
-For thermal problems the expansion coefficient should be specified as a negative quantity given by
+Para problemas térmicos, o coeficiente de expansão deve ser especificado como uma grandeza negativa, dada por
 
 _A_ = -a _E_ /(1-2n)
 
-where a, _E_ and n represent the coefficient of thermal expansion (i.e. the linear expansivity), Young's (rock mass scale - deformation) modulus and Poisson's ratio.
+onde a, _E_ e n representam o coeficiente de expansão térmica (isto é, a expansividade linear), o módulo de Young (escala do maciço rochoso - deformação) e o coeficiente de Poisson.
 
-It is also necessary to specify the conductivity _C_ . This parameter relates the gradient to the flux _q_ x such that
+Também é necessário especificar a condutividade _C_ . Este parâmetro relaciona o gradiente ao fluxo _q_ x de modo que
 
 _q_ x = - _C_ ¶ _T_ /¶ _x_
 
-The recommended units for _C_ are J/(m s 8C).
+As unidades recomendadas para _C_ são J/(m s 8C).
 
-The various flow parameters can be plotted using
+Os diversos parâmetros de fluxo podem ser plotados com
 
 Plot > Flow

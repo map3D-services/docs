@@ -2,23 +2,20 @@
 title: "Análise > Opções > Reparo automático"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Tenta reparar o modelo preenchendo lacunas, excluindo duplicatas etc. – durante o carregamento do arquivo.
 
-Attempts to repair you model by filling gaps, deleting duplicates etc.- during file load.
+Pré-processamento do modelo para detectar erros comuns de construção, incluindo:
 
-Model pre-processing to detect common model building errors including:
+- detecção e preenchimento automático de lacunas simples, como superfícies ausentes - destacadas em **preto** .
 
-- detection and automatic filling of simple gaps such as missing surfaces - highlighted in **black** .
+- detecção e exclusão automática de blocos duplicados - destacados em **verde** .
 
-- detection and automatic deletion of duplicate blocks - highlighted in **green** .
+- detecção de lacunas estreitas entre blocos adjacentes - destacadas em **azul** . O aviso é gerado sempre que a lacuna é menor que 1/1000 da largura do elemento.
 
-- detection of narrow gaps between adjacent blocks - highlighted in **blue** . The warning is generated when ever the gap is less than 1/1000 of the element width.
+- detecção de arestas que se ligam de forma incorreta a outras arestas - destacadas em **branco** .
 
-- detection of edges that link the wrong way to other edges - highlighted in **white** .
+- detecção de arestas que não se ligam a nenhuma outra aresta - destacadas em vermelho .
 
-- detection of edges that do not link to any other edges - highlighted in red .
+- detecção de arestas que se ligam a arestas demais - destacadas em amarelo .
 
-- detection of edges that link to too many other edges - highlighted in yellow .
-
-The above model problems will not necessarily stop Map3D from running properly, but close scrutiny of these locations will help user's debug problems and find unintended construction errors.
+Os problemas de modelo acima não impedem necessariamente o Map3D de funcionar corretamente, mas um exame atento desses locais ajuda o usuário a depurar problemas e a encontrar erros de construção não intencionais.

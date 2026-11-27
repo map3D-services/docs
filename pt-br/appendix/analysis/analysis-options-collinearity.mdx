@@ -2,19 +2,16 @@
 title: "Análise > Opções > Colinearidade"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Une pontos de coordenadas próximos entre si – durante o carregamento do arquivo.
 
-Merge coordinate points that are close to one another – during file load.
+Pontos de coordenadas muito próximos entre si são unidos. Pontos de coordenadas muito próximos de uma aresta de uma superfície são movidos para essa aresta. Por padrão, o Map3D move esses pontos se eles estiverem dentro de um raio de busca de 1/1000 do comprimento da aresta em relação à superfície.
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+Se desejado, o usuário pode definir um raio de busca inserindo um valor na caixa de dados. Outros pacotes CAD podem não ligar os cantos das superfícies entre si. Este recurso é útil para eliminar pequenas lacunas e sobreposições entre superfícies e blocos adjacentes. Deve-se ter extrema cautela ao especificar um valor diferente de zero para este parâmetro, pois valores grandes podem causar mais problemas do que resolver, ao unir pontos demais.
 
-If desired, the user can define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Notas
 
-Notes
-
-This function must be checked before loading the model file
+Esta função deve ser marcada antes de carregar o arquivo de modelo
 
 #### Analysis > Load Model.
 
-It is recommended that you check this option. However caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+Recomenda-se marcar esta opção. No entanto, deve-se ter cautela se um raio de busca diferente de zero for especificado, pois um valor muito grande pode causar a união indesejada de pontos de coordenadas, destruindo a integridade do modelo.

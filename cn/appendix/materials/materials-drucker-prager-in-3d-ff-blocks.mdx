@@ -2,32 +2,29 @@
 title: "材料 > 3D FF 块体中的 Drucker-Prager"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
-Hoek-Brown material can only be used as a failure criterion for elastic analyzes in Map3D Fault-Slip.
+Hoek-Brown 材料只能在 Map3D Fault-Slip 的弹性分析中用作破坏准则。
 
 ![Figure from page 549](/images/page-549-img-15.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name - 指定材料的描述性名称。
 
-Material # - specifies the material number.
+Material # - 指定材料编号。
 
-- Material #1 is reserved for the host material.
+- 材料 #1 保留给基岩（宿主）材料。
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+- 其他材料编号用于定义替代材料区，例如矿石、断层泥、充填体等。
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+Material Type - 指定材料类型（Mohr-Coulomb、Hoek-Brown、Drucker-Prager、Fault-Gouge、Hyperbolic-Backfill、Quadratic-Backfill、Equilibrated-Gouge、Yielding-Pillar 或 none）。
 
-- Drucker-Prager - defines the failure envelope as a straight line.
+- Drucker-Prager - 将破坏包络线定义为一条直线。
 
-- For 3D FF blocks the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+- 对于 3D FF 块体，Drucker-Prager 准则用主应力定义强度，如下所示：
 
-**Drucker-Prager in 3D FF blocks**
+**3D FF 块体中的 Drucker-Prager**
 
 ![Figure from page 550](/images/page-550-img-6.png)
 
-where
+其中
 
 toct  = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]½
 
@@ -35,72 +32,72 @@ sm = ¹/3 ( s1 + s2 + s3 )
 
 _q_ = tan²(45+½ j)
 
-- Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+- 请注意，强度参数的选取使该准则在 s2 等于 s3 时简化为 Mohr-Coulomb 准则。
 
-- Tension cutoff and _UCS_ - are specified in units of stress (MPa or psi).
+- Tension cutoff 和 _UCS_ 以应力单位（MPa 或 psi）指定。
 
-- Friction angle and dilation angle are specified in degrees.
+- 摩擦角和剪胀角以度为单位指定。
 
-- Cohesion is not used for 3D FF blocks.
+- 3D FF 块体不使用黏聚力。
 
-- Only the peak values are used.
+- 仅使用峰值。
 
-Young's Modulus and Poisson's Ratio - specify Young's (rock mass scale - deformation) Modulus in units of stress (MPa or psi).
+Young's Modulus 和 Poisson's Ratio - 以应力单位（MPa 或 psi）指定杨氏模量（岩体尺度的变形模量）。
 
-- Only the peak values are used.
+- 仅使用峰值。
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation - 以应力单位（MPa 或 psi）指定标准差。
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- 该参数描述强度参数的不确定性。
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > Rockmass Probability N-distribution.
+- 该参数仅用于绘制剪切破坏概率 Plot > Strength Factors > Rockmass Probability N-distribution。
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are not used for the Drucker-Prager material.
+Viscous Modulus（ _Gn_ 和 _Gs_ ）- Drucker-Prager 材料不使用这些参数。
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow. Map3D Thermal- Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+Expansion Coefficient 和 Conductivity 仅用于 Map3D Thermal-Fluid Flow。Map3D Thermal- Fluid Flow 可同时求解与应力分析耦合的稳态热/流体流动。
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only - 勾选后，该材料仅发生弹性响应，即不使用强度参数。
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- 可用于定义具有不同弹性属性和/或初始应力状态的区域，例如刚性岩脉、软矿石区、充填体或支护单元。
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic - 勾选后，该材料发生弹-黏-塑性响应，即强度参数用作流动法则。
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- 可用于定义同时具有不同弹性属性和强度参数的区域。
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- 请注意，在 Map3D Fault-Slip 中，仅允许 DD 单元（即断层泥）发生非线性响应。
 
-- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+- 在 Map3D Non-Linear 中，三维岩体也可发生塑性屈服。
 
-- Yielding of Drucker-Prager materials is not supported at this time.
+- 目前不支持 Drucker-Prager 材料的屈服。
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive - 勾选后，该材料不用于应力分析，因此不会影响预测的应力、应变或位移。
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- 可用于定义具有不同强度参数的区域，用于生成强度因子等值线。
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined - 允许指定用于绘制等值线的用户定义参数。
 
-- Different parameters are defined for each material number.
+- 每个材料编号定义不同的参数。
 
       - Plot > Stress > User
 
-   - These parameters are used with
+   - 这些参数与以下功能配合使用
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- 可用于定义具有不同强度参数的区域，用于生成强度因子等值线。
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File - 可将所有材料属性数据转储到文件中，以便在记事本或 Excel 中查看。
 
-Copy from material - allows you to copy the material properties from one material number to another.
+Copy from material - 可将材料属性从一个材料编号复制到另一个。
 
-- All properties including the stress state are copied.
+- 复制所有属性，包括应力状态。
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State - 指定该材料的初始（远场）应力状态。
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- 大多数材料插入到具有相同（远场）应力状态的块体中。
 
-- Materials such as props or backfill are placed at near zero initial stresses.
+- 支柱或充填体等材料放置时的初始应力接近于零。
 
-Related Topics:
+相关主题：
 
-Mohr_Coulomb in 3D FF blocks
+3D FF 块体中的 Mohr_Coulomb
 
-Hoek-Brown in 3D FF blocks
+3D FF 块体中的 Hoek-Brown

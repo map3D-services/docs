@@ -2,35 +2,32 @@
 title: "文件 > PNT 构造线文件格式"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+PNT 格式是一种通用的 ASCII 数据文件，扩展名为 ".PNT"。
 
-PNT format is a universal ASCII data file with the extension ".PNT".
+该格式适用于与其他 CAD 软件交换原始模型数据。
 
-This format is useful for exchanging raw model data with other CAD software.
+注释行必须以星号 "*" 开头，且位于第 1 列。
 
-Comment lines must start with an asterisk "*" in column 1.
-
-Construction lines are stored as a series of polylines as follows:
+构造线按如下方式存储为一系列折线：
 
 **x1 y1 z1 3 colour x2 y1 z1 2 x3 y3 z3 2 x4 y4 z4 2**
 
-xi yi zi represent the coordinates of each point. 3 indicates that this point is the beginning of a new line. 2 indicates that this point is a continuation of the same line. colour specifies the colour number that will be used to display the construction line.
+xi yi zi 表示各点的坐标。3 表示该点是新线的起点。2 表示该点是同一条线的延续。colour 指定用于显示构造线的颜色编号。
 
-A total of 10 colours are available for display.
+共有 10 种显示颜色。
 
-These are numbered respectively 1 through 10, 11 through 20, 21 through 30, etc., such that the same colour is displayed for number 1, 11, 21, 31..., 2, 22, 32..., etc.
+它们依次编号为 1 至 10、11 至 20、21 至 30 等，因此编号 1、11、21、31……，2、22、32……等显示相同的颜色。
 
-Any number of points can be specified for each polyline.
+每条折线可指定任意数量的点。
 
-Additional polylines are specified by repeating the sequence (i.e. starting a new line with the number 3).
+重复该序列（即以数字 3 开始新的一行）即可指定更多折线。
 
-Notes
+注意
 
-Different colour numbers should be used to represent logical groupings of construction lines (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable using
+应使用不同的颜色编号来表示构造线的逻辑分组（例如不同的水平、剖面，或开拓、采场回采等逻辑开采单元）。这些颜色可通过以下命令自定义
 
 #### Tools > Custom Colours.
 
-Since it is easy to toggle on and off the display of specific construction line colour numbers, this provides an efficient method to work with complex construction line data
+由于可以方便地开关特定构造线颜色编号的显示，因此这为处理复杂的构造线数据提供了一种高效的方法
 
 #### View > Hide Cline Colours.

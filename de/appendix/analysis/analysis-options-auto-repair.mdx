@@ -2,23 +2,20 @@
 title: "Analyse > Optionen > Automatische Reparatur"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Versucht, Ihr Modell zu reparieren, indem Lücken gefüllt, Duplikate gelöscht werden usw. – beim Laden der Datei.
 
-Attempts to repair you model by filling gaps, deleting duplicates etc.- during file load.
+Modellvorverarbeitung zur Erkennung häufiger Modellierungsfehler, darunter:
 
-Model pre-processing to detect common model building errors including:
+- Erkennung und automatisches Füllen einfacher Lücken, etwa fehlender Oberflächen – schwarz hervorgehoben (**black**).
 
-- detection and automatic filling of simple gaps such as missing surfaces - highlighted in **black** .
+- Erkennung und automatisches Löschen doppelter Blöcke – grün hervorgehoben (**green**).
 
-- detection and automatic deletion of duplicate blocks - highlighted in **green** .
+- Erkennung schmaler Spalten zwischen benachbarten Blöcken – blau hervorgehoben (**blue**). Die Warnung wird erzeugt, wenn der Spalt kleiner als 1/1000 der Elementbreite ist.
 
-- detection of narrow gaps between adjacent blocks - highlighted in **blue** . The warning is generated when ever the gap is less than 1/1000 of the element width.
+- Erkennung von Kanten, die falsch mit anderen Kanten verknüpft sind – weiß hervorgehoben (**white**).
 
-- detection of edges that link the wrong way to other edges - highlighted in **white** .
+- Erkennung von Kanten, die mit keiner anderen Kante verknüpft sind – rot hervorgehoben (red).
 
-- detection of edges that do not link to any other edges - highlighted in red .
+- Erkennung von Kanten, die mit zu vielen anderen Kanten verknüpft sind – gelb hervorgehoben (yellow).
 
-- detection of edges that link to too many other edges - highlighted in yellow .
-
-The above model problems will not necessarily stop Map3D from running properly, but close scrutiny of these locations will help user's debug problems and find unintended construction errors.
+Die oben genannten Modellprobleme verhindern nicht zwangsläufig, dass Map3D korrekt läuft. Eine genaue Prüfung dieser Stellen hilft Benutzern jedoch beim Debuggen und beim Auffinden unbeabsichtigter Konstruktionsfehler.

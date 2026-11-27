@@ -2,59 +2,56 @@
 title: "CAD > Bearbeiten > Objekte"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Bearbeitet den Namen und den maximalen Abstand des Rasters.
 
-Edit grid name and maximum spacing.
-
-When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Beim Start dieser Routine werden Sie zunächst aufgefordert, eine Liste der Objekte zu erstellen, die Sie bearbeiten möchten
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- Wenn Tools > Shift-key Selection aktiviert ist, müssen Sie für Mehrfachauswahlen die Umschalttaste gedrückt halten.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- Die Verwendung dieser Symbolleiste ist ausführlich beschrieben unter Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Durch Drücken der Leertaste wird automatisch die zuletzt verwendete Bearbeitungsfunktion aktiviert.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Sobald Sie die gewünschten Objekte ausgewählt haben, können Sie eine der Bearbeitungsschaltflächen wählen:
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
+CAD > Edit > Entity Properties Bearbeitet Blocktyp, Farbe, Abbaufolge, CAD > Edit > Erase Entities Löscht ausgewählte Objekte, CAD > Edit > Move Entities Verschiebt ausgewählte Objekte, CAD > Edit > Copy Entities Kopiert ausgewählte Objekte, CAD > Edit > Scale Entities Skaliert ausgewählte Objekte, CAD > Edit > Rotate Azimuth Dreht den Azimut ausgewählter Objekte, CAD > Edit > Rotate Dip Dreht das Einfallen ausgewählter Objekte, CAD > Edit > Dump to File Schreibt ausgewählte Objekte in eine Datei, CAD > Edit > Group Fasst ausgewählte Objekte zu einem einzelnen Block zusammen,
 
-- double click on any vertex to execute the highlighted function,
+- Doppelklicken Sie auf einen beliebigen Eckpunkt, um die hervorgehobene Funktion auszuführen,
 
-- right click for a list of options.
+- klicken Sie mit der rechten Maustaste, um eine Liste mit Optionen anzuzeigen.
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+Wenn ein Feld im Dialogfeld "Variable" anzeigt, haben einige der ausgewählten Blöcke für dieses Feld unterschiedliche Eigenschaften. Wenn Sie diese Eigenschaften unverändert lassen möchten (d. h. für jeden Block unterschiedlich), belassen Sie das Feld auf "Variable". Wenn Sie den Wert dieses Felds für alle ausgewählten Blöcke ändern möchten, geben Sie den gewünschten Wert ein.
 
 ![Figure from page 513](/images/page-513-img-14.png)
 
-Name - specifies a descriptive name for the grid.
+Name - legt einen beschreibenden Namen für das Raster fest.
 
-Grid Type - specifies whether you want the grid to be active (used in the stress analysis) or inactive (not used in the stress analysis).
+Grid Type - legt fest, ob das Raster aktiv (in der Spannungsanalyse verwendet) oder inaktiv (in der Spannungsanalyse nicht verwendet) sein soll.
 
-Maximum Spacing - specifies the maximum spacing permitted.
+Maximum Spacing - legt den maximal zulässigen Abstand fest.
 
-- This parameter can be used to force fine uniform discretization on selected grids. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Dieser Parameter kann verwendet werden, um eine feine, gleichmäßige Diskretisierung auf ausgewählten Rastern zu erzwingen. Beim Festlegen dieses Werts ist äußerste Vorsicht geboten, da ein kleiner Wert leicht zu einer enormen Problemgröße führen kann.
 
-- In general this parameter should be left blank (i.e. not used), and discretization should be left to the _AG_ parameter. This latter parameter will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- Im Allgemeinen sollte dieser Parameter leer bleiben (d. h. nicht verwendet werden), und die Diskretisierung sollte dem Parameter _AG_ überlassen bleiben. Dieser setzt Elemente nur dort dicht, wo Analyseergebnisse angefordert werden, wodurch die Elemente optimal genutzt und die Problemgröße minimiert werden.
 
 CAD > Properties Control Parameters.
 
-- If this field is left blank this parameter is not used.
+- Bleibt dieses Feld leer, wird der Parameter nicht verwendet.
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - schließt die Bearbeitung der Blöcke ab und übernimmt alle geänderten Eigenschaften.
 
-Cancel - aborts editing of entities.
+Cancel - bricht die Bearbeitung der Objekte ab.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Nach Abschluss eines Bearbeitungsvorgangs haben Sie eine Möglichkeit, die Änderungen rückgängig zu machen, indem Sie
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+auswählen. Sie können auch dieselbe Auswahl wiederherstellen und dieselben Objekte erneut bearbeiten, indem Sie
 
 Redo
 
-You can adjust the double click time using
+auswählen. Die Doppelklickzeit lässt sich einstellen mit
 
 Tools > Double Click Time

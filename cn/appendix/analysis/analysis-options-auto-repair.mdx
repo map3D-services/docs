@@ -2,23 +2,20 @@
 title: "分析 > 选项 > 自动修复"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在文件加载期间尝试修复模型，例如填补间隙、删除重复项等。
 
-Attempts to repair you model by filling gaps, deleting duplicates etc.- during file load.
+模型预处理可检测常见的建模错误，包括：
 
-Model pre-processing to detect common model building errors including:
+- 检测并自动填补简单间隙，例如缺失的表面，以**黑色**高亮显示。
 
-- detection and automatic filling of simple gaps such as missing surfaces - highlighted in **black** .
+- 检测并自动删除重复的块体，以**绿色**高亮显示。
 
-- detection and automatic deletion of duplicate blocks - highlighted in **green** .
+- 检测相邻块体之间的窄间隙，以**蓝色**高亮显示。每当间隙小于单元宽度的 1/1000 时，就会生成警告。
 
-- detection of narrow gaps between adjacent blocks - highlighted in **blue** . The warning is generated when ever the gap is less than 1/1000 of the element width.
+- 检测与其他边的连接方向错误的边，以**白色**高亮显示。
 
-- detection of edges that link the wrong way to other edges - highlighted in **white** .
+- 检测未与任何其他边连接的边，以红色高亮显示。
 
-- detection of edges that do not link to any other edges - highlighted in red .
+- 检测与过多其他边连接的边，以黄色高亮显示。
 
-- detection of edges that link to too many other edges - highlighted in yellow .
-
-The above model problems will not necessarily stop Map3D from running properly, but close scrutiny of these locations will help user's debug problems and find unintended construction errors.
+上述模型问题不一定会阻止 Map3D 正常运行，但仔细检查这些位置有助于用户调试问题，并找出无意中产生的构建错误。

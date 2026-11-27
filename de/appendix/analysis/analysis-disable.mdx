@@ -2,41 +2,38 @@
 title: "Analyse > Deaktivieren"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Deaktiviert Randelemente, deren Oberflächenspannungsfehler ( _Serr_ ) größer ist als das Zehnfache des quadratischen Mittelwerts ( _Rms_ ) über alle Elemente.
 
-Disables boundary elements that have a surface stress error ( _Serr_ ) greater than ten times the root mean square value ( _Rms_ ) for all elements.
-
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance _STOL_
+Bei der Matrixlösung versucht Map3D, die in der Koeffizientenmatrix gespeicherten simultanen Gleichungen sowie alle weiteren Gleichungen, die die abweichenden Materialzonen, den Störungsschlupf, das Kriechen usw. beschreiben, schrittweise zu lösen. Eine konvergierte Lösung gilt als erreicht, wenn der maximale Oberflächenspannungsfehler und der maximale Fehler des Bruchkriteriums unter die vom Benutzer vorgegebene Spannungstoleranz _STOL_ fallen
 
 Analysis > CParams > STOL
 
-In some problems, certain elements will not converge to a solution due to excessively poor numerical conditioning. If the user is satisfied the current level of accuracy, a solution can for forced by checking this option.
+Bei manchen Problemen konvergieren einzelne Elemente wegen einer extrem schlechten numerischen Konditionierung nicht zu einer Lösung. Ist die aktuelle Genauigkeit für den Benutzer akzeptabel, kann durch Aktivieren dieser Option eine Lösung erzwungen werden.
 
-This function instructs Map3D to disable any elements with values of _Serr_ > 10 _Rm_ s. A few iterations after executing this function, additional elements may appear with the same problem requiring this function to executed again. After a few times all elements will be disabled and the solution can proceed to convergence.
+Diese Funktion weist Map3D an, alle Elemente mit Werten von _Serr_ > 10 _Rm_ s zu deaktivieren. Einige Iterationen nach Ausführung dieser Funktion können weitere Elemente mit demselben Problem auftreten, sodass die Funktion erneut ausgeführt werden muss. Nach einigen Wiederholungen sind alle betroffenen Elemente deaktiviert, und die Lösung kann bis zur Konvergenz fortgesetzt werden.
 
-Extreme caution should be exercised when using this function as the results will contain numerical errors which could be significant.
+Bei der Verwendung dieser Funktion ist äußerste Vorsicht geboten, da die Ergebnisse numerische Fehler enthalten, die erheblich sein können.
 
-Notes:
+Hinweise:
 
-The distribution of surface stress error can be displayed by selecting
+Die Verteilung des Oberflächenspannungsfehlers kann in der Symbolleiste Solve über
 
 Plot > Surface Components > Serr Stress Error
 
-from the solve toolbar.
+angezeigt werden.
 
-The distribution of failure criterion error can be displayed by selecting
+Die Verteilung des Fehlers des Bruchkriteriums kann in der Symbolleiste Solve über
 
 Plot > Surface Components > Ferr Failure Error
 
-from the solve toolbar.
+angezeigt werden.
 
-During analysis, the solve toolbar will be displayed when you suspend the analysis
+Während der Analyse wird die Symbolleiste Solve beim Unterbrechen der Analyse
 
 Analysis > Suspend
 
-only if the
+nur angezeigt, wenn
 
 #### Tools > Solve Toolbar
 
-has been checked.
+aktiviert wurde.

@@ -2,59 +2,56 @@
 title: "CAO > Modifier > Entités"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Modifie le nom de la grille et l'espacement maximal.
 
-Edit grid name and maximum spacing.
-
-When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Lorsque vous lancez cette routine, vous êtes d'abord invité à créer la liste des entités à modifier
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- Si Tools > Shift-key Selection est coché, vous devez maintenir la touche Shift enfoncée pour effectuer des sélections multiples.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- L'utilisation de cette barre d'outils est détaillée dans Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Appuyer sur la barre d'espace active automatiquement la dernière fonction de modification utilisée.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Une fois les entités souhaitées sélectionnées, vous pouvez choisir l'un des boutons de modification :
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
+CAD > Edit > Entity Properties Modifie le type de bloc, la couleur, la séquence d'exploitation, CAD > Edit > Erase Entities Efface les entités sélectionnées, CAD > Edit > Move Entities Déplace les entités sélectionnées, CAD > Edit > Copy Entities Copie les entités sélectionnées, CAD > Edit > Scale Entities Met à l'échelle les entités sélectionnées, CAD > Edit > Rotate Azimuth Fait pivoter l'azimut des entités sélectionnées, CAD > Edit > Rotate Dip Fait pivoter le pendage des entités sélectionnées, CAD > Edit > Dump to File Exporte les entités sélectionnées dans un fichier, CAD > Edit > Group Regroupe les entités sélectionnées en un seul bloc,
 
-- double click on any vertex to execute the highlighted function,
+- double-cliquez sur un sommet pour exécuter la fonction en surbrillance,
 
-- right click for a list of options.
+- cliquez avec le bouton droit pour afficher une liste d'options.
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+Si l'un des champs de la boîte de dialogue indique « Variable », c'est que certains des blocs sélectionnés ont des propriétés différentes pour ce champ. Pour conserver ces propriétés telles quelles (c'est-à-dire différentes pour chaque bloc), laissez le champ sur « Variable ». Pour modifier la valeur de ce champ pour tous les blocs sélectionnés, saisissez la valeur souhaitée.
 
 ![Figure from page 513](/images/page-513-img-14.png)
 
-Name - specifies a descriptive name for the grid.
+Name - spécifie un nom descriptif pour la grille.
 
-Grid Type - specifies whether you want the grid to be active (used in the stress analysis) or inactive (not used in the stress analysis).
+Grid Type - indique si la grille doit être active (utilisée dans l'analyse des contraintes) ou inactive (non utilisée dans l'analyse des contraintes).
 
-Maximum Spacing - specifies the maximum spacing permitted.
+Maximum Spacing - spécifie l'espacement maximal autorisé.
 
-- This parameter can be used to force fine uniform discretization on selected grids. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Ce paramètre permet d'imposer une discrétisation fine et uniforme sur les grilles sélectionnées. Faites preuve d'une très grande prudence en spécifiant cette valeur, car une petite valeur peut facilement conduire à un problème de taille énorme.
 
-- In general this parameter should be left blank (i.e. not used), and discretization should be left to the _AG_ parameter. This latter parameter will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- En général, laissez ce paramètre vide (c'est-à-dire non utilisé) et laissez la discrétisation au paramètre _AG_. Ce dernier paramètre concentre les éléments uniquement là où des résultats d'analyse sont demandés, ce qui optimise l'utilisation des éléments et réduit la taille du problème.
 
 CAD > Properties Control Parameters.
 
-- If this field is left blank this parameter is not used.
+- Si ce champ est laissé vide, ce paramètre n'est pas utilisé.
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - termine la modification des blocs et applique les propriétés qui ont été modifiées.
 
-Cancel - aborts editing of entities.
+Cancel - interrompt la modification des entités.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Une fois toute opération de modification terminée, vous avez une seule possibilité d'annuler les modifications en sélectionnant
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+Vous pouvez aussi restaurer le même ensemble de sélection et modifier à nouveau le même ensemble d'entités en sélectionnant
 
 Redo
 
-You can adjust the double click time using
+Vous pouvez ajuster le délai du double-clic avec
 
 Tools > Double Click Time

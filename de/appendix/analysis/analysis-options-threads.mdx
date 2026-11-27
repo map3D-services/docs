@@ -2,21 +2,18 @@
 title: "Analyse > Optionen > Threads"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Zeigt die Anzahl der aktiven Kerne/Threads an.
 
-Displays the number of cores/threads active.
+Map3D unterstützt die parallele Verarbeitung und paralleles Festplatten-E/A mit der Multiprozessor-/Multilaufwerk-Option vollständig.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Wenn Sie zur Nutzung der Multiprozessor-/Multilaufwerk-Option lizenziert sind, führt Map3D alle Analyseverfahren parallel verteilt auf alle verfügbaren Prozessoren aus.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D will conduct all analysis procedures in parallel distributed among all available processors.
+**CPU:** Aktuelle CPUs sind inzwischen als Dual-, Quad- und Hexa-Core-Modelle erhältlich. Map3D V58 unterstützt nun die parallele Verarbeitung, die höhere Rechengeschwindigkeiten ermöglicht. Dadurch verkürzen sich die Zeiten für den Matrixaufbau und den Rasteraufbau um mehr als das Sechsfache. Computer mit mehreren CPUs wären noch schneller.
 
-**CPU:** Recent CPU's are now available as dual, quad and hex cores. Map3D V58 now supports parallel processing which allows faster computational rates. This results in more than 6x reduction in matrix assembly and grid assembly times. Multi-CPU computers would go even faster.
+Der folgende Benchmark zur parallelen Verarbeitung zeigt deutlich, dass Sie bei Dual-Core-CPUs mehr als die doppelte Geschwindigkeit,
 
-The following parallel processing benchmark clearly shows that you can expect dual cores CPU's to perform more than twice as fast,
-
-quad cores to perform more than 4 times as fast and hex-cores to perform more than 6 times faster. In hyper-threading enabled CPUs, 2 computational threads are superimposed on the same core. This is the reason why Map3D-MP actually achieves performance better than the theoretical maximum.
+bei Quad-Core-CPUs mehr als die vierfache Geschwindigkeit und bei Hexa-Core-CPUs mehr als die sechsfache Geschwindigkeit erwarten können. Bei CPUs mit aktiviertem Hyper-Threading werden 2 Rechen-Threads auf demselben Kern überlagert. Deshalb erreicht Map3D-MP tatsächlich eine bessere Leistung als das theoretische Maximum.
 
 ![Figure from page 487](/images/page-487-img-1.png)
 
-In order to achieve these performance gains it is necessary to improve both the processing power and/or disk I/O rate Analysis > Options > Drive #.
+Um diese Leistungsgewinne zu erzielen, müssen die Rechenleistung und/oder die Festplatten-E/A-Rate verbessert werden Analysis > Options > Drive #.

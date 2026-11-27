@@ -2,19 +2,16 @@
 title: "分析 > 选项 > 集总精度"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+选中此选项时，仅允许在共用同一局部坐标系的相邻单元之间进行集总（即法线平行且边平行）。这可确保集总区域具有相对较好的精度。
 
-When this option is checked, lumping will only be allowed between adjacent elements that share the same local coordinate system (i.e. parallel normals and parallel sides). This ensures relatively good accuracy of lumped zones.
+未选中此选项时，无论方向如何，所有相邻单元之间均允许进行集总。此过程会带来更多的集总，从而减小系数矩阵的规模，但代价是结果精度降低。
 
-When this option is not checked, lumping will be allowed between all adjacent elements regardless of the orientation. This procedure will result in increased lumping and hence smaller coefficient matrix size, but at the expense of reduced accuracy of the results.
+边界元法会生成一个完全填充的系数矩阵，其大小为 4•n² 字节，其中 n 为自由度数。即使对于小型问题，磁盘空间需求和分析时间也可能变得相当大（例如，20,000 个自由度在不集总的情况下需要 2 GB 磁盘空间）。大型问题很快就变得难以求解（例如，200,000 个自由度在不集总的情况下需要 160 GB 磁盘空间）。为解决此问题，Map3D 采用了称为矩阵集总的过程。对于小型问题，这通常可使系数矩阵规模缩小为原来的十分之一，对于较大的问题则可缩小至百分之一以上。
 
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+注意
 
-Notes
-
-This function must be checked before conducting the discretization analysis
+必须在进行离散化分析之前选中此功能
 
 #### Analysis > Discretization
 
-Refer to Analysis > Options > Lumping for information on lumping.
+有关集总的信息，请参阅 Analysis > Options > Lumping。

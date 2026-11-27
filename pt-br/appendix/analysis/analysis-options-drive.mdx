@@ -2,24 +2,21 @@
 title: "Análise > Opções > Unidade nº"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Especifica as unidades de rascunho para a matriz de coeficientes – durante a análise BEM do Map3D.
 
-Specify scratch drives for coefficient matrix – during Map3D BEM analysis.
+Se houver várias unidades de disco instaladas, esta opção pode ser usada para indicar ao Map3D onde armazenar a matriz de coeficientes. Quando a primeira unidade ficar cheia, o Map3D gravará o restante da matriz na próxima unidade de rascunho.
 
-If you have multiple disk drives installed, this option can be used to direct Map3D where to store the coefficient matrix. When the first drive fills up, Map3D will write the remainder of the matrix to next scratch drive.
+Quando a matriz de solução é grande demais para caber na RAM (consulte Analysis > Options > VRAM e Analysis > Options > PRAM) , a solução da matriz torna-se uma operação intensiva em E/S, que depende apenas da taxa de E/S do computador. Nesse caso, grande parte do tempo de análise pode ser gasta na etapa de solução devido ao desempenho lento do disco.
 
-When the solution matrix is too big to fit into RAM (refer to Analysis > Options > VRAM and Analysis > Options > PRAM) , Matrix solution becomes an I/O intensive operation that depends only on the I/O rate of your computer. In this case, a large part of the analysis time can be spent in the solution stage due to slow disk performance.
+Para superar esse problema, é imprescindível que o usuário instale vários discos de alta velocidade.
 
-To overcome this problem it is imperative that the user install multiple, high speed disks.
+O Map3D oferece suporte total ao processamento paralelo e à E/S de disco paralela com a opção multiprocessador/multiunidade.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Se você tiver licença para usar a opção multiprocessador/multiunidade, o Map3D configura essas unidades em uma matriz RAID, de modo que a E/S seja feita de forma sobreposta em todas as unidades, em paralelo com os cálculos.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D set up these drives into a RAID array such that I/O is done in an overlapped manner to all of the drives, in parallel with the computations.
+Configurado dessa forma, você pode aumentar o desempenho de E/S em proporção ao número de unidades na matriz.
 
-Set up in this way you can increases the I/O performance in proportion to the number of drives in the array.
-
-In the following benchmark, the same model is run with 1, 2 and 4 disks.
+No benchmark a seguir, o mesmo modelo é executado com 1, 2 e 4 discos.
 
 ||1 disk|2 disks|4 disks|8GB PRAM|
 |---|---|---|---|---|
@@ -29,44 +26,44 @@ In the following benchmark, the same model is run with 1, 2 and 4 disks.
 |Total Analysis Time (4 cores)|0.640|0.376|0.257|0.107|
 |Total Speed Increase|1x|1.7x|2.5x|6x|
 
-The disks used in this benchmark are older 50-60 MB/sec drives (Seagate Barracuda 7200.7). More recent mechanical drives perform at 100 MB/sec (Seagate Momentus 7200.4). SATA2 SSDs can provide over 250 MB/sec per drive. SATA3 SSDs can provide over 500 MB/sec per drive. Multiple SSDs and/or NVMe drives can be expected to perform nearly as fast as PRAM. Note that some motherboards have limitations on the total combined throughput and may require addin controller adaptors.
+Os discos usados neste benchmark são unidades mais antigas, de 50-60 MB/s (Seagate Barracuda 7200.7). Unidades mecânicas mais recentes têm desempenho de 100 MB/s (Seagate Momentus 7200.4). SSDs SATA2 podem fornecer mais de 250 MB/s por unidade. SSDs SATA3 podem fornecer mais de 500 MB/s por unidade. É de se esperar que vários SSDs e/ou unidades NVMe tenham desempenho quase tão rápido quanto a PRAM. Observe que algumas placas-mãe têm limitações quanto à taxa de transferência total combinada e podem exigir adaptadores de controladora adicionais.
 
-To determine if you are licensed to use the multi-processor/multi-drive option check on Analysis > Options > #Threads.
+Para determinar se você tem licença para usar a opção multiprocessador/multiunidade, verifique em Analysis > Options > #Threads.
 
-If you are licensed to use the multi-processor/multi-drive option, faster disk rates can be achieved if you set SE_MANAGE_VOLUME_NAME privilege.
+Se você tiver licença para usar a opção multiprocessador/multiunidade, é possível obter taxas de disco mais altas se você definir o privilégio SE_MANAGE_VOLUME_NAME.
 
-This capability is available in the following versions of Windows:
+Este recurso está disponível nas seguintes versões do Windows:
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional e Server (máximo de 4 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Advanced Server (máximo de 8 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows 2000 Datacenter Server (máximo de 32 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows XP Professional e Windows Server 2003 (máximo de 4 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Enterprise Edition (máximo de 32 GB).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows Server 2003 Datacenter Edition (máximo de 64 GB).
 
-- Windows 10 & 11 Pro (the home version does not support this).
+- Windows 10 e 11 Pro (a versão Home não oferece suporte a isso).
 
-To set "SE_MANAGE_VOLUME_NAME" privilege, follow these steps:
+Para definir o privilégio "SE_MANAGE_VOLUME_NAME", siga estas etapas:
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Em seguida, defina
 
 Local Policies > User Rights Assignment > Perform Volume Maintenance Tasks > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Você deve reiniciar o computador para que esta configuração tenha efeito.
 
-Notes:
+Notas:
 
-This function must be checked before conducting the Map3D BEM analysis
+Esta função deve ser marcada antes de realizar a análise BEM do Map3D
 
 #### Analysis > BEM Analysis
 
-You should specify the fastest drive in your system. You can test your drive performance using
+Você deve especificar a unidade mais rápida do seu sistema. É possível testar o desempenho da unidade usando
 
 Tools > Disk Performance Test

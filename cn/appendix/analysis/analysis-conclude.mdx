@@ -2,39 +2,36 @@
 title: "分析 > 结束"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+结束当前分析。
 
-Concludes the current analysis.
-
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance _STOL_
+在矩阵求解期间，Map3D 会尝试逐步求解保存在系数矩阵中的联立方程，以及描述其他材料区、断层滑动、蠕变等的任何其他方程。当最大表面应力误差和最大破坏准则误差降至用户指定的应力容差 _STOL_ 以下时，即认为已得到收敛解
 
 #### Analysis > CParams > STOL
 
-If the user is satisfied the current level of accuracy is acceptable, the analysis can be concluded by checking this option.
+如果用户认为当前精度已可接受，可以通过选中此选项来结束分析。
 
-Extreme caution should be exercised when using this function as the results will contain numerical errors which could be significant.
+使用此功能时应极为谨慎，因为结果将包含数值误差，而且误差可能相当大。
 
-Notes:
+注意：
 
-The distribution of surface stress error can be displayed by selecting
+选择
 
 Plot > Surface Components > Serr Stress Error
 
-from the solve toolbar.
+可在求解工具栏中显示表面应力误差的分布。
 
-The distribution of failure criterion error can be displayed by selecting
+选择
 
 Plot > Surface Components > Ferr Failure Error
 
-from the solve toolbar.
+可在求解工具栏中显示破坏准则误差的分布。
 
-During analysis, the solve toolbar will be displayed when you suspend the analysis
-
-Analysis > Suspend
-
-only if the
+分析期间，只有在已选中
 
 Tools > Solve Toolbar
 
-has been checked.
+的情况下，暂停分析
+
+Analysis > Suspend
+
+时才会显示求解工具栏。

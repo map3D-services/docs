@@ -2,111 +2,106 @@
 title: "Analyse > Optionen > LERD/LSS"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Berechnet die Energiefreisetzungsrate und die Steifigkeit des Belastungssystems – während der Map3D-BEM-Analyse.
 
-Calculate energy release rate and loading system stiffness – during Map3D BEM analysis.
+Mit dieser Routine kann der Benutzer die Energiefreisetzungsrate ( _ERR_ ) an jeder gewünschten Stelle berechnen; sie bietet ein breites Spektrum an Flexibilität bei der Steuerung der Berechnung. Eine alternative
 
-This routine enables the user to calculate energy release rate ( _ERR_ ) at any desired location and provides a wide range of flexibility for controlling how the calculation is conducted. An alternative
+Methode, mit der _ERR_ nur vor einer Abbaufront berechnet wird, ist verfügbar: Plot > Surface Components > ERR
 
-method is available where _ERR_ is calculated ahead of an excavation face only Plot > Surface Components > ERR
+Wenn Sie LERD/LSS auswählen, werden Sie nach einem Dateinamen für die Datei gefragt, in die die Ergebnisse der LERD/LSS-Berechnungen geschrieben werden. Die Standarderweiterung dieser Datei lautet „.ERR“.
 
-When you select LERD/LSS, you will be prompted for a data file name where the results from the LERD/LSS calculations are to be written. The default extension for this file is ".ERR".
+Die Ergebnisse werden in dieser Datei im folgenden Format geschrieben:
 
-Results will be written to this file in the following format:
-
-If the test block is constructed as a 3D block (using FF elements)
+Wenn der Testblock als 3D-Block (mit FF-Elementen) aufgebaut ist
 
 **Block# Volume Area   Wk  Wf  Ev  LSS   x y z** s **1  t1  p1** s **2  t2  p2** s **3  t3  p3**
 
-where s **i  ti  pi** represent a principal stress component, its trend and plunge.
+wobei s **i  ti  pi** eine Hauptspannungskomponente, ihre Streichrichtung und ihr Abtauchen darstellen.
 
-If the test block is constructed as a planar feature (using DD elements)
+Wenn der Testblock als ebenes Objekt (mit DD-Elementen) aufgebaut ist
 
 **Block# Volume Area   Wk  Wf  Ev  LSS   x y z** t **s  ts  ps** s **n  tn  pn**
 
-where t **s  ts  ps** represent the maximum in-plane shear stress, its trend and plunge, and s **n  tn  pn** represent the normal stress, its trend and plunge.
+wobei t **s  ts  ps** die maximale Schubspannung in der Ebene, ihre Streichrichtung und ihr Abtauchen darstellen und s **n  tn  pn** die Normalspannung, ihre Streichrichtung und ihr Abtauchen.
 
-In both cases, **x y z** are the coordinates of the centre of the test block where the stresses are calculated.
+In beiden Fällen sind **x y z** die Koordinaten des Mittelpunkts des Testblocks, an dem die Spannungen berechnet werden.
 
-**Wk  Wf** and **LSS** are defined below.
+**Wk  Wf** und **LSS** sind weiter unten definiert.
 
-**Ev** is the volume change that occurs during the LERD/ERR calculation.
+**Ev** ist die Volumenänderung, die während der LERD/ERR-Berechnung auftritt.
 
-In addition, the total energy release associated with new excavations made during for the current mining step will also be calculated. Note that no test blocks need to be specified for this calculation to take place. Results will be reported as follows:
+Zusätzlich wird auch die gesamte Energiefreisetzung berechnet, die mit neuen Hohlräumen verbunden ist, die im aktuellen Abbauschritt entstehen. Beachten Sie, dass für diese Berechnung keine Testblöcke angegeben werden müssen. Die Ergebnisse werden wie folgt ausgegeben:
 
 #### Stp# Volume Area Wk Wf Ev LSS
 
-A useful indicator of the nature of the response expected during yielding are the loading system stiffness ( _LSS_ ) and local energy release density ( _LERD_ ). At different locations in a model one can
+Nützliche Indikatoren für die Art der beim Nachgeben (Fließen) zu erwartenden Reaktion sind die Steifigkeit des Belastungssystems ( _LSS_ ) und die lokale Energiefreisetzungsdichte ( _LERD_ ). An verschiedenen Stellen eines Modells ist zu erwarten, dass sich diese Indikatoren aufgrund geometrischer Effekte ändern. An Stellen, an denen die _LSS_ steifer ist als das Nachbruchverhalten des nachgebenden Gesteins, ist ein kontrolliertes Versagen zu erwarten, das im Takt mit dem fortschreitenden Abbau voranschreitet. An Stellen, an denen die _LSS_ dagegen weicher ist als das Nachbruchverhalten des nachgebenden Gesteins, sind unkontrollierte Brüche zu erwarten. Die Menge an verfügbarer Überschussenergie korreliert erwartungsgemäß mit der Stärke des Ereignisses.
 
-expect these indicators to change owing to geometric effects. At locations where the _LSS_ is stiffer that the post peak response of the yielding rock, one can expect controlled failure that progresses in sequence with the advancing mining. However, at locations where the _LSS_ is softer that the post peak response of the yielding rock, one can expect uncontrolled failures. The amount of excess energy available can be expected to correlate with the magnitude of the event.
-
-In order to determine the _LSS_ or _LERD_ in a numerical model it is necessary to flex the model and observe the loading system response. This is done by specification of the Material Code for the LERD/LSS calculation using
+Um die _LSS_ oder die _LERD_ in einem numerischen Modell zu bestimmen, ist es notwendig, das Modell zu „beugen“ (anzuregen) und die Reaktion des Belastungssystems zu beobachten. Dies geschieht durch Festlegen des Materialcodes für die LERD/LSS-Berechnung mit
 
 #### CAD > Edit > Entity Properties > Matl Code LERD/LSS
 
-This special Material Code is used to temporarily alter the material properties or boundary conditions in the test area to cause the model to deform in some way.
+Dieser spezielle Materialcode wird verwendet, um die Materialeigenschaften oder Randbedingungen im Testbereich vorübergehend so zu verändern, dass sich das Modell in irgendeiner Weise verformt.
 
-Since the _LSS_ is expected to change from one location to another, it is necessary do this at all locations of interest. By carefully monitoring the loading system response during this deformation, the _LSS_ and the various amounts of energy transferred can be calculated.
+Da die _LSS_ erwartungsgemäß von Ort zu Ort variiert, muss dies an allen interessierenden Stellen erfolgen. Durch sorgfältige Beobachtung der Reaktion des Belastungssystems während dieser Verformung lassen sich die _LSS_ und die verschiedenen übertragenen Energiemengen berechnen.
 
-Consider the simple example of a fault plane passing through a mining zone, and ask the question "How would this fault respond if it were to yield?". One could simply substitute a lower friction angle and observe how the rock mass deformed. Let's call "Stage I" the model with the fault at its normal friction angle, and "Stage II" the same model but with the fault at some reduced friction angle. At some location on the fault plane we can expect the following type of response.
+Betrachten Sie das einfache Beispiel einer Störungsebene, die durch eine Abbauzone verläuft, und stellen Sie sich die Frage: „Wie würde diese Störung reagieren, wenn sie nachgeben würde?“ Man könnte einfach einen niedrigeren Reibungswinkel ansetzen und beobachten, wie sich das Gebirge verformt. Nennen wir „Stufe I“ das Modell mit der Störung bei ihrem normalen Reibungswinkel und „Stufe II“ dasselbe Modell, aber mit der Störung bei einem verringerten Reibungswinkel. An einer bestimmten Stelle der Störungsebene ist die folgende Art von Reaktion zu erwarten.
 
 ![Figure from page 495](/images/page-495-img-8.png)
 
-The _LSS_ is simply the slope of the load deformation response curve. The maximum amount of energy that can be released as kinetic energy is the area of the upper triangle labelled as Wk (one should expect this to correlate with observed event magnitude). The minimum amount of energy that can be dissipated in the frictional deformation of the fault is the area of the lower rectangle labelled as Wf (one should expect this to correlate with the amount of damage observed at the event source). This calculation must be conducted at all locations on the fault plane in order to get the total energy transferred as a result of the reduction in friction angle. Note that depending on how the material properties are set up there could be normal deformations (dilation occurring with the shear response) that this must be included in the energy calculations.
+Die _LSS_ ist einfach die Steigung der Last-Verformungs-Kurve. Die maximale Energiemenge, die als kinetische Energie freigesetzt werden kann, ist die Fläche des oberen Dreiecks mit der Bezeichnung Wk (es ist zu erwarten, dass sie mit der beobachteten Ereignisstärke korreliert). Die minimale Energiemenge, die bei der Reibungsverformung der Störung dissipiert werden kann, ist die Fläche des unteren Rechtecks mit der Bezeichnung Wf (es ist zu erwarten, dass sie mit dem am Ereignisherd beobachteten Schaden korreliert). Diese Berechnung muss an allen Stellen der Störungsebene durchgeführt werden, um die insgesamt übertragene Energie infolge der Verringerung des Reibungswinkels zu erhalten. Beachten Sie, dass es je nach Einrichtung der Materialeigenschaften Normalverformungen geben kann (Dilatation, die mit der Scherreaktion auftritt), die in die Energieberechnungen einbezogen werden müssen.
 
-The same calculations can be done for a pillar between two drifts. For this case let's call "Stage I" the model with the pillar intact. In order to flex the model we could substitute a different material into the pillar and call this "Stage II". All of the above calculations and interpretations for Wk and Wf can then be taken again. Note that as above, there will be contributions from both normal and shear components included in the energy calculations.
+Dieselben Berechnungen lassen sich für einen Pfeiler zwischen zwei Strecken durchführen. Nennen wir in diesem Fall „Stufe I“ das Modell mit intaktem Pfeiler. Um das Modell zu „beugen“, könnten wir ein anderes Material in den Pfeiler einsetzen und dies „Stufe II“ nennen. Alle oben beschriebenen Berechnungen und Deutungen für Wk und Wf lassen sich dann erneut durchführen. Beachten Sie, dass, wie oben, sowohl Normal- als auch Scherkomponenten zu den Energieberechnungen beitragen.
 
-Since Map3D calculates the stresses acting on boundary elements, the total energy transfer can be calculated as the integral of the stresses through their deformations over all elements. In the case of the pillar example above, if we actually excavate the pillar to obtain stage II, then divide Wk by the volume of the pillar, we obtain the local energy release density ( _LERD_ ). This has been found to correlate very well with violent failure episodes. (Note that for the case of tabular mining, if you divide Wk by the area (in the plane of mining), you obtain the classical energy release rate, _ERR_ ).
+Da Map3D die auf die Randelemente wirkenden Spannungen berechnet, lässt sich der gesamte Energietransfer als Integral der Spannungen über ihre Verformungen über alle Elemente berechnen. Wenn wir im obigen Pfeilerbeispiel den Pfeiler tatsächlich ausbrechen, um Stufe II zu erhalten, und dann Wk durch das Volumen des Pfeilers dividieren, erhalten wir die lokale Energiefreisetzungsdichte ( _LERD_ ). Es hat sich gezeigt, dass diese sehr gut mit gewaltsamen Versagensereignissen korreliert. (Beachten Sie, dass Sie im Fall des flözartigen Abbaus (Tabular Mining) die klassische Energiefreisetzungsrate _ERR_ erhalten, wenn Sie Wk durch die Fläche (in der Abbauebene) dividieren.)
 
-To reinforce this concept let's consider a real example. Consider multiple pillar bursts that occurred over several years of mining. For each failure, a numerical model was run to determine the stress state at the time and location of the failure. If we plot all of these stress predictions on a set of s **1** versus s **3** axes we obtain the following:
+Um dieses Konzept zu untermauern, betrachten wir ein reales Beispiel. Betrachten Sie mehrere Pfeilerbrüche (Pfeilerschläge), die über mehrere Jahre des Abbaus aufgetreten sind. Für jedes Versagen wurde ein numerisches Modell berechnet, um den Spannungszustand zum Zeitpunkt und am Ort des Versagens zu bestimmen. Wenn wir alle diese Spannungsprognosen in einem Diagramm mit den Achsen s **1** gegen s **3** auftragen, erhalten wir Folgendes:
 
 ![Figure from page 496](/images/page-496-img-3.png)
 
-This figure illustrates that there is a strong correlation between the stress state at the time of each burst and a linear strength criterion. The coefficient of correlation of this data is 0.90. Stated in a different way, the mean error in prediction of s **1** is approximately 17 MPa. This gives a coefficient of variation of only 9%.
+Diese Abbildung zeigt, dass eine starke Korrelation zwischen dem Spannungszustand zum Zeitpunkt jedes Bruchs und einem linearen Festigkeitskriterium besteht. Der Korrelationskoeffizient dieser Daten beträgt 0,90. Anders ausgedrückt beträgt der mittlere Fehler bei der Prognose von s **1** etwa 17 MPa. Das ergibt einen Variationskoeffizienten von nur 9 %.
 
 ![Figure from page 496](/images/page-496-img-5.png)
 
-The _LERD_ at the time of the burst as each location also shows a strong correlation between the stress state at the time of each burst and a linear criterion. The coefficient of correlation of this data is 0.88.
+Auch die _LERD_ zum Zeitpunkt des Bruchs an jeder Stelle zeigt eine starke Korrelation zwischen dem Spannungszustand zum Zeitpunkt jedes Bruchs und einem linearen Kriterium. Der Korrelationskoeffizient dieser Daten beträgt 0,88.
 
-Stated in a different way, the mean error in prediction of _LERD_ is approximately 0.045 MPa/mª. This gives a coefficient of variation of only 14%.
+Anders ausgedrückt beträgt der mittlere Fehler bei der Prognose der _LERD_ etwa 0,045 MPa/mª. Das ergibt einen Variationskoeffizienten von nur 14 %.
 
-While the Wk and Wf components are readily calculated in this way, the definition of _LSS_ is not so straightforward. However a representative _LSS_ can be determined as follows:
+Während sich die Komponenten Wk und Wf auf diese Weise leicht berechnen lassen, ist die Definition der _LSS_ nicht so einfach. Eine repräsentative _LSS_ lässt sich jedoch wie folgt bestimmen:
 
-Identify a representative area for which the _LSS_ is to be determined. This is done by building a test block that should encompass the anticipated yield zone.
+Legen Sie einen repräsentativen Bereich fest, für den die _LSS_ bestimmt werden soll. Dazu bauen Sie einen Testblock auf, der die erwartete Fließzone umschließen sollte.
 
-You construct the test block as you would any other feature, but identify this block as a "test block" by specifying the desired Material Code for the LERD/LSS calculation using
+Sie konstruieren den Testblock wie jedes andere Objekt, kennzeichnen diesen Block jedoch als „Testblock“, indem Sie den gewünschten Materialcode für die LERD/LSS-Berechnung festlegen mit
 
 #### CAD > Edit > Entity Properties > Matl Code LERD/LSS
 
-The Material Code for the Mining Steps should be set according to how you want this zone to be treated during the mining sequence. These blocks can be used as alternate material zones and excavated if desired.
+Der Materialcode für die Abbauschritte sollte so festgelegt werden, wie diese Zone während der Abbaufolge behandelt werden soll. Diese Blöcke können als alternative Materialzonen verwendet und bei Bedarf ausgebrochen werden.
 
-Assuming that this test block is filled with a fictitious material whose post-peak stiffness exactly matches the loading system response, and that the behaviour of the test block can be described by
+Es wird angenommen, dass dieser Testblock mit einem fiktiven Material gefüllt ist, dessen Nachbruchsteifigkeit genau der Reaktion des Belastungssystems entspricht, und dass sich das Verhalten des Testblocks beschreiben lässt durch
 
 s **1 =** **_LSS_** e **1** s **2 =** **_LSS_** e **2** s **3 =** **_LSS_** e **3**
 
-The energy density can be calculated as
+Die Energiedichte lässt sich berechnen als
 
 **½ (** s **1** e **1 +** s **2** e **2 +** s **3** e **3 )**
 
-The mean energy density can be estimated as
+Die mittlere Energiedichte lässt sich schätzen als
 
 **( Wk + Wf ) /** **_Volume_**
 
-Hence the loading system stiffness can determined from
+Daher lässt sich die Steifigkeit des Belastungssystems bestimmen aus
 
 **_LSS_ = ½ (** s **1² +** s **2² +** s **3² )** **_Volume_ / ( Wk + Wf )**
 
-If we do this calculation for the data presented above we obtain the following plot.
+Wenn wir diese Berechnung für die oben dargestellten Daten durchführen, erhalten wir das folgende Diagramm.
 
 ![Figure from page 497](/images/page-497-img-17.png)
 
-The _LSS_ at the time of the burst as each location shows a strong stress independent value. The mean error in prediction of _LSS_ is approximately 4730 MPa. This gives a coefficient of variation of only 7%.
+Die _LSS_ zum Zeitpunkt des Bruchs an jeder Stelle zeigt einen stark spannungsunabhängigen Wert. Der mittlere Fehler bei der Prognose der _LSS_ beträgt etwa 4730 MPa. Das ergibt einen Variationskoeffizienten von nur 7 %.
 
-This _LSS_ calculation is only representative provided the stresses are uniformly distributed throughout the test block. In cases where this is not true, poor correlation with _LSS_ is found.
+Diese _LSS_-Berechnung ist nur dann repräsentativ, wenn die Spannungen gleichmäßig über den gesamten Testblock verteilt sind. Ist dies nicht der Fall, ergibt sich eine schlechte Korrelation mit der _LSS_.
 
-#### Notes
+#### Hinweise
 
-This function must be checked before conducting the discretization analysis
+Diese Funktion muss vor der Durchführung der Diskretisierungsanalyse aktiviert werden
 
 Analysis > Discretization

@@ -2,19 +2,16 @@
 title: "分析 > 选项 > 共线性"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在文件加载期间合并彼此接近的坐标点。
 
-Merge coordinate points that are close to one another – during file load.
+彼此非常接近的坐标点会被合并。非常靠近表面某条边的坐标点会被移到该边上。默认情况下，如果这些点与表面的距离在边长的千分之一搜索半径之内，Map3D 就会移动它们。
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+如有需要，用户可以通过在数据框中输入数值来定义搜索半径。其他 CAD 软件可能不会将表面的角点连接在一起。此功能有助于消除相邻表面和块体之间的小间隙和重叠。为此参数指定非零值时应极为谨慎，因为数值过大会合并过多的点，造成的问题可能比解决的问题更多。
 
-If desired, the user can define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+注意
 
-Notes
+必须在加载模型文件之前选中此功能
 
-This function must be checked before loading the model file
+#### Analysis > Load Model。
 
-#### Analysis > Load Model.
-
-It is recommended that you check this option. However caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+建议选中此选项。但是，如果指定非零搜索半径，必须谨慎，因为数值过大可能导致坐标点被意外合并，从而破坏模型的完整性。

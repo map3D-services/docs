@@ -2,71 +2,68 @@
 title: "Análisis > Opciones > Unidad #"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Especifica las unidades de trabajo para la matriz de coeficientes – durante el análisis BEM de Map3D.
 
-Specify scratch drives for coefficient matrix – during Map3D BEM analysis.
+Si tiene varias unidades de disco instaladas, puede usar esta opción para indicar a Map3D dónde almacenar la matriz de coeficientes. Cuando la primera unidad se llena, Map3D escribe el resto de la matriz en la siguiente unidad de trabajo.
 
-If you have multiple disk drives installed, this option can be used to direct Map3D where to store the coefficient matrix. When the first drive fills up, Map3D will write the remainder of the matrix to next scratch drive.
+Cuando la matriz de solución es demasiado grande para caber en la RAM (consulte Analysis > Options > VRAM y Analysis > Options > PRAM) , la solución de la matriz se convierte en una operación intensiva en E/S que depende únicamente de la velocidad de E/S de su computadora. En este caso, una gran parte del tiempo de análisis puede dedicarse a la etapa de solución debido al bajo rendimiento del disco.
 
-When the solution matrix is too big to fit into RAM (refer to Analysis > Options > VRAM and Analysis > Options > PRAM) , Matrix solution becomes an I/O intensive operation that depends only on the I/O rate of your computer. In this case, a large part of the analysis time can be spent in the solution stage due to slow disk performance.
+Para superar este problema, es imprescindible instalar varios discos de alta velocidad.
 
-To overcome this problem it is imperative that the user install multiple, high speed disks.
+Map3D admite totalmente el procesamiento en paralelo y la E/S de disco en paralelo con la opción multiprocesador/multiunidad.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Si tiene licencia para usar la opción multiprocesador/multiunidad, Map3D configura estas unidades en una matriz RAID de modo que la E/S se realice de forma superpuesta en todas las unidades, en paralelo con los cálculos.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D set up these drives into a RAID array such that I/O is done in an overlapped manner to all of the drives, in parallel with the computations.
+Con esta configuración, puede aumentar el rendimiento de E/S en proporción al número de unidades de la matriz.
 
-Set up in this way you can increases the I/O performance in proportion to the number of drives in the array.
+En la siguiente prueba comparativa, el mismo modelo se ejecuta con 1, 2 y 4 discos.
 
-In the following benchmark, the same model is run with 1, 2 and 4 disks.
-
-||1 disk|2 disks|4 disks|8GB PRAM|
+||1 disco|2 discos|4 discos|8GB PRAM|
 |---|---|---|---|---|
-|Measured Disk Throughput (MB/sec)|55|112|206|3000 equivalent|
-|Matrix Solution (hours)|0.546|0.282|0.163|0.033|
-|Solution Speed Increase|1x|1.9x|3.3x|16x|
-|Total Analysis Time (4 cores)|0.640|0.376|0.257|0.107|
-|Total Speed Increase|1x|1.7x|2.5x|6x|
+|Rendimiento de disco medido (MB/s)|55|112|206|3000 equivalente|
+|Solución de la matriz (horas)|0.546|0.282|0.163|0.033|
+|Aumento de la velocidad de solución|1x|1.9x|3.3x|16x|
+|Tiempo total de análisis (4 núcleos)|0.640|0.376|0.257|0.107|
+|Aumento total de velocidad|1x|1.7x|2.5x|6x|
 
-The disks used in this benchmark are older 50-60 MB/sec drives (Seagate Barracuda 7200.7). More recent mechanical drives perform at 100 MB/sec (Seagate Momentus 7200.4). SATA2 SSDs can provide over 250 MB/sec per drive. SATA3 SSDs can provide over 500 MB/sec per drive. Multiple SSDs and/or NVMe drives can be expected to perform nearly as fast as PRAM. Note that some motherboards have limitations on the total combined throughput and may require addin controller adaptors.
+Los discos usados en esta prueba comparativa son unidades más antiguas de 50-60 MB/s (Seagate Barracuda 7200.7). Las unidades mecánicas más recientes alcanzan los 100 MB/s (Seagate Momentus 7200.4). Los SSD SATA2 pueden ofrecer más de 250 MB/s por unidad. Los SSD SATA3 pueden ofrecer más de 500 MB/s por unidad. Se puede esperar que varios SSD y/o unidades NVMe sean casi tan rápidos como la PRAM. Tenga en cuenta que algunas placas base tienen limitaciones en el rendimiento combinado total y pueden requerir adaptadores de controladora adicionales.
 
-To determine if you are licensed to use the multi-processor/multi-drive option check on Analysis > Options > #Threads.
+Para determinar si tiene licencia para usar la opción multiprocesador/multiunidad, consulte Analysis > Options > #Threads.
 
-If you are licensed to use the multi-processor/multi-drive option, faster disk rates can be achieved if you set SE_MANAGE_VOLUME_NAME privilege.
+Si tiene licencia para usar la opción multiprocesador/multiunidad, se pueden lograr velocidades de disco más altas si establece el privilegio SE_MANAGE_VOLUME_NAME.
 
-This capability is available in the following versions of Windows:
+Esta capacidad está disponible en las siguientes versiones de Windows:
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional y Server (máximo de 4 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Advanced Server (máximo de 8 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows 2000 Datacenter Server (máximo de 32 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows XP Professional y Windows Server 2003 (máximo de 4 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Enterprise Edition (máximo de 32 GB).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows Server 2003 Datacenter Edition (máximo de 64 GB).
 
-- Windows 10 & 11 Pro (the home version does not support this).
+- Windows 10 y 11 Pro (la versión Home no lo admite).
 
-To set "SE_MANAGE_VOLUME_NAME" privilege, follow these steps:
+Para establecer el privilegio "SE_MANAGE_VOLUME_NAME", siga estos pasos:
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Luego establezca
 
 Local Policies > User Rights Assignment > Perform Volume Maintenance Tasks > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Debe reiniciar para que este ajuste surta efecto.
 
-Notes:
+Notas:
 
-This function must be checked before conducting the Map3D BEM analysis
+Esta función debe estar marcada antes de realizar el análisis BEM de Map3D
 
 #### Analysis > BEM Analysis
 
-You should specify the fastest drive in your system. You can test your drive performance using
+Debe especificar la unidad más rápida de su sistema. Puede probar el rendimiento de su unidad con
 
 Tools > Disk Performance Test

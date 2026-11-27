@@ -2,47 +2,44 @@
 title: "Analyse > Optionen > P-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Speichert einen Teil der Koeffizientenmatrix im physischen RAM – während der Map3D-BEM-Analyse.
 
-Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+Wenn in Ihrem Computer viel RAM installiert ist, kann diese Option die Ausführung erheblich beschleunigen, da Daten wesentlich schneller aus dem RAM als von der Festplatte abgerufen werden können. Obwohl 32-Bit-Windows jedem Prozess nur die Adressierung von 2 GB erlaubt, kann Benutzern mit viel RAM im Computer über AWE (Address Windowing Extensions) auf den physischen RAM zugegriffen werden. AWE ermöglicht den Zugriff auf den gesamten verfügbaren RAM Ihres Computers. Die meisten Systeme unterstützen 4 GB RAM. Einige unterstützen mehr als 64 GB. Die verschiedenen Windows-Versionen bieten unterschiedliche AWE-Unterstützung von 1 GB bis zu 512 GB. AWE wird in den folgenden Windows-Versionen unterstützt:
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+- Windows 10 Professional und Server (maximal 4 GB).
 
-- Windows 10 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional und Server (maximal 4 GB).
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows 2000 Advanced Server (maximal 8 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Datacenter Server (maximal 32 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows XP Professional und Windows Server 2003 (maximal 4 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows Server 2003 Enterprise Edition (maximal 32 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
-
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows Server 2003 Datacenter Edition (maximal 64 GB).
 
 - Windows 7 & 8.
 
-- Windows 10 & 11 Pro (the home version does not support this).
+- Windows 10 & 11 Pro (die Home-Version unterstützt dies nicht).
 
-AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+AWE erfordert das Recht „SE_LOCK_MEMORY“. Um AWE zu aktivieren, gehen Sie wie folgt vor:
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Legen Sie dann fest
 
 Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Sie müssen den Computer neu starten, damit diese Einstellung wirksam wird.
 
-Notes:
+Hinweise:
 
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss vor der Durchführung der Map3D-BEM-Analyse aktiviert werden
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+Sie sollten nur so viel RAM zuweisen, wie Map3D verwenden soll, und dabei ausreichend Platz für alle anderen Anwendungen lassen, die Sie ausführen möchten.
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Sie sollten diesen Parameter niemals größer als den verfügbaren RAM einstellen, da dies zu übermäßigem Auslagern (Paging) durch Ihr Betriebssystem führt und die Analyse erheblich verlangsamt.

@@ -2,38 +2,35 @@
 title: "Análisis > Opciones > Fluencia"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
-
-Conduct elasto-visco-plastic creep analysis.
+Realiza el análisis de fluencia elastoviscoplástica.
 
 ![Figure from page 485](/images/page-485-img-3.png)
 
-This feature is used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip). The creep model can be used simply as a technique for damping the non-linear deformations or if this creep option is activated, for real time dependant creep simulation.
+Esta función se usa solo en análisis no lineales (bloques FF 3D en Map3D Non-Linear y planos DD en Map3D Fault-Slip). El modelo de fluencia se puede usar simplemente como una técnica para amortiguar las deformaciones no lineales o, si se activa esta opción de fluencia, para simular la fluencia dependiente del tiempo en tiempo real.
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance. This limits the size of plastic creep increment Deplastic on each yielding element
+En cada paso de fluencia, el estado de esfuerzo en todos los elementos en fluencia (elementos donde el esfuerzo supera la resistencia) se calcula como la resistencia más la resistencia a la fluencia. Esto limita el tamaño del incremento de fluencia plástica Deplastic en cada elemento en fluencia
 
 s = _Strength_ + _C_ Deplastic /D _t_
 
 _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate Deplastic /D _t_ . Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The contribution to the stress s, made by the creep increment is the excess stress given by
+donde la resistencia a la fluencia se determina como el coeficiente de fluencia _C_ multiplicado por la tasa de deformación plástica Deplastic /D _t_ . Tenga en cuenta que el usuario debe seleccionar tanto el coeficiente de fluencia _C_ como el tamaño del paso de tiempo D _t_ , y luego especificar el cociente de ambos como el módulo viscoso _G_ . La contribución al esfuerzo s que hace el incremento de fluencia es el esfuerzo en exceso, dado por
 
 Ds  = _C_ Deplastic /D _t_
 
-The maximum excess stress for all yielding elements is indicated by Plot > Surface Components > Ferr
+El esfuerzo en exceso máximo de todos los elementos en fluencia se indica mediante Plot > Surface Components > Ferr
 
-If this creep option is activated, Map3D will execute only one creep increment for each mining step. Thus the elapsed time can be determined as the product of the current time step number _is_ (Analysis Dialogue) with the user defined time step size D _t_ .
+Si se activa esta opción de fluencia, Map3D ejecutará solo un incremento de fluencia por cada paso de minado. Por lo tanto, el tiempo transcurrido se puede determinar como el producto del número del paso de tiempo actual _is_ (Analysis Dialogue) por el tamaño del paso de tiempo D _t_ definido por el usuario.
 
-Total Elapsed Time = _is_ D _t_
+Tiempo total transcurrido = _is_ D _t_
 
-The user may wish to repeat several mining steps without adding any new mining simply to allow the model to creep for a controlled number of steps.
+Es posible que desee repetir varios pasos de minado sin agregar nuevo minado, simplemente para permitir que el modelo fluya durante un número controlado de pasos.
 
-If this creep option is not activated, Map3D will execute as many creep increments as is required to reduce _fer_ below the stress tolerance _STOL_ , before moving onto the next mining step.
+Si no se activa esta opción de fluencia, Map3D ejecutará tantos incrementos de fluencia como sea necesario para reducir _fer_ por debajo de la tolerancia de esfuerzo _STOL_ , antes de pasar al siguiente paso de minado.
 
-In either case, the accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+En cualquier caso, la deformación plástica acumulada eplastic se determina como la suma de los incrementos de fluencia plástica Deplastic de todos los pasos de fluencia.
 
-Related Topics:
+Temas relacionados:
 
 Plot > Surface Components > DTs Excess Shear Stress
 
@@ -43,6 +40,6 @@ Plot > Surface Components > Ts Shear Stress
 
 Plot > Surface Components > Es Shear Strain
 
-This function must be checked before conducting the Map3D BEM analysis
+Esta función debe estar marcada antes de realizar el análisis BEM de Map3D
 
 Analysis > BEM Analysis

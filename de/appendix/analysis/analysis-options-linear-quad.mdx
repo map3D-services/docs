@@ -2,51 +2,48 @@
 title: "Analyse > Optionen > Linear und quadratisch"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Verwendet Randelemente höherer Ordnung – während der Map3D-BEM-Analyse.
 
-Use higher order boundary elements – during Map3D BEM analysis.
+Die Randelementmethode verwendet eine numerische Näherung dafür, wie die Intensität der Oberflächenkomponenten von Spannung oder Verschiebungsdiskontinuität über die Ränder verteilt ist. Die einfachste Annahme besteht darin, dass diese Oberflächenkomponenten über jedes Randelement gleichmäßig verteilt sind. Die Erfahrung mit Map3D hat gezeigt, dass diese Näherung für alle Probleme außer einer begrenzten Klasse mit erheblichen Biegeeffekten genaue Ergebnisse liefert. Selbst bei dieser letzteren Problemart werden an allen Stellen außer in der Nähe der Begrenzungsflächen weiterhin genaue Ergebnisse erzielt.
 
-The Boundary Element Method utilizes a numerical approximation of how the intensity of the surface components of stress or displacement discontinuity are distributed over the boundaries. The simplest assumption is to assume that these surface components are distributed uniformly over each boundary element. Experience with Map3D has shown that accurate results are obtained with this approximation for all but a limited class of problems where there are significant bending effects involved. Even for this later type of problem, accurate results are still obtained at all locations except near the boundary surfaces.
+Um in der Nähe der Ränder von Problemen mit erheblichen Biegeeffekten genaue Ergebnisse zu erhalten, müssen Randelemente höherer Ordnung verwendet werden. Biegeeffekte werden normalerweise bei Problemen mit großen, unregelmäßig geformten Spannweiten wichtig. Das gilt insbesondere in der Nähe von Knicken im Rand, die durch Verschneidungen zwischen verschiedenen Objekten entstehen können.
 
-To obtain accurate results near the boundaries of problems where there are significant bending effects involved it is necessary to implement higher order boundary elements. Bending effects normally become important for problems with large spans that are irregularly shaped. This is particularly important near kinks in the boundary that can arise due to intersections between various features.
+Wenn weder **linear** noch **quad** aktiviert ist, wird die Intensität der Oberflächenkomponenten von Spannung oder Verschiebungsdiskontinuität als **konstante** Werte verteilt.
 
-When neither **linear** or **quad** are checked, the intensity of the surface components of stress or displacement discontinuity are distributed as **constant** values.
-
-When the **linear** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a linear order polynomial distribution. For triangles the following distribution is used
+Wenn die Option **linear** aktiviert ist, wird die Intensität der Oberflächenkomponenten von Spannung oder Verschiebungsdiskontinuität mithilfe einer Polynomverteilung linearer Ordnung über die Randelemente verteilt. Für Dreiecke wird die folgende Verteilung verwendet
 
 _a + b x + c y_
 
-For quadrilaterals, the following distribution is used
+Für Vierecke wird die folgende Verteilung verwendet
 
 _a + b x + c y + d xy_
 
-When the **quad** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a quadratic order polynomial distribution. For triangles the following distribution is used
+Wenn die Option **quad** aktiviert ist, wird die Intensität der Oberflächenkomponenten von Spannung oder Verschiebungsdiskontinuität mithilfe einer Polynomverteilung quadratischer Ordnung über die Randelemente verteilt. Für Dreiecke wird die folgende Verteilung verwendet
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ²
 
-For quadrilaterals, the following distribution is used
+Für Vierecke wird die folgende Verteilung verwendet
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ² _+ g x_ ²y _+ h x_ ² _y_ ² _+ i y_ ²x
 
-Notes:
+Hinweise:
 
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss vor der Durchführung der Map3D-BEM-Analyse aktiviert werden
 
 #### Analysis > BEM Analysis
 
-This option will increase problem size and hence analysis time, since higher order elements require more interpolation nodes on the bounding surfaces.
+Diese Option vergrößert das Problem und erhöht daher die Analysezeit, da Elemente höherer Ordnung mehr Interpolationsknoten auf den Begrenzungsflächen benötigen.
 
-If the user is uncertain about the sensitivity of their model to this approximation, it is suggested that some subset of the actual model is run with and without linear elements for comparison.
+Wenn Sie unsicher sind, wie empfindlich Ihr Modell auf diese Näherung reagiert, empfiehlt es sich, eine Teilmenge des tatsächlichen Modells zum Vergleich mit und ohne lineare Elemente zu berechnen.
 
-In the example below, an excavation with a notch is illustrated. The vertical stress is contoured for the three cases of neither **linear** or **quad** , then **linear** , then **quad** . Note the anomalous stress concentration at the tip of the notch with the constant distribution. This effect is eliminated using either the **linear** distribution, and further reduced using the **quad** distribution.
-
-![Figure from page 499](/images/page-499-img-7.png)
-
-#### linear distribution
+Im folgenden Beispiel ist ein Hohlraum mit einer Kerbe dargestellt. Die Vertikalspannung ist für die drei Fälle konturiert: weder **linear** noch **quad**, dann **linear**, dann **quad**. Beachten Sie die anomale Spannungskonzentration an der Spitze der Kerbe bei konstanter Verteilung. Dieser Effekt wird mit der **linearen** Verteilung beseitigt und mit der **quad**-Verteilung weiter verringert.
 
 ![Figure from page 499](/images/page-499-img-7.png)
 
-**quad** distribution
+#### Lineare Verteilung
+
+![Figure from page 499](/images/page-499-img-7.png)
+
+**quad**-Verteilung
 
 ![Figure from page 499](/images/page-499-img-7.png)

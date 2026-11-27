@@ -2,19 +2,16 @@
 title: "分析 > 选项 > 移动点"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间移动非常靠近边界表面的场点。
 
-Move field points that are very close to boundary surfaces – during Map3D BEM analysis.
+位于距单元角点或边缘不足一个单元宽度的场点（网格平面上或用户定义点处的结果）精度会很差，常常表现为不切实际的巨大应力集中。通过将这些点移动到最近的边界节点，可以获得更符合实际的应力预测。此选项仅移动距表面在 ¼ _AG_ 以内的点（ _AG_ 为允许的最小网格间距，见 Analysis > CParams > AG）。
 
-Field points (results on grid planes or at user defined points) that are located within a fraction of an element width from an element corner or edge will have very poor accuracy often indicating unrealistically large stress concentrations. By moving such points to the nearest boundary node, more realistic stress predictions can be obtained. This option only moves points that are within ¼ of _AG_ ( _AG_ is the minimum allowable grid spacing, see Analysis > CParams > AG) from the surface.
+此功能还会使刚好位于开挖内部（在 ½  _AG_ 以内）的场点移动到开挖表面上，从而使结果的等值线一直到开挖表面都保持平滑。
 
-This feature also causes field points that are just inside excavations (within ½  of _AG_ ) to be moved onto the excavation surface, and thus provides smooth contouring of results right up to the excavation surface.
+#### 注意：
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 #### Analysis > BEM Analysis.
 
-It is recommended that you check this option unless you specifically do not want field points moved.
+建议选中此选项，除非您明确不希望移动场点。

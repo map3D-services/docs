@@ -2,36 +2,33 @@
 title: "Map3D Fault-Slip"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+**Map3D Fault-Slip** - análisis de esfuerzos en macizo rocoso elástico y fallas con deslizamiento totalmente plástico.
 
-**Map3D Fault-Slip** - elastic rock mass and fully plastic fault-slip stress analysis.
+Este módulo se usa para realizar análisis de esfuerzos de modelos 3D. Este software se utiliza en proyectos civiles, geológicos y mineros.
 
-This module is used for conducting stress analysis of 3D models. This software is used for civil, geological and mining projects.
+Incluye el modelador CAD 3D (Map3D Modeller), el visualizador de resultados (Map3D Results Viewer) y la base de datos visual SIG.
 
-Includes the 3D CAD modeller (Map3D Modeller), results viewer (Map3D Results Viewer) and the GIS visual database.
+El análisis de esfuerzos utiliza el BEM (método de elementos de contorno) y tiene muchas características:
 
-The stress analysis utilizes the BEM (boundary element method) and has many features:
+- Problemas de tamaño muy grande. Map3D puede realizar análisis de esfuerzos en modelos con miles de excavaciones (más de un millón de grados de libertad). Esto permite una representación detallada de la geometría y elimina la necesidad de simplificar modelos grandes (la simplificación excesiva es una de las principales fuentes de error en el modelado). Se pueden simular fácilmente modelos que abarcan toda la mina.
 
-- Very large problem sizes. Map3D can conduct stress analysis on models with thousands of excavations (over one million degrees of freedom). This allows for detailed representation of the geometry and eliminates the need to simplify large models (over simplification is a primary source of error in modelling). Mine widemodels can by readily simulated.
+- Formas de excavación 3D complejas y completas. Se pueden analizar fácilmente modelos detallados tal como fueron construidos y formas 3D complejas. Como el análisis de esfuerzos se basa en el método de elementos de contorno (BEM), solo es necesario especificar las superficies de las excavaciones (y de otras características). No hace falta definir (subdividir en elementos) los pilares entre excavaciones adyacentes. Cualquier forma arbitraria se combina fácilmente en un único modelo grande listo para el análisis.
 
-- Full 3D complex excavation shapes. As-built detailed models and complex 3D shapes can readily be analyzed. Since the stress analysis is based on the boundary element method (BEM), only the surfaces of the excavations (and other features) needs to be specified. There is no need for definition (subdivision into elements) of the pillars between adjacent excavations. Any arbitrary shapes are readily combined into a single large model ready for analysis.
+- Múltiples zonas elásticas con distintos módulos (diques rígidos o mineral blando). Map3D puede incorporar plenamente zonas de materiales alternativos. Esto facilita considerar tipos de roca rígidos o blandos.
 
-- Multiple elastic zones with different moduli (stiff dykes or soft ore). Map3D is fully capable of incorporating alternate material zones. This makes consideration of stiff or soft rock types easy to consider.
+- Zonas con diferentes estados de esfuerzo previos a la explotación.
 
-- Zones with different pre-mining stress states.
+- Explotación tabular con pilares en fluencia. Esta aproximación suele ser adecuada para minas grandes de vetas angostas.
 
-- Tabular mining with yielding pillars. This approximation is often appropriate for large narrow vein mines.
+- Planos de falla discretos no planares que se deslizan y se dilatan de forma elasto-visco-plástica (incluida la fluencia lenta). Estas características se implementan mediante el método de discontinuidad de desplazamiento. Se implementan reglas de flujo elasto-visco-plásticas para adaptarse a una variedad de tipos de comportamiento. El análisis de deslizamiento de fallas, tanto para la explotación como para la simulación de sismos, se resuelve fácilmente.
 
-- Discrete non-planar fault planes that slip and dilate elasto-visco-plastically (including creep). These features are implemented using the displacement discontinuity method. Elasto-visco-plastic flow rules are implemented to accommodate a variety of different types of behaviour. Fault slip analysis for both mining as well as earthquake simulation is readily accommodated.
+- Se pueden simular grietas y fracturas, incluidos los cálculos de la tasa de liberación de energía y del factor de intensidad de esfuerzos. La propagación de fracturas se puede simular como una serie de pasos discretos.
 
-- Cracks and fractures can be simulated including energy release rate and stress intensity calculations. Fracture propagation can be simulated as a series of discrete steps.
+- Se requieren múltiples etapas de explotación para considerar efectos como la colocación de relleno o la propagación de grietas. Actualmente, Map3D permite 40 etapas. Se pueden sustituir distintos materiales en excavaciones o fracturas en cualquier etapa.
 
-- Multiple mining steps are required to consider effects such as backfill placement or crack propagation. Map3D currently allows for 40 steps. Various materials can be substituted into excavations or fractures at any stage.
+- Las intersecciones booleanas automáticas permiten que excavaciones, fallas y fracturas se crucen y se superpongan. Sin esta capacidad, modelar características que se intersectan sería prácticamente imposible en modelos complejos. Map3D maneja estas situaciones con facilidad.
 
-- Automatic Boolean intersections allows for excavations, faults and fractures to cross and overlap. Without this capability, modelling of intersecting features would be practically impossible for complex models. Map3D handles these situations with ease.
-
-- Automated discretization. Models can be manually discretized if desired, or this can be left to the automated routines built into the program. These routines ensure that elements are concentrated only where needed providing consistently high accuracy while optimizing for analysis time.
+- Discretización automatizada. Los modelos se pueden discretizar manualmente si se desea, o se puede dejar esta tarea a las rutinas automatizadas integradas en el programa. Estas rutinas garantizan que los elementos se concentren solo donde se necesitan, lo que proporciona una alta precisión uniforme y optimiza el tiempo de análisis.
 
 ![Figure from page 590](/images/page-590-img-1.png)
 
@@ -43,6 +40,6 @@ The stress analysis utilizes the BEM (boundary element method) and has many feat
 
 ![Figure from page 591](/images/page-591-img-2.png)
 
-A demonstration version of Map3D Fault-Slip is available at no charge. All features are available except the user is only permitted to run small size problems. This version is extremely useful for teaching the fundamentals of modelling, visualization and 3D CAD.
+Hay disponible una versión de demostración de Map3D Fault-Slip sin cargo. Están disponibles todas las funciones, pero solo se permite ejecutar problemas de tamaño pequeño. Esta versión es sumamente útil para enseñar los fundamentos del modelado, la visualización y el CAD 3D.
 
 Map3Di Integrated Seismicity

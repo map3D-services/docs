@@ -2,199 +2,196 @@
 title: "Materiales > Relleno equilibrado en planos DD"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+El material Equilibrated-Gouge se puede usar para describir la respuesta no lineal en planos DD tanto en Map3D Fault-Slip como en Map3D Non-Linear.
 
-Equilibrated-Gouge material can be used to describe non-linear response in DD planes in both Map3D Fault-Slip and Map3D Non-Linear.
-
-This material is similar to the Fault-Gouge material type but automatically adjusts the strength parameters to place the gouge into critical equilibrium at the first mining step.
+Este material es similar al tipo de material Fault-Gouge, pero ajusta automáticamente los parámetros de resistencia para llevar el relleno de falla a un equilibrio crítico en la primera etapa de explotación.
 
 ![Figure from page 557](/images/page-557-img-7.png)
 
-At step 1 of the stress analysis, the elastic stresses are calculated at all locations on the DD fault plane. From this information, the required strength parameters (Cohesion and friction angle) are determined by interpolation such that every location is exactly at the point of failure.
+En la etapa 1 del análisis de esfuerzos, se calculan los esfuerzos elásticos en todas las ubicaciones del plano de falla DD. A partir de esta información, los parámetros de resistencia requeridos (cohesión y ángulo de fricción) se determinan por interpolación, de modo que cada ubicación quede exactamente en el punto de falla.
 
-This is done by linearly interpolating between the specified minimum and maximum strength values. If the elastic stress falls below the minimum, the minimum is used. If the elastic stress falls above the maximum, the maximum is used.
+Esto se hace interpolando linealmente entre los valores mínimo y máximo de resistencia especificados. Si el esfuerzo elástico cae por debajo del mínimo, se usa el mínimo. Si el esfuerzo elástico supera el máximo, se usa el máximo.
 
-The interpolated strength values are then used for all subsequent mining steps.
+Los valores de resistencia interpolados se usan luego en todas las etapas de explotación posteriores.
 
-This can be considered to be the worst case scenario where any mining induced stress change has the potential to case slip on the fault.
+Esto se puede considerar el peor escenario, en el que cualquier cambio de esfuerzo inducido por la explotación tiene el potencial de provocar deslizamiento en la falla.
 
-#### Equilibrated-Gouge in DD planes
+#### Equilibrated-Gouge en planos DD
 
 ![Figure from page 558](/images/page-558-img-2.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name - especifica un nombre descriptivo para el material.
 
-Material # - specifies the material number.
+Material # - especifica el número del material.
 
-- Material #1 is reserved for the host material.
+- El material n.º 1 está reservado para el material huésped.
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+- Los demás números de material se usan para definir zonas de materiales alternativos, como mineral, relleno de falla, relleno, etc.
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+Material Type - especifica el tipo de material (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar o ninguno).
 
-- Fault-Gouge - defines the failure envelope as a straight line in the same as Mohr-Coulomb in DD planes but without _UCS_ .
+- Fault-Gouge - define la envolvente de falla como una línea recta, igual que Mohr-Coulomb en planos DD, pero sin _UCS_ .
 
-- Strength is defined in terms of in-plane shear and normal stresses as follows:
+- La resistencia se define en función de los esfuerzos cortante y normal en el plano de la siguiente manera:
 
-#### Fault-Gouge in DD planes
+#### Fault-Gouge en planos DD
 
 ![Figure from page 558](/images/page-558-img-11.png)
 
-- Tension Cutoff and Cohesion are specified in units of stress (MPa or psi).
+- Tension Cutoff y Cohesion se especifican en unidades de esfuerzo (MPa o psi).
 
-- Friction angle and dilation angle are specified in degrees.
+- El ángulo de fricción y el ángulo de dilatación se especifican en grados.
 
-- Cohesion and friction angle define the shear response.
+- La cohesión y el ángulo de fricción definen la respuesta al corte.
 
-- The tension cutoff defines the response in the direction normal to the shear plane.
+- El límite de tracción (tension cutoff) define la respuesta en la dirección normal al plano de corte.
 
-- Maximum values specify the maximum allowable interpolated strength.
+- Los valores máximos (Maximum) especifican la resistencia interpolada máxima permitida.
 
-- Min values specify the minimum allowable interpolated strength.
+- Los valores mínimos (Min) especifican la resistencia interpolada mínima permitida.
 
-- If fluid pressure is specified as part of the Stress State, the effective normal stress (sn-p) is used (here p is the fluid pressure).
+- Si se especifica la presión de fluido como parte de Stress State, se usa el esfuerzo normal efectivo (sn-p) (aquí p es la presión de fluido).
 
-Normal and Shear Modulus - specify moduli in units of stress (MPa or psi).
+Normal and Shear Modulus - especifique los módulos en unidades de esfuerzo (MPa o psi).
 
-- In DD planes the shear and normal stresses acting on the surfaces of the element are related to the elastic portion of the shear displacement (ride) and normal displacement (closure) through the shear and normal moduli.
+- En los planos DD, los esfuerzos cortante y normal que actúan sobre las superficies del elemento se relacionan con la parte elástica del desplazamiento cortante (deslizamiento) y del desplazamiento normal (cierre) mediante los módulos de corte y normal.
 
-- Peak values of these parameters are used up until failure.
+- Los valores pico de estos parámetros se usan hasta la falla.
 
-- After yielding, the residual values are used.
+- Después de la fluencia, se usan los valores residuales.
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation - especifique la desviación estándar en unidades de esfuerzo (MPa o psi).
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- Este parámetro describe la incertidumbre que se tiene sobre los parámetros de resistencia.
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > InPlane Probability N-distribution.
+- Este parámetro solo se usa para graficar la probabilidad de falla por corte Plot > Strength Factors > InPlane Probability N-distribution.
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip).
+Viscous Modulus ( _Gn_ y _Gs_ ) - Estos parámetros se usan solo en análisis no lineales (bloques FF 3D en Map3D Non-Linear y planos DD en Map3D Fault-Slip).
 
-- The viscous modulus describes the creep response. where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate.
+- El módulo viscoso describe la respuesta de fluencia lenta, donde la resistencia a la fluencia lenta se determina como el coeficiente de fluencia lenta _C_ multiplicado por la tasa de deformación plástica.
 
-- Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ .
+- Observe que se deben seleccionar tanto el coeficiente de fluencia lenta _C_ como el tamaño del paso de tiempo D _t_ , y luego especificar el cociente de ambos como el módulo viscoso _G_ .
 
-- Specify the viscous modulus in units of stress (MPa or psi).
+- Especifique el módulo viscoso en unidades de esfuerzo (MPa o psi).
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow. · Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+Expansion Coefficient y Conductivity solo se usan en Map3D Thermal-Fluid Flow. · Map3D Thermal-Fluid Flow se puede usar para resolver simultáneamente el flujo de calor/fluidos en estado estacionario acoplado al análisis de esfuerzos.
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only - cuando está activada, este material responderá solo de forma elástica; es decir, no se usarán los parámetros de resistencia.
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- Esto se puede usar para definir zonas con distintas propiedades elásticas y/o estados de esfuerzo iniciales. Por ejemplo, diques rígidos, zonas de mineral blando, relleno o elementos de sostenimiento.
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic - cuando está activada, este material responderá de forma elasto-visco-plástica; es decir, los parámetros de resistencia se usarán como regla de flujo.
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- Esto se puede usar para definir zonas con distintas propiedades elásticas y parámetros de resistencia.
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- Observe que en Map3D Fault-Slip solo los elementos DD (es decir, el relleno de falla) pueden responder de forma no lineal.
 
-- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+- En Map3D Non-Linear, el macizo rocoso 3D también puede ceder plásticamente.
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive - cuando está activada, este material no se usará en el análisis de esfuerzos y, por lo tanto, no afectará los esfuerzos, las deformaciones ni los desplazamientos predichos.
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Esto se puede usar para definir zonas con distintos parámetros de resistencia que se usarán al generar contornos de factores de resistencia.
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined - permite especificar parámetros definidos por el usuario para usarlos en los contornos.
 
-- Different parameters are defined for each material number.
+- Se definen parámetros distintos para cada número de material.
 
 #### Plot > Stress > User
 
-   - These parameters are used with
+   - Estos parámetros se usan con
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Esto se puede usar para definir zonas con distintos parámetros de resistencia que se usarán al generar contornos de factores de resistencia.
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File - permite volcar todos los datos de propiedades de los materiales a un archivo para verlos en el Bloc de notas o en Excel.
 
-Copy from material allows you to copy the material properties from one material number to another. All properties including the stress state are copied.
+Copy from material permite copiar las propiedades del material de un número de material a otro. Se copian todas las propiedades, incluido el estado de esfuerzos.
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State - especifica el estado de esfuerzos inicial (en campo lejano) del material.
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- La mayoría de los materiales se insertan en bloques con el mismo estado de esfuerzos (en campo lejano).
 
-#### · Materials such as props or backfill are placed at near zero initial stresses.
+#### · Los materiales como puntales o relleno se colocan con esfuerzos iniciales casi nulos.
 
-In elastic analysis the shear and normal stresses in the plane of weakness (on a fault, joint set or bedding plane) are normally used with the Mohr-Coulomb strength criterion to estimate the amount of damage due to over-stressing. One can expect that more excess stress in an elastic analysis would in general correlate with increased amounts of plastic strain (slip) in a non-linear analysis. Since these parameters are orientation dependant, this criterion is representative for anisotropic rock mass stability.
+En el análisis elástico, los esfuerzos cortante y normal en el plano de debilidad (en una falla, un conjunto de diaclasas o un plano de estratificación) se usan normalmente con el criterio de resistencia de Mohr-Coulomb para estimar la cantidad de daño por sobreesfuerzo. Cabe esperar que un mayor esfuerzo en exceso en un análisis elástico se correlacione, en general, con mayores cantidades de deformación plástica (deslizamiento) en un análisis no lineal. Como estos parámetros dependen de la orientación, este criterio es representativo de la estabilidad de un macizo rocoso anisótropo.
 
-**Fault-Gouge in DD planes**
+**Fault-Gouge en planos DD**
 
 ![Figure from page 560](/images/page-560-img-4.png)
 
-Over-stressing can be presented in several ways including:
+El sobreesfuerzo se puede presentar de varias formas, entre ellas:
 
-Plot > Strength Factors > dTip In-Plane excess shear stress
+Plot > Strength Factors > dTip Esfuerzo cortante en exceso en el plano
 
-Plot > Strength Factors > dTub Ubiquitous-plane excess shear stress
+Plot > Strength Factors > dTub Esfuerzo cortante en exceso en el plano ubicuo
 
 Plot > Strength Factors > SF-ip Strength/Stress
 
 Plot > Strength Factors > SF-ub Strength/Stress
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used (in this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium). Hence for non-linear analysis one normally directly considers the plastic strain or the plastic strain rate predicted by the model as an indicator of damage.
+En cambio, en el análisis no lineal los esfuerzos nunca pueden superar la resistencia, a menos que se use algo de fluencia lenta (en este último caso, la fluencia lenta viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático). Por lo tanto, en el análisis no lineal normalmente se considera directamente la deformación plástica o la tasa de deformación plástica predicha por el modelo como indicador de daño.
 
-In DD planes, the elastic strains are determined from the stresses by
+En planos DD, las deformaciones elásticas se determinan a partir de los esfuerzos mediante
 
 ts = tf + _Shear Modulus_ eselastic
 
 sn = sf + _Normal Modulus_ enelastic
 
-where _Shear Modulus_ and _Normal Modulus_ represent respectively the elastic moduli of the gouge material in the shear and normal directions, and tf and sf represent the initial stress state in the shear and normal directions, and
+donde _Shear Modulus_ y _Normal Modulus_ representan, respectivamente, los módulos elásticos del material de relleno de falla en las direcciones de corte y normal, y tf y sf representan el estado de esfuerzos inicial en las direcciones de corte y normal, y
 
 eselastic =  dselastic / _Thickness_
 
 enelastic =  dnelastic / _Thickness_
 
-where dselastic and dnelastic represent respectively the elastic component of the shear displacement (ride) and normal displacement (closure) and _Thickness_ represents the DD plane thickness (i.e. fault gouge, seam width, mining width or pillar height). The DD plane thickness is set using
+donde dselastic y dnelastic representan, respectivamente, la componente elástica del desplazamiento cortante (deslizamiento) y del desplazamiento normal (cierre), y _Thickness_ representa el espesor del plano DD (es decir, relleno de falla, ancho de veta, ancho de explotación o altura del pilar). El espesor del plano DD se establece con
 
 #### CAD > Build > DDLoop
 
-and can be modified using
+y se puede modificar con
 
 #### CAD > Edit > Entity Properties
 
-In DD elements, if the shear stress goes above the strength, the plastic strain can be determined by limiting the stress
+En elementos DD, si el esfuerzo cortante supera la resistencia, la deformación plástica se puede determinar limitando el esfuerzo
 
 ts - ts° - _C_ Desplastic /D _t_ = _Cohesion_ + tan(j) ( sn - sn° - _C_ Denplastic /D _t_ )
 
-where
+donde
 
 ts° = _Shear Modulus_ esplastic
 
 sn° = _Normal Modulus_ enplastic
 
-The accumulated plastic strain eplastic, is determined as the sum of the plastic creep increments Deplastic, for all creep steps.
+La deformación plástica acumulada eplastic se determina como la suma de los incrementos de fluencia plástica Deplastic de todos los pasos de fluencia.
 
-If the normal stress goes below the tension cutoff, the plastic strain can be determined by limiting the stress
+Si el esfuerzo normal cae por debajo del límite de tracción (tension cutoff), la deformación plástica se puede determinar limitando el esfuerzo
 
 sn - sn° - _C_ Denplastic /D _t_ = _To_
 
-In the case of shear failure, the plastic normal strain can also have a dilation component
+En el caso de falla por corte, la deformación normal plástica también puede tener una componente de dilatación
 
 enplastic = tan( _dilation angle_ ) esplastic
 
-The total strain is equal to the sum of the elastic and plastic parts.
+La deformación total es igual a la suma de las partes elástica y plástica.
 
-The creep response is simulated using a linear (Bingham) creep model.
+La respuesta de fluencia lenta se simula con un modelo de fluencia lineal (de Bingham).
 
 ![Figure from page 561](/images/page-561-img-19.png)
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance
+En cada paso de fluencia, el estado de esfuerzos en todos los elementos en fluencia (elementos donde el esfuerzo supera la resistencia) se calcula como la resistencia más la resistencia a la fluencia lenta
 
 _Strength_ + _C_ Denplastic /D _t_
 
 _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The creep resistance can be used simply as a technique for damping the non-linear deformations or for real time dependent creep simulation
+donde la resistencia a la fluencia lenta se determina como el coeficiente de fluencia lenta _C_ multiplicado por la tasa de deformación plástica. Observe que se deben seleccionar tanto el coeficiente de fluencia lenta _C_ como el tamaño del paso de tiempo D _t_ , y luego especificar el cociente de ambos como el módulo viscoso _G_ . La resistencia a la fluencia lenta se puede usar simplemente como técnica para amortiguar las deformaciones no lineales o para una simulación real de fluencia lenta dependiente del tiempo
 
 #### Analysis > Options > Creep
 
-The strains, shear displacement (ride) and normal displacement (closure) can be presented in several ways including:
+Las deformaciones, el desplazamiento cortante (deslizamiento) y el desplazamiento normal (cierre) se pueden presentar de varias formas, entre ellas:
 
 #### Plot > Surface > Value > Elastic
 
 **546 Map3D User's Manual - Version 72** Plot > Surface > Value > Plastic Plot > Surface > Value > Total Plot > Strain > E1 - Major principal strain Plot > Surface > Es Shear Strain Plot > Surface > En Normal Strain Plot > Surface > ds Shear Displacement (Ride) Plot > Surface > dn Normal Displacement (Closure)
 
-Also of interest is the plastic creep increment Deplastic, the contribution to the shear resistance from the viscous element
+También es de interés el incremento de fluencia plástica Deplastic, la contribución a la resistencia al corte del elemento viscoso
 
-Dts   = _C_ Desplastic /D _t_ Plot > Surface > dEs Incremental Shear Strain Plot > Surface > dTs Excess Shear Stress Related Topics: Mohr-Coulomb in DD planes Backfill-Hyperbolic in DD planes
+Dts   = _C_ Desplastic /D _t_ Plot > Surface > dEs Incremental Shear Strain Plot > Surface > dTs Excess Shear Stress Temas relacionados: Mohr-Coulomb en planos DD Backfill-Hyperbolic en planos DD

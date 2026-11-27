@@ -2,47 +2,44 @@
 title: "分析 > 选项 > P-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间将部分系数矩阵存储在物理 RAM 中。
 
-Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+如果您的计算机安装了大容量 RAM，此选项可能会显著加快执行速度，因为从 RAM 检索数据比从磁盘快得多。虽然 32 位 Windows 只允许每个进程寻址 2GB，但对于计算机中装有大容量 RAM 的用户，可以使用 AWE（Address Windowing Extensions，地址窗口扩展）访问物理 RAM。AWE 允许访问计算机中所有可用的 RAM。大多数系统可支持 4GB RAM，有些可支持超过 64GB。不同版本的 Windows 提供不同级别的 AWE 支持，范围从 1GB 到 512GB。以下 Windows 版本提供 AWE 支持：
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+- Windows 10 Professional 和 Server（最大 4 GB）。
 
-- Windows 10 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0、Windows 2000 Professional 和 Server（最大 4 GB）。
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows 2000 Advanced Server（最大 8 GB）。
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Datacenter Server（最大 32 GB）。
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows XP Professional 和 Windows Server 2003（最大 4 GB）。
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows Server 2003 Enterprise Edition（最大 32 GB）。
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Datacenter Edition（最大 64 GB）。
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows 7 和 8。
 
-- Windows 7 & 8.
+- Windows 10 和 11 Pro（家庭版不支持此功能）。
 
-- Windows 10 & 11 Pro (the home version does not support this).
-
-AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+AWE 需要“SE_LOCK_MEMORY”权限。要启用 AWE，请按以下步骤操作：
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+然后设置
 
 Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+必须重新启动后此设置才能生效。
 
-Notes:
+注意：
 
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+仅应分配您希望 Map3D 使用的 RAM 量，并确保为您打算运行的任何其他应用程序留出足够的空间。
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+切勿将此参数设置为大于可用 RAM 的值，否则会导致操作系统过度分页，从而显著减慢分析速度。

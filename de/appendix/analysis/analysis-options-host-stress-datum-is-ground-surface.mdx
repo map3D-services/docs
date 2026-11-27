@@ -2,19 +2,16 @@
 title: "Analyse > Optionen > Bezugsniveau der Primärspannung ist die Geländeoberfläche"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Legt fest, dass das Bezugsniveau der Primärspannung von Material Nr. 1 (Wirtsgestein) während der Map3D-BEM-Analyse als Geländeoberfläche behandelt wird.
 
-Specifies that the host material #1 stress datum will be treated as ground surface - during Map3D BEM analysis.
+Wenn nicht aktiviert, werden allen Hohlraumoberflächen Spannungen von null zugewiesen.
 
-When not checked, all excavation surfaces are assigned zero stresses.
+Wenn aktiviert, werden allen Elementoberflächen mit **_z_**-Koordinaten oberhalb des Bezugsniveaus der Primärspannung von Material Nr. 1 (es wird angenommen, dass **_z_** nach oben positiv ist) Spannungen zugewiesen, die den angegebenen Werten des Primärspannungszustands (Stress State) vor dem Abbau entsprechen. Dadurch wird der Einfluss dieser Elemente minimiert und die Genauigkeit verbessert. Beachten Sie, dass dies nur wirksam ist, wenn die Geländeoberfläche eben ist.
 
-When checked, all element surfaces with **_z_** -coordinates above the host material #1 stress datum (it is assumed that **_z_** is positive upwards), will be assigned stresses equal to the specified pre-mining Stress State values. This minimizes the influence of these elements and thus improves accuracy. Note that this is only effective when the ground surface is planar.
+#### Hinweise:
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss vor der Durchführung der Map3D-BEM-Analyse aktiviert werden
 
 Analysis > BEM Analysis
 
-This option does not require any additional calculations and hence will not increase analysis time.
+Diese Option erfordert keine zusätzlichen Berechnungen und erhöht daher die Analysezeit nicht.

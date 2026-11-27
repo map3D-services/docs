@@ -2,19 +2,16 @@
 title: "Análise > Opções > Mover pontos"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Move os pontos de campo que estão muito próximos das superfícies de contorno durante a análise BEM do Map3D.
 
-Move field points that are very close to boundary surfaces – during Map3D BEM analysis.
+Os pontos de campo (resultados em planos de grade ou em pontos definidos pelo usuário) localizados a uma fração da largura de um elemento de um canto ou de uma aresta do elemento têm precisão muito baixa, o que muitas vezes indica concentrações de tensão irrealisticamente grandes. Ao mover esses pontos para o nó de contorno mais próximo, é possível obter previsões de tensão mais realistas. Esta opção move apenas os pontos que estão a menos de ¼ de _AG_ (_AG_ é o espaçamento mínimo permitido da grade, consulte Análise > CParams > AG) da superfície.
 
-Field points (results on grid planes or at user defined points) that are located within a fraction of an element width from an element corner or edge will have very poor accuracy often indicating unrealistically large stress concentrations. By moving such points to the nearest boundary node, more realistic stress predictions can be obtained. This option only moves points that are within ¼ of _AG_ ( _AG_ is the minimum allowable grid spacing, see Analysis > CParams > AG) from the surface.
+Este recurso também faz com que os pontos de campo que estão logo dentro das escavações (a menos de ½ de _AG_) sejam movidos para a superfície da escavação, proporcionando assim um contorno suave dos resultados até a superfície da escavação.
 
-This feature also causes field points that are just inside excavations (within ½  of _AG_ ) to be moved onto the excavation surface, and thus provides smooth contouring of results right up to the excavation surface.
+#### Notas:
 
-#### Notes:
+Esta função deve ser marcada antes de executar a análise BEM do Map3D
 
-This function must be checked before conducting the Map3D BEM analysis
+#### Análise > Análise BEM.
 
-#### Analysis > BEM Analysis.
-
-It is recommended that you check this option unless you specifically do not want field points moved.
+Recomenda-se marcar esta opção, a menos que você não queira especificamente que os pontos de campo sejam movidos.

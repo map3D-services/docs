@@ -2,55 +2,52 @@
 title: "Archivo > Formato de archivo de modelo PNT"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+El formato PNT es un archivo de datos ASCII universal con la extensión ".PNT".
 
-PNT format is a universal ASCII data file with the extension ".PNT".
+Este formato es útil para intercambiar datos sin procesar del modelo con otro software CAD.
 
-This format is useful for exchanging raw model data with other CAD software.
+Las líneas de comentario deben comenzar con un asterisco "*" en la columna 1.
 
-Comment lines must start with an asterisk "*" in column 1.
-
-Map3D FF blocks and DD planes are stored as a series of polylines as follows:
+Los bloques FF y los planos DD de Map3D se almacenan como una serie de polilíneas de la siguiente manera:
 
 **x1 y1 z1 3 colour mtype x2 y1 z1 2 x3 y3 z3 2 x4 y4 z4 2 x5 y5 z5 1 x6 y6 z6 1 x7 y7 z7 1 x8 y8 z8 1**
 
-where **xi yi zi** represent the coordinates of each point,
+donde **xi yi zi** representan las coordenadas de cada punto,
 
-- **3** indicates that this point is the beginning of a new polyline,
+- **3** indica que este punto es el inicio de una nueva polilínea,
 
-**2** indicates that this point forms part of the base of the block,
+**2** indica que este punto forma parte de la base del bloque,
 
-- **1** indicates that this point forms part of the top of the block. This item is only used for definition of 3D block shapes.
+- **1** indica que este punto forma parte de la parte superior del bloque. Este elemento solo se usa para definir formas de bloques 3D.
 
-**colour** specifies the colour number that will be used to display the block.
+**colour** especifica el número de color que se usará para mostrar el bloque.
 
-A total of 10 colours are available for display.
+Hay un total de 10 colores disponibles para la visualización.
 
-- These are numbered respectively 1 through 10, 11 through 20, 21 through 30, etc., such that the same colour is displayed for number 1, 11, 21, 31..., 2, 22, 32..., etc.
+- Se numeran del 1 al 10, del 11 al 20, del 21 al 30, etc., de modo que se muestra el mismo color para los números 1, 11, 21, 31..., 2, 22, 32..., etc.
 
-**mtype** specifies the type of boundary element that will be used for the block.
+**mtype** especifica el tipo de elemento de contorno que se usará para el bloque.
 
-For three-dimensional features such as excavations, alternate material zones, back-filled stopes etc., Fictitious Force type 1 elements should be used
+Para elementos tridimensionales, como excavaciones, zonas de material alternativo, tajeos rellenados, etc., se deben usar elementos de fuerza ficticia (Fictitious Force) de tipo 1
 
-CAD > Build > Block and CAD > Build > Block for details.
+CAD > Build > Block y CAD > Build > Block para obtener más detalles.
 
-- Displacement Discontinuity type 2 elements should be used for tabular mining excavations, fractures and fault planes
+- Se deben usar elementos de discontinuidad de desplazamiento (Displacement Discontinuity) de tipo 2 para excavaciones de minería tabular, fracturas y planos de falla
 
-CAD > Build > DDLoop for details.
+CAD > Build > DDLoop para obtener más detalles.
 
-Inactive elements (98 for inactive 3D blocks and 99 for inactive DD planes) can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+Los elementos inactivos (98 para bloques 3D inactivos y 99 para planos DD inactivos) se pueden usar para mostrar elementos que se incluyen solo con fines de visualización y que no se usan en el análisis de esfuerzos propiamente dicho.
 
-Additional polylines are specified by repeating the sequence (i.e. starting a new line with the number **3** ).
+Las polilíneas adicionales se especifican repitiendo la secuencia (es decir, iniciando una nueva línea con el número **3** ).
 
-#### Notes
+#### Notas
 
-Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable using
+Se deben usar distintos números de color para representar agrupaciones lógicas de bloques (por ejemplo, para distintos niveles, secciones o unidades lógicas de minería, como desarrollo, tajeo, etc.). Estos colores son definibles por el usuario mediante
 
 #### Tools > Custom Colours
 
-Map3D will automatically combine any blocks with the same colour number into single complex shapes.
+Map3D combina automáticamente los bloques con el mismo número de color en formas complejas únicas.
 
-Since it is easy to toggle on and off the display of specific block colour numbers, this provides an efficient method to work with complex model data
+Como es fácil activar y desactivar la visualización de números de color específicos de bloques, esto ofrece un método eficiente para trabajar con datos complejos del modelo
 
 #### View > Hide Block Colours

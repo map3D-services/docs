@@ -2,23 +2,20 @@
 title: "Análise > Opções > Colocação com deformação zero"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Usa a colocação de suporte com deformação zero durante a análise BEM do Map3D.
 
-Use zero strain support placement – during Map3D BEM analysis.
+Esta opção permite simular elementos de suporte de terreno. Ao simular sistemas de suporte rígidos, como arcos, cambotas de aço, escoras, revestimentos espessos, cribs, aterro resistente etc., é necessário modelar o
 
-This option enables simulation of ground support elements. When simulating stiff support systems such as arches, steel sets, props, thick liners, chalks, strong backfill etc., it is necessary to model the
+movimento do terreno até o momento da colocação do suporte e, em seguida, inserir os elementos de suporte em um estado livre de tensão/deformação ou com uma pré-tensão prescrita. Este recurso é particularmente útil para a simulação de elementos de suporte estrutural e permite a colocação, a modificação das propriedades e a remoção posterior, se desejado. Esta opção foi habilitada para uso com blocos FF 3D e/ou planos DD.
 
-ground movement up to the point of support placement, then insert the support elements either in a stress/strain free state, or with a prescribed pre-stressing. This feature is particularly useful for simulation of structural support elements and can accommodate placement, modification of properties and subsequent removal if desired. This option has been enabled for use with 3D FF blocks and/or DD planes.
+Para habilitar este recurso, primeiro você deve escavar o elemento de suporte desejado (um bloco FF 3D ou um plano DD) até o estado pré-tensionado desejado (use um código de material zero para tensões nulas ou um número de material negativo para um estado de tensão prescrito) e, em uma etapa de lavra subsequente, inserir o material de suporte (use um número de material positivo para isso). Com a opção Análise > Opções > Colocação com deformação zero marcada, o Map3D executa os cálculos necessários para colocar os elementos de suporte em um estado livre de tensão/deformação ou com uma pré-tensão prescrita na etapa de lavra atual. A ação de escavar até um estado de tensão zero ou prescrito, seguida da inserção de um material alternativo, sinaliza ao Map3D que deve executar os cálculos necessários.
 
-To enable this feature you must first excavate the desired support element (either a 3D FF block or DD plane) to the desired pre-stressed state (use a zero material code for zero stresses or a negative material number for a prescribed stress state), then in a subsequent mining step insert the support material (use a positive material number to do this). With the Analysis > Options > Zero Strain Support Placement option checked, Map3D conducts the necessary calculations to place support elements in a stress/strain free state or with a prescribed pre-stressing at the current mining step. The action of excavation to a zero or prescribed stress state followed by insertion of an alternate material signals Map3D to conduct the required calculations.
+Sem esta opção, todos os materiais são colocados no estado de deformação pré-lavra. Isso pode causar tensões grandes errôneas, particularmente em elementos de suporte rígidos.
 
-Without this option, all materials are placed at the pre-mining deformation state. This can cause erroneous large stresses particularly in stiff support elements.
+Notas:
 
-Notes:
+Esta função deve ser marcada antes de executar a análise BEM do Map3D
 
-This function must be checked before conducting the Map3D BEM analysis
+Análise > Análise BEM
 
-Analysis > BEM Analysis
-
-This option requires additional calculations and hence increases analysis time.
+Esta opção requer cálculos adicionais e, portanto, aumenta o tempo de análise.

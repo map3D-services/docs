@@ -2,19 +2,16 @@
 title: "Analyse > Options > Précision du regroupement"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Lorsque cette option est cochée, le regroupement n'est autorisé qu'entre des éléments adjacents qui partagent le même système de coordonnées local (c.-à-d. des normales parallèles et des côtés parallèles). Cela garantit une précision relativement bonne des zones regroupées.
 
-When this option is checked, lumping will only be allowed between adjacent elements that share the same local coordinate system (i.e. parallel normals and parallel sides). This ensures relatively good accuracy of lumped zones.
+Lorsque cette option n'est pas cochée, le regroupement est autorisé entre tous les éléments adjacents, quelle que soit leur orientation. Cette procédure augmente le regroupement et donc réduit la taille de la matrice des coefficients, mais au prix d'une précision moindre des résultats.
 
-When this option is not checked, lumping will be allowed between all adjacent elements regardless of the orientation. This procedure will result in increased lumping and hence smaller coefficient matrix size, but at the expense of reduced accuracy of the results.
-
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+La méthode des éléments de frontière génère une matrice de coefficients entièrement remplie, de taille 4•n² octets, où n est le nombre de degrés de liberté. Même pour de petits problèmes, l'espace disque requis et le temps d'analyse peuvent devenir très importants (p. ex. 20 000 degrés de liberté exigent 2 Go d'espace disque sans regroupement). Les grands problèmes deviennent rapidement impossibles à résoudre (p. ex. 200 000 degrés de liberté exigent 160 Go d'espace disque sans regroupement). Pour surmonter ce problème, Map3D applique une procédure appelée regroupement matriciel (matrix lumping). Elle réduit généralement la taille de la matrice des coefficients d'un facteur 10 pour les petits problèmes et de plus de 100 pour les grands problèmes.
 
 Notes
 
-This function must be checked before conducting the discretization analysis
+Cette fonction doit être cochée avant de lancer l'analyse de discrétisation
 
 #### Analysis > Discretization
 
-Refer to Analysis > Options > Lumping for information on lumping.
+Reportez-vous à Analysis > Options > Lumping pour plus d'informations sur le regroupement.

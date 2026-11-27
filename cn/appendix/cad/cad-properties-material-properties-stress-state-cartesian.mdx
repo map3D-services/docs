@@ -2,41 +2,38 @@
 title: "CAD > 属性 > 材料属性 > 应力状态 > 笛卡尔坐标"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
-The pre-mining stress state is specified as a linear variation with depth in either Cartesian or principal components.
+开采前应力状态按随深度线性变化来指定，可使用笛卡尔分量或主应力分量。
 
 ![Figure from page 521](/images/page-521-img-3.png)
 
-The variation of each of the Cartesian components is described as a linear variation with depth as (for example for the sxx component)
+各笛卡尔分量随深度的变化描述为线性变化（以 sxx 分量为例）：
 
 - sxx + Dsxx ( _z_ - _Datum_ )
 
-To determine appropriate values for each of these components the user must first select a depth
+要确定这些分量的合适取值，用户必须首先选择一个深度
 
 - ( _z_ = _Datum_ )
 
-where the stresses have known values. These later values are the
+该深度处的应力值已知。这些应力值即为
 
 sxx  syy  szz  txy  tyz  txz
 
-constant values.
+常数值。
 
-The variation of each component with depth can then be specified as
+随后可将各分量随深度的变化指定为
 
 Dsxx  Dsyy  Dszz  Dtxy  Dtyz  Dtxz
 
-variation values. If you have set up your coordinate system with _z_ positive up, then the variations should be specified as negative quantities so that the stresses increase with depth.
+变化值。如果坐标系设置为 _z_ 向上为正，则变化值应指定为负值，以使应力随深度增大。
 
-For example if you know that the sxx component has a value of
+例如，如果已知 sxx 分量在 _z_ = -1000m 处的值为
 
-30 MPa at _z_ = -1000m
+30 MPa
 
-and varies as ( _z_ is positive up)
+且按下式变化（_z_ 向上为正）
 
 - 0.027 MPa/m
 
-you would specify
+则应指定
 
 Datum = -1000 sxx = 30 Dsxx = -0.027

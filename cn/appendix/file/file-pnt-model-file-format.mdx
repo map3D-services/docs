@@ -2,55 +2,52 @@
 title: "文件 > PNT 模型文件格式"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+PNT 格式是一种通用的 ASCII 数据文件，扩展名为 ".PNT"。
 
-PNT format is a universal ASCII data file with the extension ".PNT".
+该格式适用于与其他 CAD 软件交换原始模型数据。
 
-This format is useful for exchanging raw model data with other CAD software.
+注释行必须以星号 "*" 开头，且位于第 1 列。
 
-Comment lines must start with an asterisk "*" in column 1.
-
-Map3D FF blocks and DD planes are stored as a series of polylines as follows:
+Map3D 的 FF 块体和 DD 平面按如下方式存储为一系列折线：
 
 **x1 y1 z1 3 colour mtype x2 y1 z1 2 x3 y3 z3 2 x4 y4 z4 2 x5 y5 z5 1 x6 y6 z6 1 x7 y7 z7 1 x8 y8 z8 1**
 
-where **xi yi zi** represent the coordinates of each point,
+其中 **xi yi zi** 表示各点的坐标，
 
-- **3** indicates that this point is the beginning of a new polyline,
+- **3** 表示该点是新折线的起点，
 
-**2** indicates that this point forms part of the base of the block,
+**2** 表示该点构成块体底面的一部分，
 
-- **1** indicates that this point forms part of the top of the block. This item is only used for definition of 3D block shapes.
+- **1** 表示该点构成块体顶面的一部分。该项仅用于定义三维块体形状。
 
-**colour** specifies the colour number that will be used to display the block.
+**colour** 指定用于显示该块体的颜色编号。
 
-A total of 10 colours are available for display.
+共有 10 种显示颜色。
 
-- These are numbered respectively 1 through 10, 11 through 20, 21 through 30, etc., such that the same colour is displayed for number 1, 11, 21, 31..., 2, 22, 32..., etc.
+- 它们依次编号为 1 至 10、11 至 20、21 至 30 等，因此编号 1、11、21、31……，2、22、32……等显示相同的颜色。
 
-**mtype** specifies the type of boundary element that will be used for the block.
+**mtype** 指定该块体所使用的边界单元类型。
 
-For three-dimensional features such as excavations, alternate material zones, back-filled stopes etc., Fictitious Force type 1 elements should be used
+对于开挖空间、替代材料区、充填采场等三维特征，应使用类型 1 的虚拟力（Fictitious Force）单元
 
-CAD > Build > Block and CAD > Build > Block for details.
+详见 CAD > Build > Block 和 CAD > Build > Block。
 
-- Displacement Discontinuity type 2 elements should be used for tabular mining excavations, fractures and fault planes
+- 对于层状开采的开挖空间、裂隙和断层面，应使用类型 2 的位移不连续（Displacement Discontinuity）单元
 
-CAD > Build > DDLoop for details.
+详见 CAD > Build > DDLoop。
 
-Inactive elements (98 for inactive 3D blocks and 99 for inactive DD planes) can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+非激活单元（98 表示非激活三维块体，99 表示非激活 DD 平面）可用于显示仅供可视化的特征，这些特征不用于实际应力分析。
 
-Additional polylines are specified by repeating the sequence (i.e. starting a new line with the number **3** ).
+重复该序列（即以数字 **3** 开始新的一行）即可指定更多折线。
 
-#### Notes
+#### 注意
 
-Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). These colours are user definable using
+应使用不同的颜色编号来表示块体的逻辑分组（例如不同的水平、剖面，或开拓、采场回采等逻辑开采单元）。这些颜色可通过以下命令自定义
 
 #### Tools > Custom Colours
 
-Map3D will automatically combine any blocks with the same colour number into single complex shapes.
+Map3D 会自动将具有相同颜色编号的块体合并为单个复杂形状。
 
-Since it is easy to toggle on and off the display of specific block colour numbers, this provides an efficient method to work with complex model data
+由于可以方便地开关特定块体颜色编号的显示，因此这为处理复杂的模型数据提供了一种高效的方法
 
 #### View > Hide Block Colours

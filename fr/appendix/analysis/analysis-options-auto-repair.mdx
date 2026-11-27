@@ -2,23 +2,20 @@
 title: "Analyse > Options > Réparation automatique"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Tente de réparer votre modèle en comblant les vides, en supprimant les doublons, etc. – pendant le chargement du fichier.
 
-Attempts to repair you model by filling gaps, deleting duplicates etc.- during file load.
+Prétraitement du modèle pour détecter les erreurs courantes de construction, notamment :
 
-Model pre-processing to detect common model building errors including:
+- détection et comblement automatique des vides simples, comme des surfaces manquantes - surlignés en **noir** .
 
-- detection and automatic filling of simple gaps such as missing surfaces - highlighted in **black** .
+- détection et suppression automatique des blocs en double - surlignés en **vert** .
 
-- detection and automatic deletion of duplicate blocks - highlighted in **green** .
+- détection des vides étroits entre des blocs adjacents - surlignés en **bleu** . L'avertissement est généré chaque fois que le vide est inférieur à 1/1000 de la largeur de l'élément.
 
-- detection of narrow gaps between adjacent blocks - highlighted in **blue** . The warning is generated when ever the gap is less than 1/1000 of the element width.
+- détection des arêtes qui se raccordent à rebours à d'autres arêtes - surlignées en **blanc** .
 
-- detection of edges that link the wrong way to other edges - highlighted in **white** .
+- détection des arêtes qui ne se raccordent à aucune autre arête - surlignées en rouge .
 
-- detection of edges that do not link to any other edges - highlighted in red .
+- détection des arêtes qui se raccordent à trop d'autres arêtes - surlignées en jaune .
 
-- detection of edges that link to too many other edges - highlighted in yellow .
-
-The above model problems will not necessarily stop Map3D from running properly, but close scrutiny of these locations will help user's debug problems and find unintended construction errors.
+Les problèmes de modèle ci-dessus n'empêchent pas nécessairement Map3D de fonctionner correctement, mais un examen attentif de ces emplacements aide l'utilisateur à déboguer les problèmes et à repérer les erreurs de construction involontaires.

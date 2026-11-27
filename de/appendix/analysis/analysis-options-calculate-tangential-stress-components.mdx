@@ -2,21 +2,18 @@
 title: "Analyse > Optionen > Tangentiale Spannungskomponenten berechnen"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Legt fest, dass die tangentialen Spannungskomponenten auf der Elementoberfläche berechnet werden – während der Map3D-BEM-Analyse.
 
-Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+Ist die Option nicht aktiviert, werden nur Normal- und Schubspannungen berechnet. Tangentialspannungen werden nicht berechnet, da sie für die Lösung nicht erforderlich sind.
 
-When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+Ist die Option aktiviert, werden alle sechs Spannungskomponenten (Normal-, Schub- und Tangentialspannungen) berechnet. Tangentiale Spannungskomponenten sind oft wünschenswert, da sie die Randfaserspannung darstellen, d. h. die Spannungen tangential zu einer Oberfläche.
 
-When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+Die maximale Tangentialspannung wird häufig in ähnlicher Weise mit der einaxialen Druckfestigkeit des Materials verglichen wie die Wandspannung in der Ebene **[ 3 σ1i - σ3i ]**.
 
-The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+#### Hinweise:
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss aktiviert sein, bevor die Map3D-BEM-Analyse durchgeführt wird
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+Diese Option erfordert zusätzliche Berechnungen und verlängert daher die Analysedauer.

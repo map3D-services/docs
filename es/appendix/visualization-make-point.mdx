@@ -2,49 +2,46 @@
 title: "Visualización > Crear punto"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Crea un nuevo punto de visualización. Consulte Visualization para ver una descripción de las rutinas de visualización disponibles en Map3D.
 
-Creates a new visualization point. Refer to Visualization for  a description of the visualization routines available in Map3D.
+Los puntos de visualización se pueden mostrar como esferas con sombreado de fuente de luz cuyo diámetro y/o color varía según la magnitud, y se pueden representar con contornos sobre un plano para mostrar la densidad, etc.
 
-Visualization points can be displayed as light source shaded spheres with diameter and/or colour varying as magnitude, and contoured on a plane to display density etc.
+Cada punto se puede etiquetar con una serie de:
 
-Each point can be tagged with a series of:
+- valores numéricos (p. ej., color, magnitud, orientación, etc.)
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- mensajes de texto
 
-- text messages
+- nombres de archivo (p. ej., archivos de gráficos, documentos, hojas de cálculo, etc.)
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+Al hacer clic con el botón izquierdo en un punto, la ubicación, la magnitud y el mensaje de texto se muestran en la barra de estado.
 
-Upon left clicking on a point, the location, magnitude and text message are displayed on the status bar.
+Al hacer clic con el botón derecho en un punto se activa la base de datos visual (Visual Database). Esta función se puede usar para mostrar una base de datos con información geológica útil, como la ley, la calidad del macizo rocoso, etc.
 
-Right clicking on a point activates the Visual Database. This feature can be used to display a database of useful geologic information such as grade, rock mass quality etc.
+Al activar la función, se solicitan las coordenadas del nuevo punto de visualización.
 
-Upon activating the feature, the user will be prompted to supply the coordinates of the new visualization point.
-
-Note that if a visualization file is already active, this new point will be added to the file. If there is no active visualization file the user will be prompted open one and this new point will be added to the file.
+Tenga en cuenta que, si ya hay un archivo de visualización activo, este nuevo punto se agregará al archivo. Si no hay ningún archivo de visualización activo, se solicitará abrir uno y este nuevo punto se agregará al archivo.
 
 ![Figure from page 617](/images/page-617-img-1.png)
 
-X, Y and Z coordinate - specifies the coordinates of the visualization point.
+X, Y and Z coordinate - especifica las coordenadas del punto de visualización.
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the coordinates from the model.
+Pick - activa la retícula del cursor para seleccionar de forma interactiva las coordenadas del modelo.
 
-To assist in visually selecting points from the model, all snap functions are available.
+Para facilitar la selección visual de puntos del modelo, están disponibles todas las funciones de referencia a objetos (snap).
 
 #### CAD > Snap
 
-Once selected, the coordinates of the visualization point are displayed in the dialogue box.
+Una vez seleccionadas, las coordenadas del punto de visualización se muestran en el cuadro de diálogo.
 
-Centroid - activates the cursor so the user can select an entity from the model. The coordinates will be calculated at the centre of the selected entity.
+Centroid - activa el cursor para seleccionar una entidad del modelo. Las coordenadas se calcularán en el centro de la entidad seleccionada.
 
-OK - completes editing of the coordinates and creates and displays the visualization point.
+OK - finaliza la edición de las coordenadas y crea y muestra el punto de visualización.
 
-Once the visualization point is created, the user can now right click on the point to add text messages and/or file names.
+Una vez creado el punto de visualización, se puede hacer clic con el botón derecho en el punto para agregar mensajes de texto y/o nombres de archivo.
 
-- The text message and file name are displayed in the status bar across the bottom of the screen by picking an event with the left mouse button.
+- El mensaje de texto y el nombre de archivo se muestran en la barra de estado en la parte inferior de la pantalla al seleccionar un evento con el botón izquierdo del mouse.
 
-- They can also be edited by picking an event with the right mouse button.
+- También se pueden editar al seleccionar un evento con el botón derecho del mouse.
 
-- Picking with the right mouse button also allows for display of the file if the file name has been associated with an application (refer to Windows documentation on how to "Associate a file with a program").
+- Al seleccionar con el botón derecho del mouse también se puede mostrar el archivo, si el nombre de archivo se ha asociado con una aplicación (consulte la documentación de Windows sobre cómo "Asociar un archivo con un programa").

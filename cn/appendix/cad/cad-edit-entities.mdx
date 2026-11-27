@@ -2,59 +2,56 @@
 title: "CAD > 编辑 > 实体"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+编辑网格名称和最大间距。
 
-Edit grid name and maximum spacing.
-
-When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+启动此例程时，系统会首先提示您创建待编辑的实体列表
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- 如果选中了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多重选择。
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- 该工具栏的用法详见“创建待编辑实体列表”
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上次使用的编辑功能。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选好所需实体后，可以选择以下任一编辑按钮：
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
+CAD > Edit > Entity Properties 编辑块体类型、颜色、开采顺序，CAD > Edit > Erase Entities 删除所选实体，CAD > Edit > Move Entities 移动所选实体，CAD > Edit > Copy Entities 复制所选实体，CAD > Edit > Scale Entities 缩放所选实体，CAD > Edit > Rotate Azimuth 旋转所选实体的方位角，CAD > Edit > Rotate Dip 旋转所选实体的倾角，CAD > Edit > Dump to File 将所选实体转储到文件，CAD > Edit > Group 将所选实体合并为单个块体，
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 右键单击可查看选项列表。
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+如果对话框中的任一字段显示为 "Variable"，说明所选的某些块体在该字段上的属性不同。若要保持这些属性不变（即各块体互不相同），请将该字段保留为 "Variable"。若要为所有所选块体更改该字段的值，请输入所需的值。
 
 ![Figure from page 513](/images/page-513-img-14.png)
 
-Name - specifies a descriptive name for the grid.
+Name - 指定网格的描述性名称。
 
-Grid Type - specifies whether you want the grid to be active (used in the stress analysis) or inactive (not used in the stress analysis).
+Grid Type - 指定网格为激活（用于应力分析）还是未激活（不用于应力分析）。
 
-Maximum Spacing - specifies the maximum spacing permitted.
+Maximum Spacing - 指定允许的最大间距。
 
-- This parameter can be used to force fine uniform discretization on selected grids. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- 该参数可用于对所选网格强制采用精细的均匀离散。指定此值时务必极其谨慎，因为取值过小很容易导致问题规模急剧增大。
 
-- In general this parameter should be left blank (i.e. not used), and discretization should be left to the _AG_ parameter. This latter parameter will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- 一般情况下，该参数应留空（即不使用），离散化交由 _AG_ 参数处理。后者只在需要分析结果的位置加密单元，从而优化单元的使用并最大限度地减小问题规模。
 
 CAD > Properties Control Parameters.
 
-- If this field is left blank this parameter is not used.
+- 如果该字段留空，则不使用此参数。
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - 完成块体编辑，并应用所有已更改的属性。
 
-Cancel - aborts editing of entities.
+Cancel - 中止实体编辑。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次撤销修改的机会，方法是选择
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以恢复相同的选择集并再次修改同一组实体，方法是选择
 
 Redo
 
-You can adjust the double click time using
+您可以使用以下命令调整双击时间
 
 Tools > Double Click Time

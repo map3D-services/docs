@@ -2,73 +2,70 @@
 title: "Materiales > Material ablandado"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Los materiales ablandados se pueden usar para simular la fluencia del terreno y los efectos resultantes de redistribución de esfuerzos. Aunque el modelado de plasticidad es sin duda el mejor método para ello, el ablandamiento del material también se puede usar para simular la fluencia del terreno, la redistribución de esfuerzos y, por lo tanto, el posible impacto en las áreas circundantes. La ventaja de este enfoque es que permite al ingeniero investigar el comportamiento no lineal de forma rápida y sencilla.
 
-Softened materials can be used to simulate ground yielding and the resulting stress redistribution effects. Although plasticity modelling is undoubtedly the best method of doing this, material softening can also be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate nonlinear behaviour quickly and easily.
+La teoría del ablandamiento se explica en detalle en **Elastic softening to simulate plastic yielding.pdf** . A continuación se presenta un breve resumen.
 
-The theory behind softening is explained in detail in **Elastic softening to simulate plastic yielding.pdf** . Following is a brief summary.
-
-In numerical modelling, de-stressing of an elastic rock mass is accomplished by allowing plastic strains. These strains act to dissipate the excess stress indicated by the elastic response. An alternative method to induce plastic deformations is shown in the figure below. Here, the stress-strain modulus is progressively reduced in magnitude. It can be observed that although technically this reduces the stiffness of the elastic stress-strain response, this can be interpreted as being equivalent to increments (De<sup>p</sup> ) of plastic strain.
+En el modelado numérico, la descompresión de un macizo rocoso elástico se logra permitiendo deformaciones plásticas. Estas deformaciones sirven para disipar el esfuerzo en exceso indicado por la respuesta elástica. En la figura siguiente se muestra un método alternativo para inducir deformaciones plásticas. Aquí, el módulo esfuerzo-deformación se reduce progresivamente en magnitud. Se observa que, aunque técnicamente esto reduce la rigidez de la respuesta elástica esfuerzo-deformación, se puede interpretar como equivalente a incrementos (De<sup>p</sup> ) de deformación plástica.
 
 ![Figure from page 569](/images/page-569-img-1.png)
 
-Rock failure is generally understood to be the result of shear failure and can be simulated with shear modulus reduction: whereas volume changes are associated with dilation or compaction depending on the stress conditions and nature of the rock itself. Shear modulus reduction can be used to reduce the stress differential (s1-s3), and bulk modulus reduction can be used to control the volumetric strain
+En general se entiende que la falla de la roca es resultado de una falla por corte y se puede simular con la reducción del módulo de corte, mientras que los cambios de volumen se asocian con dilatación o compactación según las condiciones de esfuerzo y la naturaleza de la propia roca. La reducción del módulo de corte se puede usar para reducir el diferencial de esfuerzos (s1-s3), y la reducción del módulo volumétrico se puede usar para controlar la deformación volumétrica
 
-(evolume=e1+e2+e3). This allows independent control of the shear failure process and dilational response. Whether softening is automated or done manually, care must obviously be taken to de-stress by a realistic amount to ensure that the final stress state in the affected pillars satisfies a well calibrated strength criterion.
+(evolume=e1+e2+e3). Esto permite controlar de forma independiente el proceso de falla por corte y la respuesta de dilatación. Ya sea que el ablandamiento sea automático o manual, es evidente que se debe tener cuidado de descomprimir en una magnitud realista para asegurar que el estado de esfuerzos final en los pilares afectados satisfaga un criterio de resistencia bien calibrado.
 
-The non-softened bulk modulus **_B_** and the shear modulus **_G_** can be determined from Young's modulus **_E_** and Poisson's ration as follows:
+El módulo volumétrico sin ablandar **_B_** y el módulo de corte **_G_** se pueden determinar a partir del módulo de Young **_E_** y la relación de Poisson de la siguiente manera:
 
 **_B = E/3/(1-2_** n **_) G = E/2/(1+_** n **_)_**
 
-The softened bulk modulus **_Bs_** and softened shear modulus **_Gs_** are determined using the Volume Softening parameter **_b_** , and Shear Softening parameter **_g_** ,  in the table below such that
+El módulo volumétrico ablandado **_Bs_** y el módulo de corte ablandado **_Gs_** se determinan mediante el parámetro de ablandamiento volumétrico (Volume Softening) **_b_** y el parámetro de ablandamiento por corte (Shear Softening) **_g_** de la tabla siguiente, de modo que
 
 **_Bs = B×b Gs = G×g_**
 
 ![Figure from page 570](/images/page-570-img-1.png)
 
-For example, shear softening with **_g=1_** represents no softening, whereas shear softening with **_g=0.5_** represents a reduction in the shear modulus of 50%...
+Por ejemplo, un ablandamiento por corte con **_g=1_** representa la ausencia de ablandamiento, mientras que un ablandamiento por corte con **_g=0.5_** representa una reducción del 50% del módulo de corte...
 
-To demonstrate the simplicity of the softening procedure, an example of an overstressed tunnel with side wall yielding. Note that the objective of this example is not to duplicate results from plastic modelling, nor should one expect to be able to do so. However, this will demonstrate side wall softening, de-stressing, stress transfer and yielding. Here it is desired to demonstrate that with softening:
+Para demostrar la sencillez del procedimiento de ablandamiento, se presenta un ejemplo de un túnel sobreesforzado con fluencia de las paredes laterales. Observe que el objetivo de este ejemplo no es reproducir los resultados del modelado plástico, ni se debe esperar poder hacerlo. Sin embargo, demostrará el ablandamiento de las paredes laterales, la descompresión, la transferencia de esfuerzos y la fluencia. Aquí se busca demostrar que, con el ablandamiento:
 
-- stresses can be dissipated to surrounding abutments,
+- los esfuerzos se pueden disipar hacia los estribos circundantes,
 
-- larger strains and displacements associated with plasticity can be generated.
+- se pueden generar las deformaciones y los desplazamientos mayores asociados con la plasticidad.
 
-#### Plastic Model Results
+#### Resultados del modelo plástico
 
-Consider a 1 m radius circular tunnel with 30 MPa homogeneous pre-mining stresses. A MohrCoulomb failure criterion has been used throughout with a UCS of 11.9 MPa, friction angle of 30°, Young’s modulus of 6780 MPa and Poisson’s ratio of 0.21 This model has been analysed using Map3D Visco-Plastic. Elastic/perfectly plastic behaviour has been used with dilation rate set to zero. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Considere un túnel circular de 1 m de radio con esfuerzos homogéneos previos a la explotación de 30 MPa. Se utilizó un criterio de falla de Mohr-Coulomb en todo el modelo, con un UCS de 11.9 MPa, un ángulo de fricción de 30°, un módulo de Young de 6780 MPa y una relación de Poisson de 0.21. Este modelo se analizó con Map3D Visco-Plastic. Se utilizó un comportamiento elástico/perfectamente plástico con la tasa de dilatación igual a cero. A continuación, el esfuerzo principal mayor se muestra a la izquierda y el desplazamiento a la derecha.
 
 ![Figure from page 571](/images/page-571-img-1.png)
 
 ![Figure from page 571](/images/page-571-img-2.png)
 
-These Map3D Visco-Plastic model results closely match the closed form analytic solution for the plastic stresses and displacement. For reference, the elastic analytic solution is also shown.
+Estos resultados del modelo de Map3D Visco-Plastic coinciden estrechamente con la solución analítica cerrada para los esfuerzos y desplazamientos plásticos. A modo de referencia, también se muestra la solución analítica elástica.
 
 ![Figure from page 571](/images/page-571-img-4.png)
 
 ![Figure from page 571](/images/page-571-img-5.png)
 
-#### Softened Model Results
+#### Resultados del modelo ablandado
 
-In order to model the above with softening, a zone around the side walls of the tunnel has been softened as shown below where the drive is shown in blue and softened zone is shown in purple. This softened zone has been chosen to be the same size as the plastic zone determined above (1.74 m radius).
+Para modelar lo anterior con ablandamiento, se ablandó una zona alrededor de las paredes laterales del túnel, como se muestra a continuación, donde la galería se muestra en azul y la zona ablandada en morado. Esta zona ablandada se eligió del mismo tamaño que la zona plástica determinada anteriormente (radio de 1.74 m).
 
 ![Figure from page 571](/images/page-571-img-8.png)
 
-In this case it is desired to demonstrate that plastic closure can be emulated with a simple softened model.
+En este caso se busca demostrar que el cierre plástico se puede emular con un modelo ablandado sencillo.
 
-Herein, the elastic shear modulus was softened by a factor of **_g=0.2_** , while the bulk modulus was held constant. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Aquí, el módulo de corte elástico se ablandó con un factor de **_g=0.2_** , mientras que el módulo volumétrico se mantuvo constante. A continuación, el esfuerzo principal mayor se muestra a la izquierda y el desplazamiento a la derecha.
 
 ![Figure from page 572](/images/page-572-img-1.png)
 
 ![Figure from page 572](/images/page-572-img-2.png)
 
-The softened results show an excellent match for both the plastic minor principal stress and displacement. Note that while the actual softened major principal stress values do not match the plastic results in the yield zone in detail, on average they are about the correct magnitude. Also the stress has been redistributed to the elastic “abutment” quite accurately showing nearly the exact amount of stress concentration expected.
+Los resultados ablandados muestran una excelente coincidencia tanto con el esfuerzo principal menor plástico como con el desplazamiento. Observe que, aunque los valores reales del esfuerzo principal mayor ablandado no coinciden en detalle con los resultados plásticos en la zona de fluencia, en promedio tienen aproximadamente la magnitud correcta. Además, el esfuerzo se ha redistribuido hacia el "estribo" elástico con bastante exactitud, mostrando casi exactamente la concentración de esfuerzos esperada.
 
 ![Figure from page 572](/images/page-572-img-4.png)
 
 ![Figure from page 572](/images/page-572-img-5.png)
 
-While the results for softening do not match the plastic analysis results perfectly, they have obviously simulated yielding of the side wall material and driven the elastic results much closer to those from the plastic model. It would appear that material softening can be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate non-linear behaviour quickly and easily when compared to plastic modelling. Softened models require very little increased analysis time compared to simple elastic models.
+Aunque los resultados del ablandamiento no coinciden perfectamente con los del análisis plástico, es evidente que simularon la fluencia del material de las paredes laterales y acercaron mucho más los resultados elásticos a los del modelo plástico. Parece que el ablandamiento del material se puede usar para simular la fluencia del terreno, la redistribución de esfuerzos y, por lo tanto, el posible impacto en las áreas circundantes. La ventaja de este enfoque es que permite al ingeniero investigar el comportamiento no lineal de forma rápida y sencilla en comparación con el modelado plástico. Los modelos ablandados requieren muy poco tiempo de análisis adicional en comparación con los modelos elásticos simples.
 
-A more detailed description and examples are provided in **Elastic softening to simulate plastic yielding.pdf** .
+En **Elastic softening to simulate plastic yielding.pdf** se ofrecen una descripción más detallada y ejemplos.
