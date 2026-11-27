@@ -2,25 +2,22 @@
 title: "CAD > 属性 > 材料属性 > 应力状态 > 基准面"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
 ![Figure from page 522](/images/page-522-img-3.png)
 
-The variation of each of the stress components is described as a linear variation in either principal or Cartesian components.
+各应力分量的变化描述为主应力分量或笛卡尔分量的线性变化。
 
-If desired this can be specified as a variation in the x, y and z directions by defining a sloping datum. This is meant to be used at locations where the topography has a dominant slope.
+如有需要，可通过定义倾斜基准面，将其指定为沿 x、y 和 z 方向的变化。该功能适用于地形具有明显主导坡度的位置。
 
-To define a sloping datum, you are required to specify a point on the plane that represents the datum ( _X-datum_ , _Y-datum_ and _Z-datum_ ),
+要定义倾斜基准面，需要指定基准面上的一点（_X-datum_、_Y-datum_ 和 _Z-datum_），
 
-as well as the slope of the plane. The slope is specified as a gradient in the X ( _dx-datum_ ) and Y ( _dydatum_ ) directions.
+以及该平面的坡度。坡度以 X 方向（_dx-datum_）和 Y 方向（_dydatum_）的梯度表示。
 
-For user convenience, the slope of the place can be specified using either the "Dip" and "Dip direction" of the plane, or the "Dip direction" and "Dip of the Normal" to the plane. The gradients are automatically determined from these later values as follows:
+为方便用户，平面的坡度可以使用平面的“倾角”和“倾向”来指定，也可以使用平面法线的“倾向”和“法线倾角”来指定。梯度由后面这些值自动确定，公式如下：
 
 _dx-datum_ = -sin(q) sin(j) _dy-datum_ = -cos(q) sin(j)
 
-hence
+因此
 
 tan(q)= _dx/dy_ tan(j)=sqrt( _dx_ ^2+ _dy_ ^2)
 
-Defined in this way, the stresses vary both with depth and horizontal position.
+按这种方式定义后，应力既随深度变化，也随水平位置变化。

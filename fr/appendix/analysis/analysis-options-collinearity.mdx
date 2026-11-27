@@ -2,19 +2,16 @@
 title: "Analyse > Options > Colinéarité"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Fusionne les points de coordonnées proches les uns des autres – pendant le chargement du fichier.
 
-Merge coordinate points that are close to one another – during file load.
+Les points de coordonnées très proches les uns des autres sont fusionnés. Les points de coordonnées très proches d'une arête de surface sont déplacés sur cette arête. Par défaut, Map3D déplace ces points s'ils se trouvent à moins d'un millième de la longueur de l'arête de la surface.
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+Si vous le souhaitez, vous pouvez définir un rayon de recherche en saisissant une valeur dans la zone de données. Certains autres logiciels de CAO ne relient pas les coins des surfaces entre eux. Cette fonction est utile pour éliminer les petits vides et chevauchements entre des surfaces et des blocs adjacents. Il faut faire preuve d'une extrême prudence lorsque vous spécifiez une valeur non nulle pour ce paramètre, car des valeurs élevées peuvent causer plus de problèmes qu'elles n'en corrigent en fusionnant trop de points.
 
-If desired, the user can define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Remarques
 
-Notes
-
-This function must be checked before loading the model file
+Cette fonction doit être cochée avant de charger le fichier de modèle
 
 #### Analysis > Load Model.
 
-It is recommended that you check this option. However caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+Il est recommandé de cocher cette option. Toutefois, il faut faire preuve de prudence si un rayon de recherche non nul est spécifié, car une valeur trop grande peut entraîner une fusion indésirable de points de coordonnées et détruire ainsi l'intégrité du modèle.

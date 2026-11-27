@@ -2,25 +2,22 @@
 title: "CAD > Eigenschaften > Materialeigenschaften > Spannungszustand > Bezugsniveau"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
 ![Figure from page 522](/images/page-522-img-3.png)
 
-The variation of each of the stress components is described as a linear variation in either principal or Cartesian components.
+Die Variation jeder Spannungskomponente wird als lineare Variation entweder in Haupt- oder in kartesischen Komponenten beschrieben.
 
-If desired this can be specified as a variation in the x, y and z directions by defining a sloping datum. This is meant to be used at locations where the topography has a dominant slope.
+Auf Wunsch lässt sich dies als Variation in x-, y- und z-Richtung angeben, indem ein geneigtes Bezugsniveau definiert wird. Dies ist für Standorte gedacht, an denen die Topografie eine dominante Neigung aufweist.
 
-To define a sloping datum, you are required to specify a point on the plane that represents the datum ( _X-datum_ , _Y-datum_ and _Z-datum_ ),
+Um ein geneigtes Bezugsniveau zu definieren, müssen Sie einen Punkt auf der Ebene angeben, die das Bezugsniveau darstellt ( _X-datum_ , _Y-datum_ und _Z-datum_ ),
 
-as well as the slope of the plane. The slope is specified as a gradient in the X ( _dx-datum_ ) and Y ( _dydatum_ ) directions.
+sowie die Neigung der Ebene. Die Neigung wird als Gradient in X-Richtung ( _dx-datum_ ) und Y-Richtung ( _dydatum_ ) angegeben.
 
-For user convenience, the slope of the place can be specified using either the "Dip" and "Dip direction" of the plane, or the "Dip direction" and "Dip of the Normal" to the plane. The gradients are automatically determined from these later values as follows:
+Zur Vereinfachung kann die Neigung der Ebene entweder über das "Dip" (Einfallen) und die "Dip direction" (Einfallsrichtung) der Ebene oder über die "Dip direction" und das "Dip of the Normal" (Einfallen der Normalen) der Ebene angegeben werden. Die Gradienten werden aus diesen Werten automatisch wie folgt bestimmt:
 
 _dx-datum_ = -sin(q) sin(j) _dy-datum_ = -cos(q) sin(j)
 
-hence
+daraus folgt
 
 tan(q)= _dx/dy_ tan(j)=sqrt( _dx_ ^2+ _dy_ ^2)
 
-Defined in this way, the stresses vary both with depth and horizontal position.
+Auf diese Weise definiert, variieren die Spannungen sowohl mit der Tiefe als auch mit der horizontalen Position.

@@ -2,41 +2,38 @@
 title: "CAD > Eigenschaften > Materialeigenschaften > Spannungszustand > Kartesisch"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
-
-The pre-mining stress state is specified as a linear variation with depth in either Cartesian or principal components.
+Der Spannungszustand vor dem Abbau wird als lineare Variation mit der Tiefe entweder in kartesischen Komponenten oder in Hauptkomponenten angegeben.
 
 ![Figure from page 521](/images/page-521-img-3.png)
 
-The variation of each of the Cartesian components is described as a linear variation with depth as (for example for the sxx component)
+Die Variation jeder kartesischen Komponente wird als lineare Variation mit der Tiefe beschrieben (zum Beispiel für die Komponente sxx)
 
 - sxx + Dsxx ( _z_ - _Datum_ )
 
-To determine appropriate values for each of these components the user must first select a depth
+Um geeignete Werte für diese Komponenten zu bestimmen, müssen Sie zunächst eine Tiefe wählen
 
 - ( _z_ = _Datum_ )
 
-where the stresses have known values. These later values are the
+in der die Spannungen bekannte Werte haben. Diese Werte sind die
 
 sxx  syy  szz  txy  tyz  txz
 
-constant values.
+konstanten Werte.
 
-The variation of each component with depth can then be specified as
+Die Variation jeder Komponente mit der Tiefe kann dann angegeben werden als
 
 Dsxx  Dsyy  Dszz  Dtxy  Dtyz  Dtxz
 
-variation values. If you have set up your coordinate system with _z_ positive up, then the variations should be specified as negative quantities so that the stresses increase with depth.
+Variationswerte. Wenn Sie Ihr Koordinatensystem mit _z_ positiv nach oben eingerichtet haben, müssen die Variationen als negative Größen angegeben werden, damit die Spannungen mit der Tiefe zunehmen.
 
-For example if you know that the sxx component has a value of
+Wenn Sie zum Beispiel wissen, dass die Komponente sxx bei
 
-30 MPa at _z_ = -1000m
+_z_ = -1000m den Wert 30 MPa hat
 
-and varies as ( _z_ is positive up)
+und sich wie folgt verändert ( _z_ ist positiv nach oben)
 
 - 0.027 MPa/m
 
-you would specify
+geben Sie Folgendes an
 
 Datum = -1000 sxx = 30 Dsxx = -0.027

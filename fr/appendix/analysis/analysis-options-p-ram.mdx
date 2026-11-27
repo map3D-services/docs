@@ -2,47 +2,44 @@
 title: "Analyse > Options > P-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Stocke une partie de la matrice des coefficients en RAM physique pendant l'analyse BEM de Map3D.
 
-Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+Si votre ordinateur dispose d'une grande quantité de RAM, cette option peut accélérer considérablement l'exécution, car les données peuvent être récupérées beaucoup plus rapidement depuis la RAM que depuis le disque. Bien que Windows 32 bits ne permette à chaque processus d'adresser que 2 Go, les utilisateurs disposant de beaucoup de RAM peuvent accéder à la RAM physique grâce à AWE (Address Windowing Extensions). AWE permet d'accéder à toute la RAM disponible de l'ordinateur. La plupart des systèmes prennent en charge 4 Go de RAM. Certains en prennent en charge plus de 64 Go. Selon les versions de Windows, la prise en charge d'AWE varie de 1 Go à 512 Go. La prise en charge d'AWE est disponible dans les versions suivantes de Windows :
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+- Windows 10 Professionnel et Server (maximum de 4 Go).
 
-- Windows 10 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professionnel et Server (maximum de 4 Go).
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows 2000 Advanced Server (maximum de 8 Go).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Datacenter Server (maximum de 32 Go).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows XP Professionnel et Windows Server 2003 (maximum de 4 Go).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows Server 2003 Enterprise Edition (maximum de 32 Go).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Datacenter Edition (maximum de 64 Go).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows 7 et 8.
 
-- Windows 7 & 8.
+- Windows 10 et 11 Pro (la version Famille ne prend pas cette fonction en charge).
 
-- Windows 10 & 11 Pro (the home version does not support this).
-
-AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+AWE exige le privilège « SE_LOCK_MEMORY ». Pour activer AWE, procédez comme suit :
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Définissez ensuite
 
 Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Vous devez redémarrer pour que ce paramètre prenne effet.
 
-Notes:
+Notes :
 
-This function must be checked before conducting the Map3D BEM analysis
+Cette fonction doit être cochée avant de lancer l'analyse BEM de Map3D
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+Allouez uniquement la quantité de RAM que vous souhaitez que Map3D utilise, en veillant à laisser suffisamment d'espace aux autres applications que vous comptez exécuter.
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Ne définissez jamais ce paramètre à une valeur supérieure à la RAM disponible, car cela provoquerait une pagination excessive du système d'exploitation et ralentirait considérablement l'analyse.

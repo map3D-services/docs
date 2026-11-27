@@ -2,68 +2,65 @@
 title: "Archivo > Formato de archivo de modelo INP"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+El formato INP es un archivo de datos ASCII editable con la extensión ".INP".
 
-INP format is an editable ASCII data file with the extension ".INP".
+Es el formato de modelo recomendado para Map3D. Este formato admite toda la funcionalidad de Map3D.
 
-This is the recommended Map3D model format. All Map3D functionality is supported with this format.
+El archivo está organizado en 7 secciones:
 
-The file is organized into 7 sections:
+1. Título del trabajo
 
-1. Job Title
+2. Parámetros de control
 
-2. Control Parameters
+3. Especificación de bloques
 
-3. Block Specification
+4. Especificación de coordenadas
 
-4. Coordinate Specification
+5. Especificación de propiedades de materiales
 
-5. Material Property Specification
+6. Especificación de mallas
 
-6. Grid Specification
+7. Especificación de pasos de minería
 
-7. Mining Step Specification
+Las líneas de comentario deben comenzar con un asterisco "*" en la columna 1.
 
-Comment lines must start with an asterisk "*" in column 1.
+Se omiten las líneas en blanco.
 
-Blank lines are skipped.
+La longitud máxima de línea es de 256 caracteres.
 
-Maximum line length is 256 characters.
+Para separar los campos de datos se pueden usar comas o espacios.
 
-Commas or spaces can be used to separate data fields.
+#### 1. Título del trabajo
 
-#### 1. Job Title
+Esta sección permite especificar un título descriptivo del proyecto: se debe especificar 1 línea de datos. No se necesitan comillas. Solo se usarán los primeros 70 caracteres.
 
-This section permits the user to specify a descriptive project title: 1 line of data must be specified. Quotation marks are not necessary. Only the first 70 characters will be used.
+#### 2. Parámetros de control
 
-#### 2. Control Parameters
-
-This section permits the user to specify job control parameters.
+Esta sección permite especificar los parámetros de control del trabajo.
 
 #### _NLD,NIT,NPS RPAR,STOL AL,AG DOL,DON DOC,DOE,DOG,DOR_
 
-1 line of data must be specified. All parameters must appear on one line.
+Se debe especificar 1 línea de datos. Todos los parámetros deben aparecer en una sola línea.
 
-Only the first 7 parameters ( **_NLD,NIT,NPS  RPAR,STOL  AL,AG_** ) must be specified. The remaining parameters will be assigned default values, which may or may not be appropriate for your application.
+Solo se deben especificar los primeros 7 parámetros ( **_NLD,NIT,NPS  RPAR,STOL  AL,AG_** ). A los demás parámetros se les asignarán valores predeterminados, que pueden ser o no apropiados para su aplicación.
 
-For a detailed description of parameters refer to CAD > Properties > Control Parameters
+Para obtener una descripción detallada de los parámetros, consulte CAD > Properties > Control Parameters
 
-**_NPS_** This item specifies the number of planes of symmetry to be used in the analysis. Normally no planes of symmetry are used. If symmetry is used, the far field stresses (Stress State) must be aligned with the axis of symmetry.
+**_NPS_** Este elemento especifica el número de planos de simetría que se usarán en el análisis. Normalmente no se usan planos de simetría. Si se usa simetría, los esfuerzos de campo lejano (Stress State) deben estar alineados con el eje de simetría.
 
-**_NPS_** =0   no symmetry **_NPS_** =1 _x_ &lt;=> _-x_ , the geometry is reflected in the _y-z_ plane **_NPS_** =2 _x_ &lt;=> _-x_ and _y_ &lt;=> _-y_ , the geometry is reflected in the _y-z_ and _x-z_ planes **_NPS_** =3 _x_ &lt;=> _-x, y_ &lt;=> _-y_ and _z_ &lt;=> _-z_ , the geometry is reflected in the _y-z_ , _x-z_ , and _x-y_ planes
+**_NPS_** =0   sin simetría **_NPS_** =1 _x_ &lt;=> _-x_ , la geometría se refleja en el plano _y-z_ **_NPS_** =2 _x_ &lt;=> _-x_ y _y_ &lt;=> _-y_ , la geometría se refleja en los planos _y-z_ y _x-z_ **_NPS_** =3 _x_ &lt;=> _-x, y_ &lt;=> _-y_ y _z_ &lt;=> _-z_ , la geometría se refleja en los planos _y-z_ , _x-z_ y _x-y_
 
-**_RPAR_** During the matrix solution process, the relaxation parameter is continuously modified by the program in an attempt to obtain convergence with as few as possible iterations. This parameter limits the maximum value that will be used. The suggested value of 1.2 is recommended for wellconditioned problems. For very poorly conditioned problems a value of 0.8 should be used.
+**_RPAR_** Durante el proceso de solución de la matriz, el programa modifica continuamente el parámetro de relajación para intentar obtener la convergencia con el menor número posible de iteraciones. Este parámetro limita el valor máximo que se usará. Se recomienda el valor sugerido de 1.2 para problemas bien condicionados. Para problemas muy mal condicionados se debe usar un valor de 0.8.
 
-#### 3. Block Specification
+#### 3. Especificación de bloques
 
-This section permits the user to define the model geometry. 3D FF Blocks and DD planes are constructed here.
+Esta sección permite definir la geometría del modelo. Aquí se construyen los bloques 3D FF y los planos DD.
 
 **_N  'Block_Name' I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** **_Type  Thickness,Width_**
 
-1 line of data per block must be specified.
+Se debe especificar 1 línea de datos por bloque.
 
-All parameters must appear on one line. Only the first 5 parameters ( **_N I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ) must be specified. Use **_N_** =0 to end the list of blocks. For a detailed description of parameters refer to
+Todos los parámetros deben aparecer en una sola línea. Solo se deben especificar los primeros 5 parámetros ( **_N I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ). Use **_N_** =0 para terminar la lista de bloques. Para obtener una descripción detallada de los parámetros, consulte
 
 CAD > Build > Block
 
@@ -71,13 +68,13 @@ CAD > Build > FF Loop
 
 #### CAD > Build > DD Loop
 
-- **_N_** specifies the block colour number. It is used to identify this block when setting material codes, and also to set the colour of the block for graphics display. Different colour numbers should be used to represent logical groupings of blocks (e.g. for different levels, sections or logical mining units such as development, stoping etc.). As many blocks as possible should use the same block identification number.
+- **_N_** especifica el número de color del bloque. Se usa para identificar este bloque al establecer los códigos de material y también para definir el color del bloque en la visualización gráfica. Se deben usar distintos números de color para representar agrupaciones lógicas de bloques (por ejemplo, para distintos niveles, secciones o unidades lógicas de minería, como desarrollo, tajeo, etc.). Se debe usar el mismo número de identificación de bloque en el mayor número posible de bloques.
 
-A total of 10 colours are available for display. These are numbered respectively
+Hay un total de 10 colores disponibles para la visualización. Se numeran del
 
-1 through 10, 11 through 20, 21 through 30, etc.,
+1 al 10, del 11 al 20, del 21 al 30, etc.,
 
-such that the same colour is displayed for numbers
+de modo que se muestra el mismo color para los números
 
 1, 11, 21...,
 
@@ -85,55 +82,55 @@ such that the same colour is displayed for numbers
 
 3, 23, 33..., etc.
 
-- **_'Block_Name'_** specifies a descriptive name for the Block (e.g. 4540 stope). The program will use this name when supplying information concerning the block volume, errors and warnings. The block name is optional, but if used it must appear in single quotation marks. Only the first 20 characters of any block name will be used.
+- **_'Block_Name'_** especifica un nombre descriptivo para el bloque (por ejemplo, tajeo 4540). El programa usará este nombre al proporcionar información sobre el volumen del bloque, errores y advertencias. El nombre del bloque es opcional, pero si se usa debe aparecer entre comillas simples. Solo se usarán los primeros 20 caracteres de cualquier nombre de bloque.
 
-- **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** represent the numbers of coordinate points that form the block corners, These are described in detail below.
+- **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** representan los números de los puntos de coordenadas que forman las esquinas del bloque. Se describen en detalle más adelante.
 
-- **_Type_** specifies which type of boundary element to use. Inactive elements (98 or inactive FF and 99 for inactive DD) can be used to display features that are to be included for visualization purposes only and not to be used for the actual stress analysis.
+- **_Type_** especifica qué tipo de elemento de contorno se usará. Los elementos inactivos (98 para FF inactivo y 99 para DD inactivo) se pueden usar para mostrar elementos que se incluyen solo con fines de visualización y que no se usan en el análisis de esfuerzos propiamente dicho.
 
-- For three-dimensional features such as excavations, alternate material zones, back-filled stopes etc., **_Type_** =1 (Fictitious Force) type elements should be used.
+- Para elementos tridimensionales, como excavaciones, zonas de material alternativo, tajeos rellenados, etc., se deben usar elementos de tipo **_Type_** =1 (Fictitious Force).
 
 ![Figure from page 533](/images/page-533-img-7.png)
 
-- The first 4 corners ( **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ) represent coordinate numbers that define one side (e.g. the bottom) of a 6 sided block. The next 4 corners ( **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** ) define the opposite side of the block (e.g. the top). The corners can be entered in either clockwise or counter clockwise orientation. Any of the corners can be repeated to define 3 sided shapes and wedges. Blocks can be linked together to form larger more complex excavation shapes by using common coordinate numbers to specify adjacent blocks.
+- Las primeras 4 esquinas ( **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ) representan los números de coordenadas que definen un lado (por ejemplo, la base) de un bloque de 6 caras. Las siguientes 4 esquinas ( **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** ) definen el lado opuesto del bloque (por ejemplo, la parte superior). Las esquinas se pueden ingresar en sentido horario o antihorario. Cualquiera de las esquinas se puede repetir para definir formas de 3 lados y cuñas. Los bloques se pueden vincular entre sí para formar excavaciones más grandes y complejas, usando números de coordenadas comunes para especificar bloques adyacentes.
 
 ![Figure from page 533](/images/page-533-img-9.png)
 
-- If desired, surfaces can be constructed using 3 or 4 sided surfaces by using only the first 4 corners ( **_I1,I2,I3,I4_** ). The next 4 corners ( **_I5,I6,I7,I8_** ) should be specified as zeros. The corners can be entered in either clockwise or counter clockwise orientation. Any of the corners can be repeated to define 3 sided shapes and wedges.
+- Si se desea, se pueden construir superficies de 3 o 4 lados usando solo las primeras 4 esquinas ( **_I1,I2,I3,I4_** ). Las siguientes 4 esquinas ( **_I5,I6,I7,I8_** ) se deben especificar como ceros. Las esquinas se pueden ingresar en sentido horario o antihorario. Cualquiera de las esquinas se puede repetir para definir formas de 3 lados y cuñas.
 
-- These surfaces can be linked together to form larger more complex excavation shapes by using common coordinate numbers to specify adjacent plates. The user must take care to ensure that complete closing surfaces are constructed leaving no holes or missing plates.
+- Estas superficies se pueden vincular entre sí para formar excavaciones más grandes y complejas, usando números de coordenadas comunes para especificar placas adyacentes. El usuario debe asegurarse de construir superficies completamente cerradas, sin dejar huecos ni placas faltantes.
 
-- **_Type_** =2 (Displacement Discontinuity) type elements should be used for tabular mining excavations, fractures and fault planes.
+- Se deben usar elementos de tipo **_Type_** =2 (Displacement Discontinuity) para excavaciones de minería tabular, fracturas y planos de falla.
 
 ![Figure from page 534](/images/page-534-img-1.png)
 
-- Surfaces are constructed using 3 or 4 sided surfaces by using only the first 4 corners ( **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ). The next 4 corners ( **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** ) should be specified as zeros. The corners can be entered in either clockwise or counter clockwise orientation. Any of the corners can be repeated to define 3 sided shapes and wedges.
+- Las superficies se construyen con superficies de 3 o 4 lados usando solo las primeras 4 esquinas ( **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** ). Las siguientes 4 esquinas ( **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** ) se deben especificar como ceros. Las esquinas se pueden ingresar en sentido horario o antihorario. Cualquiera de las esquinas se puede repetir para definir formas de 3 lados y cuñas.
 
-- These surfaces can be linked together to form larger more complex shapes by using common coordinate numbers to specify adjacent surfaces.
+- Estas superficies se pueden vincular entre sí para formar formas más grandes y complejas, usando números de coordenadas comunes para especificar superficies adyacentes.
 
-- **_Thickness_** This parameter is only used for type 2 (displacement discontinuity) elements, where it is used to specify the apparent thickness of the in-filling material (i.e. fault gouge, seam width, mining width or pillar height). Normal displacement (closure) of this feature when in-filled will be limited to this thickness. Also, the normal displacement (closure) and shear displacement (ride) are divided by the _Thickness_ to determine the strain occurring in the in-filling material. This parameter should be specified in the same units that are used to specify the coordinate positions (i.e. metres or feet).
+- **_Thickness_** Este parámetro solo se usa en elementos de tipo 2 (discontinuidad de desplazamiento), donde sirve para especificar el espesor aparente del material de relleno (es decir, relleno de falla, ancho de veta, ancho de explotación o altura de pilar). El desplazamiento normal (cierre) de esta estructura cuando está rellena se limitará a este espesor. Además, el desplazamiento normal (cierre) y el desplazamiento de corte (deslizamiento) se dividen entre el _Thickness_ para determinar la deformación que ocurre en el material de relleno. Este parámetro se debe especificar en las mismas unidades que se usan para especificar las posiciones de las coordenadas (es decir, metros o pies).
 
-- **_Width_** specifies the maximum width permitted.
+- **_Width_** especifica el ancho máximo permitido.
 
-- This parameter can be used to force uniform discretization on selected entities. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Este parámetro se puede usar para forzar una discretización uniforme en entidades seleccionadas. Se debe tener extrema precaución al especificar este valor, ya que un valor pequeño puede generar fácilmente un problema de tamaño enorme.
 
-- In general this parameter should be left blank (i.e. not used), and discretization should be left to the **_AL_** and **_AG_** parameters. These latter parameters will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- En general, este parámetro se debe dejar en blanco (es decir, sin usar) y la discretización se debe dejar a los parámetros **_AL_** y **_AG_**. Estos últimos concentran elementos solo donde se solicitan resultados del análisis, con lo que optimizan el uso de elementos y minimizan el tamaño del problema.
 
-- For an example of the use of this parameter refer to Tabular Mining Example.
+- Para ver un ejemplo del uso de este parámetro, consulte Tabular Mining Example.
 
-#### A Simple Example
+#### Un ejemplo sencillo
 
 ![Figure from page 535](/images/page-535-img-1.png)
 
-To illustrate the use of model building using three-dimensional building blocks consider the construction of a simple drawpoint configuration. This model has been assembled out of 7 blocks. Blocks 1, 2 and 3 form the extraction drift, block 4 forms the crosscut, blocks 5 and 6 represent the drawpoint, and block 7 represents the stope. Map3D recognizes and deletes the surfaces, which are common to adjacent blocks.
+Para ilustrar la construcción de modelos con bloques tridimensionales, considere la construcción de una configuración sencilla de punto de extracción. Este modelo se ha ensamblado a partir de 7 bloques. Los bloques 1, 2 y 3 forman la galería de extracción, el bloque 4 forma el crucero, los bloques 5 y 6 representan el punto de extracción y el bloque 7 representa el tajeo. Map3D reconoce y elimina las superficies comunes a bloques adyacentes.
 
-Many blocks can share the same block number (colour) thus permitting a group of blocks to be used to construct complex excavation shapes. An important consideration here is that, as few as possible block numbers should be used since all surfaces between blocks, which have different block numbers, will be maintained in the database.
+Muchos bloques pueden compartir el mismo número de bloque (color), lo que permite usar un grupo de bloques para construir formas de excavación complejas. Una consideración importante aquí es que se debe usar el menor número posible de números de bloque, ya que se mantendrán en la base de datos todas las superficies entre bloques que tengan números de bloque distintos.
 
 ![Figure from page 535](/images/page-535-img-4.png)
 
-The coordinate numbers for the same drawpoint configuration are required if one wants to construct the model using the Map3D input file specification. The blocks would be numbered as follows:
+Los números de coordenadas de la misma configuración de punto de extracción son necesarios si se desea construir el modelo con la especificación del archivo de entrada de Map3D. Los bloques se numerarían de la siguiente manera:
 
-- Block Specification
+- Especificación de bloques
 
 - N 'Block Name' I1,I2,I3,I4 I5,I6,I7,I8 Type,Thic,Width
 
@@ -153,55 +150,55 @@ The coordinate numbers for the same drawpoint configuration are required if one 
 
 0
 
-#### 4. Coordinate Specification
+#### 4. Especificación de coordenadas
 
-This section permits the user to specify coordinate locations that are used to define the corners of Blocks, DD planes and Grid planes.
+Esta sección permite especificar las ubicaciones de coordenadas que se usan para definir las esquinas de los bloques, los planos DD y los planos de malla.
 
 #### _M X,Y,Z_
 
-1 line of data per coordinate point must be specified. All parameters must appear on one line. All 4 parameters ( **_M X,Y,Z_** ) must be specified. Use N=0 to end the list of coordinates.
+Se debe especificar 1 línea de datos por punto de coordenadas. Todos los parámetros deben aparecer en una sola línea. Se deben especificar los 4 parámetros ( **_M X,Y,Z_** ). Use N=0 para terminar la lista de coordenadas.
 
-**_M_** This parameter is the coordinate number. Coordinates may be entered in any desired order.
+**_M_** Este parámetro es el número de coordenada. Las coordenadas se pueden ingresar en cualquier orden.
 
-- **_X,Y,Z_** These parameters represent the coordinate location. It is recommended that **_X_** is used for East, **_Y_** is used for North, and **_Z_** is used for elevation (positive up). The values should be specified in units of length (metres or feet).
+- **_X,Y,Z_** Estos parámetros representan la ubicación de la coordenada. Se recomienda usar **_X_** para Este, **_Y_** para Norte y **_Z_** para la elevación (positiva hacia arriba). Los valores se deben especificar en unidades de longitud (metros o pies).
 
-#### 5. Material Property Specification
+#### 5. Especificación de propiedades de materiales
 
-This section permits the user to specify the properties for each material used in the model. The properties for each material are defined in groups of three lines specifying respectively the stress state, constitutive parameters and strength parameters.
+Esta sección permite especificar las propiedades de cada material usado en el modelo. Las propiedades de cada material se definen en grupos de tres líneas que especifican, respectivamente, el estado de esfuerzos, los parámetros constitutivos y los parámetros de resistencia.
 
 **_M_ sa, sb, sc   Dsa, Dsb, Dsc** **_Ta,Pa,Tc   Datum   t/h_ ,D** **_t/h Mt   E_ p** **_,E_ r** **_v_ p** **_,v_ r** **_G_ n** **_,G_ s** **_A,C   'Material Name'_**
 
 #### _Mf T_ o p , _T_ o r _UCS_ p , _UCS_ r _Cohesion_ p , _Cohesion_ r fp , fr fi
 
-For a detailed description of parameters refer to CAD > Properties > Material Properties
+Para obtener una descripción detallada de los parámetros, consulte CAD > Properties > Material Properties
 
-- 3 lines of data per material must be specified, use _N=0_ to end the list.
+- Se deben especificar 3 líneas de datos por material; use _N=0_ para terminar la lista.
 
-#### Material Property Specification - Line 1 - Stress State
+#### Especificación de propiedades de materiales - Línea 1 - Estado de esfuerzos
 
-This line of data sets up the starting stress state for material number **_N_** . Material number 1 is reserved for the host rock mass.
+Esta línea de datos establece el estado de esfuerzos inicial del material número **_N_** . El material número 1 está reservado para el macizo rocoso huésped.
 
 **_M_ sa, sb, sc   Dsa, Dsb, Dsc** **_Ta,Pa,Tc   Datum   t/h_ ,D** **_t/h_**
 
-1 line of numeric data per material must be specified. All parameters must appear on one line. Only the first 4 parameters ( **_M_ sa, sb, sc** ) must be specified. For a detailed description of parameters refer to Stress State
+Se debe especificar 1 línea de datos numéricos por material. Todos los parámetros deben aparecer en una sola línea. Solo se deben especificar los primeros 4 parámetros ( **_M_ sa, sb, sc** ). Para obtener una descripción detallada de los parámetros, consulte Stress State
 
-#### Material Property Specification - Line 2 - Constitutive Properties
+#### Especificación de propiedades de materiales - Línea 2 - Propiedades constitutivas
 
-Constitutive properties are specified in five different ways,
+Las propiedades constitutivas se especifican de cinco maneras distintas,
 
 **_Mt_ =1** **_E_ p** **_,E_ r** **_v_ p** **_,v_ r** **_G_ n** **_,G_ s** **_0,0   A,C   'Material Name'_**
 
-- where **_E_ p** **_,E_ r** **_v_ p** **_,v_ r** represent respectively the peak and residual values for Young's (rock mass scale - deformation) modulus, Poisson's ratio
+- donde **_E_ p** **_,E_ r** **_v_ p** **_,v_ r** representan, respectivamente, los valores pico y residual del módulo de Young (a escala de macizo rocoso, de deformación) y de la relación de Poisson
 
 #### _E_ = 9 _BS_ /(3 _B_ + _S_ )
 
 #### _v_ = (3 _B_ -2 _S_ )/(6 _B_ +2 _S_ )
 
-**_G_ n** **_,G_ s** represent respectively the normal and shear viscous moduli,
+**_G_ n** **_,G_ s** representan, respectivamente, los módulos viscosos normal y de corte,
 
-- **_A,C_** represent respectively the expansion coefficient and conductivity (only used in Map3D Thermal-Fluid Flow).
+- **_A,C_** representan, respectivamente, el coeficiente de expansión y la conductividad (solo se usan en Map3D Thermal-Fluid Flow).
 
-For more details refer to
+Para obtener más detalles, consulte
 
 **Mohr-Coulomb in 3D FF Blocks**
 
@@ -209,151 +206,151 @@ For more details refer to
 
 - **_Mt_ =2** **_B_ p** **_,B_ r** **_S_ p** **_,S_ r** **_G_ n** **_,G_ s** **_0,0   A,C   'Material Name'_**
 
-   - where **_B_ p** **_,B_ r** **_S_ p** **_,S_ r** represent respectively the peak and residual values for the bulk and shear moduli,
+   - donde **_B_ p** **_,B_ r** **_S_ p** **_,S_ r** representan, respectivamente, los valores pico y residual de los módulos volumétrico y de corte,
 
 **_B_ =** **_E_ (1-2** **_v_ )/3**
 
 **_S_ =** **_E_ / [ 2(1+** **_v_ ) ]**
 
-**_G_ n** **_,G_ s** represent respectively the normal and shear viscous moduli,
+**_G_ n** **_,G_ s** representan, respectivamente, los módulos viscosos normal y de corte,
 
-   - **_A,C_** represent respectively the expansion coefficient and conductivity (only used in Map3D Thermal-Fluid Flow).
+   - **_A,C_** representan, respectivamente, el coeficiente de expansión y la conductividad (solo se usan en Map3D Thermal-Fluid Flow).
 
 - **_Mt_ =3** **_Kn_ p** **_,Kn_ r** **_Ks_ p** **_,Ks_ r** **_G_ n** **_,G_ s** **_0,0   A,C   'Material Name'_**
 
-   - where **_Kn_ p** **_,Kn_ r** **_Ks_ p** **_,Ks_ r** represent respectively the peak and residual values for the normal and shear stiffness,
+   - donde **_Kn_ p** **_,Kn_ r** **_Ks_ p** **_,Ks_ r** representan, respectivamente, los valores pico y residual de la rigidez normal y de corte,
 
 #### _K_ n = _N/Thickness K_ s = _S/Thickness_
 
-**_G_ n** **_,G_ s** represent respectively the normal and shear viscous moduli,
+**_G_ n** **_,G_ s** representan, respectivamente, los módulos viscosos normal y de corte,
 
-- **_A,C_** represent respectively the expansion coefficient and conductivity (only used in Map3D Thermal-Fluid Flow).
+- **_A,C_** representan, respectivamente, el coeficiente de expansión y la conductividad (solo se usan en Map3D Thermal-Fluid Flow).
 
-This material type can only be used in DD planes.
+Este tipo de material solo se puede usar en planos DD.
 
 **_Mt_ =4** **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** **_G_ n** **_,G_ s** **_B,Et   A,C   'Material Name'_**
 
-- where **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** represent respectively the peak and residual values for the normal and shear moduli,
+- donde **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** representan, respectivamente, los valores pico y residual de los módulos normal y de corte,
 
-- **_G_ n** **_,G_ s** represent respectively the normal and shear viscous moduli,
+- **_G_ n** **_,G_ s** representan, respectivamente, los módulos viscosos normal y de corte,
 
-- **_A,C_** represent respectively the expansion coefficient and conductivity (only used in Map3D Thermal-Fluid Flow).
+- **_A,C_** representan, respectivamente, el coeficiente de expansión y la conductividad (solo se usan en Map3D Thermal-Fluid Flow).
 
-This material type can only be used in DD planes.
+Este tipo de material solo se puede usar en planos DD.
 
-For more details refer to **Fault-Gouge in DD planes**
+Para obtener más detalles, consulte **Fault-Gouge in DD planes**
 
 **_Mt_ =5** **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** **_G_ n** **_,G_ s** **_B,Et   A,C   'Material Name'_**
 
-- where **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** represent respectively the peak and residual values for the normal and shear moduli,
+- donde **_N_ p** **_,N_ r** **_S_ p** **_,S_ r** representan, respectivamente, los valores pico y residual de los módulos normal y de corte,
 
-- **_G_ n** **_,G_ s** represent respectively the normal and shear viscous moduli,
+- **_G_ n** **_,G_ s** representan, respectivamente, los módulos viscosos normal y de corte,
 
-- **_B,Et_** represent respectively the compression limit and transition strain,
+- **_B,Et_** representan, respectivamente, el límite de compresión y la deformación de transición,
 
-- **_A,C_** represent respectively the expansion coefficient and conductivity (only used in Map3D Thermal-Fluid Flow).
+- **_A,C_** representan, respectivamente, el coeficiente de expansión y la conductividad (solo se usan en Map3D Thermal-Fluid Flow).
 
-This material type can only be used in DD planes. For more details refer to **Backfill-Hyperbolic in DD planes**
+Este tipo de material solo se puede usar en planos DD. Para obtener más detalles, consulte **Backfill-Hyperbolic in DD planes**
 
-For the host rock mass and non-homogeneous zones enclosed by FF elements, the value for **_Mt_** must be 1 or 2. For in-filling material placed in DD elements, any value of **_Mt_** may be used.
+Para el macizo rocoso huésped y las zonas no homogéneas encerradas por elementos FF, el valor de **_Mt_** debe ser 1 o 2. Para el material de relleno colocado en elementos DD, se puede usar cualquier valor de **_Mt_**.
 
-For elastic analysis, only the peak value is used. In non-linear analysis (fault-slip or material yielding in Map3D Non-Linear), the residual value is only used after the material yields.
+En el análisis elástico solo se usa el valor pico. En el análisis no lineal (deslizamiento de fallas o fluencia del material en Map3D Non-Linear), el valor residual solo se usa después de que el material cede.
 
 ![Figure from page 538](/images/page-538-img-3.png)
 
-#### Material Property Specification - Line 3 - Strength Parameters
+#### Especificación de propiedades de materiales - Línea 3 - Parámetros de resistencia
 
-1 line of numeric data per material must be specified.
+Se debe especificar 1 línea de datos numéricos por material.
 
-All parameters must appear on one line.
+Todos los parámetros deben aparecer en una sola línea.
 
-All parameters must be specified if **_Mf_** is non-zero. Strength parameters may be specified in four different ways:
+Se deben especificar todos los parámetros si **_Mf_** es distinto de cero. Los parámetros de resistencia se pueden especificar de cuatro maneras distintas:
 
 #### _Mf_ =0
 
-No failure criterion used.
+No se usa ningún criterio de falla.
 
 **_Mf_ =1** **_To_ p** **_,To_ r** **_UCS_ p** **_,UCS_ r** **_Cohesion_ p** **_,Cohesion_ r wp** **_,_ wr wi**
 
-These parameters are defined in detail in
+Estos parámetros se definen en detalle en
 
 **Mohr-Coulomb in 3D FF Blocks**
 
 **Mohr-Coulomb in DD Planes**
 
-**_Mf_ =2** **_To_ p** **_,To_ r sc p** **_,_ sc r** **_m_ p** **_,m_ r** **_s_ p** **_,s_ r** These parameters are defined in detail in
+**_Mf_ =2** **_To_ p** **_,To_ r sc p** **_,_ sc r** **_m_ p** **_,m_ r** **_s_ p** **_,s_ r** Estos parámetros se definen en detalle en
 
 **Hoek-Brown in 3D FF Blocks**
 
 #### _Mf_ =3 _To_ p _,To_ r _UCS_ p _,UCS_ r _Cohesion_ p _,Cohesion_ r wp _,_ wr
 
-These parameters are defined in detail in
+Estos parámetros se definen en detalle en
 
 **Drucker-Prager in 3D FF Blocks**
 
-#### 6. Grid Specification
+#### 6. Especificación de mallas
 
-This section permits the user to define the location of grid planes where analysis results will be calculated.
+Esta sección permite definir la ubicación de los planos de malla donde se calcularán los resultados del análisis.
 
 **_N  'Gird_Name' I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** 0,0,0,0
 
 **_N  'Grid_Name' I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** **_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** **_Type  Thickness,Width_**
 
-1 line of data per block must be specified.
+Se debe especificar 1 línea de datos por bloque.
 
-All parameters must appear on one line.
+Todos los parámetros deben aparecer en una sola línea.
 
-Use **_N_** =0 to end the list of grids.
+Use **_N_** =0 para terminar la lista de mallas.
 
-- **_N_** This parameter is the grid number. Grids should by numbered consecutively from 1, but may be entered in any desired order.
+- **_N_** Este parámetro es el número de malla. Las mallas se deben numerar consecutivamente a partir de 1, pero se pueden ingresar en cualquier orden.
 
 **_I3 I2_**
 
 **_I4 I1_**
 
-- **_'Grid_Name'_** This parameter permits the user to specify a descriptive name for the Grid (e.g. HW grid through 4540 stope). The program will use this name when supplying information concerning the grid. The grid name is optional, but if used it must appear in single quotation marks. Only the first 20 characters of any grid name will be used.
+- **_'Grid_Name'_** Este parámetro permite especificar un nombre descriptivo para la malla (por ejemplo, malla del techo a través del tajeo 4540). El programa usará este nombre al proporcionar información sobre la malla. El nombre de la malla es opcional, pero si se usa debe aparecer entre comillas simples. Solo se usarán los primeros 20 caracteres de cualquier nombre de malla.
 
-- **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** These parameters represent the numbers of coordinate points that form the grid corners.
+- **_I_ 1** **_,I_ 2** **_,I_ 3** **_,I_ 4** Estos parámetros representan los números de los puntos de coordenadas que forman las esquinas de la malla.
 
-Grids are constructed using 4 sided planes. The corners can be entered in either clockwise or counter clockwise orientation.
+Las mallas se construyen con planos de 4 lados. Las esquinas se pueden ingresar en sentido horario o antihorario.
 
-**_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** These parameters are not used and should be specified as zeros. **_Thickness_** This parameter is not used and should be specified as zero. **_Spacing_** specifies the maximum spacing permitted.
+**_I_ 5** **_,I_ 6** **_,I_ 7** **_,I_ 8** Estos parámetros no se usan y se deben especificar como ceros. **_Thickness_** Este parámetro no se usa y se debe especificar como cero. **_Spacing_** especifica el espaciado máximo permitido.
 
-- This parameter can be used to force uniform discretization on the grid. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Este parámetro se puede usar para forzar una discretización uniforme en la malla. Se debe tener extrema precaución al especificar este valor, ya que un valor pequeño puede generar fácilmente un problema de tamaño enorme.
 
-- In general this parameter should be set to zero (i.e. not used), and discretization should be left to the **_AL_** and **_AG_** parameters. These latter parameters will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- En general, este parámetro se debe establecer en cero (es decir, sin usar) y la discretización se debe dejar a los parámetros **_AL_** y **_AG_**. Estos últimos concentran elementos solo donde se solicitan resultados del análisis, con lo que optimizan el uso de elementos y minimizan el tamaño del problema.
 
-#### 7. Mining Step Specification
+#### 7. Especificación de pasos de minería
 
-This item permits the user to specify the material code to be assigned to the selected entities at each mining step.
+Este elemento permite especificar el código de material que se asignará a las entidades seleccionadas en cada paso de minería.
 
 #### _'Mining_Step_Title'_
 
 #### _N, Mc_
 
-1 line of numeric data per block specification must be specified.
+Se debe especificar 1 línea de datos numéricos por especificación de bloque.
 
-All parameters must appear on one line.
+Todos los parámetros deben aparecer en una sola línea.
 
-2 parameters ( **_N,Mc_** ) must be specified.
+Se deben especificar 2 parámetros ( **_N,Mc_** ).
 
-The mining sequence is defined by repeatedly specifying a list of material codes. Each list is ended by using **_N_** =0. At each mining step, only the material codes that change need to be specified. Blocks will remain inactive until a material code is assigned.
+La secuencia de minería se define especificando repetidamente una lista de códigos de material. Cada lista termina con **_N_** =0. En cada paso de minería, solo es necesario especificar los códigos de material que cambian. Los bloques permanecen inactivos hasta que se les asigna un código de material.
 
-Blocks which are never assigned a material code will be assigned a block type of 98 or 99 (i.e. inactive), these blocks will be included in the database for visualization purposed only, they will not be used in the analysis, nor will intersections be created for these surfaces.
+A los bloques a los que nunca se les asigna un código de material se les asignará un tipo de bloque 98 o 99 (es decir, inactivo). Estos bloques se incluirán en la base de datos solo con fines de visualización; no se usarán en el análisis ni se crearán intersecciones para estas superficies.
 
-- **_'Mining_Step_Title'_** This parameter permits the user to specify a descriptive name for each mining step. The program will use this name when supplying information concerning the mining step. This is optional, but if used it must appear in single quotation marks.
+- **_'Mining_Step_Title'_** Este parámetro permite especificar un nombre descriptivo para cada paso de minería. El programa usará este nombre al proporcionar información sobre el paso de minería. Es opcional, pero si se usa debe aparecer entre comillas simples.
 
-- **_N_** This parameter is the block identification number used to identify which blocks are assigned the specified material code. These may be entered in any desired order. 0 specifies the end of each mining step list.
+- **_N_** Este parámetro es el número de identificación del bloque que se usa para identificar a qué bloques se asigna el código de material especificado. Se pueden ingresar en cualquier orden. 0 especifica el final de cada lista de pasos de minería.
 
-**_Mc_** This parameter sets the material code for the block. **_Mc_** _=0_ surface stresses equal to zero. This is normally used to indicate stress free excavation surfaces.
+**_Mc_** Este parámetro establece el código de material del bloque. **_Mc_** _=0_ esfuerzos superficiales iguales a cero. Normalmente se usa para indicar superficies de excavación libres de esfuerzos.
 
-**_Mc=-M_** A negative material number inserts (applies) the initial stress state for the material as a boundary condition. This allows you to specify any desired surface loading conditions. This is actually equivalent to inserting a material that has a zero stiffness, and thus can neither accumulate nor dissipate stress. This is normally used to indicate excavations with some internal stress state due to ground support, backfill or active pressurization.
+**_Mc=-M_** Un número de material negativo inserta (aplica) el estado de esfuerzos inicial del material como condición de contorno. Esto permite especificar cualquier condición de carga superficial deseada. En realidad equivale a insertar un material con rigidez cero, que por lo tanto no puede acumular ni disipar esfuerzos. Normalmente se usa para indicar excavaciones con algún estado de esfuerzos interno debido al sostenimiento, el relleno o la presurización activa.
 
-For most analyzes, the host is so stiff compared to the backfill that the amount of accumulate or dissipation of stress is insignificant. The exception would be non-linear material deformation or large closure areas.
+En la mayoría de los análisis, el macizo huésped es tan rígido en comparación con el relleno que la cantidad de esfuerzo acumulado o disipado es insignificante. La excepción sería la deformación no lineal del material o las áreas de cierre grandes.
 
-**_Mc=+M_** A positive material number **_M_** specifies insertion of material number **_M_** at the initial stress state specified for that material. The material is placed with the starting stress state equal to the initial stress state for the material, then is allowed to accumulate or dissipate stress with deformation. The amount of stress change will depend on the stiffness of the inserted materialThis option is used assign alternate material properties to zones defined by type 1 blocks, or to place gouge or backfill material into type 2 elements (displacement discontinuities) to simulate faults or backfilled tabular mining zones.
+**_Mc=+M_** Un número de material positivo **_M_** especifica la inserción del material número **_M_** en el estado de esfuerzos inicial especificado para ese material. El material se coloca con el estado de esfuerzos de partida igual al estado de esfuerzos inicial del material y luego puede acumular o disipar esfuerzos con la deformación. La cantidad de cambio de esfuerzos dependerá de la rigidez del material insertado. Esta opción se usa para asignar propiedades de material alternativas a zonas definidas por bloques de tipo 1, o para colocar material de relleno de falla o de relleno en elementos de tipo 2 (discontinuidades de desplazamiento) para simular fallas o zonas de minería tabular rellenadas.
 
-- A simple example illustrating this feature is given in the following table:
+- En la siguiente tabla se presenta un ejemplo sencillo que ilustra esta función:
 
 * Mining Step Specification * Mining Step #1 * N,Mc
 

@@ -2,27 +2,24 @@
 title: "Analyse > Options > Initialisation"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Initialise le modèle afin que l'analyse reprenne là où une analyse précédente s'est terminée.
 
-Initialize the model so that the analysis continues from where a previous analysis completed.
+Cette option permet de démarrer une nouvelle analyse à partir de l'état final d'un modèle précédent. Toutes les composantes non linéaires, de déformation nulle et de chargement sismique (chargement sismique uniquement dans Map3Di) sont transmises au nouveau modèle depuis l'analyse précédente.
 
-This option enables you to start a new analysis from where a previous model completed. All non-linear, zero strain and seismic loading (seismic loading only in Map3Di) components are passed on to the new model from the previous analysis.
+Pour que cette fonction opère correctement, le nouveau modèle doit contenir toutes les données (géométrie) du modèle d'initialisation, plus toute nouvelle donnée, étape d'exploitation ou grille. Il n'est pas nécessaire d'utiliser la même discrétisation ni les mêmes plans de grille.
 
-In order for this function to work properly the new model must have all of the model data (geometry) that the initialization model has plus any new data, mining steps or grids. There is no requirement to use the same discretization or grid planes.
+Pour initialiser, les fichiers suivants doivent être intacts :
 
-In order to initialize the following files must be intact:
+file.00n, où n représente le numéro de l'étape d'exploitation à laquelle la précédente analyse s'est terminée. file.dms, ce fichier n'est utilisé qu'avec l'option de déformation nulle (Analysis > Options > Zero Strain Support Placement).
 
-file.00n where n represents the mining step number where the previous analysis finished. file.dms this file is only used with the zero strain option (Analysis > Options > Zero Strain Support Placement).
+file.hms, ce fichier n'est utilisé que par Map3Di et sert à accumuler le chargement du champ au fil de l'analyse.
 
-file.hms this file is only used by Map3Di and are used to accumulate the field loading as the analysis progresses.
+Notes :
 
-Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Cette fonction doit être cochée avant de lancer l'analyse BEM de Map3D
 
 #### Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+Cette option nécessite des calculs supplémentaires et augmente donc le temps d'analyse.
 
-Refer to Analysis > Options > Restart to restart an analysis that was aborted or interrupted by a power failure or operating system crash.
+Reportez-vous à Analysis > Options > Restart pour redémarrer une analyse interrompue ou abandonnée à cause d'une coupure de courant ou d'un plantage du système d'exploitation.

@@ -2,71 +2,68 @@
 title: "CAD > Propriedades > Propriedades do material > Estado de tensões"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
-
 ![Figure from page 519](/images/page-519-img-3.png)
 
-Datum - The pre-mining stress state is specified as a linear variation with depth in either principal or Cartesian components.
+Datum - O estado de tensões pré-lavra é especificado como uma variação linear com a profundidade, em componentes principais ou cartesianas.
 
-Copy from... - allows you to copy the stress state from another material.
+Copy from... - permite copiar o estado de tensões de outro material.
 
-- Only the stress state is copied.
+- Apenas o estado de tensões é copiado.
 
-- Other material properties are left unchanged.
+- As demais propriedades do material permanecem inalteradas.
 
-Cartesian - The pre-mining stress state is specified as a linear variation with depth in either principal or Cartesian components.
+Cartesian - O estado de tensões pré-lavra é especificado como uma variação linear com a profundidade, em componentes principais ou cartesianas.
 
 ![Figure from page 519](/images/page-519-img-10.png)
 
-The three principal stress components are referred to as the _Hmax_ , _Hmin_ and _Vert_ components.
+As três componentes de tensão principal são denominadas componentes _Hmax_ , _Hmin_ e _Vert_ .
 
-- sHmax is the maximum (nearly) horizontal stress.
+- sHmax é a tensão horizontal (aproximadamente) máxima.
 
-- sHmin is the minimum (nearly) horizontal stress.
+- sHmin é a tensão horizontal (aproximadamente) mínima.
 
-- sVert is the (nearly) vertical stress.
+- sVert é a tensão (aproximadamente) vertical.
 
-These stress components are perpendicular to one another.
+Essas componentes de tensão são perpendiculares entre si.
 
-The horizontal and vertical components do not need to be exactly horizontal or vertical. The trend and plunge of sHmax can be adjusted using _THmax_ and _PHmax_ . The trend of sVert can be adjusted using _TVert_ .
+As componentes horizontais e vertical não precisam ser exatamente horizontais ou verticais. A direção (trend) e o caimento (plunge) de sHmax podem ser ajustados usando _THmax_ e _PHmax_ . A direção de sVert pode ser ajustada usando _TVert_ .
 
-The variation of each of these components is described as a linear variation with depth as (for example for the sHmax component)
+A variação de cada uma dessas componentes é descrita como uma variação linear com a profundidade (por exemplo, para a componente sHmax) como
 
 sHmax + DsHmax ( _z_ - _Datum_ )
 
-To determine appropriate values for each of these components the user must first select a depth _z_ where the stresses have known values.
+Para determinar valores apropriados para cada uma dessas componentes, o usuário deve primeiro selecionar uma profundidade _z_ em que as tensões têm valores conhecidos.
 
-_Datum_ should be set to this _z_ value.
+_Datum_ deve ser definido com este valor de _z_.
 
-The magnitude of the stress at this depth is specified by the following constant values
+A magnitude da tensão nesta profundidade é especificada pelos seguintes valores constantes
 
 sHmax sHmin sVert
 
-The variation of each component with depth can then be specified by the following variation values
+A variação de cada componente com a profundidade pode então ser especificada pelos seguintes valores de variação
 
 DsHmax DsHmin DsVert
 
-If you have set up your coordinate system with _z_ positive up, then the variations should be specified as negative quantities so that the stresses increase with depth.
+Se você configurou seu sistema de coordenadas com _z_ positivo para cima, as variações devem ser especificadas como grandezas negativas, de modo que as tensões aumentem com a profundidade.
 
-For example if you know that the _Hmax_ component has a value of
+Por exemplo, se você sabe que a componente _Hmax_ tem valor de
 
-30 MPa at _z_ = 1000m
+30 MPa em _z_ = 1000m
 
-and varies as ( _z_ is positive up)
+e varia como ( _z_ é positivo para cima)
 
 0.027 MPa/m
 
-you would specify
+você especificaria
 
 Datum = 1000 sa = 30 Dsa = -0.027
 
-Finally, the trend and plunge of the _Hmax_ component and the trend of the _Vert_ component uniquely define the stress state orientation.
+Por fim, a direção (trend) e o caimento (plunge) da componente _Hmax_ e a direção da componente _Vert_ definem de forma única a orientação do estado de tensões.
 
-The parameters
+Os parâmetros
 
 _t/h_ constant
 
 D _t/h_ variation
 
-refer to the ambient temperature/head distribution and are specified in the same manner as the stresses.
+referem-se à distribuição de temperatura ambiente/carga hidráulica e são especificados da mesma forma que as tensões.

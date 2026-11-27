@@ -2,73 +2,70 @@
 title: "Matériaux > Matériau adouci"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Les matériaux adoucis peuvent servir à simuler la plastification du terrain et les effets de redistribution des contraintes qui en résultent. Bien que la modélisation de la plasticité soit sans aucun doute la meilleure méthode pour cela, l'adoucissement des matériaux peut aussi servir à simuler la plastification du terrain, la redistribution des contraintes et, par conséquent, l'impact possible sur les zones environnantes. L'avantage de cette approche est qu'elle permet à l'ingénieur d'étudier le comportement non linéaire rapidement et facilement.
 
-Softened materials can be used to simulate ground yielding and the resulting stress redistribution effects. Although plasticity modelling is undoubtedly the best method of doing this, material softening can also be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate nonlinear behaviour quickly and easily.
+La théorie de l'adoucissement est expliquée en détail dans **Elastic softening to simulate plastic yielding.pdf** . Voici un bref résumé.
 
-The theory behind softening is explained in detail in **Elastic softening to simulate plastic yielding.pdf** . Following is a brief summary.
-
-In numerical modelling, de-stressing of an elastic rock mass is accomplished by allowing plastic strains. These strains act to dissipate the excess stress indicated by the elastic response. An alternative method to induce plastic deformations is shown in the figure below. Here, the stress-strain modulus is progressively reduced in magnitude. It can be observed that although technically this reduces the stiffness of the elastic stress-strain response, this can be interpreted as being equivalent to increments (De<sup>p</sup> ) of plastic strain.
+En modélisation numérique, la détente d'un massif rocheux élastique s'obtient en permettant des déformations plastiques. Ces déformations servent à dissiper la contrainte excédentaire indiquée par la réponse élastique. Une autre méthode pour induire des déformations plastiques est illustrée dans la figure ci-dessous. Ici, le module contrainte-déformation est réduit progressivement. On observe que, bien que cela réduise techniquement la rigidité de la réponse contrainte-déformation élastique, cela peut être interprété comme équivalent à des incréments (De<sup>p</sup> ) de déformation plastique.
 
 ![Figure from page 569](/images/page-569-img-1.png)
 
-Rock failure is generally understood to be the result of shear failure and can be simulated with shear modulus reduction: whereas volume changes are associated with dilation or compaction depending on the stress conditions and nature of the rock itself. Shear modulus reduction can be used to reduce the stress differential (s1-s3), and bulk modulus reduction can be used to control the volumetric strain
+On comprend généralement que la rupture de la roche résulte d'une rupture en cisaillement et qu'elle peut être simulée par une réduction du module de cisaillement : alors que les variations de volume sont associées à la dilatation ou à la compaction selon les conditions de contrainte et la nature de la roche elle-même. La réduction du module de cisaillement peut servir à réduire le différentiel de contrainte (s1-s3), et la réduction du module de compressibilité peut servir à contrôler la déformation volumétrique
 
-(evolume=e1+e2+e3). This allows independent control of the shear failure process and dilational response. Whether softening is automated or done manually, care must obviously be taken to de-stress by a realistic amount to ensure that the final stress state in the affected pillars satisfies a well calibrated strength criterion.
+(evolume=e1+e2+e3). Cela permet de contrôler indépendamment le processus de rupture en cisaillement et la réponse de dilatation. Que l'adoucissement soit automatisé ou effectué manuellement, il faut évidemment veiller à détendre d'une quantité réaliste afin que l'état de contraintes final dans les piliers touchés satisfasse un critère de résistance bien calibré.
 
-The non-softened bulk modulus **_B_** and the shear modulus **_G_** can be determined from Young's modulus **_E_** and Poisson's ration as follows:
+Le module de compressibilité non adouci **_B_** et le module de cisaillement **_G_** peuvent être déterminés à partir du module de Young **_E_** et du coefficient de Poisson comme suit :
 
 **_B = E/3/(1-2_** n **_) G = E/2/(1+_** n **_)_**
 
-The softened bulk modulus **_Bs_** and softened shear modulus **_Gs_** are determined using the Volume Softening parameter **_b_** , and Shear Softening parameter **_g_** ,  in the table below such that
+Le module de compressibilité adouci **_Bs_** et le module de cisaillement adouci **_Gs_** sont déterminés à l'aide du paramètre d'adoucissement en volume **_b_** et du paramètre d'adoucissement en cisaillement **_g_** , dans le tableau ci-dessous, de sorte que
 
 **_Bs = B×b Gs = G×g_**
 
 ![Figure from page 570](/images/page-570-img-1.png)
 
-For example, shear softening with **_g=1_** represents no softening, whereas shear softening with **_g=0.5_** represents a reduction in the shear modulus of 50%...
+Par exemple, un adoucissement en cisaillement avec **_g=1_** représente l'absence d'adoucissement, tandis qu'un adoucissement en cisaillement avec **_g=0.5_** représente une réduction de 50 % du module de cisaillement...
 
-To demonstrate the simplicity of the softening procedure, an example of an overstressed tunnel with side wall yielding. Note that the objective of this example is not to duplicate results from plastic modelling, nor should one expect to be able to do so. However, this will demonstrate side wall softening, de-stressing, stress transfer and yielding. Here it is desired to demonstrate that with softening:
+Pour démontrer la simplicité de la procédure d'adoucissement, voici un exemple de tunnel surcontraint dont les parois latérales se plastifient. Notez que l'objectif de cet exemple n'est pas de reproduire les résultats de la modélisation plastique, et l'on ne doit pas s'attendre à pouvoir le faire. Il illustre toutefois l'adoucissement des parois latérales, la détente, le transfert de contraintes et la plastification. Ici, on souhaite démontrer qu'avec l'adoucissement :
 
-- stresses can be dissipated to surrounding abutments,
+- les contraintes peuvent être dissipées vers les culées environnantes,
 
-- larger strains and displacements associated with plasticity can be generated.
+- des déformations et des déplacements plus importants, associés à la plasticité, peuvent être générés.
 
-#### Plastic Model Results
+#### Résultats du modèle plastique
 
-Consider a 1 m radius circular tunnel with 30 MPa homogeneous pre-mining stresses. A MohrCoulomb failure criterion has been used throughout with a UCS of 11.9 MPa, friction angle of 30°, Young’s modulus of 6780 MPa and Poisson’s ratio of 0.21 This model has been analysed using Map3D Visco-Plastic. Elastic/perfectly plastic behaviour has been used with dilation rate set to zero. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Considérez un tunnel circulaire de 1 m de rayon avec des contraintes pré-exploitation homogènes de 30 MPa. Un critère de rupture de MohrCoulomb a été utilisé partout, avec un UCS de 11.9 MPa, un angle de frottement de 30°, un module de Young de 6780 MPa et un coefficient de Poisson de 0.21. Ce modèle a été analysé avec Map3D Visco-Plastic. Un comportement élastique/parfaitement plastique a été utilisé, avec un taux de dilatation fixé à zéro. Ci-dessous, la contrainte principale majeure est illustrée à gauche et le déplacement à droite.
 
 ![Figure from page 571](/images/page-571-img-1.png)
 
 ![Figure from page 571](/images/page-571-img-2.png)
 
-These Map3D Visco-Plastic model results closely match the closed form analytic solution for the plastic stresses and displacement. For reference, the elastic analytic solution is also shown.
+Ces résultats du modèle Map3D Visco-Plastic correspondent étroitement à la solution analytique fermée pour les contraintes et le déplacement plastiques. À titre de référence, la solution analytique élastique est également illustrée.
 
 ![Figure from page 571](/images/page-571-img-4.png)
 
 ![Figure from page 571](/images/page-571-img-5.png)
 
-#### Softened Model Results
+#### Résultats du modèle adouci
 
-In order to model the above with softening, a zone around the side walls of the tunnel has been softened as shown below where the drive is shown in blue and softened zone is shown in purple. This softened zone has been chosen to be the same size as the plastic zone determined above (1.74 m radius).
+Pour modéliser ce qui précède avec l'adoucissement, une zone autour des parois latérales du tunnel a été adoucie, comme illustré ci-dessous, où la galerie est en bleu et la zone adoucie en violet. Cette zone adoucie a été choisie de la même taille que la zone plastique déterminée ci-dessus (rayon de 1.74 m).
 
 ![Figure from page 571](/images/page-571-img-8.png)
 
-In this case it is desired to demonstrate that plastic closure can be emulated with a simple softened model.
+Dans ce cas, on souhaite démontrer que la convergence plastique peut être émulée avec un modèle adouci simple.
 
-Herein, the elastic shear modulus was softened by a factor of **_g=0.2_** , while the bulk modulus was held constant. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Ici, le module de cisaillement élastique a été adouci d'un facteur **_g=0.2_** , tandis que le module de compressibilité a été maintenu constant. Ci-dessous, la contrainte principale majeure est illustrée à gauche et le déplacement à droite.
 
 ![Figure from page 572](/images/page-572-img-1.png)
 
 ![Figure from page 572](/images/page-572-img-2.png)
 
-The softened results show an excellent match for both the plastic minor principal stress and displacement. Note that while the actual softened major principal stress values do not match the plastic results in the yield zone in detail, on average they are about the correct magnitude. Also the stress has been redistributed to the elastic “abutment” quite accurately showing nearly the exact amount of stress concentration expected.
+Les résultats adoucis concordent excellemment avec la contrainte principale mineure et le déplacement plastiques. Notez que, bien que les valeurs réelles de la contrainte principale majeure adoucie ne correspondent pas en détail aux résultats plastiques dans la zone de plastification, elles sont en moyenne d'une magnitude correcte. De plus, la contrainte a été redistribuée vers la « culée » élastique de façon très précise, avec une concentration de contraintes presque exactement égale à celle attendue.
 
 ![Figure from page 572](/images/page-572-img-4.png)
 
 ![Figure from page 572](/images/page-572-img-5.png)
 
-While the results for softening do not match the plastic analysis results perfectly, they have obviously simulated yielding of the side wall material and driven the elastic results much closer to those from the plastic model. It would appear that material softening can be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate non-linear behaviour quickly and easily when compared to plastic modelling. Softened models require very little increased analysis time compared to simple elastic models.
+Bien que les résultats de l'adoucissement ne correspondent pas parfaitement aux résultats de l'analyse plastique, ils ont manifestement simulé la plastification du matériau des parois latérales et rapproché nettement les résultats élastiques de ceux du modèle plastique. Il semble que l'adoucissement des matériaux puisse servir à simuler la plastification du terrain, la redistribution des contraintes et, par conséquent, l'impact possible sur les zones environnantes. L'avantage de cette approche est qu'elle permet à l'ingénieur d'étudier le comportement non linéaire rapidement et facilement, par rapport à la modélisation plastique. Les modèles adoucis nécessitent très peu de temps d'analyse supplémentaire par rapport aux simples modèles élastiques.
 
-A more detailed description and examples are provided in **Elastic softening to simulate plastic yielding.pdf** .
+Une description plus détaillée et des exemples sont fournis dans **Elastic softening to simulate plastic yielding.pdf** .

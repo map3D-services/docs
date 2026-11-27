@@ -2,19 +2,16 @@
 title: "Analyse > Optionen > Kollinearität"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Führt Koordinatenpunkte zusammen, die nahe beieinander liegen – beim Laden der Datei.
 
-Merge coordinate points that are close to one another – during file load.
+Koordinatenpunkte, die sehr nahe beieinander liegen, werden zusammengeführt. Koordinatenpunkte, die sehr nahe an einer Kante einer Fläche liegen, werden auf diese Kante verschoben. Standardmäßig verschiebt Map3D diese Punkte, wenn sie innerhalb eines Suchradius von einem Tausendstel der Kantenlänge von der Fläche entfernt liegen.
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+Bei Bedarf kann der Benutzer einen Suchradius festlegen, indem er einen Wert in das Datenfeld eingibt. Andere CAD-Programme verknüpfen die Ecken von Flächen möglicherweise nicht miteinander. Diese Funktion ist nützlich, um kleine Lücken und Überlappungen zwischen benachbarten Flächen und Blöcken zu beseitigen. Bei der Angabe eines Werts ungleich null für diesen Parameter ist äußerste Vorsicht geboten, da große Werte mehr Probleme verursachen als beheben, weil zu viele Punkte zusammengeführt werden.
 
-If desired, the user can define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Hinweise
 
-Notes
-
-This function must be checked before loading the model file
+Diese Funktion muss aktiviert sein, bevor die Modelldatei geladen wird
 
 #### Analysis > Load Model.
 
-It is recommended that you check this option. However caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+Es wird empfohlen, diese Option zu aktivieren. Bei einem Suchradius ungleich null ist jedoch Vorsicht geboten, da ein zu großer Wert zu unerwünschtem Zusammenführen von Koordinatenpunkten führen und damit die Modellintegrität zerstören kann.

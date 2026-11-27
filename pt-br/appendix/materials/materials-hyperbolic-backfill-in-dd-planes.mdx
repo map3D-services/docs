@@ -2,203 +2,200 @@
 title: "Materiais > Enchimento hiperbólico em planos DD"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
-
-Hyperbolic-Backfill material can be used to describe non-linear response in DD planes in both Map3D Fault-Slip, Map3D Non-Linear and Map3D Visco-Plastic.
+O material Hyperbolic-Backfill pode ser usado para descrever a resposta não linear em planos DD no Map3D Fault-Slip, no Map3D Non-Linear e no Map3D Visco-Plastic.
 
 ![Figure from page 573](/images/page-573-img-2.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name - especifica um nome descritivo para o material.
 
-Material # - specifies the material number.
+Material # - especifica o número do material.
 
-- Material #1 is reserved for the host material.
+- O material nº 1 é reservado para o material da rocha encaixante (host).
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+- Os demais números de material são usados para definir zonas de material alternativo, como minério, argila de falha (gouge), aterro etc.
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+Material Type - especifica o tipo de material (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar ou nenhum).
 
-- Hyperbolic-Backfill - defines the failure envelope as a straight line in the same as Mohr-Coulomb in DD planes but without _UCS_ .
+- Hyperbolic-Backfill - define a envoltória de ruptura como uma linha reta, da mesma forma que o Mohr-Coulomb em planos DD, mas sem _UCS_ .
 
-- Strength is defined in terms of in-plane shear and normal stresses as follows:
+- A resistência é definida em termos das tensões de cisalhamento e normal no plano da seguinte forma:
 
-#### Hyperbolic-Backfill in DD planes
+#### Hyperbolic-Backfill em planos DD
 
 ![Figure from page 574](/images/page-574-img-2.png)
 
-- Tension Cutoff and Cohesion are specified in units of stress (MPa or psi).
+- O corte de tração (Tension Cutoff) e a coesão são especificados em unidades de tensão (MPa ou psi).
 
-- Friction angle and dilation angle are specified in degrees.
+- O ângulo de atrito e o ângulo de dilatação são especificados em graus.
 
-- Cohesion and friction angle define the shear response.
+- A coesão e o ângulo de atrito definem a resposta ao cisalhamento.
 
-- The tension cutoff defines the response in the direction normal to the shear plane.
+- O corte de tração define a resposta na direção normal ao plano de cisalhamento.
 
-- Peak values of these parameters are used up until failure.
+- Os valores de pico desses parâmetros são usados até a ruptura.
 
-- After yielding, the residual values are used to provide a strain softening response.
+- Após o escoamento, os valores residuais são usados para fornecer uma resposta de amolecimento por deformação.
 
-- Residual values are ignored in elastic analyzes.
+- Os valores residuais são ignorados em análises elásticas.
 
-- If fluid pressure is specified as part of the Stress State, the effective normal stress (sn-p) is used (here p is the fluid pressure).
+- Se a pressão de fluido for especificada como parte do Stress State, usa-se a tensão normal efetiva (sn-p), em que p é a pressão de fluido.
 
-B, et - for DD planes the Hyperbolic-Backfill criterion defines the hyperbolic normal response as follows:
+B, et - para planos DD, o critério Hyperbolic-Backfill define a resposta normal hiperbólica da seguinte forma:
 
-#### Hyperbolic-Backfill in DD planes
+#### Hyperbolic-Backfill em planos DD
 
 ![Figure from page 574](/images/page-574-img-13.png)
 
-- The normal stress varies according to the hyperbolic relation.
+- A tensão normal varia de acordo com a relação hiperbólica.
 
-- As the strain approaches the value _B_ the normal stress rapidly become infinite thus limited the amount of normal displacement (closure) that can take place.
+- À medida que a deformação se aproxima do valor _B_ , a tensão normal torna-se rapidamente infinita, limitando assim a quantidade de deslocamento normal (convergência) que pode ocorrer.
 
-Normal and Shear Modulus - specify moduli in units of stress (MPa or psi).
+Normal and Shear Modulus - especificam os módulos em unidades de tensão (MPa ou psi).
 
-- The normal response is defined above. _N_ represents the value of the normal stress (for s<sup>f</sup> =0) at en=½(e<sup>t</sup> + _B_ ).
+- A resposta normal é definida acima. _N_ representa o valor da tensão normal (para s<sup>f</sup> =0) em en=½(e<sup>t</sup> + _B_ ).
 
-- The shear stresses acting on the surfaces of the elements are related to the elastic portion of the shear displacement (ride) through the shear modulus as in the Fault-Gouge model.
+- As tensões de cisalhamento que atuam nas superfícies dos elementos estão relacionadas à parcela elástica do deslocamento de cisalhamento (deslizamento) por meio do módulo de cisalhamento, como no modelo Fault-Gouge.
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation - especifica o desvio padrão em unidades de tensão (MPa ou psi).
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- Este parâmetro descreve a incerteza que você tem sobre os parâmetros de resistência.
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > InPlane Probability N-distribution.
+- Este parâmetro é usado apenas para plotar a probabilidade de ruptura por cisalhamento Plot > Strength Factors > InPlane Probability N-distribution.
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are used only in non-linear analyzes (3D FF blocks in Map3D Non-Linear and DD planes in Map3D Fault-Slip).
+Viscous Modulus ( _Gn_ e _Gs_ ) - Estes parâmetros são usados apenas em análises não lineares (blocos FF 3D no Map3D Non-Linear e planos DD no Map3D Fault-Slip).
 
-- The viscous modulus describes the creep response. where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ .
+- O módulo viscoso descreve a resposta à fluência, em que a resistência à fluência é determinada como o coeficiente de fluência _C_ multiplicado pela taxa de deformação plástica. Observe que o usuário deve selecionar tanto o coeficiente de fluência _C_ quanto o tamanho do passo de tempo D _t_ e, em seguida, especificar o quociente entre eles como o módulo viscoso _G_ .
 
-- _Gn_ is not used in the hyperbolic model.
+- _Gn_ não é usado no modelo hiperbólico.
 
-- Specify the viscous modulus in units of stress (MPa or psi).
+- Especifique o módulo viscoso em unidades de tensão (MPa ou psi).
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow.
+Expansion Coefficient e Conductivity são usados apenas no Map3D Thermal-Fluid Flow.
 
-- Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+- O Map3D Thermal-Fluid Flow pode ser usado para resolver simultaneamente o fluxo de calor/fluido em regime permanente acoplado à análise de tensões.
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only - quando marcada, este material responde apenas de forma elástica, ou seja, os parâmetros de resistência não serão usados.
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- Isso pode ser usado para definir zonas com propriedades elásticas e/ou estados de tensão iniciais diferentes. Isso pode incluir, por exemplo, diques rígidos, zonas de minério macio, aterro ou elementos de suporte.
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic - quando marcada, este material responde de forma elasto-visco-plástica, ou seja, os parâmetros de resistência serão usados como lei de fluxo.
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- Isso pode ser usado para definir zonas com propriedades elásticas e parâmetros de resistência diferentes.
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- Observe que, no Map3D Fault-Slip, somente elementos DD (isto é, argila de falha) podem responder de forma não linear.
 
-- In Map3D Non-Linear and Map3D Visco-Plastic the 3D rock mass can also yield plastically.
+- No Map3D Non-Linear e no Map3D Visco-Plastic, o maciço rochoso 3D também pode escoar plasticamente.
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive - quando marcada, este material não será usado na análise de tensões e, portanto, não afetará as tensões, deformações ou deslocamentos previstos.
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Isso pode ser usado para definir zonas com diferentes parâmetros de resistência a serem usados na geração de contornos de fatores de resistência.
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined - permite especificar parâmetros definidos pelo usuário para uso em contornos.
 
-- Different parameters are defined for each material number.
+- Parâmetros diferentes são definidos para cada número de material.
 
       - Plot > Stress > User
 
-   - These parameters are used with
+   - Estes parâmetros são usados com
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Isso pode ser usado para definir zonas com diferentes parâmetros de resistência a serem usados na geração de contornos de fatores de resistência.
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File - permite exportar todos os dados de propriedades dos materiais para um arquivo, para visualização no Bloco de Notas ou no Excel.
 
-Copy from material - allows you to copy the material properties from one material number to another. All properties including the stress state are copied.
+Copy from material - permite copiar as propriedades de um número de material para outro. Todas as propriedades, incluindo o estado de tensão, são copiadas.
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State - especifica o estado de tensão inicial (campo distante) do material.
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- A maioria dos materiais é inserida em blocos com o mesmo estado de tensão (campo distante).
 
-- Materials such as props or backfill are placed at near zero initial stresses.
+- Materiais como escoras ou aterro são colocados com tensões iniciais próximas de zero.
 
-Over-stressing can be presented in several ways including:
+A sobretensão pode ser apresentada de várias formas, incluindo:
 
-Plot > Strength Factors > dTip In-Plane excess shear stress
+Plot > Strength Factors > dTip Tensão de cisalhamento excedente no plano
 
-Plot > Strength Factors > dTub Ubiquitous-plane excess shear stress
+Plot > Strength Factors > dTub Tensão de cisalhamento excedente no plano ubíquo
 
 Plot > Strength Factors > SF-ip Strength/Stress
 
 Plot > Strength Factors > SF-ub Strength/Stress
 
-By contrast, in non-linear analysis the stresses can never exceed the strength unless some creep is used (in this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium). Hence for non-linear analysis one normally directly considers the plastic strain or the plastic strain rate predicted by the model as an indicator of damage.
+Por outro lado, na análise não linear as tensões nunca podem exceder a resistência, a menos que algum nível de fluência seja usado (neste último caso, a fluência viscosa pode permitir estados de tensão acima do critério de ruptura, indicando falta de equilíbrio estático). Portanto, na análise não linear normalmente se considera diretamente a deformação plástica ou a taxa de deformação plástica prevista pelo modelo como indicador de dano.
 
-In DD planes, the elastic strains are determined from the stresses by
+Em planos DD, as deformações elásticas são determinadas a partir das tensões por
 
 ts = t<sup>f</sup> + _Shear Modulus_ eselastic sn = s<sup>f</sup> + _Normal Modulus_ (enelastic- et )/( _B_ - enelastic)
 
-where _Shear Modulus_ and _Normal Modulus_ represent respectively the elastic moduli of the gouge material in the shear and normal directions, and tf and sf represent the initial stress state in the shear and normal directions, and
+onde _Shear Modulus_ e _Normal Modulus_ representam, respectivamente, os módulos elásticos do material de argila de falha nas direções de cisalhamento e normal, e tf e sf representam o estado de tensão inicial nas direções de cisalhamento e normal, e
 
 > elastic / _Thickness_ eselastic =  ds
 
 > elastic / _Thickness_ enelastic =  dn
 
-where dselastic and dnelastic represent respectively the elastic component of the shear displacement (ride) and normal displacement (closure) and _Thickness_ represents the DD plane thickness (i.e. fault gouge, seam width, mining width or pillar height). The DD plane thickness is set using
+onde dselastic e dnelastic representam, respectivamente, a componente elástica do deslocamento de cisalhamento (deslizamento) e do deslocamento normal (convergência), e _Thickness_ representa a espessura do plano DD (isto é, argila de falha, largura da camada, largura de lavra ou altura do pilar). A espessura do plano DD é definida com
 
 CAD > Build > DDLoop
 
-and can be modified using
+e pode ser modificada com
 
 CAD > Edit > Entity Properties
 
-In DD elements, if the shear stress goes above the strength, the plastic strain can be determined by limiting the stress
+Em elementos DD, se a tensão de cisalhamento ultrapassar a resistência, a deformação plástica pode ser determinada limitando-se a tensão
 
 ts - ts° - _C_ Desplastic /D _t_ = _Cohesion_ + tan(j) ( sn - sn° - _C_ Denplastic /D _t_ )
 
-where
+onde
 
 ts° = _Shear Modulus_ esplastic sn° = _Normal Modulus_ enplastic
 
-The accumulated plastic strain e<sup>plastic</sup> , is determined as the sum of the plastic creep increments De<sup>plastic</sup> , for all creep steps.
+A deformação plástica acumulada e<sup>plastic</sup> é determinada como a soma dos incrementos plásticos de fluência De<sup>plastic</sup> em todos os passos de fluência.
 
-If the normal stress goes below the tension cutoff, the plastic strain can be determined by limiting the stress
+Se a tensão normal ficar abaixo do corte de tração, a deformação plástica pode ser determinada limitando-se a tensão
 
 sn - sn° - _C_ Denplastic /D _t_ = _To_
 
-In the case of shear failure, the plastic normal strain can also have a dilation component
+No caso de ruptura por cisalhamento, a deformação plástica normal também pode ter uma componente de dilatação
 
 plastic enplastic = tan( _dilation angle_ ) es
 
-The total strain is equal to the sum of the elastic and plastic parts.
+A deformação total é igual à soma das partes elástica e plástica.
 
-The creep response is simulated using a linear (Bingham) creep model.
+A resposta de fluência é simulada usando um modelo de fluência linear (de Bingham).
 
 ![Figure from page 556](/images/page-556-img-3.png)
 
-At each creep step the stress state on all yielding elements (elements where the stress exceeds the strength) is calculated as the strength plus the creep resistance
+Em cada passo de fluência, o estado de tensão em todos os elementos em escoamento (elementos em que a tensão excede a resistência) é calculado como a resistência mais a resistência à fluência
 
 _Strength_ + _C_ Denplastic /D _t_
 
 _C_ = _G_ D _t_
 
-where the creep resistance is determined as the creep coefficient _C_ , times the plastic strain rate. Note that the user must select both the creep coefficient _C_ , and the time step size D _t_ , then specify the quotient of these as the viscous modulus _G_ . The creep resistance can be used simply as a technique for damping the non-linear deformations or for real time dependent creep simulation
+onde a resistência à fluência é determinada como o coeficiente de fluência _C_ multiplicado pela taxa de deformação plástica. Observe que o usuário deve selecionar tanto o coeficiente de fluência _C_ quanto o tamanho do passo de tempo D _t_ e, em seguida, especificar o quociente entre eles como o módulo viscoso _G_ . A resistência à fluência pode ser usada simplesmente como uma técnica para amortecer as deformações não lineares ou para a simulação de fluência dependente do tempo real
 
 Analysis > Options > Creep
 
-The strains, shear displacement (ride) and normal displacement (closure) can be presented in several ways including:
+As deformações, o deslocamento de cisalhamento (deslizamento) e o deslocamento normal (convergência) podem ser apresentados de várias formas, incluindo:
 
 Plot > Surface > Value > Elastic Plot > Surface > Value > Plastic Plot > Surface > Value > Total
 
-Plot > Strain > E1 - Major principal strain
+Plot > Strain > E1 - Deformação principal maior
 
-Plot > Surface > Es Shear Strain
+Plot > Surface > Es Deformação de cisalhamento
 
-Plot > Surface > En Normal Strain Plot > Surface > ds Shear Displacement (Ride)
+Plot > Surface > En Deformação normal Plot > Surface > ds Deslocamento de cisalhamento (deslizamento)
 
-Plot > Surface > dn Normal Displacement (Closure)
+Plot > Surface > dn Deslocamento normal (convergência)
 
-Also of interest is the plastic creep increment Deplastic, the contribution to the shear resistance from the viscous element
+Também é de interesse o incremento plástico de fluência Deplastic, a contribuição do elemento viscoso para a resistência ao cisalhamento
 
 Dts   = _C_ Desplastic /D _t_
 
-Plot > Surface > dEs Incremental Shear Strain
+Plot > Surface > dEs Deformação de cisalhamento incremental
 
-Plot > Surface > dTs Excess Shear Stress
+Plot > Surface > dTs Tensão de cisalhamento excedente
 
-Related Topics:
+Tópicos relacionados:
 
-Mohr-Coulomb in DD planes
+Mohr-Coulomb em planos DD
 
-Fault-Gouge in DD planes
+Fault-Gouge em planos DD

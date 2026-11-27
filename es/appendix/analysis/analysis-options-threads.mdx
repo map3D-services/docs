@@ -2,21 +2,18 @@
 title: "Análisis > Opciones > Hilos"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Muestra el número de núcleos o hilos activos.
 
-Displays the number of cores/threads active.
+Map3D admite por completo el procesamiento en paralelo y la E/S de disco en paralelo con la opción multiprocesador/multiunidad.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Si tienes licencia para usar la opción multiprocesador/multiunidad, Map3D realiza todos los procedimientos de análisis en paralelo, distribuidos entre todos los procesadores disponibles.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D will conduct all analysis procedures in parallel distributed among all available processors.
+**CPU:** Las CPU recientes están disponibles con dos, cuatro y seis núcleos. Map3D V58 ahora admite el procesamiento en paralelo, que permite velocidades de cálculo mayores. Esto reduce más de 6 veces los tiempos de ensamblaje de matrices y de mallas. Los equipos con varias CPU serían aún más rápidos.
 
-**CPU:** Recent CPU's are now available as dual, quad and hex cores. Map3D V58 now supports parallel processing which allows faster computational rates. This results in more than 6x reduction in matrix assembly and grid assembly times. Multi-CPU computers would go even faster.
+La siguiente prueba comparativa de procesamiento en paralelo muestra claramente que puedes esperar que las CPU de doble núcleo sean más de dos veces más rápidas,
 
-The following parallel processing benchmark clearly shows that you can expect dual cores CPU's to perform more than twice as fast,
-
-quad cores to perform more than 4 times as fast and hex-cores to perform more than 6 times faster. In hyper-threading enabled CPUs, 2 computational threads are superimposed on the same core. This is the reason why Map3D-MP actually achieves performance better than the theoretical maximum.
+las de cuatro núcleos más de 4 veces más rápidas y las de seis núcleos más de 6 veces más rápidas. En las CPU con hyper-threading habilitado, 2 hilos de cálculo se superponen en el mismo núcleo. Por esta razón, Map3D-MP logra un rendimiento superior al máximo teórico.
 
 ![Figure from page 487](/images/page-487-img-1.png)
 
-In order to achieve these performance gains it is necessary to improve both the processing power and/or disk I/O rate Analysis > Options > Drive #.
+Para lograr estas mejoras de rendimiento, es necesario mejorar la potencia de procesamiento, la velocidad de E/S de disco o ambas Analysis > Options > Drive #.

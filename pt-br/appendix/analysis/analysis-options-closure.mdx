@@ -2,23 +2,20 @@
 title: "Análise > Opções > Convergência"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Realiza a verificação de fechamento e sobreposição e resolve interseções booleanas – durante a análise de interseções.
 
-Conducts closure and overlap checking, and resolves Boolean intersections – during intersection analysis.
+Formas de escavação complexas são verificadas para garantir que suas superfícies de contorno formem um envelope contínuo, sem lacunas nem superfícies ausentes. Os locais onde uma lacuna é detectada são identificados pelos números de coordenadas nas proximidades.
 
-Complex excavation shapes are checked to ensure that their bounding surfaces form a continuous envelope with no gaps or missing surfaces. Locations where a gap is detected are identified by coordinate numbers in that vicinity.
+A interferência entre feições que se interceptam, como uma falha e uma zona de minério, é resolvida automaticamente pelo Map3D. As superfícies são subdivididas para criar arestas onde essas feições se encontram. Em seguida, uma operação booleana de modelagem de sólidos determina qual feição persiste através da outra. Como não é claro se a falha deve persistir através do minério ou o minério através da falha, o Map3D adota a convenção de que a feição com o número de material mais alto tem prioridade sobre a feição com número de material mais baixo. Por exemplo, se o minério recebesse o número de material 2 e a falha recebesse o número de material 3, a falha seria considerada contínua através do minério. Observe que as escavações são consideradas como cortando todas as outras feições.
 
-Interference between intersecting features such a fault and an ore zone are automatically resolved by Map3D. Surfaces are subdivided to create edges where these features meet. A solid modelling Boolean operation is then performed to determine which feature persists through the other. Since it is not clear whether the fault should persist through the ore, or the ore should persist through the fault, a convention has been adopted in Map3D such that the feature with the higher material number takes priority over a feature with a lower material number. For example if the ore were assigned material number 2 and the fault were assigned material number 3, the fault would be assumed to be continuous through the ore. Note that excavations are assumed to cut through all other features.
-
-For additional discussion, refer to
+Para uma discussão adicional, consulte
 
 #### Constructing Alternate Material Zones.
 
-#### Notes
+#### Notas
 
-This function must be checked before conducting the intersection analysis
+Esta função deve ser marcada antes de realizar a análise de interseções
 
 #### Analysis > Intersections.
 
-It is recommended that you check this option.
+Recomenda-se marcar esta opção.

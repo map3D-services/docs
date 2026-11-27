@@ -2,55 +2,52 @@
 title: "Análise > Opções > Lote"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Configura a fila de lotes de análise.
 
-Set up analysis batch queue.
-
-If the user has multiple models that need to be run, these can be specified in this batch queue. By selecting
+Se o usuário tiver vários modelos que precisam ser executados, eles podem ser especificados nesta fila de lotes. Ao selecionar
 
 Analysis > Options > Batch > Execute Batch Queue
 
-all checked models will be run without any request for interactive response from the user.
+todos os modelos marcados serão executados sem nenhuma solicitação de resposta interativa do usuário.
 
-When you check a batch file for execution you will be prompted to search for a model file name, location, and file format. If the search is successful, the model will be checked.
+Ao marcar um arquivo de lote para execução, será solicitado que você procure o nome, o local e o formato do arquivo do modelo. Se a busca for bem-sucedida, o modelo será marcado.
 
-The second column in the Batch File Setup dialogue box allows you to set analysis options if desired. These setting override any options set in the Analysis > Options dialogue box.
+A segunda coluna da caixa de diálogo Batch File Setup permite definir opções de análise, se desejado. Essas configurações substituem quaisquer opções definidas na caixa de diálogo Analysis > Options.
 
-#### Console Mode:
+#### Modo console:
 
-Map3D can be started from the Windows command prompt or from a *.bat file if desired. Command line options can be used in a text file script or entered from a Command Prompt. The procedure is simply to create a *.bat file as follows:
+O Map3D pode ser iniciado a partir do prompt de comando do Windows ou de um arquivo *.bat, se desejado. As opções de linha de comando podem ser usadas em um script de arquivo de texto ou digitadas em um prompt de comando. O procedimento consiste simplesmente em criar um arquivo *.bat da seguinte forma:
 
-**Map3D filename.inp -option1 - option2 ...** (where "filename.inp" is the name of the model file you want to analyze).
+**Map3D filename.inp -option1 - option2 ...** (em que "filename.inp" é o nome do arquivo de modelo que você deseja analisar).
 
-The options are as follows:
+As opções são as seguintes:
 
-- **-analysis** (tells Map3D to run an analysis - you must also supply "filename.inp").
+- **-analysis** (instrui o Map3D a executar uma análise - você também deve informar "filename.inp").
 
-- **-console** (displays only the "Analysis Dialog" while Map3D is running).
+- **-console** (exibe somente o "Analysis Dialog" enquanto o Map3D está em execução).
 
-   - (displays nothing at all while Map3D is running and stops upon completion of analysis).
+   - (não exibe nada enquanto o Map3D está em execução e é encerrado ao final da análise).
 
-- **-stop** (stops Map3D upon completion of analysis).
+- **-stop** (encerra o Map3D ao final da análise).
 
-You can also open results files as follows:
+Você também pode abrir arquivos de resultados da seguinte forma:
 
-**Map3D filename.001** (where "filename.001" is the name of the results file you want to display).
+**Map3D filename.001** (em que "filename.001" é o nome do arquivo de resultados que você deseja exibir).
 
-For example if you want to run a Map3D analysis with only a logging window shown, you would start this as follows:
+Por exemplo, para executar uma análise do Map3D mostrando apenas uma janela de registro, inicie-a da seguinte forma:
 
 #### Map3D filename.inp -console -analysis
 
-For example if you want to run a Map3D analysis with no logging window shown, you would start this as follows:
+Por exemplo, para executar uma análise do Map3D sem mostrar nenhuma janela de registro, inicie-a da seguinte forma:
 
 #### Map3D filename.inp -silent -analysis
 
-#### Notes:
+#### Notas:
 
-Batch model files names are saved and restored each time Map3D is executed.
+Os nomes dos arquivos de modelo do lote são salvos e restaurados a cada vez que o Map3D é executado.
 
-Model files that are not checked will not be executed in batch mode.
+Os arquivos de modelo que não estiverem marcados não serão executados no modo de lote.
 
-The batch queue can be interrupted at any time simply by aborting the current analysis
+A fila de lotes pode ser interrompida a qualquer momento simplesmente abortando a análise atual
 
 Analysis > Abort

@@ -2,47 +2,44 @@
 title: "Análisis > Opciones > P-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Almacena parte de la matriz de coeficientes en RAM física, durante el análisis BEM de Map3D.
 
-Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+Si tu equipo tiene instalada una gran cantidad de RAM, esta opción puede acelerar significativamente la ejecución, ya que los datos se recuperan de la RAM mucho más rápido que del disco. Aunque Windows de 32 bits solo permite que cada proceso direccione 2 GB, los usuarios con grandes cantidades de RAM en su equipo pueden acceder a la RAM física mediante AWE (Address Windowing Extensions). AWE permite acceder a toda la RAM disponible en tu equipo. La mayoría de los sistemas admiten 4 GB de RAM. Algunos admiten más de 64 GB. Las diversas versiones de Windows ofrecen distintos niveles de compatibilidad con AWE, desde 1 GB hasta 512 GB. La compatibilidad con AWE está disponible en las siguientes versiones de Windows:
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+- Windows 10 Professional y Server (máximo de 4 GB).
 
-- Windows 10 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional y Server (máximo de 4 GB).
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows 2000 Advanced Server (máximo de 8 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Datacenter Server (máximo de 32 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows XP Professional y Windows Server 2003 (máximo de 4 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows Server 2003 Enterprise Edition (máximo de 32 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Datacenter Edition (máximo de 64 GB).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows 7 y 8.
 
-- Windows 7 & 8.
+- Windows 10 y 11 Pro (la versión Home no admite esta función).
 
-- Windows 10 & 11 Pro (the home version does not support this).
-
-AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+AWE requiere el privilegio "SE_LOCK_MEMORY". Para habilitar AWE, sigue estos pasos:
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Luego establece
 
 Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Debes reiniciar para que esta configuración surta efecto.
 
-Notes:
+Notas:
 
-This function must be checked before conducting the Map3D BEM analysis
+Esta función debe estar activada antes de realizar el análisis BEM de Map3D
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+Solo debes asignar la cantidad de RAM que quieras que use Map3D, y dejar espacio suficiente para cualquier otra aplicación que pienses ejecutar.
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Nunca debes establecer este parámetro por encima de la RAM disponible, ya que esto provoca una paginación excesiva del sistema operativo que ralentiza significativamente el análisis.

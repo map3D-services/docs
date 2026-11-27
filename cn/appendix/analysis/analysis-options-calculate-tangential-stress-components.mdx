@@ -2,21 +2,18 @@
 title: "分析 > 选项 > 计算切向应力分量"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+指定在 Map3D BEM 分析期间计算单元表面上的切向应力分量。
 
-Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+未选中时，仅计算法向应力和剪应力。由于求解不需要切向应力，因此不会计算。
 
-When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+选中时，将计算全部六个应力分量（法向、剪切和切向）。切向应力分量通常很有用，因为它们代表极端纤维应力，即与表面相切的应力。
 
-When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+最大切向应力通常与材料的无侧限抗压强度进行比较，方式类似于面内壁面应力 **[ 3 σ1i - σ3i ]** 。
 
-The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+#### 注意：
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+此选项需要额外的计算，因此会增加分析时间。

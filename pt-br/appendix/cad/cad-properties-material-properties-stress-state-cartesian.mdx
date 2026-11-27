@@ -2,41 +2,38 @@
 title: "CAD > Propriedades > Propriedades do material > Estado de tensões > Cartesiano"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
-
-The pre-mining stress state is specified as a linear variation with depth in either Cartesian or principal components.
+O estado de tensões pré-lavra é especificado como uma variação linear com a profundidade, em componentes cartesianas ou principais.
 
 ![Figure from page 521](/images/page-521-img-3.png)
 
-The variation of each of the Cartesian components is described as a linear variation with depth as (for example for the sxx component)
+A variação de cada uma das componentes cartesianas é descrita como uma variação linear com a profundidade (por exemplo, para a componente sxx) como
 
 - sxx + Dsxx ( _z_ - _Datum_ )
 
-To determine appropriate values for each of these components the user must first select a depth
+Para determinar valores apropriados para cada uma dessas componentes, o usuário deve primeiro selecionar uma profundidade
 
 - ( _z_ = _Datum_ )
 
-where the stresses have known values. These later values are the
+em que as tensões têm valores conhecidos. Esses últimos valores são os
 
 sxx  syy  szz  txy  tyz  txz
 
-constant values.
+valores constantes.
 
-The variation of each component with depth can then be specified as
+A variação de cada componente com a profundidade pode então ser especificada como
 
 Dsxx  Dsyy  Dszz  Dtxy  Dtyz  Dtxz
 
-variation values. If you have set up your coordinate system with _z_ positive up, then the variations should be specified as negative quantities so that the stresses increase with depth.
+valores de variação. Se você configurou seu sistema de coordenadas com _z_ positivo para cima, as variações devem ser especificadas como grandezas negativas, de modo que as tensões aumentem com a profundidade.
 
-For example if you know that the sxx component has a value of
+Por exemplo, se você sabe que a componente sxx tem valor de
 
-30 MPa at _z_ = -1000m
+30 MPa em _z_ = -1000m
 
-and varies as ( _z_ is positive up)
+e varia como ( _z_ é positivo para cima)
 
 - 0.027 MPa/m
 
-you would specify
+você especificaria
 
 Datum = -1000 sxx = 30 Dsxx = -0.027

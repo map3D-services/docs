@@ -2,71 +2,68 @@
 title: "CAD > 属性 > 材料属性 > 应力状态"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
 ![Figure from page 519](/images/page-519-img-3.png)
 
-Datum - The pre-mining stress state is specified as a linear variation with depth in either principal or Cartesian components.
+Datum - 开采前应力状态按随深度线性变化来指定，可使用主应力分量或笛卡尔分量。
 
-Copy from... - allows you to copy the stress state from another material.
+Copy from... - 可从另一种材料复制应力状态。
 
-- Only the stress state is copied.
+- 仅复制应力状态。
 
-- Other material properties are left unchanged.
+- 其他材料属性保持不变。
 
-Cartesian - The pre-mining stress state is specified as a linear variation with depth in either principal or Cartesian components.
+Cartesian - 开采前应力状态按随深度线性变化来指定，可使用主应力分量或笛卡尔分量。
 
 ![Figure from page 519](/images/page-519-img-10.png)
 
-The three principal stress components are referred to as the _Hmax_ , _Hmin_ and _Vert_ components.
+三个主应力分量称为 _Hmax_、_Hmin_ 和 _Vert_ 分量。
 
-- sHmax is the maximum (nearly) horizontal stress.
+- sHmax 为最大（近）水平应力。
 
-- sHmin is the minimum (nearly) horizontal stress.
+- sHmin 为最小（近）水平应力。
 
-- sVert is the (nearly) vertical stress.
+- sVert 为（近）垂直应力。
 
-These stress components are perpendicular to one another.
+这些应力分量相互垂直。
 
-The horizontal and vertical components do not need to be exactly horizontal or vertical. The trend and plunge of sHmax can be adjusted using _THmax_ and _PHmax_ . The trend of sVert can be adjusted using _TVert_ .
+水平分量和垂直分量不必严格水平或垂直。sHmax 的走向和倾伏角可通过 _THmax_ 和 _PHmax_ 调整。sVert 的走向可通过 _TVert_ 调整。
 
-The variation of each of these components is described as a linear variation with depth as (for example for the sHmax component)
+这些分量随深度的变化均描述为线性变化（以 sHmax 分量为例）：
 
 sHmax + DsHmax ( _z_ - _Datum_ )
 
-To determine appropriate values for each of these components the user must first select a depth _z_ where the stresses have known values.
+要确定这些分量的合适取值，用户必须首先选择一个应力值已知的深度 _z_。
 
-_Datum_ should be set to this _z_ value.
+_Datum_ 应设置为该 _z_ 值。
 
-The magnitude of the stress at this depth is specified by the following constant values
+该深度处的应力大小由以下常数值指定
 
 sHmax sHmin sVert
 
-The variation of each component with depth can then be specified by the following variation values
+随后可通过以下变化值指定各分量随深度的变化
 
 DsHmax DsHmin DsVert
 
-If you have set up your coordinate system with _z_ positive up, then the variations should be specified as negative quantities so that the stresses increase with depth.
+如果坐标系设置为 _z_ 向上为正，则变化值应指定为负值，以使应力随深度增大。
 
-For example if you know that the _Hmax_ component has a value of
+例如，如果已知 _Hmax_ 分量在 _z_ = 1000m 处的值为
 
-30 MPa at _z_ = 1000m
+30 MPa
 
-and varies as ( _z_ is positive up)
+且按下式变化（_z_ 向上为正）
 
 0.027 MPa/m
 
-you would specify
+则应指定
 
 Datum = 1000 sa = 30 Dsa = -0.027
 
-Finally, the trend and plunge of the _Hmax_ component and the trend of the _Vert_ component uniquely define the stress state orientation.
+最后，_Hmax_ 分量的走向和倾伏角以及 _Vert_ 分量的走向唯一确定了应力状态的方位。
 
-The parameters
+参数
 
 _t/h_ constant
 
 D _t/h_ variation
 
-refer to the ambient temperature/head distribution and are specified in the same manner as the stresses.
+指环境温度/水头分布，其指定方式与应力相同。

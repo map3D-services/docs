@@ -2,25 +2,22 @@
 title: "CAO > Propriétés > Propriétés du matériau > État de contrainte > Niveau de référence"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
-
 ![Figure from page 522](/images/page-522-img-3.png)
 
-The variation of each of the stress components is described as a linear variation in either principal or Cartesian components.
+La variation de chacune des composantes de contrainte est décrite comme une variation linéaire, en composantes principales ou cartésiennes.
 
-If desired this can be specified as a variation in the x, y and z directions by defining a sloping datum. This is meant to be used at locations where the topography has a dominant slope.
+Si vous le souhaitez, vous pouvez la spécifier comme une variation dans les directions x, y et z en définissant un niveau de référence incliné. Cette option est destinée aux sites où la topographie présente une pente dominante.
 
-To define a sloping datum, you are required to specify a point on the plane that represents the datum ( _X-datum_ , _Y-datum_ and _Z-datum_ ),
+Pour définir un niveau de référence incliné, vous devez spécifier un point du plan qui représente le niveau de référence ( _X-datum_ , _Y-datum_ et _Z-datum_ ),
 
-as well as the slope of the plane. The slope is specified as a gradient in the X ( _dx-datum_ ) and Y ( _dydatum_ ) directions.
+ainsi que la pente du plan. La pente est spécifiée sous forme de gradient dans les directions X ( _dx-datum_ ) et Y ( _dydatum_ ).
 
-For user convenience, the slope of the place can be specified using either the "Dip" and "Dip direction" of the plane, or the "Dip direction" and "Dip of the Normal" to the plane. The gradients are automatically determined from these later values as follows:
+Pour plus de commodité, la pente du plan peut être spécifiée à l'aide du « pendage » et de la « direction de pendage » du plan, ou de la « direction de pendage » et du « pendage de la normale » au plan. Les gradients sont déterminés automatiquement à partir de ces dernières valeurs comme suit :
 
 _dx-datum_ = -sin(q) sin(j) _dy-datum_ = -cos(q) sin(j)
 
-hence
+d'où
 
 tan(q)= _dx/dy_ tan(j)=sqrt( _dx_ ^2+ _dy_ ^2)
 
-Defined in this way, the stresses vary both with depth and horizontal position.
+Ainsi définies, les contraintes varient à la fois avec la profondeur et avec la position horizontale.

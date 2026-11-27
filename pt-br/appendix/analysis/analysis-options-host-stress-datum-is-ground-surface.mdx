@@ -2,19 +2,16 @@
 title: "Análise > Opções > O datum de tensão in situ é a superfície do terreno"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Especifica que o datum de tensão do material hospedeiro nº 1 será tratado como superfície do terreno durante a análise BEM do Map3D.
 
-Specifies that the host material #1 stress datum will be treated as ground surface - during Map3D BEM analysis.
+Quando desmarcada, todas as superfícies de escavação recebem tensões nulas.
 
-When not checked, all excavation surfaces are assigned zero stresses.
+Quando marcada, todas as superfícies de elementos com coordenadas **_z_** acima do datum de tensão do material hospedeiro nº 1 (presume-se que **_z_** seja positivo para cima) recebem tensões iguais aos valores especificados do Estado de tensão pré-lavra. Isso minimiza a influência desses elementos e, portanto, melhora a precisão. Observe que isso só é eficaz quando a superfície do terreno é plana.
 
-When checked, all element surfaces with **_z_** -coordinates above the host material #1 stress datum (it is assumed that **_z_** is positive upwards), will be assigned stresses equal to the specified pre-mining Stress State values. This minimizes the influence of these elements and thus improves accuracy. Note that this is only effective when the ground surface is planar.
+#### Notas:
 
-#### Notes:
+Esta função deve ser marcada antes de executar a análise BEM do Map3D
 
-This function must be checked before conducting the Map3D BEM analysis
+Análise > Análise BEM
 
-Analysis > BEM Analysis
-
-This option does not require any additional calculations and hence will not increase analysis time.
+Esta opção não requer cálculos adicionais e, portanto, não aumenta o tempo de análise.

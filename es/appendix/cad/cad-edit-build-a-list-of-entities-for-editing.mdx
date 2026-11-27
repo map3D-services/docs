@@ -2,81 +2,78 @@
 title: "CAD > Editar > Crear una lista de entidades para editar"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Esta rutina se puede iniciar seleccionando cualquier función de edición (por ejemplo, un botón) o simplemente haciendo clic derecho sobre cualquier entidad.
 
-This routine can be initiated either by picking any edit function (e.g. button) or simple right-clicking on any entity.
-
-When you initiate any entity editing routine you will first be prompted to build a list of entities that you wish to edit
+Al iniciar cualquier rutina de edición de entidades, primero se solicita crear una lista de las entidades que se desea editar
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- Si Tools > Shift-key Selection está marcado, se debe mantener presionada la tecla Shift para realizar selecciones múltiples.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- De forma predeterminada, las entidades seleccionadas se agregan a la lista; sin embargo, si se mantiene presionada la tecla Ctrl, las entidades seleccionadas se eliminan de la lista.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Mientras se mantiene presionada la tecla Shift o Ctrl, se puede arrastrar para abrir una ventana de cruce.
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Al presionar la barra espaciadora se activa automáticamente la última función de edición utilizada.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Al mantener presionada la tecla Alt mientras se hace clic derecho, se repite automáticamente la última función de edición utilizada.
 
-This toolbar controls the various functions used in list building.
+Esta barra de herramientas controla las diversas funciones que se usan para crear la lista.
 
-Aborts editing. Select entities by picking one surface at a time. Select entities by picking whole groups making up a block. Include all entities with the selected number.
+Cancela la edición. Selecciona entidades eligiendo una superficie a la vez. Selecciona entidades eligiendo los grupos completos que forman un bloque. Incluye todas las entidades con el número seleccionado.
 
-Include all entities with the selected colour.
+Incluye todas las entidades con el color seleccionado.
 
-Include all entities with the selected material number.
+Incluye todas las entidades con el número de material seleccionado.
 
-- The same block may have different materials in it depending on the currently active mining step.
+- Un mismo bloque puede tener materiales distintos según el paso de minería activo en ese momento.
 
-- When using this function, make sure to select the appropriate mining step File > Mining Step
+- Al usar esta función, asegúrese de seleccionar el paso de minería apropiado File > Mining Step
 
-Include all entities excavated with the selected mining step number.
+Incluye todas las entidades excavadas con el número de paso de minería seleccionado.
 
-Include all entities within the selected window.
+Incluye todas las entidades dentro de la ventana seleccionada.
 
-- Entities will only be selected if the entire entity is contained within the window.
+- Las entidades solo se seleccionan si están contenidas por completo dentro de la ventana.
 
-- If (surface select mode) is active, only surfaces will be included.
+- Si el (modo de selección de superficies) está activo, solo se incluyen las superficies.
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- Si el (modo de selección de entidades) está activo, se incluyen todas las superficies que forman el bloque.
 
-Include all entities within the crossing window.
+Incluye todas las entidades dentro de la ventana de cruce.
 
-- Entities will be selected if even a part of the entity is within the window.
+- Las entidades se seleccionan aunque solo una parte de la entidad esté dentro de la ventana.
 
-- This function can also be activated by holding down the Shift-key or Ctrl-key and dragging open a crossing window.
+- Esta función también se puede activar manteniendo presionada la tecla Shift o Ctrl y arrastrando para abrir una ventana de cruce.
 
-- If (surface select mode) is active, only surfaces will be included.
+- Si el (modo de selección de superficies) está activo, solo se incluyen las superficies.
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- Si el (modo de selección de entidades) está activo, se incluyen todas las superficies que forman el bloque.
 
-- Selected entities will be added to the list.
+- Las entidades seleccionadas se agregan a la lista.
 
-Selected entities will be removed from the list. Undo last selection.
+Las entidades seleccionadas se eliminan de la lista. Deshace la última selección.
 
-Redo the last section.
+Rehace la última selección.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Una vez seleccionadas las entidades deseadas, se puede elegir cualquiera de los botones de edición:
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence etc.
+CAD > Edit > Entity Properties Edita el tipo de bloque, el color, la secuencia de minería, etc.
 
-CAD > Edit > Erase Entities Erase selected entities. CAD > Edit > Move Entities Move selected entities. CAD > Edit > Copy Entities Copy selected entities. CAD > Edit > Scale Entities Scale selected entities. CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities. CAD > Edit > Rotate Dip Rotate the dip of selected entities. CAD > Edit > Dump to File Dump selected entities to a file. CAD > Edit > Group Group selected entities into a single block.
+CAD > Edit > Erase Entities Borra las entidades seleccionadas. CAD > Edit > Move Entities Mueve las entidades seleccionadas. CAD > Edit > Copy Entities Copia las entidades seleccionadas. CAD > Edit > Scale Entities Escala las entidades seleccionadas. CAD > Edit > Rotate Azimuth Rota el azimut de las entidades seleccionadas. CAD > Edit > Rotate Dip Rota el buzamiento de las entidades seleccionadas. CAD > Edit > Dump to File Vuelca las entidades seleccionadas a un archivo. CAD > Edit > Group Agrupa las entidades seleccionadas en un solo bloque.
 
-- double click on any vertex to execute the highlighted function,
+- haga doble clic en cualquier vértice para ejecutar la función resaltada,
 
-- right click for a list of options.
+- haga clic derecho para ver una lista de opciones.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Una vez completada cualquier operación de edición, se tiene una oportunidad de deshacer las modificaciones seleccionando
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+También se puede restaurar el mismo conjunto de selección y modificar de nuevo el mismo conjunto de entidades seleccionando
 
 Redo
 
-You can adjust the double click time using
+Se puede ajustar el tiempo de doble clic mediante
 
 Tools > Double Click Time

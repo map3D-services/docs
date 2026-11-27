@@ -2,51 +2,48 @@
 title: "Analyse > Options > Linéaire et quadratique"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Utilise des éléments de frontière d'ordre supérieur pendant l'analyse BEM de Map3D.
 
-Use higher order boundary elements – during Map3D BEM analysis.
+La méthode des éléments de frontière utilise une approximation numérique de la façon dont l'intensité des composantes de surface de la contrainte ou de la discontinuité de déplacement est répartie sur les frontières. L'hypothèse la plus simple consiste à supposer que ces composantes de surface sont réparties uniformément sur chaque élément de frontière. L'expérience acquise avec Map3D montre que cette approximation donne des résultats précis pour tous les problèmes, sauf une classe limitée où les effets de flexion sont importants. Même pour ce dernier type de problème, les résultats restent précis partout, sauf près des surfaces de frontière.
 
-The Boundary Element Method utilizes a numerical approximation of how the intensity of the surface components of stress or displacement discontinuity are distributed over the boundaries. The simplest assumption is to assume that these surface components are distributed uniformly over each boundary element. Experience with Map3D has shown that accurate results are obtained with this approximation for all but a limited class of problems where there are significant bending effects involved. Even for this later type of problem, accurate results are still obtained at all locations except near the boundary surfaces.
+Pour obtenir des résultats précis près des frontières dans les problèmes où les effets de flexion sont importants, il faut recourir à des éléments de frontière d'ordre supérieur. Les effets de flexion deviennent normalement importants pour les problèmes comportant de grandes portées de forme irrégulière. Cela est particulièrement important près des angles vifs de la frontière, qui peuvent résulter des intersections entre diverses entités.
 
-To obtain accurate results near the boundaries of problems where there are significant bending effects involved it is necessary to implement higher order boundary elements. Bending effects normally become important for problems with large spans that are irregularly shaped. This is particularly important near kinks in the boundary that can arise due to intersections between various features.
+Lorsque ni **linear** ni **quad** n'est coché, l'intensité des composantes de surface de la contrainte ou de la discontinuité de déplacement est répartie sous forme de valeurs **constantes**.
 
-When neither **linear** or **quad** are checked, the intensity of the surface components of stress or displacement discontinuity are distributed as **constant** values.
-
-When the **linear** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a linear order polynomial distribution. For triangles the following distribution is used
+Lorsque l'option **linear** est cochée, l'intensité des composantes de surface de la contrainte ou de la discontinuité de déplacement est répartie sur les éléments de frontière selon une distribution polynomiale d'ordre linéaire. Pour les triangles, la distribution suivante est utilisée
 
 _a + b x + c y_
 
-For quadrilaterals, the following distribution is used
+Pour les quadrilatères, la distribution suivante est utilisée
 
 _a + b x + c y + d xy_
 
-When the **quad** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a quadratic order polynomial distribution. For triangles the following distribution is used
+Lorsque l'option **quad** est cochée, l'intensité des composantes de surface de la contrainte ou de la discontinuité de déplacement est répartie sur les éléments de frontière selon une distribution polynomiale d'ordre quadratique. Pour les triangles, la distribution suivante est utilisée
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ²
 
-For quadrilaterals, the following distribution is used
+Pour les quadrilatères, la distribution suivante est utilisée
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ² _+ g x_ ²y _+ h x_ ² _y_ ² _+ i y_ ²x
 
-Notes:
+Notes :
 
-This function must be checked before conducting the Map3D BEM analysis
+Cette fonction doit être cochée avant de lancer l'analyse BEM de Map3D
 
 #### Analysis > BEM Analysis
 
-This option will increase problem size and hence analysis time, since higher order elements require more interpolation nodes on the bounding surfaces.
+Cette option augmente la taille du problème et donc le temps d'analyse, car les éléments d'ordre supérieur exigent davantage de nœuds d'interpolation sur les surfaces de frontière.
 
-If the user is uncertain about the sensitivity of their model to this approximation, it is suggested that some subset of the actual model is run with and without linear elements for comparison.
+Si vous ignorez la sensibilité de votre modèle à cette approximation, il est conseillé d'exécuter un sous-ensemble du modèle réel avec et sans éléments linéaires, afin de les comparer.
 
-In the example below, an excavation with a notch is illustrated. The vertical stress is contoured for the three cases of neither **linear** or **quad** , then **linear** , then **quad** . Note the anomalous stress concentration at the tip of the notch with the constant distribution. This effect is eliminated using either the **linear** distribution, and further reduced using the **quad** distribution.
-
-![Figure from page 499](/images/page-499-img-7.png)
-
-#### linear distribution
+Dans l'exemple ci-dessous, une excavation avec une entaille est illustrée. La contrainte verticale est tracée en isovaleurs pour les trois cas : ni **linear** ni **quad**, puis **linear**, puis **quad**. Notez la concentration de contraintes anormale à la pointe de l'entaille avec la distribution constante. Cet effet est éliminé avec la distribution **linear**, et encore réduit avec la distribution **quad**.
 
 ![Figure from page 499](/images/page-499-img-7.png)
 
-**quad** distribution
+#### Distribution linear
+
+![Figure from page 499](/images/page-499-img-7.png)
+
+Distribution **quad**
 
 ![Figure from page 499](/images/page-499-img-7.png)

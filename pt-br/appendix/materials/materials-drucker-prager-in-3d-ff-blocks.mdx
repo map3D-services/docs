@@ -2,32 +2,29 @@
 title: "Materiais > Drucker-Prager em blocos FF 3D"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
-
-Hoek-Brown material can only be used as a failure criterion for elastic analyzes in Map3D Fault-Slip.
+O material Hoek-Brown só pode ser usado como critério de ruptura em análises elásticas no Map3D Fault-Slip.
 
 ![Figure from page 549](/images/page-549-img-15.png)
 
-Material Name - specifies a descriptive name for the material.
+Material Name - especifica um nome descritivo para o material.
 
-Material # - specifies the material number.
+Material # - especifica o número do material.
 
-- Material #1 is reserved for the host material.
+- O material nº 1 é reservado para o material da rocha encaixante (host).
 
-- Other material numbers are used to define alternate material zones such as ore, fault gouge, backfill etc.
+- Os demais números de material são usados para definir zonas de material alternativo, como minério, argila de falha (gouge), aterro etc.
 
-Material Type - specifies the material type (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar or none).
+Material Type - especifica o tipo de material (Mohr-Coulomb, Hoek-Brown, Drucker-Prager, Fault-Gouge, Hyperbolic-Backfill, Quadratic-Backfill, Equilibrated-Gouge, Yielding-Pillar ou nenhum).
 
-- Drucker-Prager - defines the failure envelope as a straight line.
+- Drucker-Prager - define a envoltória de ruptura como uma linha reta.
 
-- For 3D FF blocks the Drucker-Prager criterion defines strength in terms of principal stresses as follows:
+- Para blocos FF 3D, o critério de Drucker-Prager define a resistência em termos das tensões principais da seguinte forma:
 
-**Drucker-Prager in 3D FF blocks**
+**Drucker-Prager em blocos FF 3D**
 
 ![Figure from page 550](/images/page-550-img-6.png)
 
-where
+onde
 
 toct  = ¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]½
 
@@ -35,72 +32,72 @@ sm = ¹/3 ( s1 + s2 + s3 )
 
 _q_ = tan²(45+½ j)
 
-- Note that the strength parameters have been chosen so that the criterion simplifies to the MohrCoulomb criterion when s2 equals s3.
+- Observe que os parâmetros de resistência foram escolhidos de modo que o critério se simplifique ao critério de MohrCoulomb quando s2 é igual a s3.
 
-- Tension cutoff and _UCS_ - are specified in units of stress (MPa or psi).
+- O corte de tração (tension cutoff) e a _UCS_ são especificados em unidades de tensão (MPa ou psi).
 
-- Friction angle and dilation angle are specified in degrees.
+- O ângulo de atrito e o ângulo de dilatação são especificados em graus.
 
-- Cohesion is not used for 3D FF blocks.
+- A coesão não é usada em blocos FF 3D.
 
-- Only the peak values are used.
+- Somente os valores de pico são usados.
 
-Young's Modulus and Poisson's Ratio - specify Young's (rock mass scale - deformation) Modulus in units of stress (MPa or psi).
+Young's Modulus e Poisson's Ratio - especificam o módulo de Young (escala do maciço rochoso - deformação) em unidades de tensão (MPa ou psi).
 
-- Only the peak values are used.
+- Somente os valores de pico são usados.
 
-Standard Deviation - specify standard deviation in units of stress (MPa or psi).
+Standard Deviation - especifica o desvio padrão em unidades de tensão (MPa ou psi).
 
-- This parameter describes the uncertainty you have in the strength parameters.
+- Este parâmetro descreve a incerteza que você tem sobre os parâmetros de resistência.
 
-- This parameter is only used for plotting the probability of shear failure Plot > Strength Factors > Rockmass Probability N-distribution.
+- Este parâmetro é usado apenas para plotar a probabilidade de ruptura por cisalhamento Plot > Strength Factors > Rockmass Probability N-distribution.
 
-Viscous Modulus ( _Gn_ and _Gs_ ) - These parameters are not used for the Drucker-Prager material.
+Viscous Modulus ( _Gn_ e _Gs_ ) - Estes parâmetros não são usados no material Drucker-Prager.
 
-Expansion Coefficient and Conductivity are only used in Map3D Thermal-Fluid Flow. Map3D Thermal- Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis.
+Expansion Coefficient e Conductivity são usados apenas no Map3D Thermal-Fluid Flow. O Map3D Thermal- Fluid Flow pode ser usado para resolver simultaneamente o fluxo de calor/fluido em regime permanente acoplado à análise de tensões.
 
-Elastic only - when checked this material will respond elastically only, i.e. strength parameters will not be used.
+Elastic only - quando marcada, este material responde apenas de forma elástica, ou seja, os parâmetros de resistência não serão usados.
 
-- This can be used to define zones with different elastic properties and/or initial stress states. This could include for example stiff dykes, soft ore zones, backfill or support elements.
+- Isso pode ser usado para definir zonas com propriedades elásticas e/ou estados de tensão iniciais diferentes. Isso pode incluir, por exemplo, diques rígidos, zonas de minério macio, aterro ou elementos de suporte.
 
-Elasto-Plastic - when checked this material will respond elasto-visco-plastically, i.e. the strength parameters will be used as a flow rule.
+Elasto-Plastic - quando marcada, este material responde de forma elasto-visco-plástica, ou seja, os parâmetros de resistência serão usados como lei de fluxo.
 
-- This can be used to define zones with both different elastic properties and strength parameters.
+- Isso pode ser usado para definir zonas com propriedades elásticas e parâmetros de resistência diferentes.
 
-- Note that in Map3D Fault-Slip, only DD elements (i.e. fault gouge) are permitted to respond non- linearly.
+- Observe que, no Map3D Fault-Slip, somente elementos DD (isto é, argila de falha) podem responder de forma não linear.
 
-- In Map3D Non-Linear the 3D rock mass can also yield plastically.
+- No Map3D Non-Linear, o maciço rochoso 3D também pode escoar plasticamente.
 
-- Yielding of Drucker-Prager materials is not supported at this time.
+- O escoamento de materiais Drucker-Prager não é suportado no momento.
 
-Inactive - when checked this material will not be used in the stress analysis and hence will not affect the predicted stresses, strains or displacements.
+Inactive - quando marcada, este material não será usado na análise de tensões e, portanto, não afetará as tensões, deformações ou deslocamentos previstos.
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Isso pode ser usado para definir zonas com diferentes parâmetros de resistência a serem usados na geração de contornos de fatores de resistência.
 
-User Defined - allows specification of user defined parameters to be used in contouring.
+User Defined - permite especificar parâmetros definidos pelo usuário para uso em contornos.
 
-- Different parameters are defined for each material number.
+- Parâmetros diferentes são definidos para cada número de material.
 
       - Plot > Stress > User
 
-   - These parameters are used with
+   - Estes parâmetros são usados com
 
-- This can be used to define zones with different strength parameters to be used when generating contours of strength factors.
+- Isso pode ser usado para definir zonas com diferentes parâmetros de resistência a serem usados na geração de contornos de fatores de resistência.
 
-Dump to File - allows you to dump all material property data to a file for viewing in Notepad or Excel.
+Dump to File - permite exportar todos os dados de propriedades dos materiais para um arquivo, para visualização no Bloco de Notas ou no Excel.
 
-Copy from material - allows you to copy the material properties from one material number to another.
+Copy from material - permite copiar as propriedades de um número de material para outro.
 
-- All properties including the stress state are copied.
+- Todas as propriedades, incluindo o estado de tensão, são copiadas.
 
-Stress State - specifies the initial (far field) stress state for the material.
+Stress State - especifica o estado de tensão inicial (campo distante) do material.
 
-- Most materials are inserted into blocks with the same (far field) stress state.
+- A maioria dos materiais é inserida em blocos com o mesmo estado de tensão (campo distante).
 
-- Materials such as props or backfill are placed at near zero initial stresses.
+- Materiais como escoras ou aterro são colocados com tensões iniciais próximas de zero.
 
-Related Topics:
+Tópicos relacionados:
 
-Mohr_Coulomb in 3D FF blocks
+Mohr_Coulomb em blocos FF 3D
 
-Hoek-Brown in 3D FF blocks
+Hoek-Brown em blocos FF 3D

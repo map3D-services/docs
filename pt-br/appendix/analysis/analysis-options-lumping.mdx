@@ -2,21 +2,18 @@
 title: "Análise > Opções > Agrupamento"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Pré-calcula o tamanho da matriz de coeficientes durante a análise de discretização.
 
-Pre-calculate coefficient matrix size – during discretization analysis.
+Para determinar com precisão o espaço em disco temporário necessário para armazenar a matriz de coeficientes durante uma análise BEM do Map3D, é necessário executar um procedimento de agrupamento. Esta opção executa o procedimento de agrupamento durante a análise de discretização (ou seja, antes da análise BEM do Map3D).
 
-To accurately determine the amount of scratch disk space required to store the coefficient matrix during a Map3D BEM analysis, it is necessary to conduct a lumping procedure.  This option executes the lumping procedure during the discretization analysis (i.e. prior to the Map3D BEM analysis).
+O método dos elementos de contorno gera uma matriz de coeficientes totalmente preenchida de tamanho 4•n² bytes, em que n é o número de graus de liberdade. Mesmo para problemas pequenos, os requisitos de espaço em disco e o tempo de análise podem se tornar bastante grandes (por exemplo, 20.000 graus de liberdade exigem 2 GBytes de espaço em disco sem agrupamento). Problemas grandes rapidamente se tornam impraticáveis de resolver (por exemplo, 200.000 graus de liberdade exigem 160 GBytes de espaço em disco sem agrupamento). Para contornar esse problema, o Map3D executa um procedimento chamado agrupamento de matriz. Normalmente, ele reduz o tamanho da matriz de coeficientes por um fator de 10 vezes em problemas pequenos e de mais de 100 vezes em problemas maiores.
 
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+Notas
 
-Notes
+Esta função deve ser marcada antes de executar a análise de discretização
 
-This function must be checked before conducting the discretization analysis
+#### Análise > Discretização.
 
-#### Analysis > Discretization.
+O procedimento de agrupamento de matriz é executado durante a análise BEM do Map3D, esta opção esteja selecionada ou não.
 
-The matrix lumping procedure is conducted during the Map3D BEM analysis whether this option is selected or not.
-
-This is a time consuming procedure that should only be conducted if you need to accurately determine disk space requirements prior to Map3D BEM analysis.
+Este é um procedimento demorado, que só deve ser executado se você precisar determinar com precisão os requisitos de espaço em disco antes da análise BEM do Map3D.

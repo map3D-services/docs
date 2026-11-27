@@ -2,19 +2,16 @@
 title: "Análisis > Opciones > El datum de esfuerzo in situ es la superficie del terreno"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Especifica que el datum de esfuerzo del material anfitrión n.º 1 se trate como la superficie del terreno, durante el análisis BEM de Map3D.
 
-Specifies that the host material #1 stress datum will be treated as ground surface - during Map3D BEM analysis.
+Cuando no está activada, se asignan esfuerzos cero a todas las superficies de excavación.
 
-When not checked, all excavation surfaces are assigned zero stresses.
+Cuando está activada, a todas las superficies de elementos con coordenadas **_z_** por encima del datum de esfuerzo del material anfitrión n.º 1 (se supone que **_z_** es positiva hacia arriba) se les asignan esfuerzos iguales a los valores especificados del estado de esfuerzos previo a la explotación. Esto minimiza la influencia de estos elementos y, por tanto, mejora la precisión. Ten en cuenta que esto solo es eficaz cuando la superficie del terreno es plana.
 
-When checked, all element surfaces with **_z_** -coordinates above the host material #1 stress datum (it is assumed that **_z_** is positive upwards), will be assigned stresses equal to the specified pre-mining Stress State values. This minimizes the influence of these elements and thus improves accuracy. Note that this is only effective when the ground surface is planar.
+#### Notas:
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Esta función debe estar activada antes de realizar el análisis BEM de Map3D
 
 Analysis > BEM Analysis
 
-This option does not require any additional calculations and hence will not increase analysis time.
+Esta opción no requiere cálculos adicionales y, por lo tanto, no aumenta el tiempo de análisis.

@@ -2,23 +2,20 @@
 title: "分析 > 选项 > 零应变充填"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间使用零应变支护安装。
 
-Use zero strain support placement – during Map3D BEM analysis.
+此选项可用于模拟地压支护单元。在模拟拱架、钢支架、支柱、厚衬砌、木垛、强充填体等刚性支护系统时，必须先模拟直到支护安装时刻为止的
 
-This option enables simulation of ground support elements. When simulating stiff support systems such as arches, steel sets, props, thick liners, chalks, strong backfill etc., it is necessary to model the
+地层移动，然后以无应力/应变状态或规定的预应力状态插入支护单元。此功能对于模拟结构支护单元特别有用，并可根据需要支持安装、属性修改以及后续移除。此选项已可用于 3D FF 块和/或 DD 平面。
 
-ground movement up to the point of support placement, then insert the support elements either in a stress/strain free state, or with a prescribed pre-stressing. This feature is particularly useful for simulation of structural support elements and can accommodate placement, modification of properties and subsequent removal if desired. This option has been enabled for use with 3D FF blocks and/or DD planes.
+要启用此功能，必须首先将所需的支护单元（3D FF 块或 DD 平面）开挖至所需的预应力状态（对零应力使用零材料代码，对规定应力状态使用负材料编号），然后在后续开采步中插入支护材料（为此使用正材料编号）。选中 Analysis > Options > Zero Strain Support Placement 选项后，Map3D 会进行必要的计算，以便在当前开采步中将支护单元置于无应力/应变状态或规定的预应力状态。先开挖至零应力或规定应力状态，然后插入替代材料，这一操作会通知 Map3D 进行所需的计算。
 
-To enable this feature you must first excavate the desired support element (either a 3D FF block or DD plane) to the desired pre-stressed state (use a zero material code for zero stresses or a negative material number for a prescribed stress state), then in a subsequent mining step insert the support material (use a positive material number to do this). With the Analysis > Options > Zero Strain Support Placement option checked, Map3D conducts the necessary calculations to place support elements in a stress/strain free state or with a prescribed pre-stressing at the current mining step. The action of excavation to a zero or prescribed stress state followed by insertion of an alternate material signals Map3D to conduct the required calculations.
+如果没有此选项，所有材料都将处于开采前的变形状态。这可能导致错误的大应力，在刚性支护单元中尤其如此。
 
-Without this option, all materials are placed at the pre-mining deformation state. This can cause erroneous large stresses particularly in stiff support elements.
+注意：
 
-Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+此选项需要额外计算，因此会增加分析时间。

@@ -2,21 +2,18 @@
 title: "Analyse > Options > Calculer les composantes de contrainte tangentielle"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Indique que les composantes de contrainte tangentielle doivent être calculées sur la surface des éléments - pendant l'analyse BEM de Map3D.
 
-Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+Lorsque l'option n'est pas cochée, seules les contraintes normales et de cisaillement sont calculées. Les contraintes tangentielles ne sont pas calculées, car elles ne sont pas nécessaires à la résolution.
 
-When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+Lorsque l'option est cochée, les six composantes de contrainte (normale , de cisaillement et tangentielle ) sont calculées. Les composantes de contrainte tangentielle sont souvent souhaitables, car elles représentent la contrainte de fibre extrême, c.-à-d. les contraintes tangentielles à une surface.
 
-When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+La contrainte tangentielle maximale est souvent comparée à la résistance en compression uniaxiale du matériau, de la même manière que la contrainte de paroi dans le plan **[ 3 σ1i - σ3i ]** .
 
-The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+#### Remarques :
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Cette fonction doit être cochée avant d'effectuer l'analyse BEM de Map3D
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+Cette option exige des calculs supplémentaires et augmente donc le temps d'analyse.

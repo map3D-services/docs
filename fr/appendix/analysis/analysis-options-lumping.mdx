@@ -2,21 +2,18 @@
 title: "Analyse > Options > Regroupement"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Précalcule la taille de la matrice des coefficients pendant l'analyse de discrétisation.
 
-Pre-calculate coefficient matrix size – during discretization analysis.
+Pour déterminer avec précision l'espace disque temporaire nécessaire au stockage de la matrice des coefficients pendant une analyse BEM de Map3D, il faut effectuer une procédure de regroupement. Cette option exécute la procédure de regroupement pendant l'analyse de discrétisation (c.-à-d. avant l'analyse BEM de Map3D).
 
-To accurately determine the amount of scratch disk space required to store the coefficient matrix during a Map3D BEM analysis, it is necessary to conduct a lumping procedure.  This option executes the lumping procedure during the discretization analysis (i.e. prior to the Map3D BEM analysis).
-
-The boundary element method generates a fully populated coefficient matrix of size 4•n² bytes, where n is the number of degrees of freedom. Even for small problems, disk space requirements and analysis time can become quite large (e.g. 20,000 degrees of freedom requires 2 GBytes of disk space without lumping). Large problems quickly become impractical to solve (e.g. 200,000 degrees of freedom requires 160 GBytes of disk space without lumping). To overcome this problem a procedure called matrix lumping is conducted in Map3D. This typically achieves a reduction of coefficient matrix size by a factor of 10 times for small problems and more than 100 times for larger problems.
+La méthode des éléments de frontière génère une matrice de coefficients entièrement remplie, de taille 4•n² octets, où n est le nombre de degrés de liberté. Même pour de petits problèmes, l'espace disque requis et le temps d'analyse peuvent devenir très importants (p. ex. 20 000 degrés de liberté exigent 2 Go d'espace disque sans regroupement). Les grands problèmes deviennent rapidement impossibles à résoudre (p. ex. 200 000 degrés de liberté exigent 160 Go d'espace disque sans regroupement). Pour surmonter ce problème, Map3D applique une procédure appelée regroupement matriciel (matrix lumping). Elle réduit généralement la taille de la matrice des coefficients d'un facteur 10 pour les petits problèmes et de plus de 100 pour les grands problèmes.
 
 Notes
 
-This function must be checked before conducting the discretization analysis
+Cette fonction doit être cochée avant de lancer l'analyse de discrétisation
 
 #### Analysis > Discretization.
 
-The matrix lumping procedure is conducted during the Map3D BEM analysis whether this option is selected or not.
+La procédure de regroupement matriciel est exécutée pendant l'analyse BEM de Map3D, que cette option soit sélectionnée ou non.
 
-This is a time consuming procedure that should only be conducted if you need to accurately determine disk space requirements prior to Map3D BEM analysis.
+Cette procédure est longue et ne doit être exécutée que si vous devez déterminer avec précision l'espace disque requis avant l'analyse BEM de Map3D.

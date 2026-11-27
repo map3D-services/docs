@@ -2,53 +2,50 @@
 title: "Étapes d'analyse de Map3D"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Une analyse Map3D se déroule en cinq étapes :
 
-A Map3D analysis proceeds in five stages:
+#### Étape 1 – Construction et modification du modèle
 
-#### Stage 1 – Model building and editing
-
-This stage is used to setup the Map3D analysis.
+Cette étape sert à configurer l'analyse Map3D.
 
 #### Analysis > Go to CAD
 
-The user can add new mining blocks and edit existing blocks using the CAD functions built into Map3D. This can include tunnels, large irregular shaped excavations, ore zones, massive and tabular excavations, open pits, faults, fractures and more.
+Vous pouvez ajouter de nouveaux blocs d'exploitation et modifier les blocs existants à l'aide des fonctions CAD intégrées à Map3D. Cela peut inclure des tunnels, de grandes excavations de forme irrégulière, des zones de minerai, des excavations massives et tabulaires, des fosses à ciel ouvert, des failles, des fractures et plus encore.
 
-Various parts of the model can be saved in separate component files and merged for final analysis.
+Vous pouvez enregistrer diverses parties du modèle dans des fichiers de composantes distincts et les fusionner pour l'analyse finale.
 
 #### Analysis > Load Model
 
-At this stage, material properties are assigned and the desired mining sequence is set up. This can include ore placement, excavation and backfilling.
+À cette étape, vous attribuez les propriétés des matériaux et configurez la séquence d'exploitation souhaitée. Cela peut inclure la mise en place du minerai, l'excavation et le remblayage.
 
-Field point grids are positioned at locations where off reef results are desired. For the case of tabular excavations, often only on reef results are required and hence field points grids are optional.
+Les grilles de points de champ sont positionnées aux endroits où des résultats hors veine sont souhaités. Dans le cas des excavations tabulaires, seuls les résultats sur la veine sont souvent requis ; les grilles de points de champ sont donc facultatives.
 
-#### Stage 2 – Contact and intersection analysis
+#### Étape 2 – Analyse des contacts et des intersections
 
 #### Analysis > Intersections.
 
-Intersections are built between blocks that cut through one another. Boolean operations are performed to resolve the mining sequence. Comprehensive model integrity checking is conducted.
+Des intersections sont construites entre les blocs qui se traversent. Des opérations booléennes sont effectuées pour résoudre la séquence d'exploitation. Une vérification complète de l'intégrité du modèle est effectuée.
 
-#### Stage 3 – Block and grid discretization
+#### Étape 3 – Discrétisation des blocs et des grilles
 
 #### Analysis > Discretization.
 
-The model is discretized into boundary elements to be used in the BEM analysis. The user has complete control over the way in which the model is discretized. This can be conducted automatically by the program concentrating results only where results are requested, or specified manually.
+Le modèle est discrétisé en éléments de frontière utilisés pour l'analyse BEM. Vous avez le contrôle total de la façon dont le modèle est discrétisé. Le programme peut le faire automatiquement en concentrant les résultats uniquement là où ils sont demandés, ou vous pouvez le spécifier manuellement.
 
-#### Stage 4 – Map3D BEM analysis
+#### Étape 4 – Analyse BEM de Map3D
 
 #### Analysis > BEM Analysis.
 
-Conducts the Boundary Element Analysis. The same input data can be used for elastic, thermal/fluid flow or non-linear analysis
+Effectue l'analyse par éléments de frontière. Les mêmes données d'entrée peuvent servir à une analyse élastique, thermique/écoulement de fluide ou non linéaire
 
-#### Map3D Versions
+#### Versions de Map3D
 
-#### Stage 5 – Post-processing
+#### Étape 5 – Post-traitement
 
 #### Analysis > Graphics.
 
-This stage is used to view and process the Map3D analysis results. Contour plots of stress, strain, displacement and strength factors, or any desired combination of these components can be generated on boundary surfaces and on user defined field point grids. Results can be displayed either as total values, or the difference in value between mining steps.
+Cette étape sert à visualiser et à traiter les résultats de l'analyse Map3D. Vous pouvez générer des tracés de contours de contrainte, de déformation, de déplacement et de coefficients de résistance, ou de toute combinaison souhaitée de ces composantes, sur les surfaces de frontière et sur des grilles de points de champ définies par l'utilisateur. Les résultats peuvent s'afficher sous forme de valeurs totales ou de différence de valeur entre les étapes d'exploitation.
 
-Results from previous analyzes can be loaded for viewing
+Vous pouvez charger les résultats d'analyses précédentes pour les visualiser
 
 File > Open Analysis Results.

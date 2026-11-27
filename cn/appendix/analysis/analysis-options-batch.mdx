@@ -2,55 +2,52 @@
 title: "分析 > 选项 > 批处理"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+设置分析批处理队列。
 
-Set up analysis batch queue.
-
-If the user has multiple models that need to be run, these can be specified in this batch queue. By selecting
+如果用户有多个模型需要运行，可以在此批处理队列中指定。选择
 
 Analysis > Options > Batch > Execute Batch Queue
 
-all checked models will be run without any request for interactive response from the user.
+后，所有已选中的模型都将运行，无需用户进行任何交互响应。
 
-When you check a batch file for execution you will be prompted to search for a model file name, location, and file format. If the search is successful, the model will be checked.
+选中某个批处理文件以供执行时，系统会提示你搜索模型文件名、位置和文件格式。如果搜索成功，该模型将被选中。
 
-The second column in the Batch File Setup dialogue box allows you to set analysis options if desired. These setting override any options set in the Analysis > Options dialogue box.
+Batch File Setup 对话框中的第二列可用于设置分析选项（如有需要）。这些设置会覆盖 Analysis > Options 对话框中设置的任何选项。
 
-#### Console Mode:
+#### 控制台模式：
 
-Map3D can be started from the Windows command prompt or from a *.bat file if desired. Command line options can be used in a text file script or entered from a Command Prompt. The procedure is simply to create a *.bat file as follows:
+Map3D 可以从 Windows 命令提示符或 *.bat 文件启动（如有需要）。命令行选项可用于文本文件脚本，也可在命令提示符中输入。操作步骤很简单，按如下方式创建一个 *.bat 文件：
 
-**Map3D filename.inp -option1 - option2 ...** (where "filename.inp" is the name of the model file you want to analyze).
+**Map3D filename.inp -option1 - option2 ...** （其中“filename.inp”是要分析的模型文件的名称）。
 
-The options are as follows:
+选项如下：
 
-- **-analysis** (tells Map3D to run an analysis - you must also supply "filename.inp").
+- **-analysis** （指示 Map3D 运行分析，还必须提供“filename.inp”）。
 
-- **-console** (displays only the "Analysis Dialog" while Map3D is running).
+- **-console** （Map3D 运行时仅显示“Analysis Dialog”）。
 
-   - (displays nothing at all while Map3D is running and stops upon completion of analysis).
+   - （Map3D 运行时不显示任何内容，并在分析完成后停止）。
 
-- **-stop** (stops Map3D upon completion of analysis).
+- **-stop** （分析完成后停止 Map3D）。
 
-You can also open results files as follows:
+你还可以按如下方式打开结果文件：
 
-**Map3D filename.001** (where "filename.001" is the name of the results file you want to display).
+**Map3D filename.001** （其中“filename.001”是要显示的结果文件的名称）。
 
-For example if you want to run a Map3D analysis with only a logging window shown, you would start this as follows:
+例如，如果要运行 Map3D 分析且仅显示日志窗口，可按如下方式启动：
 
 #### Map3D filename.inp -console -analysis
 
-For example if you want to run a Map3D analysis with no logging window shown, you would start this as follows:
+例如，如果要运行 Map3D 分析且不显示日志窗口，可按如下方式启动：
 
 #### Map3D filename.inp -silent -analysis
 
-#### Notes:
+#### 注意：
 
-Batch model files names are saved and restored each time Map3D is executed.
+批处理模型文件名会在每次执行 Map3D 时保存和恢复。
 
-Model files that are not checked will not be executed in batch mode.
+未选中的模型文件不会在批处理模式下执行。
 
-The batch queue can be interrupted at any time simply by aborting the current analysis
+只需中止当前分析，即可随时中断批处理队列
 
 Analysis > Abort

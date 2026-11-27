@@ -2,19 +2,16 @@
 title: "Análisis > Opciones > Colinealidad"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Combina los puntos de coordenadas cercanos entre sí – durante la carga del archivo.
 
-Merge coordinate points that are close to one another – during file load.
+Los puntos de coordenadas muy cercanos entre sí se combinan. Los puntos de coordenadas muy cercanos al borde de una superficie se mueven hacia ese borde. De forma predeterminada, Map3D mueve estos puntos si están dentro de un radio de búsqueda de una milésima de la longitud del borde respecto de la superficie.
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+Si lo desea, puede definir un radio de búsqueda introduciendo un valor en el cuadro de datos. Es posible que otros paquetes CAD no enlacen las esquinas de las superficies. Esta función es útil para eliminar pequeños huecos y solapamientos entre superficies y bloques adyacentes. Tenga extrema precaución al especificar un valor distinto de cero para este parámetro, ya que los valores grandes pueden causar más problemas de los que resuelven al combinar demasiados puntos.
 
-If desired, the user can define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks. Extreme caution should be used when specifying a non-zero value for this parameter since large values can cause more problems then it will fix by merging too many points together.
+Notas
 
-Notes
-
-This function must be checked before loading the model file
+Esta función debe estar marcada antes de cargar el archivo del modelo
 
 #### Analysis > Load Model.
 
-It is recommended that you check this option. However caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+Se recomienda marcar esta opción. Sin embargo, se debe tener precaución si se especifica un radio de búsqueda distinto de cero, ya que un valor demasiado grande puede combinar puntos de coordenadas de forma no deseada y destruir la integridad del modelo.

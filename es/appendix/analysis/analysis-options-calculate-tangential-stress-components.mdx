@@ -2,21 +2,18 @@
 title: "Análisis > Opciones > Calcular componentes de esfuerzo tangencial"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Especifica que las componentes del esfuerzo tangencial se calculen en la superficie del elemento - durante el análisis BEM de Map3D.
 
-Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+Cuando no está marcada, solo se calculan los esfuerzos normales y de corte. Los esfuerzos tangenciales no se calculan porque no son necesarios para la solución.
 
-When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+Cuando está marcada, se calculan las seis componentes del esfuerzo (normales , de corte y tangenciales ). Las componentes del esfuerzo tangencial suelen ser deseables porque representan el esfuerzo de fibra extrema, es decir, los esfuerzos tangenciales a una superficie),
 
-When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+El esfuerzo tangencial máximo suele compararse con la resistencia a la compresión no confinada del material, de forma similar al esfuerzo en el plano de la pared **[ 3 σ1i - σ3i ]** .
 
-The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+#### Notas:
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Esta función debe estar marcada antes de realizar el análisis BEM de Map3D
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+Esta opción requiere cálculos adicionales y, por lo tanto, aumenta el tiempo de análisis.

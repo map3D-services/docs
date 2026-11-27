@@ -2,73 +2,70 @@
 title: "Materiais > Material amolecido"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Materiais amolecidos podem ser usados para simular o escoamento do terreno e os consequentes efeitos de redistribuição de tensões. Embora a modelagem de plasticidade seja, sem dúvida, o melhor método para isso, o amolecimento de material também pode ser usado para simular o escoamento do terreno, a redistribuição de tensões e, portanto, o possível impacto nas áreas vizinhas. A vantagem dessa abordagem é que ela permite ao engenheiro investigar o comportamento não linear de forma rápida e fácil.
 
-Softened materials can be used to simulate ground yielding and the resulting stress redistribution effects. Although plasticity modelling is undoubtedly the best method of doing this, material softening can also be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate nonlinear behaviour quickly and easily.
+A teoria por trás do amolecimento é explicada em detalhes em **Elastic softening to simulate plastic yielding.pdf** . A seguir, um breve resumo.
 
-The theory behind softening is explained in detail in **Elastic softening to simulate plastic yielding.pdf** . Following is a brief summary.
-
-In numerical modelling, de-stressing of an elastic rock mass is accomplished by allowing plastic strains. These strains act to dissipate the excess stress indicated by the elastic response. An alternative method to induce plastic deformations is shown in the figure below. Here, the stress-strain modulus is progressively reduced in magnitude. It can be observed that although technically this reduces the stiffness of the elastic stress-strain response, this can be interpreted as being equivalent to increments (De<sup>p</sup> ) of plastic strain.
+Na modelagem numérica, o alívio de tensões de um maciço rochoso elástico é obtido permitindo deformações plásticas. Essas deformações dissipam a tensão excedente indicada pela resposta elástica. Um método alternativo para induzir deformações plásticas é mostrado na figura abaixo. Nele, o módulo tensão-deformação é reduzido progressivamente em magnitude. Observa-se que, embora tecnicamente isso reduza a rigidez da resposta elástica tensão-deformação, isso pode ser interpretado como equivalente a incrementos (De<sup>p</sup> ) de deformação plástica.
 
 ![Figure from page 569](/images/page-569-img-1.png)
 
-Rock failure is generally understood to be the result of shear failure and can be simulated with shear modulus reduction: whereas volume changes are associated with dilation or compaction depending on the stress conditions and nature of the rock itself. Shear modulus reduction can be used to reduce the stress differential (s1-s3), and bulk modulus reduction can be used to control the volumetric strain
+Entende-se, em geral, que a ruptura da rocha resulta de ruptura por cisalhamento e pode ser simulada com a redução do módulo de cisalhamento; já as variações de volume estão associadas à dilatação ou à compactação, dependendo das condições de tensão e da natureza da própria rocha. A redução do módulo de cisalhamento pode ser usada para reduzir o diferencial de tensão (s1-s3), e a redução do módulo volumétrico pode ser usada para controlar a deformação volumétrica
 
-(evolume=e1+e2+e3). This allows independent control of the shear failure process and dilational response. Whether softening is automated or done manually, care must obviously be taken to de-stress by a realistic amount to ensure that the final stress state in the affected pillars satisfies a well calibrated strength criterion.
+(evolume=e1+e2+e3). Isso permite o controle independente do processo de ruptura por cisalhamento e da resposta dilatante. Quer o amolecimento seja automatizado ou feito manualmente, é claro que deve-se ter cuidado para aliviar as tensões em uma quantidade realista, de modo que o estado final de tensão nos pilares afetados satisfaça um critério de resistência bem calibrado.
 
-The non-softened bulk modulus **_B_** and the shear modulus **_G_** can be determined from Young's modulus **_E_** and Poisson's ration as follows:
+O módulo volumétrico não amolecido **_B_** e o módulo de cisalhamento **_G_** podem ser determinados a partir do módulo de Young **_E_** e do coeficiente de Poisson da seguinte forma:
 
 **_B = E/3/(1-2_** n **_) G = E/2/(1+_** n **_)_**
 
-The softened bulk modulus **_Bs_** and softened shear modulus **_Gs_** are determined using the Volume Softening parameter **_b_** , and Shear Softening parameter **_g_** ,  in the table below such that
+O módulo volumétrico amolecido **_Bs_** e o módulo de cisalhamento amolecido **_Gs_** são determinados usando o parâmetro de amolecimento de volume (Volume Softening) **_b_** e o parâmetro de amolecimento de cisalhamento (Shear Softening) **_g_** , na tabela abaixo, de modo que
 
 **_Bs = B×b Gs = G×g_**
 
 ![Figure from page 570](/images/page-570-img-1.png)
 
-For example, shear softening with **_g=1_** represents no softening, whereas shear softening with **_g=0.5_** represents a reduction in the shear modulus of 50%...
+Por exemplo, o amolecimento por cisalhamento com **_g=1_** representa ausência de amolecimento, enquanto o amolecimento por cisalhamento com **_g=0.5_** representa uma redução de 50% no módulo de cisalhamento...
 
-To demonstrate the simplicity of the softening procedure, an example of an overstressed tunnel with side wall yielding. Note that the objective of this example is not to duplicate results from plastic modelling, nor should one expect to be able to do so. However, this will demonstrate side wall softening, de-stressing, stress transfer and yielding. Here it is desired to demonstrate that with softening:
+Para demonstrar a simplicidade do procedimento de amolecimento, apresenta-se um exemplo de um túnel sobretensionado com escoamento das paredes laterais. Note que o objetivo deste exemplo não é reproduzir os resultados da modelagem plástica, nem se deve esperar conseguir fazê-lo. No entanto, ele demonstrará o amolecimento das paredes laterais, o alívio de tensões, a transferência de tensões e o escoamento. Aqui, deseja-se demonstrar que, com o amolecimento:
 
-- stresses can be dissipated to surrounding abutments,
+- as tensões podem ser dissipadas para os encontros vizinhos,
 
-- larger strains and displacements associated with plasticity can be generated.
+- podem ser geradas as maiores deformações e deslocamentos associados à plasticidade.
 
-#### Plastic Model Results
+#### Resultados do modelo plástico
 
-Consider a 1 m radius circular tunnel with 30 MPa homogeneous pre-mining stresses. A MohrCoulomb failure criterion has been used throughout with a UCS of 11.9 MPa, friction angle of 30°, Young’s modulus of 6780 MPa and Poisson’s ratio of 0.21 This model has been analysed using Map3D Visco-Plastic. Elastic/perfectly plastic behaviour has been used with dilation rate set to zero. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Considere um túnel circular com 1 m de raio e tensões pré-lavra homogêneas de 30 MPa. Foi usado um critério de ruptura de MohrCoulomb em todo o modelo, com UCS de 11,9 MPa, ângulo de atrito de 30°, módulo de Young de 6780 MPa e coeficiente de Poisson de 0,21. Este modelo foi analisado usando o Map3D Visco-Plastic. Foi usado comportamento elástico/perfeitamente plástico, com a taxa de dilatação definida como zero. Abaixo, a tensão principal maior é mostrada à esquerda e o deslocamento é mostrado à direita.
 
 ![Figure from page 571](/images/page-571-img-1.png)
 
 ![Figure from page 571](/images/page-571-img-2.png)
 
-These Map3D Visco-Plastic model results closely match the closed form analytic solution for the plastic stresses and displacement. For reference, the elastic analytic solution is also shown.
+Esses resultados do modelo do Map3D Visco-Plastic coincidem de perto com a solução analítica fechada para as tensões e os deslocamentos plásticos. Para referência, a solução analítica elástica também é mostrada.
 
 ![Figure from page 571](/images/page-571-img-4.png)
 
 ![Figure from page 571](/images/page-571-img-5.png)
 
-#### Softened Model Results
+#### Resultados do modelo amolecido
 
-In order to model the above with softening, a zone around the side walls of the tunnel has been softened as shown below where the drive is shown in blue and softened zone is shown in purple. This softened zone has been chosen to be the same size as the plastic zone determined above (1.74 m radius).
+Para modelar o caso acima com amolecimento, uma zona ao redor das paredes laterais do túnel foi amolecida, como mostrado abaixo, onde a galeria é mostrada em azul e a zona amolecida em roxo. Esta zona amolecida foi escolhida com o mesmo tamanho da zona plástica determinada acima (1,74 m de raio).
 
 ![Figure from page 571](/images/page-571-img-8.png)
 
-In this case it is desired to demonstrate that plastic closure can be emulated with a simple softened model.
+Neste caso, deseja-se demonstrar que a convergência plástica pode ser emulada com um modelo amolecido simples.
 
-Herein, the elastic shear modulus was softened by a factor of **_g=0.2_** , while the bulk modulus was held constant. Below, the major principal stress is shown on the left, and displacement is shown n the right.
+Aqui, o módulo de cisalhamento elástico foi amolecido por um fator **_g=0.2_** , enquanto o módulo volumétrico foi mantido constante. Abaixo, a tensão principal maior é mostrada à esquerda e o deslocamento é mostrado à direita.
 
 ![Figure from page 572](/images/page-572-img-1.png)
 
 ![Figure from page 572](/images/page-572-img-2.png)
 
-The softened results show an excellent match for both the plastic minor principal stress and displacement. Note that while the actual softened major principal stress values do not match the plastic results in the yield zone in detail, on average they are about the correct magnitude. Also the stress has been redistributed to the elastic “abutment” quite accurately showing nearly the exact amount of stress concentration expected.
+Os resultados amolecidos mostram uma excelente concordância tanto para a tensão principal menor plástica quanto para o deslocamento. Note que, embora os valores reais da tensão principal maior amolecida não coincidam em detalhe com os resultados plásticos na zona de escoamento, em média eles têm aproximadamente a magnitude correta. Além disso, a tensão foi redistribuída para o "encontro" elástico com bastante precisão, mostrando quase exatamente a concentração de tensão esperada.
 
 ![Figure from page 572](/images/page-572-img-4.png)
 
 ![Figure from page 572](/images/page-572-img-5.png)
 
-While the results for softening do not match the plastic analysis results perfectly, they have obviously simulated yielding of the side wall material and driven the elastic results much closer to those from the plastic model. It would appear that material softening can be used to simulate ground yielding, stress redistribution and hence the possible impact on surrounding areas. The advantage of this approach is that it allows the engineer to investigate non-linear behaviour quickly and easily when compared to plastic modelling. Softened models require very little increased analysis time compared to simple elastic models.
+Embora os resultados do amolecimento não coincidam perfeitamente com os da análise plástica, é evidente que eles simularam o escoamento do material das paredes laterais e aproximaram muito mais os resultados elásticos dos do modelo plástico. Parece que o amolecimento de material pode ser usado para simular o escoamento do terreno, a redistribuição de tensões e, portanto, o possível impacto nas áreas vizinhas. A vantagem dessa abordagem é que ela permite ao engenheiro investigar o comportamento não linear de forma rápida e fácil, em comparação com a modelagem plástica. Os modelos amolecidos exigem um aumento muito pequeno no tempo de análise em comparação com modelos elásticos simples.
 
-A more detailed description and examples are provided in **Elastic softening to simulate plastic yielding.pdf** .
+Uma descrição mais detalhada e exemplos são fornecidos em **Elastic softening to simulate plastic yielding.pdf** .

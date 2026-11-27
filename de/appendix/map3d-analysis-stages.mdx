@@ -2,53 +2,50 @@
 title: "Analysephasen in Map3D"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Eine Map3D-Analyse verläuft in fünf Phasen:
 
-A Map3D analysis proceeds in five stages:
+#### Phase 1 – Modellaufbau und Bearbeitung
 
-#### Stage 1 – Model building and editing
-
-This stage is used to setup the Map3D analysis.
+In dieser Phase wird die Map3D-Analyse vorbereitet.
 
 #### Analysis > Go to CAD
 
-The user can add new mining blocks and edit existing blocks using the CAD functions built into Map3D. This can include tunnels, large irregular shaped excavations, ore zones, massive and tabular excavations, open pits, faults, fractures and more.
+Mit den in Map3D integrierten CAD-Funktionen können Sie neue Abbaublöcke hinzufügen und vorhandene Blöcke bearbeiten. Dazu gehören Tunnel, große unregelmäßig geformte Hohlräume, Erzzonen, massive und tabulare Abbauhohlräume, Tagebaue, Störungen, Klüfte und mehr.
 
-Various parts of the model can be saved in separate component files and merged for final analysis.
+Verschiedene Teile des Modells können in separaten Komponentendateien gespeichert und für die abschließende Analyse zusammengeführt werden.
 
 #### Analysis > Load Model
 
-At this stage, material properties are assigned and the desired mining sequence is set up. This can include ore placement, excavation and backfilling.
+In dieser Phase werden die Materialeigenschaften zugewiesen und die gewünschte Abbaufolge festgelegt. Dazu gehören das Einbringen von Erz, der Abbau und der Versatz.
 
-Field point grids are positioned at locations where off reef results are desired. For the case of tabular excavations, often only on reef results are required and hence field points grids are optional.
+Feldpunktgitter werden an den Stellen positioniert, an denen Ergebnisse abseits des Flözes gewünscht sind. Bei tabularen Abbauhohlräumen werden oft nur Ergebnisse im Flöz benötigt. Feldpunktgitter sind daher optional.
 
-#### Stage 2 – Contact and intersection analysis
+#### Phase 2 – Kontakt- und Schnittanalyse
 
 #### Analysis > Intersections.
 
-Intersections are built between blocks that cut through one another. Boolean operations are performed to resolve the mining sequence. Comprehensive model integrity checking is conducted.
+Zwischen Blöcken, die einander durchdringen, werden Schnitte erzeugt. Boolesche Operationen lösen die Abbaufolge auf. Außerdem erfolgt eine umfassende Prüfung der Modellintegrität.
 
-#### Stage 3 – Block and grid discretization
+#### Phase 3 – Diskretisierung von Blöcken und Gittern
 
 #### Analysis > Discretization.
 
-The model is discretized into boundary elements to be used in the BEM analysis. The user has complete control over the way in which the model is discretized. This can be conducted automatically by the program concentrating results only where results are requested, or specified manually.
+Das Modell wird in Randelemente für die BEM-Analyse diskretisiert. Sie haben die volle Kontrolle darüber, wie das Modell diskretisiert wird. Die Diskretisierung kann automatisch durch das Programm erfolgen, das die Elemente nur dort konzentriert, wo Ergebnisse angefordert werden, oder manuell festgelegt werden.
 
-#### Stage 4 – Map3D BEM analysis
+#### Phase 4 – Map3D-BEM-Analyse
 
 #### Analysis > BEM Analysis.
 
-Conducts the Boundary Element Analysis. The same input data can be used for elastic, thermal/fluid flow or non-linear analysis
+Führt die Randelementanalyse durch. Dieselben Eingabedaten können für die elastische, die thermische/Fluidströmungs-Analyse oder die nichtlineare Analyse verwendet werden
 
-#### Map3D Versions
+#### Map3D-Versionen
 
-#### Stage 5 – Post-processing
+#### Phase 5 – Nachbearbeitung
 
 #### Analysis > Graphics.
 
-This stage is used to view and process the Map3D analysis results. Contour plots of stress, strain, displacement and strength factors, or any desired combination of these components can be generated on boundary surfaces and on user defined field point grids. Results can be displayed either as total values, or the difference in value between mining steps.
+In dieser Phase werden die Ergebnisse der Map3D-Analyse angezeigt und weiterverarbeitet. Konturdarstellungen von Spannung, Dehnung, Verschiebung und Festigkeitsfaktoren oder einer beliebigen Kombination dieser Komponenten können auf Randflächen und auf benutzerdefinierten Feldpunktgittern erzeugt werden. Die Ergebnisse können entweder als Gesamtwerte oder als Wertdifferenz zwischen Abbauschritten dargestellt werden.
 
-Results from previous analyzes can be loaded for viewing
+Ergebnisse früherer Analysen können zur Ansicht geladen werden
 
 File > Open Analysis Results.

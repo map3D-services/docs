@@ -2,51 +2,48 @@
 title: "分析 > 选项 > 线性与二次"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间使用高阶边界单元。
 
-Use higher order boundary elements – during Map3D BEM analysis.
+边界元法采用数值近似来描述应力或位移不连续的表面分量强度在边界上的分布方式。最简单的假设是认为这些表面分量在每个边界单元上均匀分布。Map3D 的使用经验表明，除少数涉及显著弯曲效应的问题外，这种近似均可得到准确的结果。即使对于后一类问题，除边界表面附近外，在所有位置仍可得到准确的结果。
 
-The Boundary Element Method utilizes a numerical approximation of how the intensity of the surface components of stress or displacement discontinuity are distributed over the boundaries. The simplest assumption is to assume that these surface components are distributed uniformly over each boundary element. Experience with Map3D has shown that accurate results are obtained with this approximation for all but a limited class of problems where there are significant bending effects involved. Even for this later type of problem, accurate results are still obtained at all locations except near the boundary surfaces.
+要在涉及显著弯曲效应的问题中获得边界附近的准确结果，必须采用高阶边界单元。对于大跨度且形状不规则的问题，弯曲效应通常变得很重要。这在边界上的折角附近尤为重要，此类折角可能由各种特征之间的相交产生。
 
-To obtain accurate results near the boundaries of problems where there are significant bending effects involved it is necessary to implement higher order boundary elements. Bending effects normally become important for problems with large spans that are irregularly shaped. This is particularly important near kinks in the boundary that can arise due to intersections between various features.
+当 **linear** 和 **quad** 均未选中时，应力或位移不连续的表面分量强度按 **常数** 值分布。
 
-When neither **linear** or **quad** are checked, the intensity of the surface components of stress or displacement discontinuity are distributed as **constant** values.
-
-When the **linear** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a linear order polynomial distribution. For triangles the following distribution is used
+选中 **linear** 选项时，应力或位移不连续的表面分量强度在边界单元上采用一阶多项式分布。对于三角形，使用以下分布
 
 _a + b x + c y_
 
-For quadrilaterals, the following distribution is used
+对于四边形，使用以下分布
 
 _a + b x + c y + d xy_
 
-When the **quad** option is checked, the intensity of the surface components of stress or displacement discontinuity are distributed over the boundary elements using a quadratic order polynomial distribution. For triangles the following distribution is used
+选中 **quad** 选项时，应力或位移不连续的表面分量强度在边界单元上采用二阶多项式分布。对于三角形，使用以下分布
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ²
 
-For quadrilaterals, the following distribution is used
+对于四边形，使用以下分布
 
 _a + b x + c y + d x_ ² _+ e xy + f y_ ² _+ g x_ ²y _+ h x_ ² _y_ ² _+ i y_ ²x
 
-Notes:
+注意：
 
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 #### Analysis > BEM Analysis
 
-This option will increase problem size and hence analysis time, since higher order elements require more interpolation nodes on the bounding surfaces.
+此选项会增大问题规模，从而增加分析时间，因为高阶单元在边界表面上需要更多的插值节点。
 
-If the user is uncertain about the sensitivity of their model to this approximation, it is suggested that some subset of the actual model is run with and without linear elements for comparison.
+如果用户不确定其模型对这种近似的敏感程度，建议对实际模型的某个子集分别在使用和不使用线性单元的情况下运行，以便比较。
 
-In the example below, an excavation with a notch is illustrated. The vertical stress is contoured for the three cases of neither **linear** or **quad** , then **linear** , then **quad** . Note the anomalous stress concentration at the tip of the notch with the constant distribution. This effect is eliminated using either the **linear** distribution, and further reduced using the **quad** distribution.
-
-![Figure from page 499](/images/page-499-img-7.png)
-
-#### linear distribution
+在下面的示例中，图示了一个带有凹口的开挖。分别针对 **linear** 和 **quad** 均未选中、选中 **linear**、选中 **quad** 这三种情况绘制了垂直应力等值线。请注意，采用常数分布时，凹口尖端处出现了异常的应力集中。使用 **linear** 分布可消除此效应，使用 **quad** 分布则可进一步减弱此效应。
 
 ![Figure from page 499](/images/page-499-img-7.png)
 
-**quad** distribution
+#### linear 分布
+
+![Figure from page 499](/images/page-499-img-7.png)
+
+**quad** 分布
 
 ![Figure from page 499](/images/page-499-img-7.png)

@@ -2,47 +2,44 @@
 title: "分析 > 离散化"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+对模型进行离散化。
 
-Discretization the model.
-
-All excavation surfaces are automatically discretized by concentrating elements where results are requested
+所有开挖面都会通过在需要结果的位置加密单元而自动离散化
 
 View > Render > Discretize
 
-Analysis results are calculated on DD surfaces and on a series of user defined grid planes
+分析结果在 DD 表面和一系列用户定义的网格平面上计算
 
 ![Figure from page 116](/images/page-116-img-10.png)
 
 CAD > Build > Grid Plane
 
-or at user defined points
+或在用户定义的点上计算
 
 #### Analysis > Options > MSCALC
 
-The grid planes are automatically discretized into a series of field points at which displacements, strains and stresses are calculated.
+网格平面会自动离散为一系列场点，并在这些场点上计算位移、应变和应力。
 
-The discretization analysis can be repeated as many times as desired with different control parameters.
+离散化分析可以使用不同的控制参数重复任意多次。
 
-The user has complete control over the way in which the model is discretized by specifying various control parameters (Element Length _AL_ , Grid Spacing _AG_ , Element Discretization _DON_ , Grid Discretization _DOL_ )
+用户可以通过指定各种控制参数（单元长度 _AL_ 、网格间距 _AG_ 、单元离散化 _DON_ 、网格离散化 _DOL_ ），完全控制模型的离散化方式
 
 #### Analysis > CParams
 
-and by specifying the maximum element width for 3D FF blocks and DD planes
+也可以通过指定三维 FF 块体和 DD 平面的最大单元宽度
 
 CAD > Edit > Entities > Maximum Element Width
 
-as well as for field point grids
+以及场点网格的最大单元宽度来控制
 
 CAD > Edit > Entities > Maximum Element Width
 
-Refer to Discretization and Lumping for a thorough discussion on how to set up these control parameters.
+有关如何设置这些控制参数的详细讨论，请参阅 Discretization and Lumping。
 
-Options:
+选项：
 
 Analysis > Options > MSCALC Analysis > Options > LERD/LSS Analysis > Options > Lumping
 
-Related Topics:
+相关主题：
 
 Analysis Dialog Analysis > Suspend Analysis > ABORT Analysis > Restart

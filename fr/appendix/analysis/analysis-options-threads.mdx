@@ -2,21 +2,18 @@
 title: "Analyse > Options > Threads"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Affiche le nombre de cœurs/threads actifs.
 
-Displays the number of cores/threads active.
+Map3D prend entièrement en charge le calcul parallèle et les E/S disque parallèles avec l'option multiprocesseur/multidisque.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Si votre licence inclut l'option multiprocesseur/multidisque, Map3D exécute toutes les procédures d'analyse en parallèle, réparties entre tous les processeurs disponibles.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D will conduct all analysis procedures in parallel distributed among all available processors.
+**CPU :** Les processeurs récents sont désormais proposés en versions double, quadruple et hexa cœurs. Map3D V58 prend désormais en charge le calcul parallèle, ce qui permet des vitesses de calcul plus élevées. Il en résulte une réduction de plus de 6 fois des temps d'assemblage de la matrice et de la grille. Les ordinateurs multi-CPU iraient encore plus vite.
 
-**CPU:** Recent CPU's are now available as dual, quad and hex cores. Map3D V58 now supports parallel processing which allows faster computational rates. This results in more than 6x reduction in matrix assembly and grid assembly times. Multi-CPU computers would go even faster.
+Le test de performance du calcul parallèle ci-dessous montre clairement que l'on peut s'attendre à ce que les processeurs à deux cœurs soient plus de deux fois plus rapides,
 
-The following parallel processing benchmark clearly shows that you can expect dual cores CPU's to perform more than twice as fast,
-
-quad cores to perform more than 4 times as fast and hex-cores to perform more than 6 times faster. In hyper-threading enabled CPUs, 2 computational threads are superimposed on the same core. This is the reason why Map3D-MP actually achieves performance better than the theoretical maximum.
+les quadruple cœurs plus de 4 fois plus rapides et les hexa cœurs plus de 6 fois plus rapides. Dans les processeurs avec hyper-threading activé, 2 threads de calcul sont superposés sur le même cœur. C'est la raison pour laquelle Map3D-MP atteint en fait des performances supérieures au maximum théorique.
 
 ![Figure from page 487](/images/page-487-img-1.png)
 
-In order to achieve these performance gains it is necessary to improve both the processing power and/or disk I/O rate Analysis > Options > Drive #.
+Pour obtenir ces gains de performance, il faut améliorer la puissance de calcul et/ou le débit d'E/S disque Analysis > Options > Drive #.

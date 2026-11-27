@@ -2,47 +2,44 @@
 title: "Análise > Discretização"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Discretiza o modelo.
 
-Discretization the model.
-
-All excavation surfaces are automatically discretized by concentrating elements where results are requested
+Todas as superfícies de escavação são discretizadas automaticamente, concentrando elementos onde os resultados são solicitados
 
 View > Render > Discretize
 
-Analysis results are calculated on DD surfaces and on a series of user defined grid planes
+Os resultados da análise são calculados em superfícies DD e em uma série de planos de grade definidos pelo usuário
 
 ![Figure from page 116](/images/page-116-img-10.png)
 
 CAD > Build > Grid Plane
 
-or at user defined points
+ou em pontos definidos pelo usuário
 
 #### Analysis > Options > MSCALC
 
-The grid planes are automatically discretized into a series of field points at which displacements, strains and stresses are calculated.
+Os planos de grade são discretizados automaticamente em uma série de pontos de campo nos quais são calculados deslocamentos, deformações e tensões.
 
-The discretization analysis can be repeated as many times as desired with different control parameters.
+A análise de discretização pode ser repetida quantas vezes se desejar, com diferentes parâmetros de controle.
 
-The user has complete control over the way in which the model is discretized by specifying various control parameters (Element Length _AL_ , Grid Spacing _AG_ , Element Discretization _DON_ , Grid Discretization _DOL_ )
+O usuário tem controle total sobre a forma como o modelo é discretizado, especificando vários parâmetros de controle (comprimento do elemento _AL_ , espaçamento da grade _AG_ , discretização do elemento _DON_ , discretização da grade _DOL_ )
 
 #### Analysis > CParams
 
-and by specifying the maximum element width for 3D FF blocks and DD planes
+e especificando a largura máxima de elemento para blocos FF 3D e planos DD
 
 CAD > Edit > Entities > Maximum Element Width
 
-as well as for field point grids
+assim como para grades de pontos de campo
 
 CAD > Edit > Entities > Maximum Element Width
 
-Refer to Discretization and Lumping for a thorough discussion on how to set up these control parameters.
+Consulte Discretization and Lumping para uma discussão detalhada sobre como definir esses parâmetros de controle.
 
-Options:
+Opções:
 
 Analysis > Options > MSCALC Analysis > Options > LERD/LSS Analysis > Options > Lumping
 
-Related Topics:
+Tópicos relacionados:
 
 Analysis Dialog Analysis > Suspend Analysis > ABORT Analysis > Restart

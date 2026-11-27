@@ -2,81 +2,78 @@
 title: "CAD > Bearbeiten > Liste der zu bearbeitenden Objekte erstellen"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Diese Routine lässt sich entweder durch Auswahl einer beliebigen Bearbeitungsfunktion (z. B. einer Schaltfläche) oder einfach durch Rechtsklick auf ein beliebiges Objekt starten.
 
-This routine can be initiated either by picking any edit function (e.g. button) or simple right-clicking on any entity.
-
-When you initiate any entity editing routine you will first be prompted to build a list of entities that you wish to edit
+Beim Start einer Routine zur Objektbearbeitung werden Sie zunächst aufgefordert, eine Liste der Objekte zu erstellen, die Sie bearbeiten möchten
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- Wenn Tools > Shift-key Selection aktiviert ist, müssen Sie für Mehrfachauswahlen die Umschalttaste gedrückt halten.
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- Standardmäßig werden ausgewählte Objekte zur Liste hinzugefügt. Wenn Sie jedoch die Strg-Taste gedrückt halten, werden ausgewählte Objekte aus der Liste entfernt.
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- Während Sie die Umschalttaste oder die Strg-Taste gedrückt halten, können Sie ein Kreuzungsfenster aufziehen.
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Durch Drücken der Leertaste wird automatisch die zuletzt verwendete Bearbeitungsfunktion aktiviert.
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- Wenn Sie beim Rechtsklick die Alt-Taste gedrückt halten, wird die zuletzt verwendete Bearbeitungsfunktion automatisch wiederholt.
 
-This toolbar controls the various functions used in list building.
+Diese Symbolleiste steuert die verschiedenen Funktionen zum Erstellen der Liste.
 
-Aborts editing. Select entities by picking one surface at a time. Select entities by picking whole groups making up a block. Include all entities with the selected number.
+Bricht die Bearbeitung ab. Wählt Objekte aus, indem jeweils eine Oberfläche angeklickt wird. Wählt Objekte aus, indem ganze Gruppen angeklickt werden, die einen Block bilden. Schließt alle Objekte mit der ausgewählten Nummer ein.
 
-Include all entities with the selected colour.
+Schließt alle Objekte mit der ausgewählten Farbe ein.
 
-Include all entities with the selected material number.
+Schließt alle Objekte mit der ausgewählten Materialnummer ein.
 
-- The same block may have different materials in it depending on the currently active mining step.
+- Derselbe Block kann je nach aktuell aktivem Abbauschritt unterschiedliche Materialien enthalten.
 
-- When using this function, make sure to select the appropriate mining step File > Mining Step
+- Stellen Sie bei Verwendung dieser Funktion sicher, dass Sie den passenden Abbauschritt auswählen File > Mining Step
 
-Include all entities excavated with the selected mining step number.
+Schließt alle Objekte ein, die mit der ausgewählten Abbauschrittnummer abgebaut wurden.
 
-Include all entities within the selected window.
+Schließt alle Objekte innerhalb des ausgewählten Fensters ein.
 
-- Entities will only be selected if the entire entity is contained within the window.
+- Objekte werden nur ausgewählt, wenn das gesamte Objekt innerhalb des Fensters liegt.
 
-- If (surface select mode) is active, only surfaces will be included.
+- Ist (Oberflächenauswahlmodus) aktiv, werden nur Oberflächen eingeschlossen.
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- Ist (Objektauswahlmodus) aktiv, werden alle Oberflächen eingeschlossen, die den Block bilden.
 
-Include all entities within the crossing window.
+Schließt alle Objekte innerhalb des Kreuzungsfensters ein.
 
-- Entities will be selected if even a part of the entity is within the window.
+- Objekte werden ausgewählt, wenn auch nur ein Teil des Objekts innerhalb des Fensters liegt.
 
-- This function can also be activated by holding down the Shift-key or Ctrl-key and dragging open a crossing window.
+- Diese Funktion lässt sich auch aktivieren, indem Sie die Umschalttaste oder die Strg-Taste gedrückt halten und ein Kreuzungsfenster aufziehen.
 
-- If (surface select mode) is active, only surfaces will be included.
+- Ist (Oberflächenauswahlmodus) aktiv, werden nur Oberflächen eingeschlossen.
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- Ist (Objektauswahlmodus) aktiv, werden alle Oberflächen eingeschlossen, die den Block bilden.
 
-- Selected entities will be added to the list.
+- Ausgewählte Objekte werden zur Liste hinzugefügt.
 
-Selected entities will be removed from the list. Undo last selection.
+Ausgewählte Objekte werden aus der Liste entfernt. Macht die letzte Auswahl rückgängig.
 
-Redo the last section.
+Stellt die letzte Auswahl wieder her.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Sobald Sie die gewünschten Objekte ausgewählt haben, können Sie eine der Bearbeitungsschaltflächen wählen:
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence etc.
+CAD > Edit > Entity Properties Bearbeitet Blocktyp, Farbe, Abbaufolge usw. 
 
-CAD > Edit > Erase Entities Erase selected entities. CAD > Edit > Move Entities Move selected entities. CAD > Edit > Copy Entities Copy selected entities. CAD > Edit > Scale Entities Scale selected entities. CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities. CAD > Edit > Rotate Dip Rotate the dip of selected entities. CAD > Edit > Dump to File Dump selected entities to a file. CAD > Edit > Group Group selected entities into a single block.
+CAD > Edit > Erase Entities Löscht ausgewählte Objekte. CAD > Edit > Move Entities Verschiebt ausgewählte Objekte. CAD > Edit > Copy Entities Kopiert ausgewählte Objekte. CAD > Edit > Scale Entities Skaliert ausgewählte Objekte. CAD > Edit > Rotate Azimuth Dreht den Azimut ausgewählter Objekte. CAD > Edit > Rotate Dip Dreht das Einfallen ausgewählter Objekte. CAD > Edit > Dump to File Schreibt ausgewählte Objekte in eine Datei. CAD > Edit > Group Fasst ausgewählte Objekte zu einem einzelnen Block zusammen.
 
-- double click on any vertex to execute the highlighted function,
+- Doppelklicken Sie auf einen beliebigen Eckpunkt, um die hervorgehobene Funktion auszuführen,
 
-- right click for a list of options.
+- klicken Sie mit der rechten Maustaste, um eine Liste mit Optionen anzuzeigen.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Nach Abschluss eines Bearbeitungsvorgangs haben Sie eine Möglichkeit, die Änderungen rückgängig zu machen, indem Sie
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+auswählen. Sie können auch dieselbe Auswahl wiederherstellen und dieselben Objekte erneut bearbeiten, indem Sie
 
 Redo
 
-You can adjust the double click time using
+auswählen. Die Doppelklickzeit lässt sich einstellen mit
 
 Tools > Double Click Time

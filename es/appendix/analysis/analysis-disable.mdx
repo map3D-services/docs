@@ -2,41 +2,36 @@
 title: "Análisis > Deshabilitar"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Deshabilita los elementos de contorno cuyo error de esfuerzo en la superficie ( _Serr_ ) es mayor que diez veces el valor cuadrático medio ( _Rms_ ) de todos los elementos.
 
-Disables boundary elements that have a surface stress error ( _Serr_ ) greater than ten times the root mean square value ( _Rms_ ) for all elements.
-
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error and the maximum failure criterion error are reduced below the user specified stress tolerance _STOL_
+Durante la solución de la matriz, Map3D intenta resolver progresivamente las ecuaciones simultáneas guardadas en la matriz de coeficientes, junto con cualquier otra ecuación que describa las zonas de material alterno, el deslizamiento de fallas, la fluencia, etc. Se supone que se ha obtenido una solución convergente cuando el error máximo de esfuerzo en la superficie y el error máximo del criterio de falla se reducen por debajo de la tolerancia de esfuerzo _STOL_ especificada por el usuario
 
 Analysis > CParams > STOL
 
-In some problems, certain elements will not converge to a solution due to excessively poor numerical conditioning. If the user is satisfied the current level of accuracy, a solution can for forced by checking this option.
+En algunos problemas, ciertos elementos no convergen a una solución debido a un acondicionamiento numérico excesivamente deficiente. Si el nivel de precisión actual le resulta aceptable, puede forzar una solución marcando esta opción.
 
-This function instructs Map3D to disable any elements with values of _Serr_ > 10 _Rm_ s. A few iterations after executing this function, additional elements may appear with the same problem requiring this function to executed again. After a few times all elements will be disabled and the solution can proceed to convergence.
+Esta función indica a Map3D que deshabilite los elementos con valores de _Serr_ > 10 _Rm_ s. Pocas iteraciones después de ejecutar esta función, pueden aparecer otros elementos con el mismo problema, lo que obliga a ejecutarla de nuevo. Después de algunas repeticiones, todos los elementos quedarán deshabilitados y la solución podrá avanzar hasta la convergencia.
 
-Extreme caution should be exercised when using this function as the results will contain numerical errors which could be significant.
+Use esta función con extrema precaución, ya que los resultados contendrán errores numéricos que podrían ser significativos.
 
-Notes:
+Notas:
 
-The distribution of surface stress error can be displayed by selecting
+Puede mostrar la distribución del error de esfuerzo en la superficie seleccionando
 
 Plot > Surface Components > Serr Stress Error
 
-from the solve toolbar.
+en la barra de herramientas de solución.
 
-The distribution of failure criterion error can be displayed by selecting
+Puede mostrar la distribución del error del criterio de falla seleccionando
 
 Plot > Surface Components > Ferr Failure Error
 
-from the solve toolbar.
+en la barra de herramientas de solución.
 
-During analysis, the solve toolbar will be displayed when you suspend the analysis
+Durante el análisis, la barra de herramientas de solución se muestra al suspender el análisis
 
 Analysis > Suspend
 
-only if the
+solo si se ha marcado
 
 #### Tools > Solve Toolbar
-
-has been checked.

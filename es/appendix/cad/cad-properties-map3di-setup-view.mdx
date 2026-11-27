@@ -2,59 +2,56 @@
 title: "CAD > Propiedades > Configuración de Map3Di > Ver"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
-
-This option enables visualization of Map3Di data.
+Esta opción permite visualizar los datos de Map3Di.
 
 ![Figure from page 508](/images/page-508-img-20.png)
 
 #### Map3Di File:
 
-The Map3Di data file is simply an ASCII data file with the default extension ".PNT".
+El archivo de datos de Map3Di es simplemente un archivo de datos ASCII con la extensión predeterminada ".PNT".
 
-Refer to CAD > Properties > Map3Di for details concerning data format.
+Consulte CAD > Properties > Map3Di para obtener detalles sobre el formato de los datos.
 
-Refer to Visualization > Plane > Make Map3Di File for details concerning data format.
+Consulte Visualization > Plane > Make Map3Di File para obtener detalles sobre el formato de los datos.
 
 #### Plot Equation:
 
-Defines the parameter that will be plotted.
+Define el parámetro que se graficará.
 
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+La lista desplegable permite almacenar hasta 20 ecuaciones distintas. Se guardan entre sesiones de Map3D en el archivo map3d.ini.
 
 #### Plot Variables:
 
-f1 f2 f3… - data fields in the event file.
+f1 f2 f3… - campos de datos del archivo de eventos.
 
 #### Functions:
 
-sin() cos() tan() - sine, cosine and tangent trigonometric functions. asin() acos() atan() - Inverse trigonometric functions. sqrt() - square root function. log() - natural logarithmic function. abs() - absolute value.
+sin() cos() tan() - funciones trigonométricas seno, coseno y tangente. asin() acos() atan() - funciones trigonométricas inversas. sqrt() - función raíz cuadrada. log() - función logaritmo natural. abs() - valor absoluto.
 
-exp() - exponential function (antilogarithm).
+exp() - función exponencial (antilogaritmo).
 
 #### Location:
 
-x y z - coordinate of grid point.
+x y z - coordenadas del punto de la malla.
 
 #### Operators:
 
-+ - * / ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
++ - * / ^   operadores de suma, resta, multiplicación, división y exponenciación. Tenga en cuenta que primero se calculan las exponenciales, luego las multiplicaciones y divisiones, y por último las sumas y restas.
 
-() [] &#123;&#125;   styles of brackets. Pairs of brackets must match.
+() [] &#123;&#125;   tipos de paréntesis y corchetes. Los pares deben coincidir.
 
->   maximum value. For example if the plot equation is specified as f1 > 10, the larger of f1 or 10 will be plotted.
+>   valor máximo. Por ejemplo, si la ecuación de graficación se especifica como f1 > 10, se graficará el mayor entre f1 y 10.
 
-&lt;   minimum value. For example if the plot equation is specified as f1 &lt; 10, the smaller of f1 or 10 will be plotted.
+&lt;   valor mínimo. Por ejemplo, si la ecuación de graficación se especifica como f1 &lt; 10, se graficará el menor entre f1 y 10.
 
 #### Point Plotting Options:
 
-Outlined – Map3Di data patches are outlined.
+Outlined – Se delinean los parches de datos de Map3Di.
 
 #### Other:
 
-Persist – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired. Translucent - draws the points as translucent spheres.
+Persist – cuando está marcado, los puntos se vuelven a graficar cada vez que el modelo se reorienta, se traslada o se amplía. Como esto puede consumir mucho tiempo en modelos grandes, es posible que esta opción no siempre sea conveniente. Translucent - dibuja los puntos como esferas translúcidas.
 
-Zero Contour - when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important. Range – specifies the minimium, maximum and interval for radius scaling and contouring.
+Zero Contour - cuando no está marcado, no se dibujan los contornos por debajo del rango mínimo de contornos. Esto es útil para mostrar contornos cuando solo importa la parte superior del rango. Range – especifica el mínimo, el máximo y el intervalo para el escalado de radios y el trazado de contornos.
 
-Plot - regenerates the plot. This button can be placed on either the View Toolbar (Tools > View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+Plot - regenera el gráfico. Este botón se puede colocar en la barra de herramientas View (Tools > View Toolbar Configure) o en la barra de herramientas Contour (Tools > Contour Toolbar Configure).

@@ -2,73 +2,70 @@
 title: "分析对话框"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+显示可滚动的分析活动对话框，内容包括：
 
-Displays a scrollable dialogue of analysis activity including:
+INFO：描述当前操作的消息。WARNING：描述可能导致问题的潜在不一致的消息。
 
-INFO: messages describing current operations. WARNING: messages describing possible inconsistencies that may cause problems.
+ERROR：描述将导致程序终止运行的错误的消息。
 
-ERROR: messages describing errors that will cause program execution to terminate.
-
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error
+在矩阵求解期间，Map3D 会尝试逐步求解保存在系数矩阵中的联立方程，以及描述其他材料区、断层滑动、蠕变等的任何其他方程。当最大表面应力误差
 
 Plot > Surface Components > Serr Stress Error
 
-and the maximum failure criterion error
+和最大破坏准则误差
 
 Plot > Surface Components > Ferr Failure Error
 
-are reduced below the user specified stress tolerance _STOL_
+降至用户指定的应力容差 _STOL_ 以下时，即认为已得到收敛解
 
 Analysis > CParams > STOL
 
-As the solution progresses, summary information regarding the solution is displayed:
+随着求解的进行，会显示有关求解的汇总信息：
 
 is=1   it=3   ser=-1.29E+01   fer= 0.00E+00   rms=5.85E+00   ratio=0.414   converging
 
-is - current time step number.
+is - 当前时间步编号。
 
-- This counter is only used for non-linear creep analyzes (including fault-slip and 3D material nonlinearity).
+- 此计数器仅用于非线性蠕变分析（包括断层滑动和三维材料非线性）。
 
-- Map3D uses an implicit solution method to solve the visco-plastic part of creep problems.
+- Map3D 使用隐式求解方法求解蠕变问题中的黏塑性部分。
 
-- Each time Map3D reaches an equilibrium creep solution, the creep strain increments are added to the total plastic strains and then a new time step is begun (i.e. the is counter is incremented).
+- 每当 Map3D 得到平衡蠕变解时，会将蠕变应变增量加到总塑性应变中，然后开始新的时间步（即 is 计数器加 1）。
 
-it - current iteration count.
+it - 当前迭代次数。
 
-- Map3D uses an iterative solution method to solve the simultaneous equations saved in the coefficient matrix.
+- Map3D 使用迭代求解方法求解保存在系数矩阵中的联立方程。
 
-- This counter refers to the cumulative number of iterations executed.
+- 此计数器表示已执行的累计迭代次数。
 
-ser - maximum surface stress error.
+ser - 最大表面应力误差。
 
-- Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations.
+- 迭代求解器的工作方式是先确定每个联立方程当前解的误差，再通过逐次逼近的过程减小这些误差。
 
-- This parameter indicates the maximum error for all of the equations.
+- 此参数表示所有方程中的最大误差。
 
-fer - maximum failure criterion error.
+fer - 最大破坏准则误差。
 
-- This parameter is only used for non-linear creep analyzes (including fault-slip and 3D material non-linearity).
+- 此参数仅用于非线性蠕变分析（包括断层滑动和三维材料非线性）。
 
-- This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear.
+- 除非指定了某种黏性且问题进入非线性状态，否则此参数应始终接近于零。
 
-- In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium.
+- 在后一种情况下，黏性蠕变可使应力状态超出破坏准则，表明缺乏静力平衡。
 
-- This parameter indicates the maximum viscous stress for all of the equations.
+- 此参数表示所有方程中的最大黏性应力。
 
-rms - root mean square of all surface stress errors.
+rms - 所有表面应力误差的均方根。
 
-ratio - ratio of the current value of rms divided by the value of rms at the previous iteration.
+ratio - 当前 rms 值与上一次迭代 rms 值之比。
 
-- This provides an indications of how quickly the solution is progressing.
+- 它可以反映求解推进的快慢。
 
-converging - indicator that the problem is converging.
+converging - 表示问题正在收敛的指示。
 
-- This indicator may also read diverging if the ratio is greater than one.
+- 如果 ratio 大于 1，此指示也可能显示为 diverging（发散）。
 
-Notes:
+注意：
 
-Since smooth scrolling limits the rate at which information can be written to the information area, it can considerably slow down the Map3D analysis. It is recommended that smooth scrolling not be used
+由于平滑滚动会限制信息写入信息区的速率，可能会大大减慢 Map3D 分析。建议不要使用平滑滚动
 
 Tools > Smooth Scroll

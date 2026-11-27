@@ -2,55 +2,52 @@
 title: "Analyse > Optionen > Stapelverarbeitung"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Richtet die Analyse-Stapelwarteschlange ein.
 
-Set up analysis batch queue.
-
-If the user has multiple models that need to be run, these can be specified in this batch queue. By selecting
+Müssen mehrere Modelle berechnet werden, können sie in dieser Stapelwarteschlange festgelegt werden. Durch Auswahl von
 
 Analysis > Options > Batch > Execute Batch Queue
 
-all checked models will be run without any request for interactive response from the user.
+werden alle aktivierten Modelle ohne interaktive Rückfrage an den Benutzer berechnet.
 
-When you check a batch file for execution you will be prompted to search for a model file name, location, and file format. If the search is successful, the model will be checked.
+Wenn Sie eine Stapeldatei zur Ausführung aktivieren, werden Sie aufgefordert, nach Modelldateiname, Speicherort und Dateiformat zu suchen. Verläuft die Suche erfolgreich, wird das Modell aktiviert.
 
-The second column in the Batch File Setup dialogue box allows you to set analysis options if desired. These setting override any options set in the Analysis > Options dialogue box.
+In der zweiten Spalte des Dialogfensters Batch File Setup können Sie bei Bedarf Analyseoptionen festlegen. Diese Einstellungen überschreiben alle Optionen, die im Dialogfenster Analysis > Options festgelegt sind.
 
-#### Console Mode:
+#### Konsolenmodus:
 
-Map3D can be started from the Windows command prompt or from a *.bat file if desired. Command line options can be used in a text file script or entered from a Command Prompt. The procedure is simply to create a *.bat file as follows:
+Map3D kann bei Bedarf über die Windows-Eingabeaufforderung oder aus einer *.bat-Datei gestartet werden. Befehlszeilenoptionen können in einem Textdateiskript verwendet oder in einer Eingabeaufforderung eingegeben werden. Dazu wird einfach eine *.bat-Datei wie folgt erstellt:
 
-**Map3D filename.inp -option1 - option2 ...** (where "filename.inp" is the name of the model file you want to analyze).
+**Map3D filename.inp -option1 - option2 ...** (wobei "filename.inp" der Name der Modelldatei ist, die Sie analysieren möchten).
 
-The options are as follows:
+Die Optionen lauten wie folgt:
 
-- **-analysis** (tells Map3D to run an analysis - you must also supply "filename.inp").
+- **-analysis** (weist Map3D an, eine Analyse auszuführen – Sie müssen außerdem "filename.inp" angeben).
 
-- **-console** (displays only the "Analysis Dialog" while Map3D is running).
+- **-console** (zeigt während der Ausführung von Map3D nur den "Analysis Dialog" an).
 
-   - (displays nothing at all while Map3D is running and stops upon completion of analysis).
+   - (zeigt während der Ausführung von Map3D überhaupt nichts an und beendet sich nach Abschluss der Analyse).
 
-- **-stop** (stops Map3D upon completion of analysis).
+- **-stop** (beendet Map3D nach Abschluss der Analyse).
 
-You can also open results files as follows:
+Ergebnisdateien können ebenfalls wie folgt geöffnet werden:
 
-**Map3D filename.001** (where "filename.001" is the name of the results file you want to display).
+**Map3D filename.001** (wobei "filename.001" der Name der Ergebnisdatei ist, die Sie anzeigen möchten).
 
-For example if you want to run a Map3D analysis with only a logging window shown, you would start this as follows:
+Wenn Sie beispielsweise eine Map3D-Analyse mit nur einem Protokollfenster ausführen möchten, starten Sie sie wie folgt:
 
 #### Map3D filename.inp -console -analysis
 
-For example if you want to run a Map3D analysis with no logging window shown, you would start this as follows:
+Wenn Sie beispielsweise eine Map3D-Analyse ohne Protokollfenster ausführen möchten, starten Sie sie wie folgt:
 
 #### Map3D filename.inp -silent -analysis
 
-#### Notes:
+#### Hinweise:
 
-Batch model files names are saved and restored each time Map3D is executed.
+Die Dateinamen der Stapelmodelle werden bei jeder Ausführung von Map3D gespeichert und wiederhergestellt.
 
-Model files that are not checked will not be executed in batch mode.
+Nicht aktivierte Modelldateien werden im Stapelmodus nicht ausgeführt.
 
-The batch queue can be interrupted at any time simply by aborting the current analysis
+Die Stapelwarteschlange kann jederzeit unterbrochen werden, indem die aktuelle Analyse abgebrochen wird
 
 Analysis > Abort

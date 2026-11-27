@@ -2,73 +2,70 @@
 title: "Cuadro de diálogo de análisis"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Muestra un cuadro de diálogo desplazable con la actividad del análisis, que incluye:
 
-Displays a scrollable dialogue of analysis activity including:
+INFO: mensajes que describen las operaciones en curso. WARNING: mensajes que describen posibles inconsistencias que pueden causar problemas.
 
-INFO: messages describing current operations. WARNING: messages describing possible inconsistencies that may cause problems.
+ERROR: mensajes que describen errores que provocarán la terminación de la ejecución del programa.
 
-ERROR: messages describing errors that will cause program execution to terminate.
-
-During matrix solution Map3D is attempting to progressively solve the simultaneous equations saved in the coefficient matrix along with any other equations describing the alternate material zones, fault-slip, creep etc. A converged solution is assumed to have been obtained when the maximum surface stress error
+Durante la solución de la matriz, Map3D intenta resolver progresivamente las ecuaciones simultáneas guardadas en la matriz de coeficientes, junto con cualquier otra ecuación que describa las zonas de material alterno, el deslizamiento de fallas, la fluencia, etc. Se supone que se ha obtenido una solución convergente cuando el error máximo de esfuerzo en la superficie
 
 Plot > Surface Components > Serr Stress Error
 
-and the maximum failure criterion error
+y el error máximo del criterio de falla
 
 Plot > Surface Components > Ferr Failure Error
 
-are reduced below the user specified stress tolerance _STOL_
+se reducen por debajo de la tolerancia de esfuerzo _STOL_ especificada por el usuario
 
 Analysis > CParams > STOL
 
-As the solution progresses, summary information regarding the solution is displayed:
+A medida que avanza la solución, se muestra información resumida sobre ella:
 
 is=1   it=3   ser=-1.29E+01   fer= 0.00E+00   rms=5.85E+00   ratio=0.414   converging
 
-is - current time step number.
+is - número del paso de tiempo actual.
 
-- This counter is only used for non-linear creep analyzes (including fault-slip and 3D material nonlinearity).
+- Este contador solo se usa en análisis de fluencia no lineales (incluidos el deslizamiento de fallas y la no linealidad de materiales 3D).
 
-- Map3D uses an implicit solution method to solve the visco-plastic part of creep problems.
+- Map3D usa un método de solución implícito para resolver la parte viscoplástica de los problemas de fluencia.
 
-- Each time Map3D reaches an equilibrium creep solution, the creep strain increments are added to the total plastic strains and then a new time step is begun (i.e. the is counter is incremented).
+- Cada vez que Map3D alcanza una solución de fluencia en equilibrio, los incrementos de deformación por fluencia se suman a las deformaciones plásticas totales y se inicia un nuevo paso de tiempo (es decir, se incrementa el contador is).
 
-it - current iteration count.
+it - conteo de iteraciones actual.
 
-- Map3D uses an iterative solution method to solve the simultaneous equations saved in the coefficient matrix.
+- Map3D usa un método de solución iterativo para resolver las ecuaciones simultáneas guardadas en la matriz de coeficientes.
 
-- This counter refers to the cumulative number of iterations executed.
+- Este contador indica el número acumulado de iteraciones ejecutadas.
 
-ser - maximum surface stress error.
+ser - error máximo de esfuerzo en la superficie.
 
-- Iterative solvers function by determining the error in the current solution of each simultaneous equation, then reducing these errors by a process of successive approximations.
+- Los solucionadores iterativos determinan el error de la solución actual de cada ecuación simultánea y luego reducen esos errores mediante un proceso de aproximaciones sucesivas.
 
-- This parameter indicates the maximum error for all of the equations.
+- Este parámetro indica el error máximo de todas las ecuaciones.
 
-fer - maximum failure criterion error.
+fer - error máximo del criterio de falla.
 
-- This parameter is only used for non-linear creep analyzes (including fault-slip and 3D material non-linearity).
+- Este parámetro solo se usa en análisis de fluencia no lineales (incluidos el deslizamiento de fallas y la no linealidad de materiales 3D).
 
-- This parameter should always be near zero unless some viscosity has been specified and the problem goes non-linear.
+- Este parámetro siempre debe estar cerca de cero, a menos que se haya especificado alguna viscosidad y el problema se vuelva no lineal.
 
-- In this latter case, viscous creep can allow stress states above the failure criterion, thus indicating a lack of static equilibrium.
+- En este último caso, la fluencia viscosa puede permitir estados de esfuerzo por encima del criterio de falla, lo que indica una falta de equilibrio estático.
 
-- This parameter indicates the maximum viscous stress for all of the equations.
+- Este parámetro indica el esfuerzo viscoso máximo de todas las ecuaciones.
 
-rms - root mean square of all surface stress errors.
+rms - raíz cuadrática media de todos los errores de esfuerzo en la superficie.
 
-ratio - ratio of the current value of rms divided by the value of rms at the previous iteration.
+ratio - razón entre el valor actual de rms y el valor de rms en la iteración anterior.
 
-- This provides an indications of how quickly the solution is progressing.
+- Esto indica la rapidez con que avanza la solución.
 
-converging - indicator that the problem is converging.
+converging - indicador de que el problema converge.
 
-- This indicator may also read diverging if the ratio is greater than one.
+- Este indicador también puede mostrar diverging si la razón es mayor que uno.
 
-Notes:
+Notas:
 
-Since smooth scrolling limits the rate at which information can be written to the information area, it can considerably slow down the Map3D analysis. It is recommended that smooth scrolling not be used
+Como el desplazamiento suave limita la velocidad a la que se puede escribir información en el área de información, puede ralentizar considerablemente el análisis de Map3D. Se recomienda no usar el desplazamiento suave
 
 Tools > Smooth Scroll

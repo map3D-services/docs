@@ -2,23 +2,20 @@
 title: "分析 > 选项 > 收敛"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在相交分析期间进行闭合与重叠检查，并解决布尔相交。
 
-Conducts closure and overlap checking, and resolves Boolean intersections – during intersection analysis.
+程序会检查复杂的开挖形状，确保其边界面构成连续的包络面，没有间隙或缺失的表面。检测到间隙的位置会用该处附近的坐标编号标识。
 
-Complex excavation shapes are checked to ensure that their bounding surfaces form a continuous envelope with no gaps or missing surfaces. Locations where a gap is detected are identified by coordinate numbers in that vicinity.
+Map3D 会自动解决断层与矿体带等相交特征之间的干涉。表面会被细分，以便在这些特征相交处形成边。然后执行实体建模布尔运算，以确定哪个特征穿过另一个特征而保持连续。由于无法确定应当是断层穿过矿体，还是矿体穿过断层，Map3D 采用了一项约定：材料编号较大的特征优先于材料编号较小的特征。例如，如果矿体的材料编号为 2，断层的材料编号为 3，则认为断层穿过矿体而保持连续。请注意，开挖被视为切穿所有其他特征。
 
-Interference between intersecting features such a fault and an ore zone are automatically resolved by Map3D. Surfaces are subdivided to create edges where these features meet. A solid modelling Boolean operation is then performed to determine which feature persists through the other. Since it is not clear whether the fault should persist through the ore, or the ore should persist through the fault, a convention has been adopted in Map3D such that the feature with the higher material number takes priority over a feature with a lower material number. For example if the ore were assigned material number 2 and the fault were assigned material number 3, the fault would be assumed to be continuous through the ore. Note that excavations are assumed to cut through all other features.
+更多讨论请参阅
 
-For additional discussion, refer to
+#### Constructing Alternate Material Zones。
 
-#### Constructing Alternate Material Zones.
+#### 注意
 
-#### Notes
+必须在进行相交分析之前选中此功能
 
-This function must be checked before conducting the intersection analysis
+#### Analysis > Intersections。
 
-#### Analysis > Intersections.
-
-It is recommended that you check this option.
+建议选中此选项。

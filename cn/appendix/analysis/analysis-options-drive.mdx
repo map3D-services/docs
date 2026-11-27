@@ -2,71 +2,68 @@
 title: "分析 > 选项 > 驱动器编号"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间为系数矩阵指定临时驱动器。
 
-Specify scratch drives for coefficient matrix – during Map3D BEM analysis.
+如果安装了多个磁盘驱动器，可以使用此选项指示 Map3D 将系数矩阵存放在何处。当第一个驱动器已满时，Map3D 会将矩阵的其余部分写入下一个临时驱动器。
 
-If you have multiple disk drives installed, this option can be used to direct Map3D where to store the coefficient matrix. When the first drive fills up, Map3D will write the remainder of the matrix to next scratch drive.
+当求解矩阵过大而无法放入 RAM 时（参见 Analysis > Options > VRAM 和 Analysis > Options > PRAM），矩阵求解会变成 I/O 密集型操作，仅取决于计算机的 I/O 速率。在这种情况下，由于磁盘性能较慢，分析时间的很大一部分会耗费在求解阶段。
 
-When the solution matrix is too big to fit into RAM (refer to Analysis > Options > VRAM and Analysis > Options > PRAM) , Matrix solution becomes an I/O intensive operation that depends only on the I/O rate of your computer. In this case, a large part of the analysis time can be spent in the solution stage due to slow disk performance.
+要解决此问题，用户必须安装多个高速磁盘。
 
-To overcome this problem it is imperative that the user install multiple, high speed disks.
+Map3D 通过多处理器/多驱动器选项完全支持并行处理和并行磁盘 I/O。
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+如果你已获得使用多处理器/多驱动器选项的许可，Map3D 会将这些驱动器设置为 RAID 阵列，使 I/O 以重叠方式并行地在所有驱动器上进行，并与计算同时执行。
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D set up these drives into a RAID array such that I/O is done in an overlapped manner to all of the drives, in parallel with the computations.
+按此方式设置后，I/O 性能可随阵列中驱动器的数量成比例提高。
 
-Set up in this way you can increases the I/O performance in proportion to the number of drives in the array.
+在下面的基准测试中，同一模型分别使用 1 个、2 个和 4 个磁盘运行。
 
-In the following benchmark, the same model is run with 1, 2 and 4 disks.
-
-||1 disk|2 disks|4 disks|8GB PRAM|
+||1 个磁盘|2 个磁盘|4 个磁盘|8GB PRAM|
 |---|---|---|---|---|
-|Measured Disk Throughput (MB/sec)|55|112|206|3000 equivalent|
-|Matrix Solution (hours)|0.546|0.282|0.163|0.033|
-|Solution Speed Increase|1x|1.9x|3.3x|16x|
-|Total Analysis Time (4 cores)|0.640|0.376|0.257|0.107|
-|Total Speed Increase|1x|1.7x|2.5x|6x|
+|实测磁盘吞吐量 (MB/sec)|55|112|206|3000 equivalent|
+|矩阵求解（小时）|0.546|0.282|0.163|0.033|
+|求解速度提升|1x|1.9x|3.3x|16x|
+|总分析时间（4 核）|0.640|0.376|0.257|0.107|
+|总速度提升|1x|1.7x|2.5x|6x|
 
-The disks used in this benchmark are older 50-60 MB/sec drives (Seagate Barracuda 7200.7). More recent mechanical drives perform at 100 MB/sec (Seagate Momentus 7200.4). SATA2 SSDs can provide over 250 MB/sec per drive. SATA3 SSDs can provide over 500 MB/sec per drive. Multiple SSDs and/or NVMe drives can be expected to perform nearly as fast as PRAM. Note that some motherboards have limitations on the total combined throughput and may require addin controller adaptors.
+此基准测试中使用的磁盘是较旧的 50-60 MB/sec 驱动器（Seagate Barracuda 7200.7）。较新的机械硬盘速度可达 100 MB/sec（Seagate Momentus 7200.4）。SATA2 固态硬盘每个驱动器可提供超过 250 MB/sec。SATA3 固态硬盘每个驱动器可提供超过 500 MB/sec。多个固态硬盘和/或 NVMe 驱动器的性能有望接近 PRAM。请注意，某些主板对总吞吐量有限制，可能需要附加控制器适配卡。
 
-To determine if you are licensed to use the multi-processor/multi-drive option check on Analysis > Options > #Threads.
+要确定你是否已获得使用多处理器/多驱动器选项的许可，请查看 Analysis > Options > #Threads。
 
-If you are licensed to use the multi-processor/multi-drive option, faster disk rates can be achieved if you set SE_MANAGE_VOLUME_NAME privilege.
+如果你已获得使用多处理器/多驱动器选项的许可，设置 SE_MANAGE_VOLUME_NAME 权限可获得更快的磁盘速率。
 
-This capability is available in the following versions of Windows:
+此功能适用于以下 Windows 版本：
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0、Windows 2000 Professional 和 Server（最大 4 GB）。
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Advanced Server（最大 8 GB）。
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows 2000 Datacenter Server（最大 32 GB）。
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows XP Professional 和 Windows Server 2003（最大 4 GB）。
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Enterprise Edition（最大 32 GB）。
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows Server 2003 Datacenter Edition（最大 64 GB）。
 
-- Windows 10 & 11 Pro (the home version does not support this).
+- Windows 10 和 11 Pro（家庭版不支持）。
 
-To set "SE_MANAGE_VOLUME_NAME" privilege, follow these steps:
+要设置“SE_MANAGE_VOLUME_NAME”权限，请按以下步骤操作：
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+然后设置
 
 Local Policies > User Rights Assignment > Perform Volume Maintenance Tasks > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+必须重新启动后此设置才会生效。
 
-Notes:
+注意：
 
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 #### Analysis > BEM Analysis
 
-You should specify the fastest drive in your system. You can test your drive performance using
+应指定系统中最快的驱动器。你可以使用以下功能测试驱动器性能
 
 Tools > Disk Performance Test

@@ -2,19 +2,16 @@
 title: "Analyse > Optionen > Suchradius für Kollinearität"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Legt den Suchradius fest, der bei der Kollinearitätsprüfung während des Ladens der Datei verwendet wird (siehe Analysis > Options > Collinearity).
 
-Specifies the search radius that is used in collinearity checking during file load (see Analysis > Options > Collinearity).
+Koordinatenpunkte, die sehr nahe beieinander liegen, werden zusammengeführt. Koordinatenpunkte, die sehr nahe an einer Kante einer Fläche liegen, werden auf diese Kante verschoben. Standardmäßig verschiebt Map3D diese Punkte, wenn sie innerhalb eines Suchradius von einem Tausendstel der Kantenlänge von der Fläche entfernt liegen.
 
-Coordinate points that are very close to one another are merged together. Coordinate points that are very near an edge of a surface are moved onto that edge. By default Map3D will move these points if they are within a search radius of 1000th of the edge length from the surface.
+Bei Bedarf kann der Benutzer mit dieser Option einen Suchradius festlegen, indem er einen Wert in das Datenfeld eingibt. Andere CAD-Programme verknüpfen die Ecken von Flächen möglicherweise nicht miteinander. Diese Funktion ist nützlich, um kleine Lücken und Überlappungen zwischen benachbarten Flächen und Blöcken zu beseitigen.
 
-If desired, the user can use this option to define a search radius by entering a value in the data box. Other CAD packages may not link corners of surfaces together. This feature is useful for eliminating small gaps and overlaps between adjacent surfaces and blocks.
+#### Hinweise
 
-#### Notes
-
-This function must be checked before loading the model file
+Diese Funktion muss aktiviert sein, bevor die Modelldatei geladen wird
 
 #### Analysis > Load Model.
 
-Caution must be exercised if a non-zero search radius is specified since too large a value can cause undesired merging of coordinate points thus destroying model integrity.
+Bei einem Suchradius ungleich null ist Vorsicht geboten, da ein zu großer Wert zu unerwünschtem Zusammenführen von Koordinatenpunkten führen und damit die Modellintegrität zerstören kann.

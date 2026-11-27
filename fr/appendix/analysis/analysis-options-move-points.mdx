@@ -2,19 +2,16 @@
 title: "Analyse > Options > Déplacer les points"
 ---
 
-{/* i18n:untranslated */}
-<Note>Cette page n'a pas encore été traduite en français. Le contenu est affiché en anglais.</Note>
+Déplace les points de champ très proches des surfaces de frontière pendant l'analyse BEM de Map3D.
 
-Move field points that are very close to boundary surfaces – during Map3D BEM analysis.
+Les points de champ (résultats sur des plans de grille ou en des points définis par l'utilisateur) situés à une fraction de largeur d'élément d'un coin ou d'une arête d'élément ont une très faible précision et indiquent souvent des concentrations de contraintes irréalistement élevées. En déplaçant ces points vers le nœud de frontière le plus proche, on obtient des prédictions de contraintes plus réalistes. Cette option ne déplace que les points situés à moins de ¼ de _AG_ de la surface ( _AG_ est l'espacement de grille minimal admissible, voir Analysis > CParams > AG).
 
-Field points (results on grid planes or at user defined points) that are located within a fraction of an element width from an element corner or edge will have very poor accuracy often indicating unrealistically large stress concentrations. By moving such points to the nearest boundary node, more realistic stress predictions can be obtained. This option only moves points that are within ¼ of _AG_ ( _AG_ is the minimum allowable grid spacing, see Analysis > CParams > AG) from the surface.
+Cette fonction déplace aussi sur la surface d'excavation les points de champ situés juste à l'intérieur des excavations (à moins de ½  de _AG_ ), ce qui permet un tracé d'isovaleurs régulier des résultats jusqu'à la surface d'excavation.
 
-This feature also causes field points that are just inside excavations (within ½  of _AG_ ) to be moved onto the excavation surface, and thus provides smooth contouring of results right up to the excavation surface.
+#### Notes :
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Cette fonction doit être cochée avant de lancer l'analyse BEM de Map3D
 
 #### Analysis > BEM Analysis.
 
-It is recommended that you check this option unless you specifically do not want field points moved.
+Il est recommandé de cocher cette option, sauf si vous ne souhaitez expressément pas que les points de champ soient déplacés.

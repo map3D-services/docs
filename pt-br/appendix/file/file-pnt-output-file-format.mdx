@@ -2,21 +2,18 @@
 title: "Arquivo > Formato de arquivo de saída PNT"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+O formato PNT é um arquivo de dados ASCII universal com a extensão ".PNT".
 
-PNT format is a universal ASCII data file with the extension ".PNT".
+Este formato é útil para trocar dados brutos do modelo com outros softwares CAD.
 
-This format is useful for exchanging raw model data with other CAD software.
+As linhas de comentário começam com um asterisco "*" na coluna 1.
 
-Comment lines start with an asterisk "*" in column 1.
-
-Surfaces are stored as a series of polylines as follows:
+As superfícies são armazenadas como uma série de polilinhas, da seguinte forma:
 
 x1 y1 z1 3 value1 x2 y2 z2 2 value2 x3 y3 z3 2 value3 x4 y4 z4 2 value4
 
-xI yI zI represent the coordinates of each point.
+xI yI zI representam as coordenadas de cada ponto.
 
-3 indicates that this point is the beginning of a new line. 2 indicates that this point is a continuation of the same line. valuei for geometric entities this represents the colour number for the surface
+3 indica que este ponto é o início de uma nova linha. 2 indica que este ponto é a continuação da mesma linha. valuei, para entidades geométricas, representa o número da cor da superfície
 
-For contours this represents the value of the contoured parameter at each corner of the surface.
+Para contornos, representa o valor do parâmetro contornado em cada canto da superfície.

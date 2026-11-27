@@ -2,47 +2,44 @@
 title: "Análise > Opções > P-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Armazena parte da matriz de coeficientes na RAM física durante a análise BEM do Map3D.
 
-Store part of the coefficient matrix in physical RAM – during Map3D BEM analysis.
+Se o seu computador tiver uma grande quantidade de RAM instalada, esta opção pode acelerar significativamente a execução, pois os dados podem ser recuperados da RAM muito mais rapidamente do que do disco. Embora o Windows de 32 bits só permita que cada processo endereçe 2 GB, para usuários com grandes quantidades de RAM no computador, a RAM física pode ser acessada por meio do AWE (Address Windowing Extensions). O AWE permite o acesso a toda a RAM disponível no computador. A maioria dos sistemas suporta 4 GB de RAM. Alguns suportam mais de 64 GB. Diversas versões do Windows oferecem diferentes níveis de suporte a AWE, de 1 GB até 512 GB. O suporte a AWE está disponível nas seguintes versões do Windows:
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Although Windows 32 bit only allows each process to address 2GB, for users with large amounts of RAM in their computer, physical RAM can be accesses using AWE (Address Windowing Extensions). AWE allows access to all available RAM in your computer. Most systems can support 4GB of RAM. Some can support more than 64GB. Various versions of Windows provide different levels of AWE support varying from 1GB up to 512GB. AWE support is available in the following versions of Windows:
+- Windows 10 Professional e Server (máximo de 4 GB).
 
-- Windows 10 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional e Server (máximo de 4 GB).
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows 2000 Advanced Server (máximo de 8 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Datacenter Server (máximo de 32 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows XP Professional e Windows Server 2003 (máximo de 4 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows Server 2003 Enterprise Edition (máximo de 32 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Datacenter Edition (máximo de 64 GB).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows 7 e 8.
 
-- Windows 7 & 8.
+- Windows 10 e 11 Pro (a versão Home não oferece suporte a isso).
 
-- Windows 10 & 11 Pro (the home version does not support this).
-
-AWE requires "SE_LOCK_MEMORY" privilege. To enable AWE, follow these steps:
+O AWE requer o privilégio "SE_LOCK_MEMORY". Para habilitar o AWE, siga estas etapas:
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Em seguida, defina
 
 Local Policies > User Rights Assignment > Lock Pages in Memory > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Você deve reiniciar o computador para que essa configuração entre em vigor.
 
-Notes:
+Notas:
 
-This function must be checked before conducting the Map3D BEM analysis
+Esta função deve ser marcada antes de executar a análise BEM do Map3D
 
-#### Analysis > BEM Analysis.
+#### Análise > Análise BEM.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+Você deve alocar apenas a quantidade de RAM que deseja que o Map3D use, deixando espaço adequado para quaisquer outros aplicativos que pretenda executar.
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Nunca defina este parâmetro com um valor maior que a RAM disponível, pois isso resultará em paginação excessiva do sistema operacional, o que reduzirá significativamente a velocidade da análise.

@@ -2,59 +2,56 @@
 title: "CAD > 属性 > Map3Di 设置 > 视图"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
-
-This option enables visualization of Map3Di data.
+此选项用于可视化 Map3Di 数据。
 
 ![Figure from page 508](/images/page-508-img-20.png)
 
-#### Map3Di File:
+#### Map3Di File：
 
-The Map3Di data file is simply an ASCII data file with the default extension ".PNT".
+Map3Di 数据文件是一种 ASCII 数据文件，默认扩展名为 ".PNT"。
 
-Refer to CAD > Properties > Map3Di for details concerning data format.
+有关数据格式的详细信息，请参阅 CAD > Properties > Map3Di。
 
-Refer to Visualization > Plane > Make Map3Di File for details concerning data format.
+有关数据格式的详细信息，请参阅 Visualization > Plane > Make Map3Di File。
 
-#### Plot Equation:
+#### Plot Equation：
 
-Defines the parameter that will be plotted.
+定义要绘制的参数。
 
-The pull-down window allows you to store up to 20 different equations. These are stored between Map3D sessions in the map3d.ini file.
+下拉窗口最多可存储 20 个不同的方程。这些方程会在 Map3D 会话之间保存在 map3d.ini 文件中。
 
-#### Plot Variables:
+#### Plot Variables：
 
-f1 f2 f3… - data fields in the event file.
+f1 f2 f3… - 事件文件中的数据字段。
 
-#### Functions:
+#### Functions：
 
-sin() cos() tan() - sine, cosine and tangent trigonometric functions. asin() acos() atan() - Inverse trigonometric functions. sqrt() - square root function. log() - natural logarithmic function. abs() - absolute value.
+sin() cos() tan() - 正弦、余弦和正切三角函数。asin() acos() atan() - 反三角函数。sqrt() - 平方根函数。log() - 自然对数函数。abs() - 绝对值。
 
-exp() - exponential function (antilogarithm).
+exp() - 指数函数（反对数）。
 
-#### Location:
+#### Location：
 
-x y z - coordinate of grid point.
+x y z - 网格点的坐标。
 
-#### Operators:
+#### Operators：
 
-+ - * / ^   addition, subtraction, multiplication, division and exponentiation operators. Note that exponentials are computed first, followed by multiplication and division and finally addition and subtraction.
++ - * / ^   加、减、乘、除和乘方运算符。请注意，运算顺序为先乘方，再乘除，最后加减。
 
-() [] &#123;&#125;   styles of brackets. Pairs of brackets must match.
+() [] &#123;&#125;   括号类型。括号必须成对匹配。
 
->   maximum value. For example if the plot equation is specified as f1 > 10, the larger of f1 or 10 will be plotted.
+>   最大值。例如，如果绘图方程指定为 f1 > 10，则绘制 f1 和 10 中较大的一个。
 
-&lt;   minimum value. For example if the plot equation is specified as f1 &lt; 10, the smaller of f1 or 10 will be plotted.
+&lt;   最小值。例如，如果绘图方程指定为 f1 &lt; 10，则绘制 f1 和 10 中较小的一个。
 
-#### Point Plotting Options:
+#### Point Plotting Options：
 
-Outlined – Map3Di data patches are outlined.
+Outlined – 勾勒 Map3Di 数据块的轮廓。
 
-#### Other:
+#### Other：
 
-Persist – when checked, the points will be re-plotted each time the model is reoriented, translated or zoomed. Since this may be time consuming for large models this option may not always be desired. Translucent - draws the points as translucent spheres.
+Persist – 选中后，每次对模型进行重新定向、平移或缩放时，都会重新绘制这些点。由于对大型模型而言这可能很耗时，因此该选项不一定适用。Translucent - 将点绘制为半透明球体。
 
-Zero Contour - when unchecked, contours below the minimum contour range are not drawn. This is useful for displaying contours where only the upper part of the contour range is important. Range – specifies the minimium, maximum and interval for radius scaling and contouring.
+Zero Contour - 取消选中时，低于最小等值线范围的等值线不会绘制。这在只关注等值线范围上部时很有用。Range – 指定半径缩放和等值线绘制的最小值、最大值和间隔。
 
-Plot - regenerates the plot. This button can be placed on either the View Toolbar (Tools > View Toolbar Configure) or the Contour Toolbar (Tools > Contour Toolbar Configure).
+Plot - 重新生成绘图。该按钮可放置在 View 工具栏（Tools > View Toolbar Configure）或 Contour 工具栏（Tools > Contour Toolbar Configure）上。

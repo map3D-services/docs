@@ -2,81 +2,78 @@
 title: "CAD > 编辑 > 创建待编辑实体列表"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+可通过选择任一编辑功能（如按钮），或直接右键单击任意实体来启动此例程。
 
-This routine can be initiated either by picking any edit function (e.g. button) or simple right-clicking on any entity.
-
-When you initiate any entity editing routine you will first be prompted to build a list of entities that you wish to edit
+启动任何实体编辑例程时，系统会首先提示您创建待编辑的实体列表
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- 如果选中了 Tools > Shift-key Selection，则必须按住 Shift 键才能进行多重选择。
 
-- By default, selected entities are added to the list, however if the Ctrl-key is held down, selected entities will be removed from the list.
+- 默认情况下，所选实体会添加到列表中；但如果按住 Ctrl 键，所选实体将从列表中移除。
 
-- While holding down the Shift-key or Ctrl-key, you can drag open a crossing window.
+- 按住 Shift 键或 Ctrl 键时，可拖出一个交叉窗口。
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- 按空格键会自动激活上次使用的编辑功能。
 
-- Holding the Alt-key when you right-click automatically repeats the last edit function that was used.
+- 右键单击时按住 Alt 键，会自动重复上次使用的编辑功能。
 
-This toolbar controls the various functions used in list building.
+该工具栏用于控制列表创建过程中的各项功能。
 
-Aborts editing. Select entities by picking one surface at a time. Select entities by picking whole groups making up a block. Include all entities with the selected number.
+中止编辑。逐个选取表面来选择实体。通过选取构成块体的整组表面来选择实体。包含所有具有所选编号的实体。
 
-Include all entities with the selected colour.
+包含所有具有所选颜色的实体。
 
-Include all entities with the selected material number.
+包含所有具有所选材料编号的实体。
 
-- The same block may have different materials in it depending on the currently active mining step.
+- 根据当前激活的开采步，同一块体可能包含不同的材料。
 
-- When using this function, make sure to select the appropriate mining step File > Mining Step
+- 使用此功能时，请确保选择了正确的开采步 File > Mining Step
 
-Include all entities excavated with the selected mining step number.
+包含所有在所选开采步编号中开挖的实体。
 
-Include all entities within the selected window.
+包含所选窗口内的所有实体。
 
-- Entities will only be selected if the entire entity is contained within the window.
+- 只有整个实体都位于窗口内时，才会被选中。
 
-- If (surface select mode) is active, only surfaces will be included.
+- 如果（表面选择模式）处于激活状态，则只包含表面。
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- 如果（实体选择模式）处于激活状态，则包含构成该块体的所有表面。
 
-Include all entities within the crossing window.
+包含交叉窗口内的所有实体。
 
-- Entities will be selected if even a part of the entity is within the window.
+- 只要实体有一部分位于窗口内，即会被选中。
 
-- This function can also be activated by holding down the Shift-key or Ctrl-key and dragging open a crossing window.
+- 也可以按住 Shift 键或 Ctrl 键并拖出交叉窗口来激活此功能。
 
-- If (surface select mode) is active, only surfaces will be included.
+- 如果（表面选择模式）处于激活状态，则只包含表面。
 
-- If (entity select mode) is active, all surfaces making up the block will be included.
+- 如果（实体选择模式）处于激活状态，则包含构成该块体的所有表面。
 
-- Selected entities will be added to the list.
+- 所选实体将添加到列表中。
 
-Selected entities will be removed from the list. Undo last selection.
+所选实体将从列表中移除。撤销上一次选择。
 
-Redo the last section.
+重做上一次选择。
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+选好所需实体后，可以选择以下任一编辑按钮：
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence etc.
+CAD > Edit > Entity Properties 编辑块体类型、颜色、开采顺序等。
 
-CAD > Edit > Erase Entities Erase selected entities. CAD > Edit > Move Entities Move selected entities. CAD > Edit > Copy Entities Copy selected entities. CAD > Edit > Scale Entities Scale selected entities. CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities. CAD > Edit > Rotate Dip Rotate the dip of selected entities. CAD > Edit > Dump to File Dump selected entities to a file. CAD > Edit > Group Group selected entities into a single block.
+CAD > Edit > Erase Entities 删除所选实体。CAD > Edit > Move Entities 移动所选实体。CAD > Edit > Copy Entities 复制所选实体。CAD > Edit > Scale Entities 缩放所选实体。CAD > Edit > Rotate Azimuth 旋转所选实体的方位角。CAD > Edit > Rotate Dip 旋转所选实体的倾角。CAD > Edit > Dump to File 将所选实体转储到文件。CAD > Edit > Group 将所选实体合并为单个块体。
 
-- double click on any vertex to execute the highlighted function,
+- 双击任意顶点以执行高亮显示的功能，
 
-- right click for a list of options.
+- 右键单击可查看选项列表。
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+完成任何编辑操作后，您有一次撤销修改的机会，方法是选择
 
 #### Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+您也可以恢复相同的选择集并再次修改同一组实体，方法是选择
 
 Redo
 
-You can adjust the double click time using
+您可以使用以下命令调整双击时间
 
 Tools > Double Click Time

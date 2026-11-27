@@ -2,19 +2,16 @@
 title: "分析 > 选项 > V-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+在 Map3D BEM 分析期间将部分系数矩阵存储在虚拟 RAM 中。
 
-Store part of the coefficient matrix in virtual RAM – during Map3D BEM analysis.
+如果您的计算机安装了大容量 RAM，此选项可能会显著加快执行速度，因为从 RAM 检索数据比从磁盘快得多。遗憾的是，32 位 Windows 只允许每个进程寻址 2GB。扣除开销后，即使您有充足的 RAM，也只剩下约 1GB 可用于辅助存储。对于计算机中装有大容量 RAM 的用户，另一种做法是使用物理 RAM（Analysis > Options > P-ram）代替虚拟 RAM。
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Unfortunately Windows 32 bit only allows each process to address 2GB. After you remove overheads this leaves only about 1GB for auxiliary storage, even if you have plenty of RAM. For users with large amounts of RAM in their computer, an alternative is to use physical RAM (Analysis > Options > P-ram) instead of virtual RAM.
+注意：
 
-Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+必须在进行 Map3D BEM 分析之前选中此功能
 
 #### Analysis > BEM Analysis.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
+仅应分配您希望 Map3D 使用的 RAM 量，并确保为您打算运行的任何其他应用程序留出足够的空间。
 
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+切勿将此参数设置为大于可用 RAM 的值，否则会导致操作系统过度分页，从而显著减慢分析速度。

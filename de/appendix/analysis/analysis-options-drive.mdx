@@ -2,24 +2,21 @@
 title: "Analyse > Optionen > Laufwerk Nr."
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Legt Arbeitslaufwerke für die Koeffizientenmatrix fest – während der Map3D-BEM-Analyse.
 
-Specify scratch drives for coefficient matrix – during Map3D BEM analysis.
+Sind mehrere Festplattenlaufwerke installiert, kann mit dieser Option festgelegt werden, wo Map3D die Koeffizientenmatrix speichert. Ist das erste Laufwerk voll, schreibt Map3D den Rest der Matrix auf das nächste Arbeitslaufwerk.
 
-If you have multiple disk drives installed, this option can be used to direct Map3D where to store the coefficient matrix. When the first drive fills up, Map3D will write the remainder of the matrix to next scratch drive.
+Passt die Lösungsmatrix nicht in den Arbeitsspeicher (siehe Analysis > Options > VRAM und Analysis > Options > PRAM), wird die Matrixlösung zu einer E/A-intensiven Operation, die nur von der E/A-Rate Ihres Computers abhängt. In diesem Fall kann ein großer Teil der Analysedauer wegen der geringen Festplattenleistung auf die Lösungsphase entfallen.
 
-When the solution matrix is too big to fit into RAM (refer to Analysis > Options > VRAM and Analysis > Options > PRAM) , Matrix solution becomes an I/O intensive operation that depends only on the I/O rate of your computer. In this case, a large part of the analysis time can be spent in the solution stage due to slow disk performance.
+Um dieses Problem zu beheben, ist es unerlässlich, mehrere schnelle Festplatten zu installieren.
 
-To overcome this problem it is imperative that the user install multiple, high speed disks.
+Map3D unterstützt Parallelverarbeitung und parallele Festplatten-E/A mit der Mehrprozessor-/Mehrlaufwerksoption vollständig.
 
-Map3D fully supports parallel processing and parallel disk I/O with the multi-processor/multi-drive option.
+Verfügen Sie über eine Lizenz für die Mehrprozessor-/Mehrlaufwerksoption, richtet Map3D diese Laufwerke als RAID-Verbund ein, sodass die E/A überlappend auf allen Laufwerken parallel zu den Berechnungen erfolgt.
 
-If you are licensed to use the multi-processor/multi-drive option, Map3D set up these drives into a RAID array such that I/O is done in an overlapped manner to all of the drives, in parallel with the computations.
+Bei dieser Einrichtung steigt die E/A-Leistung proportional zur Anzahl der Laufwerke im Verbund.
 
-Set up in this way you can increases the I/O performance in proportion to the number of drives in the array.
-
-In the following benchmark, the same model is run with 1, 2 and 4 disks.
+Im folgenden Benchmark wird dasselbe Modell mit 1, 2 und 4 Festplatten berechnet.
 
 ||1 disk|2 disks|4 disks|8GB PRAM|
 |---|---|---|---|---|
@@ -29,44 +26,44 @@ In the following benchmark, the same model is run with 1, 2 and 4 disks.
 |Total Analysis Time (4 cores)|0.640|0.376|0.257|0.107|
 |Total Speed Increase|1x|1.7x|2.5x|6x|
 
-The disks used in this benchmark are older 50-60 MB/sec drives (Seagate Barracuda 7200.7). More recent mechanical drives perform at 100 MB/sec (Seagate Momentus 7200.4). SATA2 SSDs can provide over 250 MB/sec per drive. SATA3 SSDs can provide over 500 MB/sec per drive. Multiple SSDs and/or NVMe drives can be expected to perform nearly as fast as PRAM. Note that some motherboards have limitations on the total combined throughput and may require addin controller adaptors.
+Die in diesem Benchmark verwendeten Festplatten sind ältere Laufwerke mit 50-60 MB/s (Seagate Barracuda 7200.7). Neuere mechanische Laufwerke erreichen 100 MB/s (Seagate Momentus 7200.4). SATA2-SSDs können über 250 MB/s pro Laufwerk liefern. SATA3-SSDs können über 500 MB/s pro Laufwerk liefern. Mehrere SSDs und/oder NVMe-Laufwerke erreichen erwartungsgemäß nahezu die Geschwindigkeit von PRAM. Beachten Sie, dass einige Hauptplatinen Einschränkungen beim gesamten kombinierten Durchsatz haben und möglicherweise zusätzliche Controller-Adapter erfordern.
 
-To determine if you are licensed to use the multi-processor/multi-drive option check on Analysis > Options > #Threads.
+Ob Sie für die Mehrprozessor-/Mehrlaufwerksoption lizenziert sind, prüfen Sie unter Analysis > Options > #Threads.
 
-If you are licensed to use the multi-processor/multi-drive option, faster disk rates can be achieved if you set SE_MANAGE_VOLUME_NAME privilege.
+Verfügen Sie über eine Lizenz für die Mehrprozessor-/Mehrlaufwerksoption, lassen sich höhere Festplattenraten erzielen, wenn Sie das Privileg SE_MANAGE_VOLUME_NAME setzen.
 
-This capability is available in the following versions of Windows:
+Diese Möglichkeit steht in den folgenden Windows-Versionen zur Verfügung:
 
-- Windows NT 4.0, Windows 2000 Professional and Server (maximum of 4 GB).
+- Windows NT 4.0, Windows 2000 Professional und Server (maximal 4 GB).
 
-- Windows 2000 Advanced Server (maximum of 8 GB).
+- Windows 2000 Advanced Server (maximal 8 GB).
 
-- Windows 2000 Datacenter Server (maximum of 32 GB).
+- Windows 2000 Datacenter Server (maximal 32 GB).
 
-- Windows XP Professional and Windows Server 2003 (maximum of 4 GB).
+- Windows XP Professional und Windows Server 2003 (maximal 4 GB).
 
-- Windows Server 2003 Enterprise Edition (maximum of 32 GB).
+- Windows Server 2003 Enterprise Edition (maximal 32 GB).
 
-- Windows Server 2003 Datacenter Edition (maximum of 64 GB).
+- Windows Server 2003 Datacenter Edition (maximal 64 GB).
 
-- Windows 10 & 11 Pro (the home version does not support this).
+- Windows 10 & 11 Pro (die Home-Version unterstützt dies nicht).
 
-To set "SE_MANAGE_VOLUME_NAME" privilege, follow these steps:
+So setzen Sie das Privileg "SE_MANAGE_VOLUME_NAME":
 
 Control Panel > Administrative Tools > Local Security Policies
 
-Then set
+Legen Sie anschließend fest
 
 Local Policies > User Rights Assignment > Perform Volume Maintenance Tasks > Add User or Group > Everyone
 
-You must reboot for this setting to take effect.
+Damit diese Einstellung wirksam wird, müssen Sie neu starten.
 
-Notes:
+Hinweise:
 
-This function must be checked before conducting the Map3D BEM analysis
+Diese Funktion muss aktiviert sein, bevor die Map3D-BEM-Analyse durchgeführt wird
 
 #### Analysis > BEM Analysis
 
-You should specify the fastest drive in your system. You can test your drive performance using
+Geben Sie das schnellste Laufwerk Ihres Systems an. Die Leistung Ihres Laufwerks können Sie testen mit
 
 Tools > Disk Performance Test

@@ -2,19 +2,16 @@
 title: "Análise > Opções > V-RAM"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Armazena parte da matriz de coeficientes em RAM virtual durante a análise BEM do Map3D.
 
-Store part of the coefficient matrix in virtual RAM – during Map3D BEM analysis.
+Se o seu computador tiver uma grande quantidade de RAM instalada, esta opção pode acelerar significativamente a execução, pois os dados podem ser recuperados da RAM muito mais rapidamente do que do disco. Infelizmente, o Windows de 32 bits só permite que cada processo endereçe 2 GB. Depois de descontar as sobrecargas, restam apenas cerca de 1 GB para armazenamento auxiliar, mesmo que você tenha bastante RAM. Para usuários com grandes quantidades de RAM no computador, uma alternativa é usar a RAM física (Análise > Opções > P-ram) em vez da RAM virtual.
 
-If your computer has a large amount of RAM installed, this option may significantly speed execution since data can be retrieved from RAM much more quickly than from disk. Unfortunately Windows 32 bit only allows each process to address 2GB. After you remove overheads this leaves only about 1GB for auxiliary storage, even if you have plenty of RAM. For users with large amounts of RAM in their computer, an alternative is to use physical RAM (Analysis > Options > P-ram) instead of virtual RAM.
+Notas:
 
-Notes:
+Esta função deve ser marcada antes de executar a análise BEM do Map3D
 
-This function must be checked before conducting the Map3D BEM analysis
+#### Análise > Análise BEM.
 
-#### Analysis > BEM Analysis.
+Você deve alocar apenas a quantidade de RAM que deseja que o Map3D use, deixando espaço adequado para quaisquer outros aplicativos que pretenda executar.
 
-You should only allocate the amount of RAM you want Map3D to use making sure to leave adequate space for any other applications you intend to run.
-
-You should never set this parameter larger than the available RAM since this will result in excessive paging of your operating system which will significantly slow down the analysis.
+Nunca defina este parâmetro com um valor maior que a RAM disponível, pois isso resultará em paginação excessiva do sistema operacional, o que reduzirá significativamente a velocidade da análise.

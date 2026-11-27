@@ -2,109 +2,106 @@
 title: "文件 > DXF 模型文件格式"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+DXF 格式是一种 AutoCAD 图形交换文件，扩展名为 ".DXF"。
 
-DXF format is an AutoCAD drawing exchange file with the extension ".DXF".
+该格式适用于与其他 CAD 软件交换模型数据。
 
-This format is useful for exchanging model data with other CAD software.
+#### 三维块体类型的 AutoCAD 实体
 
-#### Three-Dimensional Block Type AutoCAD Entities
-
-The most reliable method of generating Map3D compatible data is to use three-dimensional AutoCAD entities. This type of entity generates blocks, which are structured identically to Map3D 3D FF blocks and thus can be passed directly through to Map3D. Closure of all surfaces is guaranteed when using this command since each three-dimensional entity defines a closed block. There are many ways of generating such objects from within AutoCAD as described below.
+生成与 Map3D 兼容的数据，最可靠的方法是使用三维 AutoCAD 实体。这类实体生成的块体，其结构与 Map3D 的三维 FF 块体完全相同，因此可直接传入 Map3D。使用该命令时可保证所有表面封闭，因为每个三维实体都定义了一个封闭块体。在 AutoCAD 中有多种方法可生成此类对象，如下所述。
 
 #### 3DMESH
 
 ![Figure from page 527](/images/page-527-img-13.png)
 
-The recommended method of defining three-dimensional AutoCAD entities is to use the 3DMESH command, with AutoCAD THICKNESS and WIDTH set equal to zero. These 3DMESH's can be specified with any desired values of M and N. If N is set equal to 3 or 4, these entities will come into Map3D as blocks. This approach is the most general, but also the most complex to specify since the layout of both the floor and back of the drift must be defined along its length.
+定义三维 AutoCAD 实体的推荐方法是使用 3DMESH 命令，并将 AutoCAD 的 THICKNESS 和 WIDTH 均设为零。这些 3DMESH 可以指定任意所需的 M 和 N 值。如果 N 设为 3 或 4，这些实体将作为块体导入 Map3D。该方法最为通用，但指定起来也最复杂，因为必须沿巷道全长定义巷道底板和顶板的布局。
 
-#### PLINE, POLYLINE or ELLIPSE with WIDTH and THICKNESS
+#### 带 WIDTH 和 THICKNESS 的 PLINE、POLYLINE 或 ELLIPSE
 
 ![Figure from page 528](/images/page-528-img-1.png)
 
-The simplest technique for generating a drift or stope with a regular rectangular cross-section, and uniform height, is to use the AutoCAD PLINE command. One simply defines an AutoCAD UCS (user coordinate system) for the drift, then defines the floor elevation centre line of the drift using the AutoCAD PLINE command. The width of the drift is then specified using the AutoCAD PEDIT command. Either a constant width or changing width at each vertex can be specified. The AutoCAD COLOUR (Map3D block number) and AutoCAD THICKNESS (drift height) of the drift are specified using the AutoCAD CHANGE PROPERTIES command. The AutoCAD POLYLINE and ELLIPSE commands can also be used to create drifts with specified AutoCAD WIDTH and THICKNESS.
+要生成截面为规则矩形、高度均匀的巷道或采场，最简单的方法是使用 AutoCAD 的 PLINE 命令。只需先为巷道定义一个 AutoCAD UCS（用户坐标系），然后使用 AutoCAD 的 PLINE 命令定义巷道底板标高中心线。接着使用 AutoCAD 的 PEDIT 命令指定巷道宽度。可以指定恒定宽度，也可以在每个顶点处指定变化的宽度。巷道的 AutoCAD COLOUR（Map3D 块体编号）和 AutoCAD THICKNESS（巷道高度）通过 AutoCAD 的 CHANGE PROPERTIES 命令指定。AutoCAD 的 POLYLINE 和 ELLIPSE 命令同样可用于创建具有指定 AutoCAD WIDTH 和 THICKNESS 的巷道。
 
-#### PLINE, POLYLINE or SOLID with THICKNESS Only
+#### 仅带 THICKNESS 的 PLINE、POLYLINE 或 SOLID
 
 ![Figure from page 528](/images/page-528-img-4.png)
 
-Another simple method of defining a drifts or stopes with a rectangular cross-section is to use either of the AutoCAD PLINE, POLYLINE or SOLID commands with a specified AutoCAD THICKNESS (drift height), and AutoCAD WIDTH set equal to zero (see Figure 32). Although this approach is more general than PLINE, it is also more complex to specify since the floor plan of the drift must be defined along its length. If either the AutoCAD PLINE or POLYLINE commands are used, one must form a closed loop with either 3 or 4 line segments.
+定义矩形截面巷道或采场的另一种简单方法，是使用 AutoCAD 的 PLINE、POLYLINE 或 SOLID 命令，并指定 AutoCAD THICKNESS（巷道高度），同时将 AutoCAD WIDTH 设为零（见图 32）。该方法比 PLINE 更为通用，但指定起来也更复杂，因为必须沿巷道全长定义巷道的平面布置。如果使用 AutoCAD 的 PLINE 或 POLYLINE 命令，则必须用 3 条或 4 条线段构成一个闭合环。
 
-#### Other Three-dimensional AutoCAD Entities
+#### 其他三维 AutoCAD 实体
 
-AutoCAD supplies routines to generate several three-dimensional objects including spheres, toruses, boxes, cones etc. These can all be used if desired. The user is responsible to close the open ends of shapes such as hemispheres and cones.
+AutoCAD 提供了生成多种三维对象的例程，包括球体、圆环体、长方体、圆锥体等。如有需要，这些对象均可使用。用户须负责封闭半球体和圆锥体等形状的开口端。
 
-#### Two-Dimensional Plate Type AutoCAD Entities
+#### 二维板类型的 AutoCAD 实体
 
-Map3D compatible data can also be specified in terms of two-dimensional AutoCAD entities. This technique is not as reliable as the methods described above because closure of all surfaces is no longer guaranteed. The user must define excavations with a series of surface plates (all assigned the same AutoCAD colour number), which must join along their edges and completely envelope the excavation with a continuous surface skin. These surfaces are structured identically to Map3D surface plates. Closure of all surfaces is not guaranteed when using this method since the user may leave out a surface patch, thus forming a hole in the excavation surface. The user must take care to place all plates such that all surfaces close perfectly.
+与 Map3D 兼容的数据也可以用二维 AutoCAD 实体来指定。该方法不如上述方法可靠，因为不再保证所有表面封闭。用户必须用一系列表面板（均指定相同的 AutoCAD 颜色编号）来定义开挖空间，这些板必须沿边缘相接，并以连续的表面外壳完全包围开挖空间。这些表面的结构与 Map3D 的表面板完全相同。使用该方法时无法保证所有表面封闭，因为用户可能遗漏某个表面片，从而在开挖表面上形成孔洞。用户必须注意放置所有板，使所有表面完全闭合。
 
-#### LINE, PLINE, 3DPOLY, POLYLINE and ELLIPSE - THICKNESS Only
+#### 仅带 THICKNESS 的 LINE、PLINE、3DPOLY、POLYLINE 和 ELLIPSE
 
 ![Figure from page 529](/images/page-529-img-3.png)
 
-These entities can be used to define two-dimensional plates. One simply defines an AutoCAD UCS (user coordinate system) for the plate, then defines the edge of the plate using any of the AutoCAD LINE, PLINE, 3DPOLY, POLYLINE or ELLIPSE commands. The AutoCAD COLOUR (Map3D block number) and AutoCAD THICKNESS (plate width) are specified using the AutoCAD CHANGE PROPERTIES command. The AutoCAD WIDTH must be set equal to zero.
+这些实体可用于定义二维板。只需先为板定义一个 AutoCAD UCS（用户坐标系），然后使用 AutoCAD 的 LINE、PLINE、3DPOLY、POLYLINE 或 ELLIPSE 命令之一定义板的边缘。AutoCAD COLOUR（Map3D 块体编号）和 AutoCAD THICKNESS（板宽）通过 AutoCAD 的 CHANGE PROPERTIES 命令指定。AutoCAD WIDTH 必须设为零。
 
-#### LINE, PLINE, 3DPOLY, POLYLINE and ELLIPSE with WIDTH Only
+#### 仅带 WIDTH 的 LINE、PLINE、3DPOLY、POLYLINE 和 ELLIPSE
 
 ![Figure from page 529](/images/page-529-img-6.png)
 
-Using these entities, one defines the centre line of the plate using any of the AutoCAD LINE, PLINE, 3DPOLY, POLYLINE or ELLIPSE commands. The width is then specified using the AutoCAD PEDIT command. Either a constant width or changing width at each vertex may be specified. The AutoCAD THICKNESS must be set equal to zero.
+使用这些实体时，先用 AutoCAD 的 LINE、PLINE、3DPOLY、POLYLINE 或 ELLIPSE 命令之一定义板的中心线，然后使用 AutoCAD 的 PEDIT 命令指定宽度。可以指定恒定宽度，也可以在每个顶点处指定变化的宽度。AutoCAD THICKNESS 必须设为零。
 
-#### 3DFACE, POLYLINE or LWPOLYLINE
+#### 3DFACE、POLYLINE 或 LWPOLYLINE
 
 ![Figure from page 529](/images/page-529-img-9.png)
 
-Two-dimensional surfaces can also be generated using the AutoCAD 3DFACE command. This method is more general, but since all corners of the AutoCAD 3DFACE must be specified, it is also more complex.
+也可以使用 AutoCAD 的 3DFACE 命令生成二维表面。该方法更为通用，但由于必须指定 AutoCAD 3DFACE 的所有角点，因此也更为复杂。
 
 #### 3DMESH
 
 ![Figure from page 530](/images/page-530-img-4.png)
 
-Complex two-dimensional surfaces can be generated using types of 3DMESHs with N larger than 4 (e.g. Rulesurf, Tabsurf, Revsurf etc.). For these shapes, the DXF conversion routine creates a series of 3DFACEs to describe the excavation surface. These surfaces are structured identically to Map3D surface plates. Surface closure is fairly easy to ensure for these cases owing to the regular nature of the construction.
+使用 N 大于 4 的各类 3DMESH（如 Rulesurf、Tabsurf、Revsurf 等）可以生成复杂的二维表面。对于这些形状，DXF 转换例程会创建一系列 3DFACE 来描述开挖表面。这些表面的结构与 Map3D 的表面板完全相同。由于这类构造具有规则性，因此较容易确保表面封闭。
 
-#### Unsupported AutoCAD Entities
+#### 不支持的 AutoCAD 实体
 
-There are a number of unsupported AutoCAD entities, meaning that Map3D was not designed to reconstruct these as they appear from within AutoCAD. These entities include the CIRCLE, ARC and DOUGHNUT entities. These entities may be supported in future Map3D updates. Note that most shapes can be generated by alternate means using the AutoCAD ELLIPSE command, or 3DMESH command.
+有一些 AutoCAD 实体不受支持，即 Map3D 并未设计为按其在 AutoCAD 中的显示方式重建这些实体。这些实体包括 CIRCLE、ARC 和 DOUGHNUT 实体。未来的 Map3D 更新可能会支持这些实体。请注意，大多数形状都可以改用 AutoCAD 的 ELLIPSE 命令或 3DMESH 命令生成。
 
-#### AutoCAD DXF EXTENDED ENTITY DATA
+#### AutoCAD DXF 扩展实体数据
 
-DXF EXTENDED ENTITY DATA (EED) is part of the DXF specification. EED allows you to tag each DXF ENTITY with custom data attributes. Below are a list of the EEDs supported by Map3D.
+DXF 扩展实体数据（EED）是 DXF 规范的一部分。EED 允许您为每个 DXF ENTITY 标记自定义数据属性。下面列出了 Map3D 支持的 EED。
 
-Most CAD systems will allow you to add these EEDs to your DXF. For example Deswik calls these "attributes", hence from within Deswik you can now create Map3D geometries including specification of Map3D block names, colours and mining sequence:
+大多数 CAD 系统都允许您将这些 EED 添加到 DXF 中。例如，Deswik 将其称为“属性”，因此在 Deswik 中，您现在可以创建 Map3D 几何体，包括指定 Map3D 块体名称、颜色和开采顺序：
 
-- Export each block using DXF-POLYLINE/POLYFACEMESH - this is the Deswik default.
+- 使用 DXF-POLYLINE/POLYFACEMESH 导出每个块体——这是 Deswik 的默认设置。
 
-- It is recommended that you do not use DXF-3DFACE.
+- 建议不要使用 DXF-3DFACE。
 
-- In Deswik attributes are exported to DXF as AutoCAD Extended Entity Data.
+- 在 Deswik 中，属性会作为 AutoCAD 扩展实体数据导出到 DXF。
 
-- The attribute names (attributes names are not case sensitive) are defined as follows: `o` MAP3D_BLOCKNAME - name of the block (default is blank).
+- 属性名称（属性名称不区分大小写）定义如下：`o` MAP3D_BLOCKNAME - 块体名称（默认为空）。
 
-   - MAP3D_BLOCKCOLOR or MAP3D_BLOCKCOLOUR - Map3D colour number (default is the Deswik defined colour number).
+   - MAP3D_BLOCKCOLOR 或 MAP3D_BLOCKCOLOUR - Map3D 颜色编号（默认为 Deswik 定义的颜色编号）。
 
-   - MAP3D_BLOCKTYPE - 1 for FF, 2 for DD, 98 for inactive FF, 99 for inactive DD, 0 for grid plane (default is 1 for FF).
+   - MAP3D_BLOCKTYPE - 1 表示 FF，2 表示 DD，98 表示非激活 FF，99 表示非激活 DD，0 表示网格平面（默认为 1，即 FF）。
 
-   - MAP3D_MSTEP# - # is the mining step number (default is mined at step 1).
+   - MAP3D_MSTEP# - # 为开采步编号（默认在第 1 步开采）。
 
-   - Ø For example to excavate at mining step 2, create an attribute called MAP3D_MSTEP2 then specify 0 (excavation) as the attribute value.
+   - Ø 例如，要在开采步 2 开挖，请创建名为 MAP3D_MSTEP2 的属性，然后将属性值指定为 0（开挖）。
 
-   - Ø For example to backfill at mining step 3, create an attribute called MAP3D_MSTEP3 then specify 4 (where is the material number representing the backfill) as the attribute value.
+   - Ø 例如，要在开采步 3 充填，请创建名为 MAP3D_MSTEP3 的属性，然后将属性值指定为 4（其中 4 是代表充填体的材料编号）。
 
-   - MAP3D_BLOCKNUMBER - unique block identifier number (default is a different unique number for each DXF-POLYLINE/POLYFACEMESH or each DXF-3DFACE).
+   - MAP3D_BLOCKNUMBER - 唯一的块体标识编号（默认为每个 DXF-POLYLINE/POLYFACEMESH 或每个 DXF-3DFACE 分配一个不同的唯一编号）。
 
-- Attributes names are not case sensitive.
+- 属性名称不区分大小写。
 
-- All attributes can be defined as strings (group code 1000), integers (group code 1070 or 1071) or real numbers (group code 1040).
+- 所有属性均可定义为字符串（组码 1000）、整数（组码 1070 或 1071）或实数（组码 1040）。
 
-- All attributes are optional - defaults are supplied as specified above.
+- 所有属性均为可选——未指定时将使用上述默认值。
 
-- Note that if no Map3D defined attributes are specified, the DXF will read in successfully provided you are using DXF-POLYLINE/POLYFACEMESH.
+- 请注意，如果未指定任何 Map3D 定义的属性，只要您使用的是 DXF-POLYLINE/POLYFACEMESH，DXF 即可成功读入。
 
-- Map3D will simply assume that each DXF-POLYLINE/POLYFACEMESH is a separate block.
+- Map3D 会直接假定每个 DXF-POLYLINE/POLYFACEMESH 是一个单独的块体。
 
-- If you are using multiple DXF-3DFACEs, Map3D may have difficulty grouping these into blocks.
+- 如果使用多个 DXF-3DFACE，Map3D 在将它们归并为块体时可能会遇到困难。
 
-- Problems with this occur only where adjacent blocks share their corners and have the same name.
+- 仅当相邻块体共用角点且名称相同时才会出现此类问题。
 
-- MAP3D_BLOCKNUMBER can be used to identify the DXF-3DFACEs that belong to separate blocks.
+- MAP3D_BLOCKNUMBER 可用于识别属于不同块体的 DXF-3DFACE。

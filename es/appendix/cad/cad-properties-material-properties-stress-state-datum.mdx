@@ -2,25 +2,22 @@
 title: "CAD > Propiedades > Propiedades del material > Estado de esfuerzos > Datum"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
-
 ![Figure from page 522](/images/page-522-img-3.png)
 
-The variation of each of the stress components is described as a linear variation in either principal or Cartesian components.
+La variación de cada una de las componentes de esfuerzo se describe como una variación lineal, en componentes principales o cartesianas.
 
-If desired this can be specified as a variation in the x, y and z directions by defining a sloping datum. This is meant to be used at locations where the topography has a dominant slope.
+Si se desea, esta variación se puede especificar en las direcciones x, y y z definiendo un datum inclinado. Esto se usa en lugares donde la topografía tiene una pendiente dominante.
 
-To define a sloping datum, you are required to specify a point on the plane that represents the datum ( _X-datum_ , _Y-datum_ and _Z-datum_ ),
+Para definir un datum inclinado, se debe especificar un punto del plano que representa el datum ( _X-datum_ , _Y-datum_ y _Z-datum_ ),
 
-as well as the slope of the plane. The slope is specified as a gradient in the X ( _dx-datum_ ) and Y ( _dydatum_ ) directions.
+así como la pendiente del plano. La pendiente se especifica como un gradiente en las direcciones X ( _dx-datum_ ) y Y ( _dydatum_ ).
 
-For user convenience, the slope of the place can be specified using either the "Dip" and "Dip direction" of the plane, or the "Dip direction" and "Dip of the Normal" to the plane. The gradients are automatically determined from these later values as follows:
+Para mayor comodidad, la pendiente del plano se puede especificar mediante el "Dip" y la "Dip direction" del plano, o mediante la "Dip direction" y el "Dip of the Normal" del plano. Los gradientes se determinan automáticamente a partir de estos últimos valores de la siguiente manera:
 
 _dx-datum_ = -sin(q) sin(j) _dy-datum_ = -cos(q) sin(j)
 
-hence
+por lo tanto
 
 tan(q)= _dx/dy_ tan(j)=sqrt( _dx_ ^2+ _dy_ ^2)
 
-Defined in this way, the stresses vary both with depth and horizontal position.
+Definidos de esta manera, los esfuerzos varían tanto con la profundidad como con la posición horizontal.

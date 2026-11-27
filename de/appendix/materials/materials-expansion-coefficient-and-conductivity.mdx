@@ -2,37 +2,34 @@
 title: "Materialien > Ausdehnungskoeffizient und Leitfähigkeit"
 ---
 
-{/* i18n:untranslated */}
-<Note>Diese Seite wurde noch nicht ins Deutsche übersetzt. Der Inhalt wird auf Englisch angezeigt.</Note>
+Mit Map3D Thermal-Fluid Flow lässt sich die stationäre Wärme- bzw. Fluidströmung gekoppelt mit der Spannungsanalyse gleichzeitig lösen. Das Programm ist so aufgebaut, dass Sie nur die Randbedingungen für Temperatur bzw. Druckhöhe angeben müssen. Das gekoppelte Spannungsproblem aus thermischer bzw. Fluidströmung wird dann gleichzeitig gelöst. Diese Funktion eignet sich zur Simulation von Erwärmungs- und Abkühlungseffekten sowie von dräniertem und undräniertem Verhalten von Böden.
 
-Map3D Thermal-Fluid Flow can be used to simultaneously solve steady state heat/fluid flow coupled to the stress analysis. The program is set up so that the user need only specify the temperature/head boundary conditions, then the coupled thermal/fluid flow stress problem is solved simultaneously. This feature is useful for the simulation of heating or cooling effects and drained or undrained response of soils.
-
-The steady state thermal/fluid flow problem is solved according to Laplace's equation in threedimensions. This is directly coupled to the stress analysis through an expansion coefficient A, where the temperature change or fluid pressure change (from the background value) induces the initial stresses
+Das stationäre thermische bzw. Fluidströmungsproblem wird nach der Laplace-Gleichung in drei Dimensionen gelöst. Es ist über einen Ausdehnungskoeffizienten A direkt mit der Spannungsanalyse gekoppelt, wobei die Temperaturänderung bzw. Fluiddruckänderung (gegenüber dem Hintergrundwert) die Anfangsspannungen hervorruft
 
 s° = _A_ D _T_
 
-The stresses can be presented either without or with the initial stresses s°.
+Die Spannungen können entweder ohne oder mit den Anfangsspannungen s° dargestellt werden.
 
-Plot > Stress > Value > Seff Effective Stress
+Plot > Stress > Value > Seff Effektive Spannung
 
-Plot > Stress > Value > Stotal Total Stress
+Plot > Stress > Value > Stotal Gesamtspannung
 
-For fluid flow problems the expansion coefficient should be set to unity (positive one) for saturated media
+Bei Fluidströmungsproblemen sollte der Ausdehnungskoeffizient für gesättigte Medien auf eins (positiv eins) gesetzt werden
 
 _A_ = 1
 
-For thermal problems the expansion coefficient should be specified as a negative quantity given by
+Bei thermischen Problemen sollte der Ausdehnungskoeffizient als negative Größe angegeben werden, die gegeben ist durch
 
 _A_ = -a _E_ /(1-2n)
 
-where a, _E_ and n represent the coefficient of thermal expansion (i.e. the linear expansivity), Young's (rock mass scale - deformation) modulus and Poisson's ratio.
+wobei a, _E_ und n den Wärmeausdehnungskoeffizienten (d. h. die lineare Ausdehnbarkeit), den Elastizitätsmodul (Gebirgsmaßstab – Verformung) und die Poissonzahl darstellen.
 
-It is also necessary to specify the conductivity _C_ . This parameter relates the gradient to the flux _q_ x such that
+Außerdem muss die Leitfähigkeit _C_ angegeben werden. Dieser Parameter setzt den Gradienten und den Fluss _q_ x in Beziehung, sodass gilt
 
 _q_ x = - _C_ ¶ _T_ /¶ _x_
 
-The recommended units for _C_ are J/(m s 8C).
+Die empfohlenen Einheiten für _C_ sind J/(m s 8C).
 
-The various flow parameters can be plotted using
+Die verschiedenen Strömungsparameter können dargestellt werden mit
 
 Plot > Flow

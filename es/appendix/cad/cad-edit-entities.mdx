@@ -2,59 +2,56 @@
 title: "CAD > Editar > Entidades"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Edita el nombre de la malla y el espaciado máximo.
 
-Edit grid name and maximum spacing.
-
-When you initiate this routine you will first be prompted to build a list of entities that you wish to edit
+Al iniciar esta rutina, primero se solicita crear una lista de las entidades que se desea editar
 
 ![Figure from page 132](/images/page-132-img-1.png)
 
-- If Tools > Shift-key Selection is checked, you must hold down the shift key to make multiple selections.
+- Si Tools > Shift-key Selection está marcado, se debe mantener presionada la tecla Shift para realizar selecciones múltiples.
 
-- Use of this toolbar is detailed in Build A List of Entities for Editing
+- El uso de esta barra de herramientas se detalla en Build A List of Entities for Editing
 
-- Pressing the space-bar automatically activates the last edit function that was used.
+- Al presionar la barra espaciadora se activa automáticamente la última función de edición utilizada.
 
-Once you have selected the desired entities, you can either pick any of the edit buttons:
+Una vez seleccionadas las entidades deseadas, se puede elegir cualquiera de los botones de edición:
 
-CAD > Edit > Entity Properties Edit block type, colour, mining sequence, CAD > Edit > Erase Entities Erase selected entities, CAD > Edit > Move Entities Move selected entities, CAD > Edit > Copy Entities Copy selected entities, CAD > Edit > Scale Entities Scale selected entities, CAD > Edit > Rotate Azimuth Rotate the azimuth of selected entities, CAD > Edit > Rotate Dip Rotate the dip of selected entities, CAD > Edit > Dump to File Dump selected entities to a file, CAD > Edit > Group Group selected entities into a single block,
+CAD > Edit > Entity Properties Edita el tipo de bloque, el color, la secuencia de minería, CAD > Edit > Erase Entities Borra las entidades seleccionadas, CAD > Edit > Move Entities Mueve las entidades seleccionadas, CAD > Edit > Copy Entities Copia las entidades seleccionadas, CAD > Edit > Scale Entities Escala las entidades seleccionadas, CAD > Edit > Rotate Azimuth Rota el azimut de las entidades seleccionadas, CAD > Edit > Rotate Dip Rota el buzamiento de las entidades seleccionadas, CAD > Edit > Dump to File Vuelca las entidades seleccionadas a un archivo, CAD > Edit > Group Agrupa las entidades seleccionadas en un solo bloque,
 
-- double click on any vertex to execute the highlighted function,
+- haga doble clic en cualquier vértice para ejecutar la función resaltada,
 
-- right click for a list of options.
+- haga clic derecho para ver una lista de opciones.
 
-If any of the fields in the dialogue box read "Variable" it is because some of the blocks you have selected have different properties for that field. If you wish to leave these properties as they are (i.e. different for each block), leave the field as "Variable". If you wish to change the value of that field for all selected blocks, enter the desired value.
+Si alguno de los campos del cuadro de diálogo indica "Variable", es porque algunos de los bloques seleccionados tienen propiedades distintas en ese campo. Para dejar estas propiedades como están (es decir, distintas para cada bloque), deje el campo como "Variable". Para cambiar el valor de ese campo en todos los bloques seleccionados, ingrese el valor deseado.
 
 ![Figure from page 513](/images/page-513-img-14.png)
 
-Name - specifies a descriptive name for the grid.
+Name - especifica un nombre descriptivo para la malla.
 
-Grid Type - specifies whether you want the grid to be active (used in the stress analysis) or inactive (not used in the stress analysis).
+Grid Type - especifica si la malla estará activa (se usa en el análisis de esfuerzos) o inactiva (no se usa en el análisis de esfuerzos).
 
-Maximum Spacing - specifies the maximum spacing permitted.
+Maximum Spacing - especifica el espaciado máximo permitido.
 
-- This parameter can be used to force fine uniform discretization on selected grids. Extreme caution should be used in specifying this value since a small value can easily lead to enormous problem size.
+- Este parámetro se puede usar para forzar una discretización fina y uniforme en mallas seleccionadas. Se debe tener extrema precaución al especificar este valor, ya que un valor pequeño puede generar fácilmente un problema de tamaño enorme.
 
-- In general this parameter should be left blank (i.e. not used), and discretization should be left to the _AG_ parameter. This latter parameter will concentrate elements only where analysis results are requested thus optimizing the use of elements and minimizing problem size.
+- En general, este parámetro se debe dejar en blanco (es decir, sin usar) y la discretización se debe dejar al parámetro _AG_. Este último concentra elementos solo donde se solicitan resultados del análisis, con lo que optimiza el uso de elementos y minimiza el tamaño del problema.
 
 CAD > Properties Control Parameters.
 
-- If this field is left blank this parameter is not used.
+- Si este campo se deja en blanco, el parámetro no se usa.
 
-OK - completes editing of blocks and modifies any properties that have been changed.
+OK - completa la edición de los bloques y modifica las propiedades que se hayan cambiado.
 
-Cancel - aborts editing of entities.
+Cancel - cancela la edición de las entidades.
 
-Once you have completed any edit operation you have one chance to undo the modifications by selecting
+Una vez completada cualquier operación de edición, se tiene una oportunidad de deshacer las modificaciones seleccionando
 
 Undo
 
-You can also restore the same selection set and modify the same set of entities again be selecting
+También se puede restaurar el mismo conjunto de selección y modificar de nuevo el mismo conjunto de entidades seleccionando
 
 Redo
 
-You can adjust the double click time using
+Se puede ajustar el tiempo de doble clic mediante
 
 Tools > Double Click Time

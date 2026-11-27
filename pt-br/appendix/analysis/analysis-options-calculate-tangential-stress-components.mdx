@@ -2,21 +2,18 @@
 title: "Análise > Opções > Calcular componentes de tensão tangencial"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página ainda não foi traduzida para o português. O conteúdo é exibido em inglês.</Note>
+Especifica que as componentes de tensão tangencial devem ser calculadas na superfície do elemento - durante a análise BEM do Map3D.
 
-Specifies that the tangential stress components should be calculated on element surface - during Map3D BEM analysis.
+Quando não está marcada, apenas as tensões normal e de cisalhamento são calculadas. As tensões tangenciais não são calculadas, pois não são necessárias para a solução.
 
-When not checked, only normal and shear stresses are calculated. Tangential stresses are not calculated since they are not required for solution.
+Quando marcada, todas as seis componentes de tensão (normal , de cisalhamento e tangencial ) são calculadas. As componentes de tensão tangencial costumam ser desejáveis, pois representam a tensão na fibra extrema, ou seja, as tensões tangenciais a uma superfície),
 
-When checked, all six stress components (normal , shear and tangential ) will be calculated.Tangential stress components are often desirable since they represent the extreme fibre stress, ie. the stresses tangential to a surface),
+A tensão tangencial máxima costuma ser comparada à resistência à compressão não confinada do material, de maneira semelhante à tensão no plano da parede **[ 3 σ1i - σ3i ]** .
 
-The maximum tangential stress is often compared to the material unconfined compressive strength in a similar manner to in-plane wall stress **[ 3 σ1i - σ3i ]** .
+#### Notas:
 
-#### Notes:
-
-This function must be checked before conducting the Map3D BEM analysis
+Esta função deve ser marcada antes de realizar a análise BEM do Map3D
 
 Analysis > BEM Analysis
 
-This option requires additional calculations and hence increases analysis time.
+Esta opção exige cálculos adicionais e, portanto, aumenta o tempo de análise.

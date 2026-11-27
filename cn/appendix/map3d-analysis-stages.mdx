@@ -2,53 +2,50 @@
 title: "Map3D 分析阶段"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+Map3D 分析分为五个阶段：
 
-A Map3D analysis proceeds in five stages:
+#### 阶段 1 – 模型构建与编辑
 
-#### Stage 1 – Model building and editing
-
-This stage is used to setup the Map3D analysis.
+该阶段用于设置 Map3D 分析。
 
 #### Analysis > Go to CAD
 
-The user can add new mining blocks and edit existing blocks using the CAD functions built into Map3D. This can include tunnels, large irregular shaped excavations, ore zones, massive and tabular excavations, open pits, faults, fractures and more.
+用户可使用 Map3D 内置的 CAD 功能添加新的采矿块体并编辑现有块体，包括巷道、大型不规则形状开挖体、矿体、块状和板状开挖体、露天矿坑、断层、裂隙等。
 
-Various parts of the model can be saved in separate component files and merged for final analysis.
+模型的各个部分可保存为独立的组件文件，并合并后进行最终分析。
 
 #### Analysis > Load Model
 
-At this stage, material properties are assigned and the desired mining sequence is set up. This can include ore placement, excavation and backfilling.
+在此阶段，指定材料属性并设置所需的采矿顺序，包括矿体放置、开挖和充填。
 
-Field point grids are positioned at locations where off reef results are desired. For the case of tabular excavations, often only on reef results are required and hence field points grids are optional.
+在需要获得矿层之外结果的位置布置场点网格。对于板状开挖体，通常只需要矿层上的结果，因此场点网格为可选项。
 
-#### Stage 2 – Contact and intersection analysis
+#### 阶段 2 – 接触与相交分析
 
 #### Analysis > Intersections.
 
-Intersections are built between blocks that cut through one another. Boolean operations are performed to resolve the mining sequence. Comprehensive model integrity checking is conducted.
+在相互切割的块体之间建立相交关系。通过布尔运算确定采矿顺序，并对模型的完整性进行全面检查。
 
-#### Stage 3 – Block and grid discretization
+#### 阶段 3 – 块体与网格离散
 
 #### Analysis > Discretization.
 
-The model is discretized into boundary elements to be used in the BEM analysis. The user has complete control over the way in which the model is discretized. This can be conducted automatically by the program concentrating results only where results are requested, or specified manually.
+将模型离散为边界单元，用于 BEM 分析。用户可完全控制模型的离散方式。离散可由程序自动完成（仅在需要结果的位置加密），也可手动指定。
 
-#### Stage 4 – Map3D BEM analysis
+#### 阶段 4 – Map3D BEM 分析
 
 #### Analysis > BEM Analysis.
 
-Conducts the Boundary Element Analysis. The same input data can be used for elastic, thermal/fluid flow or non-linear analysis
+执行边界元分析。相同的输入数据可用于弹性分析、热/流体流动分析或非线性分析
 
-#### Map3D Versions
+#### Map3D 版本
 
-#### Stage 5 – Post-processing
+#### 阶段 5 – 后处理
 
 #### Analysis > Graphics.
 
-This stage is used to view and process the Map3D analysis results. Contour plots of stress, strain, displacement and strength factors, or any desired combination of these components can be generated on boundary surfaces and on user defined field point grids. Results can be displayed either as total values, or the difference in value between mining steps.
+该阶段用于查看和处理 Map3D 分析结果。可在边界表面和用户定义的场点网格上生成应力、应变、位移和强度因子的等值线图，或这些分量的任意组合。结果既可显示为总值，也可显示为各采矿步之间的差值。
 
-Results from previous analyzes can be loaded for viewing
+可加载先前分析的结果进行查看
 
 File > Open Analysis Results.

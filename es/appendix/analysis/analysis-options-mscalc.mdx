@@ -2,121 +2,118 @@
 title: "Análisis > Opciones > MSCALC"
 ---
 
-{/* i18n:untranslated */}
-<Note>Esta página aún no se ha traducido al español. El contenido se muestra en inglés.</Note>
+Calcula resultados en puntos definidos por el usuario, durante el análisis BEM de Map3D.
 
-Calculate results at user defined points – during Map3D BEM analysis.
+Los resultados del análisis se pueden calcular en ubicaciones de coordenadas definidas por el usuario.
 
-Analysis results can be calculated at user defined coordinate locations.
+Cuando seleccionas MSCALC, se te solicita un nombre de archivo de datos y el formato de salida deseado, como se indica a continuación.
 
-When you select MSCALC, you will be prompted for a data file name and the desired output format as follows.
+#### Formato del archivo de datos:
 
-#### Data file format:
+El archivo de datos es simplemente un archivo de texto (*.txt) con una lista de las ubicaciones de coordenadas donde se calcularán los resultados.
 
-The data file contains is simply a text file (*.txt) with a list of the coordinate locations where the results are to be calculated.
-
-The format of this file requires one set of coordinates per line
+El formato de este archivo requiere un conjunto de coordenadas por línea
 
 x1 y1 z1 x2 y2 z2 x3 y3 z3 x4 y4 z4 ...
 
-where x y z represent the coordinates of each point.
+donde x y z representan las coordenadas de cada punto.
 
-If desired, you can specify x y z dipub ddrub And in addition, you can also specify x y z dipub ddrub so phi
+Si lo deseas, puedes especificar x y z dipub ddrub Y, además, también puedes especificar x y z dipub ddrub so phi
 
-Here dipub ddrub represent respectively dip and direction of desired UB plane
+Aquí dipub ddrub representan, respectivamente, el buzamiento y la dirección de buzamiento del plano UB deseado
 
-- these would only be used if you are calculating some UB components such as su tu
+- estos solo se usarían si calculas algunos componentes UB, como su tu
 
-so and phi represent respectively the cohesion and friction angle
+so y phi representan, respectivamente, la cohesión y el ángulo de fricción
 
-- these would only be used if you are calculating some UB strength parameters such as sfu rcfu dsu ntu
+- estos solo se usarían si calculas algunos parámetros de resistencia UB, como sfu rcfu dsu ntu
 
-#### Output file format:
+#### Formato del archivo de salida:
 
-Results are written back to the same data file with x y z coordinates followed by user specified parameters.
+Los resultados se escriben de vuelta en el mismo archivo de datos, con las coordenadas x y z seguidas de los parámetros especificados por el usuario.
 
 ![Figure from page 490](/images/page-490-img-10.png)
 
-#### Stresses:
+#### Esfuerzos:
 
-s1 ts1 ps1 major principal stress s1 its trend and plunge. s2 ts2 ps2 intermediate principal stress s2 its trend and plunge. s3 ts3 ps3 minor principal stress s3 its trend and plunge. user User defined value. sxx syy szz sxy syz sxz Cartesian stress components. tmax maximum shear stress tmax=½ ( s1 - s3 ) toct octahedral shear stress toct=¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]1/2 smean mean stress smean=¹/3 ( s1 + s2 + s3 ) ti tti pti maximum shear stress in the grid plane, its trend and plunge. si tsi psi normal stress in the grid plane, its trend and plunge. s1i ts1i ps1i maximum stress tangential to the grid plane, its trend and plunge. s3i ts3i ps3i minimum stress tangential to the grid plane, its trend and plunge. tu ttu ptu maximum shear stress in the ubiquitous-plane, its trend and plunge. su tsu psu stress normal to the ubiquitous plane, its trend and plunge. s1u ts1u ps1u maximum stress tangential to the ubiquitous plane, its trend and plunge. s3u ts3u ps3u minimum stress tangential to the ubiquitous plane, its trend and plunge. The orientation of the ubiquitous-plane is specified in
+s1 ts1 ps1 esfuerzo principal mayor s1, su rumbo y su inclinación. s2 ts2 ps2 esfuerzo principal intermedio s2, su rumbo y su inclinación. s3 ts3 ps3 esfuerzo principal menor s3, su rumbo y su inclinación. user Valor definido por el usuario. sxx syy szz sxy syz sxz Componentes cartesianos del esfuerzo. tmax esfuerzo cortante máximo tmax=½ ( s1 - s3 ) toct esfuerzo cortante octaédrico toct=¹/3 [( s1 - s2 )² + ( s2 - s3 )² +( s3 - s1 )²]1/2 smean esfuerzo medio smean=¹/3 ( s1 + s2 + s3 ) ti tti pti esfuerzo cortante máximo en el plano de la malla, su rumbo y su inclinación. si tsi psi esfuerzo normal en el plano de la malla, su rumbo y su inclinación. s1i ts1i ps1i esfuerzo máximo tangencial al plano de la malla, su rumbo y su inclinación. s3i ts3i ps3i esfuerzo mínimo tangencial al plano de la malla, su rumbo y su inclinación. tu ttu ptu esfuerzo cortante máximo en el plano ubicuo, su rumbo y su inclinación. su tsu psu esfuerzo normal al plano ubicuo, su rumbo y su inclinación. s1u ts1u ps1u esfuerzo máximo tangencial al plano ubicuo, su rumbo y su inclinación. s3u ts3u ps3u esfuerzo mínimo tangencial al plano ubicuo, su rumbo y su inclinación. La orientación del plano ubicuo se especifica en
 
-Plot > Strength Factors > Ubiquitous Parameters Effective/Total effective stress or total stress components. These options are only used in Map3D Thermal-Fluid Flow, as this code allows for calculation of steady state pore pressure distributions. Induced/Absolute Induced stress is the stress without the pre-mining stress contribution. This represents the stress change since the pre-mining condition. Absolute stress is the stress including the pre-mining stress contribution.
+Plot > Strength Factors > Ubiquitous Parameters Effective/Total componentes del esfuerzo efectivo o del esfuerzo total. Estas opciones solo se usan en Map3D Thermal-Fluid Flow, ya que este código permite calcular distribuciones de presión de poros en estado estacionario. Induced/Absolute El esfuerzo inducido es el esfuerzo sin la contribución del esfuerzo previo a la explotación. Representa el cambio de esfuerzo desde la condición previa a la explotación. El esfuerzo absoluto es el esfuerzo que incluye la contribución del esfuerzo previo a la explotación.
 
-#### Strains:
+#### Deformaciones:
 
-e1 te1 pe1 major principal strain e1 its trend and plunge. e2 te2 pe2 intermediate principal strain e2 its trend and plunge. e3 te3 pe3 minor principal strain e3 its trend and plunge. exx eyy ezz exy eyz exz Cartesian strain components. emax maximum shear strain emax=½ ( e1 - e3 ) eoct octahedral shear strain eoct=¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]1/2 evol volumetric strain evol=( e1 + e2 + e3 ) esi tesi pesi maximum shear strain in the grid plane, its trend and plunge. eni teni peni normal strain in the grid plane, its trend and plunge. e1i te1i pe1i maximum strain tangential to the grid plane, its trend and plunge. e3i te3i pe3i minimum strain tangential to the grid plane, its trend and plunge. esu tesu pesu maximum shear strain in the ubiquitous-plane, its trend and plunge. enu tenu penu strain normal to the ubiquitous plane, its trend and plunge. e1u te1u pe1u maximum strain tangential to the ubiquitous plane, its trend and plunge. e3u te3u pe3u minimum strain tangential to the ubiquitous plane, its trend and plunge. Elastic/Plastic/Total elastic, plastic or total strain components. These options are only used in Map3D Non-Linear, as this code allows for calculation of non-linear strains. Induced/Absolute Induced strain is the strain without the pre-mining contribution. This represents the strain change since the pre-mining condition. Absolute strain is the strain including the pre-mining strain contribution.
+e1 te1 pe1 deformación principal mayor e1, su rumbo y su inclinación. e2 te2 pe2 deformación principal intermedia e2, su rumbo y su inclinación. e3 te3 pe3 deformación principal menor e3, su rumbo y su inclinación. exx eyy ezz exy eyz exz Componentes cartesianos de la deformación. emax deformación cortante máxima emax=½ ( e1 - e3 ) eoct deformación cortante octaédrica eoct=¹/3 [( e1 - e2 )² + ( e2 - e3 )² +( e3 - e1 )²]1/2 evol deformación volumétrica evol=( e1 + e2 + e3 ) esi tesi pesi deformación cortante máxima en el plano de la malla, su rumbo y su inclinación. eni teni peni deformación normal en el plano de la malla, su rumbo y su inclinación. e1i te1i pe1i deformación máxima tangencial al plano de la malla, su rumbo y su inclinación. e3i te3i pe3i deformación mínima tangencial al plano de la malla, su rumbo y su inclinación. esu tesu pesu deformación cortante máxima en el plano ubicuo, su rumbo y su inclinación. enu tenu penu deformación normal al plano ubicuo, su rumbo y su inclinación. e1u te1u pe1u deformación máxima tangencial al plano ubicuo, su rumbo y su inclinación. e3u te3u pe3u deformación mínima tangencial al plano ubicuo, su rumbo y su inclinación. Elastic/Plastic/Total componentes de la deformación elástica, plástica o total. Estas opciones solo se usan en Map3D Non-Linear, ya que este código permite calcular deformaciones no lineales. Induced/Absolute La deformación inducida es la deformación sin la contribución previa a la explotación. Representa el cambio de deformación desde la condición previa a la explotación. La deformación absoluta es la deformación que incluye la contribución de la deformación previa a la explotación.
 
-#### Displacements:
+#### Desplazamientos:
 
-ut tut put total displacement, its trend and plunge. ux uy uz Cartesian displacement components. uni tuni puni displacement normal to the grid plane, its trend and plunge. umi tumi pumi maximum displacement tangential to the grid plane, its trend and plunge. unu tunu punu displacement normal to the ubiquitous plane, its trend and plunge. umu tumu pumu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+ut tut put desplazamiento total, su rumbo y su inclinación. ux uy uz Componentes cartesianos del desplazamiento. uni tuni puni desplazamiento normal al plano de la malla, su rumbo y su inclinación. umi tumi pumi desplazamiento máximo tangencial al plano de la malla, su rumbo y su inclinación. unu tunu punu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. umu tumu pumu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
-#### Flow:
+#### Flujo:
 
-t temperature/head.
+t temperatura/carga hidráulica.
 
-qt tqt pqt total flow, its trend and plunge. qx qy qz Cartesian flow components.
+qt tqt pqt flujo total, su rumbo y su inclinación. qx qy qz Componentes cartesianos del flujo.
 
-qni tqni pqni displacement normal to the grid plane, its trend and plunge.
+qni tqni pqni desplazamiento normal al plano de la malla, su rumbo y su inclinación.
 
-qmi tqmi pqmi maximum displacement tangential to the grid plane, its trend and plunge. qnu tqnu pqnu displacement normal to the ubiquitous plane, its trend and plunge. qmu tqmu pqmu maximum displacement tangential to the ubiquitous plane, its trend and plunge.
+qmi tqmi pqmi desplazamiento máximo tangencial al plano de la malla, su rumbo y su inclinación. qnu tqnu pqnu desplazamiento normal al plano ubicuo, su rumbo y su inclinación. qmu tqmu pqmu desplazamiento máximo tangencial al plano ubicuo, su rumbo y su inclinación.
 
-#### Strength:
+#### Resistencia:
 
-- ds1 excess major principal stress Ds1 = s1 - ( _UCS_ + _q_ s3 )
+- ds1 esfuerzo principal mayor en exceso Ds1 = s1 - ( _UCS_ + _q_ s3 )
 
-- dtmax excess maximum shear stress Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
+- dtmax esfuerzo cortante máximo en exceso Dtmax = ½(s1 - s3) - [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/( _q_ +1) = [s1 - ( _UCS_ + _q_ s3) ]/( _q_ +1)
 
-- dtoct excess octahedral shear stress Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
+- dtoct esfuerzo cortante octaédrico en exceso Dtoct = toct - [ _UCS_ + ( _q_ –1) smean ] Ö(2) /( _q_ +2)
 
-- NS1 probability using the Normal distribution N(Ds1 /std)
+- NS1 probabilidad mediante la distribución normal N(Ds1 /std)
 
-- SF-A Strength/Stress can be determined as ( _UCS_ + _q_ s3 )/ s1
+- SF-A La relación resistencia/esfuerzo se puede determinar como ( _UCS_ + _q_ s3 )/ s1
 
-- SF-B Strength/Stress can be determined as ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
+- SF-B La relación resistencia/esfuerzo se puede determinar como ( _UCS_ + _q_ s3 - s3 )/(s1 - s3)
 
-- SF-C Strength/Stress can be determined as [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
+- SF-C La relación resistencia/esfuerzo se puede determinar como [ _UCS_ + ½(s1+s3) ( _q_ -1) ]/[ ½(s1 - s3)( _q_ +1) ]
 
-- dTip excess in-plane shear stress Dtip = tip - [ Cohesion + sip tan(j) ]
+- dTip esfuerzo cortante en el plano en exceso Dtip = tip - [ Cohesion + sip tan(j) ]
 
-- NTip probability using the Normal distribution N(Dtip /std)
+- NTip probabilidad mediante la distribución normal N(Dtip /std)
 
-- SFip Strength/Stress can be determined as [ Cohesion + sip tan(j) ] / tip
+- SFip La relación resistencia/esfuerzo se puede determinar como [ Cohesion + sip tan(j) ] / tip
 
-- dSip excess in-plane wall stress Dsip = [ 3 s1i - s3i ] - UCS
+- dSip esfuerzo de pared en el plano en exceso Dsip = [ 3 s1i - s3i ] - UCS
 
-- RCFip Rock Condition Factor for the in-plane wall stress RCFip = [ 3 s1i - s3i ]/UCS
+- RCFip Factor de condición de la roca para el esfuerzo de pared en el plano RCFip = [ 3 s1i - s3i ]/UCS
 
-- dTub excess ubiquitous-plane shear stress Dtub
+- dTub esfuerzo cortante del plano ubicuo en exceso Dtub
 
-- NTub probability using the Normal distribution N(Dtub /std)
+- NTub probabilidad mediante la distribución normal N(Dtub /std)
 
-- SFub Strength/Stress can be determined as [ Cohesion + sub tan(j) ] / tub
+- SFub La relación resistencia/esfuerzo se puede determinar como [ Cohesion + sub tan(j) ] / tub
 
-- dSub excess ub-plane wall stress Dsub = [ 3 s1ub - s3ub ] - UCS
+- dSub esfuerzo de pared del plano ub en exceso Dsub = [ 3 s1ub - s3ub ] - UCS
 
-- RCFub Rock Condition Factor for the ub-plane wall stress RCFip = [ 3 s1ub - s3ub ]/UCS
+- RCFub Factor de condición de la roca para el esfuerzo de pared del plano ub RCFip = [ 3 s1ub - s3ub ]/UCS
 
-- UB# Plots the UB set number (1, 2 or 3) that has the largest value of Dtub
+- UB# Grafica el número de conjunto UB (1, 2 o 3) que tiene el mayor valor de Dtub
 
-#### Miscellaneous:
+#### Varios:
 
-matl# the number of the material within which the point is located. The host material is material number 1. In problems where multiple materials are used, results may be calculated in an alternate material zone.
+matl# el número del material dentro del cual se ubica el punto. El material anfitrión es el material número 1. En problemas donde se usan varios materiales, los resultados pueden calcularse en una zona de material alterno.
 
-step# the mining step number.
+step# el número de la etapa de explotación.
 
-ubd, ubt, ubn represent respectively the dip, dip direction and normal of the ubiquitous plane.
+ubd, ubt, ubn representan, respectivamente, el buzamiento, la dirección de buzamiento y la normal del plano ubicuo.
 
-#### Other:
+#### Otros:
 
-Cartesian   configures for output of cartesian stress components. Principal   configures for output of principal stress components.
+Cartesian   configura la salida de componentes cartesianos del esfuerzo. Principal   configura la salida de componentes principales del esfuerzo.
 
-#### Notes:
+#### Notas:
 
-This function must be checked before conducting the discretization analysis
+Esta función debe estar activada antes de realizar el análisis de discretización
 
 Analysis > Discretization.
 
-Any desired number of points can be specified.
+Se puede especificar cualquier número de puntos.
 
-The model is discretized according to the locations of the specified points.
+El modelo se discretiza según las ubicaciones de los puntos especificados.

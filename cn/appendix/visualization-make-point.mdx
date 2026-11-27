@@ -2,49 +2,46 @@
 title: "可视化 > 创建点"
 ---
 
-{/* i18n:untranslated */}
-<Note>本页面尚未翻译成中文，内容以英文显示。</Note>
+创建新的可视化点。有关 Map3D 中可用可视化功能的说明，请参阅可视化。
 
-Creates a new visualization point. Refer to Visualization for  a description of the visualization routines available in Map3D.
+可视化点可显示为光源着色的球体，其直径和/或颜色随震级变化，也可在平面上绘制等值线以显示密度等。
 
-Visualization points can be displayed as light source shaded spheres with diameter and/or colour varying as magnitude, and contoured on a plane to display density etc.
+每个点可标记以下一系列内容：
 
-Each point can be tagged with a series of:
+- 数值（例如颜色、震级、方向等）
 
-- numeric values (e.g. colour, magnitude, orientation etc.)
+- 文本信息
 
-- text messages
+- 文件名（例如图形文件、文档、电子表格等）
 
-- file names (e.g. graphics files, documents, spreadsheets etc.)
+左键单击某个点时，其位置、震级和文本信息显示在状态栏中。
 
-Upon left clicking on a point, the location, magnitude and text message are displayed on the status bar.
+右键单击某个点将激活 Visual Database。该功能可用于显示有用的地质信息数据库，例如品位、岩体质量等。
 
-Right clicking on a point activates the Visual Database. This feature can be used to display a database of useful geologic information such as grade, rock mass quality etc.
+激活该功能后，系统将提示用户提供新可视化点的坐标。
 
-Upon activating the feature, the user will be prompted to supply the coordinates of the new visualization point.
-
-Note that if a visualization file is already active, this new point will be added to the file. If there is no active visualization file the user will be prompted open one and this new point will be added to the file.
+请注意，如果已有可视化文件处于活动状态，则该新点将添加到该文件中。如果没有活动的可视化文件，系统将提示用户打开一个文件，该新点将添加到该文件中。
 
 ![Figure from page 617](/images/page-617-img-1.png)
 
-X, Y and Z coordinate - specifies the coordinates of the visualization point.
+X、Y 和 Z 坐标 - 指定可视化点的坐标。
 
-Pick - activates the cursor cross-hairs allowing interactive selection of the coordinates from the model.
+Pick - 激活光标十字线，允许从模型中交互式选择坐标。
 
-To assist in visually selecting points from the model, all snap functions are available.
+为便于从模型中直观地选择点，所有捕捉功能均可使用。
 
 #### CAD > Snap
 
-Once selected, the coordinates of the visualization point are displayed in the dialogue box.
+选定后，可视化点的坐标显示在对话框中。
 
-Centroid - activates the cursor so the user can select an entity from the model. The coordinates will be calculated at the centre of the selected entity.
+Centroid - 激活光标，用户可从模型中选择一个实体。坐标将在所选实体的中心处计算。
 
-OK - completes editing of the coordinates and creates and displays the visualization point.
+OK - 完成坐标编辑，并创建和显示可视化点。
 
-Once the visualization point is created, the user can now right click on the point to add text messages and/or file names.
+创建可视化点后，用户即可右键单击该点，添加文本信息和/或文件名。
 
-- The text message and file name are displayed in the status bar across the bottom of the screen by picking an event with the left mouse button.
+- 用左键拾取事件时，文本信息和文件名显示在屏幕底部的状态栏中。
 
-- They can also be edited by picking an event with the right mouse button.
+- 也可用右键拾取事件对其进行编辑。
 
-- Picking with the right mouse button also allows for display of the file if the file name has been associated with an application (refer to Windows documentation on how to "Associate a file with a program").
+- 如果文件名已与某个应用程序关联，用右键拾取还可以显示该文件（有关如何“将文件与程序关联”，请参阅 Windows 文档）。
